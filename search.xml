@@ -1,6 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Win10重装指北</title>
+    <url>/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">写一个Win10重装教程，另外偷个懒，把office的安装教程也合进来了hhh</blockquote>
+
+<a id="more"></a>
+
+<h1 id="必备素材"><a href="#必备素材" class="headerlink" title="必备素材"></a>必备素材</h1><ul>
+<li>容量≥8G的U盘一个</li>
+<li>能正常使用的电脑一台</li>
+<li>Refus启动盘制作工具<ul>
+<li><a href="https://rufus.ie/" target="_blank" rel="noopener">下载地址</a></li>
+<li>在网页下面的Download中选择<code>Rufus x.xx Portable</code></li>
+</ul>
+</li>
+<li>Win10镜像<ul>
+<li>1909及以前版本<ul>
+<li><a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">下载地址</a></li>
+<li>点击左边栏的<code>操作系统</code></li>
+<li>选择想要安装的版本</li>
+<li>以<code>Windows 10, Version 1909 (updated Jan 2020)</code>为例<ul>
+<li>1909表示这是2019年9月大更新的版本（下一个版本号为2004，意思就是2020年4月大更新的版本）</li>
+<li>updated Jan 2020表示这个镜像包含了2020年1月份的小更新</li>
+</ul>
+</li>
+<li>可以看到有4个选项，以<code>Windows 10 (business editions), version 1909 (updated Jan 2020) (x64) - DVD (Chinese-Simplified)</code>为例<ul>
+<li>business editions是我们需要的版本，包含企业版、专业版、教育版、专业工作站等版本</li>
+<li>x64代表64位系统（32位系统为x86），如果没有特殊需要建议安装64位</li>
+</ul>
+</li>
+<li>点击详细信息，可以看到一个<code>ed2k</code>开头的链接</li>
+<li>复制这个链接，用迅雷下载镜像文件</li>
+</ul>
+</li>
+<li>2004及之后的版本<ul>
+<li><a href="https://next.itellyou.cn" target="_blank" rel="noopener">下载地址</a></li>
+<li>使用邮件或者第三方账户注册并登录</li>
+<li>有能力的朋友可以捐助一下，网站作者已经坚持免费12年了</li>
+<li>选择<code>Windows10</code>并点击<code>详细信息</code></li>
+<li>以<code>Windows 10 (business edition), Version 2004 (Updated June 2020) (x64) - DVD (Chinese-Simplified)</code>为例</li>
+<li>点击后面的<code>复制按钮</code></li>
+<li>打开相应的下载软件（这里推<a href="https://motrix.app/zh-CN" target="_blank" rel="noopener">Motrix</a>）并下载镜像</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="制作安装盘"><a href="#制作安装盘" class="headerlink" title="制作安装盘"></a>制作安装盘</h1><ul>
+<li>插入U盘</li>
+<li>以管理员身份运行<code>Refus</code></li>
+<li>在<code>设备</code>中选择你的U盘</li>
+<li><code>引导类型选择</code>前一栏保持默认的<code>镜像文件（请选择）</code>然后点击后面的<code>选择</code>按钮</li>
+<li>找到下载的Win10镜像并打开</li>
+<li>点击最下面的<code>开始</code></li>
+<li>等待制作完成</li>
+</ul>
+<h1 id="BIOS修改启动项"><a href="#BIOS修改启动项" class="headerlink" title="BIOS修改启动项"></a>BIOS修改启动项</h1><p>下面的选项表述不一定准确，以电脑BIOS标注为准，意思对即可</p>
+<ul>
+<li>重启电脑</li>
+<li>开机的时候狂按<code>F2/F10/Delete</code>（不同的电脑进入BIOS的按键不一样）</li>
+<li>进入BIOS</li>
+<li>找到<code>启动顺序/启动项管理</code></li>
+<li>关闭<code>安全启动/Secure Boot</code></li>
+<li>新电脑<ul>
+<li>引导方式选择<code>UEFI Only</code></li>
+<li>将你的U盘设置为<code>第一启动项</code>（部分电脑需要使用F5/F6移动到最上方）</li>
+<li>如果有两个U盘选项，例如<code>UEFI:USBXXX</code>和<code>USBXXX</code>，选择带有UEFI的那一个</li>
+<li>保存设置并退出BIOS</li>
+</ul>
+</li>
+<li>老电脑（不支持UEFI启动的）<ul>
+<li>将你的U盘设置为<code>第一启动项</code>（部分电脑需要使用F5/F6移动到最上方）</li>
+<li>保存设置并退出BIOS</li>
+</ul>
+</li>
+<li>等待电脑重启</li>
+</ul>
+<h1 id="转换硬盘分区格式"><a href="#转换硬盘分区格式" class="headerlink" title="转换硬盘分区格式"></a>转换硬盘分区格式</h1><p>这一步只针对UEFI启动，非UEFI的请跳过</p>
+<ul>
+<li>等电脑转完圈后会进入语言选择页面</li>
+<li>使用<code>Shift</code>+<code>F10</code>打开终端</li>
+<li>输入<code>diskpart</code>打开磁盘管理</li>
+<li>输入<code>list disk</code>，列出硬盘，会显示硬盘的序号（0/1/2等）</li>
+<li>找到安装目标磁盘的序号，输入<code>select disk 序号</code>回车<ul>
+<li>注意不要选到自己的U盘</li>
+</ul>
+</li>
+<li>输入<code>clean</code>回车</li>
+<li>输入<code>convert gpt</code>转换gpt格式</li>
+<li>再次输入<code>list disk</code>，观察<code>GPT</code>下面是否出现星号</li>
+<li>有星号的话就可以关闭终端了</li>
+</ul>
+<h1 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h1><p>不同版本的Win10安装过程稍有不同，以下步骤不会在所有系统中出现</p>
+<ul>
+<li>选择安装语言后点击<code>下一步</code></li>
+<li>点击<code>现在安装</code></li>
+<li>进入<code>激活Windows</code>页面，选择<code>我没有产品密钥</code></li>
+<li>进入<code>选择要安装的操作系统</code>页面，根据需要选择要安装的版本并点击<code>下一步</code></li>
+<li>进入<code>适用的声明和许可条款</code>页面，勾选<code>我接受许可条款</code>并点击<code>下一步</code></li>
+<li>进入<code>你想执行哪种类型的安装</code>页面，选择<code>自定义：仅安装Windows（高级）</code></li>
+<li>进入<code>你想将Windows安装在哪里</code>页面，根据驱动器的大小判断硬盘，如果有固态硬盘的话选择固态硬盘</li>
+<li>点击右下方的<code>新建</code>，此时会提示创建其他分区，点击<code>确定</code></li>
+<li>分区创建完成后点击<code>下一步</code></li>
+<li>等待系统安装完成，这一步耗时相对较长</li>
+<li>进入提示<code>Windows需要重启才能继续</code>的页面，会有10秒的重启倒计时，此时拔出U盘并点击<code>立即重启</code></li>
+<li>重启后会提示<code>让我们先从区域设置开始</code>，选择<code>中国</code>并点击<code>是</code></li>
+<li>提示<code>这种键盘布局是否合适</code>，选择需要的键盘布局并点击<code>是</code></li>
+<li>有需要的话可以添加第二种键盘布局，步骤同上，没有需要点击<code>跳过</code></li>
+<li>连接网络，不想连接或者没有网络的话点击左下角的<code>我没有Internet连接</code><ul>
+<li>不连接的话会有第二遍提示：<code>当你连接到Internet时，有更多要发现的内容</code>，点击左下角的<code>继续执行有限设置</code></li>
+</ul>
+</li>
+<li>输入用户名和密码并确认密码</li>
+<li>三个安全问题胡乱写就行，从来没有用到过这个东西</li>
+<li>进入<code>在具有活动历史记录的设备上执行更多的操作</code>页面，如果你有多台电脑的话可以选择<code>是</code>，开启后可以同步不同电脑上的活动记录，不过个人感觉没啥卵用</li>
+<li>进入<code>从数字助理获取帮助页面</code>，选择<code>接受</code>就会开启Cortana，其实也没什么卵用</li>
+<li>进入<code>为你的设备选择隐私设置页面</code>，根据需要进行勾选，我个人只开启了<code>位置</code>与<code>查找我的设备</code>两个选项</li>
+<li>点击接受后就设置完成了，等待一会就会进入桌面</li>
+</ul>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>进入桌面后建议联网，然后进入<code>设置-更新和安全-检查更新</code>，等待所有更新安装完成后点击下面出现的<code>立即重启</code>，这个过程耗时较长，取决于网速。另外Win10会自动在后台安装驱动，如果当前屏幕分辨率很怪的话不用慌，过一会安装完驱动就好了。</p>
+<h1 id="KMS激活"><a href="#KMS激活" class="headerlink" title="KMS激活"></a>KMS激活</h1><p>KMS全称Key Management Service，主要用于企业内的计算机批量激活，激活有效期为180天，但是可以设置自动续期。需要注意的是个人用户使用的KMS在法律层面上并不属于正版，去官网买的Key才算法律层面的正版，微软只是对这种行为睁一只眼闭一只眼罢了。不建议长期使用。</p>
+<p>激活方式如下：在开始按钮上右键，选择<code>Windows Powershell（管理员）</code>，依次输入下面的命令并回车，有弹窗的话点确定即可。激活过程请保持联网</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">slmgr -skms kms.<span class="number">03</span>k.org</span><br><span class="line">slmgr -ipk 相应版本的秘钥</span><br><span class="line">slmgr -ato</span><br><span class="line">slmgr -dlv</span><br></pre></td></tr></table></figure>
+
+<p>相应版本的秘钥如下，其他版本请到<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener"><strong>微软官方文档</strong></a>查找，其中版本后缀有N的为欧洲专供版，后缀有G的为政府专供版，不过这些和一般用户没啥关系</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作系统版本</th>
+<th align="left">KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows 10 专业版</td>
+<td align="left">W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业版 N</td>
+<td align="left">MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业工作站版</td>
+<td align="left">NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业工作站版 N</td>
+<td align="left">9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业教育版</td>
+<td align="left">6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业教育版 N</td>
+<td align="left">YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+</tr>
+<tr>
+<td align="left">Windows 10 教育版</td>
+<td align="left">NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+</tr>
+<tr>
+<td align="left">Windows 10 教育版 N</td>
+<td align="left">2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版</td>
+<td align="left">NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N</td>
+<td align="left">DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 G</td>
+<td align="left">YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 G N</td>
+<td align="left">44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 LTSC 2019</td>
+<td align="left">M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N LTSC 2019</td>
+<td align="left">92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 LTSB 2016</td>
+<td align="left">DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N LTSB 2016</td>
+<td align="left">QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 2015 LTSB</td>
+<td align="left">WNMTR-4C88C-JK8YV-HQ7T2-76DF9</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 2015 LTSB N</td>
+<td align="left">2F77B-TNFGY-69QQF-B8YKP-D69TJ</td>
+</tr>
+</tbody></table>
+<p>第一条命令中的<code>kms.03k.org</code>是一个KMS激活服务器，如果挂掉的话可以换用下面的这些</p>
+<figure class="highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">kms.chinancce.com</span></span><br><span class="line"><span class="attribute">kms.bluskai.com</span></span><br><span class="line"><span class="attribute">kms.library.hk</span></span><br><span class="line"><span class="attribute">kms.91ssr.top</span></span><br><span class="line"><span class="attribute">kms.digiboy.ir</span></span><br><span class="line"><span class="attribute">kms.luody.info</span></span><br><span class="line"><span class="attribute">kms.lotro.cc</span></span><br><span class="line"><span class="attribute">kms.shuax.com</span></span><br><span class="line"><span class="attribute">kms.cangshui.net</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Office安装与激活"><a href="#Office安装与激活" class="headerlink" title="Office安装与激活"></a>Office安装与激活</h1><p>安装方法如下</p>
+<ul>
+<li>下载<a href="https://otp.landian.vip/zh-cn/download.html" target="_blank" rel="noopener"><strong>Office Tool Plus</strong></a>，建议下载完整版</li>
+<li>解压文件并使用管理员身份运行<code>Office Tool Plus.exe</code></li>
+<li>点击<code>部署</code></li>
+<li>在<code>产品</code>中勾选需要的版本<ul>
+<li>一般选择的是<code>Office 专业增强版 2019 批量版 ProPlus2019Volume</code></li>
+</ul>
+</li>
+<li>在<code>应用程序</code>中勾选需要的软件</li>
+<li>在右侧的体系结构中选择<code>x64</code>，32位系统请选择<code>x86</code></li>
+<li>选择相应的通道<ul>
+<li>一般选择<code>每月通道</code></li>
+<li>企业版Win10可能会提示不支持通道，可以换成<code>Office 2019 企业长期版</code></li>
+<li>或者先选择<code>测试通道</code>或者<code>开发通道</code>后，再重新选择<code>每月通道</code>，这样就不会报错了</li>
+</ul>
+</li>
+<li>安装方式保持默认的<code>在线安装</code></li>
+<li>安装模块保持默认的<code>Office部署工具</code></li>
+<li>勾选<code>安装完成后创建桌面快捷方式</code></li>
+<li>点击右下角的<code>开始部署</code></li>
+</ul>
+<p>Office同样可以使用KMS激活,步骤如下</p>
+<ul>
+<li>使用管理员身份运行<code>Office Tool Plus.exe</code></li>
+<li>点击<code>激活</code></li>
+<li>在<code>KMS管理</code>中输入KMS服务器地址<code>kms.03k.org</code>并点击<code>应用服务器地址</code></li>
+<li>在<code>密钥管理</code>中输入相应版本的秘钥并点击<code>安装密钥</code></li>
+<li>点击右下角的<code>激活</code></li>
+</ul>
+<p>相应版本的秘钥如下</p>
+<table>
+<thead>
+<tr>
+<th align="left">Product</th>
+<th align="left">GVLK</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Office2019</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Office 专业增强版 2019</td>
+<td align="left">NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</td>
+</tr>
+<tr>
+<td align="left">Office 标准版 2019</td>
+<td align="left">6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</td>
+</tr>
+<tr>
+<td align="left">Project 专业版 2019</td>
+<td align="left">B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</td>
+</tr>
+<tr>
+<td align="left">Project 标准版 2019</td>
+<td align="left">C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</td>
+</tr>
+<tr>
+<td align="left">Visio 专业版 2019</td>
+<td align="left">9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</td>
+</tr>
+<tr>
+<td align="left">Visio 标准版 2019</td>
+<td align="left">7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</td>
+</tr>
+<tr>
+<td align="left">Access 2019</td>
+<td align="left">9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</td>
+</tr>
+<tr>
+<td align="left">Excel 2019</td>
+<td align="left">TMJWT-YYNMB-3BKTF-644FC-RVXBD</td>
+</tr>
+<tr>
+<td align="left">Outlook 2019</td>
+<td align="left">7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</td>
+</tr>
+<tr>
+<td align="left">PowerPoint 2019</td>
+<td align="left">RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</td>
+</tr>
+<tr>
+<td align="left">Publisher 2019</td>
+<td align="left">G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</td>
+</tr>
+<tr>
+<td align="left">Skype for Business 2019</td>
+<td align="left">NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</td>
+</tr>
+<tr>
+<td align="left">Word 2019</td>
+<td align="left">PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</td>
+</tr>
+<tr>
+<td align="left">Office2016</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Office 专业增强版 2016</td>
+<td align="left">XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</td>
+</tr>
+<tr>
+<td align="left">Office Standard 2016</td>
+<td align="left">JNRGM-WHDWX-FJJG3-K47QV-DRTFM</td>
+</tr>
+<tr>
+<td align="left">Project Professional 2016</td>
+<td align="left">YG9NW-3K39V-2T3HJ-93F3Q-G83KT</td>
+</tr>
+<tr>
+<td align="left">Project Standard 2016</td>
+<td align="left">GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</td>
+</tr>
+<tr>
+<td align="left">Visio Professional 2016</td>
+<td align="left">PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</td>
+</tr>
+<tr>
+<td align="left">Visio Standard 2016</td>
+<td align="left">7WHWN-4T7MP-G96JF-G33KR-W8GF4</td>
+</tr>
+<tr>
+<td align="left">Access 2016</td>
+<td align="left">GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</td>
+</tr>
+<tr>
+<td align="left">Excel 2016</td>
+<td align="left">9C2PK-NWTVB-JMPW8-BFT28-7FTBF</td>
+</tr>
+<tr>
+<td align="left">OneNote 2016</td>
+<td align="left">DR92N-9HTF2-97XKM-XW2WJ-XW3J6</td>
+</tr>
+<tr>
+<td align="left">Outlook 2016</td>
+<td align="left">R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</td>
+</tr>
+<tr>
+<td align="left">PowerPoint 2016</td>
+<td align="left">J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</td>
+</tr>
+<tr>
+<td align="left">Publisher 2016</td>
+<td align="left">F47MM-N3XJP-TQXJ9-BP99D-8 837 K</td>
+</tr>
+<tr>
+<td align="left">Skype for Business 2016</td>
+<td align="left">869NQ-FJ69K-466HW-QYCP2-DDBV6</td>
+</tr>
+<tr>
+<td align="left">Word 2016</td>
+<td align="left">WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</td>
+</tr>
+</tbody></table>
+<p>安装完成后首次打开Office会有一个弹窗，正常现象</p>
+<p>本篇结束~</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英国留学后续日志</title>
+    <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon以及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
+
+<a id="more"></a>
+
+<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>一般来说确定最后要去的学校之后就要赶快订房间了，订的越早越便宜，而且选择的空间也比较大。英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
+<p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（忘了谁整理的了，请来认领hhh）</p>
+<p><img src="%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97/1.jpg" alt="英国留学后续日志"></p>
+<p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
+<h1 id="换取Uncon"><a href="#换取Uncon" class="headerlink" title="换取Uncon"></a>换取Uncon</h1><p>本科毕业之前大家的offer都是conditional offer，毕业后收集好缺少的材料并扫描成PDF，传到申请系统里去，就可以坐等发uncon了。我是6月24号上传到全部材料，7月7号在申请系统里查到了uncon，8号凌晨收到了邮件。一般毕业季换uncon的时间会长一些，因为换的人太多了。</p>
+<p>换uncon需要扫描上传的材料有</p>
+<ul>
+<li>毕业证原件</li>
+<li>学位证原件</li>
+<li>毕业证翻译件（自己翻译完盖学校的章就可以，不需要放照片）</li>
+<li>学位证翻译件（同上）</li>
+<li>包含所有课程的英文成绩单</li>
+<li>包含所有课程的中文成绩单（这个看具体学校，我在格拉只上传了英文的成绩单）</li>
+</ul>
+<p>下面是我用的毕业证与学位证的翻译件，格式没法调，需要word的康康百度云吧</p>
+<a class="btn" href="https://pan.baidu.com/s/1APNgOpkZaNnytagDF3rhYg" target="_blank" rel="noopener">
+            <i class="fa fa-arrow-right fa-fw"></i>密码uwbt
+          </a>
+
+<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-pencil"></i>学士学位证书翻译</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-pencil"></i>毕业证书翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>学士学位证明翻译</strong></p>
+<p>Bachelor’s Degree Certificate</p>
+<p>This is to certify that XXX, male, born on June 26, 1997, has completed an undergraduate program in Architecture at XXXXX University and graduated. According to Regulations of the People’s Republic of China on Academic Degrees, he is awarded the degree of Bachelor of Science in Architecture.</p>
+<p>Chairman of Degree Evaluation Committee: Xxxxx Xxx      XXXXX University<br>Certificate No.: XXXXXXXXXXXXXX      June 18th, 2020</p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>毕业证书翻译</strong></p>
+<p>Graduation Certificate</p>
+<p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
+<p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
+
+<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明。</p>
+<ul>
+<li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑/月，其他地区为1015镑/月</li>
+<li>一般存定期并设置自动转存</li>
+<li>存满28天之后就可以在网上预约签证了</li>
+<li>然后在办理签证的前几天去银行开存款证明和流水，不用开太早，因为存款证明开具日期和网上签证预约日期的间隔不能超过31天</li>
+<li>英镑和人民币可以混存，总金额够了就行</li>
+<li>最好存在自己名下，存在父母名下需要多开具亲子关系证明以及授权使用资金的证明</li>
+<li>建议存在中农工建这类大行，不建议存在农村信用社一类的地方</li>
+<li>不能用理财产品代替</li>
+</ul>
+<p><img src="%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97/2.png" alt="英国留学后续日志"></p>
+<h1 id="换汇"><a href="#换汇" class="headerlink" title="换汇"></a>换汇</h1><p>在去英国之前建议提前换好英镑，在常用的银行换就可以，到英国办好当地银行卡后通过跨境汇款转过去。下面是一些情报</p>
+<ul>
+<li>购买英镑的时候分为<strong>现汇</strong>和<strong>现钞</strong>两个选项，现汇就是存在银行卡里的钱，现钞就是换取的纸币</li>
+<li>换汇一般就是购买英镑现汇存在银行卡里</li>
+<li>临行前可以换一部分现钞，供落地后应急用，不用太多，海关不允许携带5000美元以上的等值外币出境</li>
+<li>每人每年的换汇额度是5万美元</li>
+<li>换汇的时候看的是<strong>购汇汇率</strong>而不是<strong>结汇汇率</strong>。购汇汇率是你向银行购买英镑的汇率，结汇汇率是你向银行出售英镑的汇率</li>
+<li>建议像我一样的贫困人口每天多看两眼汇率，万一英镑再跌到8.1呢</li>
+<li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
+<li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
+</ul>
+<hr>
+<blockquote class="blockquote-center">
+            <p>以下内容未经本人实践，仅供参考</p>
+
+          </blockquote>
+
+<hr>
+<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。我准备9月去做，做完回来更，下面是目前搜集到的情报</p>
+<ul>
+<li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china" target="_blank" rel="noopener"><strong>签证官网</strong></a></li>
+<li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
+<li>需要提前预约，通常提前一或两个工作天预约即可</li>
+<li>预约方式有电话和邮件两种，部分医院（如济南出国移民体检中心）还可以在网站上预约</li>
+<li>无需空腹，正常饮食</li>
+<li>需要携带的材料<ul>
+<li>有效期半年以上的护照原件，不接受任何其他证件</li>
+<li>可能需要护照复印件</li>
+<li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
+</ul>
+</li>
+<li>流程很快，耗时约为半小时，换上衣服拍下胸片，然后医生询问下病史就结束了</li>
+<li>体检结果正常的话，上午体检下午可以出结果并发出证书，下午体检则需第二天早上才能发出证书。</li>
+<li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
+<li>证书有效期通常为六个月，特殊情况下为三个月</li>
+<li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
+<li>英国地址填自己的学校</li>
+</ul>
+<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。先观望一下，后面更</p>
+<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><p>签证需要等CAS下来才能去办，我大概11月去办，<a href="https://www.gov.uk/government/publications/apply-for-a-uk-visa-in-china" target="_blank" rel="noopener"><strong>签证官网</strong></a>上有详细的流程，需要的材料有</p>
+<ul>
+<li>在线签证申请材料清单打印件，请访问<a href="https://visas-immigration.service.gov.uk/apply-visa-type/tier4在线申请，完成在线申请后可以下载材料清单" target="_blank" rel="noopener">https://visas-immigration.service.gov.uk/apply-visa-type/tier4在线申请，完成在线申请后可以下载材料清单</a></li>
+<li>有效的旅行文件或护照</li>
+<li>录取确认函（CAS）号（在签证申请表中提供）</li>
+<li>由授权诊所开具的肺结核检测证明（停留超过6个月）</li>
+<li>学术技术审核证书（如果您的学校录取确认函中要求您提交）</li>
+<li>仍然有效的旧生物信息卡（如果您持有）</li>
+</ul>
+<p>提交签证材料的流程为</p>
+<ol>
+<li>提前15分钟到达，排队取号</li>
+<li>叫的自己的号时去相应的窗口递交材料，叫号方式为屏幕+英文广播</li>
+<li>按照工作人员指示签字</li>
+<li>选择护照领取方式（快递或者自己取），快递80元，只收取现金</li>
+<li>等待第二次叫号</li>
+<li>核对信息，拍照录指纹（不能戴眼镜和首饰）</li>
+</ol>
+<h1 id="交学费-住宿费"><a href="#交学费-住宿费" class="headerlink" title="交学费/住宿费"></a>交学费/住宿费</h1><p>我，秦始皇，打钱！预计12月更</p>
+<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>不知道1月份能不能正常复航，预计12月更</p>
+<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>留学生机票行李限额比较高，一般可以托运2个28寸的行李箱，每个箱子重量不超过23KG，手提行李一件，重量不超过7KG<br>这部分预计12月更新，我正在为怎么把ITX机箱和显示器扛过去而发愁hhh</p>
+<h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>留学，Record</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>过气学长的碎碎念</title>
     <url>/%E8%BF%87%E6%B0%94%E5%AD%A6%E9%95%BF%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">交完毕设就想写，咕到了现在，主要给学弟学妹说一下大四大五的流程和注意事项，大四部分内容可能和实际有出入，年代久远记不清了</blockquote>
@@ -391,11 +879,11 @@
 <p>示例</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'category'</span>,</span><br><span class="line">        data: [<span class="string">'Mon'</span>, <span class="string">'Tue'</span>, <span class="string">'Wed'</span>, <span class="string">'Thu'</span>, <span class="string">'Fri'</span>, <span class="string">'Sat'</span>, <span class="string">'Sun'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'value'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        <span class="selector-tag">data</span>: <span class="selector-attr">[820, 932, 901, 934, 1290, 1330, 1320]</span>,</span><br><span class="line">        type: 'line'</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-<div id="echarts54" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts9408" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts54'));
+	var myChart = echarts.init(document.getElementById('echarts9408'));
 	// 指定图表的配置项和数据
 	option = {
     xAxis: {
@@ -443,8 +931,8 @@
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>MacOS</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1085,8 +1573,8 @@
       </categories>
       <tags>
         <tag>MacOS</tag>
-        <tag>Ubuntu</tag>
         <tag>Win10</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>

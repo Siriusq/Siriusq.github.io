@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"siriusq.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="写一个Win10重装教程，另外偷个懒，把office的安装教程也合进来了hhh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10重装指北">
+<meta property="og:url" content="https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html">
+<meta property="og:site_name" content="Sirius">
+<meta property="og:description" content="写一个Win10重装教程，另外偷个懒，把office的安装教程也合进来了hhh">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-13T04:28:34.000Z">
+<meta property="article:modified_time" content="2020-07-13T13:09:14.337Z">
+<meta property="article:author" content="Sirius">
+<meta property="article:tag" content="Win10">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+<script type="text/javascript">
+    // Wait for the page to load first
+    var _prevOnload = window.onload;
+    window.onload = function() {
+        var switchLang = document.getElementsByClassName("menu-item menu-item-switch_lang")[0];
+        switchLang.onclick = function() {
+            var href = window.location.href;
+            var indexOfEn = href.toLowerCase().indexOf('/en/');
+            if(indexOfEn !== -1) {
+                window.location.href = href.replace('/en/', '/');
+            }
+            else {
+                window.location.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+            }
+            if(typeof(_prevOnload) === 'function') {
+                _prevOnload();
+            }
+            return false;
+        }
+    }
+</script>
+  <title>Win10重装指北 | Sirius</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sirius</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">Hello World!</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">24</span></a>
+
+  </li>
+        <li class="menu-item menu-item-switch_lang">
+
+    <a href="https://siriusq.top/en/" rel="noopener" target="_blank"><i class="fa fa-fw fa-language"></i>English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sirius">
+      <meta itemprop="description" content="一只想变成程序猿的建筑狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sirius">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Win10重装指北
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-13 12:28:34 / 修改时间：21:09:14" itemprop="dateCreated datePublished" datetime="2020-07-13T12:28:34+08:00">2020-07-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote class="blockquote-center">写一个Win10重装教程，另外偷个懒，把office的安装教程也合进来了hhh</blockquote>
+
+<a id="more"></a>
+
+<h1 id="必备素材"><a href="#必备素材" class="headerlink" title="必备素材"></a>必备素材</h1><ul>
+<li>容量≥8G的U盘一个</li>
+<li>能正常使用的电脑一台</li>
+<li>Refus启动盘制作工具<ul>
+<li><a href="https://rufus.ie/" target="_blank" rel="noopener">下载地址</a></li>
+<li>在网页下面的Download中选择<code>Rufus x.xx Portable</code></li>
+</ul>
+</li>
+<li>Win10镜像<ul>
+<li>1909及以前版本<ul>
+<li><a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">下载地址</a></li>
+<li>点击左边栏的<code>操作系统</code></li>
+<li>选择想要安装的版本</li>
+<li>以<code>Windows 10, Version 1909 (updated Jan 2020)</code>为例<ul>
+<li>1909表示这是2019年9月大更新的版本（下一个版本号为2004，意思就是2020年4月大更新的版本）</li>
+<li>updated Jan 2020表示这个镜像包含了2020年1月份的小更新</li>
+</ul>
+</li>
+<li>可以看到有4个选项，以<code>Windows 10 (business editions), version 1909 (updated Jan 2020) (x64) - DVD (Chinese-Simplified)</code>为例<ul>
+<li>business editions是我们需要的版本，包含企业版、专业版、教育版、专业工作站等版本</li>
+<li>x64代表64位系统（32位系统为x86），如果没有特殊需要建议安装64位</li>
+</ul>
+</li>
+<li>点击详细信息，可以看到一个<code>ed2k</code>开头的链接</li>
+<li>复制这个链接，用迅雷下载镜像文件</li>
+</ul>
+</li>
+<li>2004及之后的版本<ul>
+<li><a href="https://next.itellyou.cn" target="_blank" rel="noopener">下载地址</a></li>
+<li>使用邮件或者第三方账户注册并登录</li>
+<li>有能力的朋友可以捐助一下，网站作者已经坚持免费12年了</li>
+<li>选择<code>Windows10</code>并点击<code>详细信息</code></li>
+<li>以<code>Windows 10 (business edition), Version 2004 (Updated June 2020) (x64) - DVD (Chinese-Simplified)</code>为例</li>
+<li>点击后面的<code>复制按钮</code></li>
+<li>打开相应的下载软件（这里推<a href="https://motrix.app/zh-CN" target="_blank" rel="noopener">Motrix</a>）并下载镜像</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="制作安装盘"><a href="#制作安装盘" class="headerlink" title="制作安装盘"></a>制作安装盘</h1><ul>
+<li>插入U盘</li>
+<li>以管理员身份运行<code>Refus</code></li>
+<li>在<code>设备</code>中选择你的U盘</li>
+<li><code>引导类型选择</code>前一栏保持默认的<code>镜像文件（请选择）</code>然后点击后面的<code>选择</code>按钮</li>
+<li>找到下载的Win10镜像并打开</li>
+<li>点击最下面的<code>开始</code></li>
+<li>等待制作完成</li>
+</ul>
+<h1 id="BIOS修改启动项"><a href="#BIOS修改启动项" class="headerlink" title="BIOS修改启动项"></a>BIOS修改启动项</h1><p>下面的选项表述不一定准确，以电脑BIOS标注为准，意思对即可</p>
+<ul>
+<li>重启电脑</li>
+<li>开机的时候狂按<code>F2/F10/Delete</code>（不同的电脑进入BIOS的按键不一样）</li>
+<li>进入BIOS</li>
+<li>找到<code>启动顺序/启动项管理</code></li>
+<li>关闭<code>安全启动/Secure Boot</code></li>
+<li>新电脑<ul>
+<li>引导方式选择<code>UEFI Only</code></li>
+<li>将你的U盘设置为<code>第一启动项</code>（部分电脑需要使用F5/F6移动到最上方）</li>
+<li>如果有两个U盘选项，例如<code>UEFI:USBXXX</code>和<code>USBXXX</code>，选择带有UEFI的那一个</li>
+<li>保存设置并退出BIOS</li>
+</ul>
+</li>
+<li>老电脑（不支持UEFI启动的）<ul>
+<li>将你的U盘设置为<code>第一启动项</code>（部分电脑需要使用F5/F6移动到最上方）</li>
+<li>保存设置并退出BIOS</li>
+</ul>
+</li>
+<li>等待电脑重启</li>
+</ul>
+<h1 id="转换硬盘分区格式"><a href="#转换硬盘分区格式" class="headerlink" title="转换硬盘分区格式"></a>转换硬盘分区格式</h1><p>这一步只针对UEFI启动，非UEFI的请跳过</p>
+<ul>
+<li>等电脑转完圈后会进入语言选择页面</li>
+<li>使用<code>Shift</code>+<code>F10</code>打开终端</li>
+<li>输入<code>diskpart</code>打开磁盘管理</li>
+<li>输入<code>list disk</code>，列出硬盘，会显示硬盘的序号（0/1/2等）</li>
+<li>找到安装目标磁盘的序号，输入<code>select disk 序号</code>回车<ul>
+<li>注意不要选到自己的U盘</li>
+</ul>
+</li>
+<li>输入<code>clean</code>回车</li>
+<li>输入<code>convert gpt</code>转换gpt格式</li>
+<li>再次输入<code>list disk</code>，观察<code>GPT</code>下面是否出现星号</li>
+<li>有星号的话就可以关闭终端了</li>
+</ul>
+<h1 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h1><p>不同版本的Win10安装过程稍有不同，以下步骤不会在所有系统中出现</p>
+<ul>
+<li>选择安装语言后点击<code>下一步</code></li>
+<li>点击<code>现在安装</code></li>
+<li>进入<code>激活Windows</code>页面，选择<code>我没有产品密钥</code></li>
+<li>进入<code>选择要安装的操作系统</code>页面，根据需要选择要安装的版本并点击<code>下一步</code></li>
+<li>进入<code>适用的声明和许可条款</code>页面，勾选<code>我接受许可条款</code>并点击<code>下一步</code></li>
+<li>进入<code>你想执行哪种类型的安装</code>页面，选择<code>自定义：仅安装Windows（高级）</code></li>
+<li>进入<code>你想将Windows安装在哪里</code>页面，根据驱动器的大小判断硬盘，如果有固态硬盘的话选择固态硬盘</li>
+<li>点击右下方的<code>新建</code>，此时会提示创建其他分区，点击<code>确定</code></li>
+<li>分区创建完成后点击<code>下一步</code></li>
+<li>等待系统安装完成，这一步耗时相对较长</li>
+<li>进入提示<code>Windows需要重启才能继续</code>的页面，会有10秒的重启倒计时，此时拔出U盘并点击<code>立即重启</code></li>
+<li>重启后会提示<code>让我们先从区域设置开始</code>，选择<code>中国</code>并点击<code>是</code></li>
+<li>提示<code>这种键盘布局是否合适</code>，选择需要的键盘布局并点击<code>是</code></li>
+<li>有需要的话可以添加第二种键盘布局，步骤同上，没有需要点击<code>跳过</code></li>
+<li>连接网络，不想连接或者没有网络的话点击左下角的<code>我没有Internet连接</code><ul>
+<li>不连接的话会有第二遍提示：<code>当你连接到Internet时，有更多要发现的内容</code>，点击左下角的<code>继续执行有限设置</code></li>
+</ul>
+</li>
+<li>输入用户名和密码并确认密码</li>
+<li>三个安全问题胡乱写就行，从来没有用到过这个东西</li>
+<li>进入<code>在具有活动历史记录的设备上执行更多的操作</code>页面，如果你有多台电脑的话可以选择<code>是</code>，开启后可以同步不同电脑上的活动记录，不过个人感觉没啥卵用</li>
+<li>进入<code>从数字助理获取帮助页面</code>，选择<code>接受</code>就会开启Cortana，其实也没什么卵用</li>
+<li>进入<code>为你的设备选择隐私设置页面</code>，根据需要进行勾选，我个人只开启了<code>位置</code>与<code>查找我的设备</code>两个选项</li>
+<li>点击接受后就设置完成了，等待一会就会进入桌面</li>
+</ul>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>进入桌面后建议联网，然后进入<code>设置-更新和安全-检查更新</code>，等待所有更新安装完成后点击下面出现的<code>立即重启</code>，这个过程耗时较长，取决于网速。另外Win10会自动在后台安装驱动，如果当前屏幕分辨率很怪的话不用慌，过一会安装完驱动就好了。</p>
+<h1 id="KMS激活"><a href="#KMS激活" class="headerlink" title="KMS激活"></a>KMS激活</h1><p>KMS全称Key Management Service，主要用于企业内的计算机批量激活，激活有效期为180天，但是可以设置自动续期。需要注意的是个人用户使用的KMS在法律层面上并不属于正版，去官网买的Key才算法律层面的正版，微软只是对这种行为睁一只眼闭一只眼罢了。不建议长期使用。</p>
+<p>激活方式如下：在开始按钮上右键，选择<code>Windows Powershell（管理员）</code>，依次输入下面的命令并回车，有弹窗的话点确定即可。激活过程请保持联网</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">slmgr -skms kms.<span class="number">03</span>k.org</span><br><span class="line">slmgr -ipk 相应版本的秘钥</span><br><span class="line">slmgr -ato</span><br><span class="line">slmgr -dlv</span><br></pre></td></tr></table></figure>
+
+<p>相应版本的秘钥如下，其他版本请到<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener"><strong>微软官方文档</strong></a>查找，其中版本后缀有N的为欧洲专供版，后缀有G的为政府专供版，不过这些和一般用户没啥关系</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作系统版本</th>
+<th align="left">KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows 10 专业版</td>
+<td align="left">W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业版 N</td>
+<td align="left">MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业工作站版</td>
+<td align="left">NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业工作站版 N</td>
+<td align="left">9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业教育版</td>
+<td align="left">6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+</tr>
+<tr>
+<td align="left">Windows 10 专业教育版 N</td>
+<td align="left">YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+</tr>
+<tr>
+<td align="left">Windows 10 教育版</td>
+<td align="left">NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+</tr>
+<tr>
+<td align="left">Windows 10 教育版 N</td>
+<td align="left">2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版</td>
+<td align="left">NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N</td>
+<td align="left">DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 G</td>
+<td align="left">YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 G N</td>
+<td align="left">44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 LTSC 2019</td>
+<td align="left">M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N LTSC 2019</td>
+<td align="left">92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 LTSB 2016</td>
+<td align="left">DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 N LTSB 2016</td>
+<td align="left">QFFDN-GRT3P-VKWWX-X7T3R-8B639</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 2015 LTSB</td>
+<td align="left">WNMTR-4C88C-JK8YV-HQ7T2-76DF9</td>
+</tr>
+<tr>
+<td align="left">Windows 10 企业版 2015 LTSB N</td>
+<td align="left">2F77B-TNFGY-69QQF-B8YKP-D69TJ</td>
+</tr>
+</tbody></table>
+<p>第一条命令中的<code>kms.03k.org</code>是一个KMS激活服务器，如果挂掉的话可以换用下面的这些</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">kms.chinancce.com</span></span><br><span class="line"><span class="attribute">kms.bluskai.com</span></span><br><span class="line"><span class="attribute">kms.library.hk</span></span><br><span class="line"><span class="attribute">kms.91ssr.top</span></span><br><span class="line"><span class="attribute">kms.digiboy.ir</span></span><br><span class="line"><span class="attribute">kms.luody.info</span></span><br><span class="line"><span class="attribute">kms.lotro.cc</span></span><br><span class="line"><span class="attribute">kms.shuax.com</span></span><br><span class="line"><span class="attribute">kms.cangshui.net</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Office安装与激活"><a href="#Office安装与激活" class="headerlink" title="Office安装与激活"></a>Office安装与激活</h1><p>安装方法如下</p>
+<ul>
+<li>下载<a href="https://otp.landian.vip/zh-cn/download.html" target="_blank" rel="noopener"><strong>Office Tool Plus</strong></a>，建议下载完整版</li>
+<li>解压文件并使用管理员身份运行<code>Office Tool Plus.exe</code></li>
+<li>点击<code>部署</code></li>
+<li>在<code>产品</code>中勾选需要的版本<ul>
+<li>一般选择的是<code>Office 专业增强版 2019 批量版 ProPlus2019Volume</code></li>
+</ul>
+</li>
+<li>在<code>应用程序</code>中勾选需要的软件</li>
+<li>在右侧的体系结构中选择<code>x64</code>，32位系统请选择<code>x86</code></li>
+<li>选择相应的通道<ul>
+<li>一般选择<code>每月通道</code></li>
+<li>企业版Win10可能会提示不支持通道，可以换成<code>Office 2019 企业长期版</code></li>
+<li>或者先选择<code>测试通道</code>或者<code>开发通道</code>后，再重新选择<code>每月通道</code>，这样就不会报错了</li>
+</ul>
+</li>
+<li>安装方式保持默认的<code>在线安装</code></li>
+<li>安装模块保持默认的<code>Office部署工具</code></li>
+<li>勾选<code>安装完成后创建桌面快捷方式</code></li>
+<li>点击右下角的<code>开始部署</code></li>
+</ul>
+<p>Office同样可以使用KMS激活,步骤如下</p>
+<ul>
+<li>使用管理员身份运行<code>Office Tool Plus.exe</code></li>
+<li>点击<code>激活</code></li>
+<li>在<code>KMS管理</code>中输入KMS服务器地址<code>kms.03k.org</code>并点击<code>应用服务器地址</code></li>
+<li>在<code>密钥管理</code>中输入相应版本的秘钥并点击<code>安装密钥</code></li>
+<li>点击右下角的<code>激活</code></li>
+</ul>
+<p>相应版本的秘钥如下</p>
+<table>
+<thead>
+<tr>
+<th align="left">Product</th>
+<th align="left">GVLK</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Office2019</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Office 专业增强版 2019</td>
+<td align="left">NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</td>
+</tr>
+<tr>
+<td align="left">Office 标准版 2019</td>
+<td align="left">6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</td>
+</tr>
+<tr>
+<td align="left">Project 专业版 2019</td>
+<td align="left">B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</td>
+</tr>
+<tr>
+<td align="left">Project 标准版 2019</td>
+<td align="left">C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</td>
+</tr>
+<tr>
+<td align="left">Visio 专业版 2019</td>
+<td align="left">9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</td>
+</tr>
+<tr>
+<td align="left">Visio 标准版 2019</td>
+<td align="left">7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</td>
+</tr>
+<tr>
+<td align="left">Access 2019</td>
+<td align="left">9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</td>
+</tr>
+<tr>
+<td align="left">Excel 2019</td>
+<td align="left">TMJWT-YYNMB-3BKTF-644FC-RVXBD</td>
+</tr>
+<tr>
+<td align="left">Outlook 2019</td>
+<td align="left">7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</td>
+</tr>
+<tr>
+<td align="left">PowerPoint 2019</td>
+<td align="left">RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</td>
+</tr>
+<tr>
+<td align="left">Publisher 2019</td>
+<td align="left">G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</td>
+</tr>
+<tr>
+<td align="left">Skype for Business 2019</td>
+<td align="left">NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</td>
+</tr>
+<tr>
+<td align="left">Word 2019</td>
+<td align="left">PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</td>
+</tr>
+<tr>
+<td align="left">Office2016</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Office 专业增强版 2016</td>
+<td align="left">XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</td>
+</tr>
+<tr>
+<td align="left">Office Standard 2016</td>
+<td align="left">JNRGM-WHDWX-FJJG3-K47QV-DRTFM</td>
+</tr>
+<tr>
+<td align="left">Project Professional 2016</td>
+<td align="left">YG9NW-3K39V-2T3HJ-93F3Q-G83KT</td>
+</tr>
+<tr>
+<td align="left">Project Standard 2016</td>
+<td align="left">GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</td>
+</tr>
+<tr>
+<td align="left">Visio Professional 2016</td>
+<td align="left">PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</td>
+</tr>
+<tr>
+<td align="left">Visio Standard 2016</td>
+<td align="left">7WHWN-4T7MP-G96JF-G33KR-W8GF4</td>
+</tr>
+<tr>
+<td align="left">Access 2016</td>
+<td align="left">GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</td>
+</tr>
+<tr>
+<td align="left">Excel 2016</td>
+<td align="left">9C2PK-NWTVB-JMPW8-BFT28-7FTBF</td>
+</tr>
+<tr>
+<td align="left">OneNote 2016</td>
+<td align="left">DR92N-9HTF2-97XKM-XW2WJ-XW3J6</td>
+</tr>
+<tr>
+<td align="left">Outlook 2016</td>
+<td align="left">R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</td>
+</tr>
+<tr>
+<td align="left">PowerPoint 2016</td>
+<td align="left">J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</td>
+</tr>
+<tr>
+<td align="left">Publisher 2016</td>
+<td align="left">F47MM-N3XJP-TQXJ9-BP99D-8 837 K</td>
+</tr>
+<tr>
+<td align="left">Skype for Business 2016</td>
+<td align="left">869NQ-FJ69K-466HW-QYCP2-DDBV6</td>
+</tr>
+<tr>
+<td align="left">Word 2016</td>
+<td align="left">WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</td>
+</tr>
+</tbody></table>
+<p>安装完成后首次打开Office会有一个弹窗，正常现象</p>
+<p>本篇结束~</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Sirius
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html" title="Win10重装指北">https://siriusq.github.io/Win10重装指北.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Win10/" rel="tag"><i class="fa fa-tag"></i> Win10</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html" rel="prev" title="英国留学后续日志">
+      <i class="fa fa-chevron-left"></i> 英国留学后续日志
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#必备素材"><span class="nav-number">1.</span> <span class="nav-text">必备素材</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作安装盘"><span class="nav-number">2.</span> <span class="nav-text">制作安装盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BIOS修改启动项"><span class="nav-number">3.</span> <span class="nav-text">BIOS修改启动项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转换硬盘分区格式"><span class="nav-number">4.</span> <span class="nav-text">转换硬盘分区格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装设置"><span class="nav-number">5.</span> <span class="nav-text">安装设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">6.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KMS激活"><span class="nav-number">7.</span> <span class="nav-text">KMS激活</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Office安装与激活"><span class="nav-number">8.</span> <span class="nav-text">Office安装与激活</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Sirius"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Sirius</p>
+  <div class="site-description" itemprop="description">一只想变成程序猿的建筑狗</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Siriusq" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Siriusq" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:siriuskevin@foxmail.com" title="E-Mail → mailto:siriuskevin@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sirius</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">143k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:10</span>
+</div>
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/31/2019 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      script.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '4217cae26df745a55acd',
+      clientSecret: 'b7f2cc0c82be38a4e0f294f12f761bc4799669cd',
+      repo        : 'gitalk-commnet',
+      owner       : 'Siriusq',
+      admin       : ['Siriusq'],
+      id          : '7baf1e510fe68d44d44e5de3a481261e',
+        language: '',
+      distractionFreeMode: false
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+<!--jquery-->
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/crash_cheat.js"></script>
+
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+<script type="text/javascript" src="/js/fold_action.js"></script>
+
+
+<script type="text/javascript" src="/js/lozad.min.js"></script>
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
