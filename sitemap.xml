@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html</loc>
+    <loc>https://siriusq.github.io/%E6%B7%BB%E5%8A%A0-Windows-Terminal-%E8%87%B3%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95.html</loc>
     
-    <lastmod>2020-07-13T13:09:14.337Z</lastmod>
+    <lastmod>2020-07-16T04:09:37.366Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://siriusq.github.io/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</loc>
     
-    <lastmod>2020-07-13T04:29:21.077Z</lastmod>
+    <lastmod>2020-07-16T03:47:24.430Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://siriusq.github.io/Win10%E9%87%8D%E8%A3%85%E6%8C%87%E5%8C%97.html</loc>
+    
+    <lastmod>2020-07-13T13:09:14.337Z</lastmod>
     
   </url>
   
@@ -142,14 +149,14 @@
   </url>
   
   <url>
-    <loc>https://siriusq.github.io/lib/pjax/example/index.html</loc>
+    <loc>https://siriusq.github.io/lib/pjax/example/page2.html</loc>
     
     <lastmod>2020-03-13T02:57:22.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://siriusq.github.io/lib/pjax/example/page2.html</loc>
+    <loc>https://siriusq.github.io/lib/pjax/example/index.html</loc>
     
     <lastmod>2020-03-13T02:57:22.000Z</lastmod>
     
