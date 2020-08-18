@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java与C的环境变量配置</title>
+    <url>/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧</blockquote>
+
+<a id="more"></a>
+
+<h1 id="Java环境变量配置"><a href="#Java环境变量配置" class="headerlink" title="Java环境变量配置"></a>Java环境变量配置</h1><ol>
+<li>直接在任务栏搜索框搜索<code>环境变量</code>，会出现<code>编辑系统环境变量</code></li>
+<li>在弹出的窗口中点击右下角的<code>环境变量</code></li>
+<li>在下面的<code>系统变量</code>中新建系统变量，变量名<code>JAVA_HOME</code>，变量值为JDK的安装路径，默认是<code>C:\Program Files\Java\jdk-14.0.2</code></li>
+<li>再新建一个系统变量<code>CLASSPATH</code>，变量值为<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>分别加入<code>%JAVA_HOME%\bin</code>与<code>%JAVA_HOME%\jre\bin</code></li>
+<li>确定三连回到桌面</li>
+<li>打开终端，输入<code>java -version</code>检查是否成功，成功的话会显示java版本号</li>
+<li>不成功的话重启一遍，并检查一下变量是否输入正确</li>
+</ol>
+<h1 id="C环境变量配置"><a href="#C环境变量配置" class="headerlink" title="C环境变量配置"></a>C环境变量配置</h1><ol>
+<li>在mingw中勾选<code>mingw32-base</code>和<code>mingw-gcc-g++</code>就行，选择多了会装到天荒地老。。。勾选方式是<code>右键 - Mark for Installation</code></li>
+<li>点击右上角的<code>Installation - Apply Changes</code></li>
+<li>在弹出的窗口中点击<code>Apply</code>确认</li>
+<li>漫长的等待。。。。。。土豆服务器经常会报错安装失败</li>
+<li>安装完成后同上打开系统变量</li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>加入mingw的安装路径，默认是<code>C:\MinGW\bin</code></li>
+<li>打开终端，输入<code>gcc -v</code>检查是否成功</li>
+<li>不成功同样重启试试</li>
+</ol>
+<p>设置完成后的环境变量大概是这个亚子<br><img src="Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/1.png" alt="1"><br><img src="Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/2.png" alt="2"></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
+        <tag>Java</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>添加 Windows Terminal 至右键菜单</title>
     <url>/%E6%B7%BB%E5%8A%A0-Windows-Terminal-%E8%87%B3%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">Windows Terminal 已经在微软应用商店上架了，所以我把终端从 Fluent Terminal 换成了 Windows Terminal，记录一下将它添加到右键菜单的过程</blockquote>
 
 <a id="more"></a>
 
-<h1 id="添加图标"><a href="#添加图标" class="headerlink" title="添加图标"></a>添加图标</h1><p>首先在<code>C:\Users\S\AppData\Local</code>新建文件夹<code>Terminal</code>，可以直接使用下面的命令创建</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> C:\Users\S\AppData\Local\Terminal</span><br></pre></td></tr></table></figure>
+<h1 id="添加图标"><a href="#添加图标" class="headerlink" title="添加图标"></a>添加图标</h1><p>首先在<code>C:\Users\[YOUR_USER_NAME]\AppData\Local</code>新建文件夹<code>Terminal</code>，可以直接使用下面的命令创建，<strong>记得把[YOUR_USER_NAME]换成自己的用户名！</strong></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> C:\Users\[YOUR_USER_NAME]\AppData\Local\Terminal</span><br></pre></td></tr></table></figure>
 
 <p>然后下载 Windows Terminal 图标到刚才创建的文件夹，如果浏览器没有自动下载的话就右键另存为terminal.ico</p>
 <a class="btn" href="https://raw.githubusercontent.com/microsoft/terminal/master/res/terminal.ico" target="_blank" rel="noopener">
@@ -932,11 +972,11 @@
 <p>示例</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'category'</span>,</span><br><span class="line">        data: [<span class="string">'Mon'</span>, <span class="string">'Tue'</span>, <span class="string">'Wed'</span>, <span class="string">'Thu'</span>, <span class="string">'Fri'</span>, <span class="string">'Sat'</span>, <span class="string">'Sun'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'value'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        <span class="selector-tag">data</span>: <span class="selector-attr">[820, 932, 901, 934, 1290, 1330, 1320]</span>,</span><br><span class="line">        type: 'line'</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-<div id="echarts8976" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts7406" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts8976'));
+	var myChart = echarts.init(document.getElementById('echarts7406'));
 	// 指定图表的配置项和数据
 	option = {
     xAxis: {
@@ -2658,10 +2698,10 @@
   </entry>
   <entry>
     <title>Ryzen Hackintosh</title>
-    <url>/Ryzen%20Hackintosh.html</url>
+    <url>/Ryzen-Hackintosh.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">折腾了三天，终于把MacOs成功安装到了台式机上，某宝上买了一个拆机苹果网卡，基本完美，安装系统为MACOS HIGH SIERRA(10.13.6 17G65)，这篇文章就是在MacOS上写的（嚣张.jpg）</blockquote>
 
-<p><img src="RyzenHackintosh/11.png" alt="1"></p>
+<p><img src="Ryzen-Hackintosh/11.png" alt="1"></p>
 <p>在Ryzen上安装Hackintosh的方法是<strong>Vanilla</strong>，是通过修改config.plist文件来实现黑苹果的，毕竟苹果使用的全是Intel的处理器，所以此文章的方法也仅支持AMD的部分CPU</p>
 <a id="more"></a>
 
@@ -3188,8 +3228,8 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>Architecture</tag>
         <tag>Internet</tag>
+        <tag>Architecture</tag>
       </tags>
   </entry>
   <entry>

@@ -22,20 +22,25 @@
     var CONFIG = {"hostname":"siriusq.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"right","width":320,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="记录总结用HEXO和Github Page搭建博客时踩过的坑，主要包括以下  Github Page 配置过程 本地软件配置 HEXO  配置过程 主题美化 部署网站">
+  <meta name="description" content="昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客踩坑指北">
-<meta property="og:url" content="https://siriusq.github.io/Hexo%E5%8D%9A%E5%AE%A2%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8C%97.html">
+<meta property="og:title" content="Java与C的环境变量配置">
+<meta property="og:url" content="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html">
 <meta property="og:site_name" content="Sirius">
-<meta property="og:description" content="记录总结用HEXO和Github Page搭建博客时踩过的坑，主要包括以下  Github Page 配置过程 本地软件配置 HEXO  配置过程 主题美化 部署网站">
+<meta property="og:description" content="昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-02T02:39:07.000Z">
-<meta property="article:modified_time" content="2020-02-04T08:37:32.000Z">
+<meta property="og:image" content="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/1.png">
+<meta property="og:image" content="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/2.png">
+<meta property="article:published_time" content="2020-08-18T04:14:08.000Z">
+<meta property="article:modified_time" content="2020-08-18T04:49:12.490Z">
 <meta property="article:author" content="Sirius">
-<meta property="article:tag" content="HEXO">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/1.png">
 
-<link rel="canonical" href="https://siriusq.github.io/Hexo%E5%8D%9A%E5%AE%A2%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8C%97.html">
+<link rel="canonical" href="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html">
 
 
 <script id="page-configurations">
@@ -68,7 +73,7 @@
         }
     }
 </script>
-  <title>Hexo博客踩坑指北 | Sirius</title>
+  <title>Java与C的环境变量配置 | Sirius</title>
   
 
 
@@ -223,7 +228,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://siriusq.github.io/Hexo%E5%8D%9A%E5%AE%A2%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8C%97.html">
+    <link itemprop="mainEntityOfPage" href="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -236,7 +241,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          Hexo博客踩坑指北
+          Java与C的环境变量配置
         </h2>
 
         <div class="post-meta">
@@ -245,23 +250,17 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-04-02 10:39:07" itemprop="dateCreated datePublished" datetime="2019-04-02T10:39:07+08:00">2019-04-02</time>
+              <time title="创建时间：2020-08-18 12:14:08 / 修改时间：12:49:12" itemprop="dateCreated datePublished" datetime="2020-08-18T12:14:08+08:00">2020-08-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-04 16:37:32" itemprop="dateModified" datetime="2020-02-04T16:37:32+08:00">2020-02-04</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+                  <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
                 </span>
             </span>
 
@@ -278,14 +277,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.2k</span>
+              <span>661</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -297,153 +296,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>记录总结用HEXO和Github Page搭建博客时踩过的坑，主要包括以下</p>
-<ul>
-<li>Github Page 配置过程</li>
-<li>本地软件配置</li>
-<li>HEXO  配置过程</li>
-<li>主题美化</li>
-<li>部署网站</li>
-</ul>
+        <blockquote class="blockquote-center">昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧</blockquote>
+
 <a id="more"></a>
 
-<h1 id="Github-Page-配置过程"><a href="#Github-Page-配置过程" class="headerlink" title="Github Page 配置过程"></a>Github Page 配置过程</h1><p>搭建博客的时候纠结了很久，现成的博客也有很多也比较方便，但总感觉东西在别人手里不放心，万一哪一天被删了就哭了。所以在浏览了很多大佬的教程之后决定用Github Page 搞一个，关于Github Page 的介绍可以看<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Page</a>官方介绍。</p>
-<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><ol>
-<li>注册Github账号 这个不多说了</li>
-<li>创建一个以你的用户名命名的<code>Respository</code>， 命名方式：<code>用户名.github.io</code> <blockquote>
-<p>踩坑：<br>这个地方一定要用自己的用户名，否则不会生成网页</p>
-</blockquote>
-</li>
-<li><code>README.md</code>随便写</li>
-<li>点击<code>Create Respository</code></li>
-<li>进入<code>Settings</code>，找到<code>Github Pages</code>，点击<code>Choose a theme</code></li>
-<li>主题随便选一个，后面会更换</li>
-<li>现在打开 <code>用户名.github.io</code> 就可以看到你的网页了</li>
+<h1 id="Java环境变量配置"><a href="#Java环境变量配置" class="headerlink" title="Java环境变量配置"></a>Java环境变量配置</h1><ol>
+<li>直接在任务栏搜索框搜索<code>环境变量</code>，会出现<code>编辑系统环境变量</code></li>
+<li>在弹出的窗口中点击右下角的<code>环境变量</code></li>
+<li>在下面的<code>系统变量</code>中新建系统变量，变量名<code>JAVA_HOME</code>，变量值为JDK的安装路径，默认是<code>C:\Program Files\Java\jdk-14.0.2</code></li>
+<li>再新建一个系统变量<code>CLASSPATH</code>，变量值为<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>分别加入<code>%JAVA_HOME%\bin</code>与<code>%JAVA_HOME%\jre\bin</code></li>
+<li>确定三连回到桌面</li>
+<li>打开终端，输入<code>java -version</code>检查是否成功，成功的话会显示java版本号</li>
+<li>不成功的话重启一遍，并检查一下变量是否输入正确</li>
 </ol>
-<h1 id="本地软件配置"><a href="#本地软件配置" class="headerlink" title="本地软件配置"></a>本地软件配置</h1><p>本地需要安装的软件有：</p>
-<ul>
-<li>git</li>
-<li>node.js</li>
-<li>Mrarkdown编辑器（个人使用Haroopad）</li>
-</ul>
-<p>以上直接百度官网下载<br>安装完成后前两个软件分别在终端输入</p>
-<ul>
-<li><code>git --version</code></li>
-<li><code>node -v</code></li>
-</ul>
-<p>检测是否安装成功，安装成功会返回以下值，版本可能有差别，不影响使用</p>
-<ul>
-<li><code>git version 2.21.0.windows.1</code></li>
-<li><code>v10.15.3</code></li>
-</ul>
-<p>最后一个软件一般不会出问题，正常安装exe即可</p>
-<h1 id="HEXO配置过程"><a href="#HEXO配置过程" class="headerlink" title="HEXO配置过程"></a>HEXO配置过程</h1><p>HEXO是一款博客框架，步骤如下</p>
-<ol>
-<li>建一个文件夹用来存放网页信息</li>
-<li>在文件夹中右键单击打开Git bash</li>
-<li>输入<code>npm install hexo -g</code> 安装hexo</li>
-<li>输入<code>hexo -v</code> 检测是否安装成功，安装成功会返回一串版本信息</li>
-<li>输入<code>hexo init</code> 初始化hexo<blockquote>
-<p>踩坑：<br>由于某种神秘力量的影响，这个过程会非常漫长，可以百度设置淘宝源加速，等待过程中不要看到没反应以为卡了关掉进程，不然就得清空博客目录文件夹重新下载了，因为结束进程再重新下会一直报错</p>
-</blockquote>
-</li>
-<li>输入<code>npm install</code> 安装其他文件</li>
-<li>输入<code>npm install hexo-deployer-git --save</code> 安装部署插件</li>
-<li>输入<code>hexo g</code> 生成网页</li>
-<li>输入<code>hexo s</code> 启动本地服务，此时会返回网址，一般是 <code>http://localhost:4000</code></li>
-<li>复制网址并在浏览器中打开就可以看到网页预览</li>
-<li>输入<code>hexo d</code> 即可部署到Github Page</li>
-<li>在浏览器中输入 <code>用户名.github.io</code> 即可访问网站，部署不成功Github会发邮件提醒</li>
+<h1 id="C环境变量配置"><a href="#C环境变量配置" class="headerlink" title="C环境变量配置"></a>C环境变量配置</h1><ol>
+<li>在mingw中勾选<code>mingw32-base</code>和<code>mingw-gcc-g++</code>就行，选择多了会装到天荒地老。。。勾选方式是<code>右键 - Mark for Installation</code></li>
+<li>点击右上角的<code>Installation - Apply Changes</code></li>
+<li>在弹出的窗口中点击<code>Apply</code>确认</li>
+<li>漫长的等待。。。。。。土豆服务器经常会报错安装失败</li>
+<li>安装完成后同上打开系统变量</li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>加入mingw的安装路径，默认是<code>C:\MinGW\bin</code></li>
+<li>打开终端，输入<code>gcc -v</code>检查是否成功</li>
+<li>不成功同样重启试试</li>
 </ol>
-<h1 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h1><p>HEXO有很多可选的模板主题，在Github内搜索Hexo主题或前往HEXO官网浏览，这里以我选择的<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">闪烁之狐</a>为例,在此感谢大佬blinkfox</p>
-<h2 id="具体操作步骤"><a href="#具体操作步骤" class="headerlink" title="具体操作步骤"></a>具体操作步骤</h2><ol>
-<li>进入先前的博客文件夹，邮件打开Git Bash</li>
-<li>输入 <code>git clone https://github.com/blinkfox/hexo-theme-matery.git</code><blockquote>
-<p>踩坑：<br>同样由于某种神秘力量的影响，Github在国内的下载速度感人，峰值20kb/s，4kb/s是日常，下载个主题真的会等到天荒地老的，所以这里需要修改host文件，步骤如下</p>
-<ul>
-<li><p>需要前往 <a href="https://www.ipaddress.com/" target="_blank" rel="noopener">https://www.ipaddress.com/</a> 使用<code>IP Lookup</code> 工具获得下面两个github域名的ip地址，该网站可能需要另一种神秘力量才能上</p>
-<ul>
-<li>github.com</li>
-<li>github.global.ssl.fastly.net</li>
-</ul>
-</li>
-<li><p>ip格式在国内一般为192.30.xx.xx和151.101.xx.xx。</p>
-</li>
-<li><p>准备工作做完之后，打开的hosts文件中添加如下格式，IP修改为自己查询到的IP：</p>
-<ul>
-<li>192.30.xx.xx github.com</li>
-<li>151.101.xx.xx github.global.ssl.fastly.net</li>
-</ul>
-</li>
-<li><p>执行ipconfig /flushdns命令，刷新 DNS 缓存。</p>
-</li>
-</ul>
-<p>完成后速度能达到几百kb</p>
-</blockquote>
-</li>
-<li>切换主题文件，修改博客根目录下的<code>_config.yml</code>的<code>theme</code>的值为<code>theme: hexo-theme-matery</code> <blockquote>
-<p>踩坑：<br>theme后面有一个空格！一定不要漏掉！否则修改无效，这个文件中的所有配置冒号后都有空格，语法很严格，在这找错误找了好久</p>
-</blockquote>
-</li>
-<li>关于闪烁之狐主题的其他详细配置请移步<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">闪烁之狐</a></li>
-</ol>
-<h1 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h1><p>网站主题选好后就可以部署到网站上了</p>
-<h2 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h2><ul>
-<li>设置ssh配对</li>
-<li>购买设置域名</li>
-<li>部署网站</li>
-</ul>
-<h3 id="设置ssh配对"><a href="#设置ssh配对" class="headerlink" title="设置ssh配对"></a>设置ssh配对</h3><p>为了保证网站的安全，我们需要设置ssh，毕竟设立个人博客的初衷之一就是安全嘛，步骤如下</p>
-<ol>
-<li>打开Git bash</li>
-<li>输入<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code> 然后回车三连</li>
-<li>此时在c盘用户目录下会生成两个文件<code>id_rsa</code>和<code>id_rsa.pub</code>，，我们需要的是后者</li>
-<li>用记事本打开后复制里面的所有内容</li>
-<li>打开Github，在右上角个人头像下拉菜单中找到<code>Settings</code></li>
-<li>打开<code>SSH and GPG keys</code>,点击右上角<code>New SSH key</code></li>
-<li><code>Title</code>随便填,然后在<code>Key</code>中粘贴</li>
-<li>点击<code>Add SSH key</code></li>
-<li>回到Git bash，输入<code>ssh -T git@github.com</code>回车</li>
-<li>首次输入可能会有提醒，输入<code>yes</code>回车即可</li>
-<li>成功返回<code>Hi 用户名! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>就代表成功了</li>
-<li>输入<code>git config --global user.name &quot;用户名&quot;</code></li>
-<li>输入<code>git config --global user.email  &quot;邮箱地址&quot;</code></li>
-</ol>
-<h3 id="购买设置域名"><a href="#购买设置域名" class="headerlink" title="购买设置域名"></a>购买设置域名</h3><p>github提供的域名太长了，逼格也不够高，所以要自己设置一个好记的域名<br>国内提供域名服务的网站不少，我选择的是阿里云，步骤如下</p>
-<ol>
-<li>去阿里云注册一个账号<blockquote>
-<p>踩坑：<br>这里注意阿里云推荐中文用户名，我一开始用英文怎么都通不过，最后改成中文的才注册成功</p>
-</blockquote>
-</li>
-<li>购买一个自己喜欢的域名，流程和淘宝差不多</li>
-<li>完成域名的实名认证，虽然阿里云说审核要几个工作日，但是我的只用了十分钟就通过了</li>
-<li>在管理控制台上找到自己购买的域名，点击<code>解析</code></li>
-<li>点击<code>添加记录</code>这里我添加了两条记录<ul>
-<li>记录类型选择<code>A</code>记录，主机记录填写<code>@</code>，记录值需要用win控制台<code>ping 用户名.github.io</code>得到ip并填写，其他保持默认</li>
-<li>记录类型选择<code>CNAME</code>，主机记录填写<code>www</code>，记录值填写<code>用户名.github.io</code>其他保持默认</li>
-</ul>
-</li>
-<li>完成后回到Githuib，在存放网页的<code>Repository</code>中选择<code>Settings</code>，在<code>Github Pages</code>一栏中找到<code>Custom domain</code>，填入购买的域名就可以访问了</li>
-<li>为了方便，我们需要在HEXO的根目录新建一个<code>CNAME</code>文件，在里面填入购买的域名，因为每次部署<code>Settings</code>中的域名都会被覆盖掉，每次重新输入会很麻烦，设置CNAME文件后就不用重复输入了<blockquote>
-<p>踩坑：<br>CNAME文件不要带任何后缀，否则会无效，我一开始用的是<code>CNAME.md</code>,结果每次部署域名都会被覆盖掉</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="部署网站-1"><a href="#部署网站-1" class="headerlink" title="部署网站"></a>部署网站</h3><p>终于到最后一步了，在成功部署网站前还需要做一些微小的工作</p>
-<ol>
-<li>修改<code>—config.yml</code>文件中的<code>deploy</code> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: https:&#x2F;&#x2F;github.com&#x2F;用户名&#x2F;用户名.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>踩坑：<br>这里同样需要注意冒号后面的空格，此处<code>自闭++</code></p>
-</blockquote>
-</li>
-<li>打开Git bash</li>
-<li>输入<code>hexo clean</code>命令清除本地浏览器缓存</li>
-<li>输入<code>hexo g</code>命令重新生成网站</li>
-<li>输入<code>hexo s</code>命令生成本地预览</li>
-<li>本地预览无误后输入<code>hexo d</code>命令将网站部署到Github Page</li>
-<li>如果返回值是<code>git</code>，那么恭喜，大功告成，此时可以输入先前绑定的域名访问网站了~</li>
-</ol>
-<h1 id="完工"><a href="#完工" class="headerlink" title="完工"></a>完工</h1><p>坑填的差不多了，后续会更新HEXO的基本用法和Markdown语法，如果记起来其他的坑也会补充的，由于这是搭完博客几天后才写完的，一些细节记不太清了，有问题欢迎骚扰~</p>
+<p>设置完成后的环境变量大概是这个亚子<br><img src="Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/1.png" alt="1"><br><img src="Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/2.png" alt="2"></p>
 
     </div>
 
@@ -459,7 +338,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://siriusq.github.io/Hexo%E5%8D%9A%E5%AE%A2%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8C%97.html" title="Hexo博客踩坑指北">https://siriusq.github.io/Hexo博客踩坑指北.html</a>
+    <a href="https://siriusq.github.io/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html" title="Java与C的环境变量配置">https://siriusq.github.io/Java与C的环境变量配置.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -470,7 +349,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/HEXO/" rel="tag"><i class="fa fa-tag"></i> HEXO</a>
+              <a href="/tags/Software/" rel="tag"><i class="fa fa-tag"></i> Software</a>
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C</a>
           </div>
 
         
@@ -479,13 +360,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Purpose.html" rel="prev" title="Purpose">
-      <i class="fa fa-chevron-left"></i> Purpose
+    <a href="/%E6%B7%BB%E5%8A%A0-Windows-Terminal-%E8%87%B3%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95.html" rel="prev" title="添加 Windows Terminal 至右键菜单">
+      <i class="fa fa-chevron-left"></i> 添加 Windows Terminal 至右键菜单
     </a></div>
-      <div class="post-nav-item">
-    <a href="/HEXO%E9%83%A8%E7%BD%B2.html" rel="next" title="HEXO部署">
-      HEXO部署 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -546,7 +424,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Page-配置过程"><span class="nav-number">1.</span> <span class="nav-text">Github Page 配置过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置步骤"><span class="nav-number">1.1.</span> <span class="nav-text">配置步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地软件配置"><span class="nav-number">2.</span> <span class="nav-text">本地软件配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HEXO配置过程"><span class="nav-number">3.</span> <span class="nav-text">HEXO配置过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题美化"><span class="nav-number">4.</span> <span class="nav-text">主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体操作步骤"><span class="nav-number">4.1.</span> <span class="nav-text">具体操作步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署网站"><span class="nav-number">5.</span> <span class="nav-text">部署网站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要步骤"><span class="nav-number">5.1.</span> <span class="nav-text">主要步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置ssh配对"><span class="nav-number">5.1.1.</span> <span class="nav-text">设置ssh配对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#购买设置域名"><span class="nav-number">5.1.2.</span> <span class="nav-text">购买设置域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署网站-1"><span class="nav-number">5.1.3.</span> <span class="nav-text">部署网站</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完工"><span class="nav-number">6.</span> <span class="nav-text">完工</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java环境变量配置"><span class="nav-number">1.</span> <span class="nav-text">Java环境变量配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C环境变量配置"><span class="nav-number">2.</span> <span class="nav-text">C环境变量配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -801,7 +679,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'gitalk-commnet',
       owner       : 'Siriusq',
       admin       : ['Siriusq'],
-      id          : 'f0d3d93df02308d3d734878375d82e70',
+      id          : 'dd35ca4dc0114aab5a29afa7cc3aca3a',
         language: '',
       distractionFreeMode: false
     });
