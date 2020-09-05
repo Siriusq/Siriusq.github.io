@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Jupyter Notebook 食用指南</title>
+    <url>/Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">延期开学的咸鱼在家无事可做，打算刷刷 MOOC 掉点头发，记笔记的时候发现 OneNote 没法记录代码，缩进高亮行号都没有，于是就想到了一直在电脑里躺尸的 Jupyter Notebook，记录下安装及食用的方法</blockquote>
+
+<a id="more"></a>
+
+<h1 id="安装-Jupyter-Notebook"><a href="#安装-Jupyter-Notebook" class="headerlink" title="安装 Jupyter Notebook"></a>安装 Jupyter Notebook</h1><p>安装 Jupyter Notebook 之前需要先安装好 Python 或 Anaconda，可以使用 <code>conda</code>（Anaconda） 和 <code>pip</code> 两种方式安装</p>
+<p>Jupyter 官方推荐按使用 <code>conda</code>（Anaconda） 来安装，安装 Anaconda 的时候一般会默认安装 Jupyter Notebook，但如果没有安装的话就使用下面的命令</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">conda install jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>不用 Anaconda 的话就用 pip 安装，命令为</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">pip install jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于-Anaconda-和-Python-的关系"><a href="#关于-Anaconda-和-Python-的关系" class="headerlink" title="关于 Anaconda 和 Python 的关系"></a>关于 Anaconda 和 Python 的关系</h2><p>这里顺带解释一波 Anaconda 和 Python 的关系，众所周知，Python 是一门编程语言（手动狗头），而 Anaconda 相当于 Python 的发行版，带有很多科学计算类的库以及包管理器 conda。可以用 Ubuntu 和 Linux 的关系来类比。</p>
+<p>此外安装 Anaconda 后也要手动添加系统环境变量</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C:\ProgramData\Anaconda3\Scripts</span><br><span class="line">C:\ProgramData\Anaconda3</span><br><span class="line">C:\ProgramData\Anaconda3\Library\bin</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="安装-Java-扩展"><a href="#安装-Java-扩展" class="headerlink" title="安装 Java 扩展"></a>安装 Java 扩展</h2><p>我用的Java插件是 <a href="https://github.com/SpencerPark/IJava" target="_blank" rel="noopener">IJava</a>，支持代码运行、自动联想、错误提示等功能，安装方式为</p>
+<ol>
+<li>在 <a href="https://github.com/SpencerPark/IJava/releases" target="_blank" rel="noopener">release</a> 页面下载压缩包</li>
+<li>解压缩并打开解压后的文件夹</li>
+<li>在解压后的文件夹以管理员身份运行终端</li>
+<li>输入 <code>python install.py -h</code></li>
+<li>输入 <code>jupyter kernelspec list</code> 检查是否安装成功，成功的话会返回<code>java  C:\ProgramData\jupyter\kernels\java</code></li>
+</ol>
+<h2 id="安装-Nbextensions"><a href="#安装-Nbextensions" class="headerlink" title="安装 Nbextensions"></a>安装 Nbextensions</h2><p>这是一个扩展的集合，有诸如设置自动保存的时间间隔、支持更多的 Latex 元素、设置代码字体大小等功能，我就不列举了，插件中的每个功能都带有详细的介绍。我主要用它来显示 Markdown 的目录。安装方式为</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge jupyter_contrib_nbextensions</span><br></pre></td></tr></table></figure>
+
+<p>安装完会在 Jupyter 的状态栏显示，如果没有的话使用这个命令</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">jupyter contrib nbextension install --user --skip-running-check</span><br></pre></td></tr></table></figure>
+
+<p>在里面勾选 <code>Table of Contents(2)</code> 就可以启用目录功能了</p>
+<h2 id="安装-nb-conda"><a href="#安装-nb-conda" class="headerlink" title="安装 nb_conda"></a>安装 nb_conda</h2><p>nb_conda 主要用于多种运行环境的切换，安装命令为</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">conda install nb_conda</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改默认存储位置"><a href="#修改默认存储位置" class="headerlink" title="修改默认存储位置"></a>修改默认存储位置</h2><p>Jupyter Notebook 默认的存储位置已经有很多文件了，非常杂乱，下面要做的就是换一个指定的文件夹存储笔记</p>
+<ol>
+<li>首先需要创建 Jupyter 的配置文件 <code>C:\Users\Sun\.jupyter\jupyter_notebook_config.py</code> ，命令为 <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure></li>
+<li>打开 <code>C:\Users\Sun\.jupyter\jupyter_notebook_config.py</code> ，搜索 <code>c.NotebookApp.notebook_dir</code>，删掉前面的<code>#</code>，然后把指定文件夹的目录复制到单引号之间，修改完是这个亚子 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">## The directory to use for notebooks and kernels.</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">'E:\Jupyter'</span></span><br></pre></td></tr></table></figure></li>
+<li>保存文件并打开 Jupyter Notebook 查看是否成功</li>
+</ol>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><ul>
+<li>安装完成后在终端输入 <code>jupyter notebook</code> 就可以在浏览器中打开，默认地址为 <code>http://localhost:8888</code></li>
+<li>使用<code>jupyter notebook --port port_number</code>可以指定端口(port_number)启动</li>
+<li>使用<code>jupyter notebook notebook_name.ipynb</code>可以启动对应名称(notebook_name)的笔记</li>
+<li>使用<code>jupyter notebook --no-browser</code>可以只启动服务而不启动浏览器</li>
+</ul>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>结束的方法有两种</p>
+<ul>
+<li>在浏览器页面点击 Quit</li>
+<li>在终端中使用 <code>ctrl + c</code> 结束运行</li>
+</ul>
+<h2 id="主页操作"><a href="#主页操作" class="headerlink" title="主页操作"></a>主页操作</h2><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/1.png" alt="1"></p>
+<h2 id="笔记操作"><a href="#笔记操作" class="headerlink" title="笔记操作"></a>笔记操作</h2><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/2.png" alt="2"></p>
+<p>另外点击笔记标题（Untitled）那里可以重命名</p>
+<h2 id="Markdown-内部跳转"><a href="#Markdown-内部跳转" class="headerlink" title="Markdown 内部跳转"></a>Markdown 内部跳转</h2><p>Jupyter Notebook 在 Markdown 模式下可以实现内部跳转，示例：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[示例]</span>(<span class="selector-id">#link</span>)</span><br><span class="line">跳转中间的内容</span><br><span class="line">&lt;a id=link&gt;跳转提示语&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>跳转提示语可以不加，不加的话跳转到的地方没有提示</p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>在 Python 内核下可以使用Shell命令，在命令前加 <code>%</code>即可</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">%pwd <span class="comment"># 获取文件夹绝对路径</span></span><br><span class="line">%ls  <span class="comment"># 获取当前文件夹文件信息</span></span><br><span class="line">%run 文件路径 <span class="comment">#直接运行本地文件</span></span><br><span class="line">%load 文件路径 <span class="comment">#加载本地文件</span></span><br><span class="line">%load URL <span class="comment">#加载指定网站的源代码，如https://www.baidu.com/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>Jupyter Notebook 有两种不同的键盘输入模式. 编辑模式可以将代码或文本输入到一个单元格中，并通过一个绿色的单元格来表示。命令模式将键盘与笔记本级命令绑定在一起，并通过一个灰色的单元格边界显示，该边框为蓝色的左边框。</p>
+<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/4.png" alt="4"></p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/3.png" alt="3"></p>
+<blockquote>
+<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/33105153" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33105153</a><br><a href="https://www.zhihu.com/question/380990243" target="_blank" rel="noopener">https://www.zhihu.com/question/380990243</a><br><a href="https://blog.csdn.net/qq_34992030/article/details/89175633" target="_blank" rel="noopener">https://blog.csdn.net/qq_34992030/article/details/89175633</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
+        <tag>Jupyter</tag>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java与C的环境变量配置</title>
     <url>/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧</blockquote>
@@ -67,6 +146,7 @@
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">// A profile specifies a command to execute paired with information about how it should look and feel.</span></span><br><span class="line"><span class="comment">// Each one of them will appear in the 'New Tab' dropdown,</span></span><br><span class="line"><span class="comment">//   and can be invoked from the commandline with `wt.exe -p xxx`</span></span><br><span class="line"><span class="comment">// To learn more about profiles, visit https://aka.ms/terminal-profile-settings</span></span><br><span class="line">"profiles":</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"defaults"</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Put settings here that you want to apply to all profiles.</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"list"</span>:</span><br><span class="line">    [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// Make changes here to the powershell.exe profile.</span></span><br><span class="line">            <span class="attr">"guid"</span>: <span class="string">"&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;"</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Windows PowerShell"</span>,</span><br><span class="line">            <span class="attr">"commandline"</span>: <span class="string">"powershell.exe"</span>,</span><br><span class="line">            <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"startingDirectory"</span>: <span class="string">"./"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// Make changes here to the cmd.exe profile.</span></span><br><span class="line">            <span class="attr">"guid"</span>: <span class="string">"&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;"</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"命令提示符"</span>,</span><br><span class="line">            <span class="attr">"commandline"</span>: <span class="string">"cmd.exe"</span>,</span><br><span class="line">            <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"startingDirectory"</span>: <span class="string">"./"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"guid"</span>: <span class="string">"&#123;b453ae62-4e3d-5e58-b989-0a998ec441b8&#125;"</span>,</span><br><span class="line">            <span class="attr">"hidden"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"Azure Cloud Shell"</span>,</span><br><span class="line">            <span class="attr">"source"</span>: <span class="string">"Windows.Terminal.Azure"</span>,</span><br><span class="line">            <span class="attr">"startingDirectory"</span>: <span class="string">"./"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
 <p>保存后就能够使用右键菜单在当前文件夹运行<code>Windows Terminal</code>了</p>
+<h1 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h1><p>在使用Powershell的时候可能会出现报错<code>无法加载文件balabala.ps1，因为在此系统上禁止执行脚本，有关详细信息，请参阅balabala</code>，这是因为默认的<code>ExecutionPolicy</code>是<code>Restricted</code>，即不允许执行任何脚本。解决方法是以管理员身份运行，并输入命令<code>set-executionpolicy remotesigned</code>即可解除限制</p>
 <blockquote>
 <p>参考：</p>
 <ol>
@@ -972,11 +1052,11 @@
 <p>示例</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'category'</span>,</span><br><span class="line">        data: [<span class="string">'Mon'</span>, <span class="string">'Tue'</span>, <span class="string">'Wed'</span>, <span class="string">'Thu'</span>, <span class="string">'Fri'</span>, <span class="string">'Sat'</span>, <span class="string">'Sun'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'value'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        <span class="selector-tag">data</span>: <span class="selector-attr">[820, 932, 901, 934, 1290, 1330, 1320]</span>,</span><br><span class="line">        type: 'line'</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-<div id="echarts7406" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts2276" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts7406'));
+	var myChart = echarts.init(document.getElementById('echarts2276'));
 	// 指定图表的配置项和数据
 	option = {
     xAxis: {
@@ -1024,8 +1104,8 @@
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Hexo</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -1665,8 +1745,8 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Win10</tag>
+        <tag>MacOS</tag>
         <tag>Ubuntu</tag>
       </tags>
   </entry>
@@ -2537,9 +2617,13 @@
 <a class="btn" href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener">
             <i class="fa fa-download fa-fw"></i>Everything 下载
           </a>
-<h3 id="Wox-快捷启动"><a href="#Wox-快捷启动" class="headerlink" title="Wox-快捷启动"></a>Wox-快捷启动</h3><p>类似于Macos的spotlight，可以配合上面的Everything使用</p>
+<h3 id="Wox-快捷启动"><a href="#Wox-快捷启动" class="headerlink" title="Wox-快捷启动"></a>Wox-快捷启动</h3><p>类似于Macos的spotlight，可以配合上面的Everything使用，原来用的这个，现在已经换成下面的uTools了</p>
 <a class="btn" href="http://www.wox.one/" target="_blank" rel="noopener">
             <i class="fa fa-download fa-fw"></i>Wox 下载
+          </a>
+<h3 id="uTools-快捷启动"><a href="#uTools-快捷启动" class="headerlink" title="uTools-快捷启动"></a>uTools-快捷启动</h3><p>类似于Macos的spotlight，插件很丰富</p>
+<a class="btn" href="http://www.u.tools/" target="_blank" rel="noopener">
+            <i class="fa fa-download fa-fw"></i>uTools 下载
           </a>
 <h3 id="Ditto-Clipboard-剪贴板"><a href="#Ditto-Clipboard-剪贴板" class="headerlink" title="Ditto Clipboard-剪贴板"></a>Ditto Clipboard-剪贴板</h3><p>UWP软件，可以查看剪切板的数据</p>
 <a class="btn" href="https://www.microsoft.com/zh-cn/p/ditto-clipboard/9nblggh3zbjq?activetab=pivot:overviewtab" target="_blank" rel="noopener">
@@ -3228,8 +3312,8 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>Internet</tag>
         <tag>Architecture</tag>
+        <tag>Internet</tag>
       </tags>
   </entry>
   <entry>
