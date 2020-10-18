@@ -66,6 +66,17 @@
 <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>Jupyter Notebook 有两种不同的键盘输入模式. 编辑模式可以将代码或文本输入到一个单元格中，并通过一个绿色的单元格来表示。命令模式将键盘与笔记本级命令绑定在一起，并通过一个灰色的单元格边界显示，该边框为蓝色的左边框。</p>
 <h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/4.png" alt="4"></p>
 <h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p><img src="Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/3.png" alt="3"></p>
+<h3 id="自定义快捷键"><a href="#自定义快捷键" class="headerlink" title="自定义快捷键"></a>自定义快捷键</h3><p>Jupyter Notebook 中原有的快捷键数量不是很多，但是预留了自定义快捷键的空间，在 <code>Help - Edit Keyboard Shortcuts</code> 中可以进行设置，在 <code>add shortcut</code> 中填入对应的按键然后点击右侧的 <code>+</code> 即可。这里注意 </p>
+<ul>
+<li><code>Ctrl、Shift、Alt</code> 等要输入完整字母，不能直接识别</li>
+<li>两个按键中间用 <code>-</code> 来连接</li>
+<li>设置完成记得点击右下角的确定</li>
+</ul>
+<p>在这里我设置了两个快捷键</p>
+<ul>
+<li>clear cell output，清除单元格的输出结果，快捷键 <code>Alt-Shif-D</code></li>
+<li>clear all cells output，清除当前笔记所有单元格的输出结果，快捷键 <code>Alt-Ctrl-D</code></li>
+</ul>
 <blockquote>
 <p>参考：<br><a href="https://zhuanlan.zhihu.com/p/33105153" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33105153</a><br><a href="https://www.zhihu.com/question/380990243" target="_blank" rel="noopener">https://www.zhihu.com/question/380990243</a><br><a href="https://blog.csdn.net/qq_34992030/article/details/89175633" target="_blank" rel="noopener">https://blog.csdn.net/qq_34992030/article/details/89175633</a></p>
 </blockquote>
@@ -539,11 +550,12 @@
   <entry>
     <title>英国留学后续日志</title>
     <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon以及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
+    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
 
 <a id="more"></a>
 
-<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>一般来说确定最后要去的学校之后就要赶快订房间了，订的越早越便宜，而且选择的空间也比较大。英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
+<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
+<p>一般来说拿到offer之后就可以定房间了，比较想去的几个学校都可以先定上，订的越早越便宜，而且选择的空间也比较大。尽量找不需要押金的公寓，这样跑路的话直接找人转租或者取消就可以了。</p>
 <p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（忘了谁整理的了，请来认领hhh）</p>
 <p><img src="%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97/1.jpg" alt="英国留学后续日志"></p>
 <p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
@@ -570,7 +582,7 @@
 <p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
 <p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
 
-<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明。</p>
+<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明，抽到了会发邮件给你。</p>
 <ul>
 <li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑/月，其他地区为1015镑/月</li>
 <li>一般存定期并设置自动转存</li>
@@ -593,14 +605,7 @@
 <li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
 <li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
 </ul>
-<hr>
-<blockquote class="blockquote-center">
-            <p>以下内容未经本人实践，仅供参考</p>
-
-          </blockquote>
-
-<hr>
-<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。我准备9月去做，做完回来更，下面是目前搜集到的情报</p>
+<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。</p>
 <ul>
 <li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china" target="_blank" rel="noopener"><strong>签证官网</strong></a></li>
 <li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
@@ -609,7 +614,7 @@
 <li>无需空腹，正常饮食</li>
 <li>需要携带的材料<ul>
 <li>有效期半年以上的护照原件，不接受任何其他证件</li>
-<li>可能需要护照复印件</li>
+<li>护照复印件一张</li>
 <li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
 </ul>
 </li>
@@ -618,30 +623,89 @@
 <li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
 <li>证书有效期通常为六个月，特殊情况下为三个月</li>
 <li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
-<li>英国地址填自己的学校</li>
+<li>英国地址填自己的学校，懒的话可以不填，没什么影响</li>
 </ul>
-<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。先观望一下，后面更</p>
-<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><p>签证需要等CAS下来才能去办，我大概11月去办，<a href="https://www.gov.uk/government/publications/apply-for-a-uk-visa-in-china" target="_blank" rel="noopener"><strong>签证官网</strong></a>上有详细的流程，需要的材料有</p>
+<p>下面是我10月13日在济南做肺结核的记录</p>
 <ul>
-<li>在线签证申请材料清单打印件，请访问<a href="https://visas-immigration.service.gov.uk/apply-visa-type/tier4在线申请，完成在线申请后可以下载材料清单" target="_blank" rel="noopener">https://visas-immigration.service.gov.uk/apply-visa-type/tier4在线申请，完成在线申请后可以下载材料清单</a></li>
-<li>有效的旅行文件或护照</li>
-<li>录取确认函（CAS）号（在签证申请表中提供）</li>
-<li>由授权诊所开具的肺结核检测证明（停留超过6个月）</li>
-<li>学术技术审核证书（如果您的学校录取确认函中要求您提交）</li>
-<li>仍然有效的旧生物信息卡（如果您持有）</li>
+<li>济南的肺结核检测在山医大三院的出国体检中心做，地址是天桥区无影山路38号，进门后右手边红屋顶的房子就是</li>
+<li>我是七点四十五到的，医院大门口会有保安测体温。</li>
+<li>我到的时候前面只有三个人。进入体检中心后出示身份证和健康码，然后在门口机器上取号</li>
+<li>取号后领两张表，再测一次体温，工作人员会把体温写在表的右上角，过程中有什么疑问随时可以问工作人员</li>
+<li>填完表等到八点半，拿着护照去拍照，拍完给一张黑白的照片</li>
+<li>拍完照出来等待叫号，叫到自己的号就拿着材料去最里面的服务台</li>
+<li>把护照原件、复印件、刚拍的黑白照片、两张小两寸白底照片（要在背面也上自己名字）、填写的两张表格交给工作人员</li>
+<li>然后会拍照，还有在一张表上签字</li>
+<li>然后付款，支付宝现金均可</li>
+<li>付完款后工作人员把护照原件还给你，并给一个手环，手环是开储物柜用的，上面有对应的柜子编号</li>
+<li>拿着手环去玻璃门那里刷脸进去，进去之后有工作人员引导你到更衣室并给一件蓝色的上衣</li>
+<li>把上衣首饰全部摘掉，穿上那件蓝色的衣服，只带着护照和手环出去</li>
+<li>工作人员会告诉你去哪个房间做检测，在机器上做一个类似叉腰的动作，双肩向上同时贴到机器上，然后工作人员会让深吸一口气憋住，然后等工作人员喊可以了就可以出来了</li>
+<li>出来之后回到更衣室把衣服换好，然后把蓝色上衣扔进门口的回收箱</li>
+<li>走廊里的工作人员会让你到另一侧的医生室，医生会问一些问题，比如有没有得过肺结核、有没有和结合病人有过接触</li>
+<li>然后摘口罩拍照</li>
+<li>然后出去找走廊里的小姐姐把你带出去</li>
+<li>出去之后回到大门口的前台把手环还回去就可以溜了</li>
+<li>工作人员说因为疫情的原因，第二天下午三点后才能取报告，但是实测当天下午四点半就可以拿到，可以打电话问一下</li>
 </ul>
-<p>提交签证材料的流程为</p>
-<ol>
-<li>提前15分钟到达，排队取号</li>
-<li>叫的自己的号时去相应的窗口递交材料，叫号方式为屏幕+英文广播</li>
-<li>按照工作人员指示签字</li>
-<li>选择护照领取方式（快递或者自己取），快递80元，只收取现金</li>
-<li>等待第二次叫号</li>
-<li>核对信息，拍照录指纹（不能戴眼镜和首饰）</li>
-</ol>
+<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。所以这俩我就不打算做了</p>
+<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><h2 id="预约"><a href="#预约" class="headerlink" title="预约"></a>预约</h2><p>签证需要等CAS下来才能去办，CAS一般在入学前的3个月开始陆续发放，办理签证前需要在网上预约，最近学生签证也改名了，原来叫 Tier 4，现在直接叫 student visa。预约的时候建议挂全局代理，预约网站在国内的使用体验极差。</p>
+<a class="btn" href="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/sort/country-nationality?p=student_out_uk&_ga=2.246378372.1460787317.1603017805-1850455343.1600247708" target="_blank" rel="noopener">
+            <i class="fa fa-home fa-fw"></i>预约网址
+          </a>
+
+<p>预约的步骤可以去看<a href="https://weibo.com/u/7305573611" target="_blank" rel="noopener">@PhD威宇</a>的微博文章<a href="https://weibo.com/ttarticle/p/show?id=2309404537047783178301" target="_blank" rel="noopener">保姆级手把手教你申请T4签证</a>，大佬写的非常详细，佩服大佬的耐心。T4和现在的 student visa 稍有出入，大体的步骤都是一样的。（我才不是因为懒不想写）</p>
+<p><strong>注意下载checklist</strong></p>
+<p>按照步骤交完签证申请费和IHS之后会跳转到VFS的网站上，这个网站是用来上传材料和预约递签日期地点用的，有一些增(keng)值(qian)服务可以选。这个网站深得学校教务选课系统的真传，同款土豆服务器，而且不挂全局代理基本没法用，挂了全局代理也会有各种各样的bug。</p>
+<p>Student visa 一般只有两个材料需要上传，checklist 会有说明</p>
+<ul>
+<li>护照信息页</li>
+<li>肺结核报告</li>
+</ul>
+<p>建议提前在网站上上传好材料，如果去签证中心现场上传的话会收取100块钱的扫描费用（奸商！）。</p>
+<p>另外一些签证中心（说的就是你济南，还有西安）还会收取服务费，大概500块钱，在VFS那个网站上交。</p>
+<p>预约的时候可以隔几个小时上去一次，看看有没有更早的位置。我一开始预约的是23号递签，后来刷出来了14号和16号的，就在网站上更改了预约时间，更改免费。</p>
+<p>预约好时间、传完材料、交完钱之后会发给你一个<code>Appointment Confirmation Notice</code>，记得打印出来带着</p>
+<h2 id="递签"><a href="#递签" class="headerlink" title="递签"></a>递签</h2><p>我最终去递签的时候只带了下面几个材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist</li>
+<li>Appointment Confirmation Notice</li>
+<li>肺结核报告原件</li>
+</ul>
+<p>最后工作人员收走了这些材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist 的第一页</li>
+<li>Appointment Confirmation Notice</li>
+</ul>
+<p>下面是我在济南递签的流程，我是12:13进去的，12:25就出来了</p>
+<ul>
+<li>济南签证中心地址在济南市历下区经十路11890号北京银行5楼</li>
+<li>从北京银行大厦的南门进，进去后在右手边向保安大叔出示健康码并测量体温</li>
+<li>用微信扫描桌面立牌上的二维码，填写姓名手机号等个人信息进行登记</li>
+<li>做四号电梯（最里面右手边那个）上5楼</li>
+<li>出电梯后左手边可以看到工作人员在柜台前面，会问是不是来办签证，然后带你到签证中心门口，测量体温后经过安检门进入</li>
+<li>进入之后出示护照、checklist、notice这几个材料，然后工作人员会问姓名和出生日期，并给你一张号码纸</li>
+<li>进去等叫号，左手边有几排椅子，椅子前面的柱子上挂着电视，会显示叫号信息</li>
+<li>人少的话工作人员就让直接去柜台，去柜台交护照、checklist、notice</li>
+<li>工作人员会问你办不办加急，问护照是自取还是快递，快递的话会给你一张快递单填写，然后交现金80元，可以找零</li>
+<li>工作人员没有提起过短信服务，短信也确实没什么用</li>
+<li>等一会工作人员会把不要的材料都退给你，快递的会给一张EMS快递单回执</li>
+<li>再回去等叫号，叫到号去7号室拍照录指纹</li>
+<li>先会让你报一下姓名和出生日期，然后摘眼镜和口罩拍照</li>
+<li>然后采指纹，先是右手四个手指并排，然后左手四个手指，最后是两个大拇指一起</li>
+<li>结束之后会给你张回执，就可以走了</li>
+<li>回家默默等快递把护照寄回来</li>
+</ul>
+<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>机票我是在携程买的，也可以直接官网购买或者打电话购买</p>
+<p>机票最好早买，早买一般都很便宜。我亲眼见证了我的机票从4200元涨价到了5500元，现在涨到了15000元。我在5500的时候买入的，买入第二天晚上就涨到了15000。</p>
+<p>我们买的一般都是留学生机票，会有额外的行李额度，一般是两件不超过23kg的28寸托运行李和一件不超过20寸的手提行李，我一开始以为需要签证才能购买留学生机票，所以错过了4200的低价，其实买的时候完全不需要签证等证明材料。携程的要求是在飞机起飞前三天上传好签证、cas、offer、护照等证明材料就可以。能早买就早买吧。</p>
+<p>另外由于今年疫情的影响，有些飞机是不一定能飞的，没有经过民航局审批，但是他也在卖票，建议买票之前先查询一下。因为有些航空公司退票只给退代金券，就很坑。</p>
+<p>飞英国的机票除了去伦敦的，基本都要转机，转机机场一般有荷兰阿姆斯特丹、芬兰赫尔辛基、阿联酋迪拜、伦敦希思罗等。购票时看好是否是行李直挂，不是直挂的话转机的时候需要重新办理行李托运手续，麻烦且耗时，要留足充分的时间。</p>
+<p>此外如果飞到大学所在城市的机票很贵的话可以看一下飞往临近城市的机票，举个栗子，我是一开始打算从上海飞格拉斯哥，但是去格拉斯哥的机票已经都在一万多了，然鹅去爱丁堡的机票只有五千多，所以我就买了去爱宝的机票，落地后再几个人一起包车直接到格拉宿舍楼下，包车大概在100胖，三四个人一起分担也不贵。</p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>等格拉邮件，预计12月更</p>
 <h1 id="交学费-住宿费"><a href="#交学费-住宿费" class="headerlink" title="交学费/住宿费"></a>交学费/住宿费</h1><p>我，秦始皇，打钱！预计12月更</p>
-<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>不知道1月份能不能正常复航，预计12月更</p>
-<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>留学生机票行李限额比较高，一般可以托运2个28寸的行李箱，每个箱子重量不超过23KG，手提行李一件，重量不超过7KG<br>这部分预计12月更新，我正在为怎么把ITX机箱和显示器扛过去而发愁hhh</p>
+<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>这部分预计12月更新，我正在为怎么把ITX机箱和显示器扛过去而发愁hhh</p>
 <h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新</p>
 ]]></content>
       <categories>
@@ -1052,11 +1116,11 @@
 <p>示例</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'category'</span>,</span><br><span class="line">        data: [<span class="string">'Mon'</span>, <span class="string">'Tue'</span>, <span class="string">'Wed'</span>, <span class="string">'Thu'</span>, <span class="string">'Fri'</span>, <span class="string">'Sat'</span>, <span class="string">'Sun'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'value'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        <span class="selector-tag">data</span>: <span class="selector-attr">[820, 932, 901, 934, 1290, 1330, 1320]</span>,</span><br><span class="line">        type: 'line'</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-<div id="echarts2276" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts3246" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts2276'));
+	var myChart = echarts.init(document.getElementById('echarts3246'));
 	// 指定图表的配置项和数据
 	option = {
     xAxis: {
@@ -1104,8 +1168,8 @@
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>MacOS</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1745,8 +1809,8 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>Win10</tag>
         <tag>MacOS</tag>
+        <tag>Win10</tag>
         <tag>Ubuntu</tag>
       </tags>
   </entry>
@@ -3312,8 +3376,8 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>Architecture</tag>
         <tag>Internet</tag>
+        <tag>Architecture</tag>
       </tags>
   </entry>
   <entry>
