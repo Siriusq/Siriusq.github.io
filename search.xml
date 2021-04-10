@@ -260,7 +260,136 @@ OFFICIAL
             <i class="fa fa-home fa-fw"></i>苏格兰 HC1 下载
           </a>
 
-<p><strong>填写表格的指南仅供没结婚没生孩子的朋友参考</strong><br>序号|内容|举例<br>-|-|-<br>1.1|申请退款|如果你在申请HC1之前配过眼镜并且想获得退款就勾选 Glasses or contact lenses<br>1.2|是否有配偶|没有的话后面右侧<strong>所有与 Partner 有关的内容都不用填写</strong><br>1.3|基本信息|姓名建议全部大写，National Insurance number 没有可以不写，电话号码形式为 （44）0xxxxxxxxxx，底下是你方便接听电话的时间段<br>2.1|有没有孩子|勾选 No，下面都不用填，直接去 Part 3<br>3.1|有没有人一起住|公寓的室友不算，勾选 No，下面都不用填，直接去 3.3|有没有房客或者寄宿生一起住|勾选 No，下面内容不用填<br>4.1|有没有存款|勾选 Yes，勾选后填写 Money in accounts，金额理论上不超过1w就行，但是有人写6000通过了，有人如实写200被拒了，很迷惑<br>4.2|有没有地产或房产|勾选 No，下面内容不用填<br>5.1 - 5.9|社会福利补助之类的东西|都勾选 No，下面内容不用填<br>6.1|有没有工作|勾选 No，下面都不用填，直接去 Part 7<br>7.1 - 7.6|有没有人一起住的问题|勾选 No，下面内容都不用填，跳过7.7<br>7.8 - 7.11|同上|勾选 No，下面内容都不用填，跳过7.12直接去 Part 8<br>8.1|是不是全日制学生|勾选 Yes，下面根据个人情况填写，Qualification 那里我填的 MSc, Post-graduate，下面是大学名字和三个学期的起止时间，再下面问你是否是一年制课程，一般选 Yes，如果选 No 就在下面写下一学年的开学日期<br>8.2|是不是留学生|勾选 Yes，下面填 China<br>8.3|学费是不是由奖学金之类的支付|勾选 No，下面来源填 Parents<br>8.4|有没有申请过学生补助|勾选 No，下面内容不用填<br>8.5|经济来源是什么|上面那一串都不用管，在 Money from parents 后边打勾并填写生活费，例如 ￡200 / Every Month，这里的数字也很迷惑<br>8.6|上学的时候和是否父母住在一起|勾选 No<br>8.7|需不需要付房租|勾选 Yes，下面如实填写就行，例如 ￡600 / Every Month，下面的 Heating Lighting Cooking Hot water 全部打勾，Do you have just one room? 选Yes，Does your rent include any meals? 选 No，下面内容不用写<br>8.8|圣诞节复活节假期是否付房租|勾选 Yes，下面如实填写就行，例如 ￡600 / Every Month<br>8.9|暑假是否住在公寓|如实填写就行<br>9|补充信息|一般跳过就行<br>10a|英文签名并写日期|如实填写就行<br>10b|是不是帮别人申请|直接跳过<br>最底下|声明条款|I have answered all the questions that apply to me. 和 I have signed the declaration above. 打勾就行，中间的两个不用管</p>
+<p><strong>填写表格的指南仅供没结婚没生孩子的朋友参考</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">内容</th>
+<th align="left">举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1.1</td>
+<td align="left">申请退款</td>
+<td align="left">如果你在申请HC1之前配过眼镜并且想获得退款就勾选 Glasses or contact lenses</td>
+</tr>
+<tr>
+<td align="left">1.2</td>
+<td align="left">是否有配偶</td>
+<td align="left">没有的话后面右侧所有与 Partner 有关的内容都不用填写</td>
+</tr>
+<tr>
+<td align="left">1.3</td>
+<td align="left">基本信息</td>
+<td align="left">姓名建议全部大写，National Insurance number 没有可以不写，电话号码形式为 （44）0xxxxxxxxxx，底下是你方便接听电话的时间段</td>
+</tr>
+<tr>
+<td align="left">2.1</td>
+<td align="left">有没有孩子</td>
+<td align="left">勾选 No，下面都不用填，直接去 Part 3</td>
+</tr>
+<tr>
+<td align="left">3.1</td>
+<td align="left">有没有人一起住</td>
+<td align="left">公寓的室友不算，勾选 No，下面都不用填，直接去 3.3</td>
+</tr>
+<tr>
+<td align="left">4.1</td>
+<td align="left">有没有存款</td>
+<td align="left">勾选 Yes，勾选后填写 Money in accounts，金额理论上不超过1w就行，但是有人写6000通过了，有人如实写200被拒了，很迷惑</td>
+</tr>
+<tr>
+<td align="left">4.2</td>
+<td align="left">有没有地产或房产</td>
+<td align="left">勾选 No，下面内容不用填</td>
+</tr>
+<tr>
+<td align="left">5.1 - 5.9</td>
+<td align="left">社会福利补助之类的东西</td>
+<td align="left">都勾选 No，下面内容不用填</td>
+</tr>
+<tr>
+<td align="left">6.1</td>
+<td align="left">有没有工作</td>
+<td align="left">勾选 No，下面都不用填，直接去 Part 7</td>
+</tr>
+<tr>
+<td align="left">7.1 - 7.6</td>
+<td align="left">有没有人一起住的问题</td>
+<td align="left">勾选 No，下面内容都不用填，跳过7.7</td>
+</tr>
+<tr>
+<td align="left">7.8 - 7.11</td>
+<td align="left">同上</td>
+<td align="left">勾选 No，下面内容都不用填，跳过7.12直接去 Part 8</td>
+</tr>
+<tr>
+<td align="left">8.1</td>
+<td align="left">是不是全日制学生</td>
+<td align="left">勾选 Yes，下面根据个人情况填写，Qualification 那里我填的 MSc, Post-graduate，下面是大学名字和三个学期的起止时间，再下面问你是否是一年制课程，一般选 Yes，如果选 No 就在下面写下一学年的开学日期</td>
+</tr>
+<tr>
+<td align="left">8.2</td>
+<td align="left">是不是留学生</td>
+<td align="left">勾选 Yes，下面填 China</td>
+</tr>
+<tr>
+<td align="left">8.3</td>
+<td align="left">学费是不是由奖学金之类的支付</td>
+<td align="left">勾选 No，下面来源填 Parents</td>
+</tr>
+<tr>
+<td align="left">8.4</td>
+<td align="left">有没有申请过学生补助</td>
+<td align="left">勾选 No，下面内容不用填</td>
+</tr>
+<tr>
+<td align="left">8.5</td>
+<td align="left">经济来源是什么</td>
+<td align="left">上面那一串都不用管，在 Money from parents 后边打勾并填写生活费，例如 ￡200 / Every Month，这里的数字也很迷惑</td>
+</tr>
+<tr>
+<td align="left">8.6</td>
+<td align="left">上学的时候和是否父母住在一起</td>
+<td align="left">勾选 No</td>
+</tr>
+<tr>
+<td align="left">8.7</td>
+<td align="left">需不需要付房租</td>
+<td align="left">勾选 Yes，下面如实填写就行，例如 ￡600 / Every Month，下面的 Heating Lighting Cooking Hot water 全部打勾，Do you have just one room? 选Yes，Does your rent include any meals? 选 No，下面内容不用写</td>
+</tr>
+<tr>
+<td align="left">8.8</td>
+<td align="left">圣诞节复活节假期是否付房租</td>
+<td align="left">勾选 Yes，下面如实填写就行，例如 ￡600 / Every Month</td>
+</tr>
+<tr>
+<td align="left">8.9</td>
+<td align="left">暑假是否住在公寓</td>
+<td align="left">如实填写就行</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">补充信息</td>
+<td align="left">一般跳过就行</td>
+</tr>
+<tr>
+<td align="left">10a</td>
+<td align="left">英文签名并写日期</td>
+<td align="left">如实填写就行</td>
+</tr>
+<tr>
+<td align="left">10b</td>
+<td align="left">是不是帮别人申请</td>
+<td align="left">直接跳过</td>
+</tr>
+<tr>
+<td align="left">最底下</td>
+<td align="left">声明条款</td>
+<td align="left">I have answered all the questions that apply to me. 和 I have signed the declaration above. 打勾就行，中间的两个不用管</td>
+</tr>
+</tbody></table>
 <p>如果你在药店等地方领到了表格的话，填完之后装到附赠的信封里，附上一份学生证明，然后填好地址信息扔进邮筒就可以了，不用贴邮票；像我这种自己打印的话就得去邮局邮寄了（淦*2），邮寄地址如下</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NHS Business Services Authority</span><br><span class="line">Bridge House</span><br><span class="line">152 Pilgrim Street</span><br><span class="line">NEWCASTLE-UPON-TYNE</span><br><span class="line">NE1 6SN</span><br></pre></td></tr></table></figure>
 
@@ -386,7 +515,7 @@ OFFICIAL
             <i class="fa fa-home fa-fw"></i>自助打印
           </a>
 
-<h1 id="老鸽子的-Vlog"><a href="#老鸽子的-Vlog" class="headerlink" title="老鸽子的 Vlog"></a>老鸽子的 Vlog</h1><p>咕咕咕咕咕咕</p>
+<h1 id="老鸽子的-Vlog"><a href="#老鸽子的-Vlog" class="headerlink" title="老鸽子的 Vlog"></a>老鸽子的 Vlog</h1><p>咕咕咕咕咕咕<br>中二病晚期</p>
 <h2 id="Chapter-1-未从9-3-4-站台开始的旅程"><a href="#Chapter-1-未从9-3-4-站台开始的旅程" class="headerlink" title="Chapter 1 未从9 3/4 站台开始的旅程"></a>Chapter 1 未从9 3/4 站台开始的旅程</h2><p>为什么不能坐小火车来上学呢？</p>
 <iframe src="//player.bilibili.com/player.html?aid=799088903&bvid=BV1Wy4y1Y7sY&cid=294103931&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
@@ -1668,11 +1797,11 @@ OFFICIAL
 <p>示例</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'category'</span>,</span><br><span class="line">        data: [<span class="string">'Mon'</span>, <span class="string">'Tue'</span>, <span class="string">'Wed'</span>, <span class="string">'Thu'</span>, <span class="string">'Fri'</span>, <span class="string">'Sat'</span>, <span class="string">'Sun'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;</span><br><span class="line">        <span class="attribute">type</span>: <span class="string">'value'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        <span class="selector-tag">data</span>: <span class="selector-attr">[820, 932, 901, 934, 1290, 1330, 1320]</span>,</span><br><span class="line">        type: 'line'</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
 
-<div id="echarts4265" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts7035" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts4265'));
+	var myChart = echarts.init(document.getElementById('echarts7035'));
 	// 指定图表的配置项和数据
 	option = {
     xAxis: {
@@ -1720,8 +1849,8 @@ OFFICIAL
         <category>Blog</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
         <tag>Hexo</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
