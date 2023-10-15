@@ -749,66 +749,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HEXO部署</title>
-    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
-    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
-<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
-<ul>
-<li>创建新博客文件</li>
-<li>生成新网页</li>
-<li>部署到Github Page</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
-<li><p>在博客文件夹中右键打开Git bash</p>
-</li>
-<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
-</li>
-<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
-</li>
-<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
-<ul>
-<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>其中<code>title</code>就是博客标题</li>
-<li><code>date</code>是博客的创建时间，不用修改</li>
-<li><code>tags</code>是博客的标签</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>踩坑：<br>此处注意冒号后面的空格</p>
-</blockquote>
-<ul>
-<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
-</ul>
-</li>
-<li><p>编写完成后保存</p>
-</li>
-</ol>
-<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
-<li>打开Git bash</li>
-<li>输入命令<code>hexo clean</code>清除网页缓存</li>
-<li>输入命令<code>hexo g</code>生成新的网页文件</li>
-<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
-<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
-</blockquote>
-</li>
-<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
-</ol>
-<hr>
-<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Grasshopper</title>
     <url>/Grasshopper.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">把大二到现在攒下来的用来画（shui）分析图的Grasshopper电池做一下汇总，并记录一下简易使用方法供建筑狗使用，感兴趣的话为何不尝试一下转行程序猿呢（~~劝退~~）</blockquote>
@@ -935,6 +875,66 @@
       <tags>
         <tag>Grasshopper</tag>
         <tag>建筑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HEXO部署</title>
+    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
+    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
+<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
+<ul>
+<li>创建新博客文件</li>
+<li>生成新网页</li>
+<li>部署到Github Page</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
+<li><p>在博客文件夹中右键打开Git bash</p>
+</li>
+<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
+</li>
+<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
+</li>
+<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
+<ul>
+<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中<code>title</code>就是博客标题</li>
+<li><code>date</code>是博客的创建时间，不用修改</li>
+<li><code>tags</code>是博客的标签</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>踩坑：<br>此处注意冒号后面的空格</p>
+</blockquote>
+<ul>
+<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
+</ul>
+</li>
+<li><p>编写完成后保存</p>
+</li>
+</ol>
+<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
+<li>打开Git bash</li>
+<li>输入命令<code>hexo clean</code>清除网页缓存</li>
+<li>输入命令<code>hexo g</code>生成新的网页文件</li>
+<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
+<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
+</blockquote>
+</li>
+<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
+</ol>
+<hr>
+<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1135,43 +1135,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Next JSDelivr 被墙解决方案</title>
-    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
-
-<span id="more"></span>
-
-<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
-</div>
-
-<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
-<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
-<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
-<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
-<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
-<ul>
-<li>打开<code>_config.next.yml</code></li>
-<li>定位到到<code>CDN Settings</code></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
-</ul>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
-<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
-
-<ul>
-<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
-</ul>
-<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo博客踩坑指北</title>
     <url>/Hexo%E5%8D%9A%E5%AE%A2%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8C%97.html</url>
     <content><![CDATA[<p>记录总结用HEXO和Github Page搭建博客时踩过的坑，主要包括以下</p>
@@ -1330,36 +1293,40 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo添加Google收录</title>
-    <url>/Hexo%E6%B7%BB%E5%8A%A0Google%E6%94%B6%E5%BD%95.html</url>
-    <content><![CDATA[<p>目前网站还不能够通过搜索引擎搜索到，想要被搜到的话需要添加搜索引擎收录，这里以我添加的Google为例。<br><strong>步骤包括：</strong></p>
+    <title>Hexo Next JSDelivr 被墙解决方案</title>
+    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
+
+<span id="more"></span>
+
+<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
+</div>
+
+<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
+<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
+<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
+<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
+<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
 <ul>
-<li>生成站点地图</li>
-<li>验证站点<span id="more"></span></li>
+<li>打开<code>_config.next.yml</code></li>
+<li>定位到到<code>CDN Settings</code></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
 </ul>
-<h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><ol>
-<li>在博客根目录下打开Git bash</li>
-<li>执行命令<code>npm install hexo-generator-sitemap --save</code>安装站点地图生成插件</li>
-<li>在博客根目录下的配置文件<code>_config.yml</code>中添加下列内容 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line"><span class="attr">sitemap</span>:</span><br><span class="line">	<span class="attr">path</span>: sitemap.<span class="property">xml</span></span><br></pre></td></tr></table></figure></li>
-<li>执行<code>hexo g</code>即可在<code>博客根目录/public</code>中生成<code>sitemap.xml</code>文件</li>
-</ol>
-<h3 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h3><ol>
-<li>打开<a href="https://www.google.com/webmasters/">Google网站站长</a>,点击右上角登陆</li>
-<li>选择网址前缀并输入站点域名，点击继续</li>
-<li>下载Google的验证文件并存放在<code>博客根目录/themes/next/source</code>中</li>
-<li>执行<code>hexo cl</code>,<code>hexo g</code>,<code>hexo d</code>三连</li>
-<li>回到Google网站站长进行验证</li>
-<li>在Google中搜索<code>site：域名</code>就可以看到自己的网站了</li>
-</ol>
-<hr>
-<p>现在已经可以在Google上搜索到自己的文章和网站了，填坑结束~~~</p>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
+<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
+
+<ul>
+<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
+</ul>
+<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
 ]]></content>
       <categories>
         <category>网站配置</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>SEO</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,6 +1388,39 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>i18n</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加Google收录</title>
+    <url>/Hexo%E6%B7%BB%E5%8A%A0Google%E6%94%B6%E5%BD%95.html</url>
+    <content><![CDATA[<p>目前网站还不能够通过搜索引擎搜索到，想要被搜到的话需要添加搜索引擎收录，这里以我添加的Google为例。<br><strong>步骤包括：</strong></p>
+<ul>
+<li>生成站点地图</li>
+<li>验证站点<span id="more"></span></li>
+</ul>
+<h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><ol>
+<li>在博客根目录下打开Git bash</li>
+<li>执行命令<code>npm install hexo-generator-sitemap --save</code>安装站点地图生成插件</li>
+<li>在博客根目录下的配置文件<code>_config.yml</code>中添加下列内容 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line"><span class="attr">sitemap</span>:</span><br><span class="line">	<span class="attr">path</span>: sitemap.<span class="property">xml</span></span><br></pre></td></tr></table></figure></li>
+<li>执行<code>hexo g</code>即可在<code>博客根目录/public</code>中生成<code>sitemap.xml</code>文件</li>
+</ol>
+<h3 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h3><ol>
+<li>打开<a href="https://www.google.com/webmasters/">Google网站站长</a>,点击右上角登陆</li>
+<li>选择网址前缀并输入站点域名，点击继续</li>
+<li>下载Google的验证文件并存放在<code>博客根目录/themes/next/source</code>中</li>
+<li>执行<code>hexo cl</code>,<code>hexo g</code>,<code>hexo d</code>三连</li>
+<li>回到Google网站站长进行验证</li>
+<li>在Google中搜索<code>site：域名</code>就可以看到自己的网站了</li>
+</ol>
+<hr>
+<p>现在已经可以在Google上搜索到自己的文章和网站了，填坑结束~~~</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>SEO</tag>
       </tags>
   </entry>
   <entry>
@@ -1720,6 +1720,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Java与C的环境变量配置</title>
+    <url>/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧</blockquote>
+
+<span id="more"></span>
+
+<h1 id="Java环境变量配置"><a href="#Java环境变量配置" class="headerlink" title="Java环境变量配置"></a>Java环境变量配置</h1><ol>
+<li>直接在任务栏搜索框搜索<code>环境变量</code>，会出现<code>编辑系统环境变量</code></li>
+<li>在弹出的窗口中点击右下角的<code>环境变量</code></li>
+<li>在下面的<code>系统变量</code>中新建系统变量，变量名<code>JAVA_HOME</code>，变量值为JDK的安装路径，默认是<code>C:\Program Files\Java\jdk-14.0.2</code></li>
+<li>再新建一个系统变量<code>CLASSPATH</code>，变量值为<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>分别加入<code>%JAVA_HOME%\bin</code>与<code>%JAVA_HOME%\jre\bin</code></li>
+<li>确定三连回到桌面</li>
+<li>打开终端，输入<code>java -version</code>检查是否成功，成功的话会显示java版本号</li>
+<li>不成功的话重启一遍，并检查一下变量是否输入正确</li>
+</ol>
+<h1 id="C环境变量配置"><a href="#C环境变量配置" class="headerlink" title="C环境变量配置"></a>C环境变量配置</h1><ol>
+<li>在mingw中勾选<code>mingw32-base</code>和<code>mingw-gcc-g++</code>就行，选择多了会装到天荒地老。。。勾选方式是<code>右键 - Mark for Installation</code></li>
+<li>点击右上角的<code>Installation - Apply Changes</code></li>
+<li>在弹出的窗口中点击<code>Apply</code>确认</li>
+<li>漫长的等待。。。。。。土豆服务器经常会报错安装失败</li>
+<li>安装完成后同上打开系统变量</li>
+<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
+<li>加入mingw的安装路径，默认是<code>C:\MinGW\bin</code></li>
+<li>打开终端，输入<code>gcc -v</code>检查是否成功</li>
+<li>不成功同样重启试试</li>
+</ol>
+<p>设置完成后的环境变量大概是这个亚子<br><img data-src="https://s2.loli.net/2022/05/13/O49gVDEHBFZ2kzm.png" alt="1"><br><img data-src="https://s2.loli.net/2022/05/13/uLJnsPYEIiHSA1t.png" alt="2"></p>
+]]></content>
+      <categories>
+        <category>程序猿</category>
+      </categories>
+      <tags>
+        <tag>Win10</tag>
+        <tag>环境变量</tag>
+        <tag>Java</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Jupyter Notebook 食用指南</title>
     <url>/Jupyter-Notebook-%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">延期开学的咸鱼在家无事可做，打算刷刷 MOOC 掉点头发，记笔记的时候发现 OneNote 没法记录代码，缩进高亮行号都没有，于是就想到了一直在电脑里躺尸的 Jupyter Notebook，记录下安装及食用的方法</blockquote>
@@ -1809,64 +1850,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java与C的环境变量配置</title>
-    <url>/Java%E4%B8%8EC%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">昨天又把系统重装了，升级到了2004，本以为能凭借记忆配置好Java和C的环境变量，然鹅最后还是找了百度，所以就再记录一遍吧</blockquote>
-
-<span id="more"></span>
-
-<h1 id="Java环境变量配置"><a href="#Java环境变量配置" class="headerlink" title="Java环境变量配置"></a>Java环境变量配置</h1><ol>
-<li>直接在任务栏搜索框搜索<code>环境变量</code>，会出现<code>编辑系统环境变量</code></li>
-<li>在弹出的窗口中点击右下角的<code>环境变量</code></li>
-<li>在下面的<code>系统变量</code>中新建系统变量，变量名<code>JAVA_HOME</code>，变量值为JDK的安装路径，默认是<code>C:\Program Files\Java\jdk-14.0.2</code></li>
-<li>再新建一个系统变量<code>CLASSPATH</code>，变量值为<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></li>
-<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
-<li>分别加入<code>%JAVA_HOME%\bin</code>与<code>%JAVA_HOME%\jre\bin</code></li>
-<li>确定三连回到桌面</li>
-<li>打开终端，输入<code>java -version</code>检查是否成功，成功的话会显示java版本号</li>
-<li>不成功的话重启一遍，并检查一下变量是否输入正确</li>
-</ol>
-<h1 id="C环境变量配置"><a href="#C环境变量配置" class="headerlink" title="C环境变量配置"></a>C环境变量配置</h1><ol>
-<li>在mingw中勾选<code>mingw32-base</code>和<code>mingw-gcc-g++</code>就行，选择多了会装到天荒地老。。。勾选方式是<code>右键 - Mark for Installation</code></li>
-<li>点击右上角的<code>Installation - Apply Changes</code></li>
-<li>在弹出的窗口中点击<code>Apply</code>确认</li>
-<li>漫长的等待。。。。。。土豆服务器经常会报错安装失败</li>
-<li>安装完成后同上打开系统变量</li>
-<li>双击系统变量中的<code>path</code>，点击右上角的<code>新建</code></li>
-<li>加入mingw的安装路径，默认是<code>C:\MinGW\bin</code></li>
-<li>打开终端，输入<code>gcc -v</code>检查是否成功</li>
-<li>不成功同样重启试试</li>
-</ol>
-<p>设置完成后的环境变量大概是这个亚子<br><img data-src="https://s2.loli.net/2022/05/13/O49gVDEHBFZ2kzm.png" alt="1"><br><img data-src="https://s2.loli.net/2022/05/13/uLJnsPYEIiHSA1t.png" alt="2"></p>
-]]></content>
-      <categories>
-        <category>程序猿</category>
-      </categories>
-      <tags>
-        <tag>Win10</tag>
-        <tag>环境变量</tag>
-        <tag>Java</tag>
-        <tag>C</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX配置与使用</title>
-    <url>/LaTeX.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">记录在VSCode中配置LaTeX的过程以及LaTeX的基础使用方法</blockquote>
-
-<p>巨坑待填中。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
-<span id="more"></span>
-
-<h1 id="安装TeX-Live"><a href="#安装TeX-Live" class="headerlink" title="安装TeX Live"></a>安装TeX Live</h1>]]></content>
-      <categories>
-        <category>程序猿</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-        <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MacBook Pro 路易十六联名款</title>
     <url>/MacBookProHeadless.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">论如何用最少的钱买一台Mac</blockquote>
@@ -1942,24 +1925,6 @@
         <tag>搞机</tag>
         <tag>MacOS</tag>
         <tag>MacBook Pro</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开站纪念</title>
-    <url>/New.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
-
-<span id="more"></span>
-
-<p>我是一个默默无闻的纪念碑hhh</p>
-<p>评论区可以当作留言板哦</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>纪念</tag>
       </tags>
   </entry>
   <entry>
@@ -2990,6 +2955,24 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开站纪念</title>
+    <url>/New.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
+
+<span id="more"></span>
+
+<p>我是一个默默无闻的纪念碑hhh</p>
+<p>评论区可以当作留言板哦</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>纪念</tag>
       </tags>
   </entry>
   <entry>
@@ -6219,99 +6202,6 @@
       </tags>
   </entry>
   <entry>
-    <title>iOS屏蔽开屏广告</title>
-    <url>/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告</blockquote>
-
-<span id="more"></span>
-
-<p>此方法的原理是使用Shadowrocket的<code>REJECT</code>规则，对APP的请求的广告域名进行拦截并返回404状态码，APP下载不到广告，自然也就不会显示了。</p>
-<div class="note warning"><p>提示：此方法需要</p>
-<ul>
-<li>一个美区&#x2F;英区的Apple ID以及相应支付方式，因为好用的代理软件在国区已经全被下架了</li>
-<li>一个可靠的机场&#x2F;VPS，因为需要一直开启VPN</li>
-<li>重新安装需要屏蔽广告的APP</li>
-</ul>
-</div>
-
-
-<h1 id="导入规则"><a href="#导入规则" class="headerlink" title="导入规则"></a>导入规则</h1><p>这里我以Shadowrocket为例，Quantumult X、Surge等代理软件也都可以使用，配置方法大同小异。</p>
-<p>首先将Shadowrocket的<code>全局路由</code>设置为<code>配置</code><br><img data-src="https://s2.loli.net/2022/07/16/tzWnpVfPIBE87Ks.webp" alt="全局路由设置.webp"></p>
-<p>然后到<code>配置</code>中，添加一份规则，规则在GitHub上很多，我用的是下面这个规则集中的<code>黑名单+去广告</code></p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>Shadowrocket-ADBlock-Rules-Forever</p><p>最完善的 iOS Shadowrocket规则</p>
-<a href="https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/"></a>
-</div></div>
-
-<h1 id="安装抓包APP"><a href="#安装抓包APP" class="headerlink" title="安装抓包APP"></a>安装抓包APP</h1><p>虽然上面导入的规则已经能够屏蔽掉部分APP的开屏广告了，但是有一些APP的广告下载链接经常变化，规则不一定包含，就需要抓包这些链接，然后加入到Shadowrocket的规则里。</p>
-<p>抓包APP国区推荐比较多的是<a href="https://apps.apple.com/cn/app/stream/id1312141691">Stream</a>，但是英区并没有上架，这里我用的是<a href="https://apps.apple.com/gb/app/storm-sniffer-packet-capture/id1610958307">Storm Sniffer</a></p>
-<h2 id="添加VPN"><a href="#添加VPN" class="headerlink" title="添加VPN"></a>添加VPN</h2><p>首次启动时先打开上面的<code>开启抓包</code>开关，然后会提示添加VPN，允许并输入手机的密码<br><img data-src="https://s2.loli.net/2022/07/16/k1dXZC3SKDryGE7.webp" alt="添加VPN.webp"></p>
-<h2 id="开启HTTPS支持"><a href="#开启HTTPS支持" class="headerlink" title="开启HTTPS支持"></a>开启HTTPS支持</h2><p>下一步是开启HTTPS支持，需要下载并启用证书</p>
-<h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><p><img data-src="https://s2.loli.net/2022/07/16/Cy2mZasRGuM5BNd.webp" alt="下载证书.webp"></p>
-<h3 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h3><p>下载完成后打开设置，会多出一个<code>已下载描述文件</code>，点击右上角的<code>安装</code>，然后输入密码，然后会弹出是否信任证书的警告，继续点击右上角的<code>安装</code>即可<br><img data-src="https://s2.loli.net/2022/07/16/qkIfpCd5wKeGTtQ.webp" alt="安装描述文件.webp"></p>
-<h3 id="启用证书"><a href="#启用证书" class="headerlink" title="启用证书"></a>启用证书</h3><p>打开<code>设置</code>-<code>通用</code>-<code>关于本机</code>，拉到最下面，有一个<code>证书信任设置</code>，开启Strom Sniffer的证书,证书和APP名字差了一丢丢，会弹出警告，点击<code>继续</code>即可（抓完包建议回来关掉它，卸磨杀驴🐶🐶）。然后回到Storm Sniffer界面，如果显示的像最右边的图片一样，说明HTTPS支持已经开启成功。<br><img data-src="https://s2.loli.net/2022/07/16/sZ3PYy9GV15kKRa.webp" alt="启用证书.webp"></p>
-<details class="note warning"><summary><p>删除证书</p>
-</summary>
-<h3 id="删除证书"><a href="#删除证书" class="headerlink" title="删除证书"></a>删除证书</h3><p>完整版的卸磨杀驴，在<code>设置</code>-<code>通用</code>-<code>VPN与设备管理</code>中找到Strom Sniffer，然后点击<code>移除描述文件</code>即可<br><img data-src="https://s2.loli.net/2022/07/16/a2xYhHBvwlbtC3j.webp" alt="卸磨杀驴.webp"></p>
-
-</details>
-
-<h1 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h1><p>抓包之前需要先卸载并重装要抓包的APP，因为广告文件已经在APP缓存里了，而APP里面所谓的清除缓存功能并不会清除广告的缓存。在启动的时候APP会直接调用已经缓存下来的广告，而不会向广告下载服务器发出请求，不发出请求我们就抓不到广告服务器的域名，自然也不能屏蔽它们了。</p>
-<p>首先打开Storm Sniffer的<code>开启抓包</code>开关，然后启动要抓包的APP，第一次启动可能不会弹出广告，多清理后台试几次，广告加载出来后就可以回到Storm Sniffer，关掉<code>开启抓包</code>开关，然后在列表中寻找长得像广告的域名，图片形式的广告比较好找，Storm Sniffer会显示图片预览，视频形式的就得慢慢找了。找到后在Storm Sniffer中点击请求的HOST，选择复制Value就可以复制域名了<br><img data-src="https://s2.loli.net/2022/07/16/CIKLhiQevwGxTfB.webp" alt="抓包.webp"></p>
-<h1 id="添加规则"><a href="#添加规则" class="headerlink" title="添加规则"></a>添加规则</h1><p>打开Shadowrocket的<code>配置</code>，打开刚才导入的规则，点击右上角的加号添加新的规则，类型一般不用改，策略设置为<code>REJECT</code>，然后粘贴刚才抓到的域名并保存。<br><img data-src="https://s2.loli.net/2022/07/16/tU9xOiNgpS3m4LW.webp" alt="添加自定义规则.webp"></p>
-<p>然后开启Shadowrocket的代理，再次重装刚才抓完的APP，清除掉广告的缓存，就可以正常使用了。</p>
-<details class="note primary"><summary><p>规则类型</p>
-</summary>
-<h2 id="规则类型"><a href="#规则类型" class="headerlink" title="规则类型"></a>规则类型</h2><p>一些常用规则类型说明</p>
-<ul>
-<li>DOMAIN：域名匹配</li>
-<li>DOMAIN-SUFFIX：域名后缀匹配</li>
-<li>DOMAIN-KEYWORD：域名关键字匹配</li>
-<li>IP-CIDR：IP 段匹配</li>
-<li>GEOIP：GEOIP 数据库（国家代码）匹配</li>
-<li>DST-PORT：目标端口匹配</li>
-<li>FINAL：剩余网站</li>
-</ul>
-
-</details>
-
-<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>国内的APP为了投放广告可谓费尽心机，APP的广告域名可能会更换，虽然频率不高，但是每次更换我们都需要重装APP并重新抓包，比较麻烦。不过一旦屏蔽完成，就再也不用忍受每次5秒的开屏广告，APP启动都是秒开，而且也不用担心开屏广告跳出来某些晦气玩意儿的大脸，还是很值的。另外附上微博国际版的域名屏蔽列表</p>
-<details class="note success"><summary><p>微博国际版域名屏蔽列表</p>
-</summary>
-<ul>
-<li>sdk.e.qq.com</li>
-<li>mazu.m.qq.com</li>
-<li>adimg.uve.weibo.com</li>
-<li>tqt.weibo.cn</li>
-<li>miaozhen.com</li>
-<li>sdkapp.uve.weibo.com</li>
-<li>sdkmonitor.biz.weibo.com</li>
-<li>h.trace.qq.com</li>
-<li>cgi.connect.qq.com</li>
-<li>gdtimg.com</li>
-<li>umengcloud.com</li>
-<li>adstrategy.biz.weibo.com</li>
-</ul>
-
-</details>
-
-<div class="note danger"><ul>
-<li>切记不要在关闭代理的情况下启动这个APP！不然广告又会被缓存下来，就得再重装一次了。</li>
-<li>建议禁止这些APP的后台刷新，iOS的消息推送机制不需要它们后台刷新，禁止也不会耽误消息。毕竟代理APP不一定稳定，万一代理掉了这些APP就可能在后台缓存广告了</li>
-</ul>
-</div>]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>广告屏蔽</tag>
-        <tag>ShadowRocket</tag>
-        <tag>抓包</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
     <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
@@ -6444,6 +6334,99 @@
         <tag>Win11</tag>
         <tag>iOS</tag>
         <tag>共享文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iOS屏蔽开屏广告</title>
+    <url>/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告</blockquote>
+
+<span id="more"></span>
+
+<p>此方法的原理是使用Shadowrocket的<code>REJECT</code>规则，对APP的请求的广告域名进行拦截并返回404状态码，APP下载不到广告，自然也就不会显示了。</p>
+<div class="note warning"><p>提示：此方法需要</p>
+<ul>
+<li>一个美区&#x2F;英区的Apple ID以及相应支付方式，因为好用的代理软件在国区已经全被下架了</li>
+<li>一个可靠的机场&#x2F;VPS，因为需要一直开启VPN</li>
+<li>重新安装需要屏蔽广告的APP</li>
+</ul>
+</div>
+
+
+<h1 id="导入规则"><a href="#导入规则" class="headerlink" title="导入规则"></a>导入规则</h1><p>这里我以Shadowrocket为例，Quantumult X、Surge等代理软件也都可以使用，配置方法大同小异。</p>
+<p>首先将Shadowrocket的<code>全局路由</code>设置为<code>配置</code><br><img data-src="https://s2.loli.net/2022/07/16/tzWnpVfPIBE87Ks.webp" alt="全局路由设置.webp"></p>
+<p>然后到<code>配置</code>中，添加一份规则，规则在GitHub上很多，我用的是下面这个规则集中的<code>黑名单+去广告</code></p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>Shadowrocket-ADBlock-Rules-Forever</p><p>最完善的 iOS Shadowrocket规则</p>
+<a href="https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/"></a>
+</div></div>
+
+<h1 id="安装抓包APP"><a href="#安装抓包APP" class="headerlink" title="安装抓包APP"></a>安装抓包APP</h1><p>虽然上面导入的规则已经能够屏蔽掉部分APP的开屏广告了，但是有一些APP的广告下载链接经常变化，规则不一定包含，就需要抓包这些链接，然后加入到Shadowrocket的规则里。</p>
+<p>抓包APP国区推荐比较多的是<a href="https://apps.apple.com/cn/app/stream/id1312141691">Stream</a>，但是英区并没有上架，这里我用的是<a href="https://apps.apple.com/gb/app/storm-sniffer-packet-capture/id1610958307">Storm Sniffer</a></p>
+<h2 id="添加VPN"><a href="#添加VPN" class="headerlink" title="添加VPN"></a>添加VPN</h2><p>首次启动时先打开上面的<code>开启抓包</code>开关，然后会提示添加VPN，允许并输入手机的密码<br><img data-src="https://s2.loli.net/2022/07/16/k1dXZC3SKDryGE7.webp" alt="添加VPN.webp"></p>
+<h2 id="开启HTTPS支持"><a href="#开启HTTPS支持" class="headerlink" title="开启HTTPS支持"></a>开启HTTPS支持</h2><p>下一步是开启HTTPS支持，需要下载并启用证书</p>
+<h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><p><img data-src="https://s2.loli.net/2022/07/16/Cy2mZasRGuM5BNd.webp" alt="下载证书.webp"></p>
+<h3 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h3><p>下载完成后打开设置，会多出一个<code>已下载描述文件</code>，点击右上角的<code>安装</code>，然后输入密码，然后会弹出是否信任证书的警告，继续点击右上角的<code>安装</code>即可<br><img data-src="https://s2.loli.net/2022/07/16/qkIfpCd5wKeGTtQ.webp" alt="安装描述文件.webp"></p>
+<h3 id="启用证书"><a href="#启用证书" class="headerlink" title="启用证书"></a>启用证书</h3><p>打开<code>设置</code>-<code>通用</code>-<code>关于本机</code>，拉到最下面，有一个<code>证书信任设置</code>，开启Strom Sniffer的证书,证书和APP名字差了一丢丢，会弹出警告，点击<code>继续</code>即可（抓完包建议回来关掉它，卸磨杀驴🐶🐶）。然后回到Storm Sniffer界面，如果显示的像最右边的图片一样，说明HTTPS支持已经开启成功。<br><img data-src="https://s2.loli.net/2022/07/16/sZ3PYy9GV15kKRa.webp" alt="启用证书.webp"></p>
+<details class="note warning"><summary><p>删除证书</p>
+</summary>
+<h3 id="删除证书"><a href="#删除证书" class="headerlink" title="删除证书"></a>删除证书</h3><p>完整版的卸磨杀驴，在<code>设置</code>-<code>通用</code>-<code>VPN与设备管理</code>中找到Strom Sniffer，然后点击<code>移除描述文件</code>即可<br><img data-src="https://s2.loli.net/2022/07/16/a2xYhHBvwlbtC3j.webp" alt="卸磨杀驴.webp"></p>
+
+</details>
+
+<h1 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h1><p>抓包之前需要先卸载并重装要抓包的APP，因为广告文件已经在APP缓存里了，而APP里面所谓的清除缓存功能并不会清除广告的缓存。在启动的时候APP会直接调用已经缓存下来的广告，而不会向广告下载服务器发出请求，不发出请求我们就抓不到广告服务器的域名，自然也不能屏蔽它们了。</p>
+<p>首先打开Storm Sniffer的<code>开启抓包</code>开关，然后启动要抓包的APP，第一次启动可能不会弹出广告，多清理后台试几次，广告加载出来后就可以回到Storm Sniffer，关掉<code>开启抓包</code>开关，然后在列表中寻找长得像广告的域名，图片形式的广告比较好找，Storm Sniffer会显示图片预览，视频形式的就得慢慢找了。找到后在Storm Sniffer中点击请求的HOST，选择复制Value就可以复制域名了<br><img data-src="https://s2.loli.net/2022/07/16/CIKLhiQevwGxTfB.webp" alt="抓包.webp"></p>
+<h1 id="添加规则"><a href="#添加规则" class="headerlink" title="添加规则"></a>添加规则</h1><p>打开Shadowrocket的<code>配置</code>，打开刚才导入的规则，点击右上角的加号添加新的规则，类型一般不用改，策略设置为<code>REJECT</code>，然后粘贴刚才抓到的域名并保存。<br><img data-src="https://s2.loli.net/2022/07/16/tU9xOiNgpS3m4LW.webp" alt="添加自定义规则.webp"></p>
+<p>然后开启Shadowrocket的代理，再次重装刚才抓完的APP，清除掉广告的缓存，就可以正常使用了。</p>
+<details class="note primary"><summary><p>规则类型</p>
+</summary>
+<h2 id="规则类型"><a href="#规则类型" class="headerlink" title="规则类型"></a>规则类型</h2><p>一些常用规则类型说明</p>
+<ul>
+<li>DOMAIN：域名匹配</li>
+<li>DOMAIN-SUFFIX：域名后缀匹配</li>
+<li>DOMAIN-KEYWORD：域名关键字匹配</li>
+<li>IP-CIDR：IP 段匹配</li>
+<li>GEOIP：GEOIP 数据库（国家代码）匹配</li>
+<li>DST-PORT：目标端口匹配</li>
+<li>FINAL：剩余网站</li>
+</ul>
+
+</details>
+
+<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>国内的APP为了投放广告可谓费尽心机，APP的广告域名可能会更换，虽然频率不高，但是每次更换我们都需要重装APP并重新抓包，比较麻烦。不过一旦屏蔽完成，就再也不用忍受每次5秒的开屏广告，APP启动都是秒开，而且也不用担心开屏广告跳出来某些晦气玩意儿的大脸，还是很值的。另外附上微博国际版的域名屏蔽列表</p>
+<details class="note success"><summary><p>微博国际版域名屏蔽列表</p>
+</summary>
+<ul>
+<li>sdk.e.qq.com</li>
+<li>mazu.m.qq.com</li>
+<li>adimg.uve.weibo.com</li>
+<li>tqt.weibo.cn</li>
+<li>miaozhen.com</li>
+<li>sdkapp.uve.weibo.com</li>
+<li>sdkmonitor.biz.weibo.com</li>
+<li>h.trace.qq.com</li>
+<li>cgi.connect.qq.com</li>
+<li>gdtimg.com</li>
+<li>umengcloud.com</li>
+<li>adstrategy.biz.weibo.com</li>
+</ul>
+
+</details>
+
+<div class="note danger"><ul>
+<li>切记不要在关闭代理的情况下启动这个APP！不然广告又会被缓存下来，就得再重装一次了。</li>
+<li>建议禁止这些APP的后台刷新，iOS的消息推送机制不需要它们后台刷新，禁止也不会耽误消息。毕竟代理APP不一定稳定，万一代理掉了这些APP就可能在后台缓存广告了</li>
+</ul>
+</div>]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>广告屏蔽</tag>
+        <tag>ShadowRocket</tag>
+        <tag>抓包</tag>
       </tags>
   </entry>
   <entry>
@@ -6602,8 +6585,8 @@
 <p><img data-src="https://s2.loli.net/2023/10/06/9CUzAGhcZfNVlLS.webp" alt="Default Recipe.webp"></p>
 <p>搜索<code>latex recipe default</code>，调整<code>Latex-workshop &gt; Latex &gt; Recipe: Default</code>选项，我选择的是lastUsed</p>
 <ul>
-<li>first，配置文件中的第一个编译选项</li>
-<li>lastUsed，上次使用过的编译选项</li>
+<li><code>first</code>，配置文件中的第一个编译选项</li>
+<li><code>lastUsed</code>，上次使用过的编译选项</li>
 </ul>
 <h2 id="关闭报错弹窗"><a href="#关闭报错弹窗" class="headerlink" title="关闭报错弹窗"></a>关闭报错弹窗</h2><p>默认情况下，VSCode在编译失败是会在右下角弹出消息提醒，需要手动关闭，报错的信息在终端里都能看到，所以我就把它关掉了。</p>
 <p>搜索<code>latex message show</code>，取消勾选<code>Latex-workshop &gt; Message &gt; Error: Show</code>选项和<code>Latex-workshop &gt; Message &gt; Warning: Show</code>选项</p>
@@ -6627,58 +6610,6 @@
       <tags>
         <tag>软件</tag>
         <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>utools本地搜索结果显示不全的某种解决方案</title>
-    <url>/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">前几天发现utools的本地搜索只能加载出来约20条结果，滚动条拉到底部后不会加载新的搜索结果，而单独使用everything搜索结果正常。折腾了半天想起来调整过系统字体大小，去设置里将字体大小调回默认后问题解决</blockquote>
-
-<span id="more"></span>
-
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><div class="note success"><p>先上解决方案：<br>如果更改了屏幕缩放，就到<code>设置-系统-屏幕-自定义缩放</code>中取消自定义缩放，改用系统提供的缩放选项。<br>如果更改了系统字体大小，就到<code>辅助功能-文本大小</code>（win10中叫做轻松使用）中将文本大小调整为100&#x2F;125&#x2F;150等系统缩放中提供的值</p>
-</div>
-
-<p>下面的又是太长不看版</p>
-<h1 id="折腾过程记录"><a href="#折腾过程记录" class="headerlink" title="折腾过程记录"></a>折腾过程记录</h1><p>在折腾的过程中，我尝试过卸载重装utools及everything，清理注册表等操作，但是都没有卵用。尝试过安装wox和listary，但是都出现了和utools相同的问题，都是滚动条触底时页面内容不会自动加载。同时在utools本地搜索插件的评论区发现了几条有相同问题的评论，贴图如下：</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/kznj3rHmXQTe1vW.png" alt="评论区.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/9V4WyqmBiXL31ps.png" alt="另一种解决方案.png"></div></div></div>
-
-<p>评论区提到的拖动窗口边缘调整大小以及设置高DPI缩放的两种办法让我想起来好像刚改过系统的字体大小，于是跑回去将字体大小复位，一切都恢复了正常。<br><img data-src="https://s2.loli.net/2022/07/23/HaVnI7ZcKBGEDbl.jpg" alt="痴呆.jpg"></p>
-<h2 id="问题复现"><a href="#问题复现" class="headerlink" title="问题复现"></a>问题复现</h2><p>实在是很好奇为什么会这个样子，于是又去调整字体大小吗，复现了这个问题，其中字体大小为100（默认值）&#x2F;125&#x2F;150等25倍值时utools在触底后可以自动加载，其他值都不行。而这几个值也是屏幕缩放选项提供的几个预设值。于是我又去尝试了自定义缩放，发现也是这几个值可以，剩下的值都会出问题，这就很迷惑了。</p>
-<h2 id="触底加载机制"><a href="#触底加载机制" class="headerlink" title="触底加载机制"></a>触底加载机制</h2><p>utools是基于Electron和React构建的，而本地搜索使用的是滚动自动加载机制。在搜索React滚动加载的时候发现某些实现方式确实存在页面缩放时，判断是否触底的函数失效的问题。</p>
-<blockquote>
-<p>参考：<a href="https://www.shouxicto.com/article/1589.html">React之触底加载实现方式-3.7问题：页面缩放</a></p>
-</blockquote>
-<h2 id="解包尝试"><a href="#解包尝试" class="headerlink" title="解包尝试"></a>解包尝试</h2><p>为了找出时是何种原因，我解包了本地搜索插件的asar文件。utools的插件所在的位置为<code>C:\Users\[用户名]\AppData\Roaming\uTools\plugins</code>，而本地搜索文件由于内置了免安装版Everything，会单独列出来一个文件夹，此文件夹的名称和下面asar文件名称相对应，所以很好找。</p>
-<p>解包前使用npm全局安装asar包，命令为<code>npm install -g asar</code>，解包命令为<code>asar extract [需要解包的文件.asar] [解包路径]</code></p>
-<details class="note primary"><summary><p>asar文件格式</p>
-</summary>
-<h3 id="asar"><a href="#asar" class="headerlink" title="asar"></a>asar</h3><p>ASAR文件是一个归档文件，用于使用Electron（一个用于构建跨平台程序的开源库）为应用程序打包源代码。它以类似于.TAR存档的格式保存，其中包含在存档中的文件（如.HTML、.JS和.CSS文件）在不使用压缩的情况下连接在一起。<br>asar 属于无压缩类型的，也没有经过加密处理的，所有包含的文件的二进制数据都直接添加到 .asar 文件中，该文件头部包含一个 JSON 格式的字符串，记录其中包含的文件结构以及所有文件的起始位置以及文件长度。</p>
-<blockquote>
-<p>引用：<a href="https://fileinfo.cn/extension/asar">.ASAR 文件格式</a><br>引用：<a href="https://www.iguan7u.cn/2019/03/19/Electron-asar-%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/">Electron asar 格式详解</a></p>
-</blockquote>
-
-</details>
-
-<p>解包后找到index.js文件，使用<a href="https://tool.lu/js/">在线工具</a>美化，让它变成人类能够看懂的样子，然后。。。看懵了。。。三万多行没有注释的代码，前端只有菜狗水平的我根本看不懂。。。不过确实出现了<code>load scroll toggle</code>这几个关键词</p>
-<p><img data-src="https://s2.loli.net/2022/07/23/M1vH2GF8srOjbW5.jpg" alt="挠头.jpg"></p>
-<h2 id="不负责任的推断"><a href="#不负责任的推断" class="headerlink" title="不负责任的推断"></a>不负责任的推断</h2><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/o2AH6WfKIScvT1F.png" alt="100缩放.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/x2TVyXqu4WNlrQ9.png" alt="121缩放.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/OKe5lihyJQBXru3.png" alt="125缩放.png"></div></div></div>
-
-<p>上面三张图对应的文本字体大小分别是100、121、125，可以看到结果列表区域显示的条目并没有变，只是每一条所占的高度增加了。</p>
-<p>根据搜索到的几种滚动记载机制，我不负责任的推断（毕竟对前端不熟）。滚动加载机制的判断条件是<code>可视区高度 + 滚动距离 &gt;= 内容实际高度</code>。当系统缩放改变后，搜索结果每一列所占用的高度增加，<code>内容实际高度</code>发生改变，导致无法达成触发条件。</p>
-<h2 id="未解之谜"><a href="#未解之谜" class="headerlink" title="未解之谜"></a>未解之谜</h2><p>那么问题又来了，为啥125%和150%等缩放可以正常使用呢？查了半天也没找到啥有用的信息，那就摆烂吧</p>
-<p><img data-src="https://s2.loli.net/2022/07/23/ZM45HSNl7UjdbTY.gif" alt="摆烂.gif"></p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Win11</tag>
-        <tag>utools</tag>
-        <tag>滚动加载</tag>
-        <tag>Bug</tag>
-        <tag>React</tag>
-        <tag>缩放</tag>
       </tags>
   </entry>
   <entry>
@@ -6763,6 +6694,58 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>utools本地搜索结果显示不全的某种解决方案</title>
+    <url>/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">前几天发现utools的本地搜索只能加载出来约20条结果，滚动条拉到底部后不会加载新的搜索结果，而单独使用everything搜索结果正常。折腾了半天想起来调整过系统字体大小，去设置里将字体大小调回默认后问题解决</blockquote>
+
+<span id="more"></span>
+
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><div class="note success"><p>先上解决方案：<br>如果更改了屏幕缩放，就到<code>设置-系统-屏幕-自定义缩放</code>中取消自定义缩放，改用系统提供的缩放选项。<br>如果更改了系统字体大小，就到<code>辅助功能-文本大小</code>（win10中叫做轻松使用）中将文本大小调整为100&#x2F;125&#x2F;150等系统缩放中提供的值</p>
+</div>
+
+<p>下面的又是太长不看版</p>
+<h1 id="折腾过程记录"><a href="#折腾过程记录" class="headerlink" title="折腾过程记录"></a>折腾过程记录</h1><p>在折腾的过程中，我尝试过卸载重装utools及everything，清理注册表等操作，但是都没有卵用。尝试过安装wox和listary，但是都出现了和utools相同的问题，都是滚动条触底时页面内容不会自动加载。同时在utools本地搜索插件的评论区发现了几条有相同问题的评论，贴图如下：</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/kznj3rHmXQTe1vW.png" alt="评论区.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/9V4WyqmBiXL31ps.png" alt="另一种解决方案.png"></div></div></div>
+
+<p>评论区提到的拖动窗口边缘调整大小以及设置高DPI缩放的两种办法让我想起来好像刚改过系统的字体大小，于是跑回去将字体大小复位，一切都恢复了正常。<br><img data-src="https://s2.loli.net/2022/07/23/HaVnI7ZcKBGEDbl.jpg" alt="痴呆.jpg"></p>
+<h2 id="问题复现"><a href="#问题复现" class="headerlink" title="问题复现"></a>问题复现</h2><p>实在是很好奇为什么会这个样子，于是又去调整字体大小吗，复现了这个问题，其中字体大小为100（默认值）&#x2F;125&#x2F;150等25倍值时utools在触底后可以自动加载，其他值都不行。而这几个值也是屏幕缩放选项提供的几个预设值。于是我又去尝试了自定义缩放，发现也是这几个值可以，剩下的值都会出问题，这就很迷惑了。</p>
+<h2 id="触底加载机制"><a href="#触底加载机制" class="headerlink" title="触底加载机制"></a>触底加载机制</h2><p>utools是基于Electron和React构建的，而本地搜索使用的是滚动自动加载机制。在搜索React滚动加载的时候发现某些实现方式确实存在页面缩放时，判断是否触底的函数失效的问题。</p>
+<blockquote>
+<p>参考：<a href="https://www.shouxicto.com/article/1589.html">React之触底加载实现方式-3.7问题：页面缩放</a></p>
+</blockquote>
+<h2 id="解包尝试"><a href="#解包尝试" class="headerlink" title="解包尝试"></a>解包尝试</h2><p>为了找出时是何种原因，我解包了本地搜索插件的asar文件。utools的插件所在的位置为<code>C:\Users\[用户名]\AppData\Roaming\uTools\plugins</code>，而本地搜索文件由于内置了免安装版Everything，会单独列出来一个文件夹，此文件夹的名称和下面asar文件名称相对应，所以很好找。</p>
+<p>解包前使用npm全局安装asar包，命令为<code>npm install -g asar</code>，解包命令为<code>asar extract [需要解包的文件.asar] [解包路径]</code></p>
+<details class="note primary"><summary><p>asar文件格式</p>
+</summary>
+<h3 id="asar"><a href="#asar" class="headerlink" title="asar"></a>asar</h3><p>ASAR文件是一个归档文件，用于使用Electron（一个用于构建跨平台程序的开源库）为应用程序打包源代码。它以类似于.TAR存档的格式保存，其中包含在存档中的文件（如.HTML、.JS和.CSS文件）在不使用压缩的情况下连接在一起。<br>asar 属于无压缩类型的，也没有经过加密处理的，所有包含的文件的二进制数据都直接添加到 .asar 文件中，该文件头部包含一个 JSON 格式的字符串，记录其中包含的文件结构以及所有文件的起始位置以及文件长度。</p>
+<blockquote>
+<p>引用：<a href="https://fileinfo.cn/extension/asar">.ASAR 文件格式</a><br>引用：<a href="https://www.iguan7u.cn/2019/03/19/Electron-asar-%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/">Electron asar 格式详解</a></p>
+</blockquote>
+
+</details>
+
+<p>解包后找到index.js文件，使用<a href="https://tool.lu/js/">在线工具</a>美化，让它变成人类能够看懂的样子，然后。。。看懵了。。。三万多行没有注释的代码，前端只有菜狗水平的我根本看不懂。。。不过确实出现了<code>load scroll toggle</code>这几个关键词</p>
+<p><img data-src="https://s2.loli.net/2022/07/23/M1vH2GF8srOjbW5.jpg" alt="挠头.jpg"></p>
+<h2 id="不负责任的推断"><a href="#不负责任的推断" class="headerlink" title="不负责任的推断"></a>不负责任的推断</h2><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/o2AH6WfKIScvT1F.png" alt="100缩放.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/x2TVyXqu4WNlrQ9.png" alt="121缩放.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2022/07/23/OKe5lihyJQBXru3.png" alt="125缩放.png"></div></div></div>
+
+<p>上面三张图对应的文本字体大小分别是100、121、125，可以看到结果列表区域显示的条目并没有变，只是每一条所占的高度增加了。</p>
+<p>根据搜索到的几种滚动记载机制，我不负责任的推断（毕竟对前端不熟）。滚动加载机制的判断条件是<code>可视区高度 + 滚动距离 &gt;= 内容实际高度</code>。当系统缩放改变后，搜索结果每一列所占用的高度增加，<code>内容实际高度</code>发生改变，导致无法达成触发条件。</p>
+<h2 id="未解之谜"><a href="#未解之谜" class="headerlink" title="未解之谜"></a>未解之谜</h2><p>那么问题又来了，为啥125%和150%等缩放可以正常使用呢？查了半天也没找到啥有用的信息，那就摆烂吧</p>
+<p><img data-src="https://s2.loli.net/2022/07/23/ZM45HSNl7UjdbTY.gif" alt="摆烂.gif"></p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>utools</tag>
+        <tag>滚动加载</tag>
+        <tag>Bug</tag>
+        <tag>React</tag>
+        <tag>缩放</tag>
       </tags>
   </entry>
   <entry>
@@ -7196,8 +7179,8 @@
       </categories>
       <tags>
         <tag>Win10</tag>
-        <tag>软件</tag>
         <tag>Windows Terminal</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -8074,6 +8057,311 @@
       </tags>
   </entry>
   <entry>
+    <title>英国留学后续日志</title>
+    <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
+
+<span id="more"></span>
+
+<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
+<p>一般来说拿到offer之后就可以定房间了，比较想去的几个学校都可以先定上，订的越早越便宜，而且选择的空间也比较大。尽量找不需要押金的公寓，这样跑路的话直接找人转租或者取消就可以了。</p>
+<p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（图片来自某位不愿透露姓名的翟翟）</p>
+<p><img data-src="https://s2.loli.net/2022/05/13/UjZV4PTEzoOiKXk.jpg" alt="英国留学后续日志"></p>
+<p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
+<h1 id="换取Uncon"><a href="#换取Uncon" class="headerlink" title="换取Uncon"></a>换取Uncon</h1><p>本科毕业之前大家的offer都是conditional offer，毕业后收集好缺少的材料并扫描成PDF，传到申请系统里去，就可以坐等发uncon了。我是6月24号上传到全部材料，7月7号在申请系统里查到了uncon，8号凌晨收到了邮件。一般毕业季换uncon的时间会长一些，因为换的人太多了。</p>
+<p>换uncon需要扫描上传的材料有</p>
+<ul>
+<li>毕业证原件</li>
+<li>学位证原件</li>
+<li>毕业证翻译件（自己翻译完盖学校的章就可以，不需要放照片）</li>
+<li>学位证翻译件（同上）</li>
+<li>包含所有课程的英文成绩单</li>
+<li>包含所有课程的中文成绩单（这个看具体学校，我在格拉只上传了英文的成绩单）</li>
+</ul>
+<p>下面是我用的毕业证与学位证的翻译件，格式没法调，需要word的康康百度云吧</p>
+<a class="btn" href="https://pan.baidu.com/s/1APNgOpkZaNnytagDF3rhYg"><i class="fa fa-arrow-right fa-fw"></i>密码uwbt</a>
+
+<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-pencil"></i>学士学位证书翻译</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-pencil"></i>毕业证书翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>学士学位证明翻译</strong></p>
+<p>Bachelor’s Degree Certificate</p>
+<p>This is to certify that XXX, male, born on June 26, 1997, has completed an undergraduate program in Architecture at XXXXX University and graduated. According to Regulations of the People’s Republic of China on Academic Degrees, he is awarded the degree of Bachelor of Science in Architecture.</p>
+<p>Chairman of Degree Evaluation Committee: Xxxxx Xxx      XXXXX University<br>Certificate No.: XXXXXXXXXXXXXX      June 18th, 2020</p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>毕业证书翻译</strong></p>
+<p>Graduation Certificate</p>
+<p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
+<p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
+
+<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明，抽到了会发邮件给你。</p>
+<ul>
+<li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑&#x2F;月，其他地区为1015镑&#x2F;月</li>
+<li>一般存定期并设置自动转存</li>
+<li>存满28天之后就可以在网上预约签证了</li>
+<li>然后在办理签证的前几天去银行开存款证明和流水，不用开太早，因为存款证明开具日期和网上签证预约日期的间隔不能超过31天</li>
+<li>英镑和人民币可以混存，总金额够了就行</li>
+<li>最好存在自己名下，存在父母名下需要多开具亲子关系证明以及授权使用资金的证明</li>
+<li>建议存在中农工建这类大行，不建议存在农村信用社一类的地方</li>
+<li>不能用理财产品代替</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/05/13/K2Eq8rUmZeNtBgY.png" alt="英国留学后续日志"></p>
+<h1 id="换汇"><a href="#换汇" class="headerlink" title="换汇"></a>换汇</h1><p>在去英国之前建议提前换好英镑，在常用的银行换就可以，到英国办好当地银行卡后通过跨境汇款转过去。下面是一些情报</p>
+<ul>
+<li>购买英镑的时候分为<strong>现汇</strong>和<strong>现钞</strong>两个选项，现汇就是存在银行卡里的钱，现钞就是换取的纸币</li>
+<li>换汇一般就是购买英镑现汇存在银行卡里</li>
+<li>临行前可以换一部分现钞，供落地后应急用，不用太多，海关不允许携带5000美元以上的等值外币出境</li>
+<li>每人每年的换汇额度是5万美元</li>
+<li>换汇的时候看的是<strong>购汇汇率</strong>而不是<strong>结汇汇率</strong>。购汇汇率是你向银行购买英镑的汇率，结汇汇率是你向银行出售英镑的汇率</li>
+<li>建议像我一样的贫困人口每天多看两眼汇率，万一英镑再跌到8.1呢</li>
+<li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
+<li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
+<li>换汇之后可以在手机银行APP上预约到银行网点去现钞，我取了1000英镑，小城市里只有50英镑的大额纸钞，大城市可能会换到5磅10磅这样的小面值</li>
+</ul>
+<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。</p>
+<ul>
+<li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china"><strong>签证官网</strong></a></li>
+<li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
+<li>需要提前预约，通常提前一或两个工作天预约即可</li>
+<li>预约方式有电话和邮件两种，部分医院（如济南出国移民体检中心）还可以在网站上预约</li>
+<li>无需空腹，正常饮食</li>
+<li>需要携带的材料<ul>
+<li>有效期半年以上的护照原件，不接受任何其他证件</li>
+<li>护照复印件一张</li>
+<li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
+</ul>
+</li>
+<li>流程很快，耗时约为半小时，换上衣服拍下胸片，然后医生询问下病史就结束了</li>
+<li>体检结果正常的话，上午体检下午可以出结果并发出证书，下午体检则需第二天早上才能发出证书。</li>
+<li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
+<li>证书有效期通常为六个月，特殊情况下为三个月</li>
+<li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
+<li>英国地址填自己的学校，懒的话可以不填，没什么影响</li>
+</ul>
+<p>下面是我10月13日在济南做肺结核的记录</p>
+<ul>
+<li>济南的肺结核检测在山医大三院的出国体检中心做，地址是天桥区无影山路38号，进门后右手边红屋顶的房子就是</li>
+<li>我是七点四十五到的，医院大门口会有保安测体温。</li>
+<li>我到的时候前面只有三个人。进入体检中心后出示身份证和健康码，然后在门口机器上取号</li>
+<li>取号后领两张表，再测一次体温，工作人员会把体温写在表的右上角，过程中有什么疑问随时可以问工作人员</li>
+<li>填完表等到八点半，拿着护照去拍照，拍完给一张黑白的照片</li>
+<li>拍完照出来等待叫号，叫到自己的号就拿着材料去最里面的服务台</li>
+<li>把护照原件、复印件、刚拍的黑白照片、两张小两寸白底照片（要在背面也上自己名字）、填写的两张表格交给工作人员</li>
+<li>然后会拍照，还有在一张表上签字</li>
+<li>然后付款，支付宝现金均可</li>
+<li>付完款后工作人员把护照原件还给你，并给一个手环，手环是开储物柜用的，上面有对应的柜子编号</li>
+<li>拿着手环去玻璃门那里刷脸进去，进去之后有工作人员引导你到更衣室并给一件蓝色的上衣</li>
+<li>把上衣首饰全部摘掉，穿上那件蓝色的衣服，只带着护照和手环出去</li>
+<li>工作人员会告诉你去哪个房间做检测，在机器上做一个类似叉腰的动作，双肩向上同时贴到机器上，然后工作人员会让深吸一口气憋住，然后等工作人员喊可以了就可以出来了</li>
+<li>出来之后回到更衣室把衣服换好，然后把蓝色上衣扔进门口的回收箱</li>
+<li>走廊里的工作人员会让你到另一侧的医生室，医生会问一些问题，比如有没有得过肺结核、有没有和结合病人有过接触</li>
+<li>然后摘口罩拍照</li>
+<li>然后出去找走廊里的小姐姐把你带出去</li>
+<li>出去之后回到大门口的前台把手环还回去就可以溜了</li>
+<li>工作人员说因为疫情的原因，第二天下午三点后才能取报告，但是实测当天下午四点半就可以拿到，可以打电话问一下</li>
+</ul>
+<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。所以这俩我就不打算做了</p>
+<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><h2 id="预约"><a href="#预约" class="headerlink" title="预约"></a>预约</h2><p>签证需要等CAS下来才能去办，CAS一般在入学前的3个月开始陆续发放，办理签证前需要在网上预约，最近学生签证也改名了，原来叫 Tier 4，现在直接叫 student visa。预约的时候建议挂全局代理，预约网站在国内的使用体验极差。</p>
+<a class="btn" href="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/sort/country-nationality?p=student_out_uk&_ga=2.246378372.1460787317.1603017805-1850455343.1600247708"><i class="fa fa-home fa-fw"></i>预约网址</a>
+
+<p>预约的步骤可以去看<a href="https://weibo.com/u/7305573611">@PhD威宇</a>的微博文章<a href="https://weibo.com/ttarticle/p/show?id=2309404537047783178301">保姆级手把手教你申请T4签证</a>，大佬写的非常详细，佩服大佬的耐心。T4和现在的 student visa 稍有出入，大体的步骤都是一样的。（我才不是因为懒不想写）</p>
+<p><strong>注意下载checklist</strong></p>
+<p>按照步骤交完签证申请费和IHS之后会跳转到VFS的网站上，这个网站是用来上传材料和预约递签日期地点用的，有一些增(keng)值(qian)服务可以选。这个网站深得学校教务选课系统的真传，同款土豆服务器，而且不挂全局代理基本没法用，挂了全局代理也会有各种各样的bug。</p>
+<p>Student visa 一般只有两个材料需要上传，checklist 会有说明</p>
+<ul>
+<li>护照信息页</li>
+<li>肺结核报告</li>
+</ul>
+<p>建议提前在网站上上传好材料，如果去签证中心现场上传的话会收取100块钱的扫描费用（奸商！）。</p>
+<p>另外一些签证中心（说的就是你济南，还有西安）还会收取服务费，大概500块钱，在VFS那个网站上交。</p>
+<p>预约的时候可以隔几个小时上去一次，看看有没有更早的位置。我一开始预约的是23号递签，后来刷出来了14号和16号的，就在网站上更改了预约时间，更改免费。</p>
+<p>预约好时间、传完材料、交完钱之后会发给你一个<code>Appointment Confirmation Notice</code>，记得打印出来带着</p>
+<h2 id="递签"><a href="#递签" class="headerlink" title="递签"></a>递签</h2><p>我最终去递签的时候只带了下面几个材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist</li>
+<li>Appointment Confirmation Notice</li>
+<li>肺结核报告原件</li>
+</ul>
+<p>最后工作人员收走了这些材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist 的第一页</li>
+<li>Appointment Confirmation Notice</li>
+</ul>
+<p>下面是我在济南递签的流程，我是12:13进去的，12:25就出来了</p>
+<ul>
+<li>济南签证中心地址在济南市历下区经十路11890号北京银行5楼</li>
+<li>从北京银行大厦的南门进，进去后在右手边向保安大叔出示健康码并测量体温</li>
+<li>用微信扫描桌面立牌上的二维码，填写姓名手机号等个人信息进行登记</li>
+<li>做四号电梯（最里面右手边那个）上5楼</li>
+<li>出电梯后左手边可以看到工作人员在柜台前面，会问是不是来办签证，然后带你到签证中心门口，测量体温后经过安检门进入</li>
+<li>进入之后出示护照、checklist、notice这几个材料，然后工作人员会问姓名和出生日期，并给你一张号码纸</li>
+<li>进去等叫号，左手边有几排椅子，椅子前面的柱子上挂着电视，会显示叫号信息</li>
+<li>人少的话工作人员就让直接去柜台，去柜台交护照、checklist、notice</li>
+<li>工作人员会问你办不办加急，问护照是自取还是快递，快递的话会给你一张快递单填写，然后交现金80元，可以找零</li>
+<li>工作人员没有提起过短信服务，短信也确实没什么用</li>
+<li>等一会工作人员会把不要的材料都退给你，快递的会给一张EMS快递单回执</li>
+<li>再回去等叫号，叫到号去7号室拍照录指纹</li>
+<li>先会让你报一下姓名和出生日期，然后摘眼镜和口罩拍照</li>
+<li>然后采指纹，先是右手四个手指并排，然后左手四个手指，最后是两个大拇指一起</li>
+<li>结束之后会给你张回执，就可以走了</li>
+<li>回家默默等快递把护照寄回来</li>
+</ul>
+<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>机票我是在携程买的，也可以直接官网购买或者打电话购买</p>
+<p>机票最好早买，早买一般都很便宜。我亲眼见证了我的机票从4200元涨价到了5500元，现在涨到了15000元。我在5500的时候买入的，买入第二天晚上就涨到了15000。</p>
+<p>我们买的一般都是留学生机票，会有额外的行李额度，一般是两件不超过23kg的28寸托运行李和一件不超过20寸的手提行李，我一开始以为需要签证才能购买留学生机票，所以错过了4200的低价，其实买的时候完全不需要签证等证明材料。携程的要求是在飞机起飞前三天上传好签证、cas、offer、护照等证明材料就可以。能早买就早买吧。</p>
+<p>另外由于今年疫情的影响，有些飞机是不一定能飞的，没有经过民航局审批，但是他也在卖票，建议买票之前先查询一下。因为有些航空公司退票只给退代金券，就很坑。</p>
+<p>飞英国的机票除了去伦敦的，基本都要转机，转机机场一般有荷兰阿姆斯特丹、芬兰赫尔辛基、阿联酋迪拜、伦敦希思罗等。购票时看好是否是行李直挂，不是直挂的话转机的时候需要重新办理行李托运手续，麻烦且耗时，要留足充分的时间。</p>
+<p>此外如果飞到大学所在城市的机票很贵的话可以看一下飞往临近城市的机票，举个栗子，我是一开始打算从上海飞格拉斯哥，但是去格拉斯哥的机票已经都在一万多了，然鹅去爱丁堡的机票只有五千多，所以我就买了去爱宝的机票，落地后再几个人一起包车直接到格拉宿舍楼下，包车大概在100胖，三四个人一起分担也不贵。</p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>注册一般分为学术注册（Academic Registration）和财务注册（Financial Registration），学校会给提前发一封邮件告诉你注册的网址、用户名和密码，记得修改自己的密码。</p>
+<h2 id="学术注册"><a href="#学术注册" class="headerlink" title="学术注册"></a>学术注册</h2><p>这里以格拉为例，学术注册包含以下内容</p>
+<ul>
+<li>确认课程信息</li>
+<li>确认姓名、性别、出生日期以及学生ID</li>
+<li>填写宗教信仰与国籍</li>
+<li>填写在英国的住址（Term Address）</li>
+<li>填写个人邮箱地址与电话号码</li>
+<li>是否有残疾</li>
+<li>添加紧急联系人</li>
+<li>填写 Statistical Information，就跟查户口一样，包括性取向、有没有孩子等问题</li>
+<li>上传照片，这个照片会用在学生证上，照片的标准和护照的一样</li>
+<li>上传护照ID页</li>
+</ul>
+<p>学术注册完成后就可以选课（Enroll）了</p>
+<h2 id="财务注册"><a href="#财务注册" class="headerlink" title="财务注册"></a>财务注册</h2><p>财务注册就是交学费，常见的方式有电汇、信用卡付款等，也有部分学校支持支付宝或银联卡支付。</p>
+<p>我用的方法是信用卡分期付款，部分学校对于全款付学费会有优惠折扣，然而格拉并没有。。。如果学校对全款支付学费没有优惠的话建议使用分期付款，毕竟能把暂时不用交的前放在英国的银行账户里吃利息，几万英镑产生的利息也不少的。</p>
+<p>我交学费的过程比较曲折。。。一开始我用的信用卡是建行的VISA卡，但是这张卡只能用人民币还款，我早买下的英镑不能拿来还款，所以果断办新卡。我先把建设银行账户里的英镑跨行转账到了中国银行的账户里，然后办了中国银行的卓隽英镑卡，可以直接用英镑还款。</p>
+<p>这张卡建议在中国银行的APP上申请，下卡非常快，我从申请到拿到卡只用了3天。注意申请的时候职业不要选择学生，直接选择待业，剩下的收入啥的胡乱写就行。咱也不知道为啥，这张卡明明是给留学生用的，但是选择学生身份申请的话大概率直接秒拒，很迷惑。另外不建议到网点去办理，工作人员对这类卡不太了解，而且办卡速度很慢，我还在微博上看到有人网点办英镑卡，结果拿到手是美元卡，没法用。</p>
+<p>我当时拿到的额度是1000英镑，少得可怜，而格拉分期付款的第一笔款需要2933磅。如果不嫌麻烦的话可以分三次刷1000英镑，刷完一次就还款。然而我比较懒，就我直接向信用卡里转账了3000磅，一次划掉。</p>
+<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>我在国内买了很多杂七杂八的行李，也不知道行李箱里能不能装得下hhh</p>
+<p>下面只是我想到的行李，到时候不一定会全带</p>
+<h2 id="登机行李"><a href="#登机行李" class="headerlink" title="登机行李"></a>登机行李</h2><h3 id="文件证件类"><a href="#文件证件类" class="headerlink" title="文件证件类"></a>文件证件类</h3><ol>
+<li>护照</li>
+<li>与护照一起寄回来的BRP说明</li>
+<li>CAS</li>
+<li>租房合同</li>
+<li>语言成绩单</li>
+<li>学术成绩单</li>
+<li>毕业证学位证（记得把外面的壳子拔下来，壳子没用）</li>
+<li>证件照</li>
+<li>入境前48小时填写的那张表</li>
+<li>肺结核报告</li>
+</ol>
+<h3 id="现金卡片"><a href="#现金卡片" class="headerlink" title="现金卡片"></a>现金卡片</h3><ol>
+<li>银行卡</li>
+<li>英国手机卡</li>
+<li>卡针</li>
+<li>英镑现金</li>
+<li>签字笔</li>
+</ol>
+<h3 id="防疫物资（少量）"><a href="#防疫物资（少量）" class="headerlink" title="防疫物资（少量）"></a>防疫物资（少量）</h3><ol>
+<li>口罩</li>
+<li>一次性手套</li>
+<li>护目镜或面罩</li>
+</ol>
+<h3 id="电子产品"><a href="#电子产品" class="headerlink" title="电子产品"></a>电子产品</h3><ol>
+<li>手机</li>
+<li>充电宝</li>
+<li>相机</li>
+<li>电脑</li>
+<li>平板</li>
+<li>充电器</li>
+<li>数据线</li>
+<li>耳机</li>
+<li>多国旅行转换插头</li>
+</ol>
+<h3 id="葛优瘫用品"><a href="#葛优瘫用品" class="headerlink" title="葛优瘫用品"></a>葛优瘫用品</h3><ol>
+<li>拖鞋</li>
+<li>颈枕</li>
+<li>眼罩</li>
+<li>耳塞</li>
+<li>旅行洗漱包</li>
+<li>小零食</li>
+</ol>
+<h2 id="托运行李"><a href="#托运行李" class="headerlink" title="托运行李"></a>托运行李</h2><h3 id="药品防疫类"><a href="#药品防疫类" class="headerlink" title="药品防疫类"></a>药品防疫类</h3><ol>
+<li>口罩</li>
+<li>一次性手套</li>
+<li>面罩</li>
+<li>创可贴</li>
+<li>酒精棉片&#x2F;酒精湿巾</li>
+<li>感冒灵</li>
+<li>藿香正气胶囊</li>
+<li>西瓜霜</li>
+<li>甲硝锉</li>
+<li>诺氟沙星</li>
+<li>皮炎平</li>
+<li>红霉素软膏</li>
+<li>体温计&#x2F;测温枪</li>
+<li>个人日常用药</li>
+<li>紫外线杀毒灯</li>
+</ol>
+<h3 id="电子产品及配件"><a href="#电子产品及配件" class="headerlink" title="电子产品及配件"></a>电子产品及配件</h3><ol>
+<li>英标转换插头</li>
+<li>插排</li>
+<li>充电电池套装</li>
+<li>鼠标键盘</li>
+<li>剃须刀</li>
+<li>各种充电器</li>
+<li>耳机</li>
+<li>计算器</li>
+<li>移动硬盘</li>
+<li>U盘&#x2F;读卡器</li>
+<li>路由器</li>
+<li>手机壳</li>
+<li>钢化膜</li>
+<li>手机平板折叠支架</li>
+<li>笔记本电脑支架</li>
+<li>相机三脚架</li>
+<li>网线</li>
+<li>鼠标垫</li>
+</ol>
+<h3 id="生活用品及工具"><a href="#生活用品及工具" class="headerlink" title="生活用品及工具"></a>生活用品及工具</h3><ol>
+<li>指甲钳挖耳勺套装</li>
+<li>无痕挂钩</li>
+<li>肥皂盒</li>
+<li>零钱包</li>
+<li>筷子</li>
+<li>饭盒</li>
+<li>保温杯</li>
+<li>折叠盆</li>
+<li>吸盘花洒支架</li>
+<li>螺丝刀</li>
+<li>瑞士军刀&#x2F;多功能工具钳</li>
+<li>洗衣袋</li>
+<li>地漏防堵塞过滤网</li>
+<li>折叠衣架</li>
+<li>镊子</li>
+<li>折叠烧水壶</li>
+<li>烘鞋器</li>
+<li>台灯</li>
+<li>USB小风扇</li>
+<li>加湿器</li>
+<li>牙刷</li>
+</ol>
+<h3 id="衣物"><a href="#衣物" class="headerlink" title="衣物"></a>衣物</h3><ol>
+<li>冲锋衣</li>
+<li>内衣内裤</li>
+<li>袜子</li>
+<li>两三双鞋子</li>
+<li>卫衣</li>
+<li>外套</li>
+<li>羽绒服</li>
+<li>毛巾</li>
+</ol>
+<h3 id="行李箱配件"><a href="#行李箱配件" class="headerlink" title="行李箱配件"></a>行李箱配件</h3><p>主要是为了让自己的箱子更醒目，在转盘领行李的时候可以一眼看到，防止拿错</p>
+<ol>
+<li>彩色行李箱绑带</li>
+<li>行李挂牌</li>
+<li>行李箱套</li>
+</ol>
+<h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新，另开一个新的博文记录</p>
+]]></content>
+      <categories>
+        <category>留学</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>攻略</tag>
+        <tag>英国</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英国落地日记</title>
     <url>/%E8%8B%B1%E5%9B%BD%E8%90%BD%E5%9C%B0%E6%97%A5%E8%AE%B0.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">落地英国一个月的老鸽子又回来了~~~这可能又是一篇巨长的博文，打算记录下在英国这一年的生活，内含BRP、GP、银行卡等攻略，或许还能放个Vlog？（咕咕咕）</blockquote>
@@ -8598,367 +8886,6 @@ OFFICIAL
         <tag>留学</tag>
         <tag>攻略</tag>
         <tag>英国</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英国留学后续日志</title>
-    <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
-
-<span id="more"></span>
-
-<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
-<p>一般来说拿到offer之后就可以定房间了，比较想去的几个学校都可以先定上，订的越早越便宜，而且选择的空间也比较大。尽量找不需要押金的公寓，这样跑路的话直接找人转租或者取消就可以了。</p>
-<p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（图片来自某位不愿透露姓名的翟翟）</p>
-<p><img data-src="https://s2.loli.net/2022/05/13/UjZV4PTEzoOiKXk.jpg" alt="英国留学后续日志"></p>
-<p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
-<h1 id="换取Uncon"><a href="#换取Uncon" class="headerlink" title="换取Uncon"></a>换取Uncon</h1><p>本科毕业之前大家的offer都是conditional offer，毕业后收集好缺少的材料并扫描成PDF，传到申请系统里去，就可以坐等发uncon了。我是6月24号上传到全部材料，7月7号在申请系统里查到了uncon，8号凌晨收到了邮件。一般毕业季换uncon的时间会长一些，因为换的人太多了。</p>
-<p>换uncon需要扫描上传的材料有</p>
-<ul>
-<li>毕业证原件</li>
-<li>学位证原件</li>
-<li>毕业证翻译件（自己翻译完盖学校的章就可以，不需要放照片）</li>
-<li>学位证翻译件（同上）</li>
-<li>包含所有课程的英文成绩单</li>
-<li>包含所有课程的中文成绩单（这个看具体学校，我在格拉只上传了英文的成绩单）</li>
-</ul>
-<p>下面是我用的毕业证与学位证的翻译件，格式没法调，需要word的康康百度云吧</p>
-<a class="btn" href="https://pan.baidu.com/s/1APNgOpkZaNnytagDF3rhYg"><i class="fa fa-arrow-right fa-fw"></i>密码uwbt</a>
-
-<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-pencil"></i>学士学位证书翻译</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-pencil"></i>毕业证书翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>学士学位证明翻译</strong></p>
-<p>Bachelor’s Degree Certificate</p>
-<p>This is to certify that XXX, male, born on June 26, 1997, has completed an undergraduate program in Architecture at XXXXX University and graduated. According to Regulations of the People’s Republic of China on Academic Degrees, he is awarded the degree of Bachelor of Science in Architecture.</p>
-<p>Chairman of Degree Evaluation Committee: Xxxxx Xxx      XXXXX University<br>Certificate No.: XXXXXXXXXXXXXX      June 18th, 2020</p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>毕业证书翻译</strong></p>
-<p>Graduation Certificate</p>
-<p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
-<p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
-
-<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明，抽到了会发邮件给你。</p>
-<ul>
-<li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑&#x2F;月，其他地区为1015镑&#x2F;月</li>
-<li>一般存定期并设置自动转存</li>
-<li>存满28天之后就可以在网上预约签证了</li>
-<li>然后在办理签证的前几天去银行开存款证明和流水，不用开太早，因为存款证明开具日期和网上签证预约日期的间隔不能超过31天</li>
-<li>英镑和人民币可以混存，总金额够了就行</li>
-<li>最好存在自己名下，存在父母名下需要多开具亲子关系证明以及授权使用资金的证明</li>
-<li>建议存在中农工建这类大行，不建议存在农村信用社一类的地方</li>
-<li>不能用理财产品代替</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/05/13/K2Eq8rUmZeNtBgY.png" alt="英国留学后续日志"></p>
-<h1 id="换汇"><a href="#换汇" class="headerlink" title="换汇"></a>换汇</h1><p>在去英国之前建议提前换好英镑，在常用的银行换就可以，到英国办好当地银行卡后通过跨境汇款转过去。下面是一些情报</p>
-<ul>
-<li>购买英镑的时候分为<strong>现汇</strong>和<strong>现钞</strong>两个选项，现汇就是存在银行卡里的钱，现钞就是换取的纸币</li>
-<li>换汇一般就是购买英镑现汇存在银行卡里</li>
-<li>临行前可以换一部分现钞，供落地后应急用，不用太多，海关不允许携带5000美元以上的等值外币出境</li>
-<li>每人每年的换汇额度是5万美元</li>
-<li>换汇的时候看的是<strong>购汇汇率</strong>而不是<strong>结汇汇率</strong>。购汇汇率是你向银行购买英镑的汇率，结汇汇率是你向银行出售英镑的汇率</li>
-<li>建议像我一样的贫困人口每天多看两眼汇率，万一英镑再跌到8.1呢</li>
-<li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
-<li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
-<li>换汇之后可以在手机银行APP上预约到银行网点去现钞，我取了1000英镑，小城市里只有50英镑的大额纸钞，大城市可能会换到5磅10磅这样的小面值</li>
-</ul>
-<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。</p>
-<ul>
-<li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china"><strong>签证官网</strong></a></li>
-<li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
-<li>需要提前预约，通常提前一或两个工作天预约即可</li>
-<li>预约方式有电话和邮件两种，部分医院（如济南出国移民体检中心）还可以在网站上预约</li>
-<li>无需空腹，正常饮食</li>
-<li>需要携带的材料<ul>
-<li>有效期半年以上的护照原件，不接受任何其他证件</li>
-<li>护照复印件一张</li>
-<li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
-</ul>
-</li>
-<li>流程很快，耗时约为半小时，换上衣服拍下胸片，然后医生询问下病史就结束了</li>
-<li>体检结果正常的话，上午体检下午可以出结果并发出证书，下午体检则需第二天早上才能发出证书。</li>
-<li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
-<li>证书有效期通常为六个月，特殊情况下为三个月</li>
-<li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
-<li>英国地址填自己的学校，懒的话可以不填，没什么影响</li>
-</ul>
-<p>下面是我10月13日在济南做肺结核的记录</p>
-<ul>
-<li>济南的肺结核检测在山医大三院的出国体检中心做，地址是天桥区无影山路38号，进门后右手边红屋顶的房子就是</li>
-<li>我是七点四十五到的，医院大门口会有保安测体温。</li>
-<li>我到的时候前面只有三个人。进入体检中心后出示身份证和健康码，然后在门口机器上取号</li>
-<li>取号后领两张表，再测一次体温，工作人员会把体温写在表的右上角，过程中有什么疑问随时可以问工作人员</li>
-<li>填完表等到八点半，拿着护照去拍照，拍完给一张黑白的照片</li>
-<li>拍完照出来等待叫号，叫到自己的号就拿着材料去最里面的服务台</li>
-<li>把护照原件、复印件、刚拍的黑白照片、两张小两寸白底照片（要在背面也上自己名字）、填写的两张表格交给工作人员</li>
-<li>然后会拍照，还有在一张表上签字</li>
-<li>然后付款，支付宝现金均可</li>
-<li>付完款后工作人员把护照原件还给你，并给一个手环，手环是开储物柜用的，上面有对应的柜子编号</li>
-<li>拿着手环去玻璃门那里刷脸进去，进去之后有工作人员引导你到更衣室并给一件蓝色的上衣</li>
-<li>把上衣首饰全部摘掉，穿上那件蓝色的衣服，只带着护照和手环出去</li>
-<li>工作人员会告诉你去哪个房间做检测，在机器上做一个类似叉腰的动作，双肩向上同时贴到机器上，然后工作人员会让深吸一口气憋住，然后等工作人员喊可以了就可以出来了</li>
-<li>出来之后回到更衣室把衣服换好，然后把蓝色上衣扔进门口的回收箱</li>
-<li>走廊里的工作人员会让你到另一侧的医生室，医生会问一些问题，比如有没有得过肺结核、有没有和结合病人有过接触</li>
-<li>然后摘口罩拍照</li>
-<li>然后出去找走廊里的小姐姐把你带出去</li>
-<li>出去之后回到大门口的前台把手环还回去就可以溜了</li>
-<li>工作人员说因为疫情的原因，第二天下午三点后才能取报告，但是实测当天下午四点半就可以拿到，可以打电话问一下</li>
-</ul>
-<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。所以这俩我就不打算做了</p>
-<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><h2 id="预约"><a href="#预约" class="headerlink" title="预约"></a>预约</h2><p>签证需要等CAS下来才能去办，CAS一般在入学前的3个月开始陆续发放，办理签证前需要在网上预约，最近学生签证也改名了，原来叫 Tier 4，现在直接叫 student visa。预约的时候建议挂全局代理，预约网站在国内的使用体验极差。</p>
-<a class="btn" href="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/sort/country-nationality?p=student_out_uk&_ga=2.246378372.1460787317.1603017805-1850455343.1600247708"><i class="fa fa-home fa-fw"></i>预约网址</a>
-
-<p>预约的步骤可以去看<a href="https://weibo.com/u/7305573611">@PhD威宇</a>的微博文章<a href="https://weibo.com/ttarticle/p/show?id=2309404537047783178301">保姆级手把手教你申请T4签证</a>，大佬写的非常详细，佩服大佬的耐心。T4和现在的 student visa 稍有出入，大体的步骤都是一样的。（我才不是因为懒不想写）</p>
-<p><strong>注意下载checklist</strong></p>
-<p>按照步骤交完签证申请费和IHS之后会跳转到VFS的网站上，这个网站是用来上传材料和预约递签日期地点用的，有一些增(keng)值(qian)服务可以选。这个网站深得学校教务选课系统的真传，同款土豆服务器，而且不挂全局代理基本没法用，挂了全局代理也会有各种各样的bug。</p>
-<p>Student visa 一般只有两个材料需要上传，checklist 会有说明</p>
-<ul>
-<li>护照信息页</li>
-<li>肺结核报告</li>
-</ul>
-<p>建议提前在网站上上传好材料，如果去签证中心现场上传的话会收取100块钱的扫描费用（奸商！）。</p>
-<p>另外一些签证中心（说的就是你济南，还有西安）还会收取服务费，大概500块钱，在VFS那个网站上交。</p>
-<p>预约的时候可以隔几个小时上去一次，看看有没有更早的位置。我一开始预约的是23号递签，后来刷出来了14号和16号的，就在网站上更改了预约时间，更改免费。</p>
-<p>预约好时间、传完材料、交完钱之后会发给你一个<code>Appointment Confirmation Notice</code>，记得打印出来带着</p>
-<h2 id="递签"><a href="#递签" class="headerlink" title="递签"></a>递签</h2><p>我最终去递签的时候只带了下面几个材料</p>
-<ul>
-<li>护照原件</li>
-<li>checklist</li>
-<li>Appointment Confirmation Notice</li>
-<li>肺结核报告原件</li>
-</ul>
-<p>最后工作人员收走了这些材料</p>
-<ul>
-<li>护照原件</li>
-<li>checklist 的第一页</li>
-<li>Appointment Confirmation Notice</li>
-</ul>
-<p>下面是我在济南递签的流程，我是12:13进去的，12:25就出来了</p>
-<ul>
-<li>济南签证中心地址在济南市历下区经十路11890号北京银行5楼</li>
-<li>从北京银行大厦的南门进，进去后在右手边向保安大叔出示健康码并测量体温</li>
-<li>用微信扫描桌面立牌上的二维码，填写姓名手机号等个人信息进行登记</li>
-<li>做四号电梯（最里面右手边那个）上5楼</li>
-<li>出电梯后左手边可以看到工作人员在柜台前面，会问是不是来办签证，然后带你到签证中心门口，测量体温后经过安检门进入</li>
-<li>进入之后出示护照、checklist、notice这几个材料，然后工作人员会问姓名和出生日期，并给你一张号码纸</li>
-<li>进去等叫号，左手边有几排椅子，椅子前面的柱子上挂着电视，会显示叫号信息</li>
-<li>人少的话工作人员就让直接去柜台，去柜台交护照、checklist、notice</li>
-<li>工作人员会问你办不办加急，问护照是自取还是快递，快递的话会给你一张快递单填写，然后交现金80元，可以找零</li>
-<li>工作人员没有提起过短信服务，短信也确实没什么用</li>
-<li>等一会工作人员会把不要的材料都退给你，快递的会给一张EMS快递单回执</li>
-<li>再回去等叫号，叫到号去7号室拍照录指纹</li>
-<li>先会让你报一下姓名和出生日期，然后摘眼镜和口罩拍照</li>
-<li>然后采指纹，先是右手四个手指并排，然后左手四个手指，最后是两个大拇指一起</li>
-<li>结束之后会给你张回执，就可以走了</li>
-<li>回家默默等快递把护照寄回来</li>
-</ul>
-<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>机票我是在携程买的，也可以直接官网购买或者打电话购买</p>
-<p>机票最好早买，早买一般都很便宜。我亲眼见证了我的机票从4200元涨价到了5500元，现在涨到了15000元。我在5500的时候买入的，买入第二天晚上就涨到了15000。</p>
-<p>我们买的一般都是留学生机票，会有额外的行李额度，一般是两件不超过23kg的28寸托运行李和一件不超过20寸的手提行李，我一开始以为需要签证才能购买留学生机票，所以错过了4200的低价，其实买的时候完全不需要签证等证明材料。携程的要求是在飞机起飞前三天上传好签证、cas、offer、护照等证明材料就可以。能早买就早买吧。</p>
-<p>另外由于今年疫情的影响，有些飞机是不一定能飞的，没有经过民航局审批，但是他也在卖票，建议买票之前先查询一下。因为有些航空公司退票只给退代金券，就很坑。</p>
-<p>飞英国的机票除了去伦敦的，基本都要转机，转机机场一般有荷兰阿姆斯特丹、芬兰赫尔辛基、阿联酋迪拜、伦敦希思罗等。购票时看好是否是行李直挂，不是直挂的话转机的时候需要重新办理行李托运手续，麻烦且耗时，要留足充分的时间。</p>
-<p>此外如果飞到大学所在城市的机票很贵的话可以看一下飞往临近城市的机票，举个栗子，我是一开始打算从上海飞格拉斯哥，但是去格拉斯哥的机票已经都在一万多了，然鹅去爱丁堡的机票只有五千多，所以我就买了去爱宝的机票，落地后再几个人一起包车直接到格拉宿舍楼下，包车大概在100胖，三四个人一起分担也不贵。</p>
-<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>注册一般分为学术注册（Academic Registration）和财务注册（Financial Registration），学校会给提前发一封邮件告诉你注册的网址、用户名和密码，记得修改自己的密码。</p>
-<h2 id="学术注册"><a href="#学术注册" class="headerlink" title="学术注册"></a>学术注册</h2><p>这里以格拉为例，学术注册包含以下内容</p>
-<ul>
-<li>确认课程信息</li>
-<li>确认姓名、性别、出生日期以及学生ID</li>
-<li>填写宗教信仰与国籍</li>
-<li>填写在英国的住址（Term Address）</li>
-<li>填写个人邮箱地址与电话号码</li>
-<li>是否有残疾</li>
-<li>添加紧急联系人</li>
-<li>填写 Statistical Information，就跟查户口一样，包括性取向、有没有孩子等问题</li>
-<li>上传照片，这个照片会用在学生证上，照片的标准和护照的一样</li>
-<li>上传护照ID页</li>
-</ul>
-<p>学术注册完成后就可以选课（Enroll）了</p>
-<h2 id="财务注册"><a href="#财务注册" class="headerlink" title="财务注册"></a>财务注册</h2><p>财务注册就是交学费，常见的方式有电汇、信用卡付款等，也有部分学校支持支付宝或银联卡支付。</p>
-<p>我用的方法是信用卡分期付款，部分学校对于全款付学费会有优惠折扣，然而格拉并没有。。。如果学校对全款支付学费没有优惠的话建议使用分期付款，毕竟能把暂时不用交的前放在英国的银行账户里吃利息，几万英镑产生的利息也不少的。</p>
-<p>我交学费的过程比较曲折。。。一开始我用的信用卡是建行的VISA卡，但是这张卡只能用人民币还款，我早买下的英镑不能拿来还款，所以果断办新卡。我先把建设银行账户里的英镑跨行转账到了中国银行的账户里，然后办了中国银行的卓隽英镑卡，可以直接用英镑还款。</p>
-<p>这张卡建议在中国银行的APP上申请，下卡非常快，我从申请到拿到卡只用了3天。注意申请的时候职业不要选择学生，直接选择待业，剩下的收入啥的胡乱写就行。咱也不知道为啥，这张卡明明是给留学生用的，但是选择学生身份申请的话大概率直接秒拒，很迷惑。另外不建议到网点去办理，工作人员对这类卡不太了解，而且办卡速度很慢，我还在微博上看到有人网点办英镑卡，结果拿到手是美元卡，没法用。</p>
-<p>我当时拿到的额度是1000英镑，少得可怜，而格拉分期付款的第一笔款需要2933磅。如果不嫌麻烦的话可以分三次刷1000英镑，刷完一次就还款。然而我比较懒，就我直接向信用卡里转账了3000磅，一次划掉。</p>
-<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>我在国内买了很多杂七杂八的行李，也不知道行李箱里能不能装得下hhh</p>
-<p>下面只是我想到的行李，到时候不一定会全带</p>
-<h2 id="登机行李"><a href="#登机行李" class="headerlink" title="登机行李"></a>登机行李</h2><h3 id="文件证件类"><a href="#文件证件类" class="headerlink" title="文件证件类"></a>文件证件类</h3><ol>
-<li>护照</li>
-<li>与护照一起寄回来的BRP说明</li>
-<li>CAS</li>
-<li>租房合同</li>
-<li>语言成绩单</li>
-<li>学术成绩单</li>
-<li>毕业证学位证（记得把外面的壳子拔下来，壳子没用）</li>
-<li>证件照</li>
-<li>入境前48小时填写的那张表</li>
-<li>肺结核报告</li>
-</ol>
-<h3 id="现金卡片"><a href="#现金卡片" class="headerlink" title="现金卡片"></a>现金卡片</h3><ol>
-<li>银行卡</li>
-<li>英国手机卡</li>
-<li>卡针</li>
-<li>英镑现金</li>
-<li>签字笔</li>
-</ol>
-<h3 id="防疫物资（少量）"><a href="#防疫物资（少量）" class="headerlink" title="防疫物资（少量）"></a>防疫物资（少量）</h3><ol>
-<li>口罩</li>
-<li>一次性手套</li>
-<li>护目镜或面罩</li>
-</ol>
-<h3 id="电子产品"><a href="#电子产品" class="headerlink" title="电子产品"></a>电子产品</h3><ol>
-<li>手机</li>
-<li>充电宝</li>
-<li>相机</li>
-<li>电脑</li>
-<li>平板</li>
-<li>充电器</li>
-<li>数据线</li>
-<li>耳机</li>
-<li>多国旅行转换插头</li>
-</ol>
-<h3 id="葛优瘫用品"><a href="#葛优瘫用品" class="headerlink" title="葛优瘫用品"></a>葛优瘫用品</h3><ol>
-<li>拖鞋</li>
-<li>颈枕</li>
-<li>眼罩</li>
-<li>耳塞</li>
-<li>旅行洗漱包</li>
-<li>小零食</li>
-</ol>
-<h2 id="托运行李"><a href="#托运行李" class="headerlink" title="托运行李"></a>托运行李</h2><h3 id="药品防疫类"><a href="#药品防疫类" class="headerlink" title="药品防疫类"></a>药品防疫类</h3><ol>
-<li>口罩</li>
-<li>一次性手套</li>
-<li>面罩</li>
-<li>创可贴</li>
-<li>酒精棉片&#x2F;酒精湿巾</li>
-<li>感冒灵</li>
-<li>藿香正气胶囊</li>
-<li>西瓜霜</li>
-<li>甲硝锉</li>
-<li>诺氟沙星</li>
-<li>皮炎平</li>
-<li>红霉素软膏</li>
-<li>体温计&#x2F;测温枪</li>
-<li>个人日常用药</li>
-<li>紫外线杀毒灯</li>
-</ol>
-<h3 id="电子产品及配件"><a href="#电子产品及配件" class="headerlink" title="电子产品及配件"></a>电子产品及配件</h3><ol>
-<li>英标转换插头</li>
-<li>插排</li>
-<li>充电电池套装</li>
-<li>鼠标键盘</li>
-<li>剃须刀</li>
-<li>各种充电器</li>
-<li>耳机</li>
-<li>计算器</li>
-<li>移动硬盘</li>
-<li>U盘&#x2F;读卡器</li>
-<li>路由器</li>
-<li>手机壳</li>
-<li>钢化膜</li>
-<li>手机平板折叠支架</li>
-<li>笔记本电脑支架</li>
-<li>相机三脚架</li>
-<li>网线</li>
-<li>鼠标垫</li>
-</ol>
-<h3 id="生活用品及工具"><a href="#生活用品及工具" class="headerlink" title="生活用品及工具"></a>生活用品及工具</h3><ol>
-<li>指甲钳挖耳勺套装</li>
-<li>无痕挂钩</li>
-<li>肥皂盒</li>
-<li>零钱包</li>
-<li>筷子</li>
-<li>饭盒</li>
-<li>保温杯</li>
-<li>折叠盆</li>
-<li>吸盘花洒支架</li>
-<li>螺丝刀</li>
-<li>瑞士军刀&#x2F;多功能工具钳</li>
-<li>洗衣袋</li>
-<li>地漏防堵塞过滤网</li>
-<li>折叠衣架</li>
-<li>镊子</li>
-<li>折叠烧水壶</li>
-<li>烘鞋器</li>
-<li>台灯</li>
-<li>USB小风扇</li>
-<li>加湿器</li>
-<li>牙刷</li>
-</ol>
-<h3 id="衣物"><a href="#衣物" class="headerlink" title="衣物"></a>衣物</h3><ol>
-<li>冲锋衣</li>
-<li>内衣内裤</li>
-<li>袜子</li>
-<li>两三双鞋子</li>
-<li>卫衣</li>
-<li>外套</li>
-<li>羽绒服</li>
-<li>毛巾</li>
-</ol>
-<h3 id="行李箱配件"><a href="#行李箱配件" class="headerlink" title="行李箱配件"></a>行李箱配件</h3><p>主要是为了让自己的箱子更醒目，在转盘领行李的时候可以一眼看到，防止拿错</p>
-<ol>
-<li>彩色行李箱绑带</li>
-<li>行李挂牌</li>
-<li>行李箱套</li>
-</ol>
-<h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新，另开一个新的博文记录</p>
-]]></content>
-      <categories>
-        <category>留学</category>
-      </categories>
-      <tags>
-        <tag>留学</tag>
-        <tag>攻略</tag>
-        <tag>英国</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>荣耀 magic watch 表盘制作</title>
-    <url>/%E8%8D%A3%E8%80%80-magic-watch-%E8%A1%A8%E7%9B%98%E5%88%B6%E4%BD%9C.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">趁着还没开学给老爸的 Magic Watch 做了个表盘，甲方唯二的要求就是：字大+醒目</blockquote>
-
-<p><img data-src="https://s2.loli.net/2022/05/13/fswCopBAYqjnFKl.png" alt="icon"></p>
-<span id="more"></span>
-
-<div class="note danger"><p>提醒：此文写于2020年6月，一些内容已过时，请注意时效！</p>
-</div>
-
-<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>刚开始搜集材料的时候看见有人说表盘要<strong>手动</strong>编辑xml文件，这不是反人类吗。。。不过好在华为已经推出了表盘设计软件<code>HwWatchFaceDesigner</code>，整个设计过程就和用<code>PhotoShop</code>P图一样<br>首先到华为的网站去下载<code>华为手表表盘开发工具</code>并解压，然后打开<code>HwWatchFaceDesigner.exe</code></p>
-<a class="btn" href="https://developer.huawei.com/consumer/cn/doc/5050601"><i class="fa fa-download fa-fw"></i>传送门</a>
-
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>在解压后的文件夹里有中英文的<code>用户手册</code>，路径是<code>.\document\用户手册.pdf</code>,也可以在<code>帮助</code>中点击<code>用户手册</code>。我就不再啰嗦了，只记录一些注意事项</p>
-<ul>
-<li><code>荣耀 Magic Watch</code>的分辨率是<code>390*390</code></li>
-<li>新建工程的时候<code>表盘效果图</code>先空着，设计完成之后再截图到PS里，导出不同分辨率的效果图</li>
-<li>图层最多25个</li>
-<li>一些位置固定的图标可以到最后在PS里和背景图合成为一张图片，节省图层</li>
-<li><code>星期</code>的<code>选图</code>里面第一张图是无效的，随便添加一张，从第二张图开始才是周一</li>
-<li><code>上午下午</code>的<code>选图</code>里面第三张图要找一张空白的png图</li>
-<li><code>撤销</code>不能使用<code>ctrl+z</code>的快捷键，只能点击上面菜单栏的返回图标，而且一经保存就不能再撤回</li>
-</ul>
-<h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><p>制作表盘需要用到各种png格式的图片素材，下面是我使用到的素材网站<br><a href="https://www.freepik.com/">freepik</a> - 背景图片素材，未注册的话每天有下载数量限制，注册的时候需要科学上网，因为需要用到谷歌的验证服务，注册完成后不需要<br><a href="https://webgradients.com/">webgradients</a> - 渐变色配色<br><a href="https://www.iconfinder.com/">iconfinder</a> - 图标素材，这个网站有在线编辑器，点开图片后有一个<code>Open in icon editor</code>，可以在线调整好素材的颜色，省下PS的过程</p>
-<p>部分素材是需要付费的，筛选的时候勾上<code>free</code>就好了</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>目前版本的<code>华为运动健康</code>软件是不能自定义添加表盘的，需要下载老版本，百度云自取</p>
-<a class="btn" href="https://pan.baidu.com/s/1Pg0lIOtRS3fmXG8kvMkNDA"><i class="fa fa-download fa-fw"></i>提取码: mpbm</a>
-
-<p>安装的具体操作步骤如下</p>
-<ul>
-<li>先将导出的<code>hwt</code>文件拷贝到手机</li>
-<li>成功连接设备后进入<code>表盘市场</code></li>
-<li>点击右上角的三个点</li>
-<li>进入<code>隐私声明</code></li>
-<li>撤销华为主题服务</li>
-<li>退出来再重新进入<code>表盘市场</code></li>
-<li>在弹出窗口中重新给华为主题服务授权</li>
-<li>再次点击右上角的三个点，会多出一个<code>添加表盘</code>选项</li>
-<li>点击后会询问你是否是开发者，点击<code>是</code></li>
-<li>找到拷贝进手机的<code>hwt</code>文件路径，点击确定并安装</li>
-</ul>
-<p>如果觉得这个表盘不满意需要卸载的话，还要重新安装最新版的<code>华为运动健康</code>，进入<code>表盘市场</code>中的<code>我的</code>里面删除，老版本的不能在表盘市场中删除自定义的表盘，这就很尴尬，所以。。。一定要设计好了检查好了再安装，要不这个过程可是太反人类了，手表安装表盘巨慢，1秒钟才安装百分之一。。。</p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>我做的表盘已经上传到我的Github了，源文件也一起上传了，有需要的自取</p>
-<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius"><i class="fa fa-download fa-fw"></i>源文件</a>
-
-<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius/releases/download/6.0/sirius_3.1.6.hwt"><i class="fa fa-download fa-fw"></i>表盘下载</a>]]></content>
-      <categories>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>表盘</tag>
-        <tag>荣耀 magic watch</tag>
       </tags>
   </entry>
   <entry>
@@ -9629,43 +9556,6 @@ OFFICIAL
       </tags>
   </entry>
   <entry>
-    <title>阿里云域名转出至NameSilo</title>
-    <url>/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">今天心血来潮，跑去查了一下自己域名的WHOIS信息，然后发现在阿里云注册的域名处于裸奔状态，姓名省份都能查到……查了一下发现阿里云在2018年就停止了WHOIS隐私保护，裸奔了三年我竟浑然不知，本着亡羊补牢的心态，再加上令人讨厌的实名认证，就决定把域名迁出阿里云了，迁出的过程也是被阿里云恶心坏了，本文吐槽预警</blockquote>
-
-<span id="more"></span>
-
-<h1 id="阿里云转出"><a href="#阿里云转出" class="headerlink" title="阿里云转出"></a>阿里云转出</h1><p>首先登陆<a class="btn" href="https://dc.console.aliyun.com/"><i class="fa fa-link fa-fw"></i>阿里云域名控制台</a>，点击要转移的域名，在跳转后的页面侧边栏里才会出现<code>域名转出</code>选项，转入倒是挺勤快的放在了首页上。这里为了方便区分，把域名控制台首页叫做<code>首页</code>，点击域名跳转后的页面叫做<code>域名管理页面</code><br><img data-src="https://s2.loli.net/2022/06/04/eGpfiLlvtWVKYUd.png" alt="域名转出"></p>
-<p>转出的时候需要核对邮箱+安全认证，我这里用foxmail，试了好几次都收不到阿里云的邮件，垃圾邮件里也没有，就要改邮箱。如果像我一样收不到邮件的话，恭喜，先撤销转出，重新开始吧。</p>
-<h2 id="更改邮箱"><a href="#更改邮箱" class="headerlink" title="更改邮箱"></a>更改邮箱</h2><p>改邮箱要到域名控制台的<code>信息模板</code>里改，<code>信息模板</code>在首页侧边栏。我是真的没想到模板还要实名认证，对你没看错，不是个人信息，是信息模板。如果不实名认证信息模版的话，信息模版前面的勾选框就不能用，也就无法更改邮箱。这里除了要验证更改的邮箱外，还得等审核，我用了几十分钟才通过审核。</p>
-<p>模板改完后要到域名管理页面的<code>域名持有者信息修改（过户）</code>进行<code>快速过户</code>才能更改域名绑定的邮箱。这里务必勾选<code>关闭“域名信息修改成功后60天内禁止转出阿里云”</code>。我真的不理解，改个邮箱能这么麻烦，而且自己转给自己还要审核，再等几十分钟。。。<br><img data-src="https://s2.loli.net/2022/06/04/6FMNoGQCEUThOwc.png" alt="更改邮箱"></p>
-<h2 id="接收密码"><a href="#接收密码" class="headerlink" title="接收密码"></a>接收密码</h2><p>都改完后就回到域名转出，重新进行邮箱核对+安全认证，看到下面的页面就可以到邮箱找阿里云发来的密码了<br><img data-src="https://s2.loli.net/2022/06/04/PR4bYylMVHf86jW.png" alt="发送转移码"></p>
-<h1 id="NameSilo转入"><a href="#NameSilo转入" class="headerlink" title="NameSilo转入"></a>NameSilo转入</h1><p>转入的域名注册商我选择了<a class="btn" href="https://www.namesilo.com/login"><i class="fa fa-link fa-fw"></i>NameSilo</a>，看中的是他价格便宜，续费和第一次注册的价格一样，还提供免费的隐私保护服务。我的<code>.top</code>域名是4.79美元一年，比阿里云贵不了几块钱。</p>
-<p>没注册的先注册个账号。然后在顶栏<code>Domains</code>的下拉菜单找到<code>Transfer a Domain</code>。然后在<code>Domain Transfer</code>里输入自己的域名，点右边的<code>Search</code><br><img data-src="https://s2.loli.net/2022/06/04/YKJL695WZuQfHvw.png" alt="转入NameSilo"></p>
-<p>然后把收到的转出密码粘贴进<code>Authorization Code</code>里，点下面的<code>Transfer Domains</code>。接下来会跳转到付款界面，在右边可以用优惠码，我用的是<code>vpsss</code>，可以优惠1美元。另外可以看到这里NameSilo赠送了免费的WHOIS隐私服务，裸奔状态解除，好耶！<br><img data-src="https://s2.loli.net/2022/06/04/q9Yzv8yQto2kLUE.png" alt="打钱"></p>
-<p>最后就是<code>checkout</code>交钱咯，付款方式支持支付宝</p>
-<h1 id="状态确认"><a href="#状态确认" class="headerlink" title="状态确认"></a>状态确认</h1><p>付款成功后会收到3封邮件</p>
-<ul>
-<li>第一封来自NameSilo，标题为Thank you for your order，说明你的钱已经到账了</li>
-<li>第二封也是NameSilo的，标题为Approved Domain Transfers，说明NameSilo已经通过了你的域名转移请求</li>
-<li>第三封来自阿里云，标题为阿里云域名转出通知邮件 Notice of Transfer-Out，说明阿里云也收到了域名转出的通知</li>
-</ul>
-<p>这时回到阿里云的转出页面，可以看到状态是“转出中”。<br><img data-src="https://s2.loli.net/2022/06/04/IpOedSaUN1Xg2rq.png" alt="阿里云状态确认"></p>
-<p>而NameSilo的Account Home Page会有一条提示：<code>You have transfers that are pending completion.</code>，然后进入<code>Transfer Manager</code>可以看到域名处于<code>Pending Transfers</code>的状态。<br><img data-src="https://s2.loli.net/2022/06/04/NZGF4eYkvP6LM1o.png" alt="NameSilo状态确认"></p>
-<p>确认完成后就默默等待域名转移完成咯，一般需要5-7天。</p>
-<p>现在再去WHOIS查询，隐私数据已经全部变成了REDACTED FOR PRIVACY，舒服<br><img data-src="https://s2.loli.net/2022/06/22/JYEFZWdSr5AHoqG.png" alt="WHOIS"></p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>阿里云</tag>
-        <tag>NameSilo</tag>
-        <tag>域名</tag>
-        <tag>WHOIS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>过气学长的碎碎念</title>
     <url>/%E8%BF%87%E6%B0%94%E5%AD%A6%E9%95%BF%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">交完毕设就想写，咕到了现在，主要给学弟学妹说一下大四大五的流程和注意事项，大四部分内容可能和实际有出入，年代久远记不清了</blockquote>
@@ -9729,6 +9619,99 @@ OFFICIAL
       </categories>
       <tags>
         <tag>建筑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>荣耀 magic watch 表盘制作</title>
+    <url>/%E8%8D%A3%E8%80%80-magic-watch-%E8%A1%A8%E7%9B%98%E5%88%B6%E4%BD%9C.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">趁着还没开学给老爸的 Magic Watch 做了个表盘，甲方唯二的要求就是：字大+醒目</blockquote>
+
+<p><img data-src="https://s2.loli.net/2022/05/13/fswCopBAYqjnFKl.png" alt="icon"></p>
+<span id="more"></span>
+
+<div class="note danger"><p>提醒：此文写于2020年6月，一些内容已过时，请注意时效！</p>
+</div>
+
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>刚开始搜集材料的时候看见有人说表盘要<strong>手动</strong>编辑xml文件，这不是反人类吗。。。不过好在华为已经推出了表盘设计软件<code>HwWatchFaceDesigner</code>，整个设计过程就和用<code>PhotoShop</code>P图一样<br>首先到华为的网站去下载<code>华为手表表盘开发工具</code>并解压，然后打开<code>HwWatchFaceDesigner.exe</code></p>
+<a class="btn" href="https://developer.huawei.com/consumer/cn/doc/5050601"><i class="fa fa-download fa-fw"></i>传送门</a>
+
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>在解压后的文件夹里有中英文的<code>用户手册</code>，路径是<code>.\document\用户手册.pdf</code>,也可以在<code>帮助</code>中点击<code>用户手册</code>。我就不再啰嗦了，只记录一些注意事项</p>
+<ul>
+<li><code>荣耀 Magic Watch</code>的分辨率是<code>390*390</code></li>
+<li>新建工程的时候<code>表盘效果图</code>先空着，设计完成之后再截图到PS里，导出不同分辨率的效果图</li>
+<li>图层最多25个</li>
+<li>一些位置固定的图标可以到最后在PS里和背景图合成为一张图片，节省图层</li>
+<li><code>星期</code>的<code>选图</code>里面第一张图是无效的，随便添加一张，从第二张图开始才是周一</li>
+<li><code>上午下午</code>的<code>选图</code>里面第三张图要找一张空白的png图</li>
+<li><code>撤销</code>不能使用<code>ctrl+z</code>的快捷键，只能点击上面菜单栏的返回图标，而且一经保存就不能再撤回</li>
+</ul>
+<h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><p>制作表盘需要用到各种png格式的图片素材，下面是我使用到的素材网站<br><a href="https://www.freepik.com/">freepik</a> - 背景图片素材，未注册的话每天有下载数量限制，注册的时候需要科学上网，因为需要用到谷歌的验证服务，注册完成后不需要<br><a href="https://webgradients.com/">webgradients</a> - 渐变色配色<br><a href="https://www.iconfinder.com/">iconfinder</a> - 图标素材，这个网站有在线编辑器，点开图片后有一个<code>Open in icon editor</code>，可以在线调整好素材的颜色，省下PS的过程</p>
+<p>部分素材是需要付费的，筛选的时候勾上<code>free</code>就好了</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>目前版本的<code>华为运动健康</code>软件是不能自定义添加表盘的，需要下载老版本，百度云自取</p>
+<a class="btn" href="https://pan.baidu.com/s/1Pg0lIOtRS3fmXG8kvMkNDA"><i class="fa fa-download fa-fw"></i>提取码: mpbm</a>
+
+<p>安装的具体操作步骤如下</p>
+<ul>
+<li>先将导出的<code>hwt</code>文件拷贝到手机</li>
+<li>成功连接设备后进入<code>表盘市场</code></li>
+<li>点击右上角的三个点</li>
+<li>进入<code>隐私声明</code></li>
+<li>撤销华为主题服务</li>
+<li>退出来再重新进入<code>表盘市场</code></li>
+<li>在弹出窗口中重新给华为主题服务授权</li>
+<li>再次点击右上角的三个点，会多出一个<code>添加表盘</code>选项</li>
+<li>点击后会询问你是否是开发者，点击<code>是</code></li>
+<li>找到拷贝进手机的<code>hwt</code>文件路径，点击确定并安装</li>
+</ul>
+<p>如果觉得这个表盘不满意需要卸载的话，还要重新安装最新版的<code>华为运动健康</code>，进入<code>表盘市场</code>中的<code>我的</code>里面删除，老版本的不能在表盘市场中删除自定义的表盘，这就很尴尬，所以。。。一定要设计好了检查好了再安装，要不这个过程可是太反人类了，手表安装表盘巨慢，1秒钟才安装百分之一。。。</p>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>我做的表盘已经上传到我的Github了，源文件也一起上传了，有需要的自取</p>
+<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius"><i class="fa fa-download fa-fw"></i>源文件</a>
+
+<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius/releases/download/6.0/sirius_3.1.6.hwt"><i class="fa fa-download fa-fw"></i>表盘下载</a>]]></content>
+      <categories>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>表盘</tag>
+        <tag>荣耀 magic watch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>阿里云域名转出至NameSilo</title>
+    <url>/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">今天心血来潮，跑去查了一下自己域名的WHOIS信息，然后发现在阿里云注册的域名处于裸奔状态，姓名省份都能查到……查了一下发现阿里云在2018年就停止了WHOIS隐私保护，裸奔了三年我竟浑然不知，本着亡羊补牢的心态，再加上令人讨厌的实名认证，就决定把域名迁出阿里云了，迁出的过程也是被阿里云恶心坏了，本文吐槽预警</blockquote>
+
+<span id="more"></span>
+
+<h1 id="阿里云转出"><a href="#阿里云转出" class="headerlink" title="阿里云转出"></a>阿里云转出</h1><p>首先登陆<a class="btn" href="https://dc.console.aliyun.com/"><i class="fa fa-link fa-fw"></i>阿里云域名控制台</a>，点击要转移的域名，在跳转后的页面侧边栏里才会出现<code>域名转出</code>选项，转入倒是挺勤快的放在了首页上。这里为了方便区分，把域名控制台首页叫做<code>首页</code>，点击域名跳转后的页面叫做<code>域名管理页面</code><br><img data-src="https://s2.loli.net/2022/06/04/eGpfiLlvtWVKYUd.png" alt="域名转出"></p>
+<p>转出的时候需要核对邮箱+安全认证，我这里用foxmail，试了好几次都收不到阿里云的邮件，垃圾邮件里也没有，就要改邮箱。如果像我一样收不到邮件的话，恭喜，先撤销转出，重新开始吧。</p>
+<h2 id="更改邮箱"><a href="#更改邮箱" class="headerlink" title="更改邮箱"></a>更改邮箱</h2><p>改邮箱要到域名控制台的<code>信息模板</code>里改，<code>信息模板</code>在首页侧边栏。我是真的没想到模板还要实名认证，对你没看错，不是个人信息，是信息模板。如果不实名认证信息模版的话，信息模版前面的勾选框就不能用，也就无法更改邮箱。这里除了要验证更改的邮箱外，还得等审核，我用了几十分钟才通过审核。</p>
+<p>模板改完后要到域名管理页面的<code>域名持有者信息修改（过户）</code>进行<code>快速过户</code>才能更改域名绑定的邮箱。这里务必勾选<code>关闭“域名信息修改成功后60天内禁止转出阿里云”</code>。我真的不理解，改个邮箱能这么麻烦，而且自己转给自己还要审核，再等几十分钟。。。<br><img data-src="https://s2.loli.net/2022/06/04/6FMNoGQCEUThOwc.png" alt="更改邮箱"></p>
+<h2 id="接收密码"><a href="#接收密码" class="headerlink" title="接收密码"></a>接收密码</h2><p>都改完后就回到域名转出，重新进行邮箱核对+安全认证，看到下面的页面就可以到邮箱找阿里云发来的密码了<br><img data-src="https://s2.loli.net/2022/06/04/PR4bYylMVHf86jW.png" alt="发送转移码"></p>
+<h1 id="NameSilo转入"><a href="#NameSilo转入" class="headerlink" title="NameSilo转入"></a>NameSilo转入</h1><p>转入的域名注册商我选择了<a class="btn" href="https://www.namesilo.com/login"><i class="fa fa-link fa-fw"></i>NameSilo</a>，看中的是他价格便宜，续费和第一次注册的价格一样，还提供免费的隐私保护服务。我的<code>.top</code>域名是4.79美元一年，比阿里云贵不了几块钱。</p>
+<p>没注册的先注册个账号。然后在顶栏<code>Domains</code>的下拉菜单找到<code>Transfer a Domain</code>。然后在<code>Domain Transfer</code>里输入自己的域名，点右边的<code>Search</code><br><img data-src="https://s2.loli.net/2022/06/04/YKJL695WZuQfHvw.png" alt="转入NameSilo"></p>
+<p>然后把收到的转出密码粘贴进<code>Authorization Code</code>里，点下面的<code>Transfer Domains</code>。接下来会跳转到付款界面，在右边可以用优惠码，我用的是<code>vpsss</code>，可以优惠1美元。另外可以看到这里NameSilo赠送了免费的WHOIS隐私服务，裸奔状态解除，好耶！<br><img data-src="https://s2.loli.net/2022/06/04/q9Yzv8yQto2kLUE.png" alt="打钱"></p>
+<p>最后就是<code>checkout</code>交钱咯，付款方式支持支付宝</p>
+<h1 id="状态确认"><a href="#状态确认" class="headerlink" title="状态确认"></a>状态确认</h1><p>付款成功后会收到3封邮件</p>
+<ul>
+<li>第一封来自NameSilo，标题为Thank you for your order，说明你的钱已经到账了</li>
+<li>第二封也是NameSilo的，标题为Approved Domain Transfers，说明NameSilo已经通过了你的域名转移请求</li>
+<li>第三封来自阿里云，标题为阿里云域名转出通知邮件 Notice of Transfer-Out，说明阿里云也收到了域名转出的通知</li>
+</ul>
+<p>这时回到阿里云的转出页面，可以看到状态是“转出中”。<br><img data-src="https://s2.loli.net/2022/06/04/IpOedSaUN1Xg2rq.png" alt="阿里云状态确认"></p>
+<p>而NameSilo的Account Home Page会有一条提示：<code>You have transfers that are pending completion.</code>，然后进入<code>Transfer Manager</code>可以看到域名处于<code>Pending Transfers</code>的状态。<br><img data-src="https://s2.loli.net/2022/06/04/NZGF4eYkvP6LM1o.png" alt="NameSilo状态确认"></p>
+<p>确认完成后就默默等待域名转移完成咯，一般需要5-7天。</p>
+<p>现在再去WHOIS查询，隐私数据已经全部变成了REDACTED FOR PRIVACY，舒服<br><img data-src="https://s2.loli.net/2022/06/22/JYEFZWdSr5AHoqG.png" alt="WHOIS"></p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>阿里云</tag>
+        <tag>NameSilo</tag>
+        <tag>域名</tag>
+        <tag>WHOIS</tag>
       </tags>
   </entry>
 </search>

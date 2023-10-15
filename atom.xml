@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sirius</title>
+  <icon>https://siriusq.top/icon.png</icon>
+  <subtitle>May the Force be with you</subtitle>
+  <link href="https://siriusq.top/atom.xml" rel="self"/>
+  
+  <link href="https://siriusq.top/"/>
+  <updated>2023-10-06T11:58:09.456Z</updated>
+  <id>https://siriusq.top/</id>
+  
+  <author>
+    <name>Sirius</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode LaTeX 快速配置指南</title>
+    <link href="https://siriusq.top/latex-vscode-quick-config.html"/>
+    <id>https://siriusq.top/latex-vscode-quick-config.html</id>
+    <published>2023-10-03T13:24:09.000Z</published>
+    <updated>2023-10-06T11:58:09.456Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;安装Tex环境并在VSCode中快速配置好LaTeX的方法记录&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+    <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="LaTeX" scheme="https://siriusq.top/tags/LaTeX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iPhone访问Windows共享文件夹</title>
+    <link href="https://siriusq.top/iOS-Windows-File-Share.html"/>
+    <id>https://siriusq.top/iOS-Windows-File-Share.html</id>
+    <published>2023-09-15T12:34:06.000Z</published>
+    <updated>2023-09-17T13:53:25.315Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="iOS" scheme="https://siriusq.top/tags/iOS/"/>
+    
+    <category term="共享文件" scheme="https://siriusq.top/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>群星 Mod 制作与上传日志</title>
+    <link href="https://siriusq.top/Stellaris-Mod.html"/>
+    <id>https://siriusq.top/Stellaris-Mod.html</id>
+    <published>2023-08-29T12:33:11.000Z</published>
+    <updated>2023-09-06T10:06:13.444Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;如何在不使用控制台的前提下成为一个合格的第四天灾&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Stellaris" scheme="https://siriusq.top/tags/Stellaris/"/>
+    
+    <category term="MOD" scheme="https://siriusq.top/tags/MOD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bongo Paw Clicker 开发记录</title>
+    <link href="https://siriusq.top/BongoPawClicker.html"/>
+    <id>https://siriusq.top/BongoPawClicker.html</id>
+    <published>2023-08-14T08:02:21.000Z</published>
+    <updated>2023-08-21T13:41:19.942Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;本文是Bongo Paw Clicker的开发记录，对我在开发鼠标连点器过程中遇到的问题进行了记录&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/08/21/NiZV537WgoJSdX8.webp&quot; alt=&quot;cn-preview.webp&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+    <category term="WPF" scheme="https://siriusq.top/tags/WPF/"/>
+    
+    <category term="Bongo Paw Clicker" scheme="https://siriusq.top/tags/Bongo-Paw-Clicker/"/>
+    
+    <category term="Log" scheme="https://siriusq.top/tags/Log/"/>
+    
+    <category term="C#" scheme="https://siriusq.top/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同时启用独显与核显</title>
+    <link href="https://siriusq.top/TurnOniGpu.html"/>
+    <id>https://siriusq.top/TurnOniGpu.html</id>
+    <published>2023-04-30T11:38:12.000Z</published>
+    <updated>2023-07-04T13:49:49.960Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;以普遍理性而论，插入独显后主板会自动屏蔽掉集显。虽然英特尔核心显卡的游戏性能很拉跨，但是它的视频编解码能力却强的离谱。像6500xt这种编码器被阉割的显卡在游戏中录屏、推流或者视频剪辑时就会产生明显的卡顿掉帧，此时调用核显就可以减轻独显与CPU的负担，获得更丝滑的体验。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="攻略" scheme="https://siriusq.top/tags/%E6%94%BB%E7%95%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacBook Pro 路易十六联名款</title>
+    <link href="https://siriusq.top/MacBookProHeadless.html"/>
+    <id>https://siriusq.top/MacBookProHeadless.html</id>
+    <published>2023-03-31T13:16:46.000Z</published>
+    <updated>2023-07-02T12:48:35.930Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;论如何用最少的钱买一台Mac&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg&quot; alt=&quot;MBPHeadless.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="MacBook Pro" scheme="https://siriusq.top/tags/MacBook-Pro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更改Adobe软件安装位置并禁止自动更新</title>
+    <link href="https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html"/>
+    <id>https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html</id>
+    <published>2022-12-18T09:52:26.000Z</published>
+    <updated>2023-03-20T02:54:50.042Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;因为最近换了张显卡，因为驱动问题被迫把练习时长两年半的系统重装了，因为C盘还是祖传的256G固态，Adobe的几个软件一上去就给用掉不少，看着很不爽，于是尝试更改了Adobe全家桶的安装位置，顺带屏蔽了全家桶的联网权限，防止它们自动更新。需要注意我安装的是cc2018，新版不一定适用&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
+    
+    <category term="Adobe" scheme="https://siriusq.top/tags/Adobe/"/>
+    
+    <category term="防火墙" scheme="https://siriusq.top/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+    <category term="脚本" scheme="https://siriusq.top/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>utools本地搜索结果显示不全的某种解决方案</title>
+    <link href="https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html"/>
+    <id>https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html</id>
+    <published>2022-07-23T03:41:49.000Z</published>
+    <updated>2022-07-23T10:16:55.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;前几天发现utools的本地搜索只能加载出来约20条结果，滚动条拉到底部后不会加载新的搜索结果，而单独使用everything搜索结果正常。折腾了半天想起来调整过系统字体大小，去设置里将字体大小调回默认后问题解决&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="utools" scheme="https://siriusq.top/tags/utools/"/>
+    
+    <category term="滚动加载" scheme="https://siriusq.top/tags/%E6%BB%9A%E5%8A%A8%E5%8A%A0%E8%BD%BD/"/>
+    
+    <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
+    
+    <category term="React" scheme="https://siriusq.top/tags/React/"/>
+    
+    <category term="缩放" scheme="https://siriusq.top/tags/%E7%BC%A9%E6%94%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows唤醒后窗口位移至左上角且尺寸缩小解决方案</title>
+    <link href="https://siriusq.top/Windows%E5%94%A4%E9%86%92%E5%90%8E%E7%AA%97%E5%8F%A3%E4%BD%8D%E7%A7%BB%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
+    <id>https://siriusq.top/Windows%E5%94%A4%E9%86%92%E5%90%8E%E7%AA%97%E5%8F%A3%E4%BD%8D%E7%A7%BB%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</id>
+    <published>2022-07-22T10:04:37.000Z</published>
+    <updated>2022-07-22T13:50:15.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;自从回家换回2k显示器，每次睡眠后唤醒时所有打开的窗口都会跑到左上角，而且尺寸变得只有原来的一半大，诡异的是这些窗口还是最大化状态，而本案的罪魁祸首就是DP的热插拔检测（Hot Plug Detection）&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
+    
+    <category term="DP" scheme="https://siriusq.top/tags/DP/"/>
+    
+    <category term="Hot Plug Detection" scheme="https://siriusq.top/tags/Hot-Plug-Detection/"/>
+    
+    <category term="热插拔检测" scheme="https://siriusq.top/tags/%E7%83%AD%E6%8F%92%E6%8B%94%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS屏蔽开屏广告</title>
+    <link href="https://siriusq.top/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html"/>
+    <id>https://siriusq.top/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</id>
+    <published>2022-07-13T16:01:39.000Z</published>
+    <updated>2022-07-16T10:16:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="iOS" scheme="https://siriusq.top/tags/iOS/"/>
+    
+    <category term="广告屏蔽" scheme="https://siriusq.top/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/"/>
+    
+    <category term="ShadowRocket" scheme="https://siriusq.top/tags/ShadowRocket/"/>
+    
+    <category term="抓包" scheme="https://siriusq.top/tags/%E6%8A%93%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clash for Windows:从入门到摆烂</title>
+    <link href="https://siriusq.top/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html"/>
+    <id>https://siriusq.top/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</id>
+    <published>2022-07-13T08:25:33.000Z</published>
+    <updated>2022-07-13T15:55:55.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Clash" scheme="https://siriusq.top/tags/Clash/"/>
+    
+    <category term="GFW" scheme="https://siriusq.top/tags/GFW/"/>
+    
+    <category term="Freedom" scheme="https://siriusq.top/tags/Freedom/"/>
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华硕AuraSync无法识别幻光戟解决方案</title>
+    <link href="https://siriusq.top/%E5%8D%8E%E7%A1%95AuraSync%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B9%BB%E5%85%89%E6%88%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
+    <id>https://siriusq.top/%E5%8D%8E%E7%A1%95AuraSync%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B9%BB%E5%85%89%E6%88%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</id>
+    <published>2022-07-10T11:34:43.000Z</published>
+    <updated>2022-12-18T09:48:05.461Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;本文又名为关于我手贱把 Armoury Crate 升级之后引发的一系列坑爹事件。下面有请本场主角华硕 B460-I GAMING 与两条幻光戟&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="华硕" scheme="https://siriusq.top/tags/%E5%8D%8E%E7%A1%95/"/>
+    
+    <category term="Aura Sync" scheme="https://siriusq.top/tags/Aura-Sync/"/>
+    
+    <category term="Armoury Crate" scheme="https://siriusq.top/tags/Armoury-Crate/"/>
+    
+    <category term="幻光戟" scheme="https://siriusq.top/tags/%E5%B9%BB%E5%85%89%E6%88%9F/"/>
+    
+    <category term="芝奇" scheme="https://siriusq.top/tags/%E8%8A%9D%E5%A5%87/"/>
+    
+    <category term="RGB" scheme="https://siriusq.top/tags/RGB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
+    <link href="https://siriusq.top/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html"/>
+    <id>https://siriusq.top/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</id>
+    <published>2022-06-11T13:00:07.000Z</published>
+    <updated>2022-06-12T14:41:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="GitHub Pages" scheme="https://siriusq.top/tags/GitHub-Pages/"/>
+    
+    <category term="Cloudflare" scheme="https://siriusq.top/tags/Cloudflare/"/>
+    
+    <category term="HTTPS" scheme="https://siriusq.top/tags/HTTPS/"/>
+    
+    <category term="CDN" scheme="https://siriusq.top/tags/CDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Next 8 双语切换</title>
+    <link href="https://siriusq.top/Hexo-Next-8-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html"/>
+    <id>https://siriusq.top/Hexo-Next-8-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html</id>
+    <published>2022-06-07T09:23:32.000Z</published>
+    <updated>2022-06-12T14:43:15.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;关于我终于想起我还有个英文站这件事🐶，离开了DeepL和Grammarly就是一只废狗的我，到现在也没写过几篇英语博客，导致原来很多中文页面切换到英文后都会404，而且一些国内专供的文章也没必要写英文版（嗯绝对不是因为我懒）。另外原来的方案需要中文和英文网站的markdown文件名相同，导致英语博文的URL也全是中文，对老外不友好（虽然也没人看🐶），于是就借着升级版本的机会把这个问题一起解决了。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
+    
+    <category term="i18n" scheme="https://siriusq.top/tags/i18n/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云域名转出至NameSilo</title>
+    <link href="https://siriusq.top/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html"/>
+    <id>https://siriusq.top/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html</id>
+    <published>2022-06-04T15:02:46.000Z</published>
+    <updated>2022-06-22T10:45:52.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;今天心血来潮，跑去查了一下自己域名的WHOIS信息，然后发现在阿里云注册的域名处于裸奔状态，姓名省份都能查到……查了一下发现阿里云在2018年就停止了WHOIS隐私保护，裸奔了三年我竟浑然不知，本着亡羊补牢的心态，再加上令人讨厌的实名认证，就决定把域名迁出阿里云了，迁出的过程也是被阿里云恶心坏了，本文吐槽预警&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="阿里云" scheme="https://siriusq.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+    <category term="NameSilo" scheme="https://siriusq.top/tags/NameSilo/"/>
+    
+    <category term="域名" scheme="https://siriusq.top/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+    <category term="WHOIS" scheme="https://siriusq.top/tags/WHOIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSA 折腾日志</title>
+    <link href="https://siriusq.top/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html"/>
+    <id>https://siriusq.top/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html</id>
+    <published>2022-06-02T08:04:48.000Z</published>
+    <updated>2022-06-02T15:46:58.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;记录WSA的安装、联网、设置代理以及安装应用的折腾过程&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
+    
+    <category term="Android" scheme="https://siriusq.top/tags/Android/"/>
+    
+    <category term="V2ray" scheme="https://siriusq.top/tags/V2ray/"/>
+    
+    <category term="Google Play" scheme="https://siriusq.top/tags/Google-Play/"/>
+    
+    <category term="Magisk" scheme="https://siriusq.top/tags/Magisk/"/>
+    
+    <category term="adb" scheme="https://siriusq.top/tags/adb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows Terminal 美化</title>
+    <link href="https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html"/>
+    <id>https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html</id>
+    <published>2022-05-26T15:40:47.000Z</published>
+    <updated>2023-08-12T12:04:27.688Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一个每天都要面对的东西，不好看会影响心情的🐶。（终于要把欠下的博文写完了，腹泻式更新结束咯）&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
+    
+    <category term="Windows Terminal" scheme="https://siriusq.top/tags/Windows-Terminal/"/>
+    
+    <category term="美化" scheme="https://siriusq.top/tags/%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 11 右键菜单改回 Windows 10 样式</title>
+    <link href="https://siriusq.top/Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%94%B9%E5%9B%9E-Windows-10-%E6%A0%B7%E5%BC%8F.html"/>
+    <id>https://siriusq.top/Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%94%B9%E5%9B%9E-Windows-10-%E6%A0%B7%E5%BC%8F.html</id>
+    <published>2022-05-26T14:58:05.000Z</published>
+    <updated>2022-05-26T15:35:43.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;巨硬迷惑操作之两级右键菜单，真该把提出这个需求的产品经理祭天，好在还能通过祖传注册表修改大法改回去&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
+    
+    <category term="右键菜单" scheme="https://siriusq.top/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/"/>
+    
+    <category term="注册表" scheme="https://siriusq.top/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm常用命令</title>
+    <link href="https://siriusq.top/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
+    <id>https://siriusq.top/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</id>
+    <published>2022-05-26T02:19:28.000Z</published>
+    <updated>2022-06-12T14:44:11.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;收集了一些npm的命令，以及主题升级时常用的命令&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
+    
+    <category term="npm" scheme="https://siriusq.top/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OneDrive同步本地任意文件夹</title>
+    <link href="https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html"/>
+    <id>https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</id>
+    <published>2022-05-25T04:17:43.000Z</published>
+    <updated>2022-05-25T15:01:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;使用mklink命令创建OneDrive与博客Markdown文件夹的符号链接，实现同步的目的&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
+    
+    <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
+    
+    <category term="mklink" scheme="https://siriusq.top/tags/mklink/"/>
+    
+  </entry>
+  
+</feed>
