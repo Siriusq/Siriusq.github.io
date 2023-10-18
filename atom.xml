@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2023-10-06T11:58:09.456Z</updated>
+  <updated>2023-10-18T14:37:37.327Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在基于GitHub Pages的博客更新时同步更新GitHub简介中的最近博文部分</title>
+    <link href="https://siriusq.top/auto-update-profile-latest-blog-posts.html"/>
+    <id>https://siriusq.top/auto-update-profile-latest-blog-posts.html</id>
+    <published>2023-10-17T09:10:55.000Z</published>
+    <updated>2023-10-18T14:37:37.327Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;仍在编辑中，预计19日完成......&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="GitHub Pages" scheme="https://siriusq.top/tags/GitHub-Pages/"/>
+    
+    <category term="GitHub Actions" scheme="https://siriusq.top/tags/GitHub-Actions/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode LaTeX 快速配置指南</title>
@@ -498,29 +521,6 @@
     <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
     
     <category term="npm" scheme="https://siriusq.top/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OneDrive同步本地任意文件夹</title>
-    <link href="https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html"/>
-    <id>https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</id>
-    <published>2022-05-25T04:17:43.000Z</published>
-    <updated>2022-05-25T15:01:48.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;使用mklink命令创建OneDrive与博客Markdown文件夹的符号链接，实现同步的目的&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
-    
-    <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
-    
-    <category term="mklink" scheme="https://siriusq.top/tags/mklink/"/>
     
   </entry>
   

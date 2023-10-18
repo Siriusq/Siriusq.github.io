@@ -1,189 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Clash for Windows:从入门到摆烂</title>
-    <url>/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录</blockquote>
-
-<span id="more"></span>
-
-<h1 id="Clash-for-Windows-下载"><a href="#Clash-for-Windows-下载" class="headerlink" title="Clash for Windows 下载"></a>Clash for Windows 下载</h1><p><strong>Clash</strong>是一个由Go语言开发的多平台代理客户端，支持VMess, Shadowsocks, Trojan等协议。而<strong>Clash for Windows</strong>就是Clash的一个图形客户端，虽然名字叫for Windows，它在Win、macOS和Linux上都能用🐶。更多信息请参阅<a href="https://docs.cfw.lbyczf.com/">Clash for Windows文档</a>。下载链接如下，Win系统下载<strong>Clash.for.Windows.Setup.x.xx.xx.exe</strong></p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>Clash for Windows</p><p>A Windows/macOS/Linux GUI based on Clash and Electron.</p>
-<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases"></a>
-</div></div>
-
-<h1 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h1><p>安装完打开，你会发现语言默认是英文，而且设置里不能更换语言，好在有大佬做了汉化补丁，链接如下</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>Clash_Chinese_Patch</p><p>此版本为Clash for Windows原版汉化页面</p>
-<a href="https://github.com/BoyceLig/Clash_Chinese_Patch/releases"></a>
-</div></div>
-
-<p>注意下载的汉化补丁版本要和Clash for Windows版本对应。先退出Clash，然后将解压得到的<code>app.asar</code>文件复制到Clash目录并替换原有文件，默认路径为<code>C:\Users\[你的用户名]\AppData\Local\Programs\Clash for Windows\resources</code></p>
-<p><img data-src="https://s2.loli.net/2022/07/13/79siOZ3pRkyKEmS.png" alt="汉化.png"></p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>在Clash中打开<code>配置</code>界面，可以看到已经存在一个名为<code>config.yaml</code>的基础配置文件，这是Clash的启动文件，一般不要改动这个文件，如果此文件有错，则 Clash 核心将无法启动。所以我们需要导入新的用户配置文件，这些文件可以不完整，通常只需要有：proxies&#x2F;proxy-groups&#x2F;rules三个字段组成即可。导入用户配置文件有两种方法：URL下载与本地文件导入。</p>
-<blockquote>
-<p>参考：<a href="https://docs.cfw.lbyczf.com/contents/configfile.html#%E6%A0%BC%E5%BC%8F">配置文件</a></p>
-</blockquote>
-<p><img data-src="https://s2.loli.net/2022/07/13/JMKrOELYRVu6P3c.png" alt="配置文件.png"></p>
-<h2 id="URL下载"><a href="#URL下载" class="headerlink" title="URL下载"></a>URL下载</h2><p>如果你的机场支持Clash的话就很简单了，把Clash链接粘贴到文本框然后点击下载就OK了。但是Just My Socks并没有Clash的订阅链接，强行下载的话只会得到一个没有卵用的<code>getsub.php</code>。想用订阅链接的话需要转换一下。</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>Subscription Converter</p><p>订阅链接在线转换</p>
-<a href="https://sub.ssplife.pw/"></a>
-</div></div>
-
-<p><img data-src="https://s2.loli.net/2022/07/13/o1kzIMctABQaGKE.png" alt="订阅链接转换.png"></p>
-<p>上面是我找到的一个在线转换工具，不过我担心隐私问题就没有用它，而是用了下面的本地文件导入，手动敲进去🐶</p>
-<div class="note success"><p>更：刚刚在GitHub新发现了一个转换工具，有兴趣的朋友可以尝试一下</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>convert2clash</p><p>解析ss/ssr/v2ray/clashR/clash订阅链接为Clash配置文件的自动化脚本</p>
-<a href="https://github.com/celetor/convert2clash"></a>
-</div></div>
-</div>
-
-<h2 id="本地文件导入"><a href="#本地文件导入" class="headerlink" title="本地文件导入"></a>本地文件导入</h2><p>这里我用Just My Socks为例，谷歌到了一个配置文件的模板，来源是<a href="https://v2xtls.org/">v2xtls</a>，下面两个链接都可以下载，第二个是我放在Google Drive里面的备份</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>模板文件</p><p>clash_jms2.yaml</p>
-<a href="https://v2xtls.org/clash_jms2.yaml"></a>
-</div><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>模板文件备份</p><p>clash_jms.yaml</p>
-<a href="https://drive.google.com/file/d/1YBokn9RvwS5LvEDDqN1NbENW4XcQ40hA/view?usp=sharing"></a>
-</div></div>
-
-<p>打开Just My Socks的Service Configuration，然后在配置模板文件中找到<code>proxies:</code>，根据Just My Socks服务器的配置修改</p>
-<ul>
-<li>proxies中的6个节点与Just My Socks的一一对应</li>
-<li>修改server、port、password、uuid等信息</li>
-<li>name不要改</li>
-<li>V2Ray的cipher建议设置为auto</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/07/13/TiXqeIQ6oW2acb9.png" alt="JSM 配置信息.png"><br><img data-src="https://s2.loli.net/2022/07/13/cuNnlEK4m2bUTxw.png" alt="本地文件配置.png"></p>
-<p>修改完成后保存并回到Clash，将模板导入或者直接拖拽到Clash的<code>配置</code>里，然后双击启用导入的配置。</p>
-<div class="note success"><p>下载的配置模板放在哪里都可以，导入之后也可以删掉。因为导入之后Clash会在<code>C:\Users\[你的用户名]\.config\clash\profiles</code>文件夹中生成对应的配置文件，命名格式为时间戳</p>
-</div>
-
-<details class="note primary"><summary><p>关于YAML文件</p>
-</summary>
-<h2 id="关于YAML文件"><a href="#关于YAML文件" class="headerlink" title="关于YAML文件"></a>关于YAML文件</h2><p>YAML 是 “YAML Ain’t a Markup Language”（YAML 不是一种标记语言）的递归缩写。在开发的这种语言时，YAML 的意思其实是：”Yet Another Markup Language”（仍是一种标记语言）。</p>
-<p>YAML 的语法和其他高级语言类似，并且可以简单表达清单、散列表，标量等数据形态。它使用空白符号缩进和大量依赖外观的特色，特别适合用来表达或编辑数据结构、各种配置文件、倾印调试内容、文件大纲（例如：许多电子邮件标题格式和YAML非常接近）。</p>
-<p>YAML 的配置文件后缀为<code>.yml</code>或者<code>.yaml</code>。</p>
-<p>基本语法</p>
-<ul>
-<li>大小写敏感</li>
-<li>使用缩进表示层级关系</li>
-<li>缩进不允许使用tab，只允许空格</li>
-<li>缩进的空格数不重要，只要相同层级的元素左对齐即可</li>
-<li>‘#’表示注释</li>
-</ul>
-<p>引用：<a href="https://www.runoob.com/w3cnote/yaml-intro.html">YAML 入门教程</a></p>
-
-</details>
-
-<h1 id="规则设置"><a href="#规则设置" class="headerlink" title="规则设置"></a>规则设置</h1><p>打开<code>代理</code>页面，可以看到有全局、规则、直连以及脚本四种模式，一般使用<code>规则</code>，相当于常用的PAC模式。代理页面主要的作用就是切换代理模式和切换节点。</p>
-<p>如果你使用的是上面的模板配置文件，那么在<code>规则</code>界面应该可以看到出现了很多规则，都是上面导入的模板文件中包含的，可以直接使用。</p>
-<ul>
-<li>在<code>PROXY</code>中选择要使用的节点</li>
-<li><code>Final</code>控制的是规则中未被收录的网址的连接模式，如果服务器流量和速度尚可的话，建议选择<code>PROXY</code>代理模式，避免一些网站打不开。为了节省流量的话就设置为<code>DIRECT</code>直连模式。</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/07/13/BaYPr2FuqWCm3Kp.png" alt="模板规则.png"></p>
-<details class="note warning"><summary><p>规则组成</p>
-</summary>
-<h2 id="规则组成"><a href="#规则组成" class="headerlink" title="规则组成"></a>规则组成</h2><p>一个代理规则主要由三部分组成：</p>
-<ul>
-<li>应用对象，包括完整域名(DOMAIN)、域名后缀(DOMAIN-SUFFIX)、域名关键字(DOMAIN-KEYWORD)、IP地址&#x2F;段(IP-CIDR)以及GEOIP；</li>
-<li>作用的IP或者域名；</li>
-<li>采取的规则，包括直连(DIRECT)、屏蔽(REJECT)，走某个代理组(上一步定义的PROXY、Apple等代理组)</li>
-</ul>
-<p>引用：<a href="https://ssrvps.org/archives/5718">深入理解Clash配置文件</a></p>
-
-</details>
-
-<details class="note primary"><summary><p>规则类型</p>
-</summary>
-<h2 id="规则类型"><a href="#规则类型" class="headerlink" title="规则类型"></a>规则类型</h2><p>目前 Clash 支持的规则类型如下：</p>
-<ul>
-<li>DOMAIN-SUFFIX：域名后缀匹配</li>
-<li>DOMAIN：域名匹配</li>
-<li>DOMAIN-KEYWORD：域名关键字匹配</li>
-<li>IP-CIDR：IP 段匹配</li>
-<li>SRC-IP-CIDR：源 IP 段匹配</li>
-<li>GEOIP：GEOIP 数据库（国家代码）匹配</li>
-<li>DST-PORT：目标端口匹配</li>
-<li>SRC-PORT：源端口匹配</li>
-<li>PROCESS-NAME：源进程名匹配</li>
-<li>RULE-SET：Rule Provider 规则匹配</li>
-<li>MATCH：全匹配</li>
-</ul>
-<p>另外模板文件最后的<code>cfw-bypass</code>控制的是需要绕过的IP和域名设置</p>
-<p>引用：<a href="https://docs.cfw.lbyczf.com/contents/ui/profiles/rules.html">规则编辑</a></p>
-
-</details>
-
-<details class="note success"><summary><p>策略组</p>
-</summary>
-<h2 id="策略组"><a href="#策略组" class="headerlink" title="策略组"></a>策略组</h2><p>策略组在这里指的是配置文件中的<code>proxy-groups</code>，策略组的作用，就是根据不同策略分发规则传递过来的请求。</p>
-<p>策略组有如下特性：</p>
-<ul>
-<li>可以包含节点或其他策略组</li>
-<li>具有多种不同的策略类型</li>
-<li>服务于规则</li>
-</ul>
-<p>所有策略组都是服务规则的，如果规则里没有直接或间接使用这个策略组，则策略组就是多余的。</p>
-<p>Clash内置了2个策略组，分别是<code>DIRECT</code>直连和<code>REJECT</code>拒绝</p>
-<ul>
-<li>DIRECT: 顾名思义，不进行代理，直接连接，适用于国内网站和未被墙的网站</li>
-<li>REJECT: 阻止请求进行，适用于屏蔽恶意网站等</li>
-</ul>
-<p>另外在模板文件中，我们还创建了<code>自动选择快速节点</code>、<code>PROXY</code>等策略组，可以在<code>代理</code>界面设置对应的策略。</p>
-<p>策略组类型包括<code>select</code>、<code>url-test</code>、<code>fallback</code>、<code>relay</code>以及<code>load-balance</code>，对应配置文件中的<code>type</code>。</p>
-<ul>
-<li>select 手动选择，在节点列表手动选择节点或策略组</li>
-<li>url-test 延迟测试，选择延迟低的节点</li>
-<li>fallback 可用性测试，按照节点顺序选择第一个可用节点</li>
-<li>load-balance 负载均衡，对同一 eTLD+1 的请求将使用相同的代理</li>
-<li>relay 转发中继，发送到此代理组的请求将依次通过指定的代理服务器进行中继。目前没有 UDP 对此的支持。指定的代理服务器不应包含其他中继。</li>
-</ul>
-<p>参考：<a href="https://github.com/Fndroid/jsbox_script/wiki/%E5%85%B3%E4%BA%8E%E7%AD%96%E7%95%A5%E7%BB%84%E7%9A%84%E7%90%86%E8%A7%A3">关于策略组的理解</a></p>
-
-</details>
-
-<h2 id="更多规则集"><a href="#更多规则集" class="headerlink" title="更多规则集"></a>更多规则集</h2><p>上面模板里的规则可以满足日常使用需求，但是缺点是不方便更新，好在GitHub上有大佬做了每天6：30更新的规则集，传送门如下</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>clash-rules</p><p>规则集（RULE-SET）</p>
-<a href="https://github.com/Loyalsoldier/clash-rules"></a>
-</div></div>
-
-<p>将<code>README</code>里面提供的rule-providers和rules添加到配置文件中即可，如果在上面的配置文件中直接修改的话建议删除原有的<code>rules</code>，注意保留<code>PROXY</code>策略组</p>
-<details class="note warning"><summary><p>配置文件不完整示例</p>
-</summary>
-<p>下面是配置文件策略组与规则部分的示例</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代理组策略</span></span><br><span class="line"><span class="comment"># 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md</span></span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># url-test 通过指定的 URL 测试并选择延迟最低的节点</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;自动选择快速节点&quot;</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">url-test</span></span><br><span class="line">  <span class="attr">proxies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s1&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s2&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s3&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s4&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s5&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s801&quot;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">&#x27;http://www.gstatic.com/generate_204&#x27;</span></span><br><span class="line">  <span class="attr">interval:</span> <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代理节点选择</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;PROXY&quot;</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">select</span></span><br><span class="line">  <span class="attr">proxies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;自动选择快速节点&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s1&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s2&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s3&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s4&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s5&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s801&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代理规则文件地址</span></span><br><span class="line"><span class="attr">rule-providers:</span></span><br><span class="line">  <span class="attr">reject:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/reject.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">icloud:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/icloud.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">apple:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/apple.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">google:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/google.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/proxy.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">direct:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/direct.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">private:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/private.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">gfw:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/gfw.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">greatfire:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/greatfire.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">tld-not-cn:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/tld-not-cn.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">telegramcidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/telegramcidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">cncidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/cncidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">lancidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/lancidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">applications:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">classical</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/applications.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 规则</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,applications,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN,clash.razord.top,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN,yacd.haishan.me,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,private,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,reject,REJECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,icloud,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,apple,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,google,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,proxy,PROXY</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,direct,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,lancidr,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,cncidr,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,telegramcidr,PROXY</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,LAN,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,CN,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">MATCH,PROXY</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Clash for Windows</span></span><br><span class="line"><span class="attr">cfw-bypass:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">qq.com</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">music.163.com</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&#x27;*.music.126.net&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localhost</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">127</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.16</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.17</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.18</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.19</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.20</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.21</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.22</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.23</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.24</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.25</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.26</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.27</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.28</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.29</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.30</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.31</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">192.168</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;local&gt;</span></span><br><span class="line"><span class="attr">cfw-latency-timeout:</span> <span class="number">5000</span></span><br></pre></td></tr></table></figure>
-
-</details>
-
-<p>启用这个配置后Clash的侧边栏会多出一个<code>服务商</code>，在这个页面就可以轻松的更新规则集了<br><img data-src="https://s2.loli.net/2022/07/13/3Au85hyxpItLDqo.png" alt="服务商.png"></p>
-<h1 id="Link-Start！"><a href="#Link-Start！" class="headerlink" title="Link Start！"></a>Link Start！</h1><p>配置完成后回到<code>常规</code>界面，开启<code>系统代理</code>就可以愉快的上网了~<br><img data-src="https://s2.loli.net/2022/07/13/8airctIXkeZQTBu.png" alt="系统代理.png"></p>
-<h1 id="UWP"><a href="#UWP" class="headerlink" title="UWP"></a>UWP</h1><p>巨硬出于安全考虑，在UWP应用中使用了沙盒机制，默认情况下无法访问回环地址（localhost)，导致应用商店等UWP应用无法走代理，需要用<code>EnableLoopback</code>程序进行修改。此程序已经内置在Clash for Windows 中，通过<code>常规</code>页面的<code>UWP应用网络回环</code>-<code>启动助手</code>打开，然后勾选需要解除限制的应用，并点击右上方的Save Changes保存。</p>
-<p><img data-src="https://s2.loli.net/2022/07/13/P6QzndhAIFsqtUe.png" alt="应用回环助手.png"><br><img data-src="https://s2.loli.net/2022/07/13/D7Eile6fbHWLVFK.png" alt="解除回环限制.png"></p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Clash</tag>
-        <tag>GFW</tag>
-        <tag>Freedom</tag>
-        <tag>Win11</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Bongo Paw Clicker 开发记录</title>
     <url>/BongoPawClicker.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">本文是Bongo Paw Clicker的开发记录，对我在开发鼠标连点器过程中遇到的问题进行了记录</blockquote>
@@ -749,6 +566,234 @@
       </tags>
   </entry>
   <entry>
+    <title>Clash for Windows:从入门到摆烂</title>
+    <url>/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录</blockquote>
+
+<span id="more"></span>
+
+<h1 id="Clash-for-Windows-下载"><a href="#Clash-for-Windows-下载" class="headerlink" title="Clash for Windows 下载"></a>Clash for Windows 下载</h1><p><strong>Clash</strong>是一个由Go语言开发的多平台代理客户端，支持VMess, Shadowsocks, Trojan等协议。而<strong>Clash for Windows</strong>就是Clash的一个图形客户端，虽然名字叫for Windows，它在Win、macOS和Linux上都能用🐶。更多信息请参阅<a href="https://docs.cfw.lbyczf.com/">Clash for Windows文档</a>。下载链接如下，Win系统下载<strong>Clash.for.Windows.Setup.x.xx.xx.exe</strong></p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>Clash for Windows</p><p>A Windows/macOS/Linux GUI based on Clash and Electron.</p>
+<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases"></a>
+</div></div>
+
+<h1 id="汉化"><a href="#汉化" class="headerlink" title="汉化"></a>汉化</h1><p>安装完打开，你会发现语言默认是英文，而且设置里不能更换语言，好在有大佬做了汉化补丁，链接如下</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>Clash_Chinese_Patch</p><p>此版本为Clash for Windows原版汉化页面</p>
+<a href="https://github.com/BoyceLig/Clash_Chinese_Patch/releases"></a>
+</div></div>
+
+<p>注意下载的汉化补丁版本要和Clash for Windows版本对应。先退出Clash，然后将解压得到的<code>app.asar</code>文件复制到Clash目录并替换原有文件，默认路径为<code>C:\Users\[你的用户名]\AppData\Local\Programs\Clash for Windows\resources</code></p>
+<p><img data-src="https://s2.loli.net/2022/07/13/79siOZ3pRkyKEmS.png" alt="汉化.png"></p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>在Clash中打开<code>配置</code>界面，可以看到已经存在一个名为<code>config.yaml</code>的基础配置文件，这是Clash的启动文件，一般不要改动这个文件，如果此文件有错，则 Clash 核心将无法启动。所以我们需要导入新的用户配置文件，这些文件可以不完整，通常只需要有：proxies&#x2F;proxy-groups&#x2F;rules三个字段组成即可。导入用户配置文件有两种方法：URL下载与本地文件导入。</p>
+<blockquote>
+<p>参考：<a href="https://docs.cfw.lbyczf.com/contents/configfile.html#%E6%A0%BC%E5%BC%8F">配置文件</a></p>
+</blockquote>
+<p><img data-src="https://s2.loli.net/2022/07/13/JMKrOELYRVu6P3c.png" alt="配置文件.png"></p>
+<h2 id="URL下载"><a href="#URL下载" class="headerlink" title="URL下载"></a>URL下载</h2><p>如果你的机场支持Clash的话就很简单了，把Clash链接粘贴到文本框然后点击下载就OK了。但是Just My Socks并没有Clash的订阅链接，强行下载的话只会得到一个没有卵用的<code>getsub.php</code>。想用订阅链接的话需要转换一下。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>Subscription Converter</p><p>订阅链接在线转换</p>
+<a href="https://sub.ssplife.pw/"></a>
+</div></div>
+
+<p><img data-src="https://s2.loli.net/2022/07/13/o1kzIMctABQaGKE.png" alt="订阅链接转换.png"></p>
+<p>上面是我找到的一个在线转换工具，不过我担心隐私问题就没有用它，而是用了下面的本地文件导入，手动敲进去🐶</p>
+<div class="note success"><p>更：刚刚在GitHub新发现了一个转换工具，有兴趣的朋友可以尝试一下</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>convert2clash</p><p>解析ss/ssr/v2ray/clashR/clash订阅链接为Clash配置文件的自动化脚本</p>
+<a href="https://github.com/celetor/convert2clash"></a>
+</div></div>
+</div>
+
+<h2 id="本地文件导入"><a href="#本地文件导入" class="headerlink" title="本地文件导入"></a>本地文件导入</h2><p>这里我用Just My Socks为例，谷歌到了一个配置文件的模板，来源是<a href="https://v2xtls.org/">v2xtls</a>，下面两个链接都可以下载，第二个是我放在Google Drive里面的备份</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>模板文件</p><p>clash_jms2.yaml</p>
+<a href="https://v2xtls.org/clash_jms2.yaml"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>模板文件备份</p><p>clash_jms.yaml</p>
+<a href="https://drive.google.com/file/d/1YBokn9RvwS5LvEDDqN1NbENW4XcQ40hA/view?usp=sharing"></a>
+</div></div>
+
+<p>打开Just My Socks的Service Configuration，然后在配置模板文件中找到<code>proxies:</code>，根据Just My Socks服务器的配置修改</p>
+<ul>
+<li>proxies中的6个节点与Just My Socks的一一对应</li>
+<li>修改server、port、password、uuid等信息</li>
+<li>name不要改</li>
+<li>V2Ray的cipher建议设置为auto</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/07/13/TiXqeIQ6oW2acb9.png" alt="JSM 配置信息.png"><br><img data-src="https://s2.loli.net/2022/07/13/cuNnlEK4m2bUTxw.png" alt="本地文件配置.png"></p>
+<p>修改完成后保存并回到Clash，将模板导入或者直接拖拽到Clash的<code>配置</code>里，然后双击启用导入的配置。</p>
+<div class="note success"><p>下载的配置模板放在哪里都可以，导入之后也可以删掉。因为导入之后Clash会在<code>C:\Users\[你的用户名]\.config\clash\profiles</code>文件夹中生成对应的配置文件，命名格式为时间戳</p>
+</div>
+
+<details class="note primary"><summary><p>关于YAML文件</p>
+</summary>
+<h2 id="关于YAML文件"><a href="#关于YAML文件" class="headerlink" title="关于YAML文件"></a>关于YAML文件</h2><p>YAML 是 “YAML Ain’t a Markup Language”（YAML 不是一种标记语言）的递归缩写。在开发的这种语言时，YAML 的意思其实是：”Yet Another Markup Language”（仍是一种标记语言）。</p>
+<p>YAML 的语法和其他高级语言类似，并且可以简单表达清单、散列表，标量等数据形态。它使用空白符号缩进和大量依赖外观的特色，特别适合用来表达或编辑数据结构、各种配置文件、倾印调试内容、文件大纲（例如：许多电子邮件标题格式和YAML非常接近）。</p>
+<p>YAML 的配置文件后缀为<code>.yml</code>或者<code>.yaml</code>。</p>
+<p>基本语法</p>
+<ul>
+<li>大小写敏感</li>
+<li>使用缩进表示层级关系</li>
+<li>缩进不允许使用tab，只允许空格</li>
+<li>缩进的空格数不重要，只要相同层级的元素左对齐即可</li>
+<li>‘#’表示注释</li>
+</ul>
+<p>引用：<a href="https://www.runoob.com/w3cnote/yaml-intro.html">YAML 入门教程</a></p>
+
+</details>
+
+<h1 id="规则设置"><a href="#规则设置" class="headerlink" title="规则设置"></a>规则设置</h1><p>打开<code>代理</code>页面，可以看到有全局、规则、直连以及脚本四种模式，一般使用<code>规则</code>，相当于常用的PAC模式。代理页面主要的作用就是切换代理模式和切换节点。</p>
+<p>如果你使用的是上面的模板配置文件，那么在<code>规则</code>界面应该可以看到出现了很多规则，都是上面导入的模板文件中包含的，可以直接使用。</p>
+<ul>
+<li>在<code>PROXY</code>中选择要使用的节点</li>
+<li><code>Final</code>控制的是规则中未被收录的网址的连接模式，如果服务器流量和速度尚可的话，建议选择<code>PROXY</code>代理模式，避免一些网站打不开。为了节省流量的话就设置为<code>DIRECT</code>直连模式。</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/07/13/BaYPr2FuqWCm3Kp.png" alt="模板规则.png"></p>
+<details class="note warning"><summary><p>规则组成</p>
+</summary>
+<h2 id="规则组成"><a href="#规则组成" class="headerlink" title="规则组成"></a>规则组成</h2><p>一个代理规则主要由三部分组成：</p>
+<ul>
+<li>应用对象，包括完整域名(DOMAIN)、域名后缀(DOMAIN-SUFFIX)、域名关键字(DOMAIN-KEYWORD)、IP地址&#x2F;段(IP-CIDR)以及GEOIP；</li>
+<li>作用的IP或者域名；</li>
+<li>采取的规则，包括直连(DIRECT)、屏蔽(REJECT)，走某个代理组(上一步定义的PROXY、Apple等代理组)</li>
+</ul>
+<p>引用：<a href="https://ssrvps.org/archives/5718">深入理解Clash配置文件</a></p>
+
+</details>
+
+<details class="note primary"><summary><p>规则类型</p>
+</summary>
+<h2 id="规则类型"><a href="#规则类型" class="headerlink" title="规则类型"></a>规则类型</h2><p>目前 Clash 支持的规则类型如下：</p>
+<ul>
+<li>DOMAIN-SUFFIX：域名后缀匹配</li>
+<li>DOMAIN：域名匹配</li>
+<li>DOMAIN-KEYWORD：域名关键字匹配</li>
+<li>IP-CIDR：IP 段匹配</li>
+<li>SRC-IP-CIDR：源 IP 段匹配</li>
+<li>GEOIP：GEOIP 数据库（国家代码）匹配</li>
+<li>DST-PORT：目标端口匹配</li>
+<li>SRC-PORT：源端口匹配</li>
+<li>PROCESS-NAME：源进程名匹配</li>
+<li>RULE-SET：Rule Provider 规则匹配</li>
+<li>MATCH：全匹配</li>
+</ul>
+<p>另外模板文件最后的<code>cfw-bypass</code>控制的是需要绕过的IP和域名设置</p>
+<p>引用：<a href="https://docs.cfw.lbyczf.com/contents/ui/profiles/rules.html">规则编辑</a></p>
+
+</details>
+
+<details class="note success"><summary><p>策略组</p>
+</summary>
+<h2 id="策略组"><a href="#策略组" class="headerlink" title="策略组"></a>策略组</h2><p>策略组在这里指的是配置文件中的<code>proxy-groups</code>，策略组的作用，就是根据不同策略分发规则传递过来的请求。</p>
+<p>策略组有如下特性：</p>
+<ul>
+<li>可以包含节点或其他策略组</li>
+<li>具有多种不同的策略类型</li>
+<li>服务于规则</li>
+</ul>
+<p>所有策略组都是服务规则的，如果规则里没有直接或间接使用这个策略组，则策略组就是多余的。</p>
+<p>Clash内置了2个策略组，分别是<code>DIRECT</code>直连和<code>REJECT</code>拒绝</p>
+<ul>
+<li>DIRECT: 顾名思义，不进行代理，直接连接，适用于国内网站和未被墙的网站</li>
+<li>REJECT: 阻止请求进行，适用于屏蔽恶意网站等</li>
+</ul>
+<p>另外在模板文件中，我们还创建了<code>自动选择快速节点</code>、<code>PROXY</code>等策略组，可以在<code>代理</code>界面设置对应的策略。</p>
+<p>策略组类型包括<code>select</code>、<code>url-test</code>、<code>fallback</code>、<code>relay</code>以及<code>load-balance</code>，对应配置文件中的<code>type</code>。</p>
+<ul>
+<li>select 手动选择，在节点列表手动选择节点或策略组</li>
+<li>url-test 延迟测试，选择延迟低的节点</li>
+<li>fallback 可用性测试，按照节点顺序选择第一个可用节点</li>
+<li>load-balance 负载均衡，对同一 eTLD+1 的请求将使用相同的代理</li>
+<li>relay 转发中继，发送到此代理组的请求将依次通过指定的代理服务器进行中继。目前没有 UDP 对此的支持。指定的代理服务器不应包含其他中继。</li>
+</ul>
+<p>参考：<a href="https://github.com/Fndroid/jsbox_script/wiki/%E5%85%B3%E4%BA%8E%E7%AD%96%E7%95%A5%E7%BB%84%E7%9A%84%E7%90%86%E8%A7%A3">关于策略组的理解</a></p>
+
+</details>
+
+<h2 id="更多规则集"><a href="#更多规则集" class="headerlink" title="更多规则集"></a>更多规则集</h2><p>上面模板里的规则可以满足日常使用需求，但是缺点是不方便更新，好在GitHub上有大佬做了每天6：30更新的规则集，传送门如下</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>clash-rules</p><p>规则集（RULE-SET）</p>
+<a href="https://github.com/Loyalsoldier/clash-rules"></a>
+</div></div>
+
+<p>将<code>README</code>里面提供的rule-providers和rules添加到配置文件中即可，如果在上面的配置文件中直接修改的话建议删除原有的<code>rules</code>，注意保留<code>PROXY</code>策略组</p>
+<details class="note warning"><summary><p>配置文件不完整示例</p>
+</summary>
+<p>下面是配置文件策略组与规则部分的示例</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代理组策略</span></span><br><span class="line"><span class="comment"># 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md</span></span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># url-test 通过指定的 URL 测试并选择延迟最低的节点</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;自动选择快速节点&quot;</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">url-test</span></span><br><span class="line">  <span class="attr">proxies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s1&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s2&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s3&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s4&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s5&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s801&quot;</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">&#x27;http://www.gstatic.com/generate_204&#x27;</span></span><br><span class="line">  <span class="attr">interval:</span> <span class="number">300</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代理节点选择</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;PROXY&quot;</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">select</span></span><br><span class="line">  <span class="attr">proxies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;自动选择快速节点&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s1&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s2&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s3&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s4&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s5&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;jms-s801&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 代理规则文件地址</span></span><br><span class="line"><span class="attr">rule-providers:</span></span><br><span class="line">  <span class="attr">reject:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/reject.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">icloud:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/icloud.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">apple:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/apple.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">google:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/google.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/proxy.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">direct:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/direct.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">private:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/private.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">gfw:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/gfw.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">greatfire:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/greatfire.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">tld-not-cn:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">domain</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/tld-not-cn.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">telegramcidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/telegramcidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">cncidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/cncidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">lancidr:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">ipcidr</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/lancidr.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">applications:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">behavior:</span> <span class="string">classical</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">&quot;https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt&quot;</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">./ruleset/applications.yaml</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 规则</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,applications,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN,clash.razord.top,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN,yacd.haishan.me,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,private,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,reject,REJECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,icloud,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,apple,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,google,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,proxy,PROXY</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,direct,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,lancidr,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,cncidr,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,telegramcidr,PROXY</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,LAN,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,CN,DIRECT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">MATCH,PROXY</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Clash for Windows</span></span><br><span class="line"><span class="attr">cfw-bypass:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">qq.com</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">music.163.com</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&#x27;*.music.126.net&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">localhost</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">127</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.16</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.17</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.18</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.19</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.20</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.21</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.22</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.23</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.24</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.25</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.26</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.27</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.28</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.29</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.30</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">172.31</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">192.168</span><span class="string">.*</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&lt;local&gt;</span></span><br><span class="line"><span class="attr">cfw-latency-timeout:</span> <span class="number">5000</span></span><br></pre></td></tr></table></figure>
+
+</details>
+
+<p>启用这个配置后Clash的侧边栏会多出一个<code>服务商</code>，在这个页面就可以轻松的更新规则集了<br><img data-src="https://s2.loli.net/2022/07/13/3Au85hyxpItLDqo.png" alt="服务商.png"></p>
+<h1 id="Link-Start！"><a href="#Link-Start！" class="headerlink" title="Link Start！"></a>Link Start！</h1><p>配置完成后回到<code>常规</code>界面，开启<code>系统代理</code>就可以愉快的上网了~<br><img data-src="https://s2.loli.net/2022/07/13/8airctIXkeZQTBu.png" alt="系统代理.png"></p>
+<h1 id="UWP"><a href="#UWP" class="headerlink" title="UWP"></a>UWP</h1><p>巨硬出于安全考虑，在UWP应用中使用了沙盒机制，默认情况下无法访问回环地址（localhost)，导致应用商店等UWP应用无法走代理，需要用<code>EnableLoopback</code>程序进行修改。此程序已经内置在Clash for Windows 中，通过<code>常规</code>页面的<code>UWP应用网络回环</code>-<code>启动助手</code>打开，然后勾选需要解除限制的应用，并点击右上方的Save Changes保存。</p>
+<p><img data-src="https://s2.loli.net/2022/07/13/P6QzndhAIFsqtUe.png" alt="应用回环助手.png"><br><img data-src="https://s2.loli.net/2022/07/13/D7Eile6fbHWLVFK.png" alt="解除回环限制.png"></p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Clash</tag>
+        <tag>GFW</tag>
+        <tag>Freedom</tag>
+        <tag>Win11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github无法加载图片解决方法</title>
+    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
+
+<span id="more"></span>
+
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
+<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
+<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
+<ul>
+<li>在开始菜单 Windows 图标处右键单击</li>
+<li>选择 Windows PowerShell （管理员）</li>
+<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
+<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
+</ul>
+</li>
+<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
+<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
+<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
+<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
+<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
+<li>Windows：<code>ipconfig /flushdns</code></li>
+<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
+<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
+<ul>
+<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
+<li>逐条输入 Hosts 中的相关域名</li>
+<li>用返回的新 IP 地址替换掉原来的地址</li>
+<li>保存</li>
+</ul>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Grasshopper</title>
     <url>/Grasshopper.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">把大二到现在攒下来的用来画（shui）分析图的Grasshopper电池做一下汇总，并记录一下简易使用方法供建筑狗使用，感兴趣的话为何不尝试一下转行程序猿呢（~~劝退~~）</blockquote>
@@ -938,51 +983,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github无法加载图片解决方法</title>
-    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
-
-<span id="more"></span>
-
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
-<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
-<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
-<ul>
-<li>在开始菜单 Windows 图标处右键单击</li>
-<li>选择 Windows PowerShell （管理员）</li>
-<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
-<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
-</ul>
-</li>
-<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
-<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
-<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
-<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
-<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
-<li>Windows：<code>ipconfig /flushdns</code></li>
-<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
-<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
-<ul>
-<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
-<li>逐条输入 Hosts 中的相关域名</li>
-<li>用返回的新 IP 地址替换掉原来的地址</li>
-<li>保存</li>
-</ul>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo Next 7.7 双语切换</title>
     <url>/Hexo-Next-7-7-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">一年前通过在Google的疯狂查找和尝试，实现了在7.1版本的Next主题上进行中英双语的切换。但是Bug多多（切换到英文界面后点击关于、归档等标签还会跳转回中文界面），而我本人又是拖延症+懒癌晚期，一直没有尝试修复。最近借着给Next主题升级的机会顺便解决这个问题。折腾了两天，终于成功实现了理想中的中英双语切换效果，搞得毕设都没怎么做。</blockquote>
@@ -1132,6 +1132,43 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>i18n</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Next JSDelivr 被墙解决方案</title>
+    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
+
+<span id="more"></span>
+
+<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
+</div>
+
+<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
+<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
+<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
+<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
+<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
+<ul>
+<li>打开<code>_config.next.yml</code></li>
+<li>定位到到<code>CDN Settings</code></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
+</ul>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
+<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
+
+<ul>
+<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
+</ul>
+<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -1290,43 +1327,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Next JSDelivr 被墙解决方案</title>
-    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
-
-<span id="more"></span>
-
-<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
-</div>
-
-<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
-<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
-<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
-<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
-<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
-<ul>
-<li>打开<code>_config.next.yml</code></li>
-<li>定位到到<code>CDN Settings</code></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
-</ul>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
-<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
-
-<ul>
-<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
-</ul>
-<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -2713,6 +2713,24 @@
       </tags>
   </entry>
   <entry>
+    <title>开站纪念</title>
+    <url>/New.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
+
+<span id="more"></span>
+
+<p>我是一个默默无闻的纪念碑hhh</p>
+<p>评论区可以当作留言板哦</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>纪念</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next 8.10 升级日志</title>
     <url>/Next-8-0-%E5%8D%87%E7%BA%A7%E6%97%A5%E5%BF%97.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">失踪一年的老鸽子回来了！（手动狗头🐶）我终于想起了我的博客，然后这几天把他更新到了Next 8.10，这篇算是我的更新记录</blockquote>
@@ -2955,24 +2973,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开站纪念</title>
-    <url>/New.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
-
-<span id="more"></span>
-
-<p>我是一个默默无闻的纪念碑hhh</p>
-<p>评论区可以当作留言板哦</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>纪念</tag>
       </tags>
   </entry>
   <entry>
@@ -6202,6 +6202,213 @@
       </tags>
   </entry>
   <entry>
+    <title>在基于GitHub Pages的博客更新时同步更新GitHub简介中的最近博文部分</title>
+    <url>/auto-update-profile-latest-blog-posts.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">仍在编辑中，预计19日完成......</blockquote>
+
+<span id="more"></span>
+
+<div class="note warning"><p>提醒：本文中使用的博客引擎为Hexo，博客主题为Next。自定义Profile功能会在创建一个与GitHub用户名同名的仓库后解锁。</p>
+</div>
+
+<h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1><p>此方法的基本原理如上图所示，我们首先要在博客仓库与Profile仓库中各设置一个Workflow，然后当我们执行hexo deploy操作将博客文件推送到GitHub仓库后，GitHub Pages会自动运行一个Workflow来部署博客网站，当部署完成后，我们设置的Trigger Profile Update Workflow会被唤起，它的作用是调用Profile仓库中的另一个Workflow：Update Latest Blog Posts。然后Profile仓库中的Workflow会运行update-readme.mjs脚本，脚本首先会访问博客的RSS Feed，读取其中的内容，并使用正则表达式提取博文的标题与链接，接着读取README.md文件，找到我们预先设置的标识符，使用提取到的内容替换标识符中原有的内容，并将所做的修改写回README.md文件。最后Profile仓库中的Workflow会将更改的内容push到自己的仓库中。</p>
+<h1 id="启用RSS功能"><a href="#启用RSS功能" class="headerlink" title="启用RSS功能"></a>启用RSS功能</h1><p>首先我们需要开启博客的RSS功能，以便脚本读取博客的标题与URL。开启Hexo博客的RSS功能需要安装<code>[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)</code>插件，这个插件支持生成Atom 1.0 与 RSS 2.0 的feed。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<details class="note primary"><summary><p>关于Atom 1.0 与 RSS 2.0</p>
+</summary>
+<p>Atom 1.0 和 RSS 2.0 都是用于发布博客、新闻和其他网页内容的标准化格式。它们有一些区别，主要包括以下几个方面：</p>
+<p><strong>1. 数据格式：</strong></p>
+<ul>
+<li>Atom 1.0 使用一种 XML 数据格式，它具有更统一和一致的结构，更适合处理机器读取。</li>
+<li>RSS 2.0 也使用 XML，但它的结构相对不太统一，因此在解析时可能需要更多的处理。</li>
+</ul>
+<p><strong>2. 标题和作者：</strong></p>
+<ul>
+<li>Atom 1.0 对标题和作者等元数据有更严格的要求，其中标题和作者是必需字段。</li>
+<li>RSS 2.0 对标题和作者等元数据的要求相对较松，这些字段是可选的。</li>
+</ul>
+<p><strong>3. 扩展性：</strong></p>
+<ul>
+<li>Atom 1.0 提供了更强大的扩展性，允许添加自定义元数据和命名空间，以满足不同应用的需求。</li>
+<li>RSS 2.0 也支持扩展，但相对较为有限，扩展性不如 Atom。</li>
+</ul>
+<p><strong>4. 发布日期：</strong></p>
+<ul>
+<li>Atom 1.0 使用 “published” 元素来表示博文的发布日期，这是一个标准化的日期格式。</li>
+<li>RSS 2.0 使用 “pubDate” 元素来表示发布日期，这个日期格式相对自由，可能需要更多解析。</li>
+</ul>
+<p><strong>5. 条目链接：</strong></p>
+<ul>
+<li>Atom 1.0 使用 “link” 元素来表示博文的链接，这是博文的固定链接。</li>
+<li>RSS 2.0 也使用 “link” 元素，但它有时可能表示不同的链接类型（例如，博文的固定链接或者评论链接）。</li>
+</ul>
+<p>总的来说，Atom 1.0 更加规范和一致，适用于需要高度结构化数据的应用。而 RSS 2.0 在一些方面更加灵活，适合一些较为简单的应用场景。选择使用哪种标准通常取决于你的具体需求以及你希望的数据结构和格式。</p>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
+
+</details>
+
+<p>安装完成后打开Hexo的配置文件<code>_config.yml</code>，向其中添加下面的配置：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rss Feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">  <span class="attr">hub:</span></span><br><span class="line">  <span class="attr">content:</span></span><br><span class="line">  <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim:</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">icon.png</span></span><br><span class="line">  <span class="attr">autodiscovery:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来的步骤用于在博客网站中添加一个RSS订阅按钮，没有需要的话可以跳过</p>
+<p>打开Next主题的配置文件<code>_config.next.yml</code>，使用搜索功能快读定位到<code># Social Links</code>配置，在<code>social:</code>下面添加一行<code>RSS Feed: /atom.xml || fa fa-rss</code>，示例如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/Siriusq</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">RSS Feed:</span> <span class="string">/atom.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-rss</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以在侧栏中显示RSS订阅按钮了。</p>
+<div class="note warning"><p>提示：当博客的标题含有中文时，直接在浏览器中查看atom.xml会出现乱码，但是右键另存到本地用VSCode打开的话是正常的，不用管。</p>
+</div>
+
+
+<h1 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h1><h2 id="获取GitHub-Token"><a href="#获取GitHub-Token" class="headerlink" title="获取GitHub Token"></a>获取GitHub Token</h2><p>在我们的操作中，涉及到了跨仓库调用GitHub Actions的情况，GitHub Actions默认的权限不能满足这种操作，我们需要申请一个Personal Access Token，用它来赋予GitHub Actions的额外的访问权限。</p>
+<details class="note primary"><summary><p>关于Personal Access Token</p>
+</summary>
+<p>GitHub Personal Access Token（个人访问令牌）是一种用于身份验证和访问 GitHub API 的令牌。它具有以下作用：</p>
+<ol>
+<li><p><strong>身份验证</strong>：个人访问令牌允许你以你的 GitHub 帐户身份访问 GitHub 资源，而无需使用密码。这提供了更安全的身份验证方式，同时不需要暴露你的 GitHub 帐户密码。</p>
+</li>
+<li><p><strong>访问权限</strong>：你可以为每个个人访问令牌设置不同的权限，从只读访问到完全仓库访问权限。这使得你可以根据不同的用例和应用程序需求创建有限的、仅适用于特定操作的令牌。</p>
+</li>
+<li><p><strong>API 访问</strong>：你可以使用个人访问令牌来通过 GitHub API 进行各种操作，如获取仓库信息、创建问题、推送代码等。这对于自动化操作和集成 GitHub 到应用程序或工作流程中非常有用。</p>
+</li>
+<li><p><strong>绕过限制</strong>：在某些情况下，GitHub 有一些 API 限制，如访问频率限制。使用个人访问令牌，你可以以你的帐户身份绕过这些限制。</p>
+</li>
+<li><p><strong>应用程序集成</strong>：个人访问令牌还可以用于将 GitHub 集成到第三方应用程序中，允许这些应用程序执行特定的 GitHub 操作。</p>
+</li>
+</ol>
+<p>个人访问令牌是一个强大的工具，但应该小心管理它们，以确保安全性。不要轻易分享或泄露你的令牌，只授予必要的权限，并定期审查和撤销不再需要的令牌，以降低潜在的风险。</p>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
+
+</details>
+
+<ol>
+<li>点击GitHub网页右上角的头像</li>
+<li>在弹出的面板中点击Settings</li>
+<li>点击跳转后的页面的左侧边栏最下方的Developer seetings</li>
+<li>点击Personal access tokens中的Tokens(classic)</li>
+<li>点击右上方的Generate new token</li>
+<li>选择Generate new token(classic)</li>
+<li>将Expiration设置为No expiration</li>
+<li>在Select scopes中勾选repo选项</li>
+<li>滚动到页面最下方，点击Generate token</li>
+<li>复制生成的Token，注意在离开这个页面后就再也见不到这个Token了，所以一定妥善保管</li>
+</ol>
+<h2 id="设置Secret"><a href="#设置Secret" class="headerlink" title="设置Secret"></a>设置Secret</h2><p>我们申请的Token具有对仓库的完全访问权限，自然不能以明文方式出现在Workflow文件中，GitHub允许我们使用repository secret功能，将Token以变量的方式存储在当前仓库安全存储中，降低了泄露的可能性。</p>
+<details class="note primary"><summary><p>关于Repository Secret</p>
+</summary>
+<p>GitHub 仓库（Repository）的 Secrets 是一种用于存储敏感信息或机密数据的方式，以便在 GitHub Actions Workflow、GitHub Actions Job 和 GitHub Repository 的其他部分中使用。这些 Secrets 的作用包括：</p>
+<ol>
+<li><p><strong>安全地存储敏感数据</strong>：Secrets 提供了一个安全的存储方式，可用于存储敏感数据，如访问令牌、密码、API 密钥等。这些数据通常不应该明文存储在代码中或 Workflow 文件中，因为这会增加安全风险。</p>
+</li>
+<li><p><strong>用于 GitHub Actions Workflow</strong>：你可以将 Secrets 传递给 GitHub Actions Workflow，以用于自动化工作流程中的不同操作，如构建、部署和测试。这有助于确保敏感信息不会在 Workflow 输出中泄露。</p>
+</li>
+<li><p><strong>访问外部服务</strong>：Secrets 可以用于访问外部服务和 API，如部署到云服务或与其他集成进行身份验证。它们使你可以在 Workflow 中以安全方式使用这些服务，同时不会泄露机密数据。</p>
+</li>
+<li><p><strong>灵活性</strong>：Secrets 允许你根据需要创建和管理多个 Secrets。这使得你可以为不同的工作流程和场景使用不同的密钥和令牌，以确保最小化安全风险。</p>
+</li>
+<li><p><strong>自动化操作</strong>：GitHub Actions 可以在 Workflow 中自动使用 Secrets，从而不需要手动输入敏感信息，提高了自动化操作的效率。</p>
+</li>
+<li><p><strong>更新和轮换</strong>：GitHub 仓库 Secrets 允许你定期更新或轮换敏感信息，以增加安全性。</p>
+</li>
+</ol>
+<p>请注意，GitHub 仓库 Secrets 是受到限制和安全审查的，只有拥有适当权限的人员可以访问和管理它们。这有助于确保 Secrets 的安全性和保密性。</p>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
+
+</details>
+
+<details class="note primary"><summary><p>在 Workflow 中使用 Repository Secrets 的原理</p>
+</summary>
+<p>GitHub Actions 在 Workflow 中使用 Repository Secrets 的原理如下：</p>
+<ol>
+<li><p><strong>创建 Repository Secret</strong>：在 GitHub 仓库的设置中，你创建了一个 Repository Secret，为其指定了一个名称（key）和对应的值。这个 Secret 存储在 GitHub 的安全存储中，只有有权访问仓库的用户和 Workflow 可以使用它。</p>
+</li>
+<li><p><strong>Workflow 中的环境变量</strong>：在你的 GitHub Actions Workflow 文件中，你可以通过 <code>$</code> 语法来引用 Repository Secret。这个语法允许你访问 Secret 的值，而不需要直接在 Workflow 文件中明文包含敏感信息。</p>
+</li>
+<li><p><strong>传递给 Workflow 环境变量</strong>：GitHub Actions 在运行 Workflow 时，会将 Repository Secrets 的值传递给 Workflow 中的环境变量。这些环境变量在 Workflow 的执行环境中可用，并可以像普通环境变量一样使用。</p>
+</li>
+<li><p><strong>安全性</strong>：GitHub 保护了这些 Secrets，确保它们不会被泄露或直接暴露给 Workflow 外部。这意味着 Secrets 在 Workflow 的输出、日志或其他可视化输出中不可见。只有 Workflow 内部的代码可以访问它们。</p>
+</li>
+<li><p><strong>使用 Secret</strong>：在 Workflow 中，你可以使用这些环境变量，如访问令牌或 API 密钥，来执行需要身份验证或敏感数据的操作，比如访问私有仓库、部署到云服务、与外部 API 通信等。</p>
+</li>
+</ol>
+<p>总之，Repository Secrets 提供了一种在 Workflow 中安全存储和访问敏感信息的方式，同时不会将这些信息暴露给 Workflow 的外部。这使得 GitHub Actions 可以在自动化流程中处理敏感数据，而无需将其硬编码到 Workflow 文件中，从而提高了安全性和可维护性。</p>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
+
+</details>
+
+<p>设置步骤如下：</p>
+<ol>
+<li>打开博客仓库的Settings页面</li>
+<li>点击左侧边栏中Secrets and variables下的Actions</li>
+<li>点击New repository secret</li>
+<li>我这里将Secrets的Name设置为了PAT_TOKEN_PROFILE</li>
+<li>将上一步申请的Token粘贴到Secret中</li>
+<li>点击Add Secret</li>
+</ol>
+<h1 id="配置Workflow"><a href="#配置Workflow" class="headerlink" title="配置Workflow"></a>配置Workflow</h1><p>接下来让我们配置两个仓库的Actions，博客仓库只需要简单的设置一个Workflow，而Profile仓库需要再创建一个脚本文件，并向README文件中添加标识符。</p>
+<h2 id="博客仓库"><a href="#博客仓库" class="headerlink" title="博客仓库"></a>博客仓库</h2><h3 id="创建Workflow"><a href="#创建Workflow" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><p>博客仓库的Workflow需要在本地目录中创建，然后推送到GitHub仓库，因为Hexo引擎在deploy时会完全替换掉GitHub远程仓库中的所有文件，包括自定义的GitHub Actions。</p>
+<p>首先在博客根目录下创建<code>./source/.github/workflows/update-my-profile.yml</code>文件，注意新建文件夹时不要漏掉<code>.github</code>文件夹名称前面的<code>.</code>。然后向文件中粘贴下面的代码：</p>
+<figure class="highlight yml"><figcaption><span>update-my-profile.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Trigger</span> <span class="string">Profile</span> <span class="string">Update</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="string">page_build</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">trigger-my-profile-update:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Dispatch</span> <span class="string">event</span> <span class="string">to</span> <span class="string">Profile</span> <span class="string">Repo</span></span><br><span class="line">      <span class="attr">env:</span></span><br><span class="line">        <span class="attr">GITHUB_PROFILE_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PAT_TOKEN_PROFILE</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        curl -X POST \</span></span><br><span class="line"><span class="string">        -H &quot;Authorization: token $GITHUB_PROFILE_TOKEN&quot; \</span></span><br><span class="line"><span class="string">        -H &quot;Accept: application/vnd.github.everest-preview+json&quot; \</span></span><br><span class="line"><span class="string">        https://api.github.com/repos/[USERNAME]/[USERNAME]/dispatches \</span></span><br><span class="line"><span class="string">        --data &#x27;&#123;&quot;event_type&quot;: &quot;update-my-profile&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个Workflow的作用是，当博客的Page成功构建后，通过我们先前设置的Repository Secret获取对仓库的完全访问权限，然后通过<code>repository_dispatch</code>事件触发Profile仓库中的另一个Workflow，即update-my-profile。</p>
+<div class="note warning"><p>注意事项：</p>
+<ul>
+<li>将倒数第二行中的两个<code>[USERNAME]</code>替换为你自己的GitHub用户名，去掉两边的中括号</li>
+<li>GITHUB_PROFILE_TOKEN后面到数值就是我们前面设置的Repository Secret</li>
+</ul>
+</div>
+
+<details class="note primary"><summary><p>关于repository_dispatch</p>
+</summary>
+<p><code>repository_dispatch</code> 是 GitHub Actions 中的一种事件类型，它允许你手动触发仓库中定义的 Workflow。这个功能对于需要在特定情况下手动启动自动化任务的场景非常有用。</p>
+<p>下面是关于 <code>repository_dispatch</code> 的详细解释：</p>
+<ul>
+<li><p><strong>手动触发工作流程</strong>：<code>repository_dispatch</code> 允许你手动触发在仓库中定义的 GitHub Actions Workflow。这意味着你可以在需要时手动启动 Workflow 的执行，而不依赖于特定事件（如 push、pull request 等）来触发。</p>
+</li>
+<li><p><strong>自定义事件类型</strong>：你可以为 <code>repository_dispatch</code> 指定自定义的事件类型。这个事件类型可以是你自己定义的，以描述触发的目的或操作。例如，你可以定义一个事件类型为 “update-my-profile”，表示触发 Workflow 来更新用户配置文件。</p>
+</li>
+<li><p><strong>携带有效负载数据</strong>：你还可以选择携带一些有效负载数据（payload），这些数据可以在触发 Workflow 时一同发送。有效负载数据是一个 JSON 对象，它可以包含任何需要传递给 Workflow 的信息，以帮助它执行特定的操作。</p>
+</li>
+<li><p><strong>访问 GitHub API 权限</strong>：触发 <code>repository_dispatch</code> 事件需要有适当的 GitHub API 权限。通常，你需要具有推送代码（push）的权限，或者是仓库管理员，才能触发 <code>repository_dispatch</code> 事件。</p>
+</li>
+</ul>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
+
+</details>
+
+<h3 id="修改Hexo配置文件"><a href="#修改Hexo配置文件" class="headerlink" title="修改Hexo配置文件"></a>修改Hexo配置文件</h3><p>如果你在此时尝试重新生成博客静态文件并部署到远程仓库，你会发现GitHub Actions中并没有出现此前设置的Workflow，这是因为前缀为.的文件和文件夹在 Unix 和 Linux 系统中被视为隐藏文件，hexo g与hexo d两条命令会默认忽略这些隐藏文件，所以用于存放我们Workflow的文件夹<code>.github</code>被视为隐藏文件忽略掉了。此外，hexo在生成静态文件时会将yml格式的文件转换为GitHub Actions不支持的json格式，也会导致此前设置的Workflow失效。接下来我们会通过修改hexo的配置文件让hexo在生成和部署过程中捎带上我们的Workflow。</p>
+<h4 id="include-设置"><a href="#include-设置" class="headerlink" title="include 设置"></a>include 设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Include / Exclude file(s)</span></span><br><span class="line"><span class="comment">## include:/exclude: options only apply to the &#x27;source/&#x27; folder</span></span><br><span class="line"><span class="attr">include:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="attr">ignore:</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="skip-render设置"><a href="#skip-render设置" class="headerlink" title="skip render设置"></a>skip render设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="hexo-git-deploy插件设置"><a href="#hexo-git-deploy插件设置" class="headerlink" title="hexo git deploy插件设置"></a>hexo git deploy插件设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Siriusq/en.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Profile仓库"><a href="#Profile仓库" class="headerlink" title="Profile仓库"></a>Profile仓库</h2><h3 id="创建Workflow-1"><a href="#创建Workflow-1" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><figure class="highlight yml"><figcaption><span>update-readme.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">Latest</span> <span class="string">Blog</span> <span class="string">Posts</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">update-my-profile</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="number">14</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">node-fetch</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">node-fetch</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">feedparser</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">feedparser</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">node</span> <span class="string">update-readme.mjs</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Commit</span> <span class="string">and</span> <span class="string">push</span> <span class="string">changes</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        git config --local user.email &quot;github-actions@github.com&quot;</span></span><br><span class="line"><span class="string">        git config --local user.name &quot;github-actions&quot;</span></span><br><span class="line"><span class="string">        git add README.md</span></span><br><span class="line"><span class="string">        git commit -m &quot;Update README with latest blog posts&quot;</span></span><br><span class="line"><span class="string">        git push</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置action的读写权限"><a href="#设置action的读写权限" class="headerlink" title="设置action的读写权限"></a>设置action的读写权限</h3><h3 id="创建对应node脚本"><a href="#创建对应node脚本" class="headerlink" title="创建对应node脚本"></a>创建对应node脚本</h3><p>最好使用node14，因为16和18都会报错<br>解释mjs，以及导入node fetch的正确方式<br>解释xml相关插件的必要性</p>
+<figure class="highlight mjs"><figcaption><span>update-readme.mjs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> fetch <span class="keyword">from</span> <span class="string">&#x27;node-fetch&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; readFile, writeFile &#125; <span class="keyword">from</span> <span class="string">&#x27;fs/promises&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">FeedParser</span> <span class="keyword">from</span> <span class="string">&#x27;feedparser&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">updateReadme</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> rssUrl = <span class="string">&#x27;https://siriusq.top/en/atom.xml&#x27;</span>;  <span class="comment">// 替换成你的博客的 RSS Feed 链接</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(rssUrl);</span><br><span class="line">    <span class="keyword">const</span> feedparser = <span class="keyword">new</span> <span class="title class_">FeedParser</span>();</span><br><span class="line"></span><br><span class="line">    response.<span class="property">body</span>.<span class="title function_">pipe</span>(feedparser);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> posts = [];</span><br><span class="line"></span><br><span class="line">    feedparser.<span class="title function_">on</span>(<span class="string">&#x27;readable&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> item;</span><br><span class="line">      <span class="keyword">while</span> ((item = <span class="variable language_">this</span>.<span class="title function_">read</span>())) &#123;</span><br><span class="line">        <span class="keyword">if</span> (posts.<span class="property">length</span> &lt; <span class="number">7</span>) &#123; <span class="comment">// 获取前7篇博文</span></span><br><span class="line">          <span class="keyword">const</span> title = item.<span class="property">title</span>;</span><br><span class="line">          <span class="keyword">const</span> link = item.<span class="property">link</span>;</span><br><span class="line">          posts.<span class="title function_">push</span>(<span class="string">`- [<span class="subst">$&#123;title&#125;</span>](<span class="subst">$&#123;link&#125;</span>)`</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    feedparser.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (posts.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 读取 README 文件</span></span><br><span class="line">        <span class="keyword">const</span> readme = <span class="keyword">await</span> <span class="title function_">readFile</span>(<span class="string">&#x27;README.md&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 更新 README 文件中的标识符内容</span></span><br><span class="line">        <span class="keyword">const</span> updatedReadme = readme.<span class="title function_">replace</span>(</span><br><span class="line">          <span class="regexp">/&lt;!-- Start_Position --&gt;.*&lt;!-- End_Position --&gt;/</span>s,</span><br><span class="line">          <span class="string">`&lt;!-- Start_Position --&gt;\n<span class="subst">$&#123;posts.join(<span class="string">&#x27;\n&#x27;</span>)&#125;</span>\n&lt;!-- End_Position --&gt;`</span></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写回 README 文件</span></span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">writeFile</span>(<span class="string">&#x27;README.md&#x27;</span>, updatedReadme);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;README 更新成功！&#x27;</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;未能找到博文。&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;更新失败:&#x27;</span>, error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">updateReadme</span>();</span><br></pre></td></tr></table></figure>
+<h3 id="向README添加标识符"><a href="#向README添加标识符" class="headerlink" title="向README添加标识符"></a>向README添加标识符</h3><figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">### 📝 Latest Blog Posts</span></span><br><span class="line"></span><br><span class="line">&lt;!-- Start<span class="emphasis">_Position --&gt;</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Quick Setup Guide for LaTeX in VSCode</span>](<span class="link">https://siriusq.top/en/latex-vscode-quick-config.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Accessing Windows Shared Folders on iPhone</span>](<span class="link">https://siriusq.top/en/ios-windows-file-share.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Stellaris Mod Creation and Upload Log</span>](<span class="link">https://siriusq.top/en/stellaris-mod.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Bongo Paw Clicker Development Summary</span>](<span class="link">https://siriusq.top/en/bongo-paw-blicker.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Enabling Integrated Graphics with Discrete Graphics Installed</span>](<span class="link">https://siriusq.top/en/turn-on-igpu.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">MacBook Pro Headless</span>](<span class="link">https://siriusq.top/en/macbook-pro-headless.html</span>)</span></span><br><span class="line"><span class="emphasis">&lt;!-- End_</span>Position --&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GitHub Pages</tag>
+        <tag>GitHub Actions</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
     <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
@@ -8362,6 +8569,77 @@
       </tags>
   </entry>
   <entry>
+    <title>英国行李清单</title>
+    <url>/%E8%8B%B1%E5%9B%BD%E8%A1%8C%E6%9D%8E%E6%B8%85%E5%8D%95.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">结合本鸽子逛了三个月英国超市的经历，整理了一下来英国建议带的东西 && 不建议带的东西，针对不建议带的东西列出了购买方式</blockquote>
+
+<span id="more"></span>
+
+<h1 id="建议带"><a href="#建议带" class="headerlink" title="建议带"></a>建议带</h1><p>这一类一般是在英国很难买到，或者是价格高得离谱的东西</p>
+<ul>
+<li>挂钩 ⭐⭐⭐⭐⭐ 英国挂钩的价格就真的离谱，一个的价格我在淘宝能买一盒</li>
+<li>围裙 ⭐⭐⭐⭐ 价格同样离谱，一样的钱淘宝能买十条</li>
+<li>油壶 ⭐⭐⭐ 找遍了各个超市，最后在一家街角小卖店里找到了，但是非常难用，会漏油</li>
+<li>备用手机 ⭐⭐⭐⭐ 万一手机坏了还能撑一下，这边买手机可太贵了</li>
+<li>理发器 ⭐⭐⭐ 这边理一次发的价格就能买个理发器了，而且疫情期间不太敢让理发师上门，我就老老实实给自己理了一个狗啃头</li>
+<li>中标插排 ⭐⭐⭐⭐ 基本只有中超有，价格偏贵</li>
+<li>转接插头 ⭐⭐⭐⭐ 英超虽然有，但是价格离谱</li>
+<li>冲锋衣 ⭐⭐⭐⭐⭐ 妖风 + 下雨天出门必备，这边服装店目前不开门</li>
+<li>SIM卡针 ⭐⭐⭐⭐ 不占地方</li>
+<li>充电宝 ⭐⭐⭐⭐ 这边价格偏高</li>
+</ul>
+<h1 id="可带可不带"><a href="#可带可不带" class="headerlink" title="可带可不带"></a>可带可不带</h1><p>这一类一般是体积较小，重量较轻，可有可无或者在英国也能买到且价格不离谱的东西</p>
+<ul>
+<li>路由器 ⭐⭐⭐ 需要的话还是自己带一个，英国价格有点离谱</li>
+<li>网线 ⭐ 价格差不多</li>
+<li>USB小风扇 ⭐⭐⭐ 英国宿舍基本没空调，夏天还是会热的</li>
+<li>温湿度计 ⭐ 有需要可以带一个看下室内温湿度，这边价格比较高</li>
+<li>肥皂盒 ⭐ 一磅店就有，只不过款式不太好看</li>
+<li>数据线 ⭐⭐ 编织线的价格和国内差不多</li>
+<li>台灯 ⭐ 我宿舍书桌上面有两个巨亮的射灯，所以台灯就华丽丽的吃灰了，这边的台灯价格稍贵</li>
+<li>相机三脚架 ⭐⭐ 有需要的可以带一个轻便的，这边价格基本翻倍了</li>
+<li>小加湿器 ⭐⭐ 小的话可以带一个，eBay上最便宜的也要7磅，还没一卷卫生纸大</li>
+<li>筷子 ⭐ 中超就有，价格可以接受</li>
+<li>折叠盆 ⭐ 这边盆子质量稍差，但也不是不能用，而且中超也有国内那种盆子</li>
+<li>保温杯 ⭐ 价格和国内差不多</li>
+<li>指甲钳 ⭐⭐ 有得卖，但是不清楚质量如何</li>
+<li>电池 ⭐ 这边价格稍高，但也可以接受，充电电池可以带，干电池就算了吧</li>
+<li>牙杯 ⭐ 一磅店的塑料杯子就能用hhh</li>
+<li>削皮器 ⭐ 中超英超都有，价格不贵</li>
+<li>鞋刷 ⭐ 同上</li>
+<li>多功能刀 ⭐ 相当于临时的工具箱吧，这边价格很贵</li>
+<li>U盘 ⭐ 价格不算很贵</li>
+<li>拖鞋⭐⭐⭐ 这边的款式有点丑的</li>
+<li>钢化膜 ⭐⭐ 价格小贵</li>
+<li>笔记本支架 ⭐⭐ 预防颈椎病（狗头）</li>
+<li>备用眼镜 ⭐ 来了之后可以白嫖的（再次狗头）</li>
+<li>洗衣袋 ⭐⭐ 这边价格有点贵</li>
+</ul>
+<h1 id="不建议带"><a href="#不建议带" class="headerlink" title="不建议带"></a>不建议带</h1><p>这一类就是体积太大，重量太沉，或者在英国能以更低价格买到的东西</p>
+<ul>
+<li>肥皂 ❌ homebargain有的买， 80p两块</li>
+<li>电饭煲 ❌❌❌ 这个是真的没必要，收二手就可以，自己带的话又重又占地方，还要浪费一个转换插头，收不到二手网购也差不多价格，可能没有国内那么丰富的功能</li>
+<li>电吹风 ❌❌❌ 同上</li>
+<li>大加湿器 ❌❌❌ 同上</li>
+<li>折叠水壶 ❌ 用几次就吃灰的东西，落地之后直接去大点的超市买烧水壶就可以，或者提前网购</li>
+<li>菜刀 ❌❌ 太沉了，中超就有，价格可以接受</li>
+<li>电动牙刷刷头 ❌ 别的不知道，反正欧乐B的比国内便宜不少</li>
+<li>雨伞 ❌ 遇到妖风基本报废，淘宝那种抗台风的可以试一下？</li>
+<li>锅碗瓢盆 ❌❌❌ 真的没必要，大点的超市都有，样式也还行</li>
+<li>被子 ❌❌❌ 除非行李箱空一半（手动狗头）</li>
+<li>纱窗 ❌❌ 亚马逊就有，而且学生公寓的窗子基本只能开一道缝隙，根本就装不上</li>
+</ul>
+]]></content>
+      <categories>
+        <category>留学</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>攻略</tag>
+        <tag>英国</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英国落地日记</title>
     <url>/%E8%8B%B1%E5%9B%BD%E8%90%BD%E5%9C%B0%E6%97%A5%E8%AE%B0.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">落地英国一个月的老鸽子又回来了~~~这可能又是一篇巨长的博文，打算记录下在英国这一年的生活，内含BRP、GP、银行卡等攻略，或许还能放个Vlog？（咕咕咕）</blockquote>
@@ -8889,74 +9167,59 @@ OFFICIAL
       </tags>
   </entry>
   <entry>
-    <title>英国行李清单</title>
-    <url>/%E8%8B%B1%E5%9B%BD%E8%A1%8C%E6%9D%8E%E6%B8%85%E5%8D%95.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">结合本鸽子逛了三个月英国超市的经历，整理了一下来英国建议带的东西 && 不建议带的东西，针对不建议带的东西列出了购买方式</blockquote>
+    <title>荣耀 magic watch 表盘制作</title>
+    <url>/%E8%8D%A3%E8%80%80-magic-watch-%E8%A1%A8%E7%9B%98%E5%88%B6%E4%BD%9C.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">趁着还没开学给老爸的 Magic Watch 做了个表盘，甲方唯二的要求就是：字大+醒目</blockquote>
 
+<p><img data-src="https://s2.loli.net/2022/05/13/fswCopBAYqjnFKl.png" alt="icon"></p>
 <span id="more"></span>
 
-<h1 id="建议带"><a href="#建议带" class="headerlink" title="建议带"></a>建议带</h1><p>这一类一般是在英国很难买到，或者是价格高得离谱的东西</p>
+<div class="note danger"><p>提醒：此文写于2020年6月，一些内容已过时，请注意时效！</p>
+</div>
+
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>刚开始搜集材料的时候看见有人说表盘要<strong>手动</strong>编辑xml文件，这不是反人类吗。。。不过好在华为已经推出了表盘设计软件<code>HwWatchFaceDesigner</code>，整个设计过程就和用<code>PhotoShop</code>P图一样<br>首先到华为的网站去下载<code>华为手表表盘开发工具</code>并解压，然后打开<code>HwWatchFaceDesigner.exe</code></p>
+<a class="btn" href="https://developer.huawei.com/consumer/cn/doc/5050601"><i class="fa fa-download fa-fw"></i>传送门</a>
+
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>在解压后的文件夹里有中英文的<code>用户手册</code>，路径是<code>.\document\用户手册.pdf</code>,也可以在<code>帮助</code>中点击<code>用户手册</code>。我就不再啰嗦了，只记录一些注意事项</p>
 <ul>
-<li>挂钩 ⭐⭐⭐⭐⭐ 英国挂钩的价格就真的离谱，一个的价格我在淘宝能买一盒</li>
-<li>围裙 ⭐⭐⭐⭐ 价格同样离谱，一样的钱淘宝能买十条</li>
-<li>油壶 ⭐⭐⭐ 找遍了各个超市，最后在一家街角小卖店里找到了，但是非常难用，会漏油</li>
-<li>备用手机 ⭐⭐⭐⭐ 万一手机坏了还能撑一下，这边买手机可太贵了</li>
-<li>理发器 ⭐⭐⭐ 这边理一次发的价格就能买个理发器了，而且疫情期间不太敢让理发师上门，我就老老实实给自己理了一个狗啃头</li>
-<li>中标插排 ⭐⭐⭐⭐ 基本只有中超有，价格偏贵</li>
-<li>转接插头 ⭐⭐⭐⭐ 英超虽然有，但是价格离谱</li>
-<li>冲锋衣 ⭐⭐⭐⭐⭐ 妖风 + 下雨天出门必备，这边服装店目前不开门</li>
-<li>SIM卡针 ⭐⭐⭐⭐ 不占地方</li>
-<li>充电宝 ⭐⭐⭐⭐ 这边价格偏高</li>
+<li><code>荣耀 Magic Watch</code>的分辨率是<code>390*390</code></li>
+<li>新建工程的时候<code>表盘效果图</code>先空着，设计完成之后再截图到PS里，导出不同分辨率的效果图</li>
+<li>图层最多25个</li>
+<li>一些位置固定的图标可以到最后在PS里和背景图合成为一张图片，节省图层</li>
+<li><code>星期</code>的<code>选图</code>里面第一张图是无效的，随便添加一张，从第二张图开始才是周一</li>
+<li><code>上午下午</code>的<code>选图</code>里面第三张图要找一张空白的png图</li>
+<li><code>撤销</code>不能使用<code>ctrl+z</code>的快捷键，只能点击上面菜单栏的返回图标，而且一经保存就不能再撤回</li>
 </ul>
-<h1 id="可带可不带"><a href="#可带可不带" class="headerlink" title="可带可不带"></a>可带可不带</h1><p>这一类一般是体积较小，重量较轻，可有可无或者在英国也能买到且价格不离谱的东西</p>
+<h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><p>制作表盘需要用到各种png格式的图片素材，下面是我使用到的素材网站<br><a href="https://www.freepik.com/">freepik</a> - 背景图片素材，未注册的话每天有下载数量限制，注册的时候需要科学上网，因为需要用到谷歌的验证服务，注册完成后不需要<br><a href="https://webgradients.com/">webgradients</a> - 渐变色配色<br><a href="https://www.iconfinder.com/">iconfinder</a> - 图标素材，这个网站有在线编辑器，点开图片后有一个<code>Open in icon editor</code>，可以在线调整好素材的颜色，省下PS的过程</p>
+<p>部分素材是需要付费的，筛选的时候勾上<code>free</code>就好了</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>目前版本的<code>华为运动健康</code>软件是不能自定义添加表盘的，需要下载老版本，百度云自取</p>
+<a class="btn" href="https://pan.baidu.com/s/1Pg0lIOtRS3fmXG8kvMkNDA"><i class="fa fa-download fa-fw"></i>提取码: mpbm</a>
+
+<p>安装的具体操作步骤如下</p>
 <ul>
-<li>路由器 ⭐⭐⭐ 需要的话还是自己带一个，英国价格有点离谱</li>
-<li>网线 ⭐ 价格差不多</li>
-<li>USB小风扇 ⭐⭐⭐ 英国宿舍基本没空调，夏天还是会热的</li>
-<li>温湿度计 ⭐ 有需要可以带一个看下室内温湿度，这边价格比较高</li>
-<li>肥皂盒 ⭐ 一磅店就有，只不过款式不太好看</li>
-<li>数据线 ⭐⭐ 编织线的价格和国内差不多</li>
-<li>台灯 ⭐ 我宿舍书桌上面有两个巨亮的射灯，所以台灯就华丽丽的吃灰了，这边的台灯价格稍贵</li>
-<li>相机三脚架 ⭐⭐ 有需要的可以带一个轻便的，这边价格基本翻倍了</li>
-<li>小加湿器 ⭐⭐ 小的话可以带一个，eBay上最便宜的也要7磅，还没一卷卫生纸大</li>
-<li>筷子 ⭐ 中超就有，价格可以接受</li>
-<li>折叠盆 ⭐ 这边盆子质量稍差，但也不是不能用，而且中超也有国内那种盆子</li>
-<li>保温杯 ⭐ 价格和国内差不多</li>
-<li>指甲钳 ⭐⭐ 有得卖，但是不清楚质量如何</li>
-<li>电池 ⭐ 这边价格稍高，但也可以接受，充电电池可以带，干电池就算了吧</li>
-<li>牙杯 ⭐ 一磅店的塑料杯子就能用hhh</li>
-<li>削皮器 ⭐ 中超英超都有，价格不贵</li>
-<li>鞋刷 ⭐ 同上</li>
-<li>多功能刀 ⭐ 相当于临时的工具箱吧，这边价格很贵</li>
-<li>U盘 ⭐ 价格不算很贵</li>
-<li>拖鞋⭐⭐⭐ 这边的款式有点丑的</li>
-<li>钢化膜 ⭐⭐ 价格小贵</li>
-<li>笔记本支架 ⭐⭐ 预防颈椎病（狗头）</li>
-<li>备用眼镜 ⭐ 来了之后可以白嫖的（再次狗头）</li>
-<li>洗衣袋 ⭐⭐ 这边价格有点贵</li>
+<li>先将导出的<code>hwt</code>文件拷贝到手机</li>
+<li>成功连接设备后进入<code>表盘市场</code></li>
+<li>点击右上角的三个点</li>
+<li>进入<code>隐私声明</code></li>
+<li>撤销华为主题服务</li>
+<li>退出来再重新进入<code>表盘市场</code></li>
+<li>在弹出窗口中重新给华为主题服务授权</li>
+<li>再次点击右上角的三个点，会多出一个<code>添加表盘</code>选项</li>
+<li>点击后会询问你是否是开发者，点击<code>是</code></li>
+<li>找到拷贝进手机的<code>hwt</code>文件路径，点击确定并安装</li>
 </ul>
-<h1 id="不建议带"><a href="#不建议带" class="headerlink" title="不建议带"></a>不建议带</h1><p>这一类就是体积太大，重量太沉，或者在英国能以更低价格买到的东西</p>
-<ul>
-<li>肥皂 ❌ homebargain有的买， 80p两块</li>
-<li>电饭煲 ❌❌❌ 这个是真的没必要，收二手就可以，自己带的话又重又占地方，还要浪费一个转换插头，收不到二手网购也差不多价格，可能没有国内那么丰富的功能</li>
-<li>电吹风 ❌❌❌ 同上</li>
-<li>大加湿器 ❌❌❌ 同上</li>
-<li>折叠水壶 ❌ 用几次就吃灰的东西，落地之后直接去大点的超市买烧水壶就可以，或者提前网购</li>
-<li>菜刀 ❌❌ 太沉了，中超就有，价格可以接受</li>
-<li>电动牙刷刷头 ❌ 别的不知道，反正欧乐B的比国内便宜不少</li>
-<li>雨伞 ❌ 遇到妖风基本报废，淘宝那种抗台风的可以试一下？</li>
-<li>锅碗瓢盆 ❌❌❌ 真的没必要，大点的超市都有，样式也还行</li>
-<li>被子 ❌❌❌ 除非行李箱空一半（手动狗头）</li>
-<li>纱窗 ❌❌ 亚马逊就有，而且学生公寓的窗子基本只能开一道缝隙，根本就装不上</li>
-</ul>
-]]></content>
+<p>如果觉得这个表盘不满意需要卸载的话，还要重新安装最新版的<code>华为运动健康</code>，进入<code>表盘市场</code>中的<code>我的</code>里面删除，老版本的不能在表盘市场中删除自定义的表盘，这就很尴尬，所以。。。一定要设计好了检查好了再安装，要不这个过程可是太反人类了，手表安装表盘巨慢，1秒钟才安装百分之一。。。</p>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>我做的表盘已经上传到我的Github了，源文件也一起上传了，有需要的自取</p>
+<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius"><i class="fa fa-download fa-fw"></i>源文件</a>
+
+<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius/releases/download/6.0/sirius_3.1.6.hwt"><i class="fa fa-download fa-fw"></i>表盘下载</a>]]></content>
       <categories>
-        <category>留学</category>
+        <category>搞机</category>
       </categories>
       <tags>
-        <tag>留学</tag>
-        <tag>攻略</tag>
-        <tag>英国</tag>
+        <tag>搞机</tag>
+        <tag>表盘</tag>
+        <tag>荣耀 magic watch</tag>
       </tags>
   </entry>
   <entry>
@@ -9619,62 +9882,6 @@ OFFICIAL
       </categories>
       <tags>
         <tag>建筑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>荣耀 magic watch 表盘制作</title>
-    <url>/%E8%8D%A3%E8%80%80-magic-watch-%E8%A1%A8%E7%9B%98%E5%88%B6%E4%BD%9C.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">趁着还没开学给老爸的 Magic Watch 做了个表盘，甲方唯二的要求就是：字大+醒目</blockquote>
-
-<p><img data-src="https://s2.loli.net/2022/05/13/fswCopBAYqjnFKl.png" alt="icon"></p>
-<span id="more"></span>
-
-<div class="note danger"><p>提醒：此文写于2020年6月，一些内容已过时，请注意时效！</p>
-</div>
-
-<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>刚开始搜集材料的时候看见有人说表盘要<strong>手动</strong>编辑xml文件，这不是反人类吗。。。不过好在华为已经推出了表盘设计软件<code>HwWatchFaceDesigner</code>，整个设计过程就和用<code>PhotoShop</code>P图一样<br>首先到华为的网站去下载<code>华为手表表盘开发工具</code>并解压，然后打开<code>HwWatchFaceDesigner.exe</code></p>
-<a class="btn" href="https://developer.huawei.com/consumer/cn/doc/5050601"><i class="fa fa-download fa-fw"></i>传送门</a>
-
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>在解压后的文件夹里有中英文的<code>用户手册</code>，路径是<code>.\document\用户手册.pdf</code>,也可以在<code>帮助</code>中点击<code>用户手册</code>。我就不再啰嗦了，只记录一些注意事项</p>
-<ul>
-<li><code>荣耀 Magic Watch</code>的分辨率是<code>390*390</code></li>
-<li>新建工程的时候<code>表盘效果图</code>先空着，设计完成之后再截图到PS里，导出不同分辨率的效果图</li>
-<li>图层最多25个</li>
-<li>一些位置固定的图标可以到最后在PS里和背景图合成为一张图片，节省图层</li>
-<li><code>星期</code>的<code>选图</code>里面第一张图是无效的，随便添加一张，从第二张图开始才是周一</li>
-<li><code>上午下午</code>的<code>选图</code>里面第三张图要找一张空白的png图</li>
-<li><code>撤销</code>不能使用<code>ctrl+z</code>的快捷键，只能点击上面菜单栏的返回图标，而且一经保存就不能再撤回</li>
-</ul>
-<h1 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h1><p>制作表盘需要用到各种png格式的图片素材，下面是我使用到的素材网站<br><a href="https://www.freepik.com/">freepik</a> - 背景图片素材，未注册的话每天有下载数量限制，注册的时候需要科学上网，因为需要用到谷歌的验证服务，注册完成后不需要<br><a href="https://webgradients.com/">webgradients</a> - 渐变色配色<br><a href="https://www.iconfinder.com/">iconfinder</a> - 图标素材，这个网站有在线编辑器，点开图片后有一个<code>Open in icon editor</code>，可以在线调整好素材的颜色，省下PS的过程</p>
-<p>部分素材是需要付费的，筛选的时候勾上<code>free</code>就好了</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>目前版本的<code>华为运动健康</code>软件是不能自定义添加表盘的，需要下载老版本，百度云自取</p>
-<a class="btn" href="https://pan.baidu.com/s/1Pg0lIOtRS3fmXG8kvMkNDA"><i class="fa fa-download fa-fw"></i>提取码: mpbm</a>
-
-<p>安装的具体操作步骤如下</p>
-<ul>
-<li>先将导出的<code>hwt</code>文件拷贝到手机</li>
-<li>成功连接设备后进入<code>表盘市场</code></li>
-<li>点击右上角的三个点</li>
-<li>进入<code>隐私声明</code></li>
-<li>撤销华为主题服务</li>
-<li>退出来再重新进入<code>表盘市场</code></li>
-<li>在弹出窗口中重新给华为主题服务授权</li>
-<li>再次点击右上角的三个点，会多出一个<code>添加表盘</code>选项</li>
-<li>点击后会询问你是否是开发者，点击<code>是</code></li>
-<li>找到拷贝进手机的<code>hwt</code>文件路径，点击确定并安装</li>
-</ul>
-<p>如果觉得这个表盘不满意需要卸载的话，还要重新安装最新版的<code>华为运动健康</code>，进入<code>表盘市场</code>中的<code>我的</code>里面删除，老版本的不能在表盘市场中删除自定义的表盘，这就很尴尬，所以。。。一定要设计好了检查好了再安装，要不这个过程可是太反人类了，手表安装表盘巨慢，1秒钟才安装百分之一。。。</p>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>我做的表盘已经上传到我的Github了，源文件也一起上传了，有需要的自取</p>
-<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius"><i class="fa fa-download fa-fw"></i>源文件</a>
-
-<a class="btn" href="https://github.com/Siriusq/Honor-Magic-Watch-Theme-Sirius/releases/download/6.0/sirius_3.1.6.hwt"><i class="fa fa-download fa-fw"></i>表盘下载</a>]]></content>
-      <categories>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>表盘</tag>
-        <tag>荣耀 magic watch</tag>
       </tags>
   </entry>
   <entry>

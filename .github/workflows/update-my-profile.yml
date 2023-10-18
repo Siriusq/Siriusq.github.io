@@ -1,0 +1,19 @@
+﻿name: Trigger Profile Update
+
+on:
+  page_build
+
+jobs:
+  trigger-my-profile-update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dispatch event to Profile Repo
+      env:
+        GITHUB_PROFILE_TOKEN: ${{ secrets.PAT_TOKEN_PROFILE }}
+      run: |
+        curl -X POST \
+        -H "Authorization: token $GITHUB_PROFILE_TOKEN" \
+        -H "Accept: application/vnd.github.everest-preview+json" \
+        https://api.github.com/repos/Siriusq/Siriusq/dispatches \
+        --data '{"event_type": "update-my-profile-cn"}'
