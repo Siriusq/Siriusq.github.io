@@ -794,6 +794,66 @@
       </tags>
   </entry>
   <entry>
+    <title>HEXO部署</title>
+    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
+    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
+<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
+<ul>
+<li>创建新博客文件</li>
+<li>生成新网页</li>
+<li>部署到Github Page</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
+<li><p>在博客文件夹中右键打开Git bash</p>
+</li>
+<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
+</li>
+<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
+</li>
+<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
+<ul>
+<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中<code>title</code>就是博客标题</li>
+<li><code>date</code>是博客的创建时间，不用修改</li>
+<li><code>tags</code>是博客的标签</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>踩坑：<br>此处注意冒号后面的空格</p>
+</blockquote>
+<ul>
+<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
+</ul>
+</li>
+<li><p>编写完成后保存</p>
+</li>
+</ol>
+<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
+<li>打开Git bash</li>
+<li>输入命令<code>hexo clean</code>清除网页缓存</li>
+<li>输入命令<code>hexo g</code>生成新的网页文件</li>
+<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
+<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
+</blockquote>
+</li>
+<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
+</ol>
+<hr>
+<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Grasshopper</title>
     <url>/Grasshopper.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">把大二到现在攒下来的用来画（shui）分析图的Grasshopper电池做一下汇总，并记录一下简易使用方法供建筑狗使用，感兴趣的话为何不尝试一下转行程序猿呢（~~劝退~~）</blockquote>
@@ -920,66 +980,6 @@
       <tags>
         <tag>Grasshopper</tag>
         <tag>建筑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HEXO部署</title>
-    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
-    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
-<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
-<ul>
-<li>创建新博客文件</li>
-<li>生成新网页</li>
-<li>部署到Github Page</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
-<li><p>在博客文件夹中右键打开Git bash</p>
-</li>
-<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
-</li>
-<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
-</li>
-<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
-<ul>
-<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>其中<code>title</code>就是博客标题</li>
-<li><code>date</code>是博客的创建时间，不用修改</li>
-<li><code>tags</code>是博客的标签</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>踩坑：<br>此处注意冒号后面的空格</p>
-</blockquote>
-<ul>
-<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
-</ul>
-</li>
-<li><p>编写完成后保存</p>
-</li>
-</ol>
-<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
-<li>打开Git bash</li>
-<li>输入命令<code>hexo clean</code>清除网页缓存</li>
-<li>输入命令<code>hexo g</code>生成新的网页文件</li>
-<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
-<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
-</blockquote>
-</li>
-<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
-</ol>
-<hr>
-<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1132,43 +1132,6 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>i18n</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Next JSDelivr 被墙解决方案</title>
-    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
-
-<span id="more"></span>
-
-<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
-</div>
-
-<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
-<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
-<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
-<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
-<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
-<ul>
-<li>打开<code>_config.next.yml</code></li>
-<li>定位到到<code>CDN Settings</code></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
-</ul>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
-<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
-
-<ul>
-<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
-</ul>
-<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -1388,6 +1351,43 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>i18n</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Next JSDelivr 被墙解决方案</title>
+    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
+
+<span id="more"></span>
+
+<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
+</div>
+
+<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
+<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
+<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
+<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
+<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
+<ul>
+<li>打开<code>_config.next.yml</code></li>
+<li>定位到到<code>CDN Settings</code></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
+</ul>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
+<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
+
+<ul>
+<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
+</ul>
+<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -6202,17 +6202,18 @@
       </tags>
   </entry>
   <entry>
-    <title>在基于GitHub Pages的博客更新时同步更新GitHub简介中的最近博文部分</title>
+    <title>在基于GitHub Pages的博客更新时同步更新GitHub Profile个人信息页的最近博文部分</title>
     <url>/auto-update-profile-latest-blog-posts.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">仍在编辑中，预计19日完成......</blockquote>
+    <content><![CDATA[<blockquote class="blockquote-center">我在GitHub的自定义个人信息页中添加了展示最近更新的博文的部分，但是每次更新完博客还要再来这里手动更新一下，就很麻烦。于是我本着"偷懒是人类进步的动力"的原则，搞出了一种博客部署完成后，使用GitHub Actions自动更新个人信息页的最近博文部分的方法。</blockquote>
 
 <span id="more"></span>
 
-<div class="note warning"><p>提醒：本文中使用的博客引擎为Hexo，博客主题为Next。自定义Profile功能会在创建一个与GitHub用户名同名的仓库后解锁。</p>
+<div class="note warning"><p>提醒：本文中使用的博客框架为Hexo，博客主题为Next。RSS Feed采用Atom 1.0格式</p>
 </div>
 
-<h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1><p>此方法的基本原理如上图所示，我们首先要在博客仓库与Profile仓库中各设置一个Workflow，然后当我们执行hexo deploy操作将博客文件推送到GitHub仓库后，GitHub Pages会自动运行一个Workflow来部署博客网站，当部署完成后，我们设置的Trigger Profile Update Workflow会被唤起，它的作用是调用Profile仓库中的另一个Workflow：Update Latest Blog Posts。然后Profile仓库中的Workflow会运行update-readme.mjs脚本，脚本首先会访问博客的RSS Feed，读取其中的内容，并使用正则表达式提取博文的标题与链接，接着读取README.md文件，找到我们预先设置的标识符，使用提取到的内容替换标识符中原有的内容，并将所做的修改写回README.md文件。最后Profile仓库中的Workflow会将更改的内容push到自己的仓库中。</p>
-<h1 id="启用RSS功能"><a href="#启用RSS功能" class="headerlink" title="启用RSS功能"></a>启用RSS功能</h1><p>首先我们需要开启博客的RSS功能，以便脚本读取博客的标题与URL。开启Hexo博客的RSS功能需要安装<code>[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)</code>插件，这个插件支持生成Atom 1.0 与 RSS 2.0 的feed。</p>
+<h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1><p><img data-src="https://s2.loli.net/2023/10/19/Gk81DjxnfIgU2Yd.webp" alt="auto_update_profile-cn.webp"></p>
+<p>此方法的基本原理如上图所示，我们首先要在博客仓库与Profile仓库中各设置一个Workflow，然后当我们执行<code>hexo deploy</code>操作将博客文件推送到GitHub仓库后，GitHub Pages会自动运行一个Workflow来部署博客网站，当部署完成后，我们设置的<code>Trigger Profile Update</code> Workflow会被唤起，它的作用是调用Profile仓库中的另一个Workflow：<code>Update Latest Blog Posts</code>。Profile仓库中的Workflow会运行<code>update-readme.mjs</code>脚本，脚本首先会访问博客的RSS Feed，读取其中的内容，并使用正则表达式提取博文的标题与链接，接着读取<code>README.md</code>文件，找到我们预先设置的标识符，使用提取到的内容替换标识符中原有的内容，并将所做的修改写回<code>README.md</code>文件。最后Workflow会将更改的内容push回仓库中。</p>
+<h1 id="启用RSS功能"><a href="#启用RSS功能" class="headerlink" title="启用RSS功能"></a>启用RSS功能</h1><p>首先我们需要开启博客的RSS功能，以便脚本获取博客的标题与URL。开启Hexo框架的RSS功能需要安装<code>hexo-generator-feed</code>插件，这个插件支持生成Atom 1.0 与 RSS 2.0 的feed。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
 
 <details class="note primary"><summary><p>关于Atom 1.0 与 RSS 2.0</p>
@@ -6250,7 +6251,7 @@
 
 </details>
 
-<p>安装完成后打开Hexo的配置文件<code>_config.yml</code>，向其中添加下面的配置：</p>
+<p>安装完成后打开Hexo框架的配置文件<code>_config.yml</code>，向其中添加下面的配置：</p>
 <figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Rss Feed</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">  <span class="attr">hub:</span></span><br><span class="line">  <span class="attr">content:</span></span><br><span class="line">  <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim:</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">icon.png</span></span><br><span class="line">  <span class="attr">autodiscovery:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span></span><br></pre></td></tr></table></figure>
 
 <p>接下来的步骤用于在博客网站中添加一个RSS订阅按钮，没有需要的话可以跳过</p>
@@ -6258,7 +6259,7 @@
 <figure class="highlight yml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/Siriusq</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">RSS Feed:</span> <span class="string">/atom.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-rss</span></span><br></pre></td></tr></table></figure>
 
 <p>这样就可以在侧栏中显示RSS订阅按钮了。</p>
-<div class="note warning"><p>提示：当博客的标题含有中文时，直接在浏览器中查看atom.xml会出现乱码，但是右键另存到本地用VSCode打开的话是正常的，不用管。</p>
+<div class="note warning"><p>提示：当博客的标题含有中文时，直接在浏览器中查看atom.xml可能会出现乱码，但是右键另存到本地后再用VSCode打开的话是正常的，不用管。</p>
 </div>
 
 
@@ -6287,17 +6288,20 @@
 
 <ol>
 <li>点击GitHub网页右上角的头像</li>
-<li>在弹出的面板中点击Settings</li>
-<li>点击跳转后的页面的左侧边栏最下方的Developer seetings</li>
-<li>点击Personal access tokens中的Tokens(classic)</li>
-<li>点击右上方的Generate new token</li>
-<li>选择Generate new token(classic)</li>
-<li>将Expiration设置为No expiration</li>
-<li>在Select scopes中勾选repo选项</li>
-<li>滚动到页面最下方，点击Generate token</li>
-<li>复制生成的Token，注意在离开这个页面后就再也见不到这个Token了，所以一定妥善保管</li>
+<li>在弹出的面板中点击<code>Settings</code></li>
+<li>点击左侧边栏最下方的<code>Developer seetings</code></li>
+<li>点击<code>Personal access tokens中的Tokens(classic)</code></li>
+<li>点击右上方的<code>Generate new token</code></li>
+<li>选择<code>Generate new token(classic)</code></li>
+<li>将<code>Expiration</code>设置为<code>No expiration</code></li>
+<li>在<code>Select scopes</code>中勾选<code>repo</code>选项</li>
+<li>滚动到页面最下方，点击<code>Generate token</code></li>
+<li>复制生成的<code>Token</code>，注意在离开这个页面后就再也见不到这个Token了，所以一定妥善保管</li>
 </ol>
-<h2 id="设置Secret"><a href="#设置Secret" class="headerlink" title="设置Secret"></a>设置Secret</h2><p>我们申请的Token具有对仓库的完全访问权限，自然不能以明文方式出现在Workflow文件中，GitHub允许我们使用repository secret功能，将Token以变量的方式存储在当前仓库安全存储中，降低了泄露的可能性。</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/MCX8r6medVjocbq.webp" alt="1-2.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/nGbz1mhuYMXlEIV.webp" alt="3.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/HyqLWKu5wg8B3hJ.webp" alt="4-6.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/8oPj7UqBV4Ynscv.webp" alt="7-8.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/y4T2RbD7UEWQY6Z.webp" alt="9.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/ZfOqEgM3Yh97oTW.webp" alt="10.webp"></div></div></div>
+
+
+<h2 id="设置Secret"><a href="#设置Secret" class="headerlink" title="设置Secret"></a>设置Secret</h2><p>我们申请的Token具有对仓库的完全访问权限，自然不能以明文方式出现在Workflow文件中，GitHub允许我们使用<code>repository secret</code>功能，将Token以变量的方式存储在当前仓库安全存储中，降低泄露的可能性。</p>
 <details class="note primary"><summary><p>关于Repository Secret</p>
 </summary>
 <p>GitHub 仓库（Repository）的 Secrets 是一种用于存储敏感信息或机密数据的方式，以便在 GitHub Actions Workflow、GitHub Actions Job 和 GitHub Repository 的其他部分中使用。这些 Secrets 的作用包括：</p>
@@ -6346,26 +6350,35 @@
 
 <p>设置步骤如下：</p>
 <ol>
-<li>打开博客仓库的Settings页面</li>
-<li>点击左侧边栏中Secrets and variables下的Actions</li>
-<li>点击New repository secret</li>
-<li>我这里将Secrets的Name设置为了PAT_TOKEN_PROFILE</li>
-<li>将上一步申请的Token粘贴到Secret中</li>
-<li>点击Add Secret</li>
+<li>打开博客仓库的<code>Settings</code>页面</li>
+<li>点击左侧边栏中<code>Secrets and variables</code>下的<code>Actions</code></li>
+<li>点击<code>New repository secret</code></li>
+<li>我这里将<code>Secrets</code>的<code>Name</code>设置为了<code>PAT_TOKEN_PROFILE</code></li>
+<li>将上一步申请的<code>Token</code>粘贴到<code>Secret</code>中</li>
+<li>点击<code>Add Secret</code></li>
 </ol>
-<h1 id="配置Workflow"><a href="#配置Workflow" class="headerlink" title="配置Workflow"></a>配置Workflow</h1><p>接下来让我们配置两个仓库的Actions，博客仓库只需要简单的设置一个Workflow，而Profile仓库需要再创建一个脚本文件，并向README文件中添加标识符。</p>
-<h2 id="博客仓库"><a href="#博客仓库" class="headerlink" title="博客仓库"></a>博客仓库</h2><h3 id="创建Workflow"><a href="#创建Workflow" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><p>博客仓库的Workflow需要在本地目录中创建，然后推送到GitHub仓库，因为Hexo引擎在deploy时会完全替换掉GitHub远程仓库中的所有文件，包括自定义的GitHub Actions。</p>
-<p>首先在博客根目录下创建<code>./source/.github/workflows/update-my-profile.yml</code>文件，注意新建文件夹时不要漏掉<code>.github</code>文件夹名称前面的<code>.</code>。然后向文件中粘贴下面的代码：</p>
-<figure class="highlight yml"><figcaption><span>update-my-profile.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Trigger</span> <span class="string">Profile</span> <span class="string">Update</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="string">page_build</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">trigger-my-profile-update:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Dispatch</span> <span class="string">event</span> <span class="string">to</span> <span class="string">Profile</span> <span class="string">Repo</span></span><br><span class="line">      <span class="attr">env:</span></span><br><span class="line">        <span class="attr">GITHUB_PROFILE_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PAT_TOKEN_PROFILE</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        curl -X POST \</span></span><br><span class="line"><span class="string">        -H &quot;Authorization: token $GITHUB_PROFILE_TOKEN&quot; \</span></span><br><span class="line"><span class="string">        -H &quot;Accept: application/vnd.github.everest-preview+json&quot; \</span></span><br><span class="line"><span class="string">        https://api.github.com/repos/[USERNAME]/[USERNAME]/dispatches \</span></span><br><span class="line"><span class="string">        --data &#x27;&#123;&quot;event_type&quot;: &quot;update-my-profile&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/Yb8BGd2ePlEMWRn.webp" alt="1-3.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/qzHiYgNlOWtyVLw.webp" alt="4-6.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/PItMG7ikaYb3CqF.webp" alt="a.webp"></div></div></div>
 
-<p>这个Workflow的作用是，当博客的Page成功构建后，通过我们先前设置的Repository Secret获取对仓库的完全访问权限，然后通过<code>repository_dispatch</code>事件触发Profile仓库中的另一个Workflow，即update-my-profile。</p>
-<div class="note warning"><p>注意事项：</p>
-<ul>
-<li>将倒数第二行中的两个<code>[USERNAME]</code>替换为你自己的GitHub用户名，去掉两边的中括号</li>
-<li>GITHUB_PROFILE_TOKEN后面到数值就是我们前面设置的Repository Secret</li>
+<h1 id="配置Workflow"><a href="#配置Workflow" class="headerlink" title="配置Workflow"></a>配置Workflow</h1><p>接下来让我们配置两个仓库的Workflow，博客仓库只需要简单的设置一个Workflow，而Profile仓库需要再创建一个脚本文件，并向README文件中添加标识符。</p>
+<h2 id="Profile仓库"><a href="#Profile仓库" class="headerlink" title="Profile仓库"></a>Profile仓库</h2><p>首先是Profile仓库的设置，先将仓库Clone到本地，在本地编辑完成后再推送到GitHub。</p>
+<h3 id="创建Workflow"><a href="#创建Workflow" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><p>在本地目录中创建<code>./source/.github/workflows/update-readme.yml</code>文件，<code>./.github/workflows/</code>是GitHub Actions默认用于存放Workflow文件的路径，注意新建文件夹时不要漏掉<code>.github</code>文件夹名称前面的<code>.</code>。将下面的代码复制到这个文件中。</p>
+<figure class="highlight yml"><figcaption><span>update-readme.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">Latest</span> <span class="string">Blog</span> <span class="string">Posts</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">update-my-profile</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="number">14</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">node-fetch</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">node-fetch</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">feedparser</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">feedparser</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">node</span> <span class="string">update-readme.mjs</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Commit</span> <span class="string">and</span> <span class="string">push</span> <span class="string">changes</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        git config --local user.email &quot;github-actions@github.com&quot;</span></span><br><span class="line"><span class="string">        git config --local user.name &quot;github-actions&quot;</span></span><br><span class="line"><span class="string">        git add README.md</span></span><br><span class="line"><span class="string">        git commit -m &quot;Update README with latest blog posts&quot;</span></span><br><span class="line"><span class="string">        git push</span></span><br></pre></td></tr></table></figure>
+
+<p>这个Workflow的作用如下：</p>
+<ol>
+<li>在收到博客仓库发送的<code>repository_dispatch</code>事件后开始运行</li>
+<li>安装与设置Node相关环境<ul>
+<li>这里我使用的Node 14，原因是后续新版本的Node会导致GitHub Actions在运行过程中莫名其妙的终止，没找到具体原因。</li>
 </ul>
-</div>
-
+</li>
+<li>安装所需的Node.js模块，这里我们用到了<code>node-fetch</code>与<code>feedparser</code><ul>
+<li><code>node-fetch</code> 是一个用于在 Node.js 环境中进行 HTTP 请求的库。它提供了一种简单的方式来发起 HTTP 请求并处理响应，类似于浏览器中的 Fetch API。</li>
+<li><code>feedparser</code> 是一个用于解析 RSS 和 Atom 格式的订阅源（feed），并将其转化为易于处理的 JavaScript 对象的 Node.js 模块。</li>
+</ul>
+</li>
+<li>运行Node脚本</li>
+<li>提交并推送相关更改</li>
+</ol>
 <details class="note primary"><summary><p>关于repository_dispatch</p>
 </summary>
 <p><code>repository_dispatch</code> 是 GitHub Actions 中的一种事件类型，它允许你手动触发仓库中定义的 Workflow。这个功能对于需要在特定情况下手动启动自动化任务的场景非常有用。</p>
@@ -6386,19 +6399,103 @@
 
 </details>
 
-<h3 id="修改Hexo配置文件"><a href="#修改Hexo配置文件" class="headerlink" title="修改Hexo配置文件"></a>修改Hexo配置文件</h3><p>如果你在此时尝试重新生成博客静态文件并部署到远程仓库，你会发现GitHub Actions中并没有出现此前设置的Workflow，这是因为前缀为.的文件和文件夹在 Unix 和 Linux 系统中被视为隐藏文件，hexo g与hexo d两条命令会默认忽略这些隐藏文件，所以用于存放我们Workflow的文件夹<code>.github</code>被视为隐藏文件忽略掉了。此外，hexo在生成静态文件时会将yml格式的文件转换为GitHub Actions不支持的json格式，也会导致此前设置的Workflow失效。接下来我们会通过修改hexo的配置文件让hexo在生成和部署过程中捎带上我们的Workflow。</p>
-<h4 id="include-设置"><a href="#include-设置" class="headerlink" title="include 设置"></a>include 设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Include / Exclude file(s)</span></span><br><span class="line"><span class="comment">## include:/exclude: options only apply to the &#x27;source/&#x27; folder</span></span><br><span class="line"><span class="attr">include:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="attr">ignore:</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置Workflow读写权限"><a href="#设置Workflow读写权限" class="headerlink" title="设置Workflow读写权限"></a>设置Workflow读写权限</h3><p>默认情况下，Workflow对所在仓库的文件只有读取权限，写入权限需要手动开启，步骤如下：</p>
+<ol>
+<li>打开Profile仓库的<code>Settings</code></li>
+<li>点击左侧边栏中<code>Actions</code>选项下的<code>General</code>选项</li>
+<li>将<code>Workflow permissions</code>修改为<code>Read and write permissions</code></li>
+<li>点击<code>Save</code></li>
+</ol>
+<p><img data-src="https://s2.loli.net/2023/10/19/jUoBOJmAY9utS8h.webp" alt="1-4.webp"></p>
+<h3 id="创建Node脚本"><a href="#创建Node脚本" class="headerlink" title="创建Node脚本"></a>创建Node脚本</h3><p>在Profile仓库的根目录中创建<code>update-readme.mjs</code>文件，注意文件格式是<code>mjs</code>而不是<code>js</code>。</p>
+<p>我起初使用的是js格式，但是在GitHub Actions运行时会因为无法导入模块而报错，原因未知。</p>
+<details class="note primary"><summary><p>关于js与mjs格式</p>
+</summary>
+<p><code>.mjs</code> 文件和 <code>.js</code> 文件都是 JavaScript 文件的扩展名，但它们有一些关键的区别：</p>
+<ol>
+<li><p><strong>模块类型：</strong></p>
+<ul>
+<li><code>.mjs</code> 文件被视为 ECMAScript 模块（ES 模块），这意味着它们使用了 JavaScript 的原生模块系统，可以使用 <code>import</code> 和 <code>export</code> 语句来导入和导出模块。ES 模块是 JavaScript 的官方模块标准，通常用于现代 JavaScript 开发。</li>
+<li><code>.js</code> 文件可以是传统 CommonJS 模块（Node.js 模块），这些模块使用 <code>require()</code> 和 <code>module.exports</code> 语法来导入和导出模块。CommonJS 是 Node.js 最早引入的模块系统，但也可以在浏览器中使用，通过工具如 Browserify 或 Webpack 来支持。</li>
+</ul>
+</li>
+<li><p><strong>默认行为：</strong></p>
+<ul>
+<li>Node.js 中，默认情况下，<code>.js</code> 文件被视为 CommonJS 模块，除非在代码中明确指定了使用 ES 模块。这意味着你可以省略文件扩展名（如 <code>.js</code>），并且 Node.js 会自动查找 CommonJS 模块。</li>
+<li><code>.mjs</code> 文件则默认被视为 ES 模块，你需要在导入或运行时明确指定文件扩展名（如 <code>import foo from &#39;./module.mjs&#39;</code>）。</li>
+</ul>
+</li>
+<li><p><strong>浏览器支持：</strong></p>
+<ul>
+<li>浏览器普遍支持 ES 模块，因此，你可以在浏览器环境中使用 <code>.mjs</code> 文件作为模块。</li>
+<li>浏览器对 CommonJS 模块的支持有限，通常需要使用工具（如 Browserify）来将 CommonJS 模块转化为可在浏览器中运行的代码。</li>
+</ul>
+</li>
+<li><p><strong>Node.js 版本：</strong></p>
+<ul>
+<li><code>.mjs</code> 文件需要 Node.js 13.2.0 版本或更高版本的运行环境，以支持 ES 模块的默认行为。在早期版本的 Node.js 中，你需要显式启用 ES 模块支持。</li>
+<li><code>.js</code> 文件则在早期版本的 Node.js 中被广泛支持，无需特殊配置。</li>
+</ul>
+</li>
+</ol>
+<p>总之，选择使用 <code>.mjs</code> 或 <code>.js</code> 取决于你的项目需求和目标环境。如果你在 Node.js 中并且想要使用 ES 模块，可以选择使用 <code>.mjs</code> 文件。如果你需要在浏览器中使用模块，ES 模块是更常见的选择，但你也可以将 CommonJS 模块转化为 ES 模块。</p>
+<blockquote>
+<p>源自Chat GPT</p>
+</blockquote>
 
-<h4 id="skip-render设置"><a href="#skip-render设置" class="headerlink" title="skip render设置"></a>skip render设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br></pre></td></tr></table></figure>
+</details>
 
-
-<h4 id="hexo-git-deploy插件设置"><a href="#hexo-git-deploy插件设置" class="headerlink" title="hexo git deploy插件设置"></a>hexo git deploy插件设置</h4><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Siriusq/en.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Profile仓库"><a href="#Profile仓库" class="headerlink" title="Profile仓库"></a>Profile仓库</h2><h3 id="创建Workflow-1"><a href="#创建Workflow-1" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><figure class="highlight yml"><figcaption><span>update-readme.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">Latest</span> <span class="string">Blog</span> <span class="string">Posts</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">update-my-profile</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="number">14</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">node-fetch</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">node-fetch</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">feedparser</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">feedparser</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">node</span> <span class="string">update-readme.mjs</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Commit</span> <span class="string">and</span> <span class="string">push</span> <span class="string">changes</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        git config --local user.email &quot;github-actions@github.com&quot;</span></span><br><span class="line"><span class="string">        git config --local user.name &quot;github-actions&quot;</span></span><br><span class="line"><span class="string">        git add README.md</span></span><br><span class="line"><span class="string">        git commit -m &quot;Update README with latest blog posts&quot;</span></span><br><span class="line"><span class="string">        git push</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置action的读写权限"><a href="#设置action的读写权限" class="headerlink" title="设置action的读写权限"></a>设置action的读写权限</h3><h3 id="创建对应node脚本"><a href="#创建对应node脚本" class="headerlink" title="创建对应node脚本"></a>创建对应node脚本</h3><p>最好使用node14，因为16和18都会报错<br>解释mjs，以及导入node fetch的正确方式<br>解释xml相关插件的必要性</p>
+<p>脚本代码如下：</p>
 <figure class="highlight mjs"><figcaption><span>update-readme.mjs</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> fetch <span class="keyword">from</span> <span class="string">&#x27;node-fetch&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; readFile, writeFile &#125; <span class="keyword">from</span> <span class="string">&#x27;fs/promises&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">FeedParser</span> <span class="keyword">from</span> <span class="string">&#x27;feedparser&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">updateReadme</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> rssUrl = <span class="string">&#x27;https://siriusq.top/en/atom.xml&#x27;</span>;  <span class="comment">// 替换成你的博客的 RSS Feed 链接</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(rssUrl);</span><br><span class="line">    <span class="keyword">const</span> feedparser = <span class="keyword">new</span> <span class="title class_">FeedParser</span>();</span><br><span class="line"></span><br><span class="line">    response.<span class="property">body</span>.<span class="title function_">pipe</span>(feedparser);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> posts = [];</span><br><span class="line"></span><br><span class="line">    feedparser.<span class="title function_">on</span>(<span class="string">&#x27;readable&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> item;</span><br><span class="line">      <span class="keyword">while</span> ((item = <span class="variable language_">this</span>.<span class="title function_">read</span>())) &#123;</span><br><span class="line">        <span class="keyword">if</span> (posts.<span class="property">length</span> &lt; <span class="number">7</span>) &#123; <span class="comment">// 获取前7篇博文</span></span><br><span class="line">          <span class="keyword">const</span> title = item.<span class="property">title</span>;</span><br><span class="line">          <span class="keyword">const</span> link = item.<span class="property">link</span>;</span><br><span class="line">          posts.<span class="title function_">push</span>(<span class="string">`- [<span class="subst">$&#123;title&#125;</span>](<span class="subst">$&#123;link&#125;</span>)`</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    feedparser.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (posts.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 读取 README 文件</span></span><br><span class="line">        <span class="keyword">const</span> readme = <span class="keyword">await</span> <span class="title function_">readFile</span>(<span class="string">&#x27;README.md&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 更新 README 文件中的标识符内容</span></span><br><span class="line">        <span class="keyword">const</span> updatedReadme = readme.<span class="title function_">replace</span>(</span><br><span class="line">          <span class="regexp">/&lt;!-- Start_Position --&gt;.*&lt;!-- End_Position --&gt;/</span>s,</span><br><span class="line">          <span class="string">`&lt;!-- Start_Position --&gt;\n<span class="subst">$&#123;posts.join(<span class="string">&#x27;\n&#x27;</span>)&#125;</span>\n&lt;!-- End_Position --&gt;`</span></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写回 README 文件</span></span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">writeFile</span>(<span class="string">&#x27;README.md&#x27;</span>, updatedReadme);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;README 更新成功！&#x27;</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;未能找到博文。&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;更新失败:&#x27;</span>, error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">updateReadme</span>();</span><br></pre></td></tr></table></figure>
-<h3 id="向README添加标识符"><a href="#向README添加标识符" class="headerlink" title="向README添加标识符"></a>向README添加标识符</h3><figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="section">### 📝 Latest Blog Posts</span></span><br><span class="line"></span><br><span class="line">&lt;!-- Start<span class="emphasis">_Position --&gt;</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Quick Setup Guide for LaTeX in VSCode</span>](<span class="link">https://siriusq.top/en/latex-vscode-quick-config.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Accessing Windows Shared Folders on iPhone</span>](<span class="link">https://siriusq.top/en/ios-windows-file-share.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Stellaris Mod Creation and Upload Log</span>](<span class="link">https://siriusq.top/en/stellaris-mod.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Bongo Paw Clicker Development Summary</span>](<span class="link">https://siriusq.top/en/bongo-paw-blicker.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Enabling Integrated Graphics with Discrete Graphics Installed</span>](<span class="link">https://siriusq.top/en/turn-on-igpu.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">MacBook Pro Headless</span>](<span class="link">https://siriusq.top/en/macbook-pro-headless.html</span>)</span></span><br><span class="line"><span class="emphasis">&lt;!-- End_</span>Position --&gt;</span><br></pre></td></tr></table></figure>
-]]></content>
+
+<div class="note warning"><p>注意事项：</p>
+<ul>
+<li>将<code>const rssUrl = &#39;https://siriusq.top/en/atom.xml&#39;</code>的值替换成你的博客的 RSS Feed 链接</li>
+<li><code>if (posts.length &lt; 7)</code>用于设置展示的博文数量，默认是7篇</li>
+</ul>
+</div>
+
+
+<h3 id="向README添加标识符"><a href="#向README添加标识符" class="headerlink" title="向README添加标识符"></a>向README添加标识符</h3><p>接下来需要我们在Profile仓库的README文件中添加两个标识符，当Workflow被触发后，两个标识符中间的内容就会自动更新为最新的博文标题与链接。</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">&lt;!-- Start<span class="emphasis">_Position --&gt;</span></span><br><span class="line"><span class="emphasis">&lt;!-- End_</span>Position --&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例如下：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">Other Contents......</span><br><span class="line"></span><br><span class="line"><span class="section">### 📝 Latest Blog Posts</span></span><br><span class="line">The following are my latest 7 blog posts:</span><br><span class="line"></span><br><span class="line">&lt;!-- Start<span class="emphasis">_Position --&gt;</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Quick Setup Guide for LaTeX in VSCode</span>](<span class="link">https://siriusq.top/en/latex-vscode-quick-config.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Accessing Windows Shared Folders on iPhone</span>](<span class="link">https://siriusq.top/en/ios-windows-file-share.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Stellaris Mod Creation and Upload Log</span>](<span class="link">https://siriusq.top/en/stellaris-mod.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Bongo Paw Clicker Development Summary</span>](<span class="link">https://siriusq.top/en/bongo-paw-blicker.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">Enabling Integrated Graphics with Discrete Graphics Installed</span>](<span class="link">https://siriusq.top/en/turn-on-igpu.html</span>)</span></span><br><span class="line"><span class="emphasis">- [<span class="string">MacBook Pro Headless</span>](<span class="link">https://siriusq.top/en/macbook-pro-headless.html</span>)</span></span><br><span class="line"><span class="emphasis">&lt;!-- End_</span>Position --&gt;</span><br><span class="line"></span><br><span class="line">Other Contents......</span><br></pre></td></tr></table></figure>
+
+<p>最后，将所做的更改推送到GitHub中</p>
+<h2 id="博客仓库"><a href="#博客仓库" class="headerlink" title="博客仓库"></a>博客仓库</h2><h3 id="创建Workflow-1"><a href="#创建Workflow-1" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><p>博客仓库的Workflow同样需要在本地目录中创建，然后再推送到GitHub仓库，因为Hexo框架在部署时会完全替换掉GitHub远程仓库中的所有文件，包括自定义的GitHub Actions。</p>
+<p>首先在博客<code>source</code>目录下创建<code>.github/workflows/update-my-profile.yml</code>文件，然后粘贴下面的代码：</p>
+<figure class="highlight yml"><figcaption><span>update-my-profile.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Trigger</span> <span class="string">Profile</span> <span class="string">Update</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="string">page_build</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">trigger-my-profile-update:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Dispatch</span> <span class="string">event</span> <span class="string">to</span> <span class="string">Profile</span> <span class="string">Repo</span></span><br><span class="line">      <span class="attr">env:</span></span><br><span class="line">        <span class="attr">GITHUB_PROFILE_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PAT_TOKEN_PROFILE</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        curl -X POST \</span></span><br><span class="line"><span class="string">        -H &quot;Authorization: token $GITHUB_PROFILE_TOKEN&quot; \</span></span><br><span class="line"><span class="string">        -H &quot;Accept: application/vnd.github.everest-preview+json&quot; \</span></span><br><span class="line"><span class="string">        https://api.github.com/repos/[USERNAME]/[USERNAME]/dispatches \</span></span><br><span class="line"><span class="string">        --data &#x27;&#123;&quot;event_type&quot;: &quot;update-my-profile&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个Workflow的作用是，当博客的Page成功构建后，通过我们先前设置的Repository Secret获取对仓库的完全访问权限，然后通过<code>repository_dispatch</code>事件触发Profile仓库中的另一个Workflow，即我们先前设置的<code>update-my-profile</code>。</p>
+<div class="note warning"><p>注意事项：</p>
+<ul>
+<li>将倒数第二行中的两个<code>[USERNAME]</code>替换为你自己的GitHub用户名，去掉两边的中括号</li>
+<li><code>GITHUB_PROFILE_TOKEN</code>变量的数值就是我们前面设置的<code>Secret</code>的<code>Name</code></li>
+</ul>
+</div>
+
+<h3 id="修改Hexo框架配置文件"><a href="#修改Hexo框架配置文件" class="headerlink" title="修改Hexo框架配置文件"></a>修改Hexo框架配置文件</h3><p>如果你在此时尝试重新生成博客静态文件并部署到远程仓库，你会发现GitHub Actions中并没有出现刚刚设置的Workflow，这是因为前缀为<code>.</code>的文件和文件夹在 Unix 和 Linux 系统中被视为隐藏文件，<code>hexo g</code>与<code>hexo d</code>两条命令会默认忽略这些隐藏文件，所以用于存放我们Workflow的文件夹<code>.github</code>被视为隐藏文件忽略掉了。接下来我们会通过修改配置文件让Hexo框架在生成和部署过程中捎带上我们的Workflow。</p>
+<p>首先打开Hexo框架的配置文件<code>_config.yml</code>，通过搜索定位到<code>include</code>设置，添加Workflow文件的路径</p>
+<figure class="highlight yml"><figcaption><span>Workflow文件路径</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="string">.github/workflows/update-my-profile.yml</span></span><br></pre></td></tr></table></figure>
+
+<p>示例如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Include / Exclude file(s)</span></span><br><span class="line"><span class="comment">## include:/exclude: options only apply to the &#x27;source/&#x27; folder</span></span><br><span class="line"><span class="attr">include:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line"><span class="attr">ignore:</span></span><br></pre></td></tr></table></figure>
+
+<p>然后通过搜索定位到<code>deploy</code>设置，在最下面添加一行<code>ignore_hidden: false</code>，示例如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Siriusq/en.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，Hexo框架在生成静态文件时会将yml格式的文件转换为GitHub Actions不支持的json格式，这也会导致此前设置的Workflow失效。接下来需要我们将workflow文件路径添加到<code>skip_render</code>中，这样Hexo框架在生成文件时就会将它原封不动的复制到public文件夹中。示例如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br></pre></td></tr></table></figure>
+
+<p>保存更改，然后运行<code>hexo cl</code>与<code>hexo g -d</code>命令，不出意外的话几分钟后就能看到自动更新后的Profile了。</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/oMWf2XS6GavL8jt.webp" alt="21.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/4WpxQZuj6IOmcDo.webp" alt="22.webp"></div></div></div>
+
+
+<div class="note default"><p>PS：我本来想让Chat GPT给我出一套包含代码的完整的解决方案，就是我只需要复制粘贴就能迅速完成任务的那种。但是吧，Chat GPT让我深刻体会到了代码生成5分钟，Debug一整天的无奈，偷懒大失败。</p>
+<p>下图就是我写这篇博文时的心理状态</p>
+<p><img data-src="https://s2.loli.net/2023/10/19/qs9INfATvKBamn2.webp" alt="how-openai-chatgpt-helps-software-development.webp"></p>
+</div>]]></content>
       <categories>
         <category>网站配置</category>
       </categories>
@@ -8569,77 +8666,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英国行李清单</title>
-    <url>/%E8%8B%B1%E5%9B%BD%E8%A1%8C%E6%9D%8E%E6%B8%85%E5%8D%95.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">结合本鸽子逛了三个月英国超市的经历，整理了一下来英国建议带的东西 && 不建议带的东西，针对不建议带的东西列出了购买方式</blockquote>
-
-<span id="more"></span>
-
-<h1 id="建议带"><a href="#建议带" class="headerlink" title="建议带"></a>建议带</h1><p>这一类一般是在英国很难买到，或者是价格高得离谱的东西</p>
-<ul>
-<li>挂钩 ⭐⭐⭐⭐⭐ 英国挂钩的价格就真的离谱，一个的价格我在淘宝能买一盒</li>
-<li>围裙 ⭐⭐⭐⭐ 价格同样离谱，一样的钱淘宝能买十条</li>
-<li>油壶 ⭐⭐⭐ 找遍了各个超市，最后在一家街角小卖店里找到了，但是非常难用，会漏油</li>
-<li>备用手机 ⭐⭐⭐⭐ 万一手机坏了还能撑一下，这边买手机可太贵了</li>
-<li>理发器 ⭐⭐⭐ 这边理一次发的价格就能买个理发器了，而且疫情期间不太敢让理发师上门，我就老老实实给自己理了一个狗啃头</li>
-<li>中标插排 ⭐⭐⭐⭐ 基本只有中超有，价格偏贵</li>
-<li>转接插头 ⭐⭐⭐⭐ 英超虽然有，但是价格离谱</li>
-<li>冲锋衣 ⭐⭐⭐⭐⭐ 妖风 + 下雨天出门必备，这边服装店目前不开门</li>
-<li>SIM卡针 ⭐⭐⭐⭐ 不占地方</li>
-<li>充电宝 ⭐⭐⭐⭐ 这边价格偏高</li>
-</ul>
-<h1 id="可带可不带"><a href="#可带可不带" class="headerlink" title="可带可不带"></a>可带可不带</h1><p>这一类一般是体积较小，重量较轻，可有可无或者在英国也能买到且价格不离谱的东西</p>
-<ul>
-<li>路由器 ⭐⭐⭐ 需要的话还是自己带一个，英国价格有点离谱</li>
-<li>网线 ⭐ 价格差不多</li>
-<li>USB小风扇 ⭐⭐⭐ 英国宿舍基本没空调，夏天还是会热的</li>
-<li>温湿度计 ⭐ 有需要可以带一个看下室内温湿度，这边价格比较高</li>
-<li>肥皂盒 ⭐ 一磅店就有，只不过款式不太好看</li>
-<li>数据线 ⭐⭐ 编织线的价格和国内差不多</li>
-<li>台灯 ⭐ 我宿舍书桌上面有两个巨亮的射灯，所以台灯就华丽丽的吃灰了，这边的台灯价格稍贵</li>
-<li>相机三脚架 ⭐⭐ 有需要的可以带一个轻便的，这边价格基本翻倍了</li>
-<li>小加湿器 ⭐⭐ 小的话可以带一个，eBay上最便宜的也要7磅，还没一卷卫生纸大</li>
-<li>筷子 ⭐ 中超就有，价格可以接受</li>
-<li>折叠盆 ⭐ 这边盆子质量稍差，但也不是不能用，而且中超也有国内那种盆子</li>
-<li>保温杯 ⭐ 价格和国内差不多</li>
-<li>指甲钳 ⭐⭐ 有得卖，但是不清楚质量如何</li>
-<li>电池 ⭐ 这边价格稍高，但也可以接受，充电电池可以带，干电池就算了吧</li>
-<li>牙杯 ⭐ 一磅店的塑料杯子就能用hhh</li>
-<li>削皮器 ⭐ 中超英超都有，价格不贵</li>
-<li>鞋刷 ⭐ 同上</li>
-<li>多功能刀 ⭐ 相当于临时的工具箱吧，这边价格很贵</li>
-<li>U盘 ⭐ 价格不算很贵</li>
-<li>拖鞋⭐⭐⭐ 这边的款式有点丑的</li>
-<li>钢化膜 ⭐⭐ 价格小贵</li>
-<li>笔记本支架 ⭐⭐ 预防颈椎病（狗头）</li>
-<li>备用眼镜 ⭐ 来了之后可以白嫖的（再次狗头）</li>
-<li>洗衣袋 ⭐⭐ 这边价格有点贵</li>
-</ul>
-<h1 id="不建议带"><a href="#不建议带" class="headerlink" title="不建议带"></a>不建议带</h1><p>这一类就是体积太大，重量太沉，或者在英国能以更低价格买到的东西</p>
-<ul>
-<li>肥皂 ❌ homebargain有的买， 80p两块</li>
-<li>电饭煲 ❌❌❌ 这个是真的没必要，收二手就可以，自己带的话又重又占地方，还要浪费一个转换插头，收不到二手网购也差不多价格，可能没有国内那么丰富的功能</li>
-<li>电吹风 ❌❌❌ 同上</li>
-<li>大加湿器 ❌❌❌ 同上</li>
-<li>折叠水壶 ❌ 用几次就吃灰的东西，落地之后直接去大点的超市买烧水壶就可以，或者提前网购</li>
-<li>菜刀 ❌❌ 太沉了，中超就有，价格可以接受</li>
-<li>电动牙刷刷头 ❌ 别的不知道，反正欧乐B的比国内便宜不少</li>
-<li>雨伞 ❌ 遇到妖风基本报废，淘宝那种抗台风的可以试一下？</li>
-<li>锅碗瓢盆 ❌❌❌ 真的没必要，大点的超市都有，样式也还行</li>
-<li>被子 ❌❌❌ 除非行李箱空一半（手动狗头）</li>
-<li>纱窗 ❌❌ 亚马逊就有，而且学生公寓的窗子基本只能开一道缝隙，根本就装不上</li>
-</ul>
-]]></content>
-      <categories>
-        <category>留学</category>
-      </categories>
-      <tags>
-        <tag>留学</tag>
-        <tag>攻略</tag>
-        <tag>英国</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英国落地日记</title>
     <url>/%E8%8B%B1%E5%9B%BD%E8%90%BD%E5%9C%B0%E6%97%A5%E8%AE%B0.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">落地英国一个月的老鸽子又回来了~~~这可能又是一篇巨长的博文，打算记录下在英国这一年的生活，内含BRP、GP、银行卡等攻略，或许还能放个Vlog？（咕咕咕）</blockquote>
@@ -9156,6 +9182,77 @@ OFFICIAL
 <p>有了卡之后预约的时候就选择苏格兰历史会员票，然后付款页面就是0磅咯~</p>
 <h1 id="TBC。。。"><a href="#TBC。。。" class="headerlink" title="TBC。。。"></a>TBC。。。</h1><p>咕咕咕咕咕咕，牙医注册的我放弃了，因为白嫖的补牙材料好像是黑色的，不如回国搞了hhh</p>
 <h1 id="KC-Room-Tour"><a href="#KC-Room-Tour" class="headerlink" title="KC Room Tour"></a>KC Room Tour</h1><p>这个可能要无限期咕咕咕了，公寓staff来把空房间的门都给锁上了，进不去没法拍，只能等室友来了（淦*4）</p>
+]]></content>
+      <categories>
+        <category>留学</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>攻略</tag>
+        <tag>英国</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英国行李清单</title>
+    <url>/%E8%8B%B1%E5%9B%BD%E8%A1%8C%E6%9D%8E%E6%B8%85%E5%8D%95.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">结合本鸽子逛了三个月英国超市的经历，整理了一下来英国建议带的东西 && 不建议带的东西，针对不建议带的东西列出了购买方式</blockquote>
+
+<span id="more"></span>
+
+<h1 id="建议带"><a href="#建议带" class="headerlink" title="建议带"></a>建议带</h1><p>这一类一般是在英国很难买到，或者是价格高得离谱的东西</p>
+<ul>
+<li>挂钩 ⭐⭐⭐⭐⭐ 英国挂钩的价格就真的离谱，一个的价格我在淘宝能买一盒</li>
+<li>围裙 ⭐⭐⭐⭐ 价格同样离谱，一样的钱淘宝能买十条</li>
+<li>油壶 ⭐⭐⭐ 找遍了各个超市，最后在一家街角小卖店里找到了，但是非常难用，会漏油</li>
+<li>备用手机 ⭐⭐⭐⭐ 万一手机坏了还能撑一下，这边买手机可太贵了</li>
+<li>理发器 ⭐⭐⭐ 这边理一次发的价格就能买个理发器了，而且疫情期间不太敢让理发师上门，我就老老实实给自己理了一个狗啃头</li>
+<li>中标插排 ⭐⭐⭐⭐ 基本只有中超有，价格偏贵</li>
+<li>转接插头 ⭐⭐⭐⭐ 英超虽然有，但是价格离谱</li>
+<li>冲锋衣 ⭐⭐⭐⭐⭐ 妖风 + 下雨天出门必备，这边服装店目前不开门</li>
+<li>SIM卡针 ⭐⭐⭐⭐ 不占地方</li>
+<li>充电宝 ⭐⭐⭐⭐ 这边价格偏高</li>
+</ul>
+<h1 id="可带可不带"><a href="#可带可不带" class="headerlink" title="可带可不带"></a>可带可不带</h1><p>这一类一般是体积较小，重量较轻，可有可无或者在英国也能买到且价格不离谱的东西</p>
+<ul>
+<li>路由器 ⭐⭐⭐ 需要的话还是自己带一个，英国价格有点离谱</li>
+<li>网线 ⭐ 价格差不多</li>
+<li>USB小风扇 ⭐⭐⭐ 英国宿舍基本没空调，夏天还是会热的</li>
+<li>温湿度计 ⭐ 有需要可以带一个看下室内温湿度，这边价格比较高</li>
+<li>肥皂盒 ⭐ 一磅店就有，只不过款式不太好看</li>
+<li>数据线 ⭐⭐ 编织线的价格和国内差不多</li>
+<li>台灯 ⭐ 我宿舍书桌上面有两个巨亮的射灯，所以台灯就华丽丽的吃灰了，这边的台灯价格稍贵</li>
+<li>相机三脚架 ⭐⭐ 有需要的可以带一个轻便的，这边价格基本翻倍了</li>
+<li>小加湿器 ⭐⭐ 小的话可以带一个，eBay上最便宜的也要7磅，还没一卷卫生纸大</li>
+<li>筷子 ⭐ 中超就有，价格可以接受</li>
+<li>折叠盆 ⭐ 这边盆子质量稍差，但也不是不能用，而且中超也有国内那种盆子</li>
+<li>保温杯 ⭐ 价格和国内差不多</li>
+<li>指甲钳 ⭐⭐ 有得卖，但是不清楚质量如何</li>
+<li>电池 ⭐ 这边价格稍高，但也可以接受，充电电池可以带，干电池就算了吧</li>
+<li>牙杯 ⭐ 一磅店的塑料杯子就能用hhh</li>
+<li>削皮器 ⭐ 中超英超都有，价格不贵</li>
+<li>鞋刷 ⭐ 同上</li>
+<li>多功能刀 ⭐ 相当于临时的工具箱吧，这边价格很贵</li>
+<li>U盘 ⭐ 价格不算很贵</li>
+<li>拖鞋⭐⭐⭐ 这边的款式有点丑的</li>
+<li>钢化膜 ⭐⭐ 价格小贵</li>
+<li>笔记本支架 ⭐⭐ 预防颈椎病（狗头）</li>
+<li>备用眼镜 ⭐ 来了之后可以白嫖的（再次狗头）</li>
+<li>洗衣袋 ⭐⭐ 这边价格有点贵</li>
+</ul>
+<h1 id="不建议带"><a href="#不建议带" class="headerlink" title="不建议带"></a>不建议带</h1><p>这一类就是体积太大，重量太沉，或者在英国能以更低价格买到的东西</p>
+<ul>
+<li>肥皂 ❌ homebargain有的买， 80p两块</li>
+<li>电饭煲 ❌❌❌ 这个是真的没必要，收二手就可以，自己带的话又重又占地方，还要浪费一个转换插头，收不到二手网购也差不多价格，可能没有国内那么丰富的功能</li>
+<li>电吹风 ❌❌❌ 同上</li>
+<li>大加湿器 ❌❌❌ 同上</li>
+<li>折叠水壶 ❌ 用几次就吃灰的东西，落地之后直接去大点的超市买烧水壶就可以，或者提前网购</li>
+<li>菜刀 ❌❌ 太沉了，中超就有，价格可以接受</li>
+<li>电动牙刷刷头 ❌ 别的不知道，反正欧乐B的比国内便宜不少</li>
+<li>雨伞 ❌ 遇到妖风基本报废，淘宝那种抗台风的可以试一下？</li>
+<li>锅碗瓢盆 ❌❌❌ 真的没必要，大点的超市都有，样式也还行</li>
+<li>被子 ❌❌❌ 除非行李箱空一半（手动狗头）</li>
+<li>纱窗 ❌❌ 亚马逊就有，而且学生公寓的窗子基本只能开一道缝隙，根本就装不上</li>
+</ul>
 ]]></content>
       <categories>
         <category>留学</category>
