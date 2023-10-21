@@ -566,51 +566,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github无法加载图片解决方法</title>
-    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
-
-<span id="more"></span>
-
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
-<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
-<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
-<ul>
-<li>在开始菜单 Windows 图标处右键单击</li>
-<li>选择 Windows PowerShell （管理员）</li>
-<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
-<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
-</ul>
-</li>
-<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
-<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
-<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
-<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
-<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
-<li>Windows：<code>ipconfig /flushdns</code></li>
-<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
-<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
-<ul>
-<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
-<li>逐条输入 Hosts 中的相关域名</li>
-<li>用返回的新 IP 地址替换掉原来的地址</li>
-<li>保存</li>
-</ul>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Win10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Clash for Windows:从入门到摆烂</title>
     <url>/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录</blockquote>
@@ -791,6 +746,51 @@
         <tag>GFW</tag>
         <tag>Freedom</tag>
         <tag>Win11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github无法加载图片解决方法</title>
+    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
+
+<span id="more"></span>
+
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
+<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
+<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
+<ul>
+<li>在开始菜单 Windows 图标处右键单击</li>
+<li>选择 Windows PowerShell （管理员）</li>
+<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
+<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
+</ul>
+</li>
+<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
+<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
+<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
+<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
+<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
+<li>Windows：<code>ipconfig /flushdns</code></li>
+<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
+<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
+<ul>
+<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
+<li>逐条输入 Hosts 中的相关域名</li>
+<li>用返回的新 IP 地址替换掉原来的地址</li>
+<li>保存</li>
+</ul>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Win10</tag>
       </tags>
   </entry>
   <entry>
@@ -1902,6 +1902,85 @@
       </tags>
   </entry>
   <entry>
+    <title>MacBook Pro 路易十六联名款</title>
+    <url>/MacBookProHeadless.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">论如何用最少的钱买一台Mac</blockquote>
+
+<p><img data-src="https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg" alt="MBPHeadless.jpg"></p>
+<span id="more"></span>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于黑苹果的升级维护实在是麻烦，我开始盘算怎么整一台便宜的Mac(果然一切黑苹果的尽头都是白苹果)。目前官网最便宜的白苹果是M2芯片的Mac Mini，起售价4499元，配置上还是苹果祖传的8G内存和256G硬盘，16G内存的需要5999，超预算太多。然后又跑到了闲鱼，不得不感慨苹果的产品是真的保值啊，8G内存M1芯片的Mac Mini二手售价仍然在3000元左右，16G内存的在4000元左右。二手Macbook的价格基本都在5000元以上，哪怕是最低配的8G内存128G硬盘的17款MBP也要2000多元。不过闲鱼神奇的推荐算法让我发现了一个好东西：MacBook Mini，又称Macbook无头骑士，讲人话就是没有屏幕的二手Macbook，售价1000多元。因为我的使用场景就是写代码，所以刚需就是16G及以上的内存。此外我的笔记本一般都是外接显示器使用，所以有没有屏幕并不重要。这么一想，1000多就能拥有白苹果+大号触摸板+音响+Touch Bar，好像有点香。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>便宜，这是最大的优点</li>
+<li>相较于黑苹果，它不需要折腾</li>
+<li>自带触控板、键盘、音响、指纹识别</li>
+</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>二手产品，肯定会有瑕疵</li>
+<li>肯定被拆过机，因为要取下屏幕，零件也有可能被更换过</li>
+<li>键盘、电池出问题的可能性较高</li>
+<li>保修约等于不存在</li>
+<li>需要外接显示器才能使用</li>
+<li>型号较老，大部分都是16-19款使用Intel处理器的，M1的基本没有，性能一般</li>
+<li>重装系统很麻烦</li>
+</ul>
+<h2 id="适用人群与场景"><a href="#适用人群与场景" class="headerlink" title="适用人群与场景"></a>适用人群与场景</h2><ul>
+<li>入门iOS开发</li>
+<li>想尝试MacOS，不想花太多钱也不想折腾</li>
+<li>使用位置相对固定，没有移动性需求</li>
+<li>最好有4K显示器，当然2K和1080p也不是不能用，我用的就是2K</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>关于这种神奇Mac的来源众说纷纭，主流的说法有两种，一种可能是屏幕坏掉，但是屏幕维修成本太高，放弃维修直接卖给回收商家，回收商家再把屏幕拆掉单独卖下半身；另一种说是原来海外用作服务器的MBP，为了节约空间多在机柜里塞几台，就把屏幕拆掉，再然后就是洋垃圾大船靠岸的故事了。</p>
+<h1 id="购买途径"><a href="#购买途径" class="headerlink" title="购买途径"></a>购买途径</h1><p>我在知乎和b站搜索这种MBP的使用感受的时候意外发现了组织，@<a href="https://www.zhihu.com/people/xiaoming-22-24">江sir爱数码</a>已经对这种产品做了详细的研究，并且根据群友的经验总结出两家比较靠谱的闲鱼卖家，MacBook和苹果尊选，我就是在其中一家购买的，没有翻车。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>MacBook下半身经验分享</p><p>江sir爱数码</p>
+<a href="https://zhuanlan.zhihu.com/p/599745126"></a>
+</div></div>
+
+<h1 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h1><p>我购买的机型是2017款的MacBook Pro 15（A1707），处理器是4C8T的7700HQ，显卡是Radeon Pro 555 2G，16G内存，512G固态硬盘，花了我1600大洋。</p>
+<h2 id="到手成色"><a href="#到手成色" class="headerlink" title="到手成色"></a>到手成色</h2><p>我这台路易十六的成色还不错，外壳没有明显的刮擦、磕碰，只有键盘的P键和0键的边缘被磕掉了一丢丢。除了没有摄像头和屏幕，其他部件都能正常工作。电池应该被卖家更换过，循环数是0。序列号什么的也都能对的上。</p>
+<h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><p>我个人有点赛博洁癖，电子产品到手的第一件事就是重装。但是我的无头本无法进入恢复模式，据说需要外接Type-C直连的4K显示器才能进入。如果以后出问题的话还要找个4K显示器才能重装，比较麻烦。</p>
+<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>建议搭配4K显示器使用，最好支持Type-C直连，原因如下：</p>
+<ul>
+<li>MBP只有Type-C接口，没有HDMI和DP等常用视频输出接口，显示器不支持Type-C的话需要转接线或转接头，我买的转接线发热很严重。</li>
+<li>2023年10月更新：发现了一款可以为2K显示器开启HiDPI的软件 <a href="https://github.com/waydabber/BetterDisplay">BetterDisplay</a>，快乐起来了！</li>
+<li><del>2K显示器显示的字体非常小，虽然可以通过软件内缩放字体解决，但还是不如HiDPI舒服</del></li>
+<li><del>非4K显示器无法正常开启HiDPI，GitHub上有<a href="https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md">强制开启HiDPI的插件</a>，但是风险较高，强制开启失败的话可能要进入恢复模式来修复，而我又不能进入恢复模式，于是就被卡住了</del></li>
+<li>显示器的亮度不能通过软件调节，可能是我用的转接线不支持DDC&#x2F;CI协议</li>
+</ul>
+<p>此外选择显示器分辨率的时候千万要小心，我这台2K显示器在MBP的设置里能选择4K输出，我好奇的点了一下，然后显示器就黑屏了，提示分辨率不符。我最后只能在啥也看不见的情况下盲点碰运气，点了半分钟终于点到了2K输出的选项😭😭😭</p>
+<p>不过MacOS的字体渲染还是比Windows强了不少的，感官上更加细腻，现在看PDF都用Mac看了。</p>
+<h2 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h2><p>MBP的蝴蝶键盘手感非常差劲，键程太短，最好还是外接键盘使用。淘宝上有卖键盘盖板的，如下图所示，可以节省桌面空间。</p>
+<p><img data-src="https://s2.loli.net/2023/07/01/Cx2HZ7vzSEIQpFy.jpg" alt="MBP键盘盖板.jpg"></p>
+<p>另外如果使用蓝牙键盘+2.4G无线鼠标的话会有干扰，鼠标经常掉帧，这也算苹果的老毛病了</p>
+<h2 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h2><p>MBP的指纹识别体验很棒，比我在WIN上用指纹模块的识别率高不少，不过它的材质容易留下指纹印</p>
+<h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><p>Mac的触控板比其他的不知道高到哪里去了，压感触控，面积巨大，划起来很爽，就是划时间长了指尖磨得难受。</p>
+<h2 id="性能与噪音"><a href="#性能与噪音" class="headerlink" title="性能与噪音"></a>性能与噪音</h2><p>5年前的老机型了，拿来跑点小项目性能还是够用的，但是软件的启动速度比较慢。跑Xcode编译的时候风扇会满速运转，但是噪音并不算大，不过C面靠后的位置会很烫手</p>
+<h2 id="Facetime"><a href="#Facetime" class="headerlink" title="Facetime"></a>Facetime</h2><p>由于拆掉了屏幕，而MBP的摄像头又在屏幕上面，所以要使用Facetime只能用外接摄像头或者用iPhone连续互通相机功能。</p>
+<p>我把iPhone用线连接到MBP上之后并没有出现连续互通相机的提示，Facetime里面也没有相应的选项。然后我插入了外接摄像头，刚插入就有了使用连续互通相机的提示，就很迷惑，把外接摄像头拔掉也能继续用连续互通相机。猜测应该是要初始化一下摄像头才能激活连续互通相机。</p>
+<div class="note success"><p>新方法<br>在<a href="https://zhuanlan.zhihu.com/p/599745126">江Sir的知乎专栏</a>里发现了更简单的激活办法</p>
+<ul>
+<li>用数据线连接iPhone和Mac</li>
+<li>打开QuickTime Player，点击左上角新建影片录制</li>
+<li>Mac弹出连续互通功能的介绍，点击继续</li>
+<li>iPhone也会弹出提示</li>
+<li>然后就能用了，拔掉线也可以继续用</li>
+</ul>
+</div>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img data-src="https://s2.loli.net/2023/07/01/ROkL7QVCsFayBJv.jpg" alt="真香.jpg"></p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>MacOS</tag>
+        <tag>MacBook Pro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown写作语法</title>
     <url>/Markdown%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95.html</url>
     <content><![CDATA[<p>编写博客需要使用Markdown，因此需要熟记语法规则，虽然Markdown语法比较少，但是一个一个查起来也是很蛋疼的（<del>目录被标题的预览搞乱了。。。</del>）</p>
@@ -2684,85 +2763,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MacBook Pro 路易十六联名款</title>
-    <url>/MacBookProHeadless.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">论如何用最少的钱买一台Mac</blockquote>
-
-<p><img data-src="https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg" alt="MBPHeadless.jpg"></p>
-<span id="more"></span>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于黑苹果的升级维护实在是麻烦，我开始盘算怎么整一台便宜的Mac(果然一切黑苹果的尽头都是白苹果)。目前官网最便宜的白苹果是M2芯片的Mac Mini，起售价4499元，配置上还是苹果祖传的8G内存和256G硬盘，16G内存的需要5999，超预算太多。然后又跑到了闲鱼，不得不感慨苹果的产品是真的保值啊，8G内存M1芯片的Mac Mini二手售价仍然在3000元左右，16G内存的在4000元左右。二手Macbook的价格基本都在5000元以上，哪怕是最低配的8G内存128G硬盘的17款MBP也要2000多元。不过闲鱼神奇的推荐算法让我发现了一个好东西：MacBook Mini，又称Macbook无头骑士，讲人话就是没有屏幕的二手Macbook，售价1000多元。因为我的使用场景就是写代码，所以刚需就是16G及以上的内存。此外我的笔记本一般都是外接显示器使用，所以有没有屏幕并不重要。这么一想，1000多就能拥有白苹果+大号触摸板+音响+Touch Bar，好像有点香。</p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
-<li>便宜，这是最大的优点</li>
-<li>相较于黑苹果，它不需要折腾</li>
-<li>自带触控板、键盘、音响、指纹识别</li>
-</ul>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
-<li>二手产品，肯定会有瑕疵</li>
-<li>肯定被拆过机，因为要取下屏幕，零件也有可能被更换过</li>
-<li>键盘、电池出问题的可能性较高</li>
-<li>保修约等于不存在</li>
-<li>需要外接显示器才能使用</li>
-<li>型号较老，大部分都是16-19款使用Intel处理器的，M1的基本没有，性能一般</li>
-<li>重装系统很麻烦</li>
-</ul>
-<h2 id="适用人群与场景"><a href="#适用人群与场景" class="headerlink" title="适用人群与场景"></a>适用人群与场景</h2><ul>
-<li>入门iOS开发</li>
-<li>想尝试MacOS，不想花太多钱也不想折腾</li>
-<li>使用位置相对固定，没有移动性需求</li>
-<li>最好有4K显示器，当然2K和1080p也不是不能用，我用的就是2K</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>关于这种神奇Mac的来源众说纷纭，主流的说法有两种，一种可能是屏幕坏掉，但是屏幕维修成本太高，放弃维修直接卖给回收商家，回收商家再把屏幕拆掉单独卖下半身；另一种说是原来海外用作服务器的MBP，为了节约空间多在机柜里塞几台，就把屏幕拆掉，再然后就是洋垃圾大船靠岸的故事了。</p>
-<h1 id="购买途径"><a href="#购买途径" class="headerlink" title="购买途径"></a>购买途径</h1><p>我在知乎和b站搜索这种MBP的使用感受的时候意外发现了组织，@<a href="https://www.zhihu.com/people/xiaoming-22-24">江sir爱数码</a>已经对这种产品做了详细的研究，并且根据群友的经验总结出两家比较靠谱的闲鱼卖家，MacBook和苹果尊选，我就是在其中一家购买的，没有翻车。</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>MacBook下半身经验分享</p><p>江sir爱数码</p>
-<a href="https://zhuanlan.zhihu.com/p/599745126"></a>
-</div></div>
-
-<h1 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h1><p>我购买的机型是2017款的MacBook Pro 15（A1707），处理器是4C8T的7700HQ，显卡是Radeon Pro 555 2G，16G内存，512G固态硬盘，花了我1600大洋。</p>
-<h2 id="到手成色"><a href="#到手成色" class="headerlink" title="到手成色"></a>到手成色</h2><p>我这台路易十六的成色还不错，外壳没有明显的刮擦、磕碰，只有键盘的P键和0键的边缘被磕掉了一丢丢。除了没有摄像头和屏幕，其他部件都能正常工作。电池应该被卖家更换过，循环数是0。序列号什么的也都能对的上。</p>
-<h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><p>我个人有点赛博洁癖，电子产品到手的第一件事就是重装。但是我的无头本无法进入恢复模式，据说需要外接Type-C直连的4K显示器才能进入。如果以后出问题的话还要找个4K显示器才能重装，比较麻烦。</p>
-<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>建议搭配4K显示器使用，最好支持Type-C直连，原因如下：</p>
-<ul>
-<li>MBP只有Type-C接口，没有HDMI和DP等常用视频输出接口，显示器不支持Type-C的话需要转接线或转接头，我买的转接线发热很严重。</li>
-<li>2023年10月更新：发现了一款可以为2K显示器开启HiDPI的软件 <a href="https://github.com/waydabber/BetterDisplay">BetterDisplay</a>，快乐起来了！</li>
-<li><del>2K显示器显示的字体非常小，虽然可以通过软件内缩放字体解决，但还是不如HiDPI舒服</del></li>
-<li><del>非4K显示器无法正常开启HiDPI，GitHub上有<a href="https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md">强制开启HiDPI的插件</a>，但是风险较高，强制开启失败的话可能要进入恢复模式来修复，而我又不能进入恢复模式，于是就被卡住了</del></li>
-<li>显示器的亮度不能通过软件调节，可能是我用的转接线不支持DDC&#x2F;CI协议</li>
-</ul>
-<p>此外选择显示器分辨率的时候千万要小心，我这台2K显示器在MBP的设置里能选择4K输出，我好奇的点了一下，然后显示器就黑屏了，提示分辨率不符。我最后只能在啥也看不见的情况下盲点碰运气，点了半分钟终于点到了2K输出的选项😭😭😭</p>
-<p>不过MacOS的字体渲染还是比Windows强了不少的，感官上更加细腻，现在看PDF都用Mac看了。</p>
-<h2 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h2><p>MBP的蝴蝶键盘手感非常差劲，键程太短，最好还是外接键盘使用。淘宝上有卖键盘盖板的，如下图所示，可以节省桌面空间。</p>
-<p><img data-src="https://s2.loli.net/2023/07/01/Cx2HZ7vzSEIQpFy.jpg" alt="MBP键盘盖板.jpg"></p>
-<p>另外如果使用蓝牙键盘+2.4G无线鼠标的话会有干扰，鼠标经常掉帧，这也算苹果的老毛病了</p>
-<h2 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h2><p>MBP的指纹识别体验很棒，比我在WIN上用指纹模块的识别率高不少，不过它的材质容易留下指纹印</p>
-<h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><p>Mac的触控板比其他的不知道高到哪里去了，压感触控，面积巨大，划起来很爽，就是划时间长了指尖磨得难受。</p>
-<h2 id="性能与噪音"><a href="#性能与噪音" class="headerlink" title="性能与噪音"></a>性能与噪音</h2><p>5年前的老机型了，拿来跑点小项目性能还是够用的，但是软件的启动速度比较慢。跑Xcode编译的时候风扇会满速运转，但是噪音并不算大，不过C面靠后的位置会很烫手</p>
-<h2 id="Facetime"><a href="#Facetime" class="headerlink" title="Facetime"></a>Facetime</h2><p>由于拆掉了屏幕，而MBP的摄像头又在屏幕上面，所以要使用Facetime只能用外接摄像头或者用iPhone连续互通相机功能。</p>
-<p>我把iPhone用线连接到MBP上之后并没有出现连续互通相机的提示，Facetime里面也没有相应的选项。然后我插入了外接摄像头，刚插入就有了使用连续互通相机的提示，就很迷惑，把外接摄像头拔掉也能继续用连续互通相机。猜测应该是要初始化一下摄像头才能激活连续互通相机。</p>
-<div class="note success"><p>新方法<br>在<a href="https://zhuanlan.zhihu.com/p/599745126">江Sir的知乎专栏</a>里发现了更简单的激活办法</p>
-<ul>
-<li>用数据线连接iPhone和Mac</li>
-<li>打开QuickTime Player，点击左上角新建影片录制</li>
-<li>Mac弹出连续互通功能的介绍，点击继续</li>
-<li>iPhone也会弹出提示</li>
-<li>然后就能用了，拔掉线也可以继续用</li>
-</ul>
-</div>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img data-src="https://s2.loli.net/2023/07/01/ROkL7QVCsFayBJv.jpg" alt="真香.jpg"></p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>MacOS</tag>
-        <tag>MacBook Pro</tag>
       </tags>
   </entry>
   <entry>
@@ -5954,8 +5954,8 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win10</tag>
         <tag>Win11</tag>
+        <tag>Win10</tag>
         <tag>右键菜单</tag>
         <tag>注册表</tag>
       </tags>
@@ -6189,8 +6189,8 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win10</tag>
         <tag>Win11</tag>
+        <tag>Win10</tag>
         <tag>Windows Terminal</tag>
         <tag>美化</tag>
       </tags>
@@ -6252,86 +6252,15 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win10</tag>
         <tag>Win11</tag>
+        <tag>Win10</tag>
         <tag>DP</tag>
         <tag>Hot Plug Detection</tag>
         <tag>热插拔检测</tag>
       </tags>
   </entry>
   <entry>
-    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
-    <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
-
-<span id="more"></span>
-
-<h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><p>Cloudflare的配置我很早之前就搞过了，再简单写一下，加点图片</p>
-<ol>
-<li>登录 Cloudflare， 然后点击顶栏的<code>Add site</code><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>Cloudflare</p><p>Web Performance & Security</p>
-<a href="https://dash.cloudflare.com/"></a>
-</div></div></li>
-<li>输入自己的域名，然后点击<code>Add site</code>按钮，我这胡乱加了一个没人用的做示范<br><img data-src="https://s2.loli.net/2022/06/12/FaLBvrE9Rl2esN4.png" alt="cl1.png"></li>
-<li>选择方案，一般选<code>Free</code>就够用了<br><img data-src="https://s2.loli.net/2022/06/12/47TOxsBYAMdz9ul.png" alt="cl2.png"></li>
-<li>然后Cloudflare会自动获取域名的DNS记录，这里跳过，拉到页面最底部，点击<code>Continue</code>按钮，待会回来再配置<br><img data-src="https://s2.loli.net/2022/06/12/F4MPguhfd8bkvS9.png" alt="cl3.png"></li>
-<li>复制Cloudflare给出的域名服务器，回到域名注册商那里替换掉原有的<br><img data-src="https://s2.loli.net/2022/06/12/2IB3agoAJcWpNr8.png" alt="cl4.png"><br><img data-src="https://s2.loli.net/2022/06/12/EgkBH4AyjSJbmnU.png" alt="cl5.png"></li>
-<li>回到Cloudflare，点击<code>Done, check nameservers</code></li>
-<li>然后慢慢等待生效，生效后会有邮件提醒，等待生效的时候可以先设置<code>SSL/TLS</code><ol>
-<li>在Overview里，将Encryption Mode先设置为<code>Full</code><br><img data-src="https://s2.loli.net/2022/06/12/tKcsr2RdWbBoFSz.png" alt="ssl1.png"></li>
-<li>然后到Edge Certificates中，开启<code>Always Use HTTPS</code>、<code>Opportunistic Encryption</code>等<br><img data-src="https://s2.loli.net/2022/06/12/bXdgpHsTMcDok8L.png" alt="ssl2.png"></li>
-<li>到Origin Server中，开启<code>Authenticated Origin Pulls</code><br><img data-src="https://s2.loli.net/2022/06/12/fkxNsFb1uG2IwWh.png" alt="ssl3.png"></li>
-</ol>
-</li>
-<li>生效后到<code>DNS</code>设置里添加四条A记录与一条CNAME记录<ol>
-<li>CNAME记录的NAME设置为<code>www</code>，Content设置为GitHub Pages默认的域名，<code>用户名.github.io</code>那个</li>
-<li>A记录的Name都使用<code>@</code>或者自己的域名，Content依次设置为<ol>
-<li>185.199.108.153</li>
-<li>185.199.109.153</li>
-<li>185.199.110.153</li>
-<li>185.199.111.153</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>确认一下各个记录的Proxy status都是<code>Proxied</code>状态，即橙色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/ogYE2MFOfkbqDa7.png" alt="dns.png"></li>
-</ol>
-<h2 id="GitHub-Pages-配置"><a href="#GitHub-Pages-配置" class="headerlink" title="GitHub Pages 配置"></a>GitHub Pages 配置</h2><ol>
-<li>打开自己的网站的仓库设置<code>Settings</code>-<code>Pages</code></li>
-<li>在<code>Custom domain</code>中填入自己的域名，点击Save后会自动生成一个CNAME文件</li>
-</ol>
-<h1 id="开启Encryption-Full-strict-模式"><a href="#开启Encryption-Full-strict-模式" class="headerlink" title="开启Encryption Full (strict)模式"></a>开启Encryption Full (strict)模式</h1><p>Full (strict)模式与Full模式的区别在于，Full (strict)模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非Full模式使用的无需验证的自签名证书。GitHub Pages可以通过开启<code>Enforce HTTPS</code>来获取免费的可信证书，满足开启Full (strict)模式的条件。下面就是我今天新发现的问题，我的Pages设置中不能开启<code>Enforce HTTPS</code>，勾选框一直是灰色的，折腾半天发现是Cloudflare的代理状态的造成的，解决方案如下</p>
-<ol>
-<li>在Cloudflare的DNS设置中把Proxy status全部设置为<code>DNS Only</code>状态，即灰色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/Fn9XR7VoGNktHid.png" alt="https00.png"></li>
-<li>回到Pages设置，刷新一下就可以勾选<code>Enforce HTTPS</code>了</li>
-<li>GitHub会自动申请SSL证书，有了这个证书才能够在Cloudflare开启Full (strict)模式<br><img data-src="https://s2.loli.net/2022/06/12/EjMkopVYmPnRvwb.png" alt="https01.png"><br><img data-src="https://s2.loli.net/2022/06/12/QSFCK7NGnoqyH8V.png" alt="https02.png"></li>
-<li>等待Pages的HTTPS生效后，回到Cloudflare，把刚才修改的Proxy status全部恢复为<code>Proxied</code>状态，即橙色的云朵</li>
-<li>到<code>SSL/TLS</code>设置中，将Encryption Mode设置为<code>Full (strict)</code><br><img data-src="https://s2.loli.net/2022/06/12/Wmwr3A7sN15gHnX.png" alt="https03.png"></li>
-</ol>
-<h1 id="DNS记录类型科普"><a href="#DNS记录类型科普" class="headerlink" title="DNS记录类型科普"></a>DNS记录类型科普</h1><div class="note primary"><p>部分内容引用自 <a class="btn" href="https://zh.m.wikipedia.org/zh-hans/DNS%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B%E5%88%97%E8%A1%A8"><i class="fa fa-blog fa-fw"></i>维基百科</a></p>
-</div>
-<h2 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h2><p>A记录(Address record)是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器(web server)上。同时也可以设置域名的子域名。它会传回一个32位元的IPv4地址。</p>
-<h2 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h2><p>AAAA记录(AAAA record)是用来将域名解析到IPv6地址的DNS记录。用户可以将一个域名解析到IPv6地址上，也可以将子域名解析到IPv6地址上。它会传回一个128位元的IPv6地址。</p>
-<h2 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h2><p>CNAME记录(Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p>
-<h2 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h2><p>NS(Name Server)记录是域名服务器记录，用来指定该域名由哪个DNS服务器来进行解析。如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。</p>
-<h2 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h2><p>MX(mail exchanger)记录用于指定负责处理发往收件人域名的邮件服务器。</p>
-<h2 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h2><p>TXT记录一般指为某个主机名或域名设置的说明。</p>
-<h2 id="TTL"><a href="#TTL" class="headerlink" title="TTL"></a>TTL</h2><p>TTL(Time To Live)表示解析记录在DNS服务器中的缓存时间，长度为秒。当本地DNS服务器收到某一域名的解析请求时，需要向该域名指定的权威DNS服务器发送解析请求获取解析记录。获得的解析记录会在本地DNS服务器中保存一段时间。在这段时间内，如果本地DNS服务器再次收到该域名的解析请求，将不再向权威DNS服务器发送解析请求，而是直接返回保存在本地DNS服务器中的解析记录。</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GitHub Pages</tag>
-        <tag>Cloudflare</tag>
-        <tag>HTTPS</tag>
-        <tag>CDN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在基于GitHub Pages的博客更新时同步更新GitHub Profile个人信息页的最近博文部分</title>
+    <title>在基于GitHub Pages的博客更新时同步更新GitHub Profile个人信息页最近博文部分</title>
     <url>/auto-update-profile-latest-blog-posts.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">我在GitHub的自定义个人信息页中添加了展示最近更新的博文的部分，但是每次更新完博客还要再来这里手动更新一下，就很麻烦。于是我本着"偷懒是人类进步的动力"的原则，搞出了一种博客部署完成后，使用GitHub Actions自动更新个人信息页的最近博文部分的方法。</blockquote>
 
@@ -6635,6 +6564,141 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
+    <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
+
+<span id="more"></span>
+
+<h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><p>Cloudflare的配置我很早之前就搞过了，再简单写一下，加点图片</p>
+<ol>
+<li>登录 Cloudflare， 然后点击顶栏的<code>Add site</code><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>Cloudflare</p><p>Web Performance & Security</p>
+<a href="https://dash.cloudflare.com/"></a>
+</div></div></li>
+<li>输入自己的域名，然后点击<code>Add site</code>按钮，我这胡乱加了一个没人用的做示范<br><img data-src="https://s2.loli.net/2022/06/12/FaLBvrE9Rl2esN4.png" alt="cl1.png"></li>
+<li>选择方案，一般选<code>Free</code>就够用了<br><img data-src="https://s2.loli.net/2022/06/12/47TOxsBYAMdz9ul.png" alt="cl2.png"></li>
+<li>然后Cloudflare会自动获取域名的DNS记录，这里跳过，拉到页面最底部，点击<code>Continue</code>按钮，待会回来再配置<br><img data-src="https://s2.loli.net/2022/06/12/F4MPguhfd8bkvS9.png" alt="cl3.png"></li>
+<li>复制Cloudflare给出的域名服务器，回到域名注册商那里替换掉原有的<br><img data-src="https://s2.loli.net/2022/06/12/2IB3agoAJcWpNr8.png" alt="cl4.png"><br><img data-src="https://s2.loli.net/2022/06/12/EgkBH4AyjSJbmnU.png" alt="cl5.png"></li>
+<li>回到Cloudflare，点击<code>Done, check nameservers</code></li>
+<li>然后慢慢等待生效，生效后会有邮件提醒，等待生效的时候可以先设置<code>SSL/TLS</code><ol>
+<li>在Overview里，将Encryption Mode先设置为<code>Full</code><br><img data-src="https://s2.loli.net/2022/06/12/tKcsr2RdWbBoFSz.png" alt="ssl1.png"></li>
+<li>然后到Edge Certificates中，开启<code>Always Use HTTPS</code>、<code>Opportunistic Encryption</code>等<br><img data-src="https://s2.loli.net/2022/06/12/bXdgpHsTMcDok8L.png" alt="ssl2.png"></li>
+<li>到Origin Server中，开启<code>Authenticated Origin Pulls</code><br><img data-src="https://s2.loli.net/2022/06/12/fkxNsFb1uG2IwWh.png" alt="ssl3.png"></li>
+</ol>
+</li>
+<li>生效后到<code>DNS</code>设置里添加四条A记录与一条CNAME记录<ol>
+<li>CNAME记录的NAME设置为<code>www</code>，Content设置为GitHub Pages默认的域名，<code>用户名.github.io</code>那个</li>
+<li>A记录的Name都使用<code>@</code>或者自己的域名，Content依次设置为<ol>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>确认一下各个记录的Proxy status都是<code>Proxied</code>状态，即橙色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/ogYE2MFOfkbqDa7.png" alt="dns.png"></li>
+</ol>
+<h2 id="GitHub-Pages-配置"><a href="#GitHub-Pages-配置" class="headerlink" title="GitHub Pages 配置"></a>GitHub Pages 配置</h2><ol>
+<li>打开自己的网站的仓库设置<code>Settings</code>-<code>Pages</code></li>
+<li>在<code>Custom domain</code>中填入自己的域名，点击Save后会自动生成一个CNAME文件</li>
+</ol>
+<h1 id="开启Encryption-Full-strict-模式"><a href="#开启Encryption-Full-strict-模式" class="headerlink" title="开启Encryption Full (strict)模式"></a>开启Encryption Full (strict)模式</h1><p>Full (strict)模式与Full模式的区别在于，Full (strict)模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非Full模式使用的无需验证的自签名证书。GitHub Pages可以通过开启<code>Enforce HTTPS</code>来获取免费的可信证书，满足开启Full (strict)模式的条件。下面就是我今天新发现的问题，我的Pages设置中不能开启<code>Enforce HTTPS</code>，勾选框一直是灰色的，折腾半天发现是Cloudflare的代理状态的造成的，解决方案如下</p>
+<ol>
+<li>在Cloudflare的DNS设置中把Proxy status全部设置为<code>DNS Only</code>状态，即灰色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/Fn9XR7VoGNktHid.png" alt="https00.png"></li>
+<li>回到Pages设置，刷新一下就可以勾选<code>Enforce HTTPS</code>了</li>
+<li>GitHub会自动申请SSL证书，有了这个证书才能够在Cloudflare开启Full (strict)模式<br><img data-src="https://s2.loli.net/2022/06/12/EjMkopVYmPnRvwb.png" alt="https01.png"><br><img data-src="https://s2.loli.net/2022/06/12/QSFCK7NGnoqyH8V.png" alt="https02.png"></li>
+<li>等待Pages的HTTPS生效后，回到Cloudflare，把刚才修改的Proxy status全部恢复为<code>Proxied</code>状态，即橙色的云朵</li>
+<li>到<code>SSL/TLS</code>设置中，将Encryption Mode设置为<code>Full (strict)</code><br><img data-src="https://s2.loli.net/2022/06/12/Wmwr3A7sN15gHnX.png" alt="https03.png"></li>
+</ol>
+<h1 id="DNS记录类型科普"><a href="#DNS记录类型科普" class="headerlink" title="DNS记录类型科普"></a>DNS记录类型科普</h1><div class="note primary"><p>部分内容引用自 <a class="btn" href="https://zh.m.wikipedia.org/zh-hans/DNS%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B%E5%88%97%E8%A1%A8"><i class="fa fa-blog fa-fw"></i>维基百科</a></p>
+</div>
+<h2 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h2><p>A记录(Address record)是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器(web server)上。同时也可以设置域名的子域名。它会传回一个32位元的IPv4地址。</p>
+<h2 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h2><p>AAAA记录(AAAA record)是用来将域名解析到IPv6地址的DNS记录。用户可以将一个域名解析到IPv6地址上，也可以将子域名解析到IPv6地址上。它会传回一个128位元的IPv6地址。</p>
+<h2 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h2><p>CNAME记录(Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p>
+<h2 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h2><p>NS(Name Server)记录是域名服务器记录，用来指定该域名由哪个DNS服务器来进行解析。如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。</p>
+<h2 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h2><p>MX(mail exchanger)记录用于指定负责处理发往收件人域名的邮件服务器。</p>
+<h2 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h2><p>TXT记录一般指为某个主机名或域名设置的说明。</p>
+<h2 id="TTL"><a href="#TTL" class="headerlink" title="TTL"></a>TTL</h2><p>TTL(Time To Live)表示解析记录在DNS服务器中的缓存时间，长度为秒。当本地DNS服务器收到某一域名的解析请求时，需要向该域名指定的权威DNS服务器发送解析请求获取解析记录。获得的解析记录会在本地DNS服务器中保存一段时间。在这段时间内，如果本地DNS服务器再次收到该域名的解析请求，将不再向权威DNS服务器发送解析请求，而是直接返回保存在本地DNS服务器中的解析记录。</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GitHub Pages</tag>
+        <tag>Cloudflare</tag>
+        <tag>HTTPS</tag>
+        <tag>CDN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iPhone访问Windows共享文件夹</title>
+    <url>/iOS-Windows-File-Share.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。</blockquote>
+
+<span id="more"></span>
+
+<div class="note danger"><p>说明：本文的方法只针对受信任的网络，如自己家的WiFi。不建议在公用网络中设置共享，非常不安全。</p>
+</div>
+
+<h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp"></div></div></div>
+
+<h1 id="共享设置"><a href="#共享设置" class="headerlink" title="共享设置"></a>共享设置</h1><ol>
+<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>WLAN</code> - <code>[当前WiFi]属性</code></li>
+<li>将网络配置文件类型设置为<code>专用网络</code></li>
+<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>高级网络设置</code> - <code>高级共享设置</code></li>
+<li>开启<code>专用网络</code>中的<code>网络发现</code>和<code>文件和打印机共享</code>选项，勾选<code>自动设置网络连接的设备</code></li>
+<li>关闭<code>所有网络</code>中的<code>公用文件夹共享</code>，文件共享链接选择<code>128位加密(推荐)</code>，开启<code>密码保护的共享</code>选项</li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp"></div></div></div>
+
+<h1 id="创建共享用户"><a href="#创建共享用户" class="headerlink" title="创建共享用户"></a>创建共享用户</h1><ol>
+<li>按下<code>Win + X</code>快捷键，打开<code>计算机管理</code></li>
+<li>展开<code>本地用户和组</code>选项，在<code>用户</code>上右键打开菜单并选择<code>新用户</code></li>
+<li>输入新的用户名和密码，勾选<code>密码永不过期</code>选项</li>
+<li>点击<code>确定</code>，创建完成后关闭窗口</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp"></p>
+<h1 id="文件夹设置"><a href="#文件夹设置" class="headerlink" title="文件夹设置"></a>文件夹设置</h1><ol>
+<li>找到要共享的文件夹，右键打开文件夹<code>属性</code></li>
+<li>打开<code>共享</code>选项卡，点击文件网络和文件夹共享下的<code>共享</code>按钮</li>
+<li>选择刚才创建的用户，然后点击<code>添加</code></li>
+<li>将新用户的权限级别调整为<code>读取/写入</code></li>
+<li>点击<code>共享</code></li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp"></div></div></div>
+
+<h1 id="iOS文件设置"><a href="#iOS文件设置" class="headerlink" title="iOS文件设置"></a>iOS文件设置</h1><ol>
+<li>文件夹属性中会出现一行<code>网络路径</code></li>
+<li>打开iOS的文件App，点击右上角的三个点，选择<code>连接服务器</code></li>
+<li>输入<code>smb:[共享文件夹的网络路径]</code>，这里把<code>\</code>替换成<code>/</code>，例如Windows中显示的网络路径是<code>\\ThisPC\ShareFolder</code>，那么这里要输入的就是<code>smb://ThisPC/ShareFolder</code></li>
+<li>输入新创建的用户名和密码</li>
+<li>连接</li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp"></div></div></div>
+
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
+<li>iOS自带的文件App非常的智障，如果一段时间没有访问共享文件夹，那么下次访问时只能看到一个空文件夹，必须要推出smb服务器，然后点右上角的三个点重新连接服务器。</li>
+<li>iOS自带的文件App中会比Windows的资源管理器多出一个名为desktop.ini的文件，这原本是个Windows的隐藏文件，不用管它</li>
+<li>十分建议使用第三方文件App替换自带的App</li>
+<li>iPhone与PC必须处于同一网络下</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp"></p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>iOS</tag>
+        <tag>共享文件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>iOS屏蔽开屏广告</title>
     <url>/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告</blockquote>
@@ -6725,70 +6789,6 @@
         <tag>广告屏蔽</tag>
         <tag>ShadowRocket</tag>
         <tag>抓包</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iPhone访问Windows共享文件夹</title>
-    <url>/iOS-Windows-File-Share.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。</blockquote>
-
-<span id="more"></span>
-
-<div class="note danger"><p>说明：本文的方法只针对受信任的网络，如自己家的WiFi。不建议在公用网络中设置共享，非常不安全。</p>
-</div>
-
-<h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp"></div></div></div>
-
-<h1 id="共享设置"><a href="#共享设置" class="headerlink" title="共享设置"></a>共享设置</h1><ol>
-<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>WLAN</code> - <code>[当前WiFi]属性</code></li>
-<li>将网络配置文件类型设置为<code>专用网络</code></li>
-<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>高级网络设置</code> - <code>高级共享设置</code></li>
-<li>开启<code>专用网络</code>中的<code>网络发现</code>和<code>文件和打印机共享</code>选项，勾选<code>自动设置网络连接的设备</code></li>
-<li>关闭<code>所有网络</code>中的<code>公用文件夹共享</code>，文件共享链接选择<code>128位加密(推荐)</code>，开启<code>密码保护的共享</code>选项</li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp"></div></div></div>
-
-<h1 id="创建共享用户"><a href="#创建共享用户" class="headerlink" title="创建共享用户"></a>创建共享用户</h1><ol>
-<li>按下<code>Win + X</code>快捷键，打开<code>计算机管理</code></li>
-<li>展开<code>本地用户和组</code>选项，在<code>用户</code>上右键打开菜单并选择<code>新用户</code></li>
-<li>输入新的用户名和密码，勾选<code>密码永不过期</code>选项</li>
-<li>点击<code>确定</code>，创建完成后关闭窗口</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp"></p>
-<h1 id="文件夹设置"><a href="#文件夹设置" class="headerlink" title="文件夹设置"></a>文件夹设置</h1><ol>
-<li>找到要共享的文件夹，右键打开文件夹<code>属性</code></li>
-<li>打开<code>共享</code>选项卡，点击文件网络和文件夹共享下的<code>共享</code>按钮</li>
-<li>选择刚才创建的用户，然后点击<code>添加</code></li>
-<li>将新用户的权限级别调整为<code>读取/写入</code></li>
-<li>点击<code>共享</code></li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp"></div></div></div>
-
-<h1 id="iOS文件设置"><a href="#iOS文件设置" class="headerlink" title="iOS文件设置"></a>iOS文件设置</h1><ol>
-<li>文件夹属性中会出现一行<code>网络路径</code></li>
-<li>打开iOS的文件App，点击右上角的三个点，选择<code>连接服务器</code></li>
-<li>输入<code>smb:[共享文件夹的网络路径]</code>，这里把<code>\</code>替换成<code>/</code>，例如Windows中显示的网络路径是<code>\\ThisPC\ShareFolder</code>，那么这里要输入的就是<code>smb://ThisPC/ShareFolder</code></li>
-<li>输入新创建的用户名和密码</li>
-<li>连接</li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp"></div></div></div>
-
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
-<li>iOS自带的文件App非常的智障，如果一段时间没有访问共享文件夹，那么下次访问时只能看到一个空文件夹，必须要推出smb服务器，然后点右上角的三个点重新连接服务器。</li>
-<li>iOS自带的文件App中会比Windows的资源管理器多出一个名为desktop.ini的文件，这原本是个Windows的隐藏文件，不用管它</li>
-<li>十分建议使用第三方文件App替换自带的App</li>
-<li>iPhone与PC必须处于同一网络下</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp"></p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Win11</tag>
-        <tag>iOS</tag>
-        <tag>共享文件</tag>
       </tags>
   </entry>
   <entry>
@@ -7171,79 +7171,6 @@
       </tags>
   </entry>
   <entry>
-    <title>更改Adobe软件安装位置并禁止自动更新</title>
-    <url>/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">因为最近换了张显卡，因为驱动问题被迫把练习时长两年半的系统重装了，因为C盘还是祖传的256G固态，Adobe的几个软件一上去就给用掉不少，看着很不爽，于是尝试更改了Adobe全家桶的安装位置，顺带屏蔽了全家桶的联网权限，防止它们自动更新。需要注意我安装的是cc2018，新版不一定适用</blockquote>
-
-<span id="more"></span>
-
-<div class="note warning"><p>注意，下面的所有操作都需要断开网络连接！</p>
-</div>
-
-<h1 id="更改安装位置"><a href="#更改安装位置" class="headerlink" title="更改安装位置"></a>更改安装位置</h1><p>首先找到安装包目录中的<code>./products/Driver.xml</code>，在<code>&lt;RequestInfo&gt;</code>中插入下面的代码</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">RequestInfo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">InstallDir</span>&gt;</span>D:\Software\Program Files\Adobe<span class="tag">&lt;/<span class="name">InstallDir</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">RequestInfo</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>将<code>&lt;InstallDir&gt;</code>中的内容替换为你想要的安装目录，改完后大概是这个亚子</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span><br><span class="line">&lt;DriverInfo&gt;</span><br><span class="line"><span class="addition">+    &lt;RequestInfo&gt;</span></span><br><span class="line"><span class="addition">+        &lt;InstallDir&gt;D:\Software\Program Files\Adobe&lt;/InstallDir&gt;</span></span><br><span class="line"><span class="addition">+    &lt;/RequestInfo&gt;</span></span><br><span class="line">    &lt;ProductInfo&gt;</span><br><span class="line">        &lt;Name&gt;Photoshop CC (2018)&lt;/Name&gt;</span><br><span class="line">        &lt;SAPCode&gt;PHSP&lt;/SAPCode&gt;</span><br><span class="line">        &lt;CodexVersion&gt;19.0&lt;/CodexVersion&gt;</span><br><span class="line">        &lt;Platform&gt;win64&lt;/Platform&gt;</span><br><span class="line">        &lt;EsdDirectory&gt;./PHSP&lt;/EsdDirectory&gt;</span><br><span class="line">        &lt;Dependencies&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;ACR&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;9.6&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./ACR&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;COCM&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./COCM&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;COPS&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./COPS&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;CORE&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./CORE&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;CORG&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./CORG&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">        &lt;/Dependencies&gt;</span><br><span class="line">    &lt;/ProductInfo&gt;</span><br><span class="line">&lt;/DriverInfo&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后按照老办法安装就可以了</p>
-<h1 id="卸载-Creative-Cloud"><a href="#卸载-Creative-Cloud" class="headerlink" title="卸载 Creative Cloud"></a>卸载 Creative Cloud</h1><ul>
-<li><p>这玩意对我来说没什么卵用，还很招人烦，直接用官方的卸载工具卸载掉，下载链接如下</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>Creative Cloud Cleaner tool</p><p>卸载 Adobe Creative Cloud</p>
-<a href="https://swupmf.adobe.com/webfeed/CleanerTool/win/AdobeCreativeCloudCleanerTool.exe"></a>
-</div></div>
-</li>
-<li><p>下载后右键以管理员身份运行，输入e并回车，然后再输入y并回车<br><img data-src="https://s2.loli.net/2022/12/18/YJI7N1nHkKGDoZx.png" alt="Adobe02.png"></p>
-</li>
-<li><p>输入6并回车，选择Creative Cloud Only<br><img data-src="https://s2.loli.net/2022/12/18/QNLFdru9sJPKkv2.png" alt="Adobe03.png"></p>
-</li>
-<li><p>输入2并回车，选择清除所有<br><img data-src="https://s2.loli.net/2022/12/18/YKbwQ4akud2z7rA.png" alt="Adobe04.png"></p>
-</li>
-<li><p>完成后退出即可</p>
-</li>
-</ul>
-<h1 id="禁止自动更新"><a href="#禁止自动更新" class="headerlink" title="禁止自动更新"></a>禁止自动更新</h1><p>禁止Adobe全家桶的自动更新分三步，前面两步主要针对Acrobat，第三步是通杀</p>
-<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><p>首先干掉三个Acrobat的开机启动项，在<code>任务管理器-启动应用</code>中找到下列三个启动项并右键禁用</p>
-<ul>
-<li>acrotray.exe</li>
-<li>updaterstartuputility.exe</li>
-<li>AGCInvokerUtility.exe</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/12/18/zAUyIbtwmB26VZl.png" alt="adobe11.png"></p>
-<h2 id="任务计划程序"><a href="#任务计划程序" class="headerlink" title="任务计划程序"></a>任务计划程序</h2><p>然后干掉Acrobat的三个计划任务，在开始菜单的Windows图标上右键，打开<code>计算机管理-任务计划程序-任务计划程序库</code>，禁用下列三项</p>
-<ul>
-<li>Adobe Acrobat Update Task</li>
-<li>AdobeAAMUpdater</li>
-<li>AdobeGCInvoker</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/12/18/ium6JdaqA1SNDvk.png" alt="adobe21.png"></p>
-<h2 id="防火墙规则"><a href="#防火墙规则" class="headerlink" title="防火墙规则"></a>防火墙规则</h2><p>最后一步是禁止所有的Adobe程序联网，没有网络更新个锤子，但是Adobe狡兔三窟，这里需要添加的规则比较多，建议使用脚本添加，脚本如下。</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line">:begin</span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">echo:</span></span><br><span class="line"><span class="function"><span class="title">echo</span> ****** 禁止文件夹联网 ******</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">set</span> /<span class="title">p</span> <span class="title">folder</span>=请输入文件夹（退出请直接关闭窗口）： </span></span><br><span class="line"><span class="function"><span class="title">If</span> <span class="title">Not</span> <span class="title">Exist</span> &quot;%<span class="title">folder</span>%\&quot; <span class="title">Exit</span>/<span class="title">B</span></span></span><br><span class="line"><span class="function"><span class="title">If</span> /<span class="title">I</span> &quot;%<span class="title">CD</span>%&quot; <span class="title">NEq</span> &quot;%<span class="title">folder</span>%&quot; <span class="title">PushD</span> %<span class="title">folder</span>%</span></span><br><span class="line"><span class="function"><span class="title">Set</span> &quot;<span class="title">Cmnd</span>=<span class="title">netsh</span> <span class="title">advfirewall</span> <span class="title">firewall</span> <span class="title">add</span> <span class="title">rule</span> <span class="title">action</span>=<span class="title">block</span>&quot;</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"><span class="title">For</span> /<span class="title">R</span> %%<span class="title">a</span> <span class="title">In</span> (*.<span class="title">exe</span>) <span class="title">Do</span> (<span class="title">For</span> %%<span class="title">b</span> <span class="title">In</span> (<span class="title">in</span> <span class="title">out</span>) <span class="title">Do</span> (</span></span><br><span class="line"><span class="function">      <span class="title">echo</span> 创建禁止 %%<span class="title">b</span> 规则【%%<span class="title">a</span>】</span></span><br><span class="line"><span class="function">      %<span class="title">Cmnd</span>% <span class="title">name</span>=&quot;<span class="title">blocked</span> %%<span class="title">a</span> <span class="title">via</span> <span class="title">script</span>&quot; <span class="title">dir</span>=%%<span class="title">b</span> <span class="title">program</span>=&quot;%%<span class="title">a</span>&quot;))</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"><span class="title">echo</span> 搞定了，%<span class="title">folder</span>% 中所有 <span class="title">exe</span> 文件的禁止入站、出站规则都已成功创建！</span></span><br><span class="line"><span class="function"><span class="title">echo</span> ----------------------------</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">goto</span> <span class="title">begin</span></span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>脚本来自<a href="https://www.zhihu.com/question/308632323/answer/2792089638">知乎@数据分析</a></p>
-</blockquote>
-<p>将脚本复制到记事本中，然后另存为<code>Firewall Blocker.bat</code>，注意另存的时候将编码方式选择为<code>ANSI</code>，否则运行的时候会乱码。<br><img data-src="https://s2.loli.net/2022/12/19/c3Kk1qlBg8RJx2o.png" alt="Adobe41.png"></p>
-<p>需要输入的文件夹路径有两个，分别为：</p>
-<ul>
-<li>上面更改的安装路径</li>
-<li>C:\Program Files (x86)\Common Files\Adobe</li>
-</ul>
-<p>脚本跑完之后不放心的话可以去防火墙确认一下，在开始菜单中搜索防火墙<br><img data-src="https://s2.loli.net/2022/12/18/qowZlkK8MXg4PA7.png" alt="adobe0.png"><br>然后打开<code>高级安全 Windows Defender 防火墙</code>，查看是否新增了很多Adobe相关的入站和出站规则</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Win10</tag>
-        <tag>Win11</tag>
-        <tag>Adobe</tag>
-        <tag>防火墙</tag>
-        <tag>脚本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>格拉斯哥大学IT选课指南</title>
     <url>/%E6%A0%BC%E6%8B%89%E6%96%AF%E5%93%A5%E5%A4%A7%E5%AD%A6IT%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">很久很久之前说过的选课指南哈哈哈，根据本人21年上课体验以及专业群道听途说总结，仅供参考，注意时效</blockquote>
@@ -7396,6 +7323,79 @@
         <tag>攻略</tag>
         <tag>英国</tag>
         <tag>选课</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更改Adobe软件安装位置并禁止自动更新</title>
+    <url>/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">因为最近换了张显卡，因为驱动问题被迫把练习时长两年半的系统重装了，因为C盘还是祖传的256G固态，Adobe的几个软件一上去就给用掉不少，看着很不爽，于是尝试更改了Adobe全家桶的安装位置，顺带屏蔽了全家桶的联网权限，防止它们自动更新。需要注意我安装的是cc2018，新版不一定适用</blockquote>
+
+<span id="more"></span>
+
+<div class="note warning"><p>注意，下面的所有操作都需要断开网络连接！</p>
+</div>
+
+<h1 id="更改安装位置"><a href="#更改安装位置" class="headerlink" title="更改安装位置"></a>更改安装位置</h1><p>首先找到安装包目录中的<code>./products/Driver.xml</code>，在<code>&lt;RequestInfo&gt;</code>中插入下面的代码</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">RequestInfo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">InstallDir</span>&gt;</span>D:\Software\Program Files\Adobe<span class="tag">&lt;/<span class="name">InstallDir</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">RequestInfo</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将<code>&lt;InstallDir&gt;</code>中的内容替换为你想要的安装目录，改完后大概是这个亚子</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span><br><span class="line">&lt;DriverInfo&gt;</span><br><span class="line"><span class="addition">+    &lt;RequestInfo&gt;</span></span><br><span class="line"><span class="addition">+        &lt;InstallDir&gt;D:\Software\Program Files\Adobe&lt;/InstallDir&gt;</span></span><br><span class="line"><span class="addition">+    &lt;/RequestInfo&gt;</span></span><br><span class="line">    &lt;ProductInfo&gt;</span><br><span class="line">        &lt;Name&gt;Photoshop CC (2018)&lt;/Name&gt;</span><br><span class="line">        &lt;SAPCode&gt;PHSP&lt;/SAPCode&gt;</span><br><span class="line">        &lt;CodexVersion&gt;19.0&lt;/CodexVersion&gt;</span><br><span class="line">        &lt;Platform&gt;win64&lt;/Platform&gt;</span><br><span class="line">        &lt;EsdDirectory&gt;./PHSP&lt;/EsdDirectory&gt;</span><br><span class="line">        &lt;Dependencies&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;ACR&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;9.6&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./ACR&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;COCM&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./COCM&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;COPS&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./COPS&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;CORE&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./CORE&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">            &lt;Dependency&gt;</span><br><span class="line">                &lt;SAPCode&gt;CORG&lt;/SAPCode&gt;</span><br><span class="line">                &lt;BaseVersion&gt;1.0&lt;/BaseVersion&gt;</span><br><span class="line">                &lt;EsdDirectory&gt;./CORG&lt;/EsdDirectory&gt;</span><br><span class="line">            &lt;/Dependency&gt;</span><br><span class="line">        &lt;/Dependencies&gt;</span><br><span class="line">    &lt;/ProductInfo&gt;</span><br><span class="line">&lt;/DriverInfo&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后按照老办法安装就可以了</p>
+<h1 id="卸载-Creative-Cloud"><a href="#卸载-Creative-Cloud" class="headerlink" title="卸载 Creative Cloud"></a>卸载 Creative Cloud</h1><ul>
+<li><p>这玩意对我来说没什么卵用，还很招人烦，直接用官方的卸载工具卸载掉，下载链接如下</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>Creative Cloud Cleaner tool</p><p>卸载 Adobe Creative Cloud</p>
+<a href="https://swupmf.adobe.com/webfeed/CleanerTool/win/AdobeCreativeCloudCleanerTool.exe"></a>
+</div></div>
+</li>
+<li><p>下载后右键以管理员身份运行，输入e并回车，然后再输入y并回车<br><img data-src="https://s2.loli.net/2022/12/18/YJI7N1nHkKGDoZx.png" alt="Adobe02.png"></p>
+</li>
+<li><p>输入6并回车，选择Creative Cloud Only<br><img data-src="https://s2.loli.net/2022/12/18/QNLFdru9sJPKkv2.png" alt="Adobe03.png"></p>
+</li>
+<li><p>输入2并回车，选择清除所有<br><img data-src="https://s2.loli.net/2022/12/18/YKbwQ4akud2z7rA.png" alt="Adobe04.png"></p>
+</li>
+<li><p>完成后退出即可</p>
+</li>
+</ul>
+<h1 id="禁止自动更新"><a href="#禁止自动更新" class="headerlink" title="禁止自动更新"></a>禁止自动更新</h1><p>禁止Adobe全家桶的自动更新分三步，前面两步主要针对Acrobat，第三步是通杀</p>
+<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><p>首先干掉三个Acrobat的开机启动项，在<code>任务管理器-启动应用</code>中找到下列三个启动项并右键禁用</p>
+<ul>
+<li>acrotray.exe</li>
+<li>updaterstartuputility.exe</li>
+<li>AGCInvokerUtility.exe</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/12/18/zAUyIbtwmB26VZl.png" alt="adobe11.png"></p>
+<h2 id="任务计划程序"><a href="#任务计划程序" class="headerlink" title="任务计划程序"></a>任务计划程序</h2><p>然后干掉Acrobat的三个计划任务，在开始菜单的Windows图标上右键，打开<code>计算机管理-任务计划程序-任务计划程序库</code>，禁用下列三项</p>
+<ul>
+<li>Adobe Acrobat Update Task</li>
+<li>AdobeAAMUpdater</li>
+<li>AdobeGCInvoker</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/12/18/ium6JdaqA1SNDvk.png" alt="adobe21.png"></p>
+<h2 id="防火墙规则"><a href="#防火墙规则" class="headerlink" title="防火墙规则"></a>防火墙规则</h2><p>最后一步是禁止所有的Adobe程序联网，没有网络更新个锤子，但是Adobe狡兔三窟，这里需要添加的规则比较多，建议使用脚本添加，脚本如下。</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line">:begin</span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">echo:</span></span><br><span class="line"><span class="function"><span class="title">echo</span> ****** 禁止文件夹联网 ******</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">set</span> /<span class="title">p</span> <span class="title">folder</span>=请输入文件夹（退出请直接关闭窗口）： </span></span><br><span class="line"><span class="function"><span class="title">If</span> <span class="title">Not</span> <span class="title">Exist</span> &quot;%<span class="title">folder</span>%\&quot; <span class="title">Exit</span>/<span class="title">B</span></span></span><br><span class="line"><span class="function"><span class="title">If</span> /<span class="title">I</span> &quot;%<span class="title">CD</span>%&quot; <span class="title">NEq</span> &quot;%<span class="title">folder</span>%&quot; <span class="title">PushD</span> %<span class="title">folder</span>%</span></span><br><span class="line"><span class="function"><span class="title">Set</span> &quot;<span class="title">Cmnd</span>=<span class="title">netsh</span> <span class="title">advfirewall</span> <span class="title">firewall</span> <span class="title">add</span> <span class="title">rule</span> <span class="title">action</span>=<span class="title">block</span>&quot;</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"><span class="title">For</span> /<span class="title">R</span> %%<span class="title">a</span> <span class="title">In</span> (*.<span class="title">exe</span>) <span class="title">Do</span> (<span class="title">For</span> %%<span class="title">b</span> <span class="title">In</span> (<span class="title">in</span> <span class="title">out</span>) <span class="title">Do</span> (</span></span><br><span class="line"><span class="function">      <span class="title">echo</span> 创建禁止 %%<span class="title">b</span> 规则【%%<span class="title">a</span>】</span></span><br><span class="line"><span class="function">      %<span class="title">Cmnd</span>% <span class="title">name</span>=&quot;<span class="title">blocked</span> %%<span class="title">a</span> <span class="title">via</span> <span class="title">script</span>&quot; <span class="title">dir</span>=%%<span class="title">b</span> <span class="title">program</span>=&quot;%%<span class="title">a</span>&quot;))</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"><span class="title">echo</span> 搞定了，%<span class="title">folder</span>% 中所有 <span class="title">exe</span> 文件的禁止入站、出站规则都已成功创建！</span></span><br><span class="line"><span class="function"><span class="title">echo</span> ----------------------------</span></span><br><span class="line"><span class="function"><span class="title">echo</span>:</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">goto</span> <span class="title">begin</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>脚本来自<a href="https://www.zhihu.com/question/308632323/answer/2792089638">知乎@数据分析</a></p>
+</blockquote>
+<p>将脚本复制到记事本中，然后另存为<code>Firewall Blocker.bat</code>，注意另存的时候将编码方式选择为<code>ANSI</code>，否则运行的时候会乱码。<br><img data-src="https://s2.loli.net/2022/12/19/c3Kk1qlBg8RJx2o.png" alt="Adobe41.png"></p>
+<p>需要输入的文件夹路径有两个，分别为：</p>
+<ul>
+<li>上面更改的安装路径</li>
+<li>C:\Program Files (x86)\Common Files\Adobe</li>
+</ul>
+<p>脚本跑完之后不放心的话可以去防火墙确认一下，在开始菜单中搜索防火墙<br><img data-src="https://s2.loli.net/2022/12/18/qowZlkK8MXg4PA7.png" alt="adobe0.png"><br>然后打开<code>高级安全 Windows Defender 防火墙</code>，查看是否新增了很多Adobe相关的入站和出站规则</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>Win10</tag>
+        <tag>Adobe</tag>
+        <tag>防火墙</tag>
+        <tag>脚本</tag>
       </tags>
   </entry>
   <entry>
