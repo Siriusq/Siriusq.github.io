@@ -1,0 +1,35 @@
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: *
+Disallow: /about/
+Disallow: /archives/
+Disallow: /categories/
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /lib/
+Disallow: /live2d-widget/
+Disallow: /live2d_api/
+Disallow: /page/
+Disallow: /tags/
+Disallow: /404.html
+Disallow: /Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html
+Disallow: /V2Ray.html
+Disallow: /en/about/
+Disallow: /en/archives/
+Disallow: /en/categories/
+Disallow: /en/css/
+Disallow: /en/images/
+Disallow: /en/js/
+Disallow: /en/lib/
+Disallow: /en/live2d-widget/
+Disallow: /en/live2d_api/
+Disallow: /en/page/
+Disallow: /en/tags/
+Disallow: /en/404.html
+Disallow: /en/clash.html
+Disallow: /en/v2ray.html
+
+Sitemap: https://siriusq.top/sitemap.xml
+Sitemap: https://siriusq.top/en/sitemap.xml

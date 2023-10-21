@@ -566,6 +566,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Github无法加载图片解决方法</title>
+    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
+
+<span id="more"></span>
+
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
+<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
+<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
+<ul>
+<li>在开始菜单 Windows 图标处右键单击</li>
+<li>选择 Windows PowerShell （管理员）</li>
+<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
+<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
+</ul>
+</li>
+<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
+<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
+<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
+<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
+<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
+<li>Windows：<code>ipconfig /flushdns</code></li>
+<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
+<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
+<ul>
+<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
+<li>逐条输入 Hosts 中的相关域名</li>
+<li>用返回的新 IP 地址替换掉原来的地址</li>
+<li>保存</li>
+</ul>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Clash for Windows:从入门到摆烂</title>
     <url>/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录</blockquote>
@@ -749,111 +794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github无法加载图片解决方法</title>
-    <url>/Github%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">昨天上 Github 添加图片的时候发现图片不能正常加载了，访问全球最大的同性交友网站没有图片怎么能行（滑稽）。查了一下发现IP又挂了，修改 Hosts 后成功解决，此方法同样适用于 Github 无法访问的问题</blockquote>
-
-<span id="more"></span>
-
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>当我们通过网址访问网站的时候，需要通过 <strong>DNS 解析</strong>来把网址转换成 <strong>IP 地址</strong>，而Github上不去的原因之一就是 GFW 的 DNS 污染大法，这会导致 DNS 服务器返回的 IP 地址是错误的，自然也就无法连接网站，加载图片等资源了。另一个原因就是直接的IP封锁，GFW 会拦截带有相关 IP 的数据头，数据依然无法传输。</p>
-<p>在因特网规模还小的时候，DNS 还没有诞生，域名映射到 IP 地址的工作是由 <code>Hosts</code> 来完成的，后来网络规模迅速扩大，仅靠 <code>Hosts</code> 已经不能满足需要了，此时 DNS 服务器才登上历史舞台。</p>
-<p>虽然 DNS 抢了 Hosts 的饭碗，但是 Hosts 的优先级依然比 DNS 要高，计算机在请求 DNS 解析之前会先检查本机的 Hosts 中是否有要访问的域名和 IP 的映射关系，有的话就不需要使用 DNS 服务器，直接访问映射的IP地址即可。这就使得添加 Hosts 文件映射记录来避免 GFW 的 DNS 污染成为可能。</p>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p>下面是<code>Windows 系统</code>上的解决方案</p>
-<ul>
-<li>在开始菜单 Windows 图标处右键单击</li>
-<li>选择 Windows PowerShell （管理员）</li>
-<li>输入<code>notepad.exe</code>并回车，打开记事本<ul>
-<li>这么做的原因是修改 Hosts 文件需要管理员权限，直接用记事本的话无法保存</li>
-</ul>
-</li>
-<li>在记事本菜单栏依次点击<code>文件</code>，<code>打开</code></li>
-<li>在<code>C:\Windows\System32\drivers\etc</code>路径中找到 Hosts 文件并打开（<code>Ubuntu</code>和<code>Macos</code>的文件路径一般为<code>/etc/hosts</code>，先复制出来，替换完成后再粘贴回去替换）</li>
-<li>在最下面添加下面的映射  <figure class="highlight dos"><table><tr><td class="code"><pre><span class="line"># Github</span><br><span class="line"><span class="number">192</span>.<span class="number">30</span>.<span class="number">253</span>.<span class="number">112</span> github.com</span><br><span class="line"><span class="number">140</span>.<span class="number">82</span>.<span class="number">113</span>.<span class="number">19</span> gist.github.com</span><br><span class="line"><span class="number">185</span>.<span class="number">199</span>.<span class="number">108</span>.<span class="number">153</span> assets-cdn.github.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> raw.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> gist.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> cloud.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> camo.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars1.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">68</span>.<span class="number">133</span> avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199</span>.<span class="number">232</span>.<span class="number">28</span>.<span class="number">133</span> avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure></li>
-<li><code>ctrl+s</code>保存，刷新网页一下就能正常访问了</li>
-<li>如果依然不能访问，需要刷新 DN S缓存 + 重启浏览器<ul>
-<li>Windows：<code>ipconfig /flushdns</code></li>
-<li>Ubuntu：<code>sudo systemctl restart nscd</code></li>
-<li>Macos：<code>sudo killall -HUP mDNSResponder</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="更新-Hosts"><a href="#更新-Hosts" class="headerlink" title="更新 Hosts"></a>更新 Hosts</h1><p>由于 GFW 孜孜不倦的工作，这些 IP 隔一段时间就会被干掉，所以我们隔一段时间按就需要修改 Hosts 文件来访问被干掉的网站</p>
-<ul>
-<li>打开 <a href="https://www.ipaddress.com/">ipaddress</a></li>
-<li>逐条输入 Hosts 中的相关域名</li>
-<li>用返回的新 IP 地址替换掉原来的地址</li>
-<li>保存</li>
-</ul>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Win10</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HEXO部署</title>
-    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
-    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
-<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
-<ul>
-<li>创建新博客文件</li>
-<li>生成新网页</li>
-<li>部署到Github Page</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
-<li><p>在博客文件夹中右键打开Git bash</p>
-</li>
-<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
-</li>
-<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
-</li>
-<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
-<ul>
-<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>其中<code>title</code>就是博客标题</li>
-<li><code>date</code>是博客的创建时间，不用修改</li>
-<li><code>tags</code>是博客的标签</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>踩坑：<br>此处注意冒号后面的空格</p>
-</blockquote>
-<ul>
-<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
-</ul>
-</li>
-<li><p>编写完成后保存</p>
-</li>
-</ol>
-<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
-<li>打开Git bash</li>
-<li>输入命令<code>hexo clean</code>清除网页缓存</li>
-<li>输入命令<code>hexo g</code>生成新的网页文件</li>
-<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
-<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
-</blockquote>
-</li>
-<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
-</ol>
-<hr>
-<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Grasshopper</title>
     <url>/Grasshopper.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">把大二到现在攒下来的用来画（shui）分析图的Grasshopper电池做一下汇总，并记录一下简易使用方法供建筑狗使用，感兴趣的话为何不尝试一下转行程序猿呢（~~劝退~~）</blockquote>
@@ -980,6 +920,66 @@
       <tags>
         <tag>Grasshopper</tag>
         <tag>建筑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HEXO部署</title>
+    <url>/HEXO%E9%83%A8%E7%BD%B2.html</url>
+    <content><![CDATA[<p>博客已经搭建成功了，下一步是用Hexo配合Markdown写博客了</p>
+<h1 id="Hexo写作流程"><a href="#Hexo写作流程" class="headerlink" title="Hexo写作流程"></a>Hexo写作流程</h1><p>博客写作流程相对于搭建要简单太多了，只需要以下几步：</p>
+<ul>
+<li>创建新博客文件</li>
+<li>生成新网页</li>
+<li>部署到Github Page</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="创建新博客文件"><a href="#创建新博客文件" class="headerlink" title="创建新博客文件"></a>创建新博客文件</h2><ol>
+<li><p>在博客文件夹中右键打开Git bash</p>
+</li>
+<li><p>输入<code>hexo new &quot;博客标题&quot;</code> 新建一个md文件，双引号内的名字就是文章标题</p>
+</li>
+<li><p>进入<code>博客根目录/source/_posts</code> 文件夹，可以看到新创建的文件<code>博客标题.md</code>,md后缀代表Markdown文件</p>
+</li>
+<li><p>双击使用安装的Markdown编辑器打开进行编辑</p>
+<ul>
+<li>文件内会默认生成以下内容(以本博客为例）：  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   ---`</span><br><span class="line">   title: HEXO&amp;Markdown</span><br><span class="line">date: 2019-04-04 10:50:41</span><br><span class="line">tags: [Hexo,Markdown]</span><br><span class="line">   ---`</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中<code>title</code>就是博客标题</li>
+<li><code>date</code>是博客的创建时间，不用修改</li>
+<li><code>tags</code>是博客的标签</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>踩坑：<br>此处注意冒号后面的空格</p>
+</blockquote>
+<ul>
+<li>在<code>---</code>分割线后就是我们写博文的地方了，按照Markdown语法规则编写即可</li>
+</ul>
+</li>
+<li><p>编写完成后保存</p>
+</li>
+</ol>
+<h2 id="生成新网页并部署"><a href="#生成新网页并部署" class="headerlink" title="生成新网页并部署"></a>生成新网页并部署</h2><ol>
+<li>打开Git bash</li>
+<li>输入命令<code>hexo clean</code>清除网页缓存</li>
+<li>输入命令<code>hexo g</code>生成新的网页文件</li>
+<li>（可选）输入命令<code>hexo s</code>生成本地服务并前往返回的网址预览网页<blockquote>
+<p>踩坑：<br>Git bash内的复制命令并不是熟悉的<code>ctrl c</code>，而是<code>ctrl ins</code>，使用<code>ctrl c</code>复制预览网址会结束本地服务进程，所以预览网页会没反应</p>
+</blockquote>
+</li>
+<li>输入命令<code>hexo d</code>将网页部署到Github Page</li>
+</ol>
+<hr>
+<p><strong>以上是完整流程，每次更新博客的时候都要重复一遍上述流程</strong><br>省事的话可以合并命令，直接用<code>hexo cl</code>和<code>hexo g -d</code>即可更新</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1132,6 +1132,43 @@
         <tag>Hexo</tag>
         <tag>Next</tag>
         <tag>i18n</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Next JSDelivr 被墙解决方案</title>
+    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
+
+<span id="more"></span>
+
+<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
+</div>
+
+<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
+<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
+<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
+<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
+<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
+<ul>
+<li>打开<code>_config.next.yml</code></li>
+<li>定位到到<code>CDN Settings</code></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
+</ul>
+<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
+<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
+
+<ul>
+<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
+<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
+</ul>
+<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -1354,66 +1391,81 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Next JSDelivr 被墙解决方案</title>
-    <url>/Hexo-Next-JSDelivr-%E8%A2%AB%E5%A2%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">GFW坏事做尽，又玩DNS污染，我上一篇记录JSDelivr使用方法的博客还没写完，JSDelivr就没了😭</blockquote>
-
-<span id="more"></span>
-
-<div class="note success"><h1 id="更新Next主题即可"><a href="#更新Next主题即可" class="headerlink" title="更新Next主题即可"></a>更新Next主题即可</h1><p>最新的Next主题已经将第三方插件使用的CDN切换到了<code>cdnjs</code>，直接升级主题就好了</p>
-</div>
-
-<p>今天更新网站的时候突然发现加载速度巨慢，开控制台一看一片报错，和JSDelivr有关的资源全部不能加载，经确认JSDelivr已经被墙😭。因为Next主题默认使用JSDelivr作为第三方插件（如Gitalk、FancyBox）的CDN提供方，所以JSDelivr被墙后网站基本瘫痪。</p>
-<p><img data-src="https://s2.loli.net/2022/05/23/DZbmI2lfGTpoRNy.png" alt="ping"></p>
-<p>emmm估计用不了太久就会全图变红了。其实JSDelivr被墙已经有过预兆了，因为滥用的太多，去年年底JSDelivr在国内的ICP备案就被吊销了，抽风了一段时间后又恢复了正常，强撑了半年之后还是被疯掉了，令人惋惜。</p>
-<h1 id="主题第三方插件修复"><a href="#主题第三方插件修复" class="headerlink" title="主题第三方插件修复"></a>主题第三方插件修复</h1><p>有三种解决方案，第一种解决方案是更换CDN提供方，第二种方案是把第三方插件全部部署到自己的网站上，第三种方案是使用自己的CDN，但是过于麻烦，就不写了🐶。</p>
-<h2 id="更换CDN提供方"><a href="#更换CDN提供方" class="headerlink" title="更换CDN提供方"></a>更换CDN提供方</h2><p>Next官方提供了<code>jsdelivr</code>、<code>unpkg</code>和<code>cdnjs</code>三家CDN供应商，经实测<code>unpkg</code>和<code>cdnjs</code>目前仍能正常访问，所以把第三方插件的CDN切换过去就好了</p>
-<ul>
-<li>打开<code>_config.next.yml</code></li>
-<li>定位到到<code>CDN Settings</code></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: unpkg</code>或者<code>plugins: cdnjs</code></li>
-</ul>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>Next官方也有一个集合了主题中使用到的第三方插件的仓库</p>
-<div class="note info"><p><a class="btn" href="https://github.com/next-theme/plugins"><i class="fa fa-torii-gate fa-fw"></i>Next第三方插件库</a></p></div>
-
-<ul>
-<li>首先安装第三方插件库，报错的话检查<code>@next-theme/plugins</code>和<code>hexo-theme-next</code>两者版本号是否相同<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install @next-theme/plugins</span><br></pre></td></tr></table></figure></li>
-<li>修改<code>plugins: jsdelivr</code>为<code>plugins: local</code></li>
-</ul>
-<h1 id="自己的资源"><a href="#自己的资源" class="headerlink" title="自己的资源"></a>自己的资源</h1><p>自己的资源就没办法咯，毕竟JSDelivr这么好用的仅此一家，<code>unpkg</code>和<code>cdnjs</code>都没法上自己的资源。能想到的只有把资源部署到自己的网站和自己找托管两种方法了。我就只能吭哧吭哧的把自己的资源搬回到网站上了😭</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo添加Google收录</title>
+    <title>Hexo添加Google收录与SEO</title>
     <url>/Hexo%E6%B7%BB%E5%8A%A0Google%E6%94%B6%E5%BD%95.html</url>
-    <content><![CDATA[<p>目前网站还不能够通过搜索引擎搜索到，想要被搜到的话需要添加搜索引擎收录，这里以我添加的Google为例。<br><strong>步骤包括：</strong></p>
+    <content><![CDATA[<blockquote class="blockquote-center">刚给网站做了SEO，顺道来更新一篇4年前的老博文。本文内容包括：安装插件并生成网站地图，通过配置插件来剔除不需要收录的页面或文件，向谷歌搜索提交网站地图并添加收录，以及使用robots.txt来进行搜索引擎优化（SEO）</blockquote>
+
+<h1 id="插件安装与配置"><a href="#插件安装与配置" class="headerlink" title="插件安装与配置"></a>插件安装与配置</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，我们需要安装<a href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a>插件来为网站生成网站地图（Sitemap），命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>安装完成后打开Hexo框架的配置文件<code>./_config.yml</code>，向其中添加下面的配置：</p>
+<figure class="highlight yml"><figcaption><span>./_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sitemap Generator</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>说明：</strong></p>
 <ul>
-<li>生成站点地图</li>
-<li>验证站点<span id="more"></span></li>
+<li><code>path</code>是生成的网站地图的路径，例如我的网站URL是<code>https://siriusq.top/</code>，那么生成的网站地图的路径就是<code>https://siriusq.top/sitemap.xml</code></li>
+<li><code>tags</code>用于设置是否收录标签相关页面，我关闭了这个选项，因为我的标签数量比博文还多🐶，而每个条标签都会生成一条索引，喧宾夺主</li>
+<li><code>categories</code>用于设置是否收录分类相关页面，按需开启</li>
+<li>更多选项可以到<a href="https://github.com/hexojs/hexo-generator-sitemap#readme">插件README页面</a>查看</li>
 </ul>
-<h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><ol>
-<li>在博客根目录下打开Git bash</li>
-<li>执行命令<code>npm install hexo-generator-sitemap --save</code>安装站点地图生成插件</li>
-<li>在博客根目录下的配置文件<code>_config.yml</code>中添加下列内容 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line"><span class="attr">sitemap</span>:</span><br><span class="line">	<span class="attr">path</span>: sitemap.<span class="property">xml</span></span><br></pre></td></tr></table></figure></li>
-<li>执行<code>hexo g</code>即可在<code>博客根目录/public</code>中生成<code>sitemap.xml</code>文件</li>
+<h2 id="排除特定页面"><a href="#排除特定页面" class="headerlink" title="排除特定页面"></a>排除特定页面</h2><p>如果你不想让特定的页面（例如404页面）出现在网站地图中，可以在相关页面的MarkDown文件最上方以<code>---</code>分隔的区域（Front-matter）中添加一行<code>sitemap: false</code>，示例如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&quot;404&quot;</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;404&quot;</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/404</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-04-12 20:38:42</span></span><br><span class="line"><span class="attr">layout:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">sitemap:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">页面内容</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="排除特定格式文件"><a href="#排除特定格式文件" class="headerlink" title="排除特定格式文件"></a>排除特定格式文件</h2><p>插件默认会排除<code>js</code>和<code>css</code>格式的文件，但是我的网站有很多<code>json</code>格式的Live2D模型配置文件，它们在页面生成过程中都会被添加到网站地图中，数量达到了恐怖的93条，我的博文索引还不到60条🐶。</p>
+<p>但是插件并没有提供排除特定格式文件的配置选项，谷歌查到的在<code>./_config.yml</code>的插件配置中添加<code>exclude: &#39;/**/*.json&#39;</code>语句也是无效的，不知道这个设置是怎么传出来的，我看了一下插件源码，根本就没有这个选项。</p>
+<p>解决方案非常的简单粗暴，直接改插件代码🐶。打开博客目录下的<code>./node_modules/hexo-generator-sitemap/lib/generator.js</code>，找到<code>const skipRenderList</code>，像其中添加一行<code>&#39;**/*.json&#39;</code>，改完之后是下面这个样子，注意不要漏掉上一行结尾处的逗号。</p>
+<figure class="highlight js"><figcaption><span>generator.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> skipRenderList = [</span><br><span class="line">    <span class="string">&#x27;**/*.js&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;**/*.css&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;**/*.json&#x27;</span></span><br><span class="line">  ];</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加到谷歌收录"><a href="#添加到谷歌收录" class="headerlink" title="添加到谷歌收录"></a>添加到谷歌收录</h1><p>目前网站还不能够通过搜索引擎搜索到，想要被搜到的话需要添加搜索引擎收录，这里以我添加的Google为例。</p>
+<ol>
+<li>打开<a href="https://search.google.com/search-console/">Google Search Console</a>,点击立即使用并登录谷歌账号</li>
+<li>选择网址前缀并输入站点网址，如<code>https://siriusq.top</code>，点击继续<br><img data-src="https://s2.loli.net/2023/10/21/JlYdBIWN8f5FMmZ.webp" alt="01.webp"></li>
+<li>验证方法选择HTML标记，然后复制Google提供的元标记，如：  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;tcRYfdvRwh-85F9TY63_0TZ4O56GfhgyNGZhgfzsdfgghfg&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+  <img data-src="https://s2.loli.net/2023/10/21/cTFnJe1AtoBkKaU.webp" alt="02.webp"></li>
+<li>打开Next主题配置文件<code>_config.next.yml</code>，通过搜索找到<code>google_site_verification: </code>，在后面粘贴上一步复制的元标记中的<code>content</code>部分，如：  <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">google_site_verification:</span> <span class="string">tcRYfdvRwh-85F9TY63_0TZ4O56GfhgyNGZhgfzsdfgghfg</span></span><br></pre></td></tr></table></figure></li>
+<li>执行<code>hexo cl</code>与<code>hexo g -d</code>命令，重新生成网站资源并推送到GitHub，在博客仓库的Actions中查看网站是否完成部署</li>
+<li>完成部署后回到第3步的网页，点击<code>验证</code>即可</li>
+<li>过一段时间（最长可能要1个月），等待Google的爬虫完成对网站的索引，然后在Google中搜索<code>site：域名</code>就可以看到自己的网站了</li>
+<li>建议在验证完成后手动提交一份网站地图<ul>
+<li>点击Google Search Console左边栏中<code>站点地图</code></li>
+<li>网站地图的默认URL是<code>https://[你的博客域名]/sitemap.xml</code></li>
+<li>粘贴URL并点击<code>提交</code>即可</li>
+</ul>
+</li>
 </ol>
-<h3 id="验证站点"><a href="#验证站点" class="headerlink" title="验证站点"></a>验证站点</h3><ol>
-<li>打开<a href="https://www.google.com/webmasters/">Google网站站长</a>,点击右上角登陆</li>
-<li>选择网址前缀并输入站点域名，点击继续</li>
-<li>下载Google的验证文件并存放在<code>博客根目录/themes/next/source</code>中</li>
-<li>执行<code>hexo cl</code>,<code>hexo g</code>,<code>hexo d</code>三连</li>
-<li>回到Google网站站长进行验证</li>
-<li>在Google中搜索<code>site：域名</code>就可以看到自己的网站了</li>
+<h1 id="设置robots-txt"><a href="#设置robots-txt" class="headerlink" title="设置robots.txt"></a>设置robots.txt</h1><p><code>robots.txt</code> 是一个文本文件，用于控制搜索引擎爬虫访问网站的权限。我们可以在网站的根目录中放置这个文件，以指定哪些页面或目录可以被搜索引擎的爬虫访问，哪些不可以。</p>
+<p>以下是 robots.txt 的一些常用元素和规则：</p>
+<ol>
+<li><code>User-agent</code>：指定要应用规则的搜索引擎爬虫的名称。例如，”User-agent: Googlebot” 表示以下规则适用于 Googlebot 爬虫。常见爬虫名称如下<ul>
+<li><code>Googlebot</code> - Google 的搜索引擎爬虫。</li>
+<li><code>Bingbot</code> - Microsoft Bing 的搜索引擎爬虫。</li>
+<li><code>Slurp</code> - 雅虎的搜索引擎爬虫。</li>
+<li><code>DuckDuckBot</code> - DuckDuckGo 的搜索引擎爬虫。</li>
+<li><code>Baiduspider</code> - 百度的搜索引擎爬虫。</li>
+<li><code>YandexBot</code> - Yandex 的搜索引擎爬虫。</li>
+</ul>
+</li>
+<li><code>Disallow</code>：指定不允许爬虫访问的页面或目录。例如，”Disallow: &#x2F;private&#x2F;“ 表示不允许爬虫访问网站中的 “&#x2F;private&#x2F;“ 目录。</li>
+<li><code>Allow</code>：用于取消 <code>Disallow</code> 规则的限制。如果一个目录被 <code>Disallow</code>，但其中的某些文件或子目录需要被爬取，可以使用 <code>Allow</code> 来解除限制。</li>
+<li><code>Crawl-delay</code>：指定爬虫爬取网站的速度。这个规则通常用于控制爬虫的爬取速度，以避免对服务器造成过大的负载。</li>
+<li><code>Sitemap</code>：告诉搜索引擎关于网站地图（Sitemap）的位置，这通常用于帮助搜索引擎更好地理解网站结构。</li>
 </ol>
-<hr>
-<p>现在已经可以在Google上搜索到自己的文章和网站了，填坑结束~~~</p>
+<details class="note primary"><summary><p>robots.txt示例</p>
+</summary>
+<p>一个简单的 robots.txt 文件的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">User-agent: Googlebot</span><br><span class="line">Disallow: /private/</span><br><span class="line">Allow: /public/</span><br><span class="line">Crawl-delay: 10</span><br><span class="line"></span><br><span class="line">User-agent: Bingbot</span><br><span class="line">Disallow: /admin/</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，对 Googlebot 的规则是不允许访问 “&#x2F;private&#x2F;“ 目录，但允许访问 “&#x2F;public&#x2F;“ 目录，而且限制它的爬取速度。对于 Bingbot，不允许访问 “&#x2F;admin&#x2F;“ 目录。</p>
+<blockquote>
+<p>来自 ChatGPT</p>
+</blockquote>
+
+</details>
+
+<p>下面是我的robots.txt，它禁止百度爬虫爬取网站（垃圾百度你不配），然后阻止其他爬虫爬取无关的目录与404页面。</p>
+<figure class="highlight yml"><figcaption><span>robots.txt</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">User-agent:</span> <span class="string">Baiduspider</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">User-agent:</span> <span class="string">*</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/about/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/archives/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/categories/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/css/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/images/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/js/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/lib/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/live2d-widget/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/live2d_api/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/page/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/tags/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/404.html</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Sitemap:</span> <span class="string">https://siriusq.top/sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>关于robots.txt的更多信息请参阅<a href="https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=zh-cn">Google搜索中心</a></p>
 ]]></content>
       <categories>
         <category>网站配置</category>
@@ -1847,84 +1899,6 @@
       <tags>
         <tag>Win10</tag>
         <tag>Jupyter</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MacBook Pro 路易十六联名款</title>
-    <url>/MacBookProHeadless.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">论如何用最少的钱买一台Mac</blockquote>
-
-<p><img data-src="https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg" alt="MBPHeadless.jpg"></p>
-<span id="more"></span>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于黑苹果的升级维护实在是麻烦，我开始盘算怎么整一台便宜的Mac(果然一切黑苹果的尽头都是白苹果)。目前官网最便宜的白苹果是M2芯片的Mac Mini，起售价4499元，配置上还是苹果祖传的8G内存和256G硬盘，16G内存的需要5999，超预算太多。然后又跑到了闲鱼，不得不感慨苹果的产品是真的保值啊，8G内存M1芯片的Mac Mini二手售价仍然在3000元左右，16G内存的在4000元左右。二手Macbook的价格基本都在5000元以上，哪怕是最低配的8G内存128G硬盘的17款MBP也要2000多元。不过闲鱼神奇的推荐算法让我发现了一个好东西：MacBook Mini，又称Macbook无头骑士，讲人话就是没有屏幕的二手Macbook，售价1000多元。因为我的使用场景就是写代码，所以刚需就是16G及以上的内存。此外我的笔记本一般都是外接显示器使用，所以有没有屏幕并不重要。这么一想，1000多就能拥有白苹果+大号触摸板+音响+Touch Bar，好像有点香。</p>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
-<li>便宜，这是最大的优点</li>
-<li>相较于黑苹果，它不需要折腾</li>
-<li>自带触控板、键盘、音响、指纹识别</li>
-</ul>
-<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
-<li>二手产品，肯定会有瑕疵</li>
-<li>肯定被拆过机，因为要取下屏幕，零件也有可能被更换过</li>
-<li>键盘、电池出问题的可能性较高</li>
-<li>保修约等于不存在</li>
-<li>需要外接显示器才能使用</li>
-<li>型号较老，大部分都是16-19款使用Intel处理器的，M1的基本没有，性能一般</li>
-<li>重装系统很麻烦</li>
-</ul>
-<h2 id="适用人群与场景"><a href="#适用人群与场景" class="headerlink" title="适用人群与场景"></a>适用人群与场景</h2><ul>
-<li>入门iOS开发</li>
-<li>想尝试MacOS，不想花太多钱也不想折腾</li>
-<li>使用位置相对固定，没有移动性需求</li>
-<li>最好有4K显示器，当然2K和1080p也不是不能用，我用的就是2K</li>
-</ul>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>关于这种神奇Mac的来源众说纷纭，主流的说法有两种，一种可能是屏幕坏掉，但是屏幕维修成本太高，放弃维修直接卖给回收商家，回收商家再把屏幕拆掉单独卖下半身；另一种说是原来海外用作服务器的MBP，为了节约空间多在机柜里塞几台，就把屏幕拆掉，再然后就是洋垃圾大船靠岸的故事了。</p>
-<h1 id="购买途径"><a href="#购买途径" class="headerlink" title="购买途径"></a>购买途径</h1><p>我在知乎和b站搜索这种MBP的使用感受的时候意外发现了组织，@<a href="https://www.zhihu.com/people/xiaoming-22-24">江sir爱数码</a>已经对这种产品做了详细的研究，并且根据群友的经验总结出两家比较靠谱的闲鱼卖家，MacBook和苹果尊选，我就是在其中一家购买的，没有翻车。</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>MacBook下半身经验分享</p><p>江sir爱数码</p>
-<a href="https://zhuanlan.zhihu.com/p/599745126"></a>
-</div></div>
-
-<h1 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h1><p>我购买的机型是2017款的MacBook Pro 15（A1707），处理器是4C8T的7700HQ，显卡是Radeon Pro 555 2G，16G内存，512G固态硬盘，花了我1600大洋。</p>
-<h2 id="到手成色"><a href="#到手成色" class="headerlink" title="到手成色"></a>到手成色</h2><p>我这台路易十六的成色还不错，外壳没有明显的刮擦、磕碰，只有键盘的P键和0键的边缘被磕掉了一丢丢。除了没有摄像头和屏幕，其他部件都能正常工作。电池应该被卖家更换过，循环数是0。序列号什么的也都能对的上。</p>
-<h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><p>我个人有点赛博洁癖，电子产品到手的第一件事就是重装。但是我的无头本无法进入恢复模式，据说需要外接Type-C直连的4K显示器才能进入。如果以后出问题的话还要找个4K显示器才能重装，比较麻烦。</p>
-<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>建议搭配4K显示器使用，最好支持Type-C直连，原因如下：</p>
-<ul>
-<li>MBP只有Type-C接口，没有HDMI和DP等常用视频输出接口，显示器不支持Type-C的话需要转接线或转接头，我买的转接线发热很严重。</li>
-<li>2K显示器显示的字体非常小，虽然可以通过软件内缩放字体解决，但还是不如HiDPI舒服</li>
-<li>非4K显示器无法正常开启HiDPI，GitHub上有<a href="https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md">强制开启HiDPI的插件</a>，但是风险较高，强制开启失败的话可能要进入恢复模式来修复，而我又不能进入恢复模式，于是就被卡住了</li>
-<li>显示器的亮度不能通过软件调节，可能是我用的转接线不支持DDC&#x2F;CI协议</li>
-</ul>
-<p>此外选择显示器分辨率的时候千万要小心，我这台2K显示器在MBP的设置里能选择4K输出，我好奇的点了一下，然后显示器就黑屏了，提示分辨率不符。我最后只能在啥也看不见的情况下盲点碰运气，点了半分钟终于点到了2K输出的选项😭😭😭</p>
-<p>不过MacOS的字体渲染还是比Windows强了不少的，感官上更加细腻，现在看PDF都用Mac看了。</p>
-<h2 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h2><p>MBP的蝴蝶键盘手感非常差劲，键程太短，最好还是外接键盘使用。淘宝上有卖键盘盖板的，如下图所示，可以节省桌面空间。</p>
-<p><img data-src="https://s2.loli.net/2023/07/01/Cx2HZ7vzSEIQpFy.jpg" alt="MBP键盘盖板.jpg"></p>
-<p>另外如果使用蓝牙键盘+2.4G无线鼠标的话会有干扰，鼠标经常掉帧，这也算苹果的老毛病了</p>
-<h2 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h2><p>MBP的指纹识别体验很棒，比我在WIN上用指纹模块的识别率高不少，不过它的材质容易留下指纹印</p>
-<h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><p>Mac的触控板比其他的不知道高到哪里去了，压感触控，面积巨大，划起来很爽，就是划时间长了指尖磨得难受。</p>
-<h2 id="性能与噪音"><a href="#性能与噪音" class="headerlink" title="性能与噪音"></a>性能与噪音</h2><p>5年前的老机型了，拿来跑点小项目性能还是够用的，但是软件的启动速度比较慢。跑Xcode编译的时候风扇会满速运转，但是噪音并不算大，不过C面靠后的位置会很烫手</p>
-<h2 id="Facetime"><a href="#Facetime" class="headerlink" title="Facetime"></a>Facetime</h2><p>由于拆掉了屏幕，而MBP的摄像头又在屏幕上面，所以要使用Facetime只能用外接摄像头或者用iPhone连续互通相机功能。</p>
-<p>我把iPhone用线连接到MBP上之后并没有出现连续互通相机的提示，Facetime里面也没有相应的选项。然后我插入了外接摄像头，刚插入就有了使用连续互通相机的提示，就很迷惑，把外接摄像头拔掉也能继续用连续互通相机。猜测应该是要初始化一下摄像头才能激活连续互通相机。</p>
-<div class="note success"><p>新方法<br>在<a href="https://zhuanlan.zhihu.com/p/599745126">江Sir的知乎专栏</a>里发现了更简单的激活办法</p>
-<ul>
-<li>用数据线连接iPhone和Mac</li>
-<li>打开QuickTime Player，点击左上角新建影片录制</li>
-<li>Mac弹出连续互通功能的介绍，点击继续</li>
-<li>iPhone也会弹出提示</li>
-<li>然后就能用了，拔掉线也可以继续用</li>
-</ul>
-</div>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img data-src="https://s2.loli.net/2023/07/01/ROkL7QVCsFayBJv.jpg" alt="真香.jpg"></p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>MacOS</tag>
-        <tag>MacBook Pro</tag>
       </tags>
   </entry>
   <entry>
@@ -2713,6 +2687,85 @@
       </tags>
   </entry>
   <entry>
+    <title>MacBook Pro 路易十六联名款</title>
+    <url>/MacBookProHeadless.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">论如何用最少的钱买一台Mac</blockquote>
+
+<p><img data-src="https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg" alt="MBPHeadless.jpg"></p>
+<span id="more"></span>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于黑苹果的升级维护实在是麻烦，我开始盘算怎么整一台便宜的Mac(果然一切黑苹果的尽头都是白苹果)。目前官网最便宜的白苹果是M2芯片的Mac Mini，起售价4499元，配置上还是苹果祖传的8G内存和256G硬盘，16G内存的需要5999，超预算太多。然后又跑到了闲鱼，不得不感慨苹果的产品是真的保值啊，8G内存M1芯片的Mac Mini二手售价仍然在3000元左右，16G内存的在4000元左右。二手Macbook的价格基本都在5000元以上，哪怕是最低配的8G内存128G硬盘的17款MBP也要2000多元。不过闲鱼神奇的推荐算法让我发现了一个好东西：MacBook Mini，又称Macbook无头骑士，讲人话就是没有屏幕的二手Macbook，售价1000多元。因为我的使用场景就是写代码，所以刚需就是16G及以上的内存。此外我的笔记本一般都是外接显示器使用，所以有没有屏幕并不重要。这么一想，1000多就能拥有白苹果+大号触摸板+音响+Touch Bar，好像有点香。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>便宜，这是最大的优点</li>
+<li>相较于黑苹果，它不需要折腾</li>
+<li>自带触控板、键盘、音响、指纹识别</li>
+</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>二手产品，肯定会有瑕疵</li>
+<li>肯定被拆过机，因为要取下屏幕，零件也有可能被更换过</li>
+<li>键盘、电池出问题的可能性较高</li>
+<li>保修约等于不存在</li>
+<li>需要外接显示器才能使用</li>
+<li>型号较老，大部分都是16-19款使用Intel处理器的，M1的基本没有，性能一般</li>
+<li>重装系统很麻烦</li>
+</ul>
+<h2 id="适用人群与场景"><a href="#适用人群与场景" class="headerlink" title="适用人群与场景"></a>适用人群与场景</h2><ul>
+<li>入门iOS开发</li>
+<li>想尝试MacOS，不想花太多钱也不想折腾</li>
+<li>使用位置相对固定，没有移动性需求</li>
+<li>最好有4K显示器，当然2K和1080p也不是不能用，我用的就是2K</li>
+</ul>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p>关于这种神奇Mac的来源众说纷纭，主流的说法有两种，一种可能是屏幕坏掉，但是屏幕维修成本太高，放弃维修直接卖给回收商家，回收商家再把屏幕拆掉单独卖下半身；另一种说是原来海外用作服务器的MBP，为了节约空间多在机柜里塞几台，就把屏幕拆掉，再然后就是洋垃圾大船靠岸的故事了。</p>
+<h1 id="购买途径"><a href="#购买途径" class="headerlink" title="购买途径"></a>购买途径</h1><p>我在知乎和b站搜索这种MBP的使用感受的时候意外发现了组织，@<a href="https://www.zhihu.com/people/xiaoming-22-24">江sir爱数码</a>已经对这种产品做了详细的研究，并且根据群友的经验总结出两家比较靠谱的闲鱼卖家，MacBook和苹果尊选，我就是在其中一家购买的，没有翻车。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>MacBook下半身经验分享</p><p>江sir爱数码</p>
+<a href="https://zhuanlan.zhihu.com/p/599745126"></a>
+</div></div>
+
+<h1 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h1><p>我购买的机型是2017款的MacBook Pro 15（A1707），处理器是4C8T的7700HQ，显卡是Radeon Pro 555 2G，16G内存，512G固态硬盘，花了我1600大洋。</p>
+<h2 id="到手成色"><a href="#到手成色" class="headerlink" title="到手成色"></a>到手成色</h2><p>我这台路易十六的成色还不错，外壳没有明显的刮擦、磕碰，只有键盘的P键和0键的边缘被磕掉了一丢丢。除了没有摄像头和屏幕，其他部件都能正常工作。电池应该被卖家更换过，循环数是0。序列号什么的也都能对的上。</p>
+<h2 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h2><p>我个人有点赛博洁癖，电子产品到手的第一件事就是重装。但是我的无头本无法进入恢复模式，据说需要外接Type-C直连的4K显示器才能进入。如果以后出问题的话还要找个4K显示器才能重装，比较麻烦。</p>
+<h2 id="显示器"><a href="#显示器" class="headerlink" title="显示器"></a>显示器</h2><p>建议搭配4K显示器使用，最好支持Type-C直连，原因如下：</p>
+<ul>
+<li>MBP只有Type-C接口，没有HDMI和DP等常用视频输出接口，显示器不支持Type-C的话需要转接线或转接头，我买的转接线发热很严重。</li>
+<li>2023年10月更新：发现了一款可以为2K显示器开启HiDPI的软件 <a href="https://github.com/waydabber/BetterDisplay">BetterDisplay</a>，快乐起来了！</li>
+<li><del>2K显示器显示的字体非常小，虽然可以通过软件内缩放字体解决，但还是不如HiDPI舒服</del></li>
+<li><del>非4K显示器无法正常开启HiDPI，GitHub上有<a href="https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md">强制开启HiDPI的插件</a>，但是风险较高，强制开启失败的话可能要进入恢复模式来修复，而我又不能进入恢复模式，于是就被卡住了</del></li>
+<li>显示器的亮度不能通过软件调节，可能是我用的转接线不支持DDC&#x2F;CI协议</li>
+</ul>
+<p>此外选择显示器分辨率的时候千万要小心，我这台2K显示器在MBP的设置里能选择4K输出，我好奇的点了一下，然后显示器就黑屏了，提示分辨率不符。我最后只能在啥也看不见的情况下盲点碰运气，点了半分钟终于点到了2K输出的选项😭😭😭</p>
+<p>不过MacOS的字体渲染还是比Windows强了不少的，感官上更加细腻，现在看PDF都用Mac看了。</p>
+<h2 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h2><p>MBP的蝴蝶键盘手感非常差劲，键程太短，最好还是外接键盘使用。淘宝上有卖键盘盖板的，如下图所示，可以节省桌面空间。</p>
+<p><img data-src="https://s2.loli.net/2023/07/01/Cx2HZ7vzSEIQpFy.jpg" alt="MBP键盘盖板.jpg"></p>
+<p>另外如果使用蓝牙键盘+2.4G无线鼠标的话会有干扰，鼠标经常掉帧，这也算苹果的老毛病了</p>
+<h2 id="指纹识别"><a href="#指纹识别" class="headerlink" title="指纹识别"></a>指纹识别</h2><p>MBP的指纹识别体验很棒，比我在WIN上用指纹模块的识别率高不少，不过它的材质容易留下指纹印</p>
+<h2 id="触控板"><a href="#触控板" class="headerlink" title="触控板"></a>触控板</h2><p>Mac的触控板比其他的不知道高到哪里去了，压感触控，面积巨大，划起来很爽，就是划时间长了指尖磨得难受。</p>
+<h2 id="性能与噪音"><a href="#性能与噪音" class="headerlink" title="性能与噪音"></a>性能与噪音</h2><p>5年前的老机型了，拿来跑点小项目性能还是够用的，但是软件的启动速度比较慢。跑Xcode编译的时候风扇会满速运转，但是噪音并不算大，不过C面靠后的位置会很烫手</p>
+<h2 id="Facetime"><a href="#Facetime" class="headerlink" title="Facetime"></a>Facetime</h2><p>由于拆掉了屏幕，而MBP的摄像头又在屏幕上面，所以要使用Facetime只能用外接摄像头或者用iPhone连续互通相机功能。</p>
+<p>我把iPhone用线连接到MBP上之后并没有出现连续互通相机的提示，Facetime里面也没有相应的选项。然后我插入了外接摄像头，刚插入就有了使用连续互通相机的提示，就很迷惑，把外接摄像头拔掉也能继续用连续互通相机。猜测应该是要初始化一下摄像头才能激活连续互通相机。</p>
+<div class="note success"><p>新方法<br>在<a href="https://zhuanlan.zhihu.com/p/599745126">江Sir的知乎专栏</a>里发现了更简单的激活办法</p>
+<ul>
+<li>用数据线连接iPhone和Mac</li>
+<li>打开QuickTime Player，点击左上角新建影片录制</li>
+<li>Mac弹出连续互通功能的介绍，点击继续</li>
+<li>iPhone也会弹出提示</li>
+<li>然后就能用了，拔掉线也可以继续用</li>
+</ul>
+</div>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img data-src="https://s2.loli.net/2023/07/01/ROkL7QVCsFayBJv.jpg" alt="真香.jpg"></p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>MacOS</tag>
+        <tag>MacBook Pro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开站纪念</title>
     <url>/New.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
@@ -2762,6 +2815,7 @@
 <li>加密&#x2F;隐藏文章</li>
 <li><del>部分js、css文件通过JSDelivr分发</del></li>
 <li>船新的404页面</li>
+<li>自定义博文模板</li>
 </ul>
 <h1 id="JSDelivr"><a href="#JSDelivr" class="headerlink" title="JSDelivr"></a>JSDelivr</h1><details class="note danger"><summary><p>得嘞，JSDelivr被墙了，这一段不用看了，GFW你坏事做尽。</p>
 </summary>
@@ -2965,6 +3019,10 @@
 <div class="note info"><p><a class="btn" href="https://github.com/D0n9X1n/hexo-blog-encrypt/issues/58"><i class="fa fa-code-branch fa-fw"></i>How to encrypt TOC under NexT theme</a></p></div>
 
 <p>而且据说文章加密后，目录还是能够从html中看到，依旧有泄密风险。如果对加密实在是刚需的话，建议更换原生支持加密的主题，如<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">blinkfox</a></p>
+<h1 id="自定义博文模板"><a href="#自定义博文模板" class="headerlink" title="自定义博文模板"></a>自定义博文模板</h1><p>每次执行<code>hexo new</code>命令创建新博文时，总会有一些固定的内容（如<code>lang: zh-CN</code>）需要手动粘贴进去，为了偷懒，我这次直接把这些内容添加到了博文的模板中，这样每次创建新博文时都会自带这些内容。</p>
+<p>博文的模板文件是博客根目录下的<code>./scaffolds/post.md</code>，修改完成后是这个样子：</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">lang: zh-cn</span><br><span class="line">tags: []</span><br><span class="line"><span class="section">categories: </span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">&quot;blockquote-center&quot;</span>&gt;</span></span> <span class="language-xml"><span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">样式</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% grouppicture 6-3 %&#125;</span><br><span class="line">图片组</span><br><span class="line">&#123;% endgrouppicture %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">名称 | https://siriusq.top | 简介 | /images/link/link.webp</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+
 <p>完结撒花~</p>
 ]]></content>
       <categories>
@@ -5896,8 +5954,8 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win11</tag>
         <tag>Win10</tag>
+        <tag>Win11</tag>
         <tag>右键菜单</tag>
         <tag>注册表</tag>
       </tags>
@@ -6131,8 +6189,8 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win11</tag>
         <tag>Win10</tag>
+        <tag>Win11</tag>
         <tag>Windows Terminal</tag>
         <tag>美化</tag>
       </tags>
@@ -6194,11 +6252,82 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win11</tag>
         <tag>Win10</tag>
+        <tag>Win11</tag>
         <tag>DP</tag>
         <tag>Hot Plug Detection</tag>
         <tag>热插拔检测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
+    <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
+
+<span id="more"></span>
+
+<h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><p>Cloudflare的配置我很早之前就搞过了，再简单写一下，加点图片</p>
+<ol>
+<li>登录 Cloudflare， 然后点击顶栏的<code>Add site</code><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>Cloudflare</p><p>Web Performance & Security</p>
+<a href="https://dash.cloudflare.com/"></a>
+</div></div></li>
+<li>输入自己的域名，然后点击<code>Add site</code>按钮，我这胡乱加了一个没人用的做示范<br><img data-src="https://s2.loli.net/2022/06/12/FaLBvrE9Rl2esN4.png" alt="cl1.png"></li>
+<li>选择方案，一般选<code>Free</code>就够用了<br><img data-src="https://s2.loli.net/2022/06/12/47TOxsBYAMdz9ul.png" alt="cl2.png"></li>
+<li>然后Cloudflare会自动获取域名的DNS记录，这里跳过，拉到页面最底部，点击<code>Continue</code>按钮，待会回来再配置<br><img data-src="https://s2.loli.net/2022/06/12/F4MPguhfd8bkvS9.png" alt="cl3.png"></li>
+<li>复制Cloudflare给出的域名服务器，回到域名注册商那里替换掉原有的<br><img data-src="https://s2.loli.net/2022/06/12/2IB3agoAJcWpNr8.png" alt="cl4.png"><br><img data-src="https://s2.loli.net/2022/06/12/EgkBH4AyjSJbmnU.png" alt="cl5.png"></li>
+<li>回到Cloudflare，点击<code>Done, check nameservers</code></li>
+<li>然后慢慢等待生效，生效后会有邮件提醒，等待生效的时候可以先设置<code>SSL/TLS</code><ol>
+<li>在Overview里，将Encryption Mode先设置为<code>Full</code><br><img data-src="https://s2.loli.net/2022/06/12/tKcsr2RdWbBoFSz.png" alt="ssl1.png"></li>
+<li>然后到Edge Certificates中，开启<code>Always Use HTTPS</code>、<code>Opportunistic Encryption</code>等<br><img data-src="https://s2.loli.net/2022/06/12/bXdgpHsTMcDok8L.png" alt="ssl2.png"></li>
+<li>到Origin Server中，开启<code>Authenticated Origin Pulls</code><br><img data-src="https://s2.loli.net/2022/06/12/fkxNsFb1uG2IwWh.png" alt="ssl3.png"></li>
+</ol>
+</li>
+<li>生效后到<code>DNS</code>设置里添加四条A记录与一条CNAME记录<ol>
+<li>CNAME记录的NAME设置为<code>www</code>，Content设置为GitHub Pages默认的域名，<code>用户名.github.io</code>那个</li>
+<li>A记录的Name都使用<code>@</code>或者自己的域名，Content依次设置为<ol>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>确认一下各个记录的Proxy status都是<code>Proxied</code>状态，即橙色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/ogYE2MFOfkbqDa7.png" alt="dns.png"></li>
+</ol>
+<h2 id="GitHub-Pages-配置"><a href="#GitHub-Pages-配置" class="headerlink" title="GitHub Pages 配置"></a>GitHub Pages 配置</h2><ol>
+<li>打开自己的网站的仓库设置<code>Settings</code>-<code>Pages</code></li>
+<li>在<code>Custom domain</code>中填入自己的域名，点击Save后会自动生成一个CNAME文件</li>
+</ol>
+<h1 id="开启Encryption-Full-strict-模式"><a href="#开启Encryption-Full-strict-模式" class="headerlink" title="开启Encryption Full (strict)模式"></a>开启Encryption Full (strict)模式</h1><p>Full (strict)模式与Full模式的区别在于，Full (strict)模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非Full模式使用的无需验证的自签名证书。GitHub Pages可以通过开启<code>Enforce HTTPS</code>来获取免费的可信证书，满足开启Full (strict)模式的条件。下面就是我今天新发现的问题，我的Pages设置中不能开启<code>Enforce HTTPS</code>，勾选框一直是灰色的，折腾半天发现是Cloudflare的代理状态的造成的，解决方案如下</p>
+<ol>
+<li>在Cloudflare的DNS设置中把Proxy status全部设置为<code>DNS Only</code>状态，即灰色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/Fn9XR7VoGNktHid.png" alt="https00.png"></li>
+<li>回到Pages设置，刷新一下就可以勾选<code>Enforce HTTPS</code>了</li>
+<li>GitHub会自动申请SSL证书，有了这个证书才能够在Cloudflare开启Full (strict)模式<br><img data-src="https://s2.loli.net/2022/06/12/EjMkopVYmPnRvwb.png" alt="https01.png"><br><img data-src="https://s2.loli.net/2022/06/12/QSFCK7NGnoqyH8V.png" alt="https02.png"></li>
+<li>等待Pages的HTTPS生效后，回到Cloudflare，把刚才修改的Proxy status全部恢复为<code>Proxied</code>状态，即橙色的云朵</li>
+<li>到<code>SSL/TLS</code>设置中，将Encryption Mode设置为<code>Full (strict)</code><br><img data-src="https://s2.loli.net/2022/06/12/Wmwr3A7sN15gHnX.png" alt="https03.png"></li>
+</ol>
+<h1 id="DNS记录类型科普"><a href="#DNS记录类型科普" class="headerlink" title="DNS记录类型科普"></a>DNS记录类型科普</h1><div class="note primary"><p>部分内容引用自 <a class="btn" href="https://zh.m.wikipedia.org/zh-hans/DNS%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B%E5%88%97%E8%A1%A8"><i class="fa fa-blog fa-fw"></i>维基百科</a></p>
+</div>
+<h2 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h2><p>A记录(Address record)是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器(web server)上。同时也可以设置域名的子域名。它会传回一个32位元的IPv4地址。</p>
+<h2 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h2><p>AAAA记录(AAAA record)是用来将域名解析到IPv6地址的DNS记录。用户可以将一个域名解析到IPv6地址上，也可以将子域名解析到IPv6地址上。它会传回一个128位元的IPv6地址。</p>
+<h2 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h2><p>CNAME记录(Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p>
+<h2 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h2><p>NS(Name Server)记录是域名服务器记录，用来指定该域名由哪个DNS服务器来进行解析。如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。</p>
+<h2 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h2><p>MX(mail exchanger)记录用于指定负责处理发往收件人域名的邮件服务器。</p>
+<h2 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h2><p>TXT记录一般指为某个主机名或域名设置的说明。</p>
+<h2 id="TTL"><a href="#TTL" class="headerlink" title="TTL"></a>TTL</h2><p>TTL(Time To Live)表示解析记录在DNS服务器中的缓存时间，长度为秒。当本地DNS服务器收到某一域名的解析请求时，需要向该域名指定的权威DNS服务器发送解析请求获取解析记录。获得的解析记录会在本地DNS服务器中保存一段时间。在这段时间内，如果本地DNS服务器再次收到该域名的解析请求，将不再向权威DNS服务器发送解析请求，而是直接返回保存在本地DNS服务器中的解析记录。</p>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GitHub Pages</tag>
+        <tag>Cloudflare</tag>
+        <tag>HTTPS</tag>
+        <tag>CDN</tag>
       </tags>
   </entry>
   <entry>
@@ -6362,7 +6491,7 @@
 <h1 id="配置Workflow"><a href="#配置Workflow" class="headerlink" title="配置Workflow"></a>配置Workflow</h1><p>接下来让我们配置两个仓库的Workflow，博客仓库只需要简单的设置一个Workflow，而Profile仓库需要再创建一个脚本文件，并向README文件中添加标识符。</p>
 <h2 id="Profile仓库"><a href="#Profile仓库" class="headerlink" title="Profile仓库"></a>Profile仓库</h2><p>首先是Profile仓库的设置，先将仓库Clone到本地，在本地编辑完成后再推送到GitHub。</p>
 <h3 id="创建Workflow"><a href="#创建Workflow" class="headerlink" title="创建Workflow"></a>创建Workflow</h3><p>在本地目录中创建<code>./source/.github/workflows/update-readme.yml</code>文件，<code>./.github/workflows/</code>是GitHub Actions默认用于存放Workflow文件的路径，注意新建文件夹时不要漏掉<code>.github</code>文件夹名称前面的<code>.</code>。将下面的代码复制到这个文件中。</p>
-<figure class="highlight yml"><figcaption><span>update-readme.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">Latest</span> <span class="string">Blog</span> <span class="string">Posts</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">update-my-profile</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="number">14</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">node-fetch</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">node-fetch</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">feedparser</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">feedparser</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">node</span> <span class="string">update-readme.mjs</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Commit</span> <span class="string">and</span> <span class="string">push</span> <span class="string">changes</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        git config --local user.email &quot;github-actions@github.com&quot;</span></span><br><span class="line"><span class="string">        git config --local user.name &quot;github-actions&quot;</span></span><br><span class="line"><span class="string">        git add README.md</span></span><br><span class="line"><span class="string">        git commit -m &quot;Update README with latest blog posts&quot;</span></span><br><span class="line"><span class="string">        git push</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>update-readme.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Update</span> <span class="string">Latest</span> <span class="string">Blog</span> <span class="string">Posts</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">update-my-profile</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">update-readme:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="number">14</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">node-fetch</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">node-fetch</span></span><br><span class="line">      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">feedparser</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">feedparser</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">README</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">node</span> <span class="string">update-readme.mjs</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Commit</span> <span class="string">and</span> <span class="string">push</span> <span class="string">changes</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        git config --local user.name &#x27;github-actions[bot]&#x27;</span></span><br><span class="line"><span class="string">        git config --local user.email &#x27;github-actions[bot]@users.noreply.github.com&#x27;</span></span><br><span class="line"><span class="string">        git add README.md</span></span><br><span class="line"><span class="string">        git commit -m &quot;Update README with latest blog posts&quot;</span></span><br><span class="line"><span class="string">        git push</span></span><br></pre></td></tr></table></figure>
 
 <p>这个Workflow的作用如下：</p>
 <ol>
@@ -6506,141 +6635,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
-    <url>/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下</blockquote>
-
-<span id="more"></span>
-
-<h1 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h1><h2 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h2><p>Cloudflare的配置我很早之前就搞过了，再简单写一下，加点图片</p>
-<ol>
-<li>登录 Cloudflare， 然后点击顶栏的<code>Add site</code><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>Cloudflare</p><p>Web Performance & Security</p>
-<a href="https://dash.cloudflare.com/"></a>
-</div></div></li>
-<li>输入自己的域名，然后点击<code>Add site</code>按钮，我这胡乱加了一个没人用的做示范<br><img data-src="https://s2.loli.net/2022/06/12/FaLBvrE9Rl2esN4.png" alt="cl1.png"></li>
-<li>选择方案，一般选<code>Free</code>就够用了<br><img data-src="https://s2.loli.net/2022/06/12/47TOxsBYAMdz9ul.png" alt="cl2.png"></li>
-<li>然后Cloudflare会自动获取域名的DNS记录，这里跳过，拉到页面最底部，点击<code>Continue</code>按钮，待会回来再配置<br><img data-src="https://s2.loli.net/2022/06/12/F4MPguhfd8bkvS9.png" alt="cl3.png"></li>
-<li>复制Cloudflare给出的域名服务器，回到域名注册商那里替换掉原有的<br><img data-src="https://s2.loli.net/2022/06/12/2IB3agoAJcWpNr8.png" alt="cl4.png"><br><img data-src="https://s2.loli.net/2022/06/12/EgkBH4AyjSJbmnU.png" alt="cl5.png"></li>
-<li>回到Cloudflare，点击<code>Done, check nameservers</code></li>
-<li>然后慢慢等待生效，生效后会有邮件提醒，等待生效的时候可以先设置<code>SSL/TLS</code><ol>
-<li>在Overview里，将Encryption Mode先设置为<code>Full</code><br><img data-src="https://s2.loli.net/2022/06/12/tKcsr2RdWbBoFSz.png" alt="ssl1.png"></li>
-<li>然后到Edge Certificates中，开启<code>Always Use HTTPS</code>、<code>Opportunistic Encryption</code>等<br><img data-src="https://s2.loli.net/2022/06/12/bXdgpHsTMcDok8L.png" alt="ssl2.png"></li>
-<li>到Origin Server中，开启<code>Authenticated Origin Pulls</code><br><img data-src="https://s2.loli.net/2022/06/12/fkxNsFb1uG2IwWh.png" alt="ssl3.png"></li>
-</ol>
-</li>
-<li>生效后到<code>DNS</code>设置里添加四条A记录与一条CNAME记录<ol>
-<li>CNAME记录的NAME设置为<code>www</code>，Content设置为GitHub Pages默认的域名，<code>用户名.github.io</code>那个</li>
-<li>A记录的Name都使用<code>@</code>或者自己的域名，Content依次设置为<ol>
-<li>185.199.108.153</li>
-<li>185.199.109.153</li>
-<li>185.199.110.153</li>
-<li>185.199.111.153</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>确认一下各个记录的Proxy status都是<code>Proxied</code>状态，即橙色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/ogYE2MFOfkbqDa7.png" alt="dns.png"></li>
-</ol>
-<h2 id="GitHub-Pages-配置"><a href="#GitHub-Pages-配置" class="headerlink" title="GitHub Pages 配置"></a>GitHub Pages 配置</h2><ol>
-<li>打开自己的网站的仓库设置<code>Settings</code>-<code>Pages</code></li>
-<li>在<code>Custom domain</code>中填入自己的域名，点击Save后会自动生成一个CNAME文件</li>
-</ol>
-<h1 id="开启Encryption-Full-strict-模式"><a href="#开启Encryption-Full-strict-模式" class="headerlink" title="开启Encryption Full (strict)模式"></a>开启Encryption Full (strict)模式</h1><p>Full (strict)模式与Full模式的区别在于，Full (strict)模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非Full模式使用的无需验证的自签名证书。GitHub Pages可以通过开启<code>Enforce HTTPS</code>来获取免费的可信证书，满足开启Full (strict)模式的条件。下面就是我今天新发现的问题，我的Pages设置中不能开启<code>Enforce HTTPS</code>，勾选框一直是灰色的，折腾半天发现是Cloudflare的代理状态的造成的，解决方案如下</p>
-<ol>
-<li>在Cloudflare的DNS设置中把Proxy status全部设置为<code>DNS Only</code>状态，即灰色的云朵<br><img data-src="https://s2.loli.net/2022/06/12/Fn9XR7VoGNktHid.png" alt="https00.png"></li>
-<li>回到Pages设置，刷新一下就可以勾选<code>Enforce HTTPS</code>了</li>
-<li>GitHub会自动申请SSL证书，有了这个证书才能够在Cloudflare开启Full (strict)模式<br><img data-src="https://s2.loli.net/2022/06/12/EjMkopVYmPnRvwb.png" alt="https01.png"><br><img data-src="https://s2.loli.net/2022/06/12/QSFCK7NGnoqyH8V.png" alt="https02.png"></li>
-<li>等待Pages的HTTPS生效后，回到Cloudflare，把刚才修改的Proxy status全部恢复为<code>Proxied</code>状态，即橙色的云朵</li>
-<li>到<code>SSL/TLS</code>设置中，将Encryption Mode设置为<code>Full (strict)</code><br><img data-src="https://s2.loli.net/2022/06/12/Wmwr3A7sN15gHnX.png" alt="https03.png"></li>
-</ol>
-<h1 id="DNS记录类型科普"><a href="#DNS记录类型科普" class="headerlink" title="DNS记录类型科普"></a>DNS记录类型科普</h1><div class="note primary"><p>部分内容引用自 <a class="btn" href="https://zh.m.wikipedia.org/zh-hans/DNS%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B%E5%88%97%E8%A1%A8"><i class="fa fa-blog fa-fw"></i>维基百科</a></p>
-</div>
-<h2 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h2><p>A记录(Address record)是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器(web server)上。同时也可以设置域名的子域名。它会传回一个32位元的IPv4地址。</p>
-<h2 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h2><p>AAAA记录(AAAA record)是用来将域名解析到IPv6地址的DNS记录。用户可以将一个域名解析到IPv6地址上，也可以将子域名解析到IPv6地址上。它会传回一个128位元的IPv6地址。</p>
-<h2 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h2><p>CNAME记录(Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到CNAME记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p>
-<h2 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h2><p>NS(Name Server)记录是域名服务器记录，用来指定该域名由哪个DNS服务器来进行解析。如果需要把子域名交给其他DNS服务商解析，就需要添加NS记录。</p>
-<h2 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h2><p>MX(mail exchanger)记录用于指定负责处理发往收件人域名的邮件服务器。</p>
-<h2 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h2><p>TXT记录一般指为某个主机名或域名设置的说明。</p>
-<h2 id="TTL"><a href="#TTL" class="headerlink" title="TTL"></a>TTL</h2><p>TTL(Time To Live)表示解析记录在DNS服务器中的缓存时间，长度为秒。当本地DNS服务器收到某一域名的解析请求时，需要向该域名指定的权威DNS服务器发送解析请求获取解析记录。获得的解析记录会在本地DNS服务器中保存一段时间。在这段时间内，如果本地DNS服务器再次收到该域名的解析请求，将不再向权威DNS服务器发送解析请求，而是直接返回保存在本地DNS服务器中的解析记录。</p>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GitHub Pages</tag>
-        <tag>Cloudflare</tag>
-        <tag>HTTPS</tag>
-        <tag>CDN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iPhone访问Windows共享文件夹</title>
-    <url>/iOS-Windows-File-Share.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。</blockquote>
-
-<span id="more"></span>
-
-<div class="note danger"><p>说明：本文的方法只针对受信任的网络，如自己家的WiFi。不建议在公用网络中设置共享，非常不安全。</p>
-</div>
-
-<h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp"></div></div></div>
-
-<h1 id="共享设置"><a href="#共享设置" class="headerlink" title="共享设置"></a>共享设置</h1><ol>
-<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>WLAN</code> - <code>[当前WiFi]属性</code></li>
-<li>将网络配置文件类型设置为<code>专用网络</code></li>
-<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>高级网络设置</code> - <code>高级共享设置</code></li>
-<li>开启<code>专用网络</code>中的<code>网络发现</code>和<code>文件和打印机共享</code>选项，勾选<code>自动设置网络连接的设备</code></li>
-<li>关闭<code>所有网络</code>中的<code>公用文件夹共享</code>，文件共享链接选择<code>128位加密(推荐)</code>，开启<code>密码保护的共享</code>选项</li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp"></div></div></div>
-
-<h1 id="创建共享用户"><a href="#创建共享用户" class="headerlink" title="创建共享用户"></a>创建共享用户</h1><ol>
-<li>按下<code>Win + X</code>快捷键，打开<code>计算机管理</code></li>
-<li>展开<code>本地用户和组</code>选项，在<code>用户</code>上右键打开菜单并选择<code>新用户</code></li>
-<li>输入新的用户名和密码，勾选<code>密码永不过期</code>选项</li>
-<li>点击<code>确定</code>，创建完成后关闭窗口</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp"></p>
-<h1 id="文件夹设置"><a href="#文件夹设置" class="headerlink" title="文件夹设置"></a>文件夹设置</h1><ol>
-<li>找到要共享的文件夹，右键打开文件夹<code>属性</code></li>
-<li>打开<code>共享</code>选项卡，点击文件网络和文件夹共享下的<code>共享</code>按钮</li>
-<li>选择刚才创建的用户，然后点击<code>添加</code></li>
-<li>将新用户的权限级别调整为<code>读取/写入</code></li>
-<li>点击<code>共享</code></li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp"></div></div></div>
-
-<h1 id="iOS文件设置"><a href="#iOS文件设置" class="headerlink" title="iOS文件设置"></a>iOS文件设置</h1><ol>
-<li>文件夹属性中会出现一行<code>网络路径</code></li>
-<li>打开iOS的文件App，点击右上角的三个点，选择<code>连接服务器</code></li>
-<li>输入<code>smb:[共享文件夹的网络路径]</code>，这里把<code>\</code>替换成<code>/</code>，例如Windows中显示的网络路径是<code>\\ThisPC\ShareFolder</code>，那么这里要输入的就是<code>smb://ThisPC/ShareFolder</code></li>
-<li>输入新创建的用户名和密码</li>
-<li>连接</li>
-</ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp"></div></div></div>
-
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
-<li>iOS自带的文件App非常的智障，如果一段时间没有访问共享文件夹，那么下次访问时只能看到一个空文件夹，必须要推出smb服务器，然后点右上角的三个点重新连接服务器。</li>
-<li>iOS自带的文件App中会比Windows的资源管理器多出一个名为desktop.ini的文件，这原本是个Windows的隐藏文件，不用管它</li>
-<li>十分建议使用第三方文件App替换自带的App</li>
-<li>iPhone与PC必须处于同一网络下</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp"></p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>Win11</tag>
-        <tag>iOS</tag>
-        <tag>共享文件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>iOS屏蔽开屏广告</title>
     <url>/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告</blockquote>
@@ -6731,6 +6725,70 @@
         <tag>广告屏蔽</tag>
         <tag>ShadowRocket</tag>
         <tag>抓包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iPhone访问Windows共享文件夹</title>
+    <url>/iOS-Windows-File-Share.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。</blockquote>
+
+<span id="more"></span>
+
+<div class="note danger"><p>说明：本文的方法只针对受信任的网络，如自己家的WiFi。不建议在公用网络中设置共享，非常不安全。</p>
+</div>
+
+<h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp"></div></div></div>
+
+<h1 id="共享设置"><a href="#共享设置" class="headerlink" title="共享设置"></a>共享设置</h1><ol>
+<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>WLAN</code> - <code>[当前WiFi]属性</code></li>
+<li>将网络配置文件类型设置为<code>专用网络</code></li>
+<li>打开<code>设置</code> - <code>网络和Internet</code> - <code>高级网络设置</code> - <code>高级共享设置</code></li>
+<li>开启<code>专用网络</code>中的<code>网络发现</code>和<code>文件和打印机共享</code>选项，勾选<code>自动设置网络连接的设备</code></li>
+<li>关闭<code>所有网络</code>中的<code>公用文件夹共享</code>，文件共享链接选择<code>128位加密(推荐)</code>，开启<code>密码保护的共享</code>选项</li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp"></div></div></div>
+
+<h1 id="创建共享用户"><a href="#创建共享用户" class="headerlink" title="创建共享用户"></a>创建共享用户</h1><ol>
+<li>按下<code>Win + X</code>快捷键，打开<code>计算机管理</code></li>
+<li>展开<code>本地用户和组</code>选项，在<code>用户</code>上右键打开菜单并选择<code>新用户</code></li>
+<li>输入新的用户名和密码，勾选<code>密码永不过期</code>选项</li>
+<li>点击<code>确定</code>，创建完成后关闭窗口</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp"></p>
+<h1 id="文件夹设置"><a href="#文件夹设置" class="headerlink" title="文件夹设置"></a>文件夹设置</h1><ol>
+<li>找到要共享的文件夹，右键打开文件夹<code>属性</code></li>
+<li>打开<code>共享</code>选项卡，点击文件网络和文件夹共享下的<code>共享</code>按钮</li>
+<li>选择刚才创建的用户，然后点击<code>添加</code></li>
+<li>将新用户的权限级别调整为<code>读取/写入</code></li>
+<li>点击<code>共享</code></li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp"></div></div></div>
+
+<h1 id="iOS文件设置"><a href="#iOS文件设置" class="headerlink" title="iOS文件设置"></a>iOS文件设置</h1><ol>
+<li>文件夹属性中会出现一行<code>网络路径</code></li>
+<li>打开iOS的文件App，点击右上角的三个点，选择<code>连接服务器</code></li>
+<li>输入<code>smb:[共享文件夹的网络路径]</code>，这里把<code>\</code>替换成<code>/</code>，例如Windows中显示的网络路径是<code>\\ThisPC\ShareFolder</code>，那么这里要输入的就是<code>smb://ThisPC/ShareFolder</code></li>
+<li>输入新创建的用户名和密码</li>
+<li>连接</li>
+</ol>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp"></div></div></div>
+
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
+<li>iOS自带的文件App非常的智障，如果一段时间没有访问共享文件夹，那么下次访问时只能看到一个空文件夹，必须要推出smb服务器，然后点右上角的三个点重新连接服务器。</li>
+<li>iOS自带的文件App中会比Windows的资源管理器多出一个名为desktop.ini的文件，这原本是个Windows的隐藏文件，不用管它</li>
+<li>十分建议使用第三方文件App替换自带的App</li>
+<li>iPhone与PC必须处于同一网络下</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp"></p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>iOS</tag>
+        <tag>共享文件</tag>
       </tags>
   </entry>
   <entry>
@@ -7178,8 +7236,8 @@
         <category>折腾</category>
       </categories>
       <tags>
-        <tag>Win11</tag>
         <tag>Win10</tag>
+        <tag>Win11</tag>
         <tag>Adobe</tag>
         <tag>防火墙</tag>
         <tag>脚本</tag>
