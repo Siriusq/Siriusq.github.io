@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2023-10-21T07:14:59.227Z</updated>
+  <updated>2023-10-23T10:38:13.474Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://siriusq.top/auto-update-profile-latest-blog-posts.html"/>
     <id>https://siriusq.top/auto-update-profile-latest-blog-posts.html</id>
     <published>2023-10-17T09:10:55.000Z</published>
-    <updated>2023-10-21T07:14:59.227Z</updated>
+    <updated>2023-10-23T10:38:13.474Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;我在GitHub的自定义个人信息页中添加了展示最近更新的博文的部分，但是每次更新完博客还要再来这里手动更新一下，就很麻烦。于是我本着&quot;偷懒是人类进步的动力&quot;的原则，搞出了一种博客部署完成后，使用GitHub Actions自动更新个人信息页的最近博文部分的方法。&lt;/blockquote&gt;</summary>
