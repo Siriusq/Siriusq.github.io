@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://siriusq.top/grasscutter.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://siriusq.top/%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86.html</loc>
+    
+    <lastmod>2023-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://siriusq.top/Next-8-0-%E5%8D%87%E7%BA%A7%E6%97%A5%E5%BF%97.html</loc>
     
     <lastmod>2023-10-23</lastmod>
@@ -14,15 +32,6 @@
     <loc>https://siriusq.top/auto-update-profile-latest-blog-posts.html</loc>
     
     <lastmod>2023-10-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://siriusq.top/%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86.html</loc>
-    
-    <lastmod>2023-10-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -517,7 +526,7 @@
 
   <url>
     <loc>https://siriusq.top/</loc>
-    <lastmod>2023-11-07</lastmod>
+    <lastmod>2023-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

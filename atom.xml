@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2023-11-07T08:13:25.447Z</updated>
+  <updated>2023-11-11T12:19:43.588Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Grasscutter Windows本地服务器配置记录</title>
+    <link href="https://siriusq.top/grasscutter.html"/>
+    <id>https://siriusq.top/grasscutter.html</id>
+    <published>2023-11-07T13:17:07.000Z</published>
+    <updated>2023-11-11T12:19:43.588Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;Grasscutter 是一款用 Java 编写的实验性服务器，旨在模拟某款 Anime Game 的服务端。本文记录了我配置服务器的过程，包括 Grasscutter 与 Cultivation 的安装、相关指令的使用、一些实用插件与工具的使用方法、卡池与商店的配置以及角色模型的替换等内容。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="Grasscutter" scheme="https://siriusq.top/tags/Grasscutter/"/>
+    
+  </entry>
   
   <entry>
     <title>Clash Verge Tun 模式配置记录</title>
@@ -196,9 +215,9 @@
     <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
     
     
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
     <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
     <category term="MacBook Pro" scheme="https://siriusq.top/tags/MacBook-Pro/"/>
     
@@ -350,9 +369,9 @@
     <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
     
     
-    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
-    
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
     
     <category term="华硕" scheme="https://siriusq.top/tags/%E5%8D%8E%E7%A1%95/"/>
     
@@ -496,31 +515,6 @@
     <category term="Windows Terminal" scheme="https://siriusq.top/tags/Windows-Terminal/"/>
     
     <category term="美化" scheme="https://siriusq.top/tags/%E7%BE%8E%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 11 右键菜单改回 Windows 10 样式</title>
-    <link href="https://siriusq.top/Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%94%B9%E5%9B%9E-Windows-10-%E6%A0%B7%E5%BC%8F.html"/>
-    <id>https://siriusq.top/Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%94%B9%E5%9B%9E-Windows-10-%E6%A0%B7%E5%BC%8F.html</id>
-    <published>2022-05-26T14:58:05.000Z</published>
-    <updated>2022-05-26T15:35:43.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;巨硬迷惑操作之两级右键菜单，真该把提出这个需求的产品经理祭天，好在还能通过祖传注册表修改大法改回去&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
-    
-    <category term="右键菜单" scheme="https://siriusq.top/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/"/>
-    
-    <category term="注册表" scheme="https://siriusq.top/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
     
   </entry>
   
