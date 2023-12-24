@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2023-11-11T12:19:43.588Z</updated>
+  <updated>2023-12-24T12:57:18.689Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>宏碁笔电安装 Linux 后提示 No Bootable Device 的解决方案</title>
+    <link href="https://siriusq.top/linux-no-bootable-device.html"/>
+    <id>https://siriusq.top/linux-no-bootable-device.html</id>
+    <published>2023-12-19T10:22:50.000Z</published>
+    <updated>2023-12-24T12:57:18.689Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/12/24/DWFdJTgk742GY3N.webp&quot; alt=&quot;No_Bootable_Device.webp&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    
+    
+    <category term="Linux" scheme="https://siriusq.top/tags/Linux/"/>
+    
+    <category term="UEFI" scheme="https://siriusq.top/tags/UEFI/"/>
+    
+  </entry>
   
   <entry>
     <title>Grasscutter Windows本地服务器配置记录</title>
@@ -215,9 +236,9 @@
     <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
     
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
-    
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
     
     <category term="MacBook Pro" scheme="https://siriusq.top/tags/MacBook-Pro/"/>
     
@@ -369,9 +390,9 @@
     <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
     
     
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
     <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
     <category term="华硕" scheme="https://siriusq.top/tags/%E5%8D%8E%E7%A1%95/"/>
     
@@ -490,31 +511,6 @@
     <category term="Magisk" scheme="https://siriusq.top/tags/Magisk/"/>
     
     <category term="adb" scheme="https://siriusq.top/tags/adb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Terminal 美化</title>
-    <link href="https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html"/>
-    <id>https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html</id>
-    <published>2022-05-26T15:40:47.000Z</published>
-    <updated>2023-08-12T12:04:27.688Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一个每天都要面对的东西，不好看会影响心情的🐶。（终于要把欠下的博文写完了，腹泻式更新结束咯）&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
-    
-    <category term="Windows Terminal" scheme="https://siriusq.top/tags/Windows-Terminal/"/>
-    
-    <category term="美化" scheme="https://siriusq.top/tags/%E7%BE%8E%E5%8C%96/"/>
     
   </entry>
   
