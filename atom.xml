@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2023-12-24T12:57:18.689Z</updated>
+  <updated>2024-03-23T15:47:05.519Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rider R2 5.0 伪评测</title>
+    <link href="https://siriusq.top/rider-r2.html"/>
+    <id>https://siriusq.top/rider-r2.html</id>
+    <published>2024-03-23T08:33:10.000Z</published>
+    <updated>2024-03-23T15:47:05.519Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;经历了几次风扇坏轴之后，我对吊装风扇产生了心理阴影，于是闲着没事就去某宝刷刷 ITX 机箱，打算换一个机箱，然后某宝在 Rider R2 5.0 上架的第二天就给我精准推送了它，这种电源下置，其他结构倒置的结构简直是我的梦中情箱，整机只有电源的风扇是吊装的，而海盗船电源的风扇买回来就没转过几次，于是果断下单，换掉了原来的小闷罐。&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2024/03/23/xPpEDrCqBygOb1t.webp&quot; alt=&quot;封面.webp&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+    <category term="Rider R2 5.0" scheme="https://siriusq.top/tags/Rider-R2-5-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ITX 装机经验总结</title>
+    <link href="https://siriusq.top/itx-summary.html"/>
+    <id>https://siriusq.top/itx-summary.html</id>
+    <published>2024-03-16T14:09:03.000Z</published>
+    <updated>2024-03-23T15:46:03.193Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;从19年末入坑ITX到现在已经4年多了，期间拆拆装装也踩了不少坑，这篇博客就来总结一下装机中的经验。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    
+    
+    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
+    
+    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>宏碁笔电安装 Linux 后提示 No Bootable Device 的解决方案</title>
@@ -455,62 +501,6 @@
     <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
     
     <category term="i18n" scheme="https://siriusq.top/tags/i18n/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阿里云域名转出至NameSilo</title>
-    <link href="https://siriusq.top/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html"/>
-    <id>https://siriusq.top/%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%87%BA%E8%87%B3NameSilo.html</id>
-    <published>2022-06-04T15:02:46.000Z</published>
-    <updated>2022-06-22T10:45:52.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;今天心血来潮，跑去查了一下自己域名的WHOIS信息，然后发现在阿里云注册的域名处于裸奔状态，姓名省份都能查到……查了一下发现阿里云在2018年就停止了WHOIS隐私保护，裸奔了三年我竟浑然不知，本着亡羊补牢的心态，再加上令人讨厌的实名认证，就决定把域名迁出阿里云了，迁出的过程也是被阿里云恶心坏了，本文吐槽预警&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="阿里云" scheme="https://siriusq.top/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-    <category term="NameSilo" scheme="https://siriusq.top/tags/NameSilo/"/>
-    
-    <category term="域名" scheme="https://siriusq.top/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-    <category term="WHOIS" scheme="https://siriusq.top/tags/WHOIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSA 折腾日志</title>
-    <link href="https://siriusq.top/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html"/>
-    <id>https://siriusq.top/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html</id>
-    <published>2022-06-02T08:04:48.000Z</published>
-    <updated>2022-06-02T15:46:58.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;记录WSA的安装、联网、设置代理以及安装应用的折腾过程&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
-    
-    <category term="Android" scheme="https://siriusq.top/tags/Android/"/>
-    
-    <category term="V2ray" scheme="https://siriusq.top/tags/V2ray/"/>
-    
-    <category term="Google Play" scheme="https://siriusq.top/tags/Google-Play/"/>
-    
-    <category term="Magisk" scheme="https://siriusq.top/tags/Magisk/"/>
-    
-    <category term="adb" scheme="https://siriusq.top/tags/adb/"/>
     
   </entry>
   
