@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-03-25T15:02:34.339Z</updated>
+  <updated>2024-07-17T13:23:59.473Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,113 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修复 VMware Fusion 虚拟机无法访问USB设备</title>
+    <link href="https://siriusq.top/vmware-fusion-usb-fix.html"/>
+    <id>https://siriusq.top/vmware-fusion-usb-fix.html</id>
+    <published>2024-07-08T03:40:37.000Z</published>
+    <updated>2024-07-17T13:23:59.473Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 虚拟机装完了，3D加速也开启了，XCode也整好了，正当我打算连上iPhone大干一场的时候，我突然发现虚拟机识别不到USB设备？？？然后又是漫长的搜索试错，发现是vmware-usbarbitrator的锅，这个服务的作用是管理连接到虚拟机的USB设备，而启动虚拟机时它不知为何没有运行，奇奇怪怪的bug增加了，而解决方法就是为它设置开机自动运行。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 VMware Fusion 中的 macOS 虚拟机开启 3D 加速</title>
+    <link href="https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html"/>
+    <id>https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html</id>
+    <published>2024-07-07T13:26:19.000Z</published>
+    <updated>2024-07-17T13:22:05.249Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在上一篇博文中，我已经安装并配置好了macOS Sonoma的虚拟机，但是由于无法在设置中开启3D加速，就会显得非常卡顿，甚至一个窗口缩放动画就能硬控虚拟机10秒，这显然不能忍。在谷歌一番之后，我在官网找到了一个通过修改vmx文件来开启3D加速的方法。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在VMware Fusion中安装macOS Sonoma虚拟机</title>
+    <link href="https://siriusq.top/vmware-fusion-install-macos-sonoma.html"/>
+    <id>https://siriusq.top/vmware-fusion-install-macos-sonoma.html</id>
+    <published>2024-07-07T02:19:24.000Z</published>
+    <updated>2024-07-17T13:15:42.879Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 被苹果背刺了，MBP 2017不能升级到Sonoma，而XCode的版本又是和macOS版本绑定的，升级不了系统也就升级不了XCode。而老版本的XCode又不支持最新的iOS系统，就没法向手机部署应用，老Mac也就变成了美丽废物。我在重新装个黑苹果、装KVM直通和装虚拟机中纠结了很久，最后还是选择在macOS Sonoma的虚拟机中安装最新版本的XCode进行开发，又不是不能用🐶🐶 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Mac上创建macOS镜像安装文件</title>
+    <link href="https://siriusq.top/create-macos-iso.html"/>
+    <id>https://siriusq.top/create-macos-iso.html</id>
+    <published>2024-07-06T08:56:28.000Z</published>
+    <updated>2024-07-17T13:12:16.943Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 此博文记录了如何在Mac上下载macOS的安装文件，并将其转换为ISO镜像文件的过程，请注意此方法不适用于Windows操作系统。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    
+    <category term="黑苹果" scheme="https://siriusq.top/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+    <category term="重装" scheme="https://siriusq.top/tags/%E9%87%8D%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VMware Workstation 桥接网络无连接的一种解决方案</title>
+    <link href="https://siriusq.top/vmware-workstation-net-fix.html"/>
+    <id>https://siriusq.top/vmware-workstation-net-fix.html</id>
+    <published>2024-06-07T14:49:04.000Z</published>
+    <updated>2024-07-17T10:21:38.839Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近听说 VMWare 宣布 Workstation 和 Fusion 对个人使用完全免费之后，我啪一下就站起来了，很快啊！就打算用WMware装一个Windows的虚拟机，因为原来用VirtualBox做的虚拟机拖放功能经常出Bug。但是，安装完成后联网的时候发现我大意了啊，没有闪，桥接网络无连接。经过一番查找，我发现是VMWare自动选择桥接网卡这个年轻人，不讲武德，来，骗，来，偷袭，我69岁的，老同志。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+    <category term="桥接网络" scheme="https://siriusq.top/tags/%E6%A1%A5%E6%8E%A5%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Rider R2 5.0 伪评测</title>
@@ -107,7 +214,7 @@
     <link href="https://siriusq.top/clash-verge-tun-config.html"/>
     <id>https://siriusq.top/clash-verge-tun-config.html</id>
     <published>2023-11-04T09:24:07.000Z</published>
-    <updated>2023-11-07T08:13:25.447Z</updated>
+    <updated>2024-04-07T15:44:20.388Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在本文中，我将记录Clash Verge的配置过程，包括创建配置文件、切换内核、启用TUN模式以及防止DNS泄露。 &lt;/blockquote&gt;</summary>
@@ -370,137 +477,6 @@
     <category term="Hot Plug Detection" scheme="https://siriusq.top/tags/Hot-Plug-Detection/"/>
     
     <category term="热插拔检测" scheme="https://siriusq.top/tags/%E7%83%AD%E6%8F%92%E6%8B%94%E6%A3%80%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS屏蔽开屏广告</title>
-    <link href="https://siriusq.top/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html"/>
-    <id>https://siriusq.top/iOS%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A.html</id>
-    <published>2022-07-13T16:01:39.000Z</published>
-    <updated>2022-07-16T10:16:47.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;国内的互联网公司真的是脸都不要了，搞出个摇一摇开屏广告，差点中招，想回退到老版本又太麻烦，实在忍不了了，最后决定抓包，然后用Shadowrocket的规则屏蔽掉这些恶心的广告&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="iOS" scheme="https://siriusq.top/tags/iOS/"/>
-    
-    <category term="广告屏蔽" scheme="https://siriusq.top/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/"/>
-    
-    <category term="ShadowRocket" scheme="https://siriusq.top/tags/ShadowRocket/"/>
-    
-    <category term="抓包" scheme="https://siriusq.top/tags/%E6%8A%93%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clash for Windows:从入门到摆烂</title>
-    <link href="https://siriusq.top/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html"/>
-    <id>https://siriusq.top/Clash%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%91%86%E7%83%82.html</id>
-    <published>2022-07-13T08:25:33.000Z</published>
-    <updated>2023-11-04T09:36:37.088Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;最近俺滴V2RayN不知道出了什么问题，经常断流，去GitHub的issue里扒拉了半天，找到不少断流的问题，可惜并没有解决方案，索性换成了Clash，不过Clash的配置比V2RayN要麻烦不少，最近事情又有点多，搞到后面直接摆烂了，能用就行，于是就有了这篇从入门到摆烂的记录&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Clash" scheme="https://siriusq.top/tags/Clash/"/>
-    
-    <category term="GFW" scheme="https://siriusq.top/tags/GFW/"/>
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>华硕AuraSync无法识别幻光戟解决方案</title>
-    <link href="https://siriusq.top/%E5%8D%8E%E7%A1%95AuraSync%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B9%BB%E5%85%89%E6%88%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
-    <id>https://siriusq.top/%E5%8D%8E%E7%A1%95AuraSync%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B9%BB%E5%85%89%E6%88%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</id>
-    <published>2022-07-10T11:34:43.000Z</published>
-    <updated>2022-12-18T09:48:05.461Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;本文又名为关于我手贱把 Armoury Crate 升级之后引发的一系列坑爹事件。下面有请本场主角华硕 B460-I GAMING 与两条幻光戟&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
-    
-    
-    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
-    
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
-    <category term="华硕" scheme="https://siriusq.top/tags/%E5%8D%8E%E7%A1%95/"/>
-    
-    <category term="Aura Sync" scheme="https://siriusq.top/tags/Aura-Sync/"/>
-    
-    <category term="Armoury Crate" scheme="https://siriusq.top/tags/Armoury-Crate/"/>
-    
-    <category term="幻光戟" scheme="https://siriusq.top/tags/%E5%B9%BB%E5%85%89%E6%88%9F/"/>
-    
-    <category term="芝奇" scheme="https://siriusq.top/tags/%E8%8A%9D%E5%A5%87/"/>
-    
-    <category term="RGB" scheme="https://siriusq.top/tags/RGB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub Pages 启用 Cloudflare 加速及 HTTPS</title>
-    <link href="https://siriusq.top/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html"/>
-    <id>https://siriusq.top/github-pages-%E5%90%AF%E7%94%A8-cloudflare-%E5%8A%A0%E9%80%9F%E5%8F%8A-https.html</id>
-    <published>2022-06-11T13:00:07.000Z</published>
-    <updated>2022-06-12T14:41:52.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;前几天转移域名的时候发现GitHub Pages没有全部开启HTTPS，而且Cloudflare设置的A记录也不全，就重新折腾了一遍，顺便记录一下&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
-    
-    <category term="GitHub Pages" scheme="https://siriusq.top/tags/GitHub-Pages/"/>
-    
-    <category term="Cloudflare" scheme="https://siriusq.top/tags/Cloudflare/"/>
-    
-    <category term="HTTPS" scheme="https://siriusq.top/tags/HTTPS/"/>
-    
-    <category term="CDN" scheme="https://siriusq.top/tags/CDN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Next 8 双语切换</title>
-    <link href="https://siriusq.top/Hexo-Next-8-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html"/>
-    <id>https://siriusq.top/Hexo-Next-8-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html</id>
-    <published>2022-06-07T09:23:32.000Z</published>
-    <updated>2022-06-12T14:43:15.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;关于我终于想起我还有个英文站这件事🐶，离开了DeepL和Grammarly就是一只废狗的我，到现在也没写过几篇英语博客，导致原来很多中文页面切换到英文后都会404，而且一些国内专供的文章也没必要写英文版（嗯绝对不是因为我懒）。另外原来的方案需要中文和英文网站的markdown文件名相同，导致英语博文的URL也全是中文，对老外不友好（虽然也没人看🐶），于是就借着升级版本的机会把这个问题一起解决了。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
-    
-    <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
-    
-    <category term="i18n" scheme="https://siriusq.top/tags/i18n/"/>
     
   </entry>
   
