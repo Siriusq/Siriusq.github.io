@@ -42,7 +42,7 @@
     <link href="https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html"/>
     <id>https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html</id>
     <published>2024-07-07T13:26:19.000Z</published>
-    <updated>2024-07-17T13:22:05.249Z</updated>
+    <updated>2024-07-18T15:36:21.168Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在上一篇博文中，我已经安装并配置好了macOS Sonoma的虚拟机，但是由于无法在设置中开启3D加速，就会显得非常卡顿，甚至一个窗口缩放动画就能硬控虚拟机10秒，这显然不能忍。在谷歌一番之后，我在官网找到了一个通过修改vmx文件来开启3D加速的方法。&lt;/blockquote&gt;</summary>
