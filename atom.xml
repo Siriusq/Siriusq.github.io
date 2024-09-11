@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-07-17T13:23:59.473Z</updated>
+  <updated>2024-08-13T14:42:16.629Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Steam开机静默启动</title>
+    <link href="https://siriusq.top/steam-silent-startup.html"/>
+    <id>https://siriusq.top/steam-silent-startup.html</id>
+    <published>2024-08-13T10:06:11.000Z</published>
+    <updated>2024-08-13T14:42:16.629Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近沉迷于更换 Wallpaper Engine 的壁纸，但是更换时总需要启动Steam来连接到创意工坊，为了省事我就设置了Steam开机自启动，但是每次启动时都会显示商店页面，设置里也没有关闭的选项，谷歌了下发现开机显示商店页面是个玄学问题，有些人什么也不设置它也不会显示，很迷惑。要解决这个问题也很简单，在开始菜单的快捷方式上加个启动参数就完事了。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Steam" scheme="https://siriusq.top/tags/Steam/"/>
+    
+  </entry>
   
   <entry>
     <title>修复 VMware Fusion 虚拟机无法访问USB设备</title>
@@ -450,33 +473,6 @@
     <category term="React" scheme="https://siriusq.top/tags/React/"/>
     
     <category term="缩放" scheme="https://siriusq.top/tags/%E7%BC%A9%E6%94%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows唤醒后窗口位移至左上角且尺寸缩小解决方案</title>
-    <link href="https://siriusq.top/Windows%E5%94%A4%E9%86%92%E5%90%8E%E7%AA%97%E5%8F%A3%E4%BD%8D%E7%A7%BB%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
-    <id>https://siriusq.top/Windows%E5%94%A4%E9%86%92%E5%90%8E%E7%AA%97%E5%8F%A3%E4%BD%8D%E7%A7%BB%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</id>
-    <published>2022-07-22T10:04:37.000Z</published>
-    <updated>2022-07-22T13:50:15.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;自从回家换回2k显示器，每次睡眠后唤醒时所有打开的窗口都会跑到左上角，而且尺寸变得只有原来的一半大，诡异的是这些窗口还是最大化状态，而本案的罪魁祸首就是DP的热插拔检测（Hot Plug Detection）&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
-    
-    <category term="DP" scheme="https://siriusq.top/tags/DP/"/>
-    
-    <category term="Hot Plug Detection" scheme="https://siriusq.top/tags/Hot-Plug-Detection/"/>
-    
-    <category term="热插拔检测" scheme="https://siriusq.top/tags/%E7%83%AD%E6%8F%92%E6%8B%94%E6%A3%80%E6%B5%8B/"/>
     
   </entry>
   
