@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-08-13T14:42:16.629Z</updated>
+  <updated>2024-09-12T09:14:24.839Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://siriusq.top/steam-silent-startup.html"/>
     <id>https://siriusq.top/steam-silent-startup.html</id>
     <published>2024-08-13T10:06:11.000Z</published>
-    <updated>2024-08-13T14:42:16.629Z</updated>
+    <updated>2024-09-12T09:14:24.839Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近沉迷于更换 Wallpaper Engine 的壁纸，但是更换时总需要启动Steam来连接到创意工坊，为了省事我就设置了Steam开机自启动，但是每次启动时都会显示商店页面，设置里也没有关闭的选项，谷歌了下发现开机显示商店页面是个玄学问题，有些人什么也不设置它也不会显示，很迷惑。要解决这个问题也很简单，在开始菜单的快捷方式上加个启动参数就完事了。 &lt;/blockquote&gt;</summary>
@@ -31,7 +31,7 @@
     <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
     
     <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
     
@@ -44,17 +44,17 @@
     <link href="https://siriusq.top/vmware-fusion-usb-fix.html"/>
     <id>https://siriusq.top/vmware-fusion-usb-fix.html</id>
     <published>2024-07-08T03:40:37.000Z</published>
-    <updated>2024-07-17T13:23:59.473Z</updated>
+    <updated>2024-09-12T09:16:05.150Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 虚拟机装完了，3D加速也开启了，XCode也整好了，正当我打算连上iPhone大干一场的时候，我突然发现虚拟机识别不到USB设备？？？然后又是漫长的搜索试错，发现是vmware-usbarbitrator的锅，这个服务的作用是管理连接到虚拟机的USB设备，而启动虚拟机时它不知为何没有运行，奇奇怪怪的bug增加了，而解决方法就是为它设置开机自动运行。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
@@ -65,17 +65,17 @@
     <link href="https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html"/>
     <id>https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html</id>
     <published>2024-07-07T13:26:19.000Z</published>
-    <updated>2024-07-18T15:36:21.168Z</updated>
+    <updated>2024-09-12T09:06:15.176Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在上一篇博文中，我已经安装并配置好了macOS Sonoma的虚拟机，但是由于无法在设置中开启3D加速，就会显得非常卡顿，甚至一个窗口缩放动画就能硬控虚拟机10秒，这显然不能忍。在谷歌一番之后，我在官网找到了一个通过修改vmx文件来开启3D加速的方法。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
@@ -86,17 +86,17 @@
     <link href="https://siriusq.top/vmware-fusion-install-macos-sonoma.html"/>
     <id>https://siriusq.top/vmware-fusion-install-macos-sonoma.html</id>
     <published>2024-07-07T02:19:24.000Z</published>
-    <updated>2024-07-17T13:15:42.879Z</updated>
+    <updated>2024-09-12T09:15:57.098Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 被苹果背刺了，MBP 2017不能升级到Sonoma，而XCode的版本又是和macOS版本绑定的，升级不了系统也就升级不了XCode。而老版本的XCode又不支持最新的iOS系统，就没法向手机部署应用，老Mac也就变成了美丽废物。我在重新装个黑苹果、装KVM直通和装虚拟机中纠结了很久，最后还是选择在macOS Sonoma的虚拟机中安装最新版本的XCode进行开发，又不是不能用🐶🐶 &lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
@@ -107,17 +107,17 @@
     <link href="https://siriusq.top/create-macos-iso.html"/>
     <id>https://siriusq.top/create-macos-iso.html</id>
     <published>2024-07-06T08:56:28.000Z</published>
-    <updated>2024-07-17T13:12:16.943Z</updated>
+    <updated>2024-09-12T09:05:32.456Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 此博文记录了如何在Mac上下载macOS的安装文件，并将其转换为ISO镜像文件的过程，请注意此方法不适用于Windows操作系统。 &lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="macOS &amp; Hackintosh" scheme="https://siriusq.top/categories/macOS-Hackintosh/"/>
     
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
     <category term="黑苹果" scheme="https://siriusq.top/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
     
@@ -130,14 +130,14 @@
     <link href="https://siriusq.top/vmware-workstation-net-fix.html"/>
     <id>https://siriusq.top/vmware-workstation-net-fix.html</id>
     <published>2024-06-07T14:49:04.000Z</published>
-    <updated>2024-07-17T10:21:38.839Z</updated>
+    <updated>2024-09-12T09:16:10.912Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近听说 VMWare 宣布 Workstation 和 Fusion 对个人使用完全免费之后，我啪一下就站起来了，很快啊！就打算用WMware装一个Windows的虚拟机，因为原来用VirtualBox做的虚拟机拖放功能经常出Bug。但是，安装完成后联网的时候发现我大意了啊，没有闪，桥接网络无连接。经过一番查找，我发现是VMWare自动选择桥接网卡这个年轻人，不讲武德，来，骗，来，偷袭，我69岁的，老同志。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
@@ -151,7 +151,7 @@
     <link href="https://siriusq.top/rider-r2.html"/>
     <id>https://siriusq.top/rider-r2.html</id>
     <published>2024-03-23T08:33:10.000Z</published>
-    <updated>2024-03-25T15:02:34.339Z</updated>
+    <updated>2024-09-12T09:13:55.460Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;经历了几次风扇坏轴之后，我对吊装风扇产生了心理阴影，于是闲着没事就去某宝刷刷 ITX 机箱，打算换一个机箱，然后某宝在 Rider R2 5.0 上架的第二天就给我精准推送了它，这种电源下置，其他结构倒置的结构简直是我的梦中情箱，整机只有电源的风扇是吊装的，而海盗船电源的风扇买回来就没转过几次，于是果断下单，换掉了原来的小闷罐。&lt;/blockquote&gt;
@@ -160,7 +160,7 @@
     
     
     
-    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
     
     
     <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
@@ -176,14 +176,14 @@
     <link href="https://siriusq.top/itx-summary.html"/>
     <id>https://siriusq.top/itx-summary.html</id>
     <published>2024-03-16T14:09:03.000Z</published>
-    <updated>2024-03-25T14:55:07.780Z</updated>
+    <updated>2024-09-12T09:08:53.562Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;从19年末入坑ITX到现在已经4年多了，期间拆拆装装也踩了不少坑，这篇博客就来总结一下装机中的经验。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
     
     
     <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
@@ -197,14 +197,14 @@
     <link href="https://siriusq.top/linux-no-bootable-device.html"/>
     <id>https://siriusq.top/linux-no-bootable-device.html</id>
     <published>2023-12-19T10:22:50.000Z</published>
-    <updated>2023-12-24T12:57:18.689Z</updated>
+    <updated>2024-09-12T09:10:16.717Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/12/24/DWFdJTgk742GY3N.webp&quot; alt=&quot;No_Bootable_Device.webp&quot;&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    <category term="Linux" scheme="https://siriusq.top/categories/Linux/"/>
     
     
     <category term="Linux" scheme="https://siriusq.top/tags/Linux/"/>
@@ -218,14 +218,14 @@
     <link href="https://siriusq.top/grasscutter.html"/>
     <id>https://siriusq.top/grasscutter.html</id>
     <published>2023-11-07T13:17:07.000Z</published>
-    <updated>2023-11-11T12:19:43.588Z</updated>
+    <updated>2024-09-12T09:07:12.486Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;Grasscutter 是一款用 Java 编写的实验性服务器，旨在模拟某款 Anime Game 的服务端。本文记录了我配置服务器的过程，包括 Grasscutter 与 Cultivation 的安装、相关指令的使用、一些实用插件与工具的使用方法、卡池与商店的配置以及角色模型的替换等内容。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
     <category term="Grasscutter" scheme="https://siriusq.top/tags/Grasscutter/"/>
@@ -237,14 +237,14 @@
     <link href="https://siriusq.top/clash-verge-tun-config.html"/>
     <id>https://siriusq.top/clash-verge-tun-config.html</id>
     <published>2023-11-04T09:24:07.000Z</published>
-    <updated>2024-04-07T15:44:20.388Z</updated>
+    <updated>2024-09-12T09:04:35.044Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在本文中，我将记录Clash Verge的配置过程，包括创建配置文件、切换内核、启用TUN模式以及防止DNS泄露。 &lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="Free Internet" scheme="https://siriusq.top/categories/Free-Internet/"/>
     
     
     <category term="Clash" scheme="https://siriusq.top/tags/Clash/"/>
@@ -285,14 +285,14 @@
     <link href="https://siriusq.top/latex-vscode-quick-config.html"/>
     <id>https://siriusq.top/latex-vscode-quick-config.html</id>
     <published>2023-10-03T13:24:09.000Z</published>
-    <updated>2023-10-06T11:58:09.456Z</updated>
+    <updated>2024-09-12T09:10:03.050Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;安装Tex环境并在VSCode中快速配置好LaTeX的方法记录&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    <category term="Coding" scheme="https://siriusq.top/categories/Coding/"/>
     
     
     <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
@@ -306,14 +306,14 @@
     <link href="https://siriusq.top/iOS-Windows-File-Share.html"/>
     <id>https://siriusq.top/iOS-Windows-File-Share.html</id>
     <published>2023-09-15T12:34:06.000Z</published>
-    <updated>2023-09-17T13:53:25.315Z</updated>
+    <updated>2024-09-12T09:08:21.942Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
@@ -329,14 +329,14 @@
     <link href="https://siriusq.top/Stellaris-Mod.html"/>
     <id>https://siriusq.top/Stellaris-Mod.html</id>
     <published>2023-08-29T12:33:11.000Z</published>
-    <updated>2023-09-06T10:06:13.444Z</updated>
+    <updated>2024-09-12T09:14:41.301Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;如何在不使用控制台的前提下成为一个合格的第四天灾&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="个人项目" scheme="https://siriusq.top/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
     
     
     <category term="Stellaris" scheme="https://siriusq.top/tags/Stellaris/"/>
@@ -350,7 +350,7 @@
     <link href="https://siriusq.top/BongoPawClicker.html"/>
     <id>https://siriusq.top/BongoPawClicker.html</id>
     <published>2023-08-14T08:02:21.000Z</published>
-    <updated>2023-08-21T13:41:19.942Z</updated>
+    <updated>2024-09-12T09:04:24.274Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;本文是Bongo Paw Clicker的开发记录，对我在开发鼠标连点器过程中遇到的问题进行了记录&lt;/blockquote&gt;
@@ -359,7 +359,7 @@
     
     
     
-    <category term="程序猿" scheme="https://siriusq.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF/"/>
+    <category term="个人项目" scheme="https://siriusq.top/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
     
     
     <category term="WPF" scheme="https://siriusq.top/tags/WPF/"/>
@@ -377,17 +377,17 @@
     <link href="https://siriusq.top/TurnOniGpu.html"/>
     <id>https://siriusq.top/TurnOniGpu.html</id>
     <published>2023-04-30T11:38:12.000Z</published>
-    <updated>2023-07-04T13:49:49.960Z</updated>
+    <updated>2024-09-12T09:15:09.483Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;以普遍理性而论，插入独显后主板会自动屏蔽掉集显。虽然英特尔核心显卡的游戏性能很拉跨，但是它的视频编解码能力却强的离谱。像6500xt这种编码器被阉割的显卡在游戏中录屏、推流或者视频剪辑时就会产生明显的卡顿掉帧，此时调用核显就可以减轻独显与CPU的负担，获得更丝滑的体验。&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
     
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
@@ -400,23 +400,23 @@
     <link href="https://siriusq.top/MacBookProHeadless.html"/>
     <id>https://siriusq.top/MacBookProHeadless.html</id>
     <published>2023-03-31T13:16:46.000Z</published>
-    <updated>2023-10-20T15:32:22.000Z</updated>
+    <updated>2024-09-12T09:10:58.264Z</updated>
     
     
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;论如何用最少的钱买一台Mac&lt;/blockquote&gt;
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;论如何用最少的钱买一台mac&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg&quot; alt=&quot;MBPHeadless.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="搞机" scheme="https://siriusq.top/categories/%E6%90%9E%E6%9C%BA/"/>
+    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
     
     
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
-    <category term="MacOS" scheme="https://siriusq.top/tags/MacOS/"/>
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
-    <category term="MacBook Pro" scheme="https://siriusq.top/tags/MacBook-Pro/"/>
+    <category term="macBook Pro" scheme="https://siriusq.top/tags/macBook-Pro/"/>
     
   </entry>
   
@@ -425,14 +425,14 @@
     <link href="https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html"/>
     <id>https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html</id>
     <published>2022-12-18T09:52:26.000Z</published>
-    <updated>2023-03-20T02:54:50.042Z</updated>
+    <updated>2024-09-12T08:57:35.938Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;因为最近换了张显卡，因为驱动问题被迫把练习时长两年半的系统重装了，因为C盘还是祖传的256G固态，Adobe的几个软件一上去就给用掉不少，看着很不爽，于是尝试更改了Adobe全家桶的安装位置，顺带屏蔽了全家桶的联网权限，防止它们自动更新。需要注意我安装的是cc2018，新版不一定适用&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
@@ -452,14 +452,14 @@
     <link href="https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html"/>
     <id>https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html</id>
     <published>2022-07-23T03:41:49.000Z</published>
-    <updated>2022-07-23T10:16:55.000Z</updated>
+    <updated>2024-09-12T09:15:26.949Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;前几天发现utools的本地搜索只能加载出来约20条结果，滚动条拉到底部后不会加载新的搜索结果，而单独使用everything搜索结果正常。折腾了半天想起来调整过系统字体大小，去设置里将字体大小调回默认后问题解决&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="折腾" scheme="https://siriusq.top/categories/%E6%8A%98%E8%85%BE/"/>
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
