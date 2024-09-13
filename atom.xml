@@ -44,7 +44,7 @@
     <link href="https://siriusq.top/vmware-fusion-usb-fix.html"/>
     <id>https://siriusq.top/vmware-fusion-usb-fix.html</id>
     <published>2024-07-08T03:40:37.000Z</published>
-    <updated>2024-09-12T09:16:05.150Z</updated>
+    <updated>2024-09-13T15:28:28.479Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 虚拟机装完了，3D加速也开启了，XCode也整好了，正当我打算连上iPhone大干一场的时候，我突然发现虚拟机识别不到USB设备？？？然后又是漫长的搜索试错，发现是vmware-usbarbitrator的锅，这个服务的作用是管理连接到虚拟机的USB设备，而启动虚拟机时它不知为何没有运行，奇奇怪怪的bug增加了，而解决方法就是为它设置开机自动运行。&lt;/blockquote&gt;</summary>
@@ -65,7 +65,7 @@
     <link href="https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html"/>
     <id>https://siriusq.top/enable-gpu-acceleration-in-macos-vm.html</id>
     <published>2024-07-07T13:26:19.000Z</published>
-    <updated>2024-09-12T09:06:15.176Z</updated>
+    <updated>2024-09-13T15:05:35.804Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在上一篇博文中，我已经安装并配置好了macOS Sonoma的虚拟机，但是由于无法在设置中开启3D加速，就会显得非常卡顿，甚至一个窗口缩放动画就能硬控虚拟机10秒，这显然不能忍。在谷歌一番之后，我在官网找到了一个通过修改vmx文件来开启3D加速的方法。&lt;/blockquote&gt;</summary>
@@ -86,7 +86,7 @@
     <link href="https://siriusq.top/vmware-fusion-install-macos-sonoma.html"/>
     <id>https://siriusq.top/vmware-fusion-install-macos-sonoma.html</id>
     <published>2024-07-07T02:19:24.000Z</published>
-    <updated>2024-09-12T09:15:57.098Z</updated>
+    <updated>2024-09-13T15:25:16.328Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 被苹果背刺了，MBP 2017不能升级到Sonoma，而XCode的版本又是和macOS版本绑定的，升级不了系统也就升级不了XCode。而老版本的XCode又不支持最新的iOS系统，就没法向手机部署应用，老Mac也就变成了美丽废物。我在重新装个黑苹果、装KVM直通和装虚拟机中纠结了很久，最后还是选择在macOS Sonoma的虚拟机中安装最新版本的XCode进行开发，又不是不能用🐶🐶 &lt;/blockquote&gt;</summary>
@@ -107,7 +107,7 @@
     <link href="https://siriusq.top/create-macos-iso.html"/>
     <id>https://siriusq.top/create-macos-iso.html</id>
     <published>2024-07-06T08:56:28.000Z</published>
-    <updated>2024-09-12T09:05:32.456Z</updated>
+    <updated>2024-09-13T15:05:10.456Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 此博文记录了如何在Mac上下载macOS的安装文件，并将其转换为ISO镜像文件的过程，请注意此方法不适用于Windows操作系统。 &lt;/blockquote&gt;</summary>
@@ -151,7 +151,7 @@
     <link href="https://siriusq.top/rider-r2.html"/>
     <id>https://siriusq.top/rider-r2.html</id>
     <published>2024-03-23T08:33:10.000Z</published>
-    <updated>2024-09-12T09:13:55.460Z</updated>
+    <updated>2024-09-13T15:19:31.687Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;经历了几次风扇坏轴之后，我对吊装风扇产生了心理阴影，于是闲着没事就去某宝刷刷 ITX 机箱，打算换一个机箱，然后某宝在 Rider R2 5.0 上架的第二天就给我精准推送了它，这种电源下置，其他结构倒置的结构简直是我的梦中情箱，整机只有电源的风扇是吊装的，而海盗船电源的风扇买回来就没转过几次，于是果断下单，换掉了原来的小闷罐。&lt;/blockquote&gt;
@@ -197,7 +197,7 @@
     <link href="https://siriusq.top/linux-no-bootable-device.html"/>
     <id>https://siriusq.top/linux-no-bootable-device.html</id>
     <published>2023-12-19T10:22:50.000Z</published>
-    <updated>2024-09-12T09:10:16.717Z</updated>
+    <updated>2024-09-13T15:17:57.842Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/12/24/DWFdJTgk742GY3N.webp&quot; alt=&quot;No_Bootable_Device.webp&quot;&gt;&lt;/p&gt;</summary>
@@ -218,7 +218,7 @@
     <link href="https://siriusq.top/grasscutter.html"/>
     <id>https://siriusq.top/grasscutter.html</id>
     <published>2023-11-07T13:17:07.000Z</published>
-    <updated>2024-09-12T09:07:12.486Z</updated>
+    <updated>2024-09-13T15:09:54.816Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;Grasscutter 是一款用 Java 编写的实验性服务器，旨在模拟某款 Anime Game 的服务端。本文记录了我配置服务器的过程，包括 Grasscutter 与 Cultivation 的安装、相关指令的使用、一些实用插件与工具的使用方法、卡池与商店的配置以及角色模型的替换等内容。&lt;/blockquote&gt;</summary>
@@ -237,7 +237,7 @@
     <link href="https://siriusq.top/clash-verge-tun-config.html"/>
     <id>https://siriusq.top/clash-verge-tun-config.html</id>
     <published>2023-11-04T09:24:07.000Z</published>
-    <updated>2024-09-12T09:04:35.044Z</updated>
+    <updated>2024-09-13T14:55:41.598Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在本文中，我将记录Clash Verge的配置过程，包括创建配置文件、切换内核、启用TUN模式以及防止DNS泄露。 &lt;/blockquote&gt;</summary>
@@ -262,7 +262,7 @@
     <link href="https://siriusq.top/auto-update-profile-latest-blog-posts.html"/>
     <id>https://siriusq.top/auto-update-profile-latest-blog-posts.html</id>
     <published>2023-10-17T09:10:55.000Z</published>
-    <updated>2023-10-23T10:38:13.474Z</updated>
+    <updated>2024-09-13T15:01:37.494Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;我在GitHub的自定义个人信息页中添加了展示最近更新的博文的部分，但是每次更新完博客还要再来这里手动更新一下，就很麻烦。于是我本着&quot;偷懒是人类进步的动力&quot;的原则，搞出了一种博客部署完成后，使用GitHub Actions自动更新个人信息页的最近博文部分的方法。&lt;/blockquote&gt;</summary>
@@ -285,7 +285,7 @@
     <link href="https://siriusq.top/latex-vscode-quick-config.html"/>
     <id>https://siriusq.top/latex-vscode-quick-config.html</id>
     <published>2023-10-03T13:24:09.000Z</published>
-    <updated>2024-09-12T09:10:03.050Z</updated>
+    <updated>2024-09-13T15:16:20.167Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;安装Tex环境并在VSCode中快速配置好LaTeX的方法记录&lt;/blockquote&gt;</summary>
@@ -306,7 +306,7 @@
     <link href="https://siriusq.top/iOS-Windows-File-Share.html"/>
     <id>https://siriusq.top/iOS-Windows-File-Share.html</id>
     <published>2023-09-15T12:34:06.000Z</published>
-    <updated>2024-09-12T09:08:21.942Z</updated>
+    <updated>2024-09-13T15:11:44.145Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。&lt;/blockquote&gt;</summary>

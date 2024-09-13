@@ -2092,23 +2092,6 @@
       </tags>
   </entry>
   <entry>
-    <title>开站纪念</title>
-    <url>/New.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
-
-<span id="more"></span>
-
-<p>我是一个默默无闻的纪念碑hhh</p>
-<p>评论区可以当作留言板哦</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown写作语法</title>
     <url>/Markdown%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95.html</url>
     <content><![CDATA[<p>编写博客需要使用Markdown，因此需要熟记语法规则，虽然Markdown语法比较少，但是一个一个查起来也是很蛋疼的（<del>目录被标题的预览搞乱了。。。</del>）</p>
@@ -2894,6 +2877,23 @@
       </tags>
   </entry>
   <entry>
+    <title>开站纪念</title>
+    <url>/New.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">第一篇博客，搭网站踩坑踩到自闭，留下当作开站纪念了</blockquote>
+
+<span id="more"></span>
+
+<p>我是一个默默无闻的纪念碑hhh</p>
+<p>评论区可以当作留言板哦</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next 8.10 升级日志</title>
     <url>/Next-8-0-%E5%8D%87%E7%BA%A7%E6%97%A5%E5%BF%97.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">2022年5月我将博客主题Next升级到了8.10版本，然后这一年多的时间里一直有些小的改动，索性就把这篇博文作为我自己的更新日志了，目前我的Next主题已经更新到了8.18.2</blockquote>
@@ -3157,230 +3157,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Next升级+Mac迁移 </title>
-    <url>/Next%E5%8D%87%E7%BA%A7-Mac%E8%BF%81%E7%A7%BB.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">写博客到现在已经快一年了，Next主题也更新了好多版本，新增的pjax真的是太香了，果断更新。顺便把Hexo迁移到mac上面来</blockquote>
-
-<span id="more"></span>
-
-<h1 id="更新说明"><a href="#更新说明" class="headerlink" title="更新说明"></a>更新说明</h1><p>Next主题从7.1到7.7.2的变动较大，直接升级的话小问题比较多，所以这次升级采用了重新安装的方式</p>
-<h2 id="版本对比"><a href="#版本对比" class="headerlink" title="版本对比"></a>版本对比</h2><p>升级前Hexo版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 3.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">node: 12.14.1</span><br><span class="line">next: 7.1</span><br></pre></td></tr></table></figure>
-<p>升级后Hexo版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo: 4.2.0</span><br><span class="line">hexo-cli: 3.1.0</span><br><span class="line">os: Darwin 18.7.0 darwin x64</span><br><span class="line">node: 13.10.1</span><br><span class="line">next: 7.7.2</span><br></pre></td></tr></table></figure>
-
-<h2 id="新增功能"><a href="#新增功能" class="headerlink" title="新增功能"></a>新增功能</h2><ul>
-<li>pjax（局部刷新加载页面）</li>
-<li>DarkMode夜间模式（支持Mac等的夜间模式）</li>
-<li>Gitalk评论（Gitment凉了之后一直没设置评论系统，这次顺路加上）</li>
-<li>Mediumzoom（图片插件）</li>
-<li>中英切换（新）</li>
-<li>CDN</li>
-<li>Echarts</li>
-</ul>
-<h2 id="移除功能"><a href="#移除功能" class="headerlink" title="移除功能"></a>移除功能</h2><ul>
-<li>动态背景（占用资源较大，在手机平板等设备上造成卡顿、发热、耗电快等问题）</li>
-<li>i18n-generator（一年也没写过英语的博客，而且这个方案缺陷太大）</li>
-<li>网易云音乐挂件（使用频率极低，拖慢加载速度）</li>
-</ul>
-<h2 id="保留功能"><a href="#保留功能" class="headerlink" title="保留功能"></a>保留功能</h2><ul>
-<li>站内搜索</li>
-<li>字数与阅读时长统计</li>
-<li>网站运行时间</li>
-<li>加载进度条</li>
-<li>崩溃欺骗</li>
-<li>背景图片</li>
-<li>鼠标点击特效</li>
-<li>不蒜子</li>
-<li>Live2D看板娘</li>
-</ul>
-<h1 id="Mac安装过程"><a href="#Mac安装过程" class="headerlink" title="Mac安装过程"></a>Mac安装过程</h1><h2 id="安装软件依赖"><a href="#安装软件依赖" class="headerlink" title="安装软件依赖"></a>安装软件依赖</h2><p>首先下载安装<code>git</code>和<code>node.js</code>,官网如下</p>
-<ul>
-<li><a href="https://git-scm.com/">git</a></li>
-<li><a href="https://nodejs.org/en/">node.js</a></li>
-</ul>
-<p>安装完成后在终端分别输入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<p>检测是否安装成功，成功的话会返回软件版本号</p>
-<h2 id="配置本地目录"><a href="#配置本地目录" class="headerlink" title="配置本地目录"></a>配置本地目录</h2><ul>
-<li>新建一个用于存放博客文件的文件夹</li>
-<li>新建位于文件夹位置的终端窗口</li>
-<li>输入<code>npm install hexo -g</code>安装hexo<ul>
-<li>这一步可能会报错，报错的话使用命令<code>sudo npm install --unsafe-perm --verbose -g hexo</code>来安装hexo</li>
-</ul>
-</li>
-<li>输入<code>npm install</code>安装其他依赖</li>
-<li>输入<code>npm install hexo-deployer-git --save</code>安装部署插件</li>
-<li>输入<code>hexo v</code>查看是否安装成功，成功会返回版本号</li>
-</ul>
-<h2 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h2><ul>
-<li>打开终端</li>
-<li>输入<code>ls -al ~/.ssh</code>检查是否有以前生成的 SSH Key，没有的话继续</li>
-<li>输入<code>ssh-keygen -t rsa -C &quot;Guthub邮箱地址&quot;</code> 然后回车三连</li>
-<li>此时终端会显示文件的生成路径，根据路径找到并打开<code>id_rsa.pub</code></li>
-<li>复制里面的所有内容</li>
-<li>打开Github，在右上角个人头像下拉菜单中找到<code>Settings</code></li>
-<li>打开<code>SSH and GPG keys</code>,点击右上角<code>New SSH key</code></li>
-<li><code>Title</code>随便填,然后在<code>Key</code>中粘贴</li>
-<li>点击<code>Add SSH key</code></li>
-<li>回到Git bash，输入<code>ssh -T git@github.com</code>回车</li>
-<li>首次输入可能会有提醒，输入<code>yes</code>回车即可</li>
-<li>成功返回<code>Hi 用户名! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>就代表成功了</li>
-<li>输入<code>git config --global user.name &quot;用户名&quot;</code></li>
-<li>输入<code>git config --global user.email  &quot;邮箱地址&quot;</code></li>
-</ul>
-<h2 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h2><p>在终端输入下面的命令安装最新的Next主题</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<h1 id="Next主题自定义"><a href="#Next主题自定义" class="headerlink" title="Next主题自定义"></a>Next主题自定义</h1><p>Hexo的配置过程我就不说了，根据原来的<code>_config.yml</code>配置就行，下面要说的是Next主题的配置</p>
-<h2 id="配置文件分离"><a href="#配置文件分离" class="headerlink" title="配置文件分离"></a>配置文件分离</h2><p>Next主题在7.3之后分离了配置文件与主题，详情请见<a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a>。</p>
-<ul>
-<li>新建文件夹<code>hexo/source/_data</code></li>
-<li>将<code>./themes/next/_config.yml</code>复制到<code>hexo/source/_data</code>路径下并重命名为<code>next.yml</code></li>
-<li>将<code>next.yml</code>中的<code>override</code>设置为<code>true</code>即可作为主题的配置文件使用</li>
-<li>在<code>hexo/source/_data</code>中新建<code>body-end.swig</code>和<code>styles.styl</code>文件</li>
-<li>然后在<code>next.yml</code>的<code>custom_file_path</code>中删除前面的<code>#</code>来启用<code>bodyEnd</code>和<code>style</code></li>
-<li><code>custom_file_path</code>中的其他选项根据需要创建相关文件并启用</li>
-</ul>
-<h2 id="Pjax"><a href="#Pjax" class="headerlink" title="Pjax"></a>Pjax</h2><p>Pjax是基于Ajax的插件，能实现网页局部无刷新载入，听起来很香，然而存在一些小问题：</p>
-<ul>
-<li>使用Mediumzoom时，从归档进入博文不会加载图片，需要刷新网页才能加载</li>
-<li>Echarts图表全部需要刷新才能显示，否则只有一片空白</li>
-</ul>
-<p>安装Pjax</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-pjax source/lib/pjax</span><br></pre></td></tr></table></figure>
-<p>在<code>next.yml</code>中搜索<code>pjax</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pjax: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="Darkmode"><a href="#Darkmode" class="headerlink" title="Darkmode"></a>Darkmode</h2><p>Next主题新增了暗色模式，能够配合系统的暗色主题使用<br>在<code>next.yml</code>中搜索<code>darkmode</code>并设置为<code>auto</code>即可根据系统主题切换亮色&#x2F;暗色模式</p>
-<h2 id="Gitalk评论"><a href="#Gitalk评论" class="headerlink" title="Gitalk评论"></a>Gitalk评论</h2><p>评论系统，一开始想用Valine来着，结果要实名制，果断弃了</p>
-<ul>
-<li>在Github新建一个仓库<code>gitalk-comment</code>，用来存放评论产生的issues</li>
-<li>点击右上角<code>头像 - Setting - Developer settings - OAuth Apps - New OAuth Apps</code></li>
-<li><code>Application name</code> 随便填</li>
-<li><code>Homepage URL</code>和<code>Authorization callback URL</code>都填自己的博客地址</li>
-<li>点击 <code>Register application</code></li>
-<li>在<code>next.yml</code>中搜索<code>gitalk</code></li>
-<li>复制得到的<code>Cilent ID</code>和<code>Cilent secret</code>到相应位置粘贴</li>
-<li>设置<code>enable</code>为<code>true</code></li>
-<li><code>github_id</code>和<code>admin_user</code>为你的用户名</li>
-<li><code>repo</code>为刚才创建的仓库名<code>gitalk-comment</code></li>
-<li><code>distraction_free_mode</code>是类似facobook的评论遮罩功能</li>
-</ul>
-<p><code>next.yml</code>中的具体配置如下</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"># Gitalk</span><br><span class="line"># For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk</span><br><span class="line">gitalk:</span><br><span class="line">  enable: true</span><br><span class="line">  github_id: Siriusq # GitHub repo owner</span><br><span class="line">  repo: gitalk-commnet # Repository name to store issues</span><br><span class="line">  client_id: xxxxxxxx # GitHub Application Client ID</span><br><span class="line">  client_secret: xxxxxxxx # GitHub Application Client Secret</span><br><span class="line">  admin_user: Siriusq # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: false # Facebook-like distraction free mode</span><br><span class="line">  # Gitalk<span class="string">&#x27;s display language depends on user&#x27;</span>s browser or system environment</span><br><span class="line">  # If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
-
-<h2 id="Mediumzoom"><a href="#Mediumzoom" class="headerlink" title="Mediumzoom"></a>Mediumzoom</h2><p>模仿Medium图片查看方式的插件<br>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install medium-zoom</span><br></pre></td></tr></table></figure>
-<p>在<code>next.yml</code>中搜索<code>mediumzoom</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mediumzoom: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="中英切换"><a href="#中英切换" class="headerlink" title="中英切换"></a>中英切换</h2><p>请移步另一篇博客<a href="https://siriusq.top/Hexo-Next-7-7-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html">Hexo Next 7.7 双语切换</a></p>
-<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>查找博客内的内容<br>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
-<p>在<code>next.yml</code>中搜索<code>local_search</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="字数与阅读时长统计"><a href="#字数与阅读时长统计" class="headerlink" title="字数与阅读时长统计"></a>字数与阅读时长统计</h2><p>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-<span class="built_in">time</span></span><br></pre></td></tr></table></figure>
-<p>在根目录的<code>_config.yml</code>中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line">  exclude_codeblock: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br><span class="line">  suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
-<p>然后在<code>next.yml</code>中搜索<code>symbols_count_time</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加jquery"><a href="#添加jquery" class="headerlink" title="添加jquery"></a>添加jquery</h2><ul>
-<li>新版的Next主题移除了jquery，导致一些老得自定义设置会失效，我直接从老版本的Next主题复制过来了，路径是<code>./hexo/themes/next/source/libs/jquery/jquert-2.2.0.min.js</code>，也可以到<a href="https://code.jquery.com/jquery/">官网</a>下载</li>
-<li>将jquery放置在<code>./hexo/source/js</code>路径下</li>
-<li>在<code>./hexo/source/_data/body-end.swig</code>添加，版本不同的话记得改下面的版本<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;!--jquery--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/jquery-2.2.0.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h2><p>打开<code>./hexo/themes/next/layout/_partials/footer.swig</code>并添加下列代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> id=&quot;timeDate&quot;&gt;载入天数...&lt;/<span class="selector-tag">span</span>&gt;&lt;<span class="selector-tag">span</span> id=&quot;times&quot;&gt;载入时分秒...&lt;/<span class="selector-tag">span</span>&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="selector-tag">var</span> now = new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        <span class="selector-tag">var</span> grt= new Date(&quot;<span class="number">03</span>/<span class="number">31</span>/<span class="number">2019</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span><span class="string">&quot;);</span></span><br><span class="line"><span class="string">        now.setTime(now.getTime()+250);</span></span><br><span class="line"><span class="string">        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);</span></span><br><span class="line"><span class="string">        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);</span></span><br><span class="line"><span class="string">        if(String(hnum).length ==1 )&#123;hnum = &quot;</span><span class="number">0</span><span class="string">&quot; + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);</span></span><br><span class="line"><span class="string">        mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = &quot;</span><span class="number">0</span><span class="string">&quot; + mnum;&#125;</span></span><br><span class="line"><span class="string">        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span></span><br><span class="line"><span class="string">        snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = &quot;</span><span class="number">0</span><span class="string">&quot; + snum;&#125;</span></span><br><span class="line"><span class="string">        document.getElementById(&quot;</span>timeDate<span class="string">&quot;).innerHTML = &quot;</span>本站已安全运行 <span class="string">&quot;+dnum+&quot;</span> 天 <span class="string">&quot;;</span></span><br><span class="line"><span class="string">        document.getElementById(&quot;</span>times<span class="string">&quot;).innerHTML = hnum + &quot;</span> 小时 <span class="string">&quot; + mnum + &quot;</span> 分 <span class="string">&quot; + snum + &quot;</span> 秒<span class="string">&quot;;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">setInterval(&quot;</span><span class="built_in">createtime</span>()<span class="string">&quot;,250);</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="加载进度条"><a href="#加载进度条" class="headerlink" title="加载进度条"></a>加载进度条</h2><p>显示当前网页的加载进度<br>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-pace source/lib/pace</span><br></pre></td></tr></table></figure>
-<p>在<code>next.yml</code>中搜索<code>Progress bar in the top during page loading</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pace:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="崩溃欺骗"><a href="#崩溃欺骗" class="headerlink" title="崩溃欺骗"></a>崩溃欺骗</h2><p>在网页标题中添加崩溃欺骗效果，离开页面后标题会更改，切换回来后会恢复正常，需要配合<strong>jquery</strong>使用</p>
-<p>在<code>./hexo/source/js</code>中新建<code>crash_cheat</code>文件，复制下列代码</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;!--崩溃欺骗--&gt;</span><br><span class="line"> <span class="keyword">var</span> <span class="title class_">OriginTitle</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"> <span class="keyword">var</span> titleTime;</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/TEP.ico&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;╭(°A°`)╮ 页面崩溃啦 ~&#x27;</span>;</span><br><span class="line">         <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/favicon.ico&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;(ฅ&gt;ω&lt;*ฅ) 噫又好了~&#x27;</span> + <span class="title class_">OriginTitle</span>;</span><br><span class="line">         titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitle</span>;</span><br><span class="line">         &#125;, <span class="number">2000</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-<p>然后在<code>./hexo/source/_data/body-end.swig</code>中添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;!--崩溃欺骗--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; <span class="attribute">src</span>=&quot;/js/crash_cheat<span class="selector-class">.js</span>&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p>将背景图片放置在<code>./hexo/themes/next/source/images</code>中并命名为<code>background.jpg</code><br>然后在<code>./hexo/source/_data/styles.styl</code>中添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">/images/background.jpg</span>);//图片路径</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;//是否重复平铺</span><br><span class="line">    <span class="attribute">background-attachment</span>: fixed;//是否随着网页上下滚动而滚动，fixed为固定</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">50%</span>;//图片位置</span><br><span class="line">    <span class="attribute">background-size</span>: cover;//图片展示大小</span><br><span class="line">    -webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -moz-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -ms-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">    <span class="selector-tag">footer</span> &gt; <span class="selector-tag">div</span> &gt; <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>:<span class="number">#000000</span>;//底部文字颜色</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h2><p>根据<a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a>更换了鼠标点击的特效，原来的特效对低性能设备不友好<br>在<code>./hexo/themes/next/source/js/cursor</code>中新建<code>fireworks.js</code>，并添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">class Circle &#123;</span><br><span class="line">  constructor(&#123; origin, speed, <span class="attribute">color</span>, angle, context &#125;) &#123;</span><br><span class="line">    this<span class="selector-class">.origin</span> = origin</span><br><span class="line">    this<span class="selector-class">.position</span> = &#123; ..<span class="selector-class">.this</span><span class="selector-class">.origin</span> &#125;</span><br><span class="line">    this<span class="selector-class">.color</span> = <span class="attribute">color</span></span><br><span class="line">    this<span class="selector-class">.speed</span> = speed</span><br><span class="line">    this<span class="selector-class">.angle</span> = angle</span><br><span class="line">    this<span class="selector-class">.context</span> = context</span><br><span class="line">    this<span class="selector-class">.renderCount</span> = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  draw() &#123;</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.fillStyle</span> = this<span class="selector-class">.color</span></span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.beginPath</span>()</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.arc</span>(this<span class="selector-class">.position</span><span class="selector-class">.x</span>, this<span class="selector-class">.position</span><span class="selector-class">.y</span>, <span class="number">2</span>, <span class="number">0</span>, Math<span class="selector-class">.PI</span> * <span class="number">2</span>)</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.fill</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  move() &#123;</span><br><span class="line">    this<span class="selector-class">.position</span><span class="selector-class">.x</span> = (Math<span class="selector-class">.sin</span>(this<span class="selector-class">.angle</span>) * this<span class="selector-class">.speed</span>) + this<span class="selector-class">.position</span><span class="selector-class">.x</span></span><br><span class="line">    this<span class="selector-class">.position</span><span class="selector-class">.y</span> = (Math<span class="selector-class">.cos</span>(this<span class="selector-class">.angle</span>) * this<span class="selector-class">.speed</span>) + this<span class="selector-class">.position</span><span class="selector-class">.y</span> + (this<span class="selector-class">.renderCount</span> * <span class="number">0.3</span>)</span><br><span class="line">    this<span class="selector-class">.renderCount</span>++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Boom &#123;</span><br><span class="line">  constructor (&#123; origin, context, circleCount = <span class="number">16</span>, area &#125;) &#123;</span><br><span class="line">    this<span class="selector-class">.origin</span> = origin</span><br><span class="line">    this<span class="selector-class">.context</span> = context</span><br><span class="line">    this<span class="selector-class">.circleCount</span> = circleCount</span><br><span class="line">    this<span class="selector-class">.area</span> = area</span><br><span class="line">    this<span class="selector-class">.stop</span> = false</span><br><span class="line">    this<span class="selector-class">.circles</span> = <span class="selector-attr">[]</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomArray(range) &#123;</span><br><span class="line">    const length = range<span class="selector-class">.length</span></span><br><span class="line">    const randomIndex = Math<span class="selector-class">.floor</span>(length * Math<span class="selector-class">.random</span>())</span><br><span class="line">    return range<span class="selector-attr">[randomIndex]</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomColor() &#123;</span><br><span class="line">    const range = <span class="selector-attr">[<span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>]</span></span><br><span class="line">    return &#x27;#&#x27; + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomRange(start, end) &#123;</span><br><span class="line">    return (end - start) * Math<span class="selector-class">.random</span>() + start</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init() &#123;</span><br><span class="line">    for(let <span class="selector-tag">i</span> = <span class="number">0</span>; <span class="selector-tag">i</span> &lt; this<span class="selector-class">.circleCount</span>; <span class="selector-tag">i</span>++) &#123;</span><br><span class="line">      const circle = new Circle(&#123;</span><br><span class="line">        context: this.context,</span><br><span class="line">        origin: this.origin,</span><br><span class="line">        color: this.<span class="built_in">randomColor</span>(),</span><br><span class="line">        angle: this.<span class="built_in">randomRange</span>(Math.PI - <span class="number">1</span>, Math.PI + <span class="number">1</span>),</span><br><span class="line">        speed: this.<span class="built_in">randomRange</span>(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">      this<span class="selector-class">.circles</span><span class="selector-class">.push</span>(circle)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  move() &#123;</span><br><span class="line">    this<span class="selector-class">.circles</span><span class="selector-class">.forEach</span>((circle, index) =&gt; &#123;</span><br><span class="line">      if (circle<span class="selector-class">.position</span><span class="selector-class">.x</span> &gt; this<span class="selector-class">.area</span><span class="selector-class">.width</span> || circle<span class="selector-class">.position</span><span class="selector-class">.y</span> &gt; this<span class="selector-class">.area</span><span class="selector-class">.height</span>) &#123;</span><br><span class="line">        return this<span class="selector-class">.circles</span><span class="selector-class">.splice</span>(index, <span class="number">1</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      circle<span class="selector-class">.move</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">    if (this<span class="selector-class">.circles</span><span class="selector-class">.length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">      this<span class="selector-class">.stop</span> = true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  draw() &#123;</span><br><span class="line">    this<span class="selector-class">.circles</span><span class="selector-class">.forEach</span>(circle =&gt; circle<span class="selector-class">.draw</span>())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class CursorSpecialEffects &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this<span class="selector-class">.computerCanvas</span> = document<span class="selector-class">.createElement</span>(&#x27;<span class="selector-tag">canvas</span>&#x27;)</span><br><span class="line">    this<span class="selector-class">.renderCanvas</span> = document<span class="selector-class">.createElement</span>(&#x27;<span class="selector-tag">canvas</span>&#x27;)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.computerContext</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.getContext</span>(&#x27;<span class="number">2</span>d&#x27;)</span><br><span class="line">    this<span class="selector-class">.renderContext</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.getContext</span>(&#x27;<span class="number">2</span>d&#x27;)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.globalWidth</span> = window<span class="selector-class">.innerWidth</span></span><br><span class="line">    this<span class="selector-class">.globalHeight</span> = window<span class="selector-class">.innerHeight</span></span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.booms</span> = <span class="selector-attr">[]</span></span><br><span class="line">    this<span class="selector-class">.running</span> = false</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleMouseDown(e) &#123;</span><br><span class="line">    const boom = new Boom(&#123;</span><br><span class="line">      origin: &#123; x: e.clientX, y: e.clientY &#125;,</span><br><span class="line">      context: this.computerContext,</span><br><span class="line">      area: &#123;</span><br><span class="line">        <span class="attribute">width</span>: this.globalWidth,</span><br><span class="line">        height: this.globalHeight</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    boom<span class="selector-class">.init</span>()</span><br><span class="line">    this<span class="selector-class">.booms</span><span class="selector-class">.push</span>(boom)</span><br><span class="line">    this<span class="selector-class">.running</span> || this<span class="selector-class">.run</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handlePageHide() &#123;</span><br><span class="line">    this<span class="selector-class">.booms</span> = <span class="selector-attr">[]</span></span><br><span class="line">    this<span class="selector-class">.running</span> = false</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init() &#123;</span><br><span class="line">    const style = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.style</span></span><br><span class="line">    style<span class="selector-class">.position</span> = &#x27;fixed&#x27;</span><br><span class="line">    style<span class="selector-class">.top</span> = style<span class="selector-class">.left</span> = <span class="number">0</span></span><br><span class="line">    style<span class="selector-class">.zIndex</span> = &#x27;<span class="number">999999999999999999999999999999999999999999</span>&#x27;</span><br><span class="line">    style<span class="selector-class">.pointerEvents</span> = &#x27;<span class="attribute">none</span>&#x27;</span><br><span class="line"></span><br><span class="line">    style<span class="selector-class">.width</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.width</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.width</span> = this<span class="selector-class">.globalWidth</span></span><br><span class="line">    style<span class="selector-class">.height</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.height</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.height</span> = this<span class="selector-class">.globalHeight</span></span><br><span class="line"></span><br><span class="line">    document<span class="selector-class">.body</span><span class="selector-class">.append</span>(this<span class="selector-class">.renderCanvas</span>)</span><br><span class="line"></span><br><span class="line">    window<span class="selector-class">.addEventListener</span>(&#x27;mousedown&#x27;, this<span class="selector-class">.handleMouseDown</span><span class="selector-class">.bind</span>(this))</span><br><span class="line">    window<span class="selector-class">.addEventListener</span>(&#x27;pagehide&#x27;, this<span class="selector-class">.handlePageHide</span><span class="selector-class">.bind</span>(this))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  run() &#123;</span><br><span class="line">    this<span class="selector-class">.running</span> = true</span><br><span class="line">    if (this<span class="selector-class">.booms</span><span class="selector-class">.length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">      return this<span class="selector-class">.running</span> = false</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(this<span class="selector-class">.run</span><span class="selector-class">.bind</span>(this))</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.computerContext</span><span class="selector-class">.clearRect</span>(<span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line">    this<span class="selector-class">.renderContext</span><span class="selector-class">.clearRect</span>(<span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.booms</span><span class="selector-class">.forEach</span>((boom, index) =&gt; &#123;</span><br><span class="line">      if (boom<span class="selector-class">.stop</span>) &#123;</span><br><span class="line">        return this<span class="selector-class">.booms</span><span class="selector-class">.splice</span>(index, <span class="number">1</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      boom<span class="selector-class">.move</span>()</span><br><span class="line">      boom<span class="selector-class">.draw</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">    this<span class="selector-class">.renderContext</span><span class="selector-class">.drawImage</span>(this<span class="selector-class">.computerCanvas</span>, <span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const cursorSpecialEffects = new CursorSpecialEffects()</span><br><span class="line">cursorSpecialEffects<span class="selector-class">.init</span>()</span><br></pre></td></tr></table></figure>
-
-<p>然后在<code>./hexo/source/_data/body-end.swig</code>中添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;# 鼠标点击特效 #&#125;</span><br><span class="line">&#123;% if theme<span class="selector-class">.cursor_effect</span> == &quot;fireworks&quot; %&#125;</span><br><span class="line">  &lt;script async <span class="attribute">src</span>=&quot;/js/<span class="attribute">cursor</span>/fireworks<span class="selector-class">.js</span>&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在<code>next.yml</code>中添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"># 鼠标点击特效</span><br><span class="line">cursor_effect: fireworks</span><br></pre></td></tr></table></figure>
-
-<h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><p>Next内置了不蒜子统计<br>在<code>next.yml</code>中搜索<code>busuanzi_count</code>并设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义单行代码颜色"><a href="#自定义单行代码颜色" class="headerlink" title="自定义单行代码颜色"></a>自定义单行代码颜色</h2><p>在<code>./hexo/source/_data/styles.styl</code>中添加</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ff511A</span>;</span><br><span class="line">    //<span class="attribute">background</span>: <span class="number">#fbf7f8</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Live2D看板娘"><a href="#Live2D看板娘" class="headerlink" title="Live2D看板娘"></a>Live2D看板娘</h2><p>以我安装的<code>tororo</code>为例，其他模型请见<a href="https://github.com/xiazeyu/live2d-widget-models">官方文档</a><br>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-tororo</span><br></pre></td></tr></table></figure>
-<p>在<code>next.yml</code>中搜索<code>Progress bar in the top during page loading</code>并设置为</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true 							# 开启Live2D</span><br><span class="line">  scriptFrom: local 					   # 插件来源</span><br><span class="line">  pluginRootPath: live2dw/ 				# 插件根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib/ 					  # 脚本文件路径(相对于插件根目录路径)</span><br><span class="line">  pluginModelPath: assets/ 				# 模型文件路径(相对于插件根目录)</span><br><span class="line">  tagMode: false 						  # 是否标签模式</span><br><span class="line">  debug: false 							# 是否开启调试模式</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko 		# 选择模型</span><br><span class="line">  display:</span><br><span class="line">    position: right						# 模型在页面上的位置</span><br><span class="line">    width: <span class="number">150</span> 							# 模型宽度</span><br><span class="line">    height: <span class="number">300</span> 		 				  # 模型高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true 							# 是否在手机端显示</span><br><span class="line">  react:</span><br><span class="line">    opacity: <span class="number">1</span> 							# 设置模型透明度</span><br></pre></td></tr></table></figure>
-
-<h2 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h2><p>熊家的可视化图表，与PJAX有冲突，开启PJAX的情况下需要刷新页面才能成功加载。谷歌搜到说要修改PJAX，但是本人水平有限没能成功</p>
-<p>安装的插件使用的是4.3，某些图表不能正常显示，需要手动修改为最新的，这个版本失效的话就到ECharts官网上随便打开一个示例，然后用浏览器控制台找到最新js文件的地址替换。</p>
-<p>打开<code>./hexo/node_modules/hexo-tag-echarts4/template.html</code>，修改<code>&lt;script src=&quot;https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js&quot;&gt;&lt;/script&gt;</code>为<code>&lt;script src=&quot;https://www.echartsjs.com/examples/vendors/echarts/echarts.min.js?_v_=1584687926098&quot;&gt;&lt;/script&gt;</code></p>
-<p>此外，一些地图类的图表需要引入地图的js，也是开控制台找，然后加入到<code>./hexo/node_modules/hexo-tag-echarts4/template.html</code>中，例如中国地图和世界地图的js</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="attribute">src</span>=&quot;https://www.echartsjs.com/examples/vendors/echarts/map/js/china.js?_v_=<span class="number">1584687926098</span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script src=&quot;</span>https://www.echartsjs.com/examples/vendors/echarts/map/js/world.js?_v_=<span class="number">1584687926098</span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>总之就是缺什么补什么</p>
-<p>安装</p>
-<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-echarts4 --save</span><br></pre></td></tr></table></figure>
-
-<p>使用<br>400代表图表的高度是400px，85%表示相对宽度是85%，不标明的话默认值是高度400px，宽度81%</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% echarts <span class="number">400</span> &#x27;<span class="number">85%</span>&#x27; %&#125;</span><br><span class="line">\\TODO echarts contents goes here</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>示例</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    xAxis: &#123;</span><br><span class="line">        type: <span class="string">&#x27;category&#x27;</span>,</span><br><span class="line">        data: [<span class="string">&#x27;Mon&#x27;</span>, <span class="string">&#x27;Tue&#x27;</span>, <span class="string">&#x27;Wed&#x27;</span>, <span class="string">&#x27;Thu&#x27;</span>, <span class="string">&#x27;Fri&#x27;</span>, <span class="string">&#x27;Sat&#x27;</span>, <span class="string">&#x27;Sun&#x27;</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    yAxis: &#123;</span><br><span class="line">        type: <span class="string">&#x27;value&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        data: [<span class="number">820</span>, <span class="number">932</span>, <span class="number">901</span>, <span class="number">934</span>, <span class="number">1290</span>, <span class="number">1330</span>, <span class="number">1320</span>],</span><br><span class="line">        type: <span class="string">&#x27;line&#x27;</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2022.5.13 已废弃</p>
-<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>Github的服务器在境外，网站加载时间巨长，而使用CDN加速可以有效缓解这一问题</p>
-<ul>
-<li>登陆<a href="https://www.cloudflare.com/">Cloudflare</a></li>
-<li>输入你的域名并点击点击<code>Add site</code></li>
-<li>选择套餐，选<code>free</code>就好</li>
-<li>点击<code>Confirm plan</code></li>
-<li>Cloudflare会先扫描你的DNS记录，稍等一会会出现你域名现在的解析记录</li>
-<li>点击<code>Continue</code></li>
-<li>打开你域名服务商的网站，用Cloudflare给的两个DNS服务器替换掉原来的服务器</li>
-<li>完成后回到Cloudflare，点击<code>Done, check nameservers</code></li>
-<li>然后慢慢等待生效，生效后会有邮件提醒</li>
-<li>等待的时候可以做一些设置</li>
-<li>SSL&#x2F;TLS选项<ul>
-<li>Mode使用默认的Full</li>
-<li>Always Use HTTPS设置为On</li>
-<li>Opportunistic Encryption设置为On</li>
-<li>Authenticated Origin Pills设置为On</li>
-</ul>
-</li>
-</ul>
-<p>填坑完成，毕设期间估计要咕咕咕3个月了┏(＾0＾)┛</p>
-<blockquote>
-<p>参考: <a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>网站配置</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>macOS</tag>
       </tags>
   </entry>
   <entry>
@@ -3859,6 +3635,230 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next升级+Mac迁移 </title>
+    <url>/Next%E5%8D%87%E7%BA%A7-Mac%E8%BF%81%E7%A7%BB.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">写博客到现在已经快一年了，Next主题也更新了好多版本，新增的pjax真的是太香了，果断更新。顺便把Hexo迁移到mac上面来</blockquote>
+
+<span id="more"></span>
+
+<h1 id="更新说明"><a href="#更新说明" class="headerlink" title="更新说明"></a>更新说明</h1><p>Next主题从7.1到7.7.2的变动较大，直接升级的话小问题比较多，所以这次升级采用了重新安装的方式</p>
+<h2 id="版本对比"><a href="#版本对比" class="headerlink" title="版本对比"></a>版本对比</h2><p>升级前Hexo版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo: 3.8.0</span><br><span class="line">hexo-cli: 3.1.0</span><br><span class="line">os: Windows_NT 10.0.17763 win32 x64</span><br><span class="line">node: 12.14.1</span><br><span class="line">next: 7.1</span><br></pre></td></tr></table></figure>
+<p>升级后Hexo版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo: 4.2.0</span><br><span class="line">hexo-cli: 3.1.0</span><br><span class="line">os: Darwin 18.7.0 darwin x64</span><br><span class="line">node: 13.10.1</span><br><span class="line">next: 7.7.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="新增功能"><a href="#新增功能" class="headerlink" title="新增功能"></a>新增功能</h2><ul>
+<li>pjax（局部刷新加载页面）</li>
+<li>DarkMode夜间模式（支持Mac等的夜间模式）</li>
+<li>Gitalk评论（Gitment凉了之后一直没设置评论系统，这次顺路加上）</li>
+<li>Mediumzoom（图片插件）</li>
+<li>中英切换（新）</li>
+<li>CDN</li>
+<li>Echarts</li>
+</ul>
+<h2 id="移除功能"><a href="#移除功能" class="headerlink" title="移除功能"></a>移除功能</h2><ul>
+<li>动态背景（占用资源较大，在手机平板等设备上造成卡顿、发热、耗电快等问题）</li>
+<li>i18n-generator（一年也没写过英语的博客，而且这个方案缺陷太大）</li>
+<li>网易云音乐挂件（使用频率极低，拖慢加载速度）</li>
+</ul>
+<h2 id="保留功能"><a href="#保留功能" class="headerlink" title="保留功能"></a>保留功能</h2><ul>
+<li>站内搜索</li>
+<li>字数与阅读时长统计</li>
+<li>网站运行时间</li>
+<li>加载进度条</li>
+<li>崩溃欺骗</li>
+<li>背景图片</li>
+<li>鼠标点击特效</li>
+<li>不蒜子</li>
+<li>Live2D看板娘</li>
+</ul>
+<h1 id="Mac安装过程"><a href="#Mac安装过程" class="headerlink" title="Mac安装过程"></a>Mac安装过程</h1><h2 id="安装软件依赖"><a href="#安装软件依赖" class="headerlink" title="安装软件依赖"></a>安装软件依赖</h2><p>首先下载安装<code>git</code>和<code>node.js</code>,官网如下</p>
+<ul>
+<li><a href="https://git-scm.com/">git</a></li>
+<li><a href="https://nodejs.org/en/">node.js</a></li>
+</ul>
+<p>安装完成后在终端分别输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>检测是否安装成功，成功的话会返回软件版本号</p>
+<h2 id="配置本地目录"><a href="#配置本地目录" class="headerlink" title="配置本地目录"></a>配置本地目录</h2><ul>
+<li>新建一个用于存放博客文件的文件夹</li>
+<li>新建位于文件夹位置的终端窗口</li>
+<li>输入<code>npm install hexo -g</code>安装hexo<ul>
+<li>这一步可能会报错，报错的话使用命令<code>sudo npm install --unsafe-perm --verbose -g hexo</code>来安装hexo</li>
+</ul>
+</li>
+<li>输入<code>npm install</code>安装其他依赖</li>
+<li>输入<code>npm install hexo-deployer-git --save</code>安装部署插件</li>
+<li>输入<code>hexo v</code>查看是否安装成功，成功会返回版本号</li>
+</ul>
+<h2 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h2><ul>
+<li>打开终端</li>
+<li>输入<code>ls -al ~/.ssh</code>检查是否有以前生成的 SSH Key，没有的话继续</li>
+<li>输入<code>ssh-keygen -t rsa -C &quot;Guthub邮箱地址&quot;</code> 然后回车三连</li>
+<li>此时终端会显示文件的生成路径，根据路径找到并打开<code>id_rsa.pub</code></li>
+<li>复制里面的所有内容</li>
+<li>打开Github，在右上角个人头像下拉菜单中找到<code>Settings</code></li>
+<li>打开<code>SSH and GPG keys</code>,点击右上角<code>New SSH key</code></li>
+<li><code>Title</code>随便填,然后在<code>Key</code>中粘贴</li>
+<li>点击<code>Add SSH key</code></li>
+<li>回到Git bash，输入<code>ssh -T git@github.com</code>回车</li>
+<li>首次输入可能会有提醒，输入<code>yes</code>回车即可</li>
+<li>成功返回<code>Hi 用户名! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>就代表成功了</li>
+<li>输入<code>git config --global user.name &quot;用户名&quot;</code></li>
+<li>输入<code>git config --global user.email  &quot;邮箱地址&quot;</code></li>
+</ul>
+<h2 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h2><p>在终端输入下面的命令安装最新的Next主题</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<h1 id="Next主题自定义"><a href="#Next主题自定义" class="headerlink" title="Next主题自定义"></a>Next主题自定义</h1><p>Hexo的配置过程我就不说了，根据原来的<code>_config.yml</code>配置就行，下面要说的是Next主题的配置</p>
+<h2 id="配置文件分离"><a href="#配置文件分离" class="headerlink" title="配置文件分离"></a>配置文件分离</h2><p>Next主题在7.3之后分离了配置文件与主题，详情请见<a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a>。</p>
+<ul>
+<li>新建文件夹<code>hexo/source/_data</code></li>
+<li>将<code>./themes/next/_config.yml</code>复制到<code>hexo/source/_data</code>路径下并重命名为<code>next.yml</code></li>
+<li>将<code>next.yml</code>中的<code>override</code>设置为<code>true</code>即可作为主题的配置文件使用</li>
+<li>在<code>hexo/source/_data</code>中新建<code>body-end.swig</code>和<code>styles.styl</code>文件</li>
+<li>然后在<code>next.yml</code>的<code>custom_file_path</code>中删除前面的<code>#</code>来启用<code>bodyEnd</code>和<code>style</code></li>
+<li><code>custom_file_path</code>中的其他选项根据需要创建相关文件并启用</li>
+</ul>
+<h2 id="Pjax"><a href="#Pjax" class="headerlink" title="Pjax"></a>Pjax</h2><p>Pjax是基于Ajax的插件，能实现网页局部无刷新载入，听起来很香，然而存在一些小问题：</p>
+<ul>
+<li>使用Mediumzoom时，从归档进入博文不会加载图片，需要刷新网页才能加载</li>
+<li>Echarts图表全部需要刷新才能显示，否则只有一片空白</li>
+</ul>
+<p>安装Pjax</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-pjax source/lib/pjax</span><br></pre></td></tr></table></figure>
+<p>在<code>next.yml</code>中搜索<code>pjax</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pjax: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="Darkmode"><a href="#Darkmode" class="headerlink" title="Darkmode"></a>Darkmode</h2><p>Next主题新增了暗色模式，能够配合系统的暗色主题使用<br>在<code>next.yml</code>中搜索<code>darkmode</code>并设置为<code>auto</code>即可根据系统主题切换亮色&#x2F;暗色模式</p>
+<h2 id="Gitalk评论"><a href="#Gitalk评论" class="headerlink" title="Gitalk评论"></a>Gitalk评论</h2><p>评论系统，一开始想用Valine来着，结果要实名制，果断弃了</p>
+<ul>
+<li>在Github新建一个仓库<code>gitalk-comment</code>，用来存放评论产生的issues</li>
+<li>点击右上角<code>头像 - Setting - Developer settings - OAuth Apps - New OAuth Apps</code></li>
+<li><code>Application name</code> 随便填</li>
+<li><code>Homepage URL</code>和<code>Authorization callback URL</code>都填自己的博客地址</li>
+<li>点击 <code>Register application</code></li>
+<li>在<code>next.yml</code>中搜索<code>gitalk</code></li>
+<li>复制得到的<code>Cilent ID</code>和<code>Cilent secret</code>到相应位置粘贴</li>
+<li>设置<code>enable</code>为<code>true</code></li>
+<li><code>github_id</code>和<code>admin_user</code>为你的用户名</li>
+<li><code>repo</code>为刚才创建的仓库名<code>gitalk-comment</code></li>
+<li><code>distraction_free_mode</code>是类似facobook的评论遮罩功能</li>
+</ul>
+<p><code>next.yml</code>中的具体配置如下</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"># Gitalk</span><br><span class="line"># For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk</span><br><span class="line">gitalk:</span><br><span class="line">  enable: true</span><br><span class="line">  github_id: Siriusq # GitHub repo owner</span><br><span class="line">  repo: gitalk-commnet # Repository name to store issues</span><br><span class="line">  client_id: xxxxxxxx # GitHub Application Client ID</span><br><span class="line">  client_secret: xxxxxxxx # GitHub Application Client Secret</span><br><span class="line">  admin_user: Siriusq # GitHub repo owner and collaborators, only these guys can initialize gitHub issues</span><br><span class="line">  distraction_free_mode: false # Facebook-like distraction free mode</span><br><span class="line">  # Gitalk<span class="string">&#x27;s display language depends on user&#x27;</span>s browser or system environment</span><br><span class="line">  # If you want everyone visiting your site to see a uniform language, you can set a force language value</span><br><span class="line">  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<h2 id="Mediumzoom"><a href="#Mediumzoom" class="headerlink" title="Mediumzoom"></a>Mediumzoom</h2><p>模仿Medium图片查看方式的插件<br>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install medium-zoom</span><br></pre></td></tr></table></figure>
+<p>在<code>next.yml</code>中搜索<code>mediumzoom</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mediumzoom: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="中英切换"><a href="#中英切换" class="headerlink" title="中英切换"></a>中英切换</h2><p>请移步另一篇博客<a href="https://siriusq.top/Hexo-Next-7-7-%E5%8F%8C%E8%AF%AD%E5%88%87%E6%8D%A2.html">Hexo Next 7.7 双语切换</a></p>
+<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>查找博客内的内容<br>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+<p>在<code>next.yml</code>中搜索<code>local_search</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="字数与阅读时长统计"><a href="#字数与阅读时长统计" class="headerlink" title="字数与阅读时长统计"></a>字数与阅读时长统计</h2><p>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-<span class="built_in">time</span></span><br></pre></td></tr></table></figure>
+<p>在根目录的<code>_config.yml</code>中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line">  exclude_codeblock: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br><span class="line">  suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+<p>然后在<code>next.yml</code>中搜索<code>symbols_count_time</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加jquery"><a href="#添加jquery" class="headerlink" title="添加jquery"></a>添加jquery</h2><ul>
+<li>新版的Next主题移除了jquery，导致一些老得自定义设置会失效，我直接从老版本的Next主题复制过来了，路径是<code>./hexo/themes/next/source/libs/jquery/jquert-2.2.0.min.js</code>，也可以到<a href="https://code.jquery.com/jquery/">官网</a>下载</li>
+<li>将jquery放置在<code>./hexo/source/js</code>路径下</li>
+<li>在<code>./hexo/source/_data/body-end.swig</code>添加，版本不同的话记得改下面的版本<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;!--jquery--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/jquery-2.2.0.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="网站运行时间"><a href="#网站运行时间" class="headerlink" title="网站运行时间"></a>网站运行时间</h2><p>打开<code>./hexo/themes/next/layout/_partials/footer.swig</code>并添加下列代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> id=&quot;timeDate&quot;&gt;载入天数...&lt;/<span class="selector-tag">span</span>&gt;&lt;<span class="selector-tag">span</span> id=&quot;times&quot;&gt;载入时分秒...&lt;/<span class="selector-tag">span</span>&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="selector-tag">var</span> now = new Date();</span><br><span class="line">    function createtime() &#123;</span><br><span class="line">        <span class="selector-tag">var</span> grt= new Date(&quot;<span class="number">03</span>/<span class="number">31</span>/<span class="number">2019</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span><span class="string">&quot;);</span></span><br><span class="line"><span class="string">        now.setTime(now.getTime()+250);</span></span><br><span class="line"><span class="string">        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);</span></span><br><span class="line"><span class="string">        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);</span></span><br><span class="line"><span class="string">        if(String(hnum).length ==1 )&#123;hnum = &quot;</span><span class="number">0</span><span class="string">&quot; + hnum;&#125; minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);</span></span><br><span class="line"><span class="string">        mnum = Math.floor(minutes); if(String(mnum).length ==1 )&#123;mnum = &quot;</span><span class="number">0</span><span class="string">&quot; + mnum;&#125;</span></span><br><span class="line"><span class="string">        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);</span></span><br><span class="line"><span class="string">        snum = Math.round(seconds); if(String(snum).length ==1 )&#123;snum = &quot;</span><span class="number">0</span><span class="string">&quot; + snum;&#125;</span></span><br><span class="line"><span class="string">        document.getElementById(&quot;</span>timeDate<span class="string">&quot;).innerHTML = &quot;</span>本站已安全运行 <span class="string">&quot;+dnum+&quot;</span> 天 <span class="string">&quot;;</span></span><br><span class="line"><span class="string">        document.getElementById(&quot;</span>times<span class="string">&quot;).innerHTML = hnum + &quot;</span> 小时 <span class="string">&quot; + mnum + &quot;</span> 分 <span class="string">&quot; + snum + &quot;</span> 秒<span class="string">&quot;;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">setInterval(&quot;</span><span class="built_in">createtime</span>()<span class="string">&quot;,250);</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加载进度条"><a href="#加载进度条" class="headerlink" title="加载进度条"></a>加载进度条</h2><p>显示当前网页的加载进度<br>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-pace source/lib/pace</span><br></pre></td></tr></table></figure>
+<p>在<code>next.yml</code>中搜索<code>Progress bar in the top during page loading</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pace:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="崩溃欺骗"><a href="#崩溃欺骗" class="headerlink" title="崩溃欺骗"></a>崩溃欺骗</h2><p>在网页标题中添加崩溃欺骗效果，离开页面后标题会更改，切换回来后会恢复正常，需要配合<strong>jquery</strong>使用</p>
+<p>在<code>./hexo/source/js</code>中新建<code>crash_cheat</code>文件，复制下列代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;!--崩溃欺骗--&gt;</span><br><span class="line"> <span class="keyword">var</span> <span class="title class_">OriginTitle</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"> <span class="keyword">var</span> titleTime;</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/TEP.ico&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;╭(°A°`)╮ 页面崩溃啦 ~&#x27;</span>;</span><br><span class="line">         <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/favicon.ico&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;(ฅ&gt;ω&lt;*ฅ) 噫又好了~&#x27;</span> + <span class="title class_">OriginTitle</span>;</span><br><span class="line">         titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitle</span>;</span><br><span class="line">         &#125;, <span class="number">2000</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+<p>然后在<code>./hexo/source/_data/body-end.swig</code>中添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;!--崩溃欺骗--&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; <span class="attribute">src</span>=&quot;/js/crash_cheat<span class="selector-class">.js</span>&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><p>将背景图片放置在<code>./hexo/themes/next/source/images</code>中并命名为<code>background.jpg</code><br>然后在<code>./hexo/source/_data/styles.styl</code>中添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">/images/background.jpg</span>);//图片路径</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;//是否重复平铺</span><br><span class="line">    <span class="attribute">background-attachment</span>: fixed;//是否随着网页上下滚动而滚动，fixed为固定</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">50%</span>;//图片位置</span><br><span class="line">    <span class="attribute">background-size</span>: cover;//图片展示大小</span><br><span class="line">    -webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -moz-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    -ms-<span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">    <span class="selector-tag">footer</span> &gt; <span class="selector-tag">div</span> &gt; <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>:<span class="number">#000000</span>;//底部文字颜色</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h2><p>根据<a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a>更换了鼠标点击的特效，原来的特效对低性能设备不友好<br>在<code>./hexo/themes/next/source/js/cursor</code>中新建<code>fireworks.js</code>，并添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">class Circle &#123;</span><br><span class="line">  constructor(&#123; origin, speed, <span class="attribute">color</span>, angle, context &#125;) &#123;</span><br><span class="line">    this<span class="selector-class">.origin</span> = origin</span><br><span class="line">    this<span class="selector-class">.position</span> = &#123; ..<span class="selector-class">.this</span><span class="selector-class">.origin</span> &#125;</span><br><span class="line">    this<span class="selector-class">.color</span> = <span class="attribute">color</span></span><br><span class="line">    this<span class="selector-class">.speed</span> = speed</span><br><span class="line">    this<span class="selector-class">.angle</span> = angle</span><br><span class="line">    this<span class="selector-class">.context</span> = context</span><br><span class="line">    this<span class="selector-class">.renderCount</span> = <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  draw() &#123;</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.fillStyle</span> = this<span class="selector-class">.color</span></span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.beginPath</span>()</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.arc</span>(this<span class="selector-class">.position</span><span class="selector-class">.x</span>, this<span class="selector-class">.position</span><span class="selector-class">.y</span>, <span class="number">2</span>, <span class="number">0</span>, Math<span class="selector-class">.PI</span> * <span class="number">2</span>)</span><br><span class="line">    this<span class="selector-class">.context</span><span class="selector-class">.fill</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  move() &#123;</span><br><span class="line">    this<span class="selector-class">.position</span><span class="selector-class">.x</span> = (Math<span class="selector-class">.sin</span>(this<span class="selector-class">.angle</span>) * this<span class="selector-class">.speed</span>) + this<span class="selector-class">.position</span><span class="selector-class">.x</span></span><br><span class="line">    this<span class="selector-class">.position</span><span class="selector-class">.y</span> = (Math<span class="selector-class">.cos</span>(this<span class="selector-class">.angle</span>) * this<span class="selector-class">.speed</span>) + this<span class="selector-class">.position</span><span class="selector-class">.y</span> + (this<span class="selector-class">.renderCount</span> * <span class="number">0.3</span>)</span><br><span class="line">    this<span class="selector-class">.renderCount</span>++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Boom &#123;</span><br><span class="line">  constructor (&#123; origin, context, circleCount = <span class="number">16</span>, area &#125;) &#123;</span><br><span class="line">    this<span class="selector-class">.origin</span> = origin</span><br><span class="line">    this<span class="selector-class">.context</span> = context</span><br><span class="line">    this<span class="selector-class">.circleCount</span> = circleCount</span><br><span class="line">    this<span class="selector-class">.area</span> = area</span><br><span class="line">    this<span class="selector-class">.stop</span> = false</span><br><span class="line">    this<span class="selector-class">.circles</span> = <span class="selector-attr">[]</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomArray(range) &#123;</span><br><span class="line">    const length = range<span class="selector-class">.length</span></span><br><span class="line">    const randomIndex = Math<span class="selector-class">.floor</span>(length * Math<span class="selector-class">.random</span>())</span><br><span class="line">    return range<span class="selector-attr">[randomIndex]</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomColor() &#123;</span><br><span class="line">    const range = <span class="selector-attr">[<span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>]</span></span><br><span class="line">    return &#x27;#&#x27; + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range) + this<span class="selector-class">.randomArray</span>(range)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomRange(start, end) &#123;</span><br><span class="line">    return (end - start) * Math<span class="selector-class">.random</span>() + start</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init() &#123;</span><br><span class="line">    for(let <span class="selector-tag">i</span> = <span class="number">0</span>; <span class="selector-tag">i</span> &lt; this<span class="selector-class">.circleCount</span>; <span class="selector-tag">i</span>++) &#123;</span><br><span class="line">      const circle = new Circle(&#123;</span><br><span class="line">        context: this.context,</span><br><span class="line">        origin: this.origin,</span><br><span class="line">        color: this.<span class="built_in">randomColor</span>(),</span><br><span class="line">        angle: this.<span class="built_in">randomRange</span>(Math.PI - <span class="number">1</span>, Math.PI + <span class="number">1</span>),</span><br><span class="line">        speed: this.<span class="built_in">randomRange</span>(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">      this<span class="selector-class">.circles</span><span class="selector-class">.push</span>(circle)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  move() &#123;</span><br><span class="line">    this<span class="selector-class">.circles</span><span class="selector-class">.forEach</span>((circle, index) =&gt; &#123;</span><br><span class="line">      if (circle<span class="selector-class">.position</span><span class="selector-class">.x</span> &gt; this<span class="selector-class">.area</span><span class="selector-class">.width</span> || circle<span class="selector-class">.position</span><span class="selector-class">.y</span> &gt; this<span class="selector-class">.area</span><span class="selector-class">.height</span>) &#123;</span><br><span class="line">        return this<span class="selector-class">.circles</span><span class="selector-class">.splice</span>(index, <span class="number">1</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      circle<span class="selector-class">.move</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">    if (this<span class="selector-class">.circles</span><span class="selector-class">.length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">      this<span class="selector-class">.stop</span> = true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  draw() &#123;</span><br><span class="line">    this<span class="selector-class">.circles</span><span class="selector-class">.forEach</span>(circle =&gt; circle<span class="selector-class">.draw</span>())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class CursorSpecialEffects &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this<span class="selector-class">.computerCanvas</span> = document<span class="selector-class">.createElement</span>(&#x27;<span class="selector-tag">canvas</span>&#x27;)</span><br><span class="line">    this<span class="selector-class">.renderCanvas</span> = document<span class="selector-class">.createElement</span>(&#x27;<span class="selector-tag">canvas</span>&#x27;)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.computerContext</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.getContext</span>(&#x27;<span class="number">2</span>d&#x27;)</span><br><span class="line">    this<span class="selector-class">.renderContext</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.getContext</span>(&#x27;<span class="number">2</span>d&#x27;)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.globalWidth</span> = window<span class="selector-class">.innerWidth</span></span><br><span class="line">    this<span class="selector-class">.globalHeight</span> = window<span class="selector-class">.innerHeight</span></span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.booms</span> = <span class="selector-attr">[]</span></span><br><span class="line">    this<span class="selector-class">.running</span> = false</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleMouseDown(e) &#123;</span><br><span class="line">    const boom = new Boom(&#123;</span><br><span class="line">      origin: &#123; x: e.clientX, y: e.clientY &#125;,</span><br><span class="line">      context: this.computerContext,</span><br><span class="line">      area: &#123;</span><br><span class="line">        <span class="attribute">width</span>: this.globalWidth,</span><br><span class="line">        height: this.globalHeight</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    boom<span class="selector-class">.init</span>()</span><br><span class="line">    this<span class="selector-class">.booms</span><span class="selector-class">.push</span>(boom)</span><br><span class="line">    this<span class="selector-class">.running</span> || this<span class="selector-class">.run</span>()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handlePageHide() &#123;</span><br><span class="line">    this<span class="selector-class">.booms</span> = <span class="selector-attr">[]</span></span><br><span class="line">    this<span class="selector-class">.running</span> = false</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  init() &#123;</span><br><span class="line">    const style = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.style</span></span><br><span class="line">    style<span class="selector-class">.position</span> = &#x27;fixed&#x27;</span><br><span class="line">    style<span class="selector-class">.top</span> = style<span class="selector-class">.left</span> = <span class="number">0</span></span><br><span class="line">    style<span class="selector-class">.zIndex</span> = &#x27;<span class="number">999999999999999999999999999999999999999999</span>&#x27;</span><br><span class="line">    style<span class="selector-class">.pointerEvents</span> = &#x27;<span class="attribute">none</span>&#x27;</span><br><span class="line"></span><br><span class="line">    style<span class="selector-class">.width</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.width</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.width</span> = this<span class="selector-class">.globalWidth</span></span><br><span class="line">    style<span class="selector-class">.height</span> = this<span class="selector-class">.renderCanvas</span><span class="selector-class">.height</span> = this<span class="selector-class">.computerCanvas</span><span class="selector-class">.height</span> = this<span class="selector-class">.globalHeight</span></span><br><span class="line"></span><br><span class="line">    document<span class="selector-class">.body</span><span class="selector-class">.append</span>(this<span class="selector-class">.renderCanvas</span>)</span><br><span class="line"></span><br><span class="line">    window<span class="selector-class">.addEventListener</span>(&#x27;mousedown&#x27;, this<span class="selector-class">.handleMouseDown</span><span class="selector-class">.bind</span>(this))</span><br><span class="line">    window<span class="selector-class">.addEventListener</span>(&#x27;pagehide&#x27;, this<span class="selector-class">.handlePageHide</span><span class="selector-class">.bind</span>(this))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  run() &#123;</span><br><span class="line">    this<span class="selector-class">.running</span> = true</span><br><span class="line">    if (this<span class="selector-class">.booms</span><span class="selector-class">.length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">      return this<span class="selector-class">.running</span> = false</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(this<span class="selector-class">.run</span><span class="selector-class">.bind</span>(this))</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.computerContext</span><span class="selector-class">.clearRect</span>(<span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line">    this<span class="selector-class">.renderContext</span><span class="selector-class">.clearRect</span>(<span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line"></span><br><span class="line">    this<span class="selector-class">.booms</span><span class="selector-class">.forEach</span>((boom, index) =&gt; &#123;</span><br><span class="line">      if (boom<span class="selector-class">.stop</span>) &#123;</span><br><span class="line">        return this<span class="selector-class">.booms</span><span class="selector-class">.splice</span>(index, <span class="number">1</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      boom<span class="selector-class">.move</span>()</span><br><span class="line">      boom<span class="selector-class">.draw</span>()</span><br><span class="line">    &#125;)</span><br><span class="line">    this<span class="selector-class">.renderContext</span><span class="selector-class">.drawImage</span>(this<span class="selector-class">.computerCanvas</span>, <span class="number">0</span>, <span class="number">0</span>, this<span class="selector-class">.globalWidth</span>, this<span class="selector-class">.globalHeight</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const cursorSpecialEffects = new CursorSpecialEffects()</span><br><span class="line">cursorSpecialEffects<span class="selector-class">.init</span>()</span><br></pre></td></tr></table></figure>
+
+<p>然后在<code>./hexo/source/_data/body-end.swig</code>中添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;# 鼠标点击特效 #&#125;</span><br><span class="line">&#123;% if theme<span class="selector-class">.cursor_effect</span> == &quot;fireworks&quot; %&#125;</span><br><span class="line">  &lt;script async <span class="attribute">src</span>=&quot;/js/<span class="attribute">cursor</span>/fireworks<span class="selector-class">.js</span>&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>next.yml</code>中添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"># 鼠标点击特效</span><br><span class="line">cursor_effect: fireworks</span><br></pre></td></tr></table></figure>
+
+<h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><p>Next内置了不蒜子统计<br>在<code>next.yml</code>中搜索<code>busuanzi_count</code>并设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义单行代码颜色"><a href="#自定义单行代码颜色" class="headerlink" title="自定义单行代码颜色"></a>自定义单行代码颜色</h2><p>在<code>./hexo/source/_data/styles.styl</code>中添加</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ff511A</span>;</span><br><span class="line">    //<span class="attribute">background</span>: <span class="number">#fbf7f8</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Live2D看板娘"><a href="#Live2D看板娘" class="headerlink" title="Live2D看板娘"></a>Live2D看板娘</h2><p>以我安装的<code>tororo</code>为例，其他模型请见<a href="https://github.com/xiazeyu/live2d-widget-models">官方文档</a><br>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-tororo</span><br></pre></td></tr></table></figure>
+<p>在<code>next.yml</code>中搜索<code>Progress bar in the top during page loading</code>并设置为</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true 							# 开启Live2D</span><br><span class="line">  scriptFrom: local 					   # 插件来源</span><br><span class="line">  pluginRootPath: live2dw/ 				# 插件根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib/ 					  # 脚本文件路径(相对于插件根目录路径)</span><br><span class="line">  pluginModelPath: assets/ 				# 模型文件路径(相对于插件根目录)</span><br><span class="line">  tagMode: false 						  # 是否标签模式</span><br><span class="line">  debug: false 							# 是否开启调试模式</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko 		# 选择模型</span><br><span class="line">  display:</span><br><span class="line">    position: right						# 模型在页面上的位置</span><br><span class="line">    width: <span class="number">150</span> 							# 模型宽度</span><br><span class="line">    height: <span class="number">300</span> 		 				  # 模型高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true 							# 是否在手机端显示</span><br><span class="line">  react:</span><br><span class="line">    opacity: <span class="number">1</span> 							# 设置模型透明度</span><br></pre></td></tr></table></figure>
+
+<h2 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h2><p>熊家的可视化图表，与PJAX有冲突，开启PJAX的情况下需要刷新页面才能成功加载。谷歌搜到说要修改PJAX，但是本人水平有限没能成功</p>
+<p>安装的插件使用的是4.3，某些图表不能正常显示，需要手动修改为最新的，这个版本失效的话就到ECharts官网上随便打开一个示例，然后用浏览器控制台找到最新js文件的地址替换。</p>
+<p>打开<code>./hexo/node_modules/hexo-tag-echarts4/template.html</code>，修改<code>&lt;script src=&quot;https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js&quot;&gt;&lt;/script&gt;</code>为<code>&lt;script src=&quot;https://www.echartsjs.com/examples/vendors/echarts/echarts.min.js?_v_=1584687926098&quot;&gt;&lt;/script&gt;</code></p>
+<p>此外，一些地图类的图表需要引入地图的js，也是开控制台找，然后加入到<code>./hexo/node_modules/hexo-tag-echarts4/template.html</code>中，例如中国地图和世界地图的js</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="attribute">src</span>=&quot;https://www.echartsjs.com/examples/vendors/echarts/map/js/china.js?_v_=<span class="number">1584687926098</span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script src=&quot;</span>https://www.echartsjs.com/examples/vendors/echarts/map/js/world.js?_v_=<span class="number">1584687926098</span><span class="string">&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>总之就是缺什么补什么</p>
+<p>安装</p>
+<figure class="highlight dos"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-echarts4 --save</span><br></pre></td></tr></table></figure>
+
+<p>使用<br>400代表图表的高度是400px，85%表示相对宽度是85%，不标明的话默认值是高度400px，宽度81%</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% echarts <span class="number">400</span> &#x27;<span class="number">85%</span>&#x27; %&#125;</span><br><span class="line">\\TODO echarts contents goes here</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;% echarts %&#125;</span><br><span class="line">option = &#123;</span><br><span class="line">    xAxis: &#123;</span><br><span class="line">        type: <span class="string">&#x27;category&#x27;</span>,</span><br><span class="line">        data: [<span class="string">&#x27;Mon&#x27;</span>, <span class="string">&#x27;Tue&#x27;</span>, <span class="string">&#x27;Wed&#x27;</span>, <span class="string">&#x27;Thu&#x27;</span>, <span class="string">&#x27;Fri&#x27;</span>, <span class="string">&#x27;Sat&#x27;</span>, <span class="string">&#x27;Sun&#x27;</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    yAxis: &#123;</span><br><span class="line">        type: <span class="string">&#x27;value&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    series: [&#123;</span><br><span class="line">        data: [<span class="number">820</span>, <span class="number">932</span>, <span class="number">901</span>, <span class="number">934</span>, <span class="number">1290</span>, <span class="number">1330</span>, <span class="number">1320</span>],</span><br><span class="line">        type: <span class="string">&#x27;line&#x27;</span></span><br><span class="line">    &#125;]</span><br><span class="line">&#125;;</span><br><span class="line">&#123;% endecharts %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2022.5.13 已废弃</p>
+<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>Github的服务器在境外，网站加载时间巨长，而使用CDN加速可以有效缓解这一问题</p>
+<ul>
+<li>登陆<a href="https://www.cloudflare.com/">Cloudflare</a></li>
+<li>输入你的域名并点击点击<code>Add site</code></li>
+<li>选择套餐，选<code>free</code>就好</li>
+<li>点击<code>Confirm plan</code></li>
+<li>Cloudflare会先扫描你的DNS记录，稍等一会会出现你域名现在的解析记录</li>
+<li>点击<code>Continue</code></li>
+<li>打开你域名服务商的网站，用Cloudflare给的两个DNS服务器替换掉原来的服务器</li>
+<li>完成后回到Cloudflare，点击<code>Done, check nameservers</code></li>
+<li>然后慢慢等待生效，生效后会有邮件提醒</li>
+<li>等待的时候可以做一些设置</li>
+<li>SSL&#x2F;TLS选项<ul>
+<li>Mode使用默认的Full</li>
+<li>Always Use HTTPS设置为On</li>
+<li>Opportunistic Encryption设置为On</li>
+<li>Authenticated Origin Pills设置为On</li>
+</ul>
+</li>
+</ul>
+<p>填坑完成，毕设期间估计要咕咕咕3个月了┏(＾0＾)┛</p>
+<blockquote>
+<p>参考: <a href="https://tding.top/archives/2bd6d82.html">小丁的个人博客</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网站配置</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>macOS</tag>
       </tags>
   </entry>
   <entry>
@@ -5235,148 +5235,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WSA 折腾日志</title>
-    <url>/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">记录WSA的安装、联网、设置代理以及安装应用的折腾过程</blockquote>
-
-<span id="more"></span>
-
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><div class="note warning"><p>记得去BIOS开启CPU虚拟化</p>
-</div>
-
-<h2 id="Windows设置调整"><a href="#Windows设置调整" class="headerlink" title="Windows设置调整"></a>Windows设置调整</h2><p>打开<code>设置</code>-<code>应用</code>-<code>可选功能</code>-<code>更多Windows功能</code>，勾选<code>虚拟机平台</code>，等待安装并重启<br><img data-src="https://s2.loli.net/2022/06/02/cdf8ypRustXqS3v.png" alt="wsa2.png"></p>
-<p>然后在<code>设置</code>-<code>隐私和安全性</code>-<code>开发者选项</code>-<code>开发人员模式</code>中打开开关<br><img data-src="https://s2.loli.net/2022/06/02/P45KeiDczAdgbXh.png" alt="wsa3.png"></p>
-<h2 id="安装adb"><a href="#安装adb" class="headerlink" title="安装adb"></a>安装adb</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/download.webp"></object>
-<p>adb 下载</p><p>下载适用于 Windows 的 SDK Platform-Tools</p>
-<a href="https://developer.android.com/studio/releases/platform-tools"></a>
-</div></div>
-
-<ol>
-<li>下载完成后把安装包扔到固定的位置再解压，因为下面需要设置环境变量</li>
-<li><code>Win</code> + <code>S</code>搜索并打开<code>编辑系统环境变量</code></li>
-<li>在系统变量中新建变量<code>adb</code>，变量值为刚才解压的文件夹路径，如<code>D:\Program Files\platform-tools</code></li>
-<li>双击打开系统变量中名为<code>Path</code>的变量，然后新建变量<code>%adb%</code></li>
-<li>确定三连</li>
-<li>在终端中输入<code>adb version</code>查看是否设置成功</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2022/06/02/NatckrIXWZC5Oxh.png" alt="wsa4.png"></p>
-<h2 id="安装WSA-Toolbox"><a href="#安装WSA-Toolbox" class="headerlink" title="安装WSA Toolbox"></a>安装WSA Toolbox</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/download.webp"></object>
-<p>WSA Toolbox</p><p>Provides utilities & tools for WSA</p>
-<a href="https://apps.microsoft.com/store/detail/wsa-toolbox/9PPSP2MKVTGT?hl=en-us&gl=US"></a>
-</div></div>
-
-<p>这个工具在国区微软应用商店被下架了，只能通过上面链接安装了。后续会需要它来打开WSA的Android系统设置。</p>
-<hr>
-<h1 id="安装WSA"><a href="#安装WSA" class="headerlink" title="安装WSA"></a>安装WSA</h1><p>这里我使用的是集成了root、Magisk与Google Play的整合包，省下一些麻烦。</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>Magisk</p><p>LSPosed Magisk on WSA (with Google Apps)</p>
-<a href="https://github.com/LSPosed/MagiskOnWSA"></a>
-</div></div>
-
-<ol>
-<li>首先fork一份代码到自己的仓库，然后在fork后的仓库中点击左上角的<code>Actions</code>。</li>
-<li>在<code>Workflow</code>中点击<code>Build WSA</code></li>
-<li>点击右侧的<code>Run workflow</code>，在下拉菜单中选择<code>Build arch</code>为<code>x64</code>，选择<code>Variants of gapps</code>为<code>pico</code></li>
-<li>最后点击绿色的<code>Run workflow</code>，等待build操作完成，一般需要等待五六分钟。<br><img data-src="https://s2.loli.net/2022/06/02/6SdWlJb9LfIa4cV.png" alt="wsa1.png"></li>
-<li>下载build完成的包，注意不要使用多线程下载器</li>
-<li>解压</li>
-<li>右键单击<code>Install.ps1</code>，选择<code>Run with PowerShell</code>，等待安装完成，安装完成后会打开Play商店</li>
-<li>打开<code>基于Android的Windows子系统设置</code>，打开<code>开发人员模式</code>，记录下出现的ip，一般都是<code>127.0.0.1:58526</code><br><img data-src="https://s2.loli.net/2022/06/02/uZAeSJEXPFKyGx3.png" alt="wsa9.png"></li>
-</ol>
-<hr>
-<h1 id="联网的坑"><a href="#联网的坑" class="headerlink" title="联网的坑"></a>联网的坑</h1><p>在没有设置代理的情况下Play商店是连不上的，但是可以通过亚马逊应用商店来判断是否有网络连接，正常的话请跳过本章，本章专为像我一样的大冤种准备。<br>我在安装完WSA后怎么也连不上网，一直提示VritWifi连接受限。试了很多种方法，下面是Google大总结，不妨挨个尝试一下。</p>
-<h2 id="更改防火墙规则"><a href="#更改防火墙规则" class="headerlink" title="更改防火墙规则"></a>更改防火墙规则</h2><p>以管理员身份运行终端，执行命令添加防火墙规则</p>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">New-NetFirewallRule</span> <span class="literal">-DisplayName</span> <span class="string">&quot;WSL&quot;</span> <span class="literal">-Direction</span> Inbound <span class="literal">-InterfaceAlias</span> <span class="string">&quot;vEthernet (WSL)&quot;</span> <span class="literal">-Action</span> Allow</span><br></pre></td></tr></table></figure>
-<p>然而这个对我无效。。。</p>
-<h2 id="更换DNS"><a href="#更换DNS" class="headerlink" title="更换DNS"></a>更换DNS</h2><p>更改WSA默认的DNS设置，然而对我依然无效</p>
-<ol>
-<li>打开前面安装的<code>WSA Toolbox</code>，点击中间的<code>Android设置</code></li>
-<li>打开<code>网络和互联网</code>-<code>互联网</code>-<code>WLAN</code>-<code>VritWifi</code></li>
-<li>点击右上角的设置</li>
-<li>把<code>DNS 1</code>更换为<code>8.8.4.4</code>或者<code>114.114.115.115</code>等常用DNS</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2022/06/02/MGDFkbQCelVUPgu.png" alt="wsa5.png"></p>
-<h2 id="adb修改captive-portal"><a href="#adb修改captive-portal" class="headerlink" title="adb修改captive_portal"></a>adb修改captive_portal</h2><p>事实证明这个玩意儿纯属掩耳盗铃，打开终端，执行</p>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br><span class="line">adb shell settings put global captive_portal_https_url https://connect.rom.miui.com/generate_204</span><br><span class="line">adb shell settings put global captive_portal_http_url http://connect.rom.miui.com/generate_204</span><br></pre></td></tr></table></figure>
-<p>这个操作的唯一作用是在能联网但是仍然提示网络连接受限的情况下去掉烦人的提示。。。</p>
-<blockquote>
-<p>Captive portal（强制门户）是在授予新连接至Wi-Fi的用户更广的网络（互联网）访问权限之前在其网页浏览器呈现中的网页，其常用于呈现可能需要认证或接受最终用户许可协议&#x2F;可接受使用策略的着陆页或登录页。强制门户应用于方方面面的移动宽带服务中（如有线连接、计费Wi-Fi及家庭热点），同时也可提供对企业或家庭有线网络（公寓、酒店和商业中心的网络）的访问权限。</p>
-</blockquote>
-<p>因为WSA默认用谷歌的Captive Portal来检测是否联网，但是国内肯定连不上，所以就会提示网络受限，只要把检测服务器换成国内的就行了，这里白嫖小米的嘿嘿，还可以嫖苹果、华为和vivo的，把链接换了就行</p>
-<ul>
-<li>苹果 <a href="http://www.apple.com/library/test/success.html">http://www.apple.com/library/test/success.html</a></li>
-<li>华为 <a href="http://connectivitycheck.platform.hicloud.com/generate_204">http://connectivitycheck.platform.hicloud.com/generate_204</a></li>
-<li>vivo <a href="http://wifi.vivo.com.cn/generate_204">http://wifi.vivo.com.cn/generate_204</a></li>
-</ul>
-<h2 id="USB网络共享"><a href="#USB网络共享" class="headerlink" title="USB网络共享"></a>USB网络共享</h2><p>这个方法算是曲线救国，实在没办法的话可以用，但是重启之后可能需要重新设置</p>
-<ol>
-<li>打开前面安装的<code>WSA Toolbox</code>，点击中间的<code>Android设置</code></li>
-<li>打开<code>系统</code>-<code>开发者选型</code></li>
-<li>打开<code>使用开发者选型</code>开关</li>
-<li>下滑，找到<code>网络</code>-<code>默认USB设置</code></li>
-<li>设置为<code>USB网络共享</code></li>
-</ol>
-<h2 id="开启Hyper-V功能"><a href="#开启Hyper-V功能" class="headerlink" title="开启Hyper-V功能"></a>开启Hyper-V功能</h2><div class="note primary"><p>搜到了知乎<a href="https://zhuanlan.zhihu.com/p/431557897">希尔顿</a>的文章，发现他额外开启了Hyper-V功能，试了一下，没想到真能行了🤣。毕竟按照官方文档的说法是不需要开启Hyper-V的</p>
-</div>
-
-<ol>
-<li>打开<code>设置</code>-<code>应用</code>-<code>可选功能</code>-<code>更多Windows功能</code></li>
-<li>展开<code>Hyper-V</code></li>
-<li>勾选<code>Hyper-V平台</code></li>
-<li>等待安装完成</li>
-</ol>
-<p><img data-src="https://s2.loli.net/2022/06/02/HJIWBZVYlC3pT7s.png" alt="wsa6.png"></p>
-<p>然后就神奇的连上网了，原理我到现在也没搞懂🤯</p>
-<hr>
-<h1 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h1><h2 id="正常操作"><a href="#正常操作" class="headerlink" title="正常操作"></a>正常操作</h2><p>我用的客户端是V2rayN。如果用Clash的话直接谷歌就成，教程很多。</p>
-<ol>
-<li>打开V2rayN，在<code>设置</code>-<code>参数设置</code>-<code>基础设置</code>中勾选<code>允许来自局域网的连接</code></li>
-<li>记下最下面显示的局域网http端口号，默认是<code>10811</code><br><img data-src="https://s2.loli.net/2022/06/02/CmPInWYB536VjwS.png" alt="wsa7.png"></li>
-<li>在终端中运行下面的命令，注意把<code>127.0.0.1:58526</code>替换成在<code>基于Android的Windows子系统设置</code>记下的ip，一般都是这个<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br></pre></td></tr></table></figure></li>
-<li>在终端输入<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></li>
-<li>找到目前使用的网卡的ip地址，例如我的就是192.168.50.70<br><img data-src="https://s2.loli.net/2022/06/02/Vh3JBqGuFPoNMd9.png" alt="wsa8.png"></li>
-<li>在终端运行下面的命令，注意把ip换成自己的网卡的<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb shell settings put global http_proxy <span class="number">192.168</span>.<span class="number">50.70</span>:<span class="number">10811</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>如果想要取消代理的话用下面的命令</p>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb shell settings put global http_proxy :<span class="number">0</span></span><br><span class="line">adb shell settings delete global http_proxy</span><br></pre></td></tr></table></figure>
-
-<h2 id="曲线救国"><a href="#曲线救国" class="headerlink" title="曲线救国"></a>曲线救国</h2><p>如果上面的方法不行的话，可以在WSA中单独安装设置代理软件，如V2rayNG</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/github.webp"></object>
-<p>V2rayNG</p><p>A V2Ray client for Android</p>
-<a href="https://github.com/2dust/v2rayNG/releases"></a>
-</div></div>
-
-<hr>
-<h1 id="旁加载安装apk"><a href="#旁加载安装apk" class="headerlink" title="旁加载安装apk"></a>旁加载安装apk</h1><p>如果没有代理可用的话，自然也就不能通过Play商店安装应用了，不过好在可以用旁加载的方式安装应用。</p>
-<ol>
-<li>在终端中运行下面的命令，注意把<code>127.0.0.1:58526</code>替换成在<code>基于Android的Windows子系统设置</code>记下的ip，一般都是这个<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br></pre></td></tr></table></figure></li>
-<li>cd到apk所在的文件夹</li>
-<li>执行<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb install apk名</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>国内的应用商店我用的是酷安</p>
-<div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/link/link.webp"></object>
-<p>酷安APP</p><p>发现科技新生活</p>
-<a href="https://www.coolapk.com/"></a>
-</div></div>]]></content>
-      <categories>
-        <category>虚拟机</category>
-      </categories>
-      <tags>
-        <tag>Win11</tag>
-        <tag>WSA</tag>
-        <tag>Android</tag>
-        <tag>V2ray</tag>
-        <tag>Google Play</tag>
-        <tag>Magisk</tag>
-        <tag>adb</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>V2Ray</title>
     <url>/V2Ray.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">自从P站无法访问后就一直想写个V2Ray的教程，然鹅拖延症加懒癌晚期到现在才开始写emmm，虽然民间一直流传有上P站的各种神功，但网速实在感人而且指不定那天就挂掉了，另外如果你不想看这么麻烦的教程的话可以直看真香警告。另外解释一下这个P站是建筑狗用的Pinterest，想歪的面壁去（🐶）
@@ -5620,6 +5478,148 @@
       </categories>
       <tags>
         <tag>V2Ray</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WSA 折腾日志</title>
+    <url>/WSA-%E6%8A%98%E8%85%BE%E6%97%A5%E5%BF%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">记录WSA的安装、联网、设置代理以及安装应用的折腾过程</blockquote>
+
+<span id="more"></span>
+
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><div class="note warning"><p>记得去BIOS开启CPU虚拟化</p>
+</div>
+
+<h2 id="Windows设置调整"><a href="#Windows设置调整" class="headerlink" title="Windows设置调整"></a>Windows设置调整</h2><p>打开<code>设置</code>-<code>应用</code>-<code>可选功能</code>-<code>更多Windows功能</code>，勾选<code>虚拟机平台</code>，等待安装并重启<br><img data-src="https://s2.loli.net/2022/06/02/cdf8ypRustXqS3v.png" alt="wsa2.png"></p>
+<p>然后在<code>设置</code>-<code>隐私和安全性</code>-<code>开发者选项</code>-<code>开发人员模式</code>中打开开关<br><img data-src="https://s2.loli.net/2022/06/02/P45KeiDczAdgbXh.png" alt="wsa3.png"></p>
+<h2 id="安装adb"><a href="#安装adb" class="headerlink" title="安装adb"></a>安装adb</h2><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/download.webp"></object>
+<p>adb 下载</p><p>下载适用于 Windows 的 SDK Platform-Tools</p>
+<a href="https://developer.android.com/studio/releases/platform-tools"></a>
+</div></div>
+
+<ol>
+<li>下载完成后把安装包扔到固定的位置再解压，因为下面需要设置环境变量</li>
+<li><code>Win</code> + <code>S</code>搜索并打开<code>编辑系统环境变量</code></li>
+<li>在系统变量中新建变量<code>adb</code>，变量值为刚才解压的文件夹路径，如<code>D:\Program Files\platform-tools</code></li>
+<li>双击打开系统变量中名为<code>Path</code>的变量，然后新建变量<code>%adb%</code></li>
+<li>确定三连</li>
+<li>在终端中输入<code>adb version</code>查看是否设置成功</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/06/02/NatckrIXWZC5Oxh.png" alt="wsa4.png"></p>
+<h2 id="安装WSA-Toolbox"><a href="#安装WSA-Toolbox" class="headerlink" title="安装WSA Toolbox"></a>安装WSA Toolbox</h2><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/download.webp"></object>
+<p>WSA Toolbox</p><p>Provides utilities & tools for WSA</p>
+<a href="https://apps.microsoft.com/store/detail/wsa-toolbox/9PPSP2MKVTGT?hl=en-us&gl=US"></a>
+</div></div>
+
+<p>这个工具在国区微软应用商店被下架了，只能通过上面链接安装了。后续会需要它来打开WSA的Android系统设置。</p>
+<hr>
+<h1 id="安装WSA"><a href="#安装WSA" class="headerlink" title="安装WSA"></a>安装WSA</h1><p>这里我使用的是集成了root、Magisk与Google Play的整合包，省下一些麻烦。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>Magisk</p><p>LSPosed Magisk on WSA (with Google Apps)</p>
+<a href="https://github.com/LSPosed/MagiskOnWSA"></a>
+</div></div>
+
+<ol>
+<li>首先fork一份代码到自己的仓库，然后在fork后的仓库中点击左上角的<code>Actions</code>。</li>
+<li>在<code>Workflow</code>中点击<code>Build WSA</code></li>
+<li>点击右侧的<code>Run workflow</code>，在下拉菜单中选择<code>Build arch</code>为<code>x64</code>，选择<code>Variants of gapps</code>为<code>pico</code></li>
+<li>最后点击绿色的<code>Run workflow</code>，等待build操作完成，一般需要等待五六分钟。<br><img data-src="https://s2.loli.net/2022/06/02/6SdWlJb9LfIa4cV.png" alt="wsa1.png"></li>
+<li>下载build完成的包，注意不要使用多线程下载器</li>
+<li>解压</li>
+<li>右键单击<code>Install.ps1</code>，选择<code>Run with PowerShell</code>，等待安装完成，安装完成后会打开Play商店</li>
+<li>打开<code>基于Android的Windows子系统设置</code>，打开<code>开发人员模式</code>，记录下出现的ip，一般都是<code>127.0.0.1:58526</code><br><img data-src="https://s2.loli.net/2022/06/02/uZAeSJEXPFKyGx3.png" alt="wsa9.png"></li>
+</ol>
+<hr>
+<h1 id="联网的坑"><a href="#联网的坑" class="headerlink" title="联网的坑"></a>联网的坑</h1><p>在没有设置代理的情况下Play商店是连不上的，但是可以通过亚马逊应用商店来判断是否有网络连接，正常的话请跳过本章，本章专为像我一样的大冤种准备。<br>我在安装完WSA后怎么也连不上网，一直提示VritWifi连接受限。试了很多种方法，下面是Google大总结，不妨挨个尝试一下。</p>
+<h2 id="更改防火墙规则"><a href="#更改防火墙规则" class="headerlink" title="更改防火墙规则"></a>更改防火墙规则</h2><p>以管理员身份运行终端，执行命令添加防火墙规则</p>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line"><span class="built_in">New-NetFirewallRule</span> <span class="literal">-DisplayName</span> <span class="string">&quot;WSL&quot;</span> <span class="literal">-Direction</span> Inbound <span class="literal">-InterfaceAlias</span> <span class="string">&quot;vEthernet (WSL)&quot;</span> <span class="literal">-Action</span> Allow</span><br></pre></td></tr></table></figure>
+<p>然而这个对我无效。。。</p>
+<h2 id="更换DNS"><a href="#更换DNS" class="headerlink" title="更换DNS"></a>更换DNS</h2><p>更改WSA默认的DNS设置，然而对我依然无效</p>
+<ol>
+<li>打开前面安装的<code>WSA Toolbox</code>，点击中间的<code>Android设置</code></li>
+<li>打开<code>网络和互联网</code>-<code>互联网</code>-<code>WLAN</code>-<code>VritWifi</code></li>
+<li>点击右上角的设置</li>
+<li>把<code>DNS 1</code>更换为<code>8.8.4.4</code>或者<code>114.114.115.115</code>等常用DNS</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/06/02/MGDFkbQCelVUPgu.png" alt="wsa5.png"></p>
+<h2 id="adb修改captive-portal"><a href="#adb修改captive-portal" class="headerlink" title="adb修改captive_portal"></a>adb修改captive_portal</h2><p>事实证明这个玩意儿纯属掩耳盗铃，打开终端，执行</p>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br><span class="line">adb shell settings put global captive_portal_https_url https://connect.rom.miui.com/generate_204</span><br><span class="line">adb shell settings put global captive_portal_http_url http://connect.rom.miui.com/generate_204</span><br></pre></td></tr></table></figure>
+<p>这个操作的唯一作用是在能联网但是仍然提示网络连接受限的情况下去掉烦人的提示。。。</p>
+<blockquote>
+<p>Captive portal（强制门户）是在授予新连接至Wi-Fi的用户更广的网络（互联网）访问权限之前在其网页浏览器呈现中的网页，其常用于呈现可能需要认证或接受最终用户许可协议&#x2F;可接受使用策略的着陆页或登录页。强制门户应用于方方面面的移动宽带服务中（如有线连接、计费Wi-Fi及家庭热点），同时也可提供对企业或家庭有线网络（公寓、酒店和商业中心的网络）的访问权限。</p>
+</blockquote>
+<p>因为WSA默认用谷歌的Captive Portal来检测是否联网，但是国内肯定连不上，所以就会提示网络受限，只要把检测服务器换成国内的就行了，这里白嫖小米的嘿嘿，还可以嫖苹果、华为和vivo的，把链接换了就行</p>
+<ul>
+<li>苹果 <a href="http://www.apple.com/library/test/success.html">http://www.apple.com/library/test/success.html</a></li>
+<li>华为 <a href="http://connectivitycheck.platform.hicloud.com/generate_204">http://connectivitycheck.platform.hicloud.com/generate_204</a></li>
+<li>vivo <a href="http://wifi.vivo.com.cn/generate_204">http://wifi.vivo.com.cn/generate_204</a></li>
+</ul>
+<h2 id="USB网络共享"><a href="#USB网络共享" class="headerlink" title="USB网络共享"></a>USB网络共享</h2><p>这个方法算是曲线救国，实在没办法的话可以用，但是重启之后可能需要重新设置</p>
+<ol>
+<li>打开前面安装的<code>WSA Toolbox</code>，点击中间的<code>Android设置</code></li>
+<li>打开<code>系统</code>-<code>开发者选型</code></li>
+<li>打开<code>使用开发者选型</code>开关</li>
+<li>下滑，找到<code>网络</code>-<code>默认USB设置</code></li>
+<li>设置为<code>USB网络共享</code></li>
+</ol>
+<h2 id="开启Hyper-V功能"><a href="#开启Hyper-V功能" class="headerlink" title="开启Hyper-V功能"></a>开启Hyper-V功能</h2><div class="note primary"><p>搜到了知乎<a href="https://zhuanlan.zhihu.com/p/431557897">希尔顿</a>的文章，发现他额外开启了Hyper-V功能，试了一下，没想到真能行了🤣。毕竟按照官方文档的说法是不需要开启Hyper-V的</p>
+</div>
+
+<ol>
+<li>打开<code>设置</code>-<code>应用</code>-<code>可选功能</code>-<code>更多Windows功能</code></li>
+<li>展开<code>Hyper-V</code></li>
+<li>勾选<code>Hyper-V平台</code></li>
+<li>等待安装完成</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2022/06/02/HJIWBZVYlC3pT7s.png" alt="wsa6.png"></p>
+<p>然后就神奇的连上网了，原理我到现在也没搞懂🤯</p>
+<hr>
+<h1 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h1><h2 id="正常操作"><a href="#正常操作" class="headerlink" title="正常操作"></a>正常操作</h2><p>我用的客户端是V2rayN。如果用Clash的话直接谷歌就成，教程很多。</p>
+<ol>
+<li>打开V2rayN，在<code>设置</code>-<code>参数设置</code>-<code>基础设置</code>中勾选<code>允许来自局域网的连接</code></li>
+<li>记下最下面显示的局域网http端口号，默认是<code>10811</code><br><img data-src="https://s2.loli.net/2022/06/02/CmPInWYB536VjwS.png" alt="wsa7.png"></li>
+<li>在终端中运行下面的命令，注意把<code>127.0.0.1:58526</code>替换成在<code>基于Android的Windows子系统设置</code>记下的ip，一般都是这个<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br></pre></td></tr></table></figure></li>
+<li>在终端输入<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure></li>
+<li>找到目前使用的网卡的ip地址，例如我的就是192.168.50.70<br><img data-src="https://s2.loli.net/2022/06/02/Vh3JBqGuFPoNMd9.png" alt="wsa8.png"></li>
+<li>在终端运行下面的命令，注意把ip换成自己的网卡的<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb shell settings put global http_proxy <span class="number">192.168</span>.<span class="number">50.70</span>:<span class="number">10811</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>如果想要取消代理的话用下面的命令</p>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb shell settings put global http_proxy :<span class="number">0</span></span><br><span class="line">adb shell settings delete global http_proxy</span><br></pre></td></tr></table></figure>
+
+<h2 id="曲线救国"><a href="#曲线救国" class="headerlink" title="曲线救国"></a>曲线救国</h2><p>如果上面的方法不行的话，可以在WSA中单独安装设置代理软件，如V2rayNG</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>V2rayNG</p><p>A V2Ray client for Android</p>
+<a href="https://github.com/2dust/v2rayNG/releases"></a>
+</div></div>
+
+<hr>
+<h1 id="旁加载安装apk"><a href="#旁加载安装apk" class="headerlink" title="旁加载安装apk"></a>旁加载安装apk</h1><p>如果没有代理可用的话，自然也就不能通过Play商店安装应用了，不过好在可以用旁加载的方式安装应用。</p>
+<ol>
+<li>在终端中运行下面的命令，注意把<code>127.0.0.1:58526</code>替换成在<code>基于Android的Windows子系统设置</code>记下的ip，一般都是这个<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb connect <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">58526</span></span><br></pre></td></tr></table></figure></li>
+<li>cd到apk所在的文件夹</li>
+<li>执行<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">adb install apk名</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>国内的应用商店我用的是酷安</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>酷安APP</p><p>发现科技新生活</p>
+<a href="https://www.coolapk.com/"></a>
+</div></div>]]></content>
+      <categories>
+        <category>虚拟机</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>WSA</tag>
+        <tag>Android</tag>
+        <tag>V2ray</tag>
+        <tag>Google Play</tag>
+        <tag>Magisk</tag>
+        <tag>adb</tag>
       </tags>
   </entry>
   <entry>
@@ -6395,7 +6395,17 @@
 <div class="note warning"><p>提醒：本文中使用的博客框架为Hexo，博客主题为Next。RSS Feed采用Atom 1.0格式</p>
 </div>
 
-<h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1><p><img data-src="https://s2.loli.net/2023/10/19/Gk81DjxnfIgU2Yd.webp" alt="auto_update_profile-cn.webp"></p>
+<h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1>
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ural3cgfo">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="auto_update_profile-cn.webp"><img data-src="https://s2.loli.net/2023/10/19/Gk81DjxnfIgU2Yd.webp" alt="auto_update_profile-cn.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-ural3cgfo" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>此方法的基本原理如上图所示，我们首先要在博客仓库与Profile仓库中各设置一个Workflow，然后当我们执行<code>hexo deploy</code>操作将博客文件推送到GitHub仓库后，GitHub Pages会自动运行一个Workflow来部署博客网站，当部署完成后，我们设置的<code>Trigger Profile Update</code> Workflow会被唤起，它的作用是调用Profile仓库中的另一个Workflow：<code>Update Latest Blog Posts</code>。Profile仓库中的Workflow会运行<code>update-readme.mjs</code>脚本，脚本首先会访问博客的RSS Feed，读取其中的内容，并使用正则表达式提取博文的标题与链接，接着读取<code>README.md</code>文件，找到我们预先设置的标识符，使用提取到的内容替换标识符中原有的内容，并将所做的修改写回<code>README.md</code>文件。最后Workflow会将更改的内容push回仓库中。</p>
 <h1 id="启用RSS功能"><a href="#启用RSS功能" class="headerlink" title="启用RSS功能"></a>启用RSS功能</h1><p>首先我们需要开启博客的RSS功能，以便脚本获取博客的标题与URL。开启Hexo框架的RSS功能需要安装<code>hexo-generator-feed</code>插件，这个插件支持生成Atom 1.0 与 RSS 2.0 的feed。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
@@ -6482,7 +6492,16 @@
 <li>滚动到页面最下方，点击<code>Generate token</code></li>
 <li>复制生成的<code>Token</code>，注意在离开这个页面后就再也见不到这个Token了，所以一定妥善保管</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/MCX8r6medVjocbq.webp" alt="1-2.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/nGbz1mhuYMXlEIV.webp" alt="3.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/HyqLWKu5wg8B3hJ.webp" alt="4-6.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/8oPj7UqBV4Ynscv.webp" alt="7-8.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/y4T2RbD7UEWQY6Z.webp" alt="9.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/ZfOqEgM3Yh97oTW.webp" alt="10.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9ugh2g72y">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1-2.webp"><img data-src="https://s2.loli.net/2023/10/19/MCX8r6medVjocbq.webp" alt="1-2.webp" class="zoomable"></li><li class="splide__slide" data-caption="3.webp"><img data-src="https://s2.loli.net/2023/10/19/nGbz1mhuYMXlEIV.webp" alt="3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/HyqLWKu5wg8B3hJ.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="7-8.webp"><img data-src="https://s2.loli.net/2023/10/19/8oPj7UqBV4Ynscv.webp" alt="7-8.webp" class="zoomable"></li><li class="splide__slide" data-caption="9.webp"><img data-src="https://s2.loli.net/2023/10/19/y4T2RbD7UEWQY6Z.webp" alt="9.webp" class="zoomable"></li><li class="splide__slide" data-caption="10.webp"><img data-src="https://s2.loli.net/2023/10/19/ZfOqEgM3Yh97oTW.webp" alt="10.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-9ugh2g72y" class="carousel-caption"> </div>
+    </div>
+  
 
 
 <h2 id="设置Secret"><a href="#设置Secret" class="headerlink" title="设置Secret"></a>设置Secret</h2><p>我们申请的Token具有对仓库的完全访问权限，自然不能以明文方式出现在Workflow文件中，GitHub允许我们使用<code>repository secret</code>功能，将Token以变量的方式存储在当前仓库安全存储中，降低泄露的可能性。</p>
@@ -6541,7 +6560,16 @@
 <li>将上一步申请的<code>Token</code>粘贴到<code>Secret</code>中</li>
 <li>点击<code>Add Secret</code></li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/Yb8BGd2ePlEMWRn.webp" alt="1-3.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/qzHiYgNlOWtyVLw.webp" alt="4-6.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/PItMG7ikaYb3CqF.webp" alt="a.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-w9clo8xbq">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1-3.webp"><img data-src="https://s2.loli.net/2023/10/19/Yb8BGd2ePlEMWRn.webp" alt="1-3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/qzHiYgNlOWtyVLw.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="a.webp"><img data-src="https://s2.loli.net/2023/10/19/PItMG7ikaYb3CqF.webp" alt="a.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-w9clo8xbq" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="配置Workflow"><a href="#配置Workflow" class="headerlink" title="配置Workflow"></a>配置Workflow</h1><p>接下来让我们配置两个仓库的Workflow，博客仓库只需要简单的设置一个Workflow，而Profile仓库需要再创建一个脚本文件，并向README文件中添加标识符。</p>
 <h2 id="Profile仓库"><a href="#Profile仓库" class="headerlink" title="Profile仓库"></a>Profile仓库</h2><p>首先是Profile仓库的设置，先将仓库Clone到本地，在本地编辑完成后再推送到GitHub。</p>
@@ -6601,7 +6629,17 @@
 <li>将<code>Workflow permissions</code>修改为<code>Read and write permissions</code></li>
 <li>点击<code>Save</code></li>
 </ol>
-<p><img data-src="https://s2.loli.net/2023/10/19/jUoBOJmAY9utS8h.webp" alt="1-4.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-aad0r1lxd">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1-4.webp"><img data-src="https://s2.loli.net/2023/10/19/jUoBOJmAY9utS8h.webp" alt="1-4.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-aad0r1lxd" class="carousel-caption"> </div>
+    </div>
+  
+
 <h3 id="创建Node脚本"><a href="#创建Node脚本" class="headerlink" title="创建Node脚本"></a>创建Node脚本</h3><p>在Profile仓库的根目录中创建<code>update-readme.mjs</code>文件，注意文件格式是<code>mjs</code>而不是<code>js</code>。</p>
 <p>我起初使用的是js格式，但是在GitHub Actions运行时会因为无法导入模块而报错，原因未知。</p>
 <details class="note primary"><summary><p>关于js与mjs格式</p>
@@ -6684,7 +6722,16 @@
 <figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span> <span class="string">.github/workflows/update-my-profile.yml</span></span><br></pre></td></tr></table></figure>
 
 <p>保存更改，然后运行<code>hexo cl</code>与<code>hexo g -d</code>命令，不出意外的话几分钟后就能看到自动更新后的Profile了。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/oMWf2XS6GavL8jt.webp" alt="21.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/19/4WpxQZuj6IOmcDo.webp" alt="22.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-acg7004ia">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="21.webp"><img data-src="https://s2.loli.net/2023/10/19/oMWf2XS6GavL8jt.webp" alt="21.webp" class="zoomable"></li><li class="splide__slide" data-caption="22.webp"><img data-src="https://s2.loli.net/2023/10/19/4WpxQZuj6IOmcDo.webp" alt="22.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-acg7004ia" class="carousel-caption"> </div>
+    </div>
+  
 
 
 <div class="note default"><p>PS：我本来想让Chat GPT给我出一套包含代码的完整的解决方案，就是我只需要复制粘贴就能迅速完成任务的那种。但是吧，Chat GPT让我深刻体会到了代码生成5分钟，Debug一整天的无奈，偷懒大失败。</p>
@@ -6722,17 +6769,37 @@
 
 <p>安装过程非常简单，只需一直点击<code>下一步</code>即可，无需进行其他设置。</p>
 <h1 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h1><p>首先，点击左侧边栏中的<code>Settings</code>以打开设置页面。</p>
-<h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><p>在<code>Verge Setting</code>中将<code>Language</code>设置为<code>中文</code>。<br><img data-src="https://s2.loli.net/2023/11/07/3uJXgw2jV9izKP6.png" alt="语言设置.png"></p>
+<h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><p>在<code>Verge Setting</code>中将<code>Language</code>设置为<code>中文</code>。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qhwub3exj">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="语言设置.png"><img data-src="https://s2.loli.net/2023/11/07/3uJXgw2jV9izKP6.png" alt="语言设置.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-qhwub3exj" class="carousel-caption"> </div>
+    </div>
+  
+
 <details class="note success"><summary><p>过时内容</p>
 </summary>
 <h2 id="切换内核"><a href="#切换内核" class="headerlink" title="切换内核"></a>切换内核</h2><p>新版本的Clash Verge已经移除了 Clash Premium 内核，不再需要额外设置内核。</p>
 <p><del>Clash Verge支持两个内核：Clash Premium（闭源且已删库）和Clash Meta（开源）。默认情况下使用的是Clash Premium，建议将内核切换为Clash Meta。</del></p>
 <ol>
-<li><del>在<code>Clash设置</code>中找到<code>Clash内核</code>项，然后点击后面的小齿轮图标。</del></li>
-<li><del>选择<code>Clash Meta</code>。</del></li>
-<li><del>点击右上角的<code>重启内核</code>。</del></li>
+<li><p><del>在<code>Clash设置</code>中找到<code>Clash内核</code>项，然后点击后面的小齿轮图标。</del></p>
+</li>
+<li><p><del>选择<code>Clash Meta</code>。</del></p>
+</li>
+<li><p><del>点击右上角的<code>重启内核</code>。</del></p>
+ <div class="carousel-container">
+   <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-3eza5damr">
+     <div class="splide__track">
+       <ul class="splide__list"><li class="splide__slide" data-caption="切换内核.png"><img data-src="https://s2.loli.net/2023/11/07/dxoDgMcjFPlVHf6.png" alt="切换内核.png" class="zoomable"></li><li class="splide__slide" data-caption="切换为meta并重启内核.png"><img data-src="https://s2.loli.net/2023/11/07/ve2n3WyxtI6sPwk.png" alt="切换为meta并重启内核.png" class="zoomable"></li></ul>
+     </div>
+   </div>
+   <div id="carousel-caption-3eza5damr" class="carousel-caption"> </div>
+ </div></li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/dxoDgMcjFPlVHf6.png" alt="切换内核.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/ve2n3WyxtI6sPwk.png" alt="切换为meta并重启内核.png"></div></div></div>
 
 </details>
 
@@ -6765,7 +6832,16 @@
 </ul>
 </li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/uZ8LznlQJANeIKW.png" alt="新建配置.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/7GoCLb4uyIUizZB.png" alt="编辑文件.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/K3ME2oqcrm5X79G.png" alt="粘贴并保存.png"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6fz772dok">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="新建配置.png"><img data-src="https://s2.loli.net/2023/11/07/uZ8LznlQJANeIKW.png" alt="新建配置.png" class="zoomable"></li><li class="splide__slide" data-caption="编辑文件.png"><img data-src="https://s2.loli.net/2023/11/07/7GoCLb4uyIUizZB.png" alt="编辑文件.png" class="zoomable"></li><li class="splide__slide" data-caption="粘贴并保存.png"><img data-src="https://s2.loli.net/2023/11/07/K3ME2oqcrm5X79G.png" alt="粘贴并保存.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-6fz772dok" class="carousel-caption"> </div>
+    </div>
+  
 
 <details class="note success"><summary><p>我的配置文件</p>
 </summary>
@@ -6786,7 +6862,16 @@
 <li>如果任务栏左下角的网络图标由WiFi变成下图所示的图标，说明安装成功。<br><img data-src="https://s2.loli.net/2023/11/07/beujaYXTOGxI6QH.png" alt="任务栏左下角网络图标变成这样说明安装成功.png"></li>
 <li>点击左侧边栏中的<code>配置</code>，右键单击之前创建的配置项，然后选择<code>使用</code>。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/mzWkwQPXtaFUrD4.png" alt="安装服务模式.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/f7tDroGg6ki4ABc.png" alt="点击INSTALL-忽略掉左上角的报错-可能是bug.png"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/rhHXDnqv5zgZMmE.png" alt="勾选对应设置.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/o2YfEq63QF47vcN.png" alt="右键启用配置.png"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-u1jywx3d3">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="安装服务模式.png"><img data-src="https://s2.loli.net/2023/11/07/mzWkwQPXtaFUrD4.png" alt="安装服务模式.png" class="zoomable"></li><li class="splide__slide" data-caption="点击INSTALL-忽略掉左上角的报错-可能是bug.png"><img data-src="https://s2.loli.net/2023/11/07/f7tDroGg6ki4ABc.png" alt="点击INSTALL-忽略掉左上角的报错-可能是bug.png" class="zoomable"></li><li class="splide__slide" data-caption="勾选对应设置.png"><img data-src="https://s2.loli.net/2023/11/07/rhHXDnqv5zgZMmE.png" alt="勾选对应设置.png" class="zoomable"></li><li class="splide__slide" data-caption="右键启用配置.png"><img data-src="https://s2.loli.net/2023/11/07/o2YfEq63QF47vcN.png" alt="右键启用配置.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-u1jywx3d3" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="防止DNS泄露"><a href="#防止DNS泄露" class="headerlink" title="防止DNS泄露"></a>防止DNS泄露</h1><p>DNS泄露（DNS Leak）是一种网络隐私问题，通常发生在使用虚拟专用网络（VPN）或代理服务时。它指的是用户的DNS查询未通过VPN或代理处理，而是绕过它们，直接发送到本地或公共DNS服务器。这可能会泄露用户的在线活动信息，因为DNS查询通常包含用户正在访问的网站信息，即使其网络流量通过VPN或代理加密和隐藏。</p>
 <p>有关DNS泄露的更多信息，请参考不良林的相关视频：</p>
@@ -6804,16 +6889,46 @@
 <li>勾选左上角的<code>已启用</code>。</li>
 <li>点击<code>确定</code>。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/IpCg1TZd6azANJ5.png" alt="打开组策略编辑器.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/dR63HkPtOEfeMmo.png" alt="找到对应策略.png"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/07/Aryc3ehHiDUmdOL.png" alt="禁用多宿主并确定.png"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-bmvsmkh7e">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="打开组策略编辑器.png"><img data-src="https://s2.loli.net/2023/11/07/IpCg1TZd6azANJ5.png" alt="打开组策略编辑器.png" class="zoomable"></li><li class="splide__slide" data-caption="找到对应策略.png"><img data-src="https://s2.loli.net/2023/11/07/dR63HkPtOEfeMmo.png" alt="找到对应策略.png" class="zoomable"></li><li class="splide__slide" data-caption="禁用多宿主并确定.png"><img data-src="https://s2.loli.net/2023/11/07/Aryc3ehHiDUmdOL.png" alt="禁用多宿主并确定.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-bmvsmkh7e" class="carousel-caption"> </div>
+    </div>
+  
 
 <h2 id="禁用QUIC"><a href="#禁用QUIC" class="headerlink" title="禁用QUIC"></a>禁用QUIC</h2><p>QUIC（Quick UDP Internet Connections）是一种网络传输协议，旨在加速互联网上的数据传输和提供更快的网络连接。QUIC是由Google开发的，并已被纳入标准化进程，以提高网络性能和安全性。越来越多的浏览器开始支持QUIC功能，以改进用户的网络体验。然而，某些情况下，QUIC会导致DNS泄露，因此建议禁用浏览器中的QUIC功能。</p>
 <blockquote>
 <p>由于UDP在有些场景下必须使用真实的IP，所以 目前clash处理udp流量的域名，即使是使用fakeip模式，也一定会发起DNS请求。比如基于UDP的QUIC协议，也就是浏览器用的HTTP3，启用了QUIC的浏览器访问youtube这种支持QUIC的网站就会发起DNS请求，导致DNS泄露，解决办法是禁用浏览器的QUIC功能。<br>引自<a href="https://bulianglin.com/archives/dns.html">进阶•DNS分流篇</a></p>
 </blockquote>
 <p>以Edge浏览器为例，在浏览器地址栏输入<code>edge://flags/#enable-quic</code>，跳转到<code>Experimental QUIC protocol</code>选项，将其设置为<code>Disabled</code>即可。</p>
-<p><img data-src="https://s2.loli.net/2023/11/07/Eq67CloYbz1V8NA.png" alt="禁用quic.png"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-e646tv6s3">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="禁用quic.png"><img data-src="https://s2.loli.net/2023/11/07/Eq67CloYbz1V8NA.png" alt="禁用quic.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-e646tv6s3" class="carousel-caption"> </div>
+    </div>
+  
+
 <h2 id="停用浏览器安全DNS"><a href="#停用浏览器安全DNS" class="headerlink" title="停用浏览器安全DNS"></a>停用浏览器安全DNS</h2><p>大部分浏览器现在已经默认开启“安全 DNS”功能，此功能会影响 TUN 模式劫持 DNS 请求导致反推域名失败。</p>
-<p>以Edge浏览器为例，找到<code>设置</code>-<code>隐私、搜索和服务``-安全性</code>-<code>使用安全的DNS指定如何查找网站的网络地址</code>，关闭其开关即可。<br><img data-src="https://s2.loli.net/2023/11/07/vU6XPrWw1fyzVIR.png" alt="关闭安全DNS.png"></p>
+<p>以Edge浏览器为例，找到<code>设置</code>-<code>隐私、搜索和服务``-安全性</code>-<code>使用安全的DNS指定如何查找网站的网络地址</code>，关闭其开关即可。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-sgncjz4f0">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="关闭安全DNS.png"><img data-src="https://s2.loli.net/2023/11/07/vU6XPrWw1fyzVIR.png" alt="关闭安全DNS.png" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-sgncjz4f0" class="carousel-caption"> </div>
+    </div>
+  
+
 <h2 id="启用Clash的DNS服务器并设置本机DNS服务器"><a href="#启用Clash的DNS服务器并设置本机DNS服务器" class="headerlink" title="启用Clash的DNS服务器并设置本机DNS服务器"></a>启用Clash的DNS服务器并设置本机DNS服务器</h2><p>在配置文件中设置好Clash的DNS服务后，将本机的系统DNS服务器设置为<code>127.0.0.1</code>，以WLAN为例，逐步打开<code>系统设置</code>-<code>网络和Internet</code>-<code>WLAN</code>-<code>硬件属性</code>，将<code>DNS服务器分配</code>设置为手动，开启<code>IPv4</code>，在<code>首选DNS</code>中输入<code>127.0.0.1</code>并保存。</p>
 ]]></content>
       <categories>
@@ -6948,7 +7063,16 @@
 <li>在文件中添加下面两行配置，加在哪里都行，无所谓。<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">appleGPU0.<span class="property">present</span> = <span class="string">&quot;TRUE&quot;</span>  </span><br><span class="line">svga.<span class="property">present</span> = <span class="string">&quot;FALSE&quot;</span></span><br></pre></td></tr></table></figure></li>
 <li>保存并启动虚拟机，在锁屏界面可以看到背景视频已经可以播放了，进入桌面后可以看到程序坞和顶部菜单栏的半透明效果已经开启，说明3D加速已经成功启用。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/BZ8AhPlKdEqtzcf.webp" alt="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/zXIEaTPHY3dsQlm.webp" alt="在相应虚拟机上右键单击，选择在访达中显示"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/f3QAHstYKeIRZlX.webp" alt="在访达中右键单击虚拟机文件，选择显示包内容"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/km7vQ9hjupVt5l4.webp" alt="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/wPKV7I1XY9Qedyc.webp" alt="3D加速已经成功启用"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-iuqrkjaw7">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库"><img data-src="https://s2.loli.net/2024/07/17/BZ8AhPlKdEqtzcf.webp" alt="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库" class="zoomable"></li><li class="splide__slide" data-caption="在相应虚拟机上右键单击，选择在访达中显示"><img data-src="https://s2.loli.net/2024/07/17/zXIEaTPHY3dsQlm.webp" alt="在相应虚拟机上右键单击，选择在访达中显示" class="zoomable"></li><li class="splide__slide" data-caption="在访达中右键单击虚拟机文件，选择显示包内容"><img data-src="https://s2.loli.net/2024/07/17/f3QAHstYKeIRZlX.webp" alt="在访达中右键单击虚拟机文件，选择显示包内容" class="zoomable"></li><li class="splide__slide" data-caption="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑"><img data-src="https://s2.loli.net/2024/07/17/km7vQ9hjupVt5l4.webp" alt="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑" class="zoomable"></li><li class="splide__slide" data-caption="3D加速已经成功启用"><img data-src="https://s2.loli.net/2024/07/17/wPKV7I1XY9Qedyc.webp" alt="3D加速已经成功启用" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-iuqrkjaw7" class="carousel-caption"> </div>
+    </div>
+  
 
 <div class="note danger"><p>此方法当前仍存在缺陷，包括：</p>
 <ul>
@@ -7063,7 +7187,16 @@
 <a href="https://www.mongodb.com/try/download/community"></a>
 </div></div>
 
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/G2KwYIs4yVaM6CT.webp" alt="下载JDK17.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/FLuEvQB2oUqw13l.webp" alt="下载MongoDB.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-a0uoh5sa4">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="下载JDK17.webp"><img data-src="https://s2.loli.net/2023/11/11/G2KwYIs4yVaM6CT.webp" alt="下载JDK17.webp" class="zoomable"></li><li class="splide__slide" data-caption="下载MongoDB.webp"><img data-src="https://s2.loli.net/2023/11/11/FLuEvQB2oUqw13l.webp" alt="下载MongoDB.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-a0uoh5sa4" class="carousel-caption"> </div>
+    </div>
+  
 
 <p>Java的安装：</p>
 <ul>
@@ -7077,7 +7210,16 @@
 <li>在<code>Service Configuration</code>中可以修改文件路径（最下面两项），其他选项保持默认。</li>
 <li>左下角的<code>MongoDB Compass</code>是MongoDB的图形用户界面，可选装。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/rRhxCA4BYDVu25U.webp" alt="选择完全安装.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/Y4mrh23sL71CUJx.webp" alt="继续安装.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/OgrBZdvYXPmsNfl.webp" alt="安装Compass.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rn97ebuh3">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="选择完全安装.webp"><img data-src="https://s2.loli.net/2023/11/11/rRhxCA4BYDVu25U.webp" alt="选择完全安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="继续安装.webp"><img data-src="https://s2.loli.net/2023/11/11/Y4mrh23sL71CUJx.webp" alt="继续安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="安装Compass.webp"><img data-src="https://s2.loli.net/2023/11/11/OgrBZdvYXPmsNfl.webp" alt="安装Compass.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-rn97ebuh3" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h1><p>客户端的下载链接可以在<code>GI-Download-Library</code>获取。</p>
 <ul>
@@ -7108,7 +7250,17 @@
 </li>
 <li>下载<code>Grasscutter Resources</code>。</li>
 </ul>
-<p><img data-src="https://s2.loli.net/2023/11/11/jleJCaPN1iKBFDp.webp" alt="Download Grasscutter.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-p6esyqx1v">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Download Grasscutter.webp"><img data-src="https://s2.loli.net/2023/11/11/jleJCaPN1iKBFDp.webp" alt="Download Grasscutter.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-p6esyqx1v" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>如果你需要某一个特定版本的资源文件，可以到下面的仓库中通过切换对应分支来获取，下载完成后将文件复制到<code>C:\Users\[Username]\AppData\Roaming\cultivation\grasscutter\resources</code>文件夹中。</p>
 <div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/link/download.webp"></object>
@@ -7117,7 +7269,17 @@
 </div></div>
 
 <h2 id="配置Cultivation"><a href="#配置Cultivation" class="headerlink" title="配置Cultivation"></a>配置Cultivation</h2><p>首次启动时会有弹窗提示，请求安装CA证书，点击<code>是</code>同意安装。安装证书后Cultivation内置的mitmproxy就能够通过中间人攻击（MITM）的方式将客户端与游戏服务器的通信代理到本地服务端。</p>
-<p><img data-src="https://s2.loli.net/2023/11/11/FRVI5289awtUPKT.webp" alt="安装证书.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-1o8cqn8al">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="安装证书.webp"><img data-src="https://s2.loli.net/2023/11/11/FRVI5289awtUPKT.webp" alt="安装证书.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-1o8cqn8al" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>点击Cultivation右上角的小齿轮打开设置页面，</p>
 <ul>
 <li>最下方是语言设置项，支持多种语言。</li>
@@ -7132,7 +7294,16 @@
 <li>将自定义Java路径设置为<code>C:\Program Files\Java\jdk-17\bin\java.exe</code>。</li>
 <li>其他选项保持默认即可。</li>
 </ul>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/lB3LI72ZhVJKeoQ.webp" alt="配置1.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/sYk7KjeTdWN61Aw.webp" alt="配置2.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-t9cgdyj67">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="配置1.webp"><img data-src="https://s2.loli.net/2023/11/11/lB3LI72ZhVJKeoQ.webp" alt="配置1.webp" class="zoomable"></li><li class="splide__slide" data-caption="配置2.webp"><img data-src="https://s2.loli.net/2023/11/11/sYk7KjeTdWN61Aw.webp" alt="配置2.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-t9cgdyj67" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="XX，启动！"><a href="#XX，启动！" class="headerlink" title="XX，启动！"></a>XX，启动！</h1><p>服务器至此已经配置完成。XX，启动！</p>
 <ol>
@@ -7212,7 +7383,16 @@
 <li>点击<code>控制台</code>，粘贴第3步中复制的<code>token</code>。</li>
 <li>点击<code>连接</code>。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/TPRCVJ4I1OqikyX.webp" alt="opencommand插件.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/11/11/7kPdbWUavsKeoDY.webp" alt="opencommand插件1.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-k3z4blbce">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="opencommand插件.webp"><img data-src="https://s2.loli.net/2023/11/11/TPRCVJ4I1OqikyX.webp" alt="opencommand插件.webp" class="zoomable"></li><li class="splide__slide" data-caption="opencommand插件1.webp"><img data-src="https://s2.loli.net/2023/11/11/7kPdbWUavsKeoDY.webp" alt="opencommand插件1.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-k3z4blbce" class="carousel-caption"> </div>
+    </div>
+  
 
 <h2 id="Grasscutter-Rollback"><a href="#Grasscutter-Rollback" class="headerlink" title="Grasscutter-Rollback"></a>Grasscutter-Rollback</h2><p>Grasscutter-Rollback是一个数据库备份与回滚插件，当游戏坏档时可以回滚。</p>
 <p>使用方法：</p>
@@ -7259,7 +7439,16 @@
 </ul>
 </li>
 <li>用VSCode打开<code>d3dx.ini</code></li>
-<li>通过搜索<code>[Loader]</code>快速定位，将<code>[Loader]</code>下面的target修改为自己的游戏安装位置，例如<code>D:\Program Files\GenshinImpact_4.0.1\GenshinImpact.exe</code><br><img data-src="https://s2.loli.net/2023/11/08/E3KiqTQy9kJWZb2.webp" alt="替换路径.webp"></li>
+<li>通过搜索<code>[Loader]</code>快速定位，将<code>[Loader]</code>下面的target修改为自己的游戏安装位置，例如<code>D:\Program Files\GenshinImpact_4.0.1\GenshinImpact.exe</code>   
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pfyf2a42t">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="替换路径.webp"><img data-src="https://s2.loli.net/2023/11/08/E3KiqTQy9kJWZb2.webp" alt="替换路径.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-pfyf2a42t" class="carousel-caption"> </div>
+    </div>
+  </li>
 <li>保存文件</li>
 <li>将下载的Mod文件解压缩后复制到GI-Model-Importer的<code>Mods</code>文件夹<ul>
 <li>注意：一个角色只能启用一个Mod</li>
@@ -7267,7 +7456,16 @@
 </li>
 <li>先启动<code>3DMigoto Loader.exe</code></li>
 <li>再通过<code>Cultivation</code>启动游戏</li>
-<li>加载过程中屏幕左下角出现下图所示的浮窗则说明启动成功<br><img data-src="https://s2.loli.net/2023/11/08/sOvpqaElQIBf47F.webp" alt="启动成功浮窗.webp"></li>
+<li>加载过程中屏幕左下角出现下图所示的浮窗则说明启动成功   
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ydu0xt9j0">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="启动成功浮窗.webp"><img data-src="https://s2.loli.net/2023/11/08/sOvpqaElQIBf47F.webp" alt="启动成功浮窗.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-ydu0xt9j0" class="carousel-caption"> </div>
+    </div>
+  </li>
 </ol>
 <div class="note primary"><p>更多说明请查看<a href="https://github.com/SilentNightSound/GI-Model-Importer/blob/main/CN_README.md">Genshin-Impact-Model-Importer 文档</a></p>
 </div>
@@ -7292,7 +7490,16 @@
 </div>
 
 <h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6sodqm936">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="搜索框.webp"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp" class="zoomable"></li><li class="splide__slide" data-caption="功能.webp"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-6sodqm936" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="共享设置"><a href="#共享设置" class="headerlink" title="共享设置"></a>共享设置</h1><ol>
 <li>打开<code>设置</code> - <code>网络和Internet</code> - <code>WLAN</code> - <code>[当前WiFi]属性</code></li>
@@ -7301,7 +7508,16 @@
 <li>开启<code>专用网络</code>中的<code>网络发现</code>和<code>文件和打印机共享</code>选项，勾选<code>自动设置网络连接的设备</code></li>
 <li>关闭<code>所有网络</code>中的<code>公用文件夹共享</code>，文件共享链接选择<code>128位加密(推荐)</code>，开启<code>密码保护的共享</code>选项</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qhos4lgl3">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="专用网络.webp"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp" class="zoomable"></li><li class="splide__slide" data-caption="共享设置.webp"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-qhos4lgl3" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="创建共享用户"><a href="#创建共享用户" class="headerlink" title="创建共享用户"></a>创建共享用户</h1><ol>
 <li>按下<code>Win + X</code>快捷键，打开<code>计算机管理</code></li>
@@ -7309,7 +7525,17 @@
 <li>输入新的用户名和密码，勾选<code>密码永不过期</code>选项</li>
 <li>点击<code>确定</code>，创建完成后关闭窗口</li>
 </ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-v6zx6jll2">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="创建共享用户.webp"><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-v6zx6jll2" class="carousel-caption"> </div>
+    </div>
+  
+
 <h1 id="文件夹设置"><a href="#文件夹设置" class="headerlink" title="文件夹设置"></a>文件夹设置</h1><ol>
 <li>找到要共享的文件夹，右键打开文件夹<code>属性</code></li>
 <li>打开<code>共享</code>选项卡，点击文件网络和文件夹共享下的<code>共享</code>按钮</li>
@@ -7317,7 +7543,16 @@
 <li>将新用户的权限级别调整为<code>读取/写入</code></li>
 <li>点击<code>共享</code></li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-drufzphwj">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="属性.webp"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp" class="zoomable"></li><li class="splide__slide" data-caption="添加用户.webp"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-drufzphwj" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="iOS文件设置"><a href="#iOS文件设置" class="headerlink" title="iOS文件设置"></a>iOS文件设置</h1><ol>
 <li>文件夹属性中会出现一行<code>网络路径</code></li>
@@ -7326,7 +7561,16 @@
 <li>输入新创建的用户名和密码</li>
 <li>连接</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pa9sds0e7">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="连接服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入网络路径.webp"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入用户名和密码.webp"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-pa9sds0e7" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
 <li>iOS自带的文件App非常的智障，如果一段时间没有访问共享文件夹，那么下次访问时只能看到一个空文件夹，必须要推出smb服务器，然后点右上角的三个点重新连接服务器。</li>
@@ -7334,7 +7578,16 @@
 <li>十分建议使用第三方文件App替换自带的App</li>
 <li>iPhone与PC必须处于同一网络下</li>
 </ol>
-<p><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-e590j0wxm">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="推出smb服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-e590j0wxm" class="carousel-caption"> </div>
+    </div>
+  
 ]]></content>
       <categories>
         <category>Windows</category>
@@ -7513,18 +7766,65 @@
 
 <h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>对于Windows用户，建议使用<code>ISO</code>文件进行安装，ISO文件大小约为4GB，包含了所有需要的文件，不需要在线安装。如果你的网络条件比较好的话，你也可以选择下载install-tl-windows.exe，它只有20MB，双击即可开始在线安装，更加方便。但是我使用install-tl-windows.exe时程序预估需要几小时才能完成下载和安装，而下载ISO文件只需要几分钟。</p>
 <p>打开下载页面后，选择<code>download from a nearby CTAN mirror</code>前往最近的镜像站点，单击下载<code>texlive.iso</code>。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/rtv86aQ3NoJeygY.webp" alt="前往最近的镜像站点"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/cuwyg4mZVAdPsFJ.webp" alt="下载texlive.iso"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pxy2gnoik">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="前往最近的镜像站点"><img data-src="https://s2.loli.net/2023/10/06/rtv86aQ3NoJeygY.webp" alt="前往最近的镜像站点" class="zoomable"></li><li class="splide__slide" data-caption="下载texlive.iso"><img data-src="https://s2.loli.net/2023/10/06/cuwyg4mZVAdPsFJ.webp" alt="下载texlive.iso" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-pxy2gnoik" class="carousel-caption"> </div>
+    </div>
+  
 
 <p>下载完成后双击挂载文件，然后以管理员身份运行其中的<code>install-tl-windows.bat</code>。待安装程序加载完成后点击<code>安装</code>按钮，安装过程取决于电脑性能，大约需要30分钟，安装成功后点击<code>关闭</code>按钮结束安装程序。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/TkNJ7vCBLpOlfVb.webp" alt="选择安装路径"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/PA9rod7y2NktUEJ.webp" alt="Loading"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/RX3Zq2Ota47wpjV.webp" alt="安装"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/A2pZSEaxkrHeR3d.webp" alt="安装成功"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6qxba3xar">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="选择安装路径"><img data-src="https://s2.loli.net/2023/10/06/TkNJ7vCBLpOlfVb.webp" alt="选择安装路径" class="zoomable"></li><li class="splide__slide" data-caption="Loading"><img data-src="https://s2.loli.net/2023/10/06/PA9rod7y2NktUEJ.webp" alt="Loading" class="zoomable"></li><li class="splide__slide" data-caption="安装"><img data-src="https://s2.loli.net/2023/10/06/RX3Zq2Ota47wpjV.webp" alt="安装" class="zoomable"></li><li class="splide__slide" data-caption="安装成功"><img data-src="https://s2.loli.net/2023/10/06/A2pZSEaxkrHeR3d.webp" alt="安装成功" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-6qxba3xar" class="carousel-caption"> </div>
+    </div>
+  
 
 <h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>mac用户直接点击下载页面的<code>MacTeX.pkg</code>下载安装包，安装包大小为5.2G。下载完成后只需要双击打开安装包，然后根据指引操作即可。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/OMBXEcRnWstlv9A.png" alt="下载MacTeX.pkg"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/6AZdueKySU5cvwb.png" alt="同意协议"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/2bXlRiMTSBvIZGu.png" alt="等待安装完成"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/cN5oU1z6kZihFJE.png" alt="安装完成"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-gfh0y7qa4">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="下载MacTeX.pkg"><img data-src="https://s2.loli.net/2023/10/06/OMBXEcRnWstlv9A.png" alt="下载MacTeX.pkg" class="zoomable"></li><li class="splide__slide" data-caption="同意协议"><img data-src="https://s2.loli.net/2023/10/06/6AZdueKySU5cvwb.png" alt="同意协议" class="zoomable"></li><li class="splide__slide" data-caption="等待安装完成"><img data-src="https://s2.loli.net/2023/10/06/2bXlRiMTSBvIZGu.png" alt="等待安装完成" class="zoomable"></li><li class="splide__slide" data-caption="安装完成"><img data-src="https://s2.loli.net/2023/10/06/cN5oU1z6kZihFJE.png" alt="安装完成" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-gfh0y7qa4" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="安装VSCode扩展"><a href="#安装VSCode扩展" class="headerlink" title="安装VSCode扩展"></a>安装VSCode扩展</h1><p>在VSCode的扩展商店中搜索并安装<code>LaTeX Workshop</code>和<code>LaTeX Utilities</code>两个扩展，前者的作用是为VSCode添加LaTeX支持，后者则是提供一些实用的功能，如自动格式化粘贴的文本，而且可以和Zotero配合使用。</p>
-<p><img data-src="https://s2.loli.net/2023/10/06/xqgKzTueOnMVod9.webp" alt="安装扩展.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-i942hpd2k">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="安装扩展.webp"><img data-src="https://s2.loli.net/2023/10/06/xqgKzTueOnMVod9.webp" alt="安装扩展.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-i942hpd2k" class="carousel-caption"> </div>
+    </div>
+  
+
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>使用<code>ctrl</code>+<code>,</code>快捷键打开VSCode的设置，接下来的的操作建议使用顶栏的搜索快速定位</p>
-<h2 id="自动编译"><a href="#自动编译" class="headerlink" title="自动编译"></a>自动编译</h2><p><img data-src="https://s2.loli.net/2023/10/06/JmdOsAWTgotPQSh.webp" alt="Auto Build.webp"></p>
+<h2 id="自动编译"><a href="#自动编译" class="headerlink" title="自动编译"></a>自动编译</h2>
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rqi6kwrmk">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Auto Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JmdOsAWTgotPQSh.webp" alt="Auto Build.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-rqi6kwrmk" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>搜索<code>latex run</code>，调整<code>Latex-workshop &gt; Latex &gt; Auto Build: Run</code>选项，我选择的是OnSave</p>
 <ul>
 <li><code>never</code>，不进行自动编译</li>
@@ -7532,7 +7832,17 @@
 <li><code>OnFileChange</code>，在检测到任何依赖项中的文件更改后进行自动编译，包括在VSCode之外进行修改。</li>
 </ul>
 <h2 id="自动清理"><a href="#自动清理" class="headerlink" title="自动清理"></a>自动清理</h2><p>这个选项的作用是自动清理（删除）已编译的辅助文件和输出文件，以确保每次运行 LaTeX 编译时都从头开始，而不受之前编译的影响。</p>
-<p><img data-src="https://s2.loli.net/2023/10/06/c1vBzWIOdTlP7ZQ.webp" alt="Auto Clean.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-omdwn1uif">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Auto Clean.webp"><img data-src="https://s2.loli.net/2023/10/06/c1vBzWIOdTlP7ZQ.webp" alt="Auto Clean.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-omdwn1uif" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>搜索<code>latex run</code>，调整<code>Latex-workshop &gt; Latex &gt; Auto Clean: Run</code>选项，我选择的是OnFailed</p>
 <ul>
 <li><code>never</code>，不进行自动清理</li>
@@ -7608,7 +7918,17 @@
 
 </details>
 
-<p><img data-src="https://s2.loli.net/2023/10/06/WbyZSiL5dk1MFGo.webp" alt="Recipe.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fdci1rquo">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/WbyZSiL5dk1MFGo.webp" alt="Recipe.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-fdci1rquo" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>搜索<code>Latex: Recipes</code>，点击<code>Latex-workshop &gt; Latex: Recipes</code>选项中的<code>在settings.json中编辑</code>，使用ctrl+F搜索定位到<code>latex-workshop.latex.recipes</code>，向其中添加一条新的编译链，如下所示，注意不要漏掉最后面的<code>,</code></p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xelatex -&gt; bibtex -&gt; xelatex*2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tools&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;xelatexmk&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;bibtex&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;xelatexmk&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;xelatexmk&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 
@@ -7646,7 +7966,17 @@
 </details>
 
 <h2 id="首选编译选项"><a href="#首选编译选项" class="headerlink" title="首选编译选项"></a>首选编译选项</h2><p>这个选项定义了在没有明确指定其他编译选项时所使用的默认选项，包括前面设置的自动编译。</p>
-<p><img data-src="https://s2.loli.net/2023/10/06/9CUzAGhcZfNVlLS.webp" alt="Default Recipe.webp"></p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xgaedp5u2">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Default Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/9CUzAGhcZfNVlLS.webp" alt="Default Recipe.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-xgaedp5u2" class="carousel-caption"> </div>
+    </div>
+  
+
 <p>搜索<code>latex recipe default</code>，调整<code>Latex-workshop &gt; Latex &gt; Recipe: Default</code>选项，我选择的是lastUsed</p>
 <ul>
 <li><code>first</code>，配置文件中的第一个编译选项</li>
@@ -7654,10 +7984,28 @@
 </ul>
 <h2 id="关闭报错弹窗"><a href="#关闭报错弹窗" class="headerlink" title="关闭报错弹窗"></a>关闭报错弹窗</h2><p>默认情况下，VSCode在编译失败是会在右下角弹出消息提醒，需要手动关闭，报错的信息在终端里都能看到，所以我就把它关掉了。</p>
 <p>搜索<code>latex message show</code>，取消勾选<code>Latex-workshop &gt; Message &gt; Error: Show</code>选项和<code>Latex-workshop &gt; Message &gt; Warning: Show</code>选项</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/32T5rc7sRSaAHGf.webp" alt="Warning.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/iTOLUpPYsIFB8l4.webp" alt="Error.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vmodifckb">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Warning.webp"><img data-src="https://s2.loli.net/2023/10/06/32T5rc7sRSaAHGf.webp" alt="Warning.webp" class="zoomable"></li><li class="splide__slide" data-caption="Error.webp"><img data-src="https://s2.loli.net/2023/10/06/iTOLUpPYsIFB8l4.webp" alt="Error.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-vmodifckb" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>使用VSCode打开.tex文件时，左侧边栏会出现一个TEX选项，可以进行编译选项选择、查看PDF、快速定位等操作。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/JMpIfran4KEuPic.webp" alt="Build.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/XGPqzkKINi4AQ6d.webp" alt="PDF&amp;Log.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/v9HR26jTgBYypld.webp" alt="Navigate.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2023/10/06/AiMrFKVxwI3g19P.webp" alt="Citation.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-0isjojhvc">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JMpIfran4KEuPic.webp" alt="Build.webp" class="zoomable"></li><li class="splide__slide" data-caption="PDF&Log.webp"><img data-src="https://s2.loli.net/2023/10/06/XGPqzkKINi4AQ6d.webp" alt="PDF&Log.webp" class="zoomable"></li><li class="splide__slide" data-caption="Navigate.webp"><img data-src="https://s2.loli.net/2023/10/06/v9HR26jTgBYypld.webp" alt="Navigate.webp" class="zoomable"></li><li class="splide__slide" data-caption="Citation.webp"><img data-src="https://s2.loli.net/2023/10/06/AiMrFKVxwI3g19P.webp" alt="Citation.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-0isjojhvc" class="carousel-caption"> </div>
+    </div>
+  
 
 <blockquote>
 <p>参考：</p>
@@ -7943,7 +8291,16 @@
 <li>只有电源的风扇处于吊装状态，如果电源带有低负载风扇自动停转的功能，就不用太担心有风扇吊装坏轴的情况出现。</li>
 <li>主要部件都是垂直排列，所以机箱的占地面积就很小，大致相当于三部手机排列在一起。</li>
 </ul>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/89ks7XLhCJ6mlDc.webp" alt="空机箱.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/DJugyeKZtLICABU.webp" alt="占地面积约为3部手机并排.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/ViRO8KeILsx74Sg.webp" alt="与手机对比大小.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/GQf4WYX1hnCU7TH.webp" alt="前面板.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/rjXwWczkMInJGoe.webp" alt="左侧.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/M2WIvD16NK7xFCr.webp" alt="右侧.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/sg9R5w6YpQF2cIU.webp" alt="背面.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-2s4ljplx6">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="空机箱.webp"><img data-src="https://s2.loli.net/2024/03/23/89ks7XLhCJ6mlDc.webp" alt="空机箱.webp" class="zoomable"></li><li class="splide__slide" data-caption="占地面积约为3部手机并排.webp"><img data-src="https://s2.loli.net/2024/03/23/DJugyeKZtLICABU.webp" alt="占地面积约为3部手机并排.webp" class="zoomable"></li><li class="splide__slide" data-caption="与手机对比大小.webp"><img data-src="https://s2.loli.net/2024/03/23/ViRO8KeILsx74Sg.webp" alt="与手机对比大小.webp" class="zoomable"></li><li class="splide__slide" data-caption="前面板.webp"><img data-src="https://s2.loli.net/2024/03/23/GQf4WYX1hnCU7TH.webp" alt="前面板.webp" class="zoomable"></li><li class="splide__slide" data-caption="左侧.webp"><img data-src="https://s2.loli.net/2024/03/23/rjXwWczkMInJGoe.webp" alt="左侧.webp" class="zoomable"></li><li class="splide__slide" data-caption="右侧.webp"><img data-src="https://s2.loli.net/2024/03/23/M2WIvD16NK7xFCr.webp" alt="右侧.webp" class="zoomable"></li><li class="splide__slide" data-caption="背面.webp"><img data-src="https://s2.loli.net/2024/03/23/sg9R5w6YpQF2cIU.webp" alt="背面.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-2s4ljplx6" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="做工"><a href="#做工" class="headerlink" title="做工"></a>做工</h1><p>对于一款售价499的机箱来说，Rider R2 5.0 的做工一般般，毕竟是个人小批量的加工，好像第一批白色的机箱只做了100个，肯定不如大厂的批量生产，设计师也在详情页说明了漆面会存在瑕疵。</p>
 <ul>
@@ -7952,7 +8309,16 @@
 <li>两侧的铝板很厚实，厚度大约在3mm。机箱棱角和网孔的处理都不错，没有割手的地方，摸上去也比较顺滑。其他部位的铁板强度也还可以，但是尾部显卡位置的铁板是悬挑着的，另一侧没有竖向支撑，装机时有被掰弯的风险，我的到手就是弯的，被我用力掰回来了。</li>
 <li>钢化玻璃侧板的固定方式比较独特，是在玻璃的上下两边用胶粘上了两块铁片，然后通过铁片上的螺丝与主体连接在一起。但是涂胶的位置就在显卡旁边，在显卡的长期烘烤下不知道会不会脱胶，钢化玻璃恐惧症患者已经在考虑换亚克力侧板了。</li>
 </ul>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/FPijmIsRLEvocnK.webp" alt="指甲油补漆.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/WSi8dc6hOuIG2PZ.webp" alt="显卡挡板.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/VNUWPBj23rikqDg.webp" alt="钢化侧板与连接件之间的胶.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cj0qbr766">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="指甲油补漆.webp"><img data-src="https://s2.loli.net/2024/03/23/FPijmIsRLEvocnK.webp" alt="指甲油补漆.webp" class="zoomable"></li><li class="splide__slide" data-caption="显卡挡板.webp"><img data-src="https://s2.loli.net/2024/03/23/WSi8dc6hOuIG2PZ.webp" alt="显卡挡板.webp" class="zoomable"></li><li class="splide__slide" data-caption="钢化侧板与连接件之间的胶.webp"><img data-src="https://s2.loli.net/2024/03/23/VNUWPBj23rikqDg.webp" alt="钢化侧板与连接件之间的胶.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-cj0qbr766" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="装机"><a href="#装机" class="headerlink" title="装机"></a>装机</h1><p>首先是我的配置，这套硬件是我从老机箱上拆下来的，标准的刀把机。</p>
 <table>
@@ -8057,11 +8423,29 @@
 <li>安装前面板风扇，这个风扇要安装在附带的支架上。</li>
 <li>如果你有SATA硬盘，将它安装在底板上，插好线再塞电源的空隙里去。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/3q5P4upsxHVTAdQ.webp" alt="理线-从入门到摆烂.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/TQqYAoINJnSFmDx.webp" alt="前面板风扇支架及对锁螺丝.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/AgnQBbMSDKqxRV3.webp" alt="风扇支架安装示意.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/kKvwg5Z9oISbclG.webp" alt="前面板风扇已安装.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/jo7SdYUMGO3wuW2.webp" alt="主板供电卡扣紧贴风扇.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/LNqE9an3MkWIeDb.webp" alt="热管顶显卡背板.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/aph1TglqtfeVIAs.webp" alt="显卡出挑位置.webp"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/Qdl4Ia5gnFK8zmc.webp" alt="小辣椒天线.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/3pxXoRuTFCsfDEY.webp" alt="Sata硬盘固定到底板.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/I3wJVWj2zrslqtG.webp" alt="Sata硬盘塞入电源一侧的空隙.webp"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fyjyw0uit">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="理线-从入门到摆烂.webp"><img data-src="https://s2.loli.net/2024/03/23/3q5P4upsxHVTAdQ.webp" alt="理线-从入门到摆烂.webp" class="zoomable"></li><li class="splide__slide" data-caption="前面板风扇支架及对锁螺丝.webp"><img data-src="https://s2.loli.net/2024/03/23/TQqYAoINJnSFmDx.webp" alt="前面板风扇支架及对锁螺丝.webp" class="zoomable"></li><li class="splide__slide" data-caption="风扇支架安装示意.webp"><img data-src="https://s2.loli.net/2024/03/23/AgnQBbMSDKqxRV3.webp" alt="风扇支架安装示意.webp" class="zoomable"></li><li class="splide__slide" data-caption="前面板风扇已安装.webp"><img data-src="https://s2.loli.net/2024/03/23/kKvwg5Z9oISbclG.webp" alt="前面板风扇已安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="主板供电卡扣紧贴风扇.webp"><img data-src="https://s2.loli.net/2024/03/23/jo7SdYUMGO3wuW2.webp" alt="主板供电卡扣紧贴风扇.webp" class="zoomable"></li><li class="splide__slide" data-caption="热管顶显卡背板.webp"><img data-src="https://s2.loli.net/2024/03/23/LNqE9an3MkWIeDb.webp" alt="热管顶显卡背板.webp" class="zoomable"></li><li class="splide__slide" data-caption="显卡出挑位置.webp"><img data-src="https://s2.loli.net/2024/03/23/aph1TglqtfeVIAs.webp" alt="显卡出挑位置.webp" class="zoomable"></li><li class="splide__slide" data-caption="小辣椒天线.webp"><img data-src="https://s2.loli.net/2024/03/23/Qdl4Ia5gnFK8zmc.webp" alt="小辣椒天线.webp" class="zoomable"></li><li class="splide__slide" data-caption="Sata硬盘固定到底板.webp"><img data-src="https://s2.loli.net/2024/03/23/3pxXoRuTFCsfDEY.webp" alt="Sata硬盘固定到底板.webp" class="zoomable"></li><li class="splide__slide" data-caption="Sata硬盘塞入电源一侧的空隙.webp"><img data-src="https://s2.loli.net/2024/03/23/I3wJVWj2zrslqtG.webp" alt="Sata硬盘塞入电源一侧的空隙.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-fyjyw0uit" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="水水的烤个机"><a href="#水水的烤个机" class="headerlink" title="水水的烤个机"></a>水水的烤个机</h1><p>用AIDA64简单的烤了11分钟，烤完发现风扇策略忘记调了，用的静音策略，懒得再烤一遍了，将就看吧。北方地暖室温25度，CPU封装平均70度，显卡平均62度，大火炉SM961平均60度，前进风和CPU散热风扇平均转速835转（最高1800），8cm排风扇平均转速1105转（最高2000）。</p>
 <p>对比我之前用的C24小闷罐（非Air版）+乔思伯CR1400EVO塔式散热+满速风扇策略，新机箱的风扇转速只有最大转速的一半，CPU温度平均低了8度左右，内存温度低了十几度，显卡温度倒是差不多，6500xt作为一张亮机卡实在是没什么发热。</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/25/SpavXLx1Ck9dKoh.webp" alt="风道.webp"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/Kap7ETu6SiWAOsV.jpg" alt="rider双烤十分钟.jpg"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/03/23/n63tLCSiR8D79r4.webp" alt="人位视角.webp"></div></div></div>]]></content>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-38pw27eyg">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="风道.webp"><img data-src="https://s2.loli.net/2024/03/25/SpavXLx1Ck9dKoh.webp" alt="风道.webp" class="zoomable"></li><li class="splide__slide" data-caption="rider双烤十分钟.jpg"><img data-src="https://s2.loli.net/2024/03/23/Kap7ETu6SiWAOsV.jpg" alt="rider双烤十分钟.jpg" class="zoomable"></li><li class="splide__slide" data-caption="人位视角.webp"><img data-src="https://s2.loli.net/2024/03/23/n63tLCSiR8D79r4.webp" alt="人位视角.webp" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-38pw27eyg" class="carousel-caption"> </div>
+    </div>
+  ]]></content>
       <categories>
         <category>硬件</category>
       </categories>
@@ -8197,7 +8581,16 @@
 <li>根据需要调节CPU数量、内存与虚拟硬盘大小。</li>
 <li>在<code>CD/DVD(SATA)</code>中选择前面获取的macOS安装镜像，并勾选<code>连接 CD/DVD 驱动器</code>。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/4uxgbVHFCcPkQKX.webp" alt="1.选择创建自定虚拟机"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/QjuoCkn1eVqAPS3.webp" alt="2.选择 Apple OS X -&gt; macOS 14"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/g6OytREumQjNBiz.webp" alt="3.选择新建虚拟磁盘"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/WLXZJ6prOx5sEwq.webp" alt="4.完成虚拟机配置"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/FeBJZ3WCSLEbVrQ.webp" alt="6.1.点击顶部菜单栏中的设置按钮进行配置"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/1AbfjE4vyiazmd3.webp" alt="6.2.配置页面"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/1srgYDVbeQXyWPm.webp" alt="7.1.调节CPU数量、内存大小"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/j4eJvaHFhYGlUD9.webp" alt="7.2.调节虚拟硬盘大小"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/Sm3Pb1hQrUIRXw8.webp" alt="8.选择安装镜像"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-yaydc8y17">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1.选择创建自定虚拟机"><img data-src="https://s2.loli.net/2024/07/16/4uxgbVHFCcPkQKX.webp" alt="1.选择创建自定虚拟机" class="zoomable"></li><li class="splide__slide" data-caption="2.选择 Apple OS X -> macOS 14"><img data-src="https://s2.loli.net/2024/07/16/QjuoCkn1eVqAPS3.webp" alt="2.选择 Apple OS X -> macOS 14" class="zoomable"></li><li class="splide__slide" data-caption="3.选择新建虚拟磁盘"><img data-src="https://s2.loli.net/2024/07/16/g6OytREumQjNBiz.webp" alt="3.选择新建虚拟磁盘" class="zoomable"></li><li class="splide__slide" data-caption="4.完成虚拟机配置"><img data-src="https://s2.loli.net/2024/07/16/WLXZJ6prOx5sEwq.webp" alt="4.完成虚拟机配置" class="zoomable"></li><li class="splide__slide" data-caption="6.1.点击顶部菜单栏中的设置按钮进行配置"><img data-src="https://s2.loli.net/2024/07/16/FeBJZ3WCSLEbVrQ.webp" alt="6.1.点击顶部菜单栏中的设置按钮进行配置" class="zoomable"></li><li class="splide__slide" data-caption="6.2.配置页面"><img data-src="https://s2.loli.net/2024/07/16/1AbfjE4vyiazmd3.webp" alt="6.2.配置页面" class="zoomable"></li><li class="splide__slide" data-caption="7.1.调节CPU数量、内存大小"><img data-src="https://s2.loli.net/2024/07/16/1srgYDVbeQXyWPm.webp" alt="7.1.调节CPU数量、内存大小" class="zoomable"></li><li class="splide__slide" data-caption="7.2.调节虚拟硬盘大小"><img data-src="https://s2.loli.net/2024/07/16/j4eJvaHFhYGlUD9.webp" alt="7.2.调节虚拟硬盘大小" class="zoomable"></li><li class="splide__slide" data-caption="8.选择安装镜像"><img data-src="https://s2.loli.net/2024/07/16/Sm3Pb1hQrUIRXw8.webp" alt="8.选择安装镜像" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-yaydc8y17" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="安装macOS"><a href="#安装macOS" class="headerlink" title="安装macOS"></a>安装macOS</h1><ol>
 <li>关闭配置页面，启动虚拟机。</li>
@@ -8206,7 +8599,16 @@
 <li>选择<code>VMware Virtual SATA Hard Drive Media</code>，重命名后然后抹掉它，格式与方案保持默认。</li>
 <li>剩下的没什么好说的，按照正常步骤安装<code>macOS Sonoma</code>即可。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/iHsJgtrIvMnbwkY.webp" alt="2.选择磁盘工具"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/YtLhyUQxf1VaI8s.webp" alt="3.点击顶部下拉菜单，选择显示所有设备"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/1C49wUPHtJZ35Yr.webp" alt="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/sTrdJ8eSgbW7V6k.webp" alt="5.按照正常步骤安装"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-inegarbrs">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="2.选择磁盘工具"><img data-src="https://s2.loli.net/2024/07/16/iHsJgtrIvMnbwkY.webp" alt="2.选择磁盘工具" class="zoomable"></li><li class="splide__slide" data-caption="3.点击顶部下拉菜单，选择显示所有设备"><img data-src="https://s2.loli.net/2024/07/16/YtLhyUQxf1VaI8s.webp" alt="3.点击顶部下拉菜单，选择显示所有设备" class="zoomable"></li><li class="splide__slide" data-caption="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它"><img data-src="https://s2.loli.net/2024/07/16/1C49wUPHtJZ35Yr.webp" alt="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它" class="zoomable"></li><li class="splide__slide" data-caption="5.按照正常步骤安装"><img data-src="https://s2.loli.net/2024/07/16/sTrdJ8eSgbW7V6k.webp" alt="5.按照正常步骤安装" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-inegarbrs" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="安装VMware-Tools"><a href="#安装VMware-Tools" class="headerlink" title="安装VMware Tools"></a>安装VMware Tools</h1><ol>
 <li>安装完成进入桌面后，右键单击桌面右上角的安装镜像，推出它</li>
@@ -8215,10 +8617,28 @@
 <li>安装过程中会有几个请求权限的弹窗，包括一个需要跳转到设置中操作的，全部允许即可</li>
 <li>重启虚拟机</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/Im1tpiVS8FBq9gK.webp" alt="1.右键单击桌面右上角的安装镜像，推出它"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/2bjFUndiO6X4JtA.webp" alt="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/Dl7iQkXY1esW4Ec.webp" alt="3.双击安装 Vmware Tools"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fvmn67667">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1.右键单击桌面右上角的安装镜像，推出它"><img data-src="https://s2.loli.net/2024/07/16/Im1tpiVS8FBq9gK.webp" alt="1.右键单击桌面右上角的安装镜像，推出它" class="zoomable"></li><li class="splide__slide" data-caption="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/2bjFUndiO6X4JtA.webp" alt="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools" class="zoomable"></li><li class="splide__slide" data-caption="3.双击安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/Dl7iQkXY1esW4Ec.webp" alt="3.双击安装 Vmware Tools" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-fvmn67667" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h1><p>如果没有网络连接的话，点击顶部菜单栏中的<code>设置</code>按钮，点击<code>网络适配器</code>，选择<code>桥接模式网络连接</code>下的<code>自动检测</code>选项，并勾选<code>连接网络适配器</code></p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/1qihBpKv8aJX3Cz.webp" alt="设置 -&gt; 网络适配器"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/16/qlMkejoZAfKwLmO.webp" alt="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8laqgtnn7">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="设置 -> 网络适配器"><img data-src="https://s2.loli.net/2024/07/16/1qihBpKv8aJX3Cz.webp" alt="设置 -> 网络适配器" class="zoomable"></li><li class="splide__slide" data-caption="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器"><img data-src="https://s2.loli.net/2024/07/16/qlMkejoZAfKwLmO.webp" alt="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-8laqgtnn7" class="carousel-caption"> </div>
+    </div>
+  
 
 <h1 id="关于图形界面"><a href="#关于图形界面" class="headerlink" title="关于图形界面"></a>关于图形界面</h1><p>macOS虚拟机默认情况下是不能直接调用显卡的，所有的画面都是CPU吭哧吭哧模拟出来的，所以会显得很卡顿。另外Sonoma默认的桌面背景是个视频，根本就播放不出来，所以桌面背景会是一片白。但好在我们的宿主机是一台真正的Mac，可以通过编辑<code>.vmx</code>文件强行开启显卡3D加速，请注意这个方法并不是十全十美的，在某些情况下可能导致崩溃。感兴趣的朋友可以查看我的下一篇博文<a href="/enable-gpu-acceleration-in-macos-vm.html">为 VMware Fusion 中的 macOS 虚拟机开启 3D 加速</a>。</p>
 ]]></content>
@@ -8250,7 +8670,16 @@
 <li>重启mac，再次打开<code>活动监视器</code>，搜索<code>usb</code>，查看<code>vmware-usbarbitrator</code>进程是否已运行。</li>
 <li>在<strong>虚拟机的设置</strong>中找到<code>USB和蓝牙</code>选项，选择连接相关设备。</li>
 </ol>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/jgYI6M4BVm9Fube.jpg" alt="文稿类型选择应用程序"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/s56fYbt1OaXBd89.jpg" alt="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令"></div><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/KoB1Lk8AHG9wnli.jpg" alt="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中"></div></div><div class="group-picture-row"><div class="group-picture-column"><img data-src="https://s2.loli.net/2024/07/17/nDKVTAfjF2bwk9q.jpg" alt="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行"></div></div></div>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-p48kclcq3">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="文稿类型选择应用程序"><img data-src="https://s2.loli.net/2024/07/17/jgYI6M4BVm9Fube.jpg" alt="文稿类型选择应用程序" class="zoomable"></li><li class="splide__slide" data-caption="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令"><img data-src="https://s2.loli.net/2024/07/17/s56fYbt1OaXBd89.jpg" alt="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令" class="zoomable"></li><li class="splide__slide" data-caption="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中"><img data-src="https://s2.loli.net/2024/07/17/KoB1Lk8AHG9wnli.jpg" alt="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中" class="zoomable"></li><li class="splide__slide" data-caption="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行"><img data-src="https://s2.loli.net/2024/07/17/nDKVTAfjF2bwk9q.jpg" alt="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-p48kclcq3" class="carousel-caption"> </div>
+    </div>
+  
 
 <div class="note default"><p>参考：<a href="https://sleele.com/2023/07/09/vmware-fusion-does-not-share-external-usb-devices-from-host-os-to-guest-os-with-solutions/">解决Mac VMware Fusion 无法无法识别USB设备问题 | sleele的博客</a></p>
 </div>]]></content>
