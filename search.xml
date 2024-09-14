@@ -3862,6 +3862,147 @@
       </tags>
   </entry>
   <entry>
+    <title>OneDrive同步本地任意文件夹</title>
+    <url>/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">使用mklink命令创建OneDrive与博客Markdown文件夹的符号链接，实现同步的目的</blockquote>
+
+<span id="more"></span>
+
+<p>为了能在其他设备上写博客，我曾经把整个文件夹扔到了OneDrive上，但是后来发现这样每次执行<code>hexo cl &amp;&amp; hexo g</code>时都会产生大量的文件变动，对OneDrive服务器属实不太友好，毕竟一直在白嫖🐶。后来就只保留了<code>./source/_posts</code>文件夹，每次写完文章后手动复制粘贴过去。前几天突发奇想，能不能让OneDrive自动同步这个文件夹，搜了一圈就发现了<code>mklink</code>这个命令。</p>
+<div class="note info"><p>下面有一些关于`mklink`命令的说明，不想看的话直接点按钮跳过 <a class="btn" href="#OneDrive创建符号链接"><i class="fa fa-forward fa-fw"></i>跳过</a></p></div>
+
+
+<h1 id="mklink命令简介"><a href="#mklink命令简介" class="headerlink" title="mklink命令简介"></a>mklink命令简介</h1><div class="note primary"><p>命令简介引用了<a class="btn" href="https://ss64.com/nt/mklink.html"><i class="fa fa-book fa-fw"></i>SS64</a>以及<a class="btn" href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/mklink"><i class="fa fa-book fa-fw"></i>Microsoft Docs</a>的内容，参考了 <a class="btn" href="https://www.icoa.cn/a/910.html"><i class="fa fa-blog fa-fw"></i>逍遥峡谷</a> 的文章，特此感谢</p></div>
+
+<p><code>mklink</code>命令用于创建目录或文件符号或硬链接，自Vista开始引入，支持Vista以后的Windows操作系统。</p>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p><code>mklink</code>命令提供了三种链接方式，分别是<code>符号链接</code>、<code>硬链接</code>以及<code>联接</code>，三种方式与快捷方式的对比如下</p>
+<table>
+<thead>
+<tr>
+<th align="left">方式</th>
+<th align="center">链接文件</th>
+<th align="center">链接文件夹</th>
+<th align="center">跨硬盘链接</th>
+<th align="center">指向不存在的目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">快捷方式</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td align="left">硬链接</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+</tr>
+<tr>
+<td align="left">联接（目录交接点&#x2F;软链接）</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td align="left">符号链接</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>符号链接和联接是基于<a href="https://zh.m.wikipedia.org/zh-hans/NTFS%E9%87%8D%E8%A7%A3%E6%9E%90%E7%82%B9">NTFS重解析点(NTFS reparse point)</a>实现的</li>
+<li>硬链接是通过指向同一inode的多个文件表项实现的–与Unix硬链接相同。如果原始文件名被删除，硬链接仍将工作，它直接指向磁盘上的数据</li>
+<li>在一个循环中创建两个相互指向的链接，或者创建一个指向自身的链接是可行的（但不可取）。符号链接可能会在那些没有处理这些情况的应用程序中暴露出安全漏洞。</li>
+<li>符号链接和硬链接都不支持<code>.zip</code>压缩文件</li>
+</ul>
+</blockquote>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink [[/d] | [/h] | [/j]] &lt;link&gt; &lt;target&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x2F;d</td>
+<td align="left">创建目录符号链接。 默认情况下，此命令将创建文件符号链接。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;h</td>
+<td align="left">创建硬链接而不是符号链接。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;j</td>
+<td align="left">创建联接（目录交接点）。</td>
+</tr>
+<tr>
+<td align="left">&lt;link&gt;</td>
+<td align="left">指定要创建的符号链接的名称。</td>
+</tr>
+<tr>
+<td align="left">&lt;target&gt;</td>
+<td align="left">指定新符号链接引用的路径 (相对或绝对) 。</td>
+</tr>
+<tr>
+<td align="left">&#x2F;?</td>
+<td align="left">在命令提示符下显示帮助。</td>
+</tr>
+</tbody></table>
+<p>如果<code>&lt;link&gt;</code>和<code>&lt;target&gt;</code>路径中含有空格，则需要用双引号<code>&quot;&quot;</code>包住内容</p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><blockquote>
+<p>默认情况下，运行命令<code>mklink</code>需要管理员权限。但是自<code>Windows 10 build 14972</code>起，如果开启了<code>开发人员模式</code>，则无需提权即可运行命令。</p>
+</blockquote>
+<h2 id="移动与选中"><a href="#移动与选中" class="headerlink" title="移动与选中"></a>移动与选中</h2><blockquote>
+<ul>
+<li>在文件资源管理器中选中<code>符号链接</code>将会选中源文件（目录）</li>
+<li>在文件资源管理器中选中<code>联接</code>将会选中<code>联接</code>自身</li>
+<li>在文件资源管理器中拖拽<code>符号链接</code>到新的位置将只移动<code>符号链接</code>自身</li>
+<li>在文件资源管理器中拖拽<code>联接</code>到新的位置将会移动源文件目录到新的位置</li>
+</ul>
+</blockquote>
+<h1 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h1><p>下面是我对每个类型所做的测试</p>
+<div class="note primary"><p>更加详细的详细说明可以看 <a class="btn" href="https://sspai.com/post/66834"><i class="fa fa-blog fa-fw"></i>少数派</a> 的文章，讲的非常明白</p></div>
+
+<h2 id="文件的符号链接"><a href="#文件的符号链接" class="headerlink" title="文件的符号链接"></a>文件的符号链接</h2><p>新建测试文件夹<code>link</code>与<code>target</code>，新建测试文件<code>./target/target.txt</code>，此时<code>link</code>文件夹为空<br><img data-src="https://s2.loli.net/2022/05/25/cAlHUYMq2W9L7h5.png" alt="文件的符号链接1"><br>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink E:\Test\link\link.txt E:\Test\target\target.txt</span><br></pre></td></tr></table></figure>
+<p>此时<code>link</code>文件夹内出现了<code>link.txt</code>，文件类型为<code>.symlink</code>，图标与快捷方式相同，但它是符号链接。更改任一文件另一个文件也会被同步更改。符号链接指向的是源文件的路径，文件的真实存储位置仍然在<code>./target/target.txt</code>。<br><img data-src="https://s2.loli.net/2022/05/25/KJQd7MjVpxwBeo1.png" alt="文件的符号链接2"></p>
+<h2 id="文件夹的符号链接"><a href="#文件夹的符号链接" class="headerlink" title="文件夹的符号链接"></a>文件夹的符号链接</h2><p>新建测试文件夹与<code>target</code>，新建测试文件<code>./target/target.txt</code><br><img data-src="https://s2.loli.net/2022/05/25/9DXKw3zxn8p41EB.png" alt="文件夹的符号链接1"><br>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /d E:\Test\link E:\Test\target</span><br></pre></td></tr></table></figure>
+<p>此时会创建<code>link</code>文件夹，文件夹图标与快捷方式相同，文件夹内容与源文件夹相同。更改任一文件另一个文件也会被同步更改。<br><img data-src="https://s2.loli.net/2022/05/25/UePih7d86o3OglN.png" alt="文件夹的符号链接2"></p>
+<p>符号链接指向的是源文件目录的路径，文件的真实存储位置仍然是<code>target</code>源文件夹，可以看到<code>link</code>文件夹在地址栏与标题栏的路径不同。<br><img data-src="https://s2.loli.net/2022/05/25/4WKXoCPbQa8GZ7S.png" alt="文件夹的符号链接3"></p>
+<h2 id="文件的硬链接"><a href="#文件的硬链接" class="headerlink" title="文件的硬链接"></a>文件的硬链接</h2><p>新建测试文件夹<code>link</code>与<code>target</code>，新建测试文件<code>./target/target.txt</code>，此时<code>link</code>文件夹为空<br><img data-src="https://s2.loli.net/2022/05/25/cAlHUYMq2W9L7h5.png" alt="文件的硬链接1"><br>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /h E:\Test\link\link.txt E:\Test\target\target.txt</span><br></pre></td></tr></table></figure>
+<p>此时<code>link</code>文件夹内出现了<code>link.txt</code>，文件类型仍然为<code>文本文档</code>，与源文件相同。图标也是正常的文本文档图标。硬链接直接指向硬盘上的文件。<br><img data-src="https://s2.loli.net/2022/05/25/GgYQLRkw6UDWm1y.png" alt="文件的硬链接2"></p>
+<h2 id="联接（目录交接点）"><a href="#联接（目录交接点）" class="headerlink" title="联接（目录交接点）"></a>联接（目录交接点）</h2><p>新建测试文件夹与<code>target</code>，新建测试文件<code>./target/target.txt</code><br><img data-src="https://s2.loli.net/2022/05/25/9DXKw3zxn8p41EB.png" alt="联接1"><br>执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /j E:\Test\link E:\Test\target</span><br></pre></td></tr></table></figure>
+<p>结果与文件夹的符号链接基本相同，唯一的区别是<code>link</code>文件夹在地址栏与标题栏的路径相同。但是文件的真实存储位置仍然是<code>target</code>源文件夹。<br><img data-src="https://s2.loli.net/2022/05/25/hy1fLAiPF48Jwgv.png" alt="联接2"></p>
+<h1 id="OneDrive创建符号链接"><a href="#OneDrive创建符号链接" class="headerlink" title="OneDrive创建符号链接"></a>OneDrive创建符号链接</h1><p>首先打开OneDrive的设置，确认<code>常规</code>和<code>通知</code>里面所有的项目已经勾选。<br><img data-src="https://s2.loli.net/2022/05/25/CUqA9YGWbci2O48.png" alt="OneDrive设置"><br>然后将博客的<code>_posts</code>文件夹剪切到OneDrive并重命名，注意是剪切，博客文件夹不能存在<code>_posts</code>文件夹。<br>然后按下<code>win</code>+<code>s</code>，输入<code>cmd</code>，<code>以管理员身份运行</code>，然后输入<code>mklink</code>命令。注意<code>mklink</code>命令只能用<code>cmd</code>运行，<code>powershell</code>是不支持的。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /d D:\Siriusq\source\_posts C:\Users\Sun\OneDrive\Siriusq</span><br></pre></td></tr></table></figure>
+<p>注意第一个路径是我博客文章的路径，第二个路径则是OneDrive的路径我博客文章的路径。这里其实是反着来的，OneDrive作为源文件夹，不然OneDrive会一直显示同步被挂起，很迷惑。</p>
+<p>执行完毕后会有提示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">为 D:\Siriusq\source\_posts &lt;&lt;===&gt;&gt; C:\Users\Sun\OneDrive\Siriusq 创建的符号链接</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://s2.loli.net/2022/05/25/YphRoDOySbv6ixJ.png" alt="链接成功"><br>链接成功后打开博客的文件夹可以看到，地址栏是当前文件夹的路径，而标题栏却是OneDrive文件夹的路径。此时无论修改哪一边的文件，另一边的文件也会跟着变化，达到同步的目的</p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>OneDrive</tag>
+        <tag>mklink</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Outlook邮件导出</title>
     <url>/Outlook%E9%82%AE%E4%BB%B6%E5%AF%BC%E5%87%BA.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">毕业之后没有了Outlook的催命提示音，日子巴适的很🐶。不过学校给的账户6月就要被注销了（扣扣嗖嗖），趁着还有时间把邮件导出来留作纪念吧</blockquote>
@@ -4136,147 +4277,6 @@
         <tag>留学</tag>
         <tag>PTE</tag>
         <tag>攻略</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OneDrive同步本地任意文件夹</title>
-    <url>/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">使用mklink命令创建OneDrive与博客Markdown文件夹的符号链接，实现同步的目的</blockquote>
-
-<span id="more"></span>
-
-<p>为了能在其他设备上写博客，我曾经把整个文件夹扔到了OneDrive上，但是后来发现这样每次执行<code>hexo cl &amp;&amp; hexo g</code>时都会产生大量的文件变动，对OneDrive服务器属实不太友好，毕竟一直在白嫖🐶。后来就只保留了<code>./source/_posts</code>文件夹，每次写完文章后手动复制粘贴过去。前几天突发奇想，能不能让OneDrive自动同步这个文件夹，搜了一圈就发现了<code>mklink</code>这个命令。</p>
-<div class="note info"><p>下面有一些关于`mklink`命令的说明，不想看的话直接点按钮跳过 <a class="btn" href="#OneDrive创建符号链接"><i class="fa fa-forward fa-fw"></i>跳过</a></p></div>
-
-
-<h1 id="mklink命令简介"><a href="#mklink命令简介" class="headerlink" title="mklink命令简介"></a>mklink命令简介</h1><div class="note primary"><p>命令简介引用了<a class="btn" href="https://ss64.com/nt/mklink.html"><i class="fa fa-book fa-fw"></i>SS64</a>以及<a class="btn" href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/mklink"><i class="fa fa-book fa-fw"></i>Microsoft Docs</a>的内容，参考了 <a class="btn" href="https://www.icoa.cn/a/910.html"><i class="fa fa-blog fa-fw"></i>逍遥峡谷</a> 的文章，特此感谢</p></div>
-
-<p><code>mklink</code>命令用于创建目录或文件符号或硬链接，自Vista开始引入，支持Vista以后的Windows操作系统。</p>
-<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p><code>mklink</code>命令提供了三种链接方式，分别是<code>符号链接</code>、<code>硬链接</code>以及<code>联接</code>，三种方式与快捷方式的对比如下</p>
-<table>
-<thead>
-<tr>
-<th align="left">方式</th>
-<th align="center">链接文件</th>
-<th align="center">链接文件夹</th>
-<th align="center">跨硬盘链接</th>
-<th align="center">指向不存在的目标</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">快捷方式</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-</tr>
-<tr>
-<td align="left">硬链接</td>
-<td align="center">✅</td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-</tr>
-<tr>
-<td align="left">联接（目录交接点&#x2F;软链接）</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-</tr>
-<tr>
-<td align="left">符号链接</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-</tr>
-</tbody></table>
-<blockquote>
-<ul>
-<li>符号链接和联接是基于<a href="https://zh.m.wikipedia.org/zh-hans/NTFS%E9%87%8D%E8%A7%A3%E6%9E%90%E7%82%B9">NTFS重解析点(NTFS reparse point)</a>实现的</li>
-<li>硬链接是通过指向同一inode的多个文件表项实现的–与Unix硬链接相同。如果原始文件名被删除，硬链接仍将工作，它直接指向磁盘上的数据</li>
-<li>在一个循环中创建两个相互指向的链接，或者创建一个指向自身的链接是可行的（但不可取）。符号链接可能会在那些没有处理这些情况的应用程序中暴露出安全漏洞。</li>
-<li>符号链接和硬链接都不支持<code>.zip</code>压缩文件</li>
-</ul>
-</blockquote>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink [[/d] | [/h] | [/j]] &lt;link&gt; &lt;target&gt;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">&#x2F;d</td>
-<td align="left">创建目录符号链接。 默认情况下，此命令将创建文件符号链接。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;h</td>
-<td align="left">创建硬链接而不是符号链接。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;j</td>
-<td align="left">创建联接（目录交接点）。</td>
-</tr>
-<tr>
-<td align="left">&lt;link&gt;</td>
-<td align="left">指定要创建的符号链接的名称。</td>
-</tr>
-<tr>
-<td align="left">&lt;target&gt;</td>
-<td align="left">指定新符号链接引用的路径 (相对或绝对) 。</td>
-</tr>
-<tr>
-<td align="left">&#x2F;?</td>
-<td align="left">在命令提示符下显示帮助。</td>
-</tr>
-</tbody></table>
-<p>如果<code>&lt;link&gt;</code>和<code>&lt;target&gt;</code>路径中含有空格，则需要用双引号<code>&quot;&quot;</code>包住内容</p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><blockquote>
-<p>默认情况下，运行命令<code>mklink</code>需要管理员权限。但是自<code>Windows 10 build 14972</code>起，如果开启了<code>开发人员模式</code>，则无需提权即可运行命令。</p>
-</blockquote>
-<h2 id="移动与选中"><a href="#移动与选中" class="headerlink" title="移动与选中"></a>移动与选中</h2><blockquote>
-<ul>
-<li>在文件资源管理器中选中<code>符号链接</code>将会选中源文件（目录）</li>
-<li>在文件资源管理器中选中<code>联接</code>将会选中<code>联接</code>自身</li>
-<li>在文件资源管理器中拖拽<code>符号链接</code>到新的位置将只移动<code>符号链接</code>自身</li>
-<li>在文件资源管理器中拖拽<code>联接</code>到新的位置将会移动源文件目录到新的位置</li>
-</ul>
-</blockquote>
-<h1 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h1><p>下面是我对每个类型所做的测试</p>
-<div class="note primary"><p>更加详细的详细说明可以看 <a class="btn" href="https://sspai.com/post/66834"><i class="fa fa-blog fa-fw"></i>少数派</a> 的文章，讲的非常明白</p></div>
-
-<h2 id="文件的符号链接"><a href="#文件的符号链接" class="headerlink" title="文件的符号链接"></a>文件的符号链接</h2><p>新建测试文件夹<code>link</code>与<code>target</code>，新建测试文件<code>./target/target.txt</code>，此时<code>link</code>文件夹为空<br><img data-src="https://s2.loli.net/2022/05/25/cAlHUYMq2W9L7h5.png" alt="文件的符号链接1"><br>执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink E:\Test\link\link.txt E:\Test\target\target.txt</span><br></pre></td></tr></table></figure>
-<p>此时<code>link</code>文件夹内出现了<code>link.txt</code>，文件类型为<code>.symlink</code>，图标与快捷方式相同，但它是符号链接。更改任一文件另一个文件也会被同步更改。符号链接指向的是源文件的路径，文件的真实存储位置仍然在<code>./target/target.txt</code>。<br><img data-src="https://s2.loli.net/2022/05/25/KJQd7MjVpxwBeo1.png" alt="文件的符号链接2"></p>
-<h2 id="文件夹的符号链接"><a href="#文件夹的符号链接" class="headerlink" title="文件夹的符号链接"></a>文件夹的符号链接</h2><p>新建测试文件夹与<code>target</code>，新建测试文件<code>./target/target.txt</code><br><img data-src="https://s2.loli.net/2022/05/25/9DXKw3zxn8p41EB.png" alt="文件夹的符号链接1"><br>执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /d E:\Test\link E:\Test\target</span><br></pre></td></tr></table></figure>
-<p>此时会创建<code>link</code>文件夹，文件夹图标与快捷方式相同，文件夹内容与源文件夹相同。更改任一文件另一个文件也会被同步更改。<br><img data-src="https://s2.loli.net/2022/05/25/UePih7d86o3OglN.png" alt="文件夹的符号链接2"></p>
-<p>符号链接指向的是源文件目录的路径，文件的真实存储位置仍然是<code>target</code>源文件夹，可以看到<code>link</code>文件夹在地址栏与标题栏的路径不同。<br><img data-src="https://s2.loli.net/2022/05/25/4WKXoCPbQa8GZ7S.png" alt="文件夹的符号链接3"></p>
-<h2 id="文件的硬链接"><a href="#文件的硬链接" class="headerlink" title="文件的硬链接"></a>文件的硬链接</h2><p>新建测试文件夹<code>link</code>与<code>target</code>，新建测试文件<code>./target/target.txt</code>，此时<code>link</code>文件夹为空<br><img data-src="https://s2.loli.net/2022/05/25/cAlHUYMq2W9L7h5.png" alt="文件的硬链接1"><br>执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /h E:\Test\link\link.txt E:\Test\target\target.txt</span><br></pre></td></tr></table></figure>
-<p>此时<code>link</code>文件夹内出现了<code>link.txt</code>，文件类型仍然为<code>文本文档</code>，与源文件相同。图标也是正常的文本文档图标。硬链接直接指向硬盘上的文件。<br><img data-src="https://s2.loli.net/2022/05/25/GgYQLRkw6UDWm1y.png" alt="文件的硬链接2"></p>
-<h2 id="联接（目录交接点）"><a href="#联接（目录交接点）" class="headerlink" title="联接（目录交接点）"></a>联接（目录交接点）</h2><p>新建测试文件夹与<code>target</code>，新建测试文件<code>./target/target.txt</code><br><img data-src="https://s2.loli.net/2022/05/25/9DXKw3zxn8p41EB.png" alt="联接1"><br>执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /j E:\Test\link E:\Test\target</span><br></pre></td></tr></table></figure>
-<p>结果与文件夹的符号链接基本相同，唯一的区别是<code>link</code>文件夹在地址栏与标题栏的路径相同。但是文件的真实存储位置仍然是<code>target</code>源文件夹。<br><img data-src="https://s2.loli.net/2022/05/25/hy1fLAiPF48Jwgv.png" alt="联接2"></p>
-<h1 id="OneDrive创建符号链接"><a href="#OneDrive创建符号链接" class="headerlink" title="OneDrive创建符号链接"></a>OneDrive创建符号链接</h1><p>首先打开OneDrive的设置，确认<code>常规</code>和<code>通知</code>里面所有的项目已经勾选。<br><img data-src="https://s2.loli.net/2022/05/25/CUqA9YGWbci2O48.png" alt="OneDrive设置"><br>然后将博客的<code>_posts</code>文件夹剪切到OneDrive并重命名，注意是剪切，博客文件夹不能存在<code>_posts</code>文件夹。<br>然后按下<code>win</code>+<code>s</code>，输入<code>cmd</code>，<code>以管理员身份运行</code>，然后输入<code>mklink</code>命令。注意<code>mklink</code>命令只能用<code>cmd</code>运行，<code>powershell</code>是不支持的。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mklink /d D:\Siriusq\source\_posts C:\Users\Sun\OneDrive\Siriusq</span><br></pre></td></tr></table></figure>
-<p>注意第一个路径是我博客文章的路径，第二个路径则是OneDrive的路径我博客文章的路径。这里其实是反着来的，OneDrive作为源文件夹，不然OneDrive会一直显示同步被挂起，很迷惑。</p>
-<p>执行完毕后会有提示</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">为 D:\Siriusq\source\_posts &lt;&lt;===&gt;&gt; C:\Users\Sun\OneDrive\Siriusq 创建的符号链接</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://s2.loli.net/2022/05/25/YphRoDOySbv6ixJ.png" alt="链接成功"><br>链接成功后打开博客的文件夹可以看到，地址栏是当前文件夹的路径，而标题栏却是OneDrive文件夹的路径。此时无论修改哪一边的文件，另一边的文件也会跟着变化，达到同步的目的</p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>OneDrive</tag>
-        <tag>mklink</tag>
       </tags>
   </entry>
   <entry>
@@ -6397,12 +6397,12 @@
 
 <h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1>
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qbadfwbg5">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-5pi1aonf8">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="auto_update_profile-cn.webp"><img data-src="https://s2.loli.net/2023/10/19/Gk81DjxnfIgU2Yd.webp" alt="auto_update_profile-cn.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qbadfwbg5" class="carousel-caption"> </div>
+      <div id="carousel-caption-5pi1aonf8" class="carousel-caption"> </div>
     </div>
   
 
@@ -6494,12 +6494,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-21w7enx2x">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pcnz7xzmb">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-2.webp"><img data-src="https://s2.loli.net/2023/10/19/MCX8r6medVjocbq.webp" alt="1-2.webp" class="zoomable"></li><li class="splide__slide" data-caption="3.webp"><img data-src="https://s2.loli.net/2023/10/19/nGbz1mhuYMXlEIV.webp" alt="3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/HyqLWKu5wg8B3hJ.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="7-8.webp"><img data-src="https://s2.loli.net/2023/10/19/8oPj7UqBV4Ynscv.webp" alt="7-8.webp" class="zoomable"></li><li class="splide__slide" data-caption="9.webp"><img data-src="https://s2.loli.net/2023/10/19/y4T2RbD7UEWQY6Z.webp" alt="9.webp" class="zoomable"></li><li class="splide__slide" data-caption="10.webp"><img data-src="https://s2.loli.net/2023/10/19/ZfOqEgM3Yh97oTW.webp" alt="10.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-21w7enx2x" class="carousel-caption"> </div>
+      <div id="carousel-caption-pcnz7xzmb" class="carousel-caption"> </div>
     </div>
   
 
@@ -6562,12 +6562,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4zfw0g6h9">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-p53cu43ph">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-3.webp"><img data-src="https://s2.loli.net/2023/10/19/Yb8BGd2ePlEMWRn.webp" alt="1-3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/qzHiYgNlOWtyVLw.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="a.webp"><img data-src="https://s2.loli.net/2023/10/19/PItMG7ikaYb3CqF.webp" alt="a.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-4zfw0g6h9" class="carousel-caption"> </div>
+      <div id="carousel-caption-p53cu43ph" class="carousel-caption"> </div>
     </div>
   
 
@@ -6631,12 +6631,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9in6qlf3l">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-sqmoi8git">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-4.webp"><img data-src="https://s2.loli.net/2023/10/19/jUoBOJmAY9utS8h.webp" alt="1-4.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-9in6qlf3l" class="carousel-caption"> </div>
+      <div id="carousel-caption-sqmoi8git" class="carousel-caption"> </div>
     </div>
   
 
@@ -6724,12 +6724,12 @@
 <p>保存更改，然后运行<code>hexo cl</code>与<code>hexo g -d</code>命令，不出意外的话几分钟后就能看到自动更新后的Profile了。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ewpyy6fq2">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ryfoogv8c">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="21.webp"><img data-src="https://s2.loli.net/2023/10/19/oMWf2XS6GavL8jt.webp" alt="21.webp" class="zoomable"></li><li class="splide__slide" data-caption="22.webp"><img data-src="https://s2.loli.net/2023/10/19/4WpxQZuj6IOmcDo.webp" alt="22.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ewpyy6fq2" class="carousel-caption"> </div>
+      <div id="carousel-caption-ryfoogv8c" class="carousel-caption"> </div>
     </div>
   
 
@@ -6772,12 +6772,12 @@
 <h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><p>在<code>Verge Setting</code>中将<code>Language</code>设置为<code>中文</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9hqgt1u8b">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-g5sibddk0">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="语言设置.png"><img data-src="https://s2.loli.net/2023/11/07/3uJXgw2jV9izKP6.png" alt="语言设置.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-9hqgt1u8b" class="carousel-caption"> </div>
+      <div id="carousel-caption-g5sibddk0" class="carousel-caption"> </div>
     </div>
   
 
@@ -6792,12 +6792,12 @@
 </li>
 <li><p><del>点击右上角的<code>重启内核</code>。</del></p>
  <div class="carousel-container">
-   <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-o51xf6vsu">
+   <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-861gbgged">
      <div class="splide__track">
        <ul class="splide__list"><li class="splide__slide" data-caption="切换内核.png"><img data-src="https://s2.loli.net/2023/11/07/dxoDgMcjFPlVHf6.png" alt="切换内核.png" class="zoomable"></li><li class="splide__slide" data-caption="切换为meta并重启内核.png"><img data-src="https://s2.loli.net/2023/11/07/ve2n3WyxtI6sPwk.png" alt="切换为meta并重启内核.png" class="zoomable"></li></ul>
      </div>
    </div>
-   <div id="carousel-caption-o51xf6vsu" class="carousel-caption"> </div>
+   <div id="carousel-caption-861gbgged" class="carousel-caption"> </div>
  </div></li>
 </ol>
 
@@ -6834,12 +6834,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-gxtppmlqr">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-s10eeuk0a">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="新建配置.png"><img data-src="https://s2.loli.net/2023/11/07/uZ8LznlQJANeIKW.png" alt="新建配置.png" class="zoomable"></li><li class="splide__slide" data-caption="编辑文件.png"><img data-src="https://s2.loli.net/2023/11/07/7GoCLb4uyIUizZB.png" alt="编辑文件.png" class="zoomable"></li><li class="splide__slide" data-caption="粘贴并保存.png"><img data-src="https://s2.loli.net/2023/11/07/K3ME2oqcrm5X79G.png" alt="粘贴并保存.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-gxtppmlqr" class="carousel-caption"> </div>
+      <div id="carousel-caption-s10eeuk0a" class="carousel-caption"> </div>
     </div>
   
 
@@ -6864,12 +6864,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-0ka50jbhz">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hxyoiwlrl">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装服务模式.png"><img data-src="https://s2.loli.net/2023/11/07/mzWkwQPXtaFUrD4.png" alt="安装服务模式.png" class="zoomable"></li><li class="splide__slide" data-caption="点击INSTALL-忽略掉左上角的报错-可能是bug.png"><img data-src="https://s2.loli.net/2023/11/07/f7tDroGg6ki4ABc.png" alt="点击INSTALL-忽略掉左上角的报错-可能是bug.png" class="zoomable"></li><li class="splide__slide" data-caption="勾选对应设置.png"><img data-src="https://s2.loli.net/2023/11/07/rhHXDnqv5zgZMmE.png" alt="勾选对应设置.png" class="zoomable"></li><li class="splide__slide" data-caption="右键启用配置.png"><img data-src="https://s2.loli.net/2023/11/07/o2YfEq63QF47vcN.png" alt="右键启用配置.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-0ka50jbhz" class="carousel-caption"> </div>
+      <div id="carousel-caption-hxyoiwlrl" class="carousel-caption"> </div>
     </div>
   
 
@@ -6891,12 +6891,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-e7id3wyz4">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-zv3ba5h0a">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="打开组策略编辑器.png"><img data-src="https://s2.loli.net/2023/11/07/IpCg1TZd6azANJ5.png" alt="打开组策略编辑器.png" class="zoomable"></li><li class="splide__slide" data-caption="找到对应策略.png"><img data-src="https://s2.loli.net/2023/11/07/dR63HkPtOEfeMmo.png" alt="找到对应策略.png" class="zoomable"></li><li class="splide__slide" data-caption="禁用多宿主并确定.png"><img data-src="https://s2.loli.net/2023/11/07/Aryc3ehHiDUmdOL.png" alt="禁用多宿主并确定.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-e7id3wyz4" class="carousel-caption"> </div>
+      <div id="carousel-caption-zv3ba5h0a" class="carousel-caption"> </div>
     </div>
   
 
@@ -6907,12 +6907,12 @@
 <p>以Edge浏览器为例，在浏览器地址栏输入<code>edge://flags/#enable-quic</code>，跳转到<code>Experimental QUIC protocol</code>选项，将其设置为<code>Disabled</code>即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-h4lgbcdzp">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-m5c4b9mh4">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="禁用quic.png"><img data-src="https://s2.loli.net/2023/11/07/Eq67CloYbz1V8NA.png" alt="禁用quic.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-h4lgbcdzp" class="carousel-caption"> </div>
+      <div id="carousel-caption-m5c4b9mh4" class="carousel-caption"> </div>
     </div>
   
 
@@ -6920,12 +6920,12 @@
 <p>以Edge浏览器为例，找到<code>设置</code>-<code>隐私、搜索和服务``-安全性</code>-<code>使用安全的DNS指定如何查找网站的网络地址</code>，关闭其开关即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-3x0ojbupd">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-isv6dii2r">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="关闭安全DNS.png"><img data-src="https://s2.loli.net/2023/11/07/vU6XPrWw1fyzVIR.png" alt="关闭安全DNS.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-3x0ojbupd" class="carousel-caption"> </div>
+      <div id="carousel-caption-isv6dii2r" class="carousel-caption"> </div>
     </div>
   
 
@@ -7065,12 +7065,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-zvroqkyel">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-f6c8ag6ek">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库"><img data-src="https://s2.loli.net/2024/07/17/BZ8AhPlKdEqtzcf.webp" alt="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库" class="zoomable"></li><li class="splide__slide" data-caption="在相应虚拟机上右键单击，选择在访达中显示"><img data-src="https://s2.loli.net/2024/07/17/zXIEaTPHY3dsQlm.webp" alt="在相应虚拟机上右键单击，选择在访达中显示" class="zoomable"></li><li class="splide__slide" data-caption="在访达中右键单击虚拟机文件，选择显示包内容"><img data-src="https://s2.loli.net/2024/07/17/f3QAHstYKeIRZlX.webp" alt="在访达中右键单击虚拟机文件，选择显示包内容" class="zoomable"></li><li class="splide__slide" data-caption="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑"><img data-src="https://s2.loli.net/2024/07/17/km7vQ9hjupVt5l4.webp" alt="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑" class="zoomable"></li><li class="splide__slide" data-caption="3D加速已经成功启用"><img data-src="https://s2.loli.net/2024/07/17/wPKV7I1XY9Qedyc.webp" alt="3D加速已经成功启用" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-zvroqkyel" class="carousel-caption"> </div>
+      <div id="carousel-caption-f6c8ag6ek" class="carousel-caption"> </div>
     </div>
   
 
@@ -7189,12 +7189,12 @@
 
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-twp5og16g">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-lkjmshv56">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="下载JDK17.webp"><img data-src="https://s2.loli.net/2023/11/11/G2KwYIs4yVaM6CT.webp" alt="下载JDK17.webp" class="zoomable"></li><li class="splide__slide" data-caption="下载MongoDB.webp"><img data-src="https://s2.loli.net/2023/11/11/FLuEvQB2oUqw13l.webp" alt="下载MongoDB.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-twp5og16g" class="carousel-caption"> </div>
+      <div id="carousel-caption-lkjmshv56" class="carousel-caption"> </div>
     </div>
   
 
@@ -7212,12 +7212,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6b7kbpk10">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vl8pybprr">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="选择完全安装.webp"><img data-src="https://s2.loli.net/2023/11/11/rRhxCA4BYDVu25U.webp" alt="选择完全安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="继续安装.webp"><img data-src="https://s2.loli.net/2023/11/11/Y4mrh23sL71CUJx.webp" alt="继续安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="安装Compass.webp"><img data-src="https://s2.loli.net/2023/11/11/OgrBZdvYXPmsNfl.webp" alt="安装Compass.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-6b7kbpk10" class="carousel-caption"> </div>
+      <div id="carousel-caption-vl8pybprr" class="carousel-caption"> </div>
     </div>
   
 
@@ -7252,12 +7252,12 @@
 </ul>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xwo73jjjz">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-txpcn9ctp">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Download Grasscutter.webp"><img data-src="https://s2.loli.net/2023/11/11/jleJCaPN1iKBFDp.webp" alt="Download Grasscutter.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-xwo73jjjz" class="carousel-caption"> </div>
+      <div id="carousel-caption-txpcn9ctp" class="carousel-caption"> </div>
     </div>
   
 
@@ -7271,12 +7271,12 @@
 <h2 id="配置Cultivation"><a href="#配置Cultivation" class="headerlink" title="配置Cultivation"></a>配置Cultivation</h2><p>首次启动时会有弹窗提示，请求安装CA证书，点击<code>是</code>同意安装。安装证书后Cultivation内置的mitmproxy就能够通过中间人攻击（MITM）的方式将客户端与游戏服务器的通信代理到本地服务端。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hh18043b8">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4f62w8i1b">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装证书.webp"><img data-src="https://s2.loli.net/2023/11/11/FRVI5289awtUPKT.webp" alt="安装证书.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-hh18043b8" class="carousel-caption"> </div>
+      <div id="carousel-caption-4f62w8i1b" class="carousel-caption"> </div>
     </div>
   
 
@@ -7296,12 +7296,12 @@
 </ul>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fzpsc6n32">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ko13n22np">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="配置1.webp"><img data-src="https://s2.loli.net/2023/11/11/lB3LI72ZhVJKeoQ.webp" alt="配置1.webp" class="zoomable"></li><li class="splide__slide" data-caption="配置2.webp"><img data-src="https://s2.loli.net/2023/11/11/sYk7KjeTdWN61Aw.webp" alt="配置2.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-fzpsc6n32" class="carousel-caption"> </div>
+      <div id="carousel-caption-ko13n22np" class="carousel-caption"> </div>
     </div>
   
 
@@ -7385,12 +7385,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-im5d2zy6u">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-o33jhqgft">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="opencommand插件.webp"><img data-src="https://s2.loli.net/2023/11/11/TPRCVJ4I1OqikyX.webp" alt="opencommand插件.webp" class="zoomable"></li><li class="splide__slide" data-caption="opencommand插件1.webp"><img data-src="https://s2.loli.net/2023/11/11/7kPdbWUavsKeoDY.webp" alt="opencommand插件1.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-im5d2zy6u" class="carousel-caption"> </div>
+      <div id="carousel-caption-o33jhqgft" class="carousel-caption"> </div>
     </div>
   
 
@@ -7441,12 +7441,12 @@
 <li>用VSCode打开<code>d3dx.ini</code></li>
 <li>通过搜索<code>[Loader]</code>快速定位，将<code>[Loader]</code>下面的target修改为自己的游戏安装位置，例如<code>D:\Program Files\GenshinImpact_4.0.1\GenshinImpact.exe</code>   
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-s7f3wypsm">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vux1njact">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="替换路径.webp"><img data-src="https://s2.loli.net/2023/11/08/E3KiqTQy9kJWZb2.webp" alt="替换路径.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-s7f3wypsm" class="carousel-caption"> </div>
+      <div id="carousel-caption-vux1njact" class="carousel-caption"> </div>
     </div>
   </li>
 <li>保存文件</li>
@@ -7458,12 +7458,12 @@
 <li>再通过<code>Cultivation</code>启动游戏</li>
 <li>加载过程中屏幕左下角出现下图所示的浮窗则说明启动成功   
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cdvdrcjjh">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-btzfao1nm">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="启动成功浮窗.webp"><img data-src="https://s2.loli.net/2023/11/08/sOvpqaElQIBf47F.webp" alt="启动成功浮窗.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-cdvdrcjjh" class="carousel-caption"> </div>
+      <div id="carousel-caption-btzfao1nm" class="carousel-caption"> </div>
     </div>
   </li>
 </ol>
@@ -7492,12 +7492,12 @@
 <h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9iitu9f56">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-y1s8m87lh">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="搜索框.webp"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp" class="zoomable"></li><li class="splide__slide" data-caption="功能.webp"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-9iitu9f56" class="carousel-caption"> </div>
+      <div id="carousel-caption-y1s8m87lh" class="carousel-caption"> </div>
     </div>
   
 
@@ -7510,12 +7510,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-m3gv9icec">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-svraj04qm">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="专用网络.webp"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp" class="zoomable"></li><li class="splide__slide" data-caption="共享设置.webp"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-m3gv9icec" class="carousel-caption"> </div>
+      <div id="carousel-caption-svraj04qm" class="carousel-caption"> </div>
     </div>
   
 
@@ -7527,12 +7527,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-j1fz03jns">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-um1r9ybwq">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="创建共享用户.webp"><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-j1fz03jns" class="carousel-caption"> </div>
+      <div id="carousel-caption-um1r9ybwq" class="carousel-caption"> </div>
     </div>
   
 
@@ -7545,12 +7545,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-u4l5byafd">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6gjukkv5l">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="属性.webp"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp" class="zoomable"></li><li class="splide__slide" data-caption="添加用户.webp"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-u4l5byafd" class="carousel-caption"> </div>
+      <div id="carousel-caption-6gjukkv5l" class="carousel-caption"> </div>
     </div>
   
 
@@ -7563,12 +7563,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-1kg1kuad3">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vkj2poyts">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="连接服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入网络路径.webp"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入用户名和密码.webp"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-1kg1kuad3" class="carousel-caption"> </div>
+      <div id="carousel-caption-vkj2poyts" class="carousel-caption"> </div>
     </div>
   
 
@@ -7580,12 +7580,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-3lxb2hgqx">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hsjyuui5z">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="推出smb服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-3lxb2hgqx" class="carousel-caption"> </div>
+      <div id="carousel-caption-hsjyuui5z" class="carousel-caption"> </div>
     </div>
   
 ]]></content>
@@ -7768,60 +7768,60 @@
 <p>打开下载页面后，选择<code>download from a nearby CTAN mirror</code>前往最近的镜像站点，单击下载<code>texlive.iso</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-q0seny4pg">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-3nqt2u4zc">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="前往最近的镜像站点"><img data-src="https://s2.loli.net/2023/10/06/rtv86aQ3NoJeygY.webp" alt="前往最近的镜像站点" class="zoomable"></li><li class="splide__slide" data-caption="下载texlive.iso"><img data-src="https://s2.loli.net/2023/10/06/cuwyg4mZVAdPsFJ.webp" alt="下载texlive.iso" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-q0seny4pg" class="carousel-caption"> </div>
+      <div id="carousel-caption-3nqt2u4zc" class="carousel-caption"> </div>
     </div>
   
 
 <p>下载完成后双击挂载文件，然后以管理员身份运行其中的<code>install-tl-windows.bat</code>。待安装程序加载完成后点击<code>安装</code>按钮，安装过程取决于电脑性能，大约需要30分钟，安装成功后点击<code>关闭</code>按钮结束安装程序。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-756eu7a77">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-w9n7wsnj1">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="选择安装路径"><img data-src="https://s2.loli.net/2023/10/06/TkNJ7vCBLpOlfVb.webp" alt="选择安装路径" class="zoomable"></li><li class="splide__slide" data-caption="Loading"><img data-src="https://s2.loli.net/2023/10/06/PA9rod7y2NktUEJ.webp" alt="Loading" class="zoomable"></li><li class="splide__slide" data-caption="安装"><img data-src="https://s2.loli.net/2023/10/06/RX3Zq2Ota47wpjV.webp" alt="安装" class="zoomable"></li><li class="splide__slide" data-caption="安装成功"><img data-src="https://s2.loli.net/2023/10/06/A2pZSEaxkrHeR3d.webp" alt="安装成功" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-756eu7a77" class="carousel-caption"> </div>
+      <div id="carousel-caption-w9n7wsnj1" class="carousel-caption"> </div>
     </div>
   
 
 <h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>mac用户直接点击下载页面的<code>MacTeX.pkg</code>下载安装包，安装包大小为5.2G。下载完成后只需要双击打开安装包，然后根据指引操作即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-t9ch6f5tk">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cxuqa1sbn">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="下载MacTeX.pkg"><img data-src="https://s2.loli.net/2023/10/06/OMBXEcRnWstlv9A.png" alt="下载MacTeX.pkg" class="zoomable"></li><li class="splide__slide" data-caption="同意协议"><img data-src="https://s2.loli.net/2023/10/06/6AZdueKySU5cvwb.png" alt="同意协议" class="zoomable"></li><li class="splide__slide" data-caption="等待安装完成"><img data-src="https://s2.loli.net/2023/10/06/2bXlRiMTSBvIZGu.png" alt="等待安装完成" class="zoomable"></li><li class="splide__slide" data-caption="安装完成"><img data-src="https://s2.loli.net/2023/10/06/cN5oU1z6kZihFJE.png" alt="安装完成" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-t9ch6f5tk" class="carousel-caption"> </div>
+      <div id="carousel-caption-cxuqa1sbn" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="安装VSCode扩展"><a href="#安装VSCode扩展" class="headerlink" title="安装VSCode扩展"></a>安装VSCode扩展</h1><p>在VSCode的扩展商店中搜索并安装<code>LaTeX Workshop</code>和<code>LaTeX Utilities</code>两个扩展，前者的作用是为VSCode添加LaTeX支持，后者则是提供一些实用的功能，如自动格式化粘贴的文本，而且可以和Zotero配合使用。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-inzsr49hb">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-mupxm5skl">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装扩展.webp"><img data-src="https://s2.loli.net/2023/10/06/xqgKzTueOnMVod9.webp" alt="安装扩展.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-inzsr49hb" class="carousel-caption"> </div>
+      <div id="carousel-caption-mupxm5skl" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>使用<code>ctrl</code>+<code>,</code>快捷键打开VSCode的设置，接下来的的操作建议使用顶栏的搜索快速定位</p>
 <h2 id="自动编译"><a href="#自动编译" class="headerlink" title="自动编译"></a>自动编译</h2>
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-t0pq0cuuj">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ailt5r1xd">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Auto Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JmdOsAWTgotPQSh.webp" alt="Auto Build.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-t0pq0cuuj" class="carousel-caption"> </div>
+      <div id="carousel-caption-ailt5r1xd" class="carousel-caption"> </div>
     </div>
   
 
@@ -7834,12 +7834,12 @@
 <h2 id="自动清理"><a href="#自动清理" class="headerlink" title="自动清理"></a>自动清理</h2><p>这个选项的作用是自动清理（删除）已编译的辅助文件和输出文件，以确保每次运行 LaTeX 编译时都从头开始，而不受之前编译的影响。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-jmcxuudl9">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9me0273nb">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Auto Clean.webp"><img data-src="https://s2.loli.net/2023/10/06/c1vBzWIOdTlP7ZQ.webp" alt="Auto Clean.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-jmcxuudl9" class="carousel-caption"> </div>
+      <div id="carousel-caption-9me0273nb" class="carousel-caption"> </div>
     </div>
   
 
@@ -7920,12 +7920,12 @@
 
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qcsg2lzl8">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xarsutu91">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/WbyZSiL5dk1MFGo.webp" alt="Recipe.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qcsg2lzl8" class="carousel-caption"> </div>
+      <div id="carousel-caption-xarsutu91" class="carousel-caption"> </div>
     </div>
   
 
@@ -7968,12 +7968,12 @@
 <h2 id="首选编译选项"><a href="#首选编译选项" class="headerlink" title="首选编译选项"></a>首选编译选项</h2><p>这个选项定义了在没有明确指定其他编译选项时所使用的默认选项，包括前面设置的自动编译。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-q4xaom9ck">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-a8226ai87">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Default Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/9CUzAGhcZfNVlLS.webp" alt="Default Recipe.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-q4xaom9ck" class="carousel-caption"> </div>
+      <div id="carousel-caption-a8226ai87" class="carousel-caption"> </div>
     </div>
   
 
@@ -7986,24 +7986,24 @@
 <p>搜索<code>latex message show</code>，取消勾选<code>Latex-workshop &gt; Message &gt; Error: Show</code>选项和<code>Latex-workshop &gt; Message &gt; Warning: Show</code>选项</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9nm9s1dco">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-894f1bmuk">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Warning.webp"><img data-src="https://s2.loli.net/2023/10/06/32T5rc7sRSaAHGf.webp" alt="Warning.webp" class="zoomable"></li><li class="splide__slide" data-caption="Error.webp"><img data-src="https://s2.loli.net/2023/10/06/iTOLUpPYsIFB8l4.webp" alt="Error.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-9nm9s1dco" class="carousel-caption"> </div>
+      <div id="carousel-caption-894f1bmuk" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>使用VSCode打开.tex文件时，左侧边栏会出现一个TEX选项，可以进行编译选项选择、查看PDF、快速定位等操作。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hdtc2rhq3">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8elxl8uxq">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JMpIfran4KEuPic.webp" alt="Build.webp" class="zoomable"></li><li class="splide__slide" data-caption="PDF&Log.webp"><img data-src="https://s2.loli.net/2023/10/06/XGPqzkKINi4AQ6d.webp" alt="PDF&Log.webp" class="zoomable"></li><li class="splide__slide" data-caption="Navigate.webp"><img data-src="https://s2.loli.net/2023/10/06/v9HR26jTgBYypld.webp" alt="Navigate.webp" class="zoomable"></li><li class="splide__slide" data-caption="Citation.webp"><img data-src="https://s2.loli.net/2023/10/06/AiMrFKVxwI3g19P.webp" alt="Citation.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-hdtc2rhq3" class="carousel-caption"> </div>
+      <div id="carousel-caption-8elxl8uxq" class="carousel-caption"> </div>
     </div>
   
 
@@ -8547,12 +8547,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-5gca6bavp">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-7emfjahpy">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1.选择创建自定虚拟机"><img data-src="https://s2.loli.net/2024/07/16/4uxgbVHFCcPkQKX.webp" alt="1.选择创建自定虚拟机" class="zoomable"></li><li class="splide__slide" data-caption="2.选择 Apple OS X -> macOS 14"><img data-src="https://s2.loli.net/2024/07/16/QjuoCkn1eVqAPS3.webp" alt="2.选择 Apple OS X -> macOS 14" class="zoomable"></li><li class="splide__slide" data-caption="3.选择新建虚拟磁盘"><img data-src="https://s2.loli.net/2024/07/16/g6OytREumQjNBiz.webp" alt="3.选择新建虚拟磁盘" class="zoomable"></li><li class="splide__slide" data-caption="4.完成虚拟机配置"><img data-src="https://s2.loli.net/2024/07/16/WLXZJ6prOx5sEwq.webp" alt="4.完成虚拟机配置" class="zoomable"></li><li class="splide__slide" data-caption="6.1.点击顶部菜单栏中的设置按钮进行配置"><img data-src="https://s2.loli.net/2024/07/16/FeBJZ3WCSLEbVrQ.webp" alt="6.1.点击顶部菜单栏中的设置按钮进行配置" class="zoomable"></li><li class="splide__slide" data-caption="6.2.配置页面"><img data-src="https://s2.loli.net/2024/07/16/1AbfjE4vyiazmd3.webp" alt="6.2.配置页面" class="zoomable"></li><li class="splide__slide" data-caption="7.1.调节CPU数量、内存大小"><img data-src="https://s2.loli.net/2024/07/16/1srgYDVbeQXyWPm.webp" alt="7.1.调节CPU数量、内存大小" class="zoomable"></li><li class="splide__slide" data-caption="7.2.调节虚拟硬盘大小"><img data-src="https://s2.loli.net/2024/07/16/j4eJvaHFhYGlUD9.webp" alt="7.2.调节虚拟硬盘大小" class="zoomable"></li><li class="splide__slide" data-caption="8.选择安装镜像"><img data-src="https://s2.loli.net/2024/07/16/Sm3Pb1hQrUIRXw8.webp" alt="8.选择安装镜像" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-5gca6bavp" class="carousel-caption"> </div>
+      <div id="carousel-caption-7emfjahpy" class="carousel-caption"> </div>
     </div>
   
 
@@ -8565,12 +8565,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-tu6ov9emj">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cixvb3083">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="2.选择磁盘工具"><img data-src="https://s2.loli.net/2024/07/16/iHsJgtrIvMnbwkY.webp" alt="2.选择磁盘工具" class="zoomable"></li><li class="splide__slide" data-caption="3.点击顶部下拉菜单，选择显示所有设备"><img data-src="https://s2.loli.net/2024/07/16/YtLhyUQxf1VaI8s.webp" alt="3.点击顶部下拉菜单，选择显示所有设备" class="zoomable"></li><li class="splide__slide" data-caption="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它"><img data-src="https://s2.loli.net/2024/07/16/1C49wUPHtJZ35Yr.webp" alt="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它" class="zoomable"></li><li class="splide__slide" data-caption="5.按照正常步骤安装"><img data-src="https://s2.loli.net/2024/07/16/sTrdJ8eSgbW7V6k.webp" alt="5.按照正常步骤安装" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-tu6ov9emj" class="carousel-caption"> </div>
+      <div id="carousel-caption-cixvb3083" class="carousel-caption"> </div>
     </div>
   
 
@@ -8583,24 +8583,24 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4w44ztdg5">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-y927q32lh">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1.右键单击桌面右上角的安装镜像，推出它"><img data-src="https://s2.loli.net/2024/07/16/Im1tpiVS8FBq9gK.webp" alt="1.右键单击桌面右上角的安装镜像，推出它" class="zoomable"></li><li class="splide__slide" data-caption="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/2bjFUndiO6X4JtA.webp" alt="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools" class="zoomable"></li><li class="splide__slide" data-caption="3.双击安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/Dl7iQkXY1esW4Ec.webp" alt="3.双击安装 Vmware Tools" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-4w44ztdg5" class="carousel-caption"> </div>
+      <div id="carousel-caption-y927q32lh" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h1><p>如果没有网络连接的话，点击顶部菜单栏中的<code>设置</code>按钮，点击<code>网络适配器</code>，选择<code>桥接模式网络连接</code>下的<code>自动检测</code>选项，并勾选<code>连接网络适配器</code></p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-s9plv875r">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-88ekz58b7">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="设置 -> 网络适配器"><img data-src="https://s2.loli.net/2024/07/16/1qihBpKv8aJX3Cz.webp" alt="设置 -> 网络适配器" class="zoomable"></li><li class="splide__slide" data-caption="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器"><img data-src="https://s2.loli.net/2024/07/16/qlMkejoZAfKwLmO.webp" alt="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-s9plv875r" class="carousel-caption"> </div>
+      <div id="carousel-caption-88ekz58b7" class="carousel-caption"> </div>
     </div>
   
 
@@ -8636,12 +8636,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-2qj50qzpi">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4h0jxffwr">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="文稿类型选择应用程序"><img data-src="https://s2.loli.net/2024/07/17/jgYI6M4BVm9Fube.jpg" alt="文稿类型选择应用程序" class="zoomable"></li><li class="splide__slide" data-caption="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令"><img data-src="https://s2.loli.net/2024/07/17/s56fYbt1OaXBd89.jpg" alt="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令" class="zoomable"></li><li class="splide__slide" data-caption="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中"><img data-src="https://s2.loli.net/2024/07/17/KoB1Lk8AHG9wnli.jpg" alt="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中" class="zoomable"></li><li class="splide__slide" data-caption="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行"><img data-src="https://s2.loli.net/2024/07/17/nDKVTAfjF2bwk9q.jpg" alt="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-2qj50qzpi" class="carousel-caption"> </div>
+      <div id="carousel-caption-4h0jxffwr" class="carousel-caption"> </div>
     </div>
   
 
@@ -9990,6 +9990,311 @@
       </tags>
   </entry>
   <entry>
+    <title>英国留学后续日志</title>
+    <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
+
+<span id="more"></span>
+
+<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
+<p>一般来说拿到offer之后就可以定房间了，比较想去的几个学校都可以先定上，订的越早越便宜，而且选择的空间也比较大。尽量找不需要押金的公寓，这样跑路的话直接找人转租或者取消就可以了。</p>
+<p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（图片来自某位不愿透露姓名的翟翟）</p>
+<p><img data-src="https://s2.loli.net/2022/05/13/UjZV4PTEzoOiKXk.jpg" alt="英国留学后续日志"></p>
+<p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
+<h1 id="换取Uncon"><a href="#换取Uncon" class="headerlink" title="换取Uncon"></a>换取Uncon</h1><p>本科毕业之前大家的offer都是conditional offer，毕业后收集好缺少的材料并扫描成PDF，传到申请系统里去，就可以坐等发uncon了。我是6月24号上传到全部材料，7月7号在申请系统里查到了uncon，8号凌晨收到了邮件。一般毕业季换uncon的时间会长一些，因为换的人太多了。</p>
+<p>换uncon需要扫描上传的材料有</p>
+<ul>
+<li>毕业证原件</li>
+<li>学位证原件</li>
+<li>毕业证翻译件（自己翻译完盖学校的章就可以，不需要放照片）</li>
+<li>学位证翻译件（同上）</li>
+<li>包含所有课程的英文成绩单</li>
+<li>包含所有课程的中文成绩单（这个看具体学校，我在格拉只上传了英文的成绩单）</li>
+</ul>
+<p>下面是我用的毕业证与学位证的翻译件，格式没法调，需要word的康康百度云吧</p>
+<a class="btn" href="https://pan.baidu.com/s/1APNgOpkZaNnytagDF3rhYg"><i class="fa fa-arrow-right fa-fw"></i>密码uwbt</a>
+
+<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-pencil"></i>学士学位证书翻译</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-pencil"></i>毕业证书翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>学士学位证明翻译</strong></p>
+<p>Bachelor’s Degree Certificate</p>
+<p>This is to certify that XXX, male, born on June 26, 1997, has completed an undergraduate program in Architecture at XXXXX University and graduated. According to Regulations of the People’s Republic of China on Academic Degrees, he is awarded the degree of Bachelor of Science in Architecture.</p>
+<p>Chairman of Degree Evaluation Committee: Xxxxx Xxx      XXXXX University<br>Certificate No.: XXXXXXXXXXXXXX      June 18th, 2020</p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>毕业证书翻译</strong></p>
+<p>Graduation Certificate</p>
+<p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
+<p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
+
+<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明，抽到了会发邮件给你。</p>
+<ul>
+<li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑&#x2F;月，其他地区为1015镑&#x2F;月</li>
+<li>一般存定期并设置自动转存</li>
+<li>存满28天之后就可以在网上预约签证了</li>
+<li>然后在办理签证的前几天去银行开存款证明和流水，不用开太早，因为存款证明开具日期和网上签证预约日期的间隔不能超过31天</li>
+<li>英镑和人民币可以混存，总金额够了就行</li>
+<li>最好存在自己名下，存在父母名下需要多开具亲子关系证明以及授权使用资金的证明</li>
+<li>建议存在中农工建这类大行，不建议存在农村信用社一类的地方</li>
+<li>不能用理财产品代替</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/05/13/K2Eq8rUmZeNtBgY.png" alt="英国留学后续日志"></p>
+<h1 id="换汇"><a href="#换汇" class="headerlink" title="换汇"></a>换汇</h1><p>在去英国之前建议提前换好英镑，在常用的银行换就可以，到英国办好当地银行卡后通过跨境汇款转过去。下面是一些情报</p>
+<ul>
+<li>购买英镑的时候分为<strong>现汇</strong>和<strong>现钞</strong>两个选项，现汇就是存在银行卡里的钱，现钞就是换取的纸币</li>
+<li>换汇一般就是购买英镑现汇存在银行卡里</li>
+<li>临行前可以换一部分现钞，供落地后应急用，不用太多，海关不允许携带5000美元以上的等值外币出境</li>
+<li>每人每年的换汇额度是5万美元</li>
+<li>换汇的时候看的是<strong>购汇汇率</strong>而不是<strong>结汇汇率</strong>。购汇汇率是你向银行购买英镑的汇率，结汇汇率是你向银行出售英镑的汇率</li>
+<li>建议像我一样的贫困人口每天多看两眼汇率，万一英镑再跌到8.1呢</li>
+<li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
+<li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
+<li>换汇之后可以在手机银行APP上预约到银行网点去现钞，我取了1000英镑，小城市里只有50英镑的大额纸钞，大城市可能会换到5磅10磅这样的小面值</li>
+</ul>
+<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。</p>
+<ul>
+<li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china"><strong>签证官网</strong></a></li>
+<li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
+<li>需要提前预约，通常提前一或两个工作天预约即可</li>
+<li>预约方式有电话和邮件两种，部分医院（如济南出国移民体检中心）还可以在网站上预约</li>
+<li>无需空腹，正常饮食</li>
+<li>需要携带的材料<ul>
+<li>有效期半年以上的护照原件，不接受任何其他证件</li>
+<li>护照复印件一张</li>
+<li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
+</ul>
+</li>
+<li>流程很快，耗时约为半小时，换上衣服拍下胸片，然后医生询问下病史就结束了</li>
+<li>体检结果正常的话，上午体检下午可以出结果并发出证书，下午体检则需第二天早上才能发出证书。</li>
+<li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
+<li>证书有效期通常为六个月，特殊情况下为三个月</li>
+<li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
+<li>英国地址填自己的学校，懒的话可以不填，没什么影响</li>
+</ul>
+<p>下面是我10月13日在济南做肺结核的记录</p>
+<ul>
+<li>济南的肺结核检测在山医大三院的出国体检中心做，地址是天桥区无影山路38号，进门后右手边红屋顶的房子就是</li>
+<li>我是七点四十五到的，医院大门口会有保安测体温。</li>
+<li>我到的时候前面只有三个人。进入体检中心后出示身份证和健康码，然后在门口机器上取号</li>
+<li>取号后领两张表，再测一次体温，工作人员会把体温写在表的右上角，过程中有什么疑问随时可以问工作人员</li>
+<li>填完表等到八点半，拿着护照去拍照，拍完给一张黑白的照片</li>
+<li>拍完照出来等待叫号，叫到自己的号就拿着材料去最里面的服务台</li>
+<li>把护照原件、复印件、刚拍的黑白照片、两张小两寸白底照片（要在背面也上自己名字）、填写的两张表格交给工作人员</li>
+<li>然后会拍照，还有在一张表上签字</li>
+<li>然后付款，支付宝现金均可</li>
+<li>付完款后工作人员把护照原件还给你，并给一个手环，手环是开储物柜用的，上面有对应的柜子编号</li>
+<li>拿着手环去玻璃门那里刷脸进去，进去之后有工作人员引导你到更衣室并给一件蓝色的上衣</li>
+<li>把上衣首饰全部摘掉，穿上那件蓝色的衣服，只带着护照和手环出去</li>
+<li>工作人员会告诉你去哪个房间做检测，在机器上做一个类似叉腰的动作，双肩向上同时贴到机器上，然后工作人员会让深吸一口气憋住，然后等工作人员喊可以了就可以出来了</li>
+<li>出来之后回到更衣室把衣服换好，然后把蓝色上衣扔进门口的回收箱</li>
+<li>走廊里的工作人员会让你到另一侧的医生室，医生会问一些问题，比如有没有得过肺结核、有没有和结合病人有过接触</li>
+<li>然后摘口罩拍照</li>
+<li>然后出去找走廊里的小姐姐把你带出去</li>
+<li>出去之后回到大门口的前台把手环还回去就可以溜了</li>
+<li>工作人员说因为疫情的原因，第二天下午三点后才能取报告，但是实测当天下午四点半就可以拿到，可以打电话问一下</li>
+</ul>
+<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。所以这俩我就不打算做了</p>
+<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><h2 id="预约"><a href="#预约" class="headerlink" title="预约"></a>预约</h2><p>签证需要等CAS下来才能去办，CAS一般在入学前的3个月开始陆续发放，办理签证前需要在网上预约，最近学生签证也改名了，原来叫 Tier 4，现在直接叫 student visa。预约的时候建议挂全局代理，预约网站在国内的使用体验极差。</p>
+<a class="btn" href="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/sort/country-nationality?p=student_out_uk&_ga=2.246378372.1460787317.1603017805-1850455343.1600247708"><i class="fa fa-home fa-fw"></i>预约网址</a>
+
+<p>预约的步骤可以去看<a href="https://weibo.com/u/7305573611">@PhD威宇</a>的微博文章<a href="https://weibo.com/ttarticle/p/show?id=2309404537047783178301">保姆级手把手教你申请T4签证</a>，大佬写的非常详细，佩服大佬的耐心。T4和现在的 student visa 稍有出入，大体的步骤都是一样的。（我才不是因为懒不想写）</p>
+<p><strong>注意下载checklist</strong></p>
+<p>按照步骤交完签证申请费和IHS之后会跳转到VFS的网站上，这个网站是用来上传材料和预约递签日期地点用的，有一些增(keng)值(qian)服务可以选。这个网站深得学校教务选课系统的真传，同款土豆服务器，而且不挂全局代理基本没法用，挂了全局代理也会有各种各样的bug。</p>
+<p>Student visa 一般只有两个材料需要上传，checklist 会有说明</p>
+<ul>
+<li>护照信息页</li>
+<li>肺结核报告</li>
+</ul>
+<p>建议提前在网站上上传好材料，如果去签证中心现场上传的话会收取100块钱的扫描费用（奸商！）。</p>
+<p>另外一些签证中心（说的就是你济南，还有西安）还会收取服务费，大概500块钱，在VFS那个网站上交。</p>
+<p>预约的时候可以隔几个小时上去一次，看看有没有更早的位置。我一开始预约的是23号递签，后来刷出来了14号和16号的，就在网站上更改了预约时间，更改免费。</p>
+<p>预约好时间、传完材料、交完钱之后会发给你一个<code>Appointment Confirmation Notice</code>，记得打印出来带着</p>
+<h2 id="递签"><a href="#递签" class="headerlink" title="递签"></a>递签</h2><p>我最终去递签的时候只带了下面几个材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist</li>
+<li>Appointment Confirmation Notice</li>
+<li>肺结核报告原件</li>
+</ul>
+<p>最后工作人员收走了这些材料</p>
+<ul>
+<li>护照原件</li>
+<li>checklist 的第一页</li>
+<li>Appointment Confirmation Notice</li>
+</ul>
+<p>下面是我在济南递签的流程，我是12:13进去的，12:25就出来了</p>
+<ul>
+<li>济南签证中心地址在济南市历下区经十路11890号北京银行5楼</li>
+<li>从北京银行大厦的南门进，进去后在右手边向保安大叔出示健康码并测量体温</li>
+<li>用微信扫描桌面立牌上的二维码，填写姓名手机号等个人信息进行登记</li>
+<li>做四号电梯（最里面右手边那个）上5楼</li>
+<li>出电梯后左手边可以看到工作人员在柜台前面，会问是不是来办签证，然后带你到签证中心门口，测量体温后经过安检门进入</li>
+<li>进入之后出示护照、checklist、notice这几个材料，然后工作人员会问姓名和出生日期，并给你一张号码纸</li>
+<li>进去等叫号，左手边有几排椅子，椅子前面的柱子上挂着电视，会显示叫号信息</li>
+<li>人少的话工作人员就让直接去柜台，去柜台交护照、checklist、notice</li>
+<li>工作人员会问你办不办加急，问护照是自取还是快递，快递的话会给你一张快递单填写，然后交现金80元，可以找零</li>
+<li>工作人员没有提起过短信服务，短信也确实没什么用</li>
+<li>等一会工作人员会把不要的材料都退给你，快递的会给一张EMS快递单回执</li>
+<li>再回去等叫号，叫到号去7号室拍照录指纹</li>
+<li>先会让你报一下姓名和出生日期，然后摘眼镜和口罩拍照</li>
+<li>然后采指纹，先是右手四个手指并排，然后左手四个手指，最后是两个大拇指一起</li>
+<li>结束之后会给你张回执，就可以走了</li>
+<li>回家默默等快递把护照寄回来</li>
+</ul>
+<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>机票我是在携程买的，也可以直接官网购买或者打电话购买</p>
+<p>机票最好早买，早买一般都很便宜。我亲眼见证了我的机票从4200元涨价到了5500元，现在涨到了15000元。我在5500的时候买入的，买入第二天晚上就涨到了15000。</p>
+<p>我们买的一般都是留学生机票，会有额外的行李额度，一般是两件不超过23kg的28寸托运行李和一件不超过20寸的手提行李，我一开始以为需要签证才能购买留学生机票，所以错过了4200的低价，其实买的时候完全不需要签证等证明材料。携程的要求是在飞机起飞前三天上传好签证、cas、offer、护照等证明材料就可以。能早买就早买吧。</p>
+<p>另外由于今年疫情的影响，有些飞机是不一定能飞的，没有经过民航局审批，但是他也在卖票，建议买票之前先查询一下。因为有些航空公司退票只给退代金券，就很坑。</p>
+<p>飞英国的机票除了去伦敦的，基本都要转机，转机机场一般有荷兰阿姆斯特丹、芬兰赫尔辛基、阿联酋迪拜、伦敦希思罗等。购票时看好是否是行李直挂，不是直挂的话转机的时候需要重新办理行李托运手续，麻烦且耗时，要留足充分的时间。</p>
+<p>此外如果飞到大学所在城市的机票很贵的话可以看一下飞往临近城市的机票，举个栗子，我是一开始打算从上海飞格拉斯哥，但是去格拉斯哥的机票已经都在一万多了，然鹅去爱丁堡的机票只有五千多，所以我就买了去爱宝的机票，落地后再几个人一起包车直接到格拉宿舍楼下，包车大概在100胖，三四个人一起分担也不贵。</p>
+<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>注册一般分为学术注册（Academic Registration）和财务注册（Financial Registration），学校会给提前发一封邮件告诉你注册的网址、用户名和密码，记得修改自己的密码。</p>
+<h2 id="学术注册"><a href="#学术注册" class="headerlink" title="学术注册"></a>学术注册</h2><p>这里以格拉为例，学术注册包含以下内容</p>
+<ul>
+<li>确认课程信息</li>
+<li>确认姓名、性别、出生日期以及学生ID</li>
+<li>填写宗教信仰与国籍</li>
+<li>填写在英国的住址（Term Address）</li>
+<li>填写个人邮箱地址与电话号码</li>
+<li>是否有残疾</li>
+<li>添加紧急联系人</li>
+<li>填写 Statistical Information，就跟查户口一样，包括性取向、有没有孩子等问题</li>
+<li>上传照片，这个照片会用在学生证上，照片的标准和护照的一样</li>
+<li>上传护照ID页</li>
+</ul>
+<p>学术注册完成后就可以选课（Enroll）了</p>
+<h2 id="财务注册"><a href="#财务注册" class="headerlink" title="财务注册"></a>财务注册</h2><p>财务注册就是交学费，常见的方式有电汇、信用卡付款等，也有部分学校支持支付宝或银联卡支付。</p>
+<p>我用的方法是信用卡分期付款，部分学校对于全款付学费会有优惠折扣，然而格拉并没有。。。如果学校对全款支付学费没有优惠的话建议使用分期付款，毕竟能把暂时不用交的前放在英国的银行账户里吃利息，几万英镑产生的利息也不少的。</p>
+<p>我交学费的过程比较曲折。。。一开始我用的信用卡是建行的VISA卡，但是这张卡只能用人民币还款，我早买下的英镑不能拿来还款，所以果断办新卡。我先把建设银行账户里的英镑跨行转账到了中国银行的账户里，然后办了中国银行的卓隽英镑卡，可以直接用英镑还款。</p>
+<p>这张卡建议在中国银行的APP上申请，下卡非常快，我从申请到拿到卡只用了3天。注意申请的时候职业不要选择学生，直接选择待业，剩下的收入啥的胡乱写就行。咱也不知道为啥，这张卡明明是给留学生用的，但是选择学生身份申请的话大概率直接秒拒，很迷惑。另外不建议到网点去办理，工作人员对这类卡不太了解，而且办卡速度很慢，我还在微博上看到有人网点办英镑卡，结果拿到手是美元卡，没法用。</p>
+<p>我当时拿到的额度是1000英镑，少得可怜，而格拉分期付款的第一笔款需要2933磅。如果不嫌麻烦的话可以分三次刷1000英镑，刷完一次就还款。然而我比较懒，就我直接向信用卡里转账了3000磅，一次划掉。</p>
+<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>我在国内买了很多杂七杂八的行李，也不知道行李箱里能不能装得下hhh</p>
+<p>下面只是我想到的行李，到时候不一定会全带</p>
+<h2 id="登机行李"><a href="#登机行李" class="headerlink" title="登机行李"></a>登机行李</h2><h3 id="文件证件类"><a href="#文件证件类" class="headerlink" title="文件证件类"></a>文件证件类</h3><ol>
+<li>护照</li>
+<li>与护照一起寄回来的BRP说明</li>
+<li>CAS</li>
+<li>租房合同</li>
+<li>语言成绩单</li>
+<li>学术成绩单</li>
+<li>毕业证学位证（记得把外面的壳子拔下来，壳子没用）</li>
+<li>证件照</li>
+<li>入境前48小时填写的那张表</li>
+<li>肺结核报告</li>
+</ol>
+<h3 id="现金卡片"><a href="#现金卡片" class="headerlink" title="现金卡片"></a>现金卡片</h3><ol>
+<li>银行卡</li>
+<li>英国手机卡</li>
+<li>卡针</li>
+<li>英镑现金</li>
+<li>签字笔</li>
+</ol>
+<h3 id="防疫物资（少量）"><a href="#防疫物资（少量）" class="headerlink" title="防疫物资（少量）"></a>防疫物资（少量）</h3><ol>
+<li>口罩</li>
+<li>一次性手套</li>
+<li>护目镜或面罩</li>
+</ol>
+<h3 id="电子产品"><a href="#电子产品" class="headerlink" title="电子产品"></a>电子产品</h3><ol>
+<li>手机</li>
+<li>充电宝</li>
+<li>相机</li>
+<li>电脑</li>
+<li>平板</li>
+<li>充电器</li>
+<li>数据线</li>
+<li>耳机</li>
+<li>多国旅行转换插头</li>
+</ol>
+<h3 id="葛优瘫用品"><a href="#葛优瘫用品" class="headerlink" title="葛优瘫用品"></a>葛优瘫用品</h3><ol>
+<li>拖鞋</li>
+<li>颈枕</li>
+<li>眼罩</li>
+<li>耳塞</li>
+<li>旅行洗漱包</li>
+<li>小零食</li>
+</ol>
+<h2 id="托运行李"><a href="#托运行李" class="headerlink" title="托运行李"></a>托运行李</h2><h3 id="药品防疫类"><a href="#药品防疫类" class="headerlink" title="药品防疫类"></a>药品防疫类</h3><ol>
+<li>口罩</li>
+<li>一次性手套</li>
+<li>面罩</li>
+<li>创可贴</li>
+<li>酒精棉片&#x2F;酒精湿巾</li>
+<li>感冒灵</li>
+<li>藿香正气胶囊</li>
+<li>西瓜霜</li>
+<li>甲硝锉</li>
+<li>诺氟沙星</li>
+<li>皮炎平</li>
+<li>红霉素软膏</li>
+<li>体温计&#x2F;测温枪</li>
+<li>个人日常用药</li>
+<li>紫外线杀毒灯</li>
+</ol>
+<h3 id="电子产品及配件"><a href="#电子产品及配件" class="headerlink" title="电子产品及配件"></a>电子产品及配件</h3><ol>
+<li>英标转换插头</li>
+<li>插排</li>
+<li>充电电池套装</li>
+<li>鼠标键盘</li>
+<li>剃须刀</li>
+<li>各种充电器</li>
+<li>耳机</li>
+<li>计算器</li>
+<li>移动硬盘</li>
+<li>U盘&#x2F;读卡器</li>
+<li>路由器</li>
+<li>手机壳</li>
+<li>钢化膜</li>
+<li>手机平板折叠支架</li>
+<li>笔记本电脑支架</li>
+<li>相机三脚架</li>
+<li>网线</li>
+<li>鼠标垫</li>
+</ol>
+<h3 id="生活用品及工具"><a href="#生活用品及工具" class="headerlink" title="生活用品及工具"></a>生活用品及工具</h3><ol>
+<li>指甲钳挖耳勺套装</li>
+<li>无痕挂钩</li>
+<li>肥皂盒</li>
+<li>零钱包</li>
+<li>筷子</li>
+<li>饭盒</li>
+<li>保温杯</li>
+<li>折叠盆</li>
+<li>吸盘花洒支架</li>
+<li>螺丝刀</li>
+<li>瑞士军刀&#x2F;多功能工具钳</li>
+<li>洗衣袋</li>
+<li>地漏防堵塞过滤网</li>
+<li>折叠衣架</li>
+<li>镊子</li>
+<li>折叠烧水壶</li>
+<li>烘鞋器</li>
+<li>台灯</li>
+<li>USB小风扇</li>
+<li>加湿器</li>
+<li>牙刷</li>
+</ol>
+<h3 id="衣物"><a href="#衣物" class="headerlink" title="衣物"></a>衣物</h3><ol>
+<li>冲锋衣</li>
+<li>内衣内裤</li>
+<li>袜子</li>
+<li>两三双鞋子</li>
+<li>卫衣</li>
+<li>外套</li>
+<li>羽绒服</li>
+<li>毛巾</li>
+</ol>
+<h3 id="行李箱配件"><a href="#行李箱配件" class="headerlink" title="行李箱配件"></a>行李箱配件</h3><p>主要是为了让自己的箱子更醒目，在转盘领行李的时候可以一眼看到，防止拿错</p>
+<ol>
+<li>彩色行李箱绑带</li>
+<li>行李挂牌</li>
+<li>行李箱套</li>
+</ol>
+<h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新，另开一个新的博文记录</p>
+]]></content>
+      <categories>
+        <category>留学</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>攻略</tag>
+        <tag>英国</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英国落地日记</title>
     <url>/%E8%8B%B1%E5%9B%BD%E8%90%BD%E5%9C%B0%E6%97%A5%E8%AE%B0.html</url>
     <content><![CDATA[<blockquote class="blockquote-center">落地英国一个月的老鸽子又回来了~~~这可能又是一篇巨长的博文，打算记录下在英国这一年的生活，内含BRP、GP、银行卡等攻略，或许还能放个Vlog？（咕咕咕）</blockquote>
@@ -10577,377 +10882,6 @@ OFFICIAL
 <li>被子 ❌❌❌ 除非行李箱空一半（手动狗头）</li>
 <li>纱窗 ❌❌ 亚马逊就有，而且学生公寓的窗子基本只能开一道缝隙，根本就装不上</li>
 </ul>
-]]></content>
-      <categories>
-        <category>留学</category>
-      </categories>
-      <tags>
-        <tag>留学</tag>
-        <tag>攻略</tag>
-        <tag>英国</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>过气学长的碎碎念</title>
-    <url>/%E8%BF%87%E6%B0%94%E5%AD%A6%E9%95%BF%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">交完毕设就想写，咕到了现在，主要给学弟学妹说一下大四大五的流程和注意事项，大四部分内容可能和实际有出入，年代久远记不清了</blockquote>
-
-<span id="more"></span>
-
-<h1 id="大四篇"><a href="#大四篇" class="headerlink" title="大四篇"></a>大四篇</h1><p>大四学年没什么课，比较闲，想要考研的要开始准备了，出国的最好在大四把语言考出来，免得夜长梦多，本辣鸡去年12月才考过，还是在武汉考的，考完半个月武汉就暴发疫情了，然后雅思托福PTE全都取消了，雅思到现在还没有恢复，没考过的话这半年真的是煎熬了，所以说越早越好。</p>
-<h2 id="上学期"><a href="#上学期" class="headerlink" title="上学期"></a>上学期</h2><p>上学期的必修课只有专业课和建筑设备。专业课做的是居住区规划设计，地块在萍乡路，设计内容包括地块规划、道路规划、高差处理、户型设计、日照计算、立面设计、地下车库设计、景观设计这些，最后还搞了一个联（diu）合（ren）展评，想看本辣鸡作业的话微信找我要；建筑设备挺简单的，老师人很好，点名形式是传一张A4纸挨个签名，然后我们那年是开卷考试，上课的时候跟着老师在课本上做好勾画就没问题，重点关注一下老师的补充内容，考试会考到，建筑设备课的考试是大学的最后一场考试了。</p>
-<p>我当时还选了环境行为学和建筑系统化设计两门选修，两门选修课程压力都不大。环境行为学的作业是研究养老建筑，有实地调研和一个装置设计，要做一个文本；建筑系统化设计用英语上的，中间会有一个英文的汇报，介绍一个案例，自己写不出来就在谷德网上找中英对照的说明，最后的作业是挑一个你的专业课作业，对它进行改造，要求是换一个结构形式然后加一些绿色节能的设计，也要做成文本。</p>
-<h2 id="下学期"><a href="#下学期" class="headerlink" title="下学期"></a>下学期</h2><p>下学期就更闲了，必修课只有专业课和就业指导了。专业课是做旧城改造和高层设计，我们当时是两个作业合在一起做的，高层在旧城改造的地块里面，地块在金茂湾轮渡码头那边，考研的注意专业课和复习的时间分配，最后也是做了一个联（diu）合（ren）展评。就业指导就上几个周，主要会邀请考研成功和已经就业的学长学姐来分享经验，然后会有一些设计院来做宣讲，没有作业和考试。</p>
-<h1 id="大五篇"><a href="#大五篇" class="headerlink" title="大五篇"></a>大五篇</h1><h2 id="上学期-1"><a href="#上学期-1" class="headerlink" title="上学期"></a>上学期</h2><p>上学期基本没人在学校了，考研的基本会去报考的学校复习，实习的各回各家了，出国的要开始投递申请了。这个学期所谓的课程是建筑师职业实践，10个学分，名字起的很迷惑，实际就是去设计院实习，然后下学期开学要交一篇8000字的实习报告、15张A1施工图纸、一套方案文本、几张需要实习单位盖章的表格。这门课实习的同学比较好说，考研的同学基本没时间，就需要一定的操作了hhh</p>
-<h2 id="下学期-1"><a href="#下学期-1" class="headerlink" title="下学期"></a>下学期</h2><p>下学期开学要回学校了，有毕业实习（3学分）和毕业设计（10学分）两门课。毕业实习的名字也很迷惑，应该叫毕业设计前期调研的，需要交一份5000字的调研报告和10篇日记，主要是对调研的建筑案例的记录。</p>
-<p>毕业设计和平常的大作业差不多，时间线大概是</p>
-<ul>
-<li>开学到四月做一草二草</li>
-<li>四月底有中期检查，就是把你目前做的设计成果交上去，需要交的内容有<ul>
-<li>草图照片</li>
-<li>实体模型照片</li>
-<li>总平面图、各层平面图的CAD</li>
-<li>SU模型文件</li>
-<li>前八周的毕业设计周记，周记就是记录你每个周都干了些啥，有什么问题，如何解决问题的</li>
-</ul>
-</li>
-<li>中期检查完继续做一个周设计</li>
-<li>中期第一次没过的话，一个周后会再检查一次，第二次再不过就会被推迟答辩了</li>
-<li>然后就要开始出图了，最后要交的材料有<ul>
-<li>毕业设计的文本，这个学校有统一格式，到时候会发，大概内容有<ul>
-<li>设计说明</li>
-<li>给老师的一些评分表</li>
-<li>设计成果</li>
-</ul>
-</li>
-<li>实体模型或者动画，动画一般用Lumion做，时长一分钟</li>
-<li>5000字的设计说明<ul>
-<li>这个设计说明是需要查重的，学校知网会有两次免费的查重机会</li>
-<li>重复率不能超过30%</li>
-<li>建议自己用别的系统先查一下载上传学校的知网</li>
-<li>不要借鉴往届学长学姐的说明，学校有一个往届毕业生的论文库，这个库用其他网站是查不到的，借鉴的话基本全红</li>
-<li>纯自己写的话重复率很低的，我用学校的系统查的重复率只有0.7%，5000字写了一整天</li>
-</ul>
-</li>
-<li>所有的周记</li>
-<li>可能要做A1展板，我们因为疫情没有做这个</li>
-</ul>
-</li>
-<li>六月初会交图，过一个周会进行毕业答辩，关于答辩<ul>
-<li>答辩分为公开答辩和小组答辩，我们由于疫情就直接小组答辩了</li>
-<li>公开答辩的人选是每一个导师组推选一个人，然后这个人拿到的分数就是导师组内的最高分</li>
-<li>公开答辩结束后进行小组答辩，一般一个组十几个人，答辩老师四位</li>
-<li>答辩过程大概15-20分钟，首先用介绍你的方案，然后老师会问几个问题</li>
-<li>答辩前最好背熟规范，尤其是防火规范，问到规范的问题答不上来的话就非常尴尬了</li>
-<li>只答不辩，疯狂道歉（手动狗头）</li>
-</ul>
-</li>
-<li>答辩完成就坐等出分了，剩下的时间就是吃散伙饭、拍毕业照、拿毕业证滚蛋了</li>
-</ul>
-<p>差不多就这些内容了，有什么问题可以在下面评论留言或者微信找我，溜了溜了</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>建筑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英国留学后续日志</title>
-    <url>/%E8%8B%B1%E5%9B%BD%E7%95%99%E5%AD%A6%E5%90%8E%E7%BB%AD%E6%97%A5%E5%BF%97.html</url>
-    <content><![CDATA[<blockquote class="blockquote-center">今天终于等到了格拉的uncon，开一贴记录一下换取uncon及后续签证申请的相关事宜。另外格拉上个月正式宣布部分专业延期开学至21年1月，CS院的所有专业都包含在内，所以下半年就要上家里蹲大学了，慢慢更</blockquote>
-
-<span id="more"></span>
-
-<h1 id="预定住宿"><a href="#预定住宿" class="headerlink" title="预定住宿"></a>预定住宿</h1><p>英国留学住宿的选择主要有：校内的宿舍（或者学校官方的宿舍）、合租House、校外的学生公寓。大多数人都会选择校外的学生公寓，比较方便，不需要管水电煤等费用，相较house更加安全。公寓的房型主要分En-suite和Studio两种，En-suite一般是有4-6间卧室的套间，每个卧室内有独立卫浴，共享厨房与起居室，类似于国内的合租；Studio则是单人单间，房间内带有厨房和卫浴，类似于自己单独租的房子。Studio相对于En-suite隐私性更好，更安静，<del>也更贵。</del></p>
-<p>一般来说拿到offer之后就可以定房间了，比较想去的几个学校都可以先定上，订的越早越便宜，而且选择的空间也比较大。尽量找不需要押金的公寓，这样跑路的话直接找人转租或者取消就可以了。</p>
-<p>格拉附近比较热门的公寓有 West View（西景）、West Village（西村）、Vita、KC、TS、DM等，下边是出自格拉CS微信群的对比（图片来自某位不愿透露姓名的翟翟）</p>
-<p><img data-src="https://s2.loli.net/2022/05/13/UjZV4PTEzoOiKXk.jpg" alt="英国留学后续日志"></p>
-<p>预定的话可以直接去公寓官网订，也可以找中介，中介有异乡好居和学旅家，我找了学旅家，两家都说有（薛定谔的）返现，不知道什么时候能拿到，拿到回来更。</p>
-<h1 id="换取Uncon"><a href="#换取Uncon" class="headerlink" title="换取Uncon"></a>换取Uncon</h1><p>本科毕业之前大家的offer都是conditional offer，毕业后收集好缺少的材料并扫描成PDF，传到申请系统里去，就可以坐等发uncon了。我是6月24号上传到全部材料，7月7号在申请系统里查到了uncon，8号凌晨收到了邮件。一般毕业季换uncon的时间会长一些，因为换的人太多了。</p>
-<p>换uncon需要扫描上传的材料有</p>
-<ul>
-<li>毕业证原件</li>
-<li>学位证原件</li>
-<li>毕业证翻译件（自己翻译完盖学校的章就可以，不需要放照片）</li>
-<li>学位证翻译件（同上）</li>
-<li>包含所有课程的英文成绩单</li>
-<li>包含所有课程的中文成绩单（这个看具体学校，我在格拉只上传了英文的成绩单）</li>
-</ul>
-<p>下面是我用的毕业证与学位证的翻译件，格式没法调，需要word的康康百度云吧</p>
-<a class="btn" href="https://pan.baidu.com/s/1APNgOpkZaNnytagDF3rhYg"><i class="fa fa-arrow-right fa-fw"></i>密码uwbt</a>
-
-<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1"><i class="fa fa-pencil"></i>学士学位证书翻译</a></li><li class="tab"><a href="#first-unique-name-2"><i class="fa fa-pencil"></i>毕业证书翻译</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>学士学位证明翻译</strong></p>
-<p>Bachelor’s Degree Certificate</p>
-<p>This is to certify that XXX, male, born on June 26, 1997, has completed an undergraduate program in Architecture at XXXXX University and graduated. According to Regulations of the People’s Republic of China on Academic Degrees, he is awarded the degree of Bachelor of Science in Architecture.</p>
-<p>Chairman of Degree Evaluation Committee: Xxxxx Xxx      XXXXX University<br>Certificate No.: XXXXXXXXXXXXXX      June 18th, 2020</p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>毕业证书翻译</strong></p>
-<p>Graduation Certificate</p>
-<p>XXX XXX, male, born on June 26, 1997, studied a five-year program in Architecture at our school from September 2015 to June 2020. Having completed all courses specified in the teaching plan and passed the examinations, he is allowed to graduate.</p>
-<p>School: XXXXX University      President: Xxxxx Xxx<br>Certificate No.: XXXXXXXXXXXXXXXX      June 12th, 2020</p></div></div></div>
-
-<h1 id="保证金"><a href="#保证金" class="headerlink" title="保证金"></a>保证金</h1><p>保证金是一项英国政府判断你是否有足够的经济能力完成学业的依据，具体的操作是开一个存款证明，办签证时会随机抽查存款证明，抽到了会发邮件给你。</p>
-<ul>
-<li>保证金金额大概在30w人民币，具体数额是按照学费+所在地区9个月生活费来算的，为了保险起见会在这个数额上再加几千英镑，生活费伦敦地区标准为1265镑&#x2F;月，其他地区为1015镑&#x2F;月</li>
-<li>一般存定期并设置自动转存</li>
-<li>存满28天之后就可以在网上预约签证了</li>
-<li>然后在办理签证的前几天去银行开存款证明和流水，不用开太早，因为存款证明开具日期和网上签证预约日期的间隔不能超过31天</li>
-<li>英镑和人民币可以混存，总金额够了就行</li>
-<li>最好存在自己名下，存在父母名下需要多开具亲子关系证明以及授权使用资金的证明</li>
-<li>建议存在中农工建这类大行，不建议存在农村信用社一类的地方</li>
-<li>不能用理财产品代替</li>
-</ul>
-<p><img data-src="https://s2.loli.net/2022/05/13/K2Eq8rUmZeNtBgY.png" alt="英国留学后续日志"></p>
-<h1 id="换汇"><a href="#换汇" class="headerlink" title="换汇"></a>换汇</h1><p>在去英国之前建议提前换好英镑，在常用的银行换就可以，到英国办好当地银行卡后通过跨境汇款转过去。下面是一些情报</p>
-<ul>
-<li>购买英镑的时候分为<strong>现汇</strong>和<strong>现钞</strong>两个选项，现汇就是存在银行卡里的钱，现钞就是换取的纸币</li>
-<li>换汇一般就是购买英镑现汇存在银行卡里</li>
-<li>临行前可以换一部分现钞，供落地后应急用，不用太多，海关不允许携带5000美元以上的等值外币出境</li>
-<li>每人每年的换汇额度是5万美元</li>
-<li>换汇的时候看的是<strong>购汇汇率</strong>而不是<strong>结汇汇率</strong>。购汇汇率是你向银行购买英镑的汇率，结汇汇率是你向银行出售英镑的汇率</li>
-<li>建议像我一样的贫困人口每天多看两眼汇率，万一英镑再跌到8.1呢</li>
-<li>英镑存定期的利息非常低，三个月存期利率只有0.1%，而人民币的是1.35%</li>
-<li>跨境汇款有被锁的风险，建议出国前把身份证银行卡留给父母，以防万一</li>
-<li>换汇之后可以在手机银行APP上预约到银行网点去现钞，我取了1000英镑，小城市里只有50英镑的大额纸钞，大城市可能会换到5磅10磅这样的小面值</li>
-</ul>
-<h1 id="肺结核体检"><a href="#肺结核体检" class="headerlink" title="肺结核体检"></a>肺结核体检</h1><p>肺结核体检是办理T4签证的必要材料，一般在办签证前两三个月就可以做了。</p>
-<ul>
-<li>肺结核体检需要到指定的医院做，否则无效。定点医院共有15家，医院地址以及联系方式请看<a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china"><strong>签证官网</strong></a></li>
-<li>费用为550元人民币，收费方式为现金或支付宝，不支持医保卡、信用卡或其他支付方式</li>
-<li>需要提前预约，通常提前一或两个工作天预约即可</li>
-<li>预约方式有电话和邮件两种，部分医院（如济南出国移民体检中心）还可以在网站上预约</li>
-<li>无需空腹，正常饮食</li>
-<li>需要携带的材料<ul>
-<li>有效期半年以上的护照原件，不接受任何其他证件</li>
-<li>护照复印件一张</li>
-<li>两张半年内35mmx45mm免冠白底彩照（需要露出眉毛及耳朵）</li>
-</ul>
-</li>
-<li>流程很快，耗时约为半小时，换上衣服拍下胸片，然后医生询问下病史就结束了</li>
-<li>体检结果正常的话，上午体检下午可以出结果并发出证书，下午体检则需第二天早上才能发出证书。</li>
-<li>凭护照取证书，如果不方便可以发快递到付，建议自取</li>
-<li>证书有效期通常为六个月，特殊情况下为三个月</li>
-<li>如果出现问题的话，医院会要求做痰培养了，这个过程就很漫长了，需要等两个月。但是如果你认为身体没有问题的话建议换一家医院重新做体检，不要说自己在其他医院做过（信息来源：知乎）</li>
-<li>英国地址填自己的学校，懒的话可以不填，没什么影响</li>
-</ul>
-<p>下面是我10月13日在济南做肺结核的记录</p>
-<ul>
-<li>济南的肺结核检测在山医大三院的出国体检中心做，地址是天桥区无影山路38号，进门后右手边红屋顶的房子就是</li>
-<li>我是七点四十五到的，医院大门口会有保安测体温。</li>
-<li>我到的时候前面只有三个人。进入体检中心后出示身份证和健康码，然后在门口机器上取号</li>
-<li>取号后领两张表，再测一次体温，工作人员会把体温写在表的右上角，过程中有什么疑问随时可以问工作人员</li>
-<li>填完表等到八点半，拿着护照去拍照，拍完给一张黑白的照片</li>
-<li>拍完照出来等待叫号，叫到自己的号就拿着材料去最里面的服务台</li>
-<li>把护照原件、复印件、刚拍的黑白照片、两张小两寸白底照片（要在背面也上自己名字）、填写的两张表格交给工作人员</li>
-<li>然后会拍照，还有在一张表上签字</li>
-<li>然后付款，支付宝现金均可</li>
-<li>付完款后工作人员把护照原件还给你，并给一个手环，手环是开储物柜用的，上面有对应的柜子编号</li>
-<li>拿着手环去玻璃门那里刷脸进去，进去之后有工作人员引导你到更衣室并给一件蓝色的上衣</li>
-<li>把上衣首饰全部摘掉，穿上那件蓝色的衣服，只带着护照和手环出去</li>
-<li>工作人员会告诉你去哪个房间做检测，在机器上做一个类似叉腰的动作，双肩向上同时贴到机器上，然后工作人员会让深吸一口气憋住，然后等工作人员喊可以了就可以出来了</li>
-<li>出来之后回到更衣室把衣服换好，然后把蓝色上衣扔进门口的回收箱</li>
-<li>走廊里的工作人员会让你到另一侧的医生室，医生会问一些问题，比如有没有得过肺结核、有没有和结合病人有过接触</li>
-<li>然后摘口罩拍照</li>
-<li>然后出去找走廊里的小姐姐把你带出去</li>
-<li>出去之后回到大门口的前台把手环还回去就可以溜了</li>
-<li>工作人员说因为疫情的原因，第二天下午三点后才能取报告，但是实测当天下午四点半就可以拿到，可以打电话问一下</li>
-</ul>
-<h1 id="国际旅行健康证"><a href="#国际旅行健康证" class="headerlink" title="国际旅行健康证"></a>国际旅行健康证</h1><p>这个健康证还有一个疫苗接种证都是很迷惑的东西，俗称小红本和小黄本。根据目前了解的信息，两者都是可做可不做的，入境时有非常小的概率抽查国际旅行健康证，被查到没有证也没什么事，只是耽误一点时间去做个免费体检，大概半小时，疫苗接种证则没听说过有被查到的。所以这俩我就不打算做了</p>
-<h1 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h1><h2 id="预约"><a href="#预约" class="headerlink" title="预约"></a>预约</h2><p>签证需要等CAS下来才能去办，CAS一般在入学前的3个月开始陆续发放，办理签证前需要在网上预约，最近学生签证也改名了，原来叫 Tier 4，现在直接叫 student visa。预约的时候建议挂全局代理，预约网站在国内的使用体验极差。</p>
-<a class="btn" href="https://apply-to-visit-or-stay-in-the-uk.homeoffice.gov.uk/sort/country-nationality?p=student_out_uk&_ga=2.246378372.1460787317.1603017805-1850455343.1600247708"><i class="fa fa-home fa-fw"></i>预约网址</a>
-
-<p>预约的步骤可以去看<a href="https://weibo.com/u/7305573611">@PhD威宇</a>的微博文章<a href="https://weibo.com/ttarticle/p/show?id=2309404537047783178301">保姆级手把手教你申请T4签证</a>，大佬写的非常详细，佩服大佬的耐心。T4和现在的 student visa 稍有出入，大体的步骤都是一样的。（我才不是因为懒不想写）</p>
-<p><strong>注意下载checklist</strong></p>
-<p>按照步骤交完签证申请费和IHS之后会跳转到VFS的网站上，这个网站是用来上传材料和预约递签日期地点用的，有一些增(keng)值(qian)服务可以选。这个网站深得学校教务选课系统的真传，同款土豆服务器，而且不挂全局代理基本没法用，挂了全局代理也会有各种各样的bug。</p>
-<p>Student visa 一般只有两个材料需要上传，checklist 会有说明</p>
-<ul>
-<li>护照信息页</li>
-<li>肺结核报告</li>
-</ul>
-<p>建议提前在网站上上传好材料，如果去签证中心现场上传的话会收取100块钱的扫描费用（奸商！）。</p>
-<p>另外一些签证中心（说的就是你济南，还有西安）还会收取服务费，大概500块钱，在VFS那个网站上交。</p>
-<p>预约的时候可以隔几个小时上去一次，看看有没有更早的位置。我一开始预约的是23号递签，后来刷出来了14号和16号的，就在网站上更改了预约时间，更改免费。</p>
-<p>预约好时间、传完材料、交完钱之后会发给你一个<code>Appointment Confirmation Notice</code>，记得打印出来带着</p>
-<h2 id="递签"><a href="#递签" class="headerlink" title="递签"></a>递签</h2><p>我最终去递签的时候只带了下面几个材料</p>
-<ul>
-<li>护照原件</li>
-<li>checklist</li>
-<li>Appointment Confirmation Notice</li>
-<li>肺结核报告原件</li>
-</ul>
-<p>最后工作人员收走了这些材料</p>
-<ul>
-<li>护照原件</li>
-<li>checklist 的第一页</li>
-<li>Appointment Confirmation Notice</li>
-</ul>
-<p>下面是我在济南递签的流程，我是12:13进去的，12:25就出来了</p>
-<ul>
-<li>济南签证中心地址在济南市历下区经十路11890号北京银行5楼</li>
-<li>从北京银行大厦的南门进，进去后在右手边向保安大叔出示健康码并测量体温</li>
-<li>用微信扫描桌面立牌上的二维码，填写姓名手机号等个人信息进行登记</li>
-<li>做四号电梯（最里面右手边那个）上5楼</li>
-<li>出电梯后左手边可以看到工作人员在柜台前面，会问是不是来办签证，然后带你到签证中心门口，测量体温后经过安检门进入</li>
-<li>进入之后出示护照、checklist、notice这几个材料，然后工作人员会问姓名和出生日期，并给你一张号码纸</li>
-<li>进去等叫号，左手边有几排椅子，椅子前面的柱子上挂着电视，会显示叫号信息</li>
-<li>人少的话工作人员就让直接去柜台，去柜台交护照、checklist、notice</li>
-<li>工作人员会问你办不办加急，问护照是自取还是快递，快递的话会给你一张快递单填写，然后交现金80元，可以找零</li>
-<li>工作人员没有提起过短信服务，短信也确实没什么用</li>
-<li>等一会工作人员会把不要的材料都退给你，快递的会给一张EMS快递单回执</li>
-<li>再回去等叫号，叫到号去7号室拍照录指纹</li>
-<li>先会让你报一下姓名和出生日期，然后摘眼镜和口罩拍照</li>
-<li>然后采指纹，先是右手四个手指并排，然后左手四个手指，最后是两个大拇指一起</li>
-<li>结束之后会给你张回执，就可以走了</li>
-<li>回家默默等快递把护照寄回来</li>
-</ul>
-<h1 id="订机票"><a href="#订机票" class="headerlink" title="订机票"></a>订机票</h1><p>机票我是在携程买的，也可以直接官网购买或者打电话购买</p>
-<p>机票最好早买，早买一般都很便宜。我亲眼见证了我的机票从4200元涨价到了5500元，现在涨到了15000元。我在5500的时候买入的，买入第二天晚上就涨到了15000。</p>
-<p>我们买的一般都是留学生机票，会有额外的行李额度，一般是两件不超过23kg的28寸托运行李和一件不超过20寸的手提行李，我一开始以为需要签证才能购买留学生机票，所以错过了4200的低价，其实买的时候完全不需要签证等证明材料。携程的要求是在飞机起飞前三天上传好签证、cas、offer、护照等证明材料就可以。能早买就早买吧。</p>
-<p>另外由于今年疫情的影响，有些飞机是不一定能飞的，没有经过民航局审批，但是他也在卖票，建议买票之前先查询一下。因为有些航空公司退票只给退代金券，就很坑。</p>
-<p>飞英国的机票除了去伦敦的，基本都要转机，转机机场一般有荷兰阿姆斯特丹、芬兰赫尔辛基、阿联酋迪拜、伦敦希思罗等。购票时看好是否是行李直挂，不是直挂的话转机的时候需要重新办理行李托运手续，麻烦且耗时，要留足充分的时间。</p>
-<p>此外如果飞到大学所在城市的机票很贵的话可以看一下飞往临近城市的机票，举个栗子，我是一开始打算从上海飞格拉斯哥，但是去格拉斯哥的机票已经都在一万多了，然鹅去爱丁堡的机票只有五千多，所以我就买了去爱宝的机票，落地后再几个人一起包车直接到格拉宿舍楼下，包车大概在100胖，三四个人一起分担也不贵。</p>
-<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1><p>注册一般分为学术注册（Academic Registration）和财务注册（Financial Registration），学校会给提前发一封邮件告诉你注册的网址、用户名和密码，记得修改自己的密码。</p>
-<h2 id="学术注册"><a href="#学术注册" class="headerlink" title="学术注册"></a>学术注册</h2><p>这里以格拉为例，学术注册包含以下内容</p>
-<ul>
-<li>确认课程信息</li>
-<li>确认姓名、性别、出生日期以及学生ID</li>
-<li>填写宗教信仰与国籍</li>
-<li>填写在英国的住址（Term Address）</li>
-<li>填写个人邮箱地址与电话号码</li>
-<li>是否有残疾</li>
-<li>添加紧急联系人</li>
-<li>填写 Statistical Information，就跟查户口一样，包括性取向、有没有孩子等问题</li>
-<li>上传照片，这个照片会用在学生证上，照片的标准和护照的一样</li>
-<li>上传护照ID页</li>
-</ul>
-<p>学术注册完成后就可以选课（Enroll）了</p>
-<h2 id="财务注册"><a href="#财务注册" class="headerlink" title="财务注册"></a>财务注册</h2><p>财务注册就是交学费，常见的方式有电汇、信用卡付款等，也有部分学校支持支付宝或银联卡支付。</p>
-<p>我用的方法是信用卡分期付款，部分学校对于全款付学费会有优惠折扣，然而格拉并没有。。。如果学校对全款支付学费没有优惠的话建议使用分期付款，毕竟能把暂时不用交的前放在英国的银行账户里吃利息，几万英镑产生的利息也不少的。</p>
-<p>我交学费的过程比较曲折。。。一开始我用的信用卡是建行的VISA卡，但是这张卡只能用人民币还款，我早买下的英镑不能拿来还款，所以果断办新卡。我先把建设银行账户里的英镑跨行转账到了中国银行的账户里，然后办了中国银行的卓隽英镑卡，可以直接用英镑还款。</p>
-<p>这张卡建议在中国银行的APP上申请，下卡非常快，我从申请到拿到卡只用了3天。注意申请的时候职业不要选择学生，直接选择待业，剩下的收入啥的胡乱写就行。咱也不知道为啥，这张卡明明是给留学生用的，但是选择学生身份申请的话大概率直接秒拒，很迷惑。另外不建议到网点去办理，工作人员对这类卡不太了解，而且办卡速度很慢，我还在微博上看到有人网点办英镑卡，结果拿到手是美元卡，没法用。</p>
-<p>我当时拿到的额度是1000英镑，少得可怜，而格拉分期付款的第一笔款需要2933磅。如果不嫌麻烦的话可以分三次刷1000英镑，刷完一次就还款。然而我比较懒，就我直接向信用卡里转账了3000磅，一次划掉。</p>
-<h1 id="行李指南"><a href="#行李指南" class="headerlink" title="行李指南"></a>行李指南</h1><p>我在国内买了很多杂七杂八的行李，也不知道行李箱里能不能装得下hhh</p>
-<p>下面只是我想到的行李，到时候不一定会全带</p>
-<h2 id="登机行李"><a href="#登机行李" class="headerlink" title="登机行李"></a>登机行李</h2><h3 id="文件证件类"><a href="#文件证件类" class="headerlink" title="文件证件类"></a>文件证件类</h3><ol>
-<li>护照</li>
-<li>与护照一起寄回来的BRP说明</li>
-<li>CAS</li>
-<li>租房合同</li>
-<li>语言成绩单</li>
-<li>学术成绩单</li>
-<li>毕业证学位证（记得把外面的壳子拔下来，壳子没用）</li>
-<li>证件照</li>
-<li>入境前48小时填写的那张表</li>
-<li>肺结核报告</li>
-</ol>
-<h3 id="现金卡片"><a href="#现金卡片" class="headerlink" title="现金卡片"></a>现金卡片</h3><ol>
-<li>银行卡</li>
-<li>英国手机卡</li>
-<li>卡针</li>
-<li>英镑现金</li>
-<li>签字笔</li>
-</ol>
-<h3 id="防疫物资（少量）"><a href="#防疫物资（少量）" class="headerlink" title="防疫物资（少量）"></a>防疫物资（少量）</h3><ol>
-<li>口罩</li>
-<li>一次性手套</li>
-<li>护目镜或面罩</li>
-</ol>
-<h3 id="电子产品"><a href="#电子产品" class="headerlink" title="电子产品"></a>电子产品</h3><ol>
-<li>手机</li>
-<li>充电宝</li>
-<li>相机</li>
-<li>电脑</li>
-<li>平板</li>
-<li>充电器</li>
-<li>数据线</li>
-<li>耳机</li>
-<li>多国旅行转换插头</li>
-</ol>
-<h3 id="葛优瘫用品"><a href="#葛优瘫用品" class="headerlink" title="葛优瘫用品"></a>葛优瘫用品</h3><ol>
-<li>拖鞋</li>
-<li>颈枕</li>
-<li>眼罩</li>
-<li>耳塞</li>
-<li>旅行洗漱包</li>
-<li>小零食</li>
-</ol>
-<h2 id="托运行李"><a href="#托运行李" class="headerlink" title="托运行李"></a>托运行李</h2><h3 id="药品防疫类"><a href="#药品防疫类" class="headerlink" title="药品防疫类"></a>药品防疫类</h3><ol>
-<li>口罩</li>
-<li>一次性手套</li>
-<li>面罩</li>
-<li>创可贴</li>
-<li>酒精棉片&#x2F;酒精湿巾</li>
-<li>感冒灵</li>
-<li>藿香正气胶囊</li>
-<li>西瓜霜</li>
-<li>甲硝锉</li>
-<li>诺氟沙星</li>
-<li>皮炎平</li>
-<li>红霉素软膏</li>
-<li>体温计&#x2F;测温枪</li>
-<li>个人日常用药</li>
-<li>紫外线杀毒灯</li>
-</ol>
-<h3 id="电子产品及配件"><a href="#电子产品及配件" class="headerlink" title="电子产品及配件"></a>电子产品及配件</h3><ol>
-<li>英标转换插头</li>
-<li>插排</li>
-<li>充电电池套装</li>
-<li>鼠标键盘</li>
-<li>剃须刀</li>
-<li>各种充电器</li>
-<li>耳机</li>
-<li>计算器</li>
-<li>移动硬盘</li>
-<li>U盘&#x2F;读卡器</li>
-<li>路由器</li>
-<li>手机壳</li>
-<li>钢化膜</li>
-<li>手机平板折叠支架</li>
-<li>笔记本电脑支架</li>
-<li>相机三脚架</li>
-<li>网线</li>
-<li>鼠标垫</li>
-</ol>
-<h3 id="生活用品及工具"><a href="#生活用品及工具" class="headerlink" title="生活用品及工具"></a>生活用品及工具</h3><ol>
-<li>指甲钳挖耳勺套装</li>
-<li>无痕挂钩</li>
-<li>肥皂盒</li>
-<li>零钱包</li>
-<li>筷子</li>
-<li>饭盒</li>
-<li>保温杯</li>
-<li>折叠盆</li>
-<li>吸盘花洒支架</li>
-<li>螺丝刀</li>
-<li>瑞士军刀&#x2F;多功能工具钳</li>
-<li>洗衣袋</li>
-<li>地漏防堵塞过滤网</li>
-<li>折叠衣架</li>
-<li>镊子</li>
-<li>折叠烧水壶</li>
-<li>烘鞋器</li>
-<li>台灯</li>
-<li>USB小风扇</li>
-<li>加湿器</li>
-<li>牙刷</li>
-</ol>
-<h3 id="衣物"><a href="#衣物" class="headerlink" title="衣物"></a>衣物</h3><ol>
-<li>冲锋衣</li>
-<li>内衣内裤</li>
-<li>袜子</li>
-<li>两三双鞋子</li>
-<li>卫衣</li>
-<li>外套</li>
-<li>羽绒服</li>
-<li>毛巾</li>
-</ol>
-<h3 id="行李箱配件"><a href="#行李箱配件" class="headerlink" title="行李箱配件"></a>行李箱配件</h3><p>主要是为了让自己的箱子更醒目，在转盘领行李的时候可以一眼看到，防止拿错</p>
-<ol>
-<li>彩色行李箱绑带</li>
-<li>行李挂牌</li>
-<li>行李箱套</li>
-</ol>
-<h1 id="落地后续"><a href="#落地后续" class="headerlink" title="落地后续"></a>落地后续</h1><p>预计1月到英国更新，另开一个新的博文记录</p>
 ]]></content>
       <categories>
         <category>留学</category>
@@ -11612,6 +11546,72 @@ OFFICIAL
       <tags>
         <tag>Windows</tag>
         <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>过气学长的碎碎念</title>
+    <url>/%E8%BF%87%E6%B0%94%E5%AD%A6%E9%95%BF%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center">交完毕设就想写，咕到了现在，主要给学弟学妹说一下大四大五的流程和注意事项，大四部分内容可能和实际有出入，年代久远记不清了</blockquote>
+
+<span id="more"></span>
+
+<h1 id="大四篇"><a href="#大四篇" class="headerlink" title="大四篇"></a>大四篇</h1><p>大四学年没什么课，比较闲，想要考研的要开始准备了，出国的最好在大四把语言考出来，免得夜长梦多，本辣鸡去年12月才考过，还是在武汉考的，考完半个月武汉就暴发疫情了，然后雅思托福PTE全都取消了，雅思到现在还没有恢复，没考过的话这半年真的是煎熬了，所以说越早越好。</p>
+<h2 id="上学期"><a href="#上学期" class="headerlink" title="上学期"></a>上学期</h2><p>上学期的必修课只有专业课和建筑设备。专业课做的是居住区规划设计，地块在萍乡路，设计内容包括地块规划、道路规划、高差处理、户型设计、日照计算、立面设计、地下车库设计、景观设计这些，最后还搞了一个联（diu）合（ren）展评，想看本辣鸡作业的话微信找我要；建筑设备挺简单的，老师人很好，点名形式是传一张A4纸挨个签名，然后我们那年是开卷考试，上课的时候跟着老师在课本上做好勾画就没问题，重点关注一下老师的补充内容，考试会考到，建筑设备课的考试是大学的最后一场考试了。</p>
+<p>我当时还选了环境行为学和建筑系统化设计两门选修，两门选修课程压力都不大。环境行为学的作业是研究养老建筑，有实地调研和一个装置设计，要做一个文本；建筑系统化设计用英语上的，中间会有一个英文的汇报，介绍一个案例，自己写不出来就在谷德网上找中英对照的说明，最后的作业是挑一个你的专业课作业，对它进行改造，要求是换一个结构形式然后加一些绿色节能的设计，也要做成文本。</p>
+<h2 id="下学期"><a href="#下学期" class="headerlink" title="下学期"></a>下学期</h2><p>下学期就更闲了，必修课只有专业课和就业指导了。专业课是做旧城改造和高层设计，我们当时是两个作业合在一起做的，高层在旧城改造的地块里面，地块在金茂湾轮渡码头那边，考研的注意专业课和复习的时间分配，最后也是做了一个联（diu）合（ren）展评。就业指导就上几个周，主要会邀请考研成功和已经就业的学长学姐来分享经验，然后会有一些设计院来做宣讲，没有作业和考试。</p>
+<h1 id="大五篇"><a href="#大五篇" class="headerlink" title="大五篇"></a>大五篇</h1><h2 id="上学期-1"><a href="#上学期-1" class="headerlink" title="上学期"></a>上学期</h2><p>上学期基本没人在学校了，考研的基本会去报考的学校复习，实习的各回各家了，出国的要开始投递申请了。这个学期所谓的课程是建筑师职业实践，10个学分，名字起的很迷惑，实际就是去设计院实习，然后下学期开学要交一篇8000字的实习报告、15张A1施工图纸、一套方案文本、几张需要实习单位盖章的表格。这门课实习的同学比较好说，考研的同学基本没时间，就需要一定的操作了hhh</p>
+<h2 id="下学期-1"><a href="#下学期-1" class="headerlink" title="下学期"></a>下学期</h2><p>下学期开学要回学校了，有毕业实习（3学分）和毕业设计（10学分）两门课。毕业实习的名字也很迷惑，应该叫毕业设计前期调研的，需要交一份5000字的调研报告和10篇日记，主要是对调研的建筑案例的记录。</p>
+<p>毕业设计和平常的大作业差不多，时间线大概是</p>
+<ul>
+<li>开学到四月做一草二草</li>
+<li>四月底有中期检查，就是把你目前做的设计成果交上去，需要交的内容有<ul>
+<li>草图照片</li>
+<li>实体模型照片</li>
+<li>总平面图、各层平面图的CAD</li>
+<li>SU模型文件</li>
+<li>前八周的毕业设计周记，周记就是记录你每个周都干了些啥，有什么问题，如何解决问题的</li>
+</ul>
+</li>
+<li>中期检查完继续做一个周设计</li>
+<li>中期第一次没过的话，一个周后会再检查一次，第二次再不过就会被推迟答辩了</li>
+<li>然后就要开始出图了，最后要交的材料有<ul>
+<li>毕业设计的文本，这个学校有统一格式，到时候会发，大概内容有<ul>
+<li>设计说明</li>
+<li>给老师的一些评分表</li>
+<li>设计成果</li>
+</ul>
+</li>
+<li>实体模型或者动画，动画一般用Lumion做，时长一分钟</li>
+<li>5000字的设计说明<ul>
+<li>这个设计说明是需要查重的，学校知网会有两次免费的查重机会</li>
+<li>重复率不能超过30%</li>
+<li>建议自己用别的系统先查一下载上传学校的知网</li>
+<li>不要借鉴往届学长学姐的说明，学校有一个往届毕业生的论文库，这个库用其他网站是查不到的，借鉴的话基本全红</li>
+<li>纯自己写的话重复率很低的，我用学校的系统查的重复率只有0.7%，5000字写了一整天</li>
+</ul>
+</li>
+<li>所有的周记</li>
+<li>可能要做A1展板，我们因为疫情没有做这个</li>
+</ul>
+</li>
+<li>六月初会交图，过一个周会进行毕业答辩，关于答辩<ul>
+<li>答辩分为公开答辩和小组答辩，我们由于疫情就直接小组答辩了</li>
+<li>公开答辩的人选是每一个导师组推选一个人，然后这个人拿到的分数就是导师组内的最高分</li>
+<li>公开答辩结束后进行小组答辩，一般一个组十几个人，答辩老师四位</li>
+<li>答辩过程大概15-20分钟，首先用介绍你的方案，然后老师会问几个问题</li>
+<li>答辩前最好背熟规范，尤其是防火规范，问到规范的问题答不上来的话就非常尴尬了</li>
+<li>只答不辩，疯狂道歉（手动狗头）</li>
+</ul>
+</li>
+<li>答辩完成就坐等出分了，剩下的时间就是吃散伙饭、拍毕业照、拿毕业证滚蛋了</li>
+</ul>
+<p>差不多就这些内容了，有什么问题可以在下面评论留言或者微信找我，溜了溜了</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>建筑</tag>
       </tags>
   </entry>
   <entry>

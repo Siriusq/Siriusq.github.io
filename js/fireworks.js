@@ -113,19 +113,22 @@ class CursorSpecialEffects {
   }
 
   init() {
-    const style = this.renderCanvas.style
-    style.position = 'fixed'
-    style.top = style.left = 0
-    style.zIndex = '999999999999999999999999999999999999999999'
-    style.pointerEvents = 'none'
+    // 只在桌面端生效，判断屏幕宽度是否大于 768px
+    if (window.innerWidth > 768) {
+      const style = this.renderCanvas.style
+      style.position = 'fixed'
+      style.top = style.left = 0
+      style.zIndex = '999999999999999999999999999999999999999999'
+      style.pointerEvents = 'none'
 
-    style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth
-    style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight
+      style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth
+      style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight
 
-    document.body.append(this.renderCanvas)
+      document.body.append(this.renderCanvas)
 
-    window.addEventListener('mousedown', this.handleMouseDown.bind(this))
-    window.addEventListener('pagehide', this.handlePageHide.bind(this))
+      window.addEventListener('mousedown', this.handleMouseDown.bind(this))
+      window.addEventListener('pagehide', this.handlePageHide.bind(this))
+    }
   }
 
   run() {
