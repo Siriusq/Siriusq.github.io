@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-09-12T09:14:24.839Z</updated>
+  <updated>2024-09-16T13:53:42.949Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NexT 8.20 升级日志</title>
+    <link href="https://siriusq.top/next-8-20-update-log.html"/>
+    <id>https://siriusq.top/next-8-20-update-log.html</id>
+    <published>2024-09-16T04:01:26.000Z</published>
+    <updated>2024-09-16T13:53:42.949Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 博客的升级日志，这次的调整比较少，只有简简单单的刷新了一下版本号，然后提升了一丢丢的阅读体验。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="Next" scheme="https://siriusq.top/tags/Next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 插件开发</title>
+    <link href="https://siriusq.top/hexo-plugin-development.html"/>
+    <id>https://siriusq.top/hexo-plugin-development.html</id>
+    <published>2024-09-12T04:00:08.000Z</published>
+    <updated>2024-09-19T08:51:24.887Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 眼馋 The Verge 的图片轮播功能，在有序图集中轮播比组图要好用，但是 Hexo 并没有相关插件，于是照猫画虎自己用 Splide 摸了一个适用于 NexT 主题的图片轮播插件，顺便记录下插件从开发到发布的全过程。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Coding" scheme="https://siriusq.top/categories/Coding/"/>
+    
+    
+    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
+    
+    <category term="插件" scheme="https://siriusq.top/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+    <category term="npm" scheme="https://siriusq.top/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>Steam开机静默启动</title>
@@ -417,62 +461,6 @@
     <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
     <category term="macBook Pro" scheme="https://siriusq.top/tags/macBook-Pro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更改Adobe软件安装位置并禁止自动更新</title>
-    <link href="https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html"/>
-    <id>https://siriusq.top/%E6%9B%B4%E6%94%B9Adobe%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%E5%B9%B6%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.html</id>
-    <published>2022-12-18T09:52:26.000Z</published>
-    <updated>2024-09-12T08:57:35.938Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;因为最近换了张显卡，因为驱动问题被迫把练习时长两年半的系统重装了，因为C盘还是祖传的256G固态，Adobe的几个软件一上去就给用掉不少，看着很不爽，于是尝试更改了Adobe全家桶的安装位置，顺带屏蔽了全家桶的联网权限，防止它们自动更新。需要注意我安装的是cc2018，新版不一定适用&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="Win10" scheme="https://siriusq.top/tags/Win10/"/>
-    
-    <category term="Adobe" scheme="https://siriusq.top/tags/Adobe/"/>
-    
-    <category term="防火墙" scheme="https://siriusq.top/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-    <category term="脚本" scheme="https://siriusq.top/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>utools本地搜索结果显示不全的某种解决方案</title>
-    <link href="https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html"/>
-    <id>https://siriusq.top/utools%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%85%A8.html</id>
-    <published>2022-07-23T03:41:49.000Z</published>
-    <updated>2024-09-12T09:15:26.949Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;前几天发现utools的本地搜索只能加载出来约20条结果，滚动条拉到底部后不会加载新的搜索结果，而单独使用everything搜索结果正常。折腾了半天想起来调整过系统字体大小，去设置里将字体大小调回默认后问题解决&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="utools" scheme="https://siriusq.top/tags/utools/"/>
-    
-    <category term="滚动加载" scheme="https://siriusq.top/tags/%E6%BB%9A%E5%8A%A8%E5%8A%A0%E8%BD%BD/"/>
-    
-    <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
-    
-    <category term="React" scheme="https://siriusq.top/tags/React/"/>
-    
-    <category term="缩放" scheme="https://siriusq.top/tags/%E7%BC%A9%E6%94%BE/"/>
     
   </entry>
   
