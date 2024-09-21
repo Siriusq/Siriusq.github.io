@@ -84,6 +84,31 @@
   </entry>
   
   <entry>
+    <title>禁止Windows自动更新A卡驱动</title>
+    <link href="https://siriusq.top/amd-gpu-driver-auto-update-banned.html"/>
+    <id>https://siriusq.top/amd-gpu-driver-auto-update-banned.html</id>
+    <published>2024-08-05T08:06:08.000Z</published>
+    <updated>2024-09-20T15:11:47.889Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 头脑发热更新了下A卡驱动，然后发现显卡在新驱动 24.7.1 下啸叫严重，而我的机箱就在我手边，那声音，跟锯桌子腿一样。然后我就卸载了新驱动，重新装了个版本很老但是很稳定的 22.5.1 驱动，本以为这样就结束了，结果被Windows自动更新这个大聪明给背刺了，趁我吃了个饭的功夫，把驱动又给我升级了。我试了多种方法之后才终于让自动更新消停了，以下就是我和自动更新这个大聪明斗智斗勇的过程。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="GPU" scheme="https://siriusq.top/tags/GPU/"/>
+    
+    <category term="Driver" scheme="https://siriusq.top/tags/Driver/"/>
+    
+    <category term="AMD" scheme="https://siriusq.top/tags/AMD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>修复 VMware Fusion 虚拟机无法访问USB设备</title>
     <link href="https://siriusq.top/vmware-fusion-usb-fix.html"/>
     <id>https://siriusq.top/vmware-fusion-usb-fix.html</id>
@@ -436,31 +461,6 @@
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
     <category term="攻略" scheme="https://siriusq.top/tags/%E6%94%BB%E7%95%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacBook Pro 路易十六联名款</title>
-    <link href="https://siriusq.top/MacBookProHeadless.html"/>
-    <id>https://siriusq.top/MacBookProHeadless.html</id>
-    <published>2023-03-31T13:16:46.000Z</published>
-    <updated>2024-09-12T09:10:58.264Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;论如何用最少的钱买一台mac&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/07/01/m29rQx1G8WTtO3A.jpg&quot; alt=&quot;MBPHeadless.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
-    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
-    
-    <category term="macBook Pro" scheme="https://siriusq.top/tags/macBook-Pro/"/>
     
   </entry>
   
