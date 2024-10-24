@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-09-19T15:42:32.110Z</updated>
+  <updated>2024-10-24T08:38:23.878Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows LTSC 文件资源管理器侧边栏 OneDrive 图标异常修复</title>
+    <link href="https://siriusq.top/onedrive-explorer-icon-bug-fix.html"/>
+    <id>https://siriusq.top/onedrive-explorer-icon-bug-fix.html</id>
+    <published>2024-10-24T07:41:25.000Z</published>
+    <updated>2024-10-24T08:38:23.878Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 安装完 Windows11 LTSC 后，我发现文件资源管理器侧边栏中的OneDrive图标不能正常使用，点击时完全没有反应，属性页面显示一片空白。查了一下发现这是一个微软祖传的老Bug，在LTSC版本的Windows上安装个人版OneDrive时，安装程序没有为侧边栏图标注册指向OneDrive文件夹的路径值，导致这个图标指向空值，所以无法正常使用。只能说不愧是微软，这么多年了就是没修这个Bug。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
+    
+    <category term="LTSC" scheme="https://siriusq.top/tags/LTSC/"/>
+    
+    <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
+    
+  </entry>
   
   <entry>
     <title>NexT 8.20 升级日志</title>
@@ -438,29 +463,6 @@
     <category term="Log" scheme="https://siriusq.top/tags/Log/"/>
     
     <category term="C#" scheme="https://siriusq.top/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>同时启用独显与核显</title>
-    <link href="https://siriusq.top/TurnOniGpu.html"/>
-    <id>https://siriusq.top/TurnOniGpu.html</id>
-    <published>2023-04-30T11:38:12.000Z</published>
-    <updated>2024-09-12T09:15:09.483Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;以普遍理性而论，插入独显后主板会自动屏蔽掉集显。虽然英特尔核心显卡的游戏性能很拉跨，但是它的视频编解码能力却强的离谱。像6500xt这种编码器被阉割的显卡在游戏中录屏、推流或者视频剪辑时就会产生明显的卡顿掉帧，此时调用核显就可以减轻独显与CPU的负担，获得更丝滑的体验。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
-    
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
-    <category term="攻略" scheme="https://siriusq.top/tags/%E6%94%BB%E7%95%A5/"/>
     
   </entry>
   
