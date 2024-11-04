@@ -2,18 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</loc>
+    <loc>https://siriusq.top/next-8-20-update-log.html</loc>
     
-    <lastmod>2024-10-27</lastmod>
+    <lastmod>2024-11-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://siriusq.top/next-8-20-update-log.html</loc>
+    <loc>https://siriusq.top/git-ssh-config.html</loc>
     
-    <lastmod>2024-10-24</lastmod>
+    <lastmod>2024-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html</loc>
+    
+    <lastmod>2024-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</loc>
+    
+    <lastmod>2024-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -174,15 +192,6 @@
   
   <url>
     <loc>https://siriusq.top/Windows%E5%94%A4%E9%86%92%E5%90%8E%E7%AA%97%E5%8F%A3%E4%BD%8D%E7%A7%BB%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
-    
-    <lastmod>2024-09-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://siriusq.top/Windows-Terminal-%E7%BE%8E%E5%8C%96.html</loc>
     
     <lastmod>2024-09-12</lastmod>
     
@@ -643,7 +652,7 @@
 
   <url>
     <loc>https://siriusq.top/</loc>
-    <lastmod>2024-10-27</lastmod>
+    <lastmod>2024-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
