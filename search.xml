@@ -5955,6 +5955,9 @@
 
 <span id="more"></span>
 
+<div class="note warning"><p>本文写于2020年，目前仅适用于Windows10操作系统，如需Windows11相关教程，请移步新教程：<a href="https://siriusq.top/win-11-iot-ltsc-installation.html">Windows 11 IoT LSTC 重装记录</a></p>
+</div>
+
 <h1 id="必备素材"><a href="#必备素材" class="headerlink" title="必备素材"></a>必备素材</h1><ul>
 <li>容量≥8G的U盘一个</li>
 <li>能正常使用的电脑一台</li>
@@ -6070,9 +6073,9 @@
 <h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>进入桌面后建议联网，然后进入<code>设置-更新和安全-检查更新</code>，等待所有更新安装完成后点击下面出现的<code>立即重启</code>，这个过程耗时较长，取决于网速。另外Windows会自动在后台安装驱动，如果当前屏幕分辨率很怪的话不用慌，过一会安装完驱动就好了。</p>
 <h1 id="KMS激活"><a href="#KMS激活" class="headerlink" title="KMS激活"></a>KMS激活</h1><p>KMS全称Key Management Service，主要用于企业内的计算机批量激活，激活有效期为180天，但是可以设置自动续期。需要注意的是个人用户使用的KMS在法律层面上并不属于正版，去官网买的Key才算法律层面的正版，微软只是对这种行为睁一只眼闭一只眼罢了。不建议长期使用。</p>
 <p>激活方式如下：在开始按钮上右键，选择<code>Windows Powershell（管理员）</code>，依次输入下面的命令并回车，有弹窗的话点确定即可。激活过程请保持联网</p>
-<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">slmgr <span class="literal">-skms</span> kms.<span class="number">03</span>k.org</span><br><span class="line">slmgr <span class="literal">-ipk</span> 相应版本的秘钥</span><br><span class="line">slmgr <span class="literal">-ato</span></span><br><span class="line">slmgr <span class="literal">-dlv</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ps"><table><tr><td class="code"><pre><span class="line">slmgr <span class="literal">-skms</span> kms.<span class="number">03</span>k.org</span><br><span class="line">slmgr <span class="literal">-ipk</span> 相应版本的密钥</span><br><span class="line">slmgr <span class="literal">-ato</span></span><br><span class="line">slmgr <span class="literal">-dlv</span></span><br></pre></td></tr></table></figure>
 
-<p>相应版本的秘钥如下，Win11和Win10的一样，没有变，其他版本请到<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys"><strong>微软官方文档</strong></a>查找，其中版本后缀有N的为欧洲专供版，后缀有G的为政府专供版，不过这些和一般用户没啥关系。</p>
+<p>相应版本的密钥如下，Win11和Win10的一样，没有变，其他版本请到<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys"><strong>微软官方文档</strong></a>查找，其中版本后缀有N的为欧洲专供版，后缀有G的为政府专供版，不过这些和一般用户没啥关系。</p>
 <table>
 <thead>
 <tr>
@@ -6400,12 +6403,12 @@
 <p>下载下来是个自解压程序，双击自解压后打开解压的文件夹，启动Display Driver Uninstaller.exe，在右边选择<code>显卡</code>-<code>AMD</code>，然后点击<code>清除并重启</code>，不用进安全模式，等它运行完会自动重启。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-c70v7ndud">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hpbtleqt6">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="DDU清除驱动"><img data-src="https://s2.loli.net/2024/09/20/eBSPsjLvk625aZo.webp" alt="DDU清除驱动" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-c70v7ndud" class="carousel-caption"> </div>
+      <div id="carousel-caption-hpbtleqt6" class="carousel-caption"> </div>
     </div>
   
 
@@ -6428,12 +6431,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pvydt6me9">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-x8gxukyek">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="右键单击开始菜单，打开设备管理器"><img data-src="https://s2.loli.net/2024/09/20/ywtqmVIFb8d5RGs.webp" alt="右键单击开始菜单，打开设备管理器" class="zoomable"></li><li class="splide__slide" data-caption="双击显示适配器下的AMD显卡"><img data-src="https://s2.loli.net/2024/09/20/1lNt3rLd7qmfOec.webp" alt="双击显示适配器下的AMD显卡" class="zoomable"></li><li class="splide__slide" data-caption="切换到详细信息标签页，在属性下拉菜单中找到类Guid，然后右键复制下面显示的值"><img data-src="https://s2.loli.net/2024/09/20/l27BaLnkHFAKcWS.webp" alt="切换到详细信息标签页，在属性下拉菜单中找到类Guid，然后右键复制下面显示的值" class="zoomable"></li><li class="splide__slide" data-caption="依次打开计算机配置-管理模板-系统-设备安装-设备安装限制，双击打开右侧的阻止使用与下列设备安装程序类相匹配的的驱动程序安装设备"><img data-src="https://s2.loli.net/2024/09/20/gkyN27D4z8VpUiG.webp" alt="依次打开计算机配置-管理模板-系统-设备安装-设备安装限制，双击打开右侧的阻止使用与下列设备安装程序类相匹配的的驱动程序安装设备" class="zoomable"></li><li class="splide__slide" data-caption="勾选已启用，点击下方的显示，将第4步复制的显卡的类Guid粘贴到值中，点击确定保存更改"><img data-src="https://s2.loli.net/2024/09/20/xUNIpY2CQ7LBhsD.webp" alt="勾选已启用，点击下方的显示，将第4步复制的显卡的类Guid粘贴到值中，点击确定保存更改" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-pvydt6me9" class="carousel-caption"> </div>
+      <div id="carousel-caption-x8gxukyek" class="carousel-caption"> </div>
     </div>
   
 
@@ -6446,12 +6449,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-1uf6v9wtj">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qzzg0hntf">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="DDU禁用更新"><img data-src="https://s2.loli.net/2024/09/20/Kf2R6ExjnzDiNr1.png" alt="DDU禁用更新" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-1uf6v9wtj" class="carousel-caption"> </div>
+      <div id="carousel-caption-qzzg0hntf" class="carousel-caption"> </div>
     </div>
   
 
@@ -6463,12 +6466,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ig2fxg5ef">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-htqmvute4">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Dism++禁用更新"><img data-src="https://s2.loli.net/2024/09/20/98aGBiWXJo2I4KS.png" alt="Dism++禁用更新" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ig2fxg5ef" class="carousel-caption"> </div>
+      <div id="carousel-caption-htqmvute4" class="carousel-caption"> </div>
     </div>
   
 
@@ -6480,12 +6483,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fxxqc81w7">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-66ys3n7lj">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="在设备管理器中回退驱动"><img data-src="https://s2.loli.net/2024/09/20/HMxINqzFDUdbfe6.webp" alt="在设备管理器中回退驱动" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-fxxqc81w7" class="carousel-caption"> </div>
+      <div id="carousel-caption-66ys3n7lj" class="carousel-caption"> </div>
     </div>
   
 
@@ -6493,12 +6496,12 @@
 <p>最后在安装完成后建议关闭Adrenalin中的检查更新开关，然后重启一次电脑。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cclo7synw">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-wpjyt6k8l">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Adrenalin关闭检查更新"><img data-src="https://s2.loli.net/2024/09/20/aSW8T5pOMZXEUx9.webp" alt="Adrenalin关闭检查更新" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-cclo7synw" class="carousel-caption"> </div>
+      <div id="carousel-caption-wpjyt6k8l" class="carousel-caption"> </div>
     </div>
   ]]></content>
       <categories>
@@ -6523,12 +6526,12 @@
 
 <h1 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h1>
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4imibhixs">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6a606bxfk">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="auto_update_profile-cn.webp"><img data-src="https://s2.loli.net/2023/10/19/Gk81DjxnfIgU2Yd.webp" alt="auto_update_profile-cn.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-4imibhixs" class="carousel-caption"> </div>
+      <div id="carousel-caption-6a606bxfk" class="carousel-caption"> </div>
     </div>
   
 
@@ -6620,12 +6623,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ubacagyfq">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8chyuij9q">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-2.webp"><img data-src="https://s2.loli.net/2023/10/19/MCX8r6medVjocbq.webp" alt="1-2.webp" class="zoomable"></li><li class="splide__slide" data-caption="3.webp"><img data-src="https://s2.loli.net/2023/10/19/nGbz1mhuYMXlEIV.webp" alt="3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/HyqLWKu5wg8B3hJ.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="7-8.webp"><img data-src="https://s2.loli.net/2023/10/19/8oPj7UqBV4Ynscv.webp" alt="7-8.webp" class="zoomable"></li><li class="splide__slide" data-caption="9.webp"><img data-src="https://s2.loli.net/2023/10/19/y4T2RbD7UEWQY6Z.webp" alt="9.webp" class="zoomable"></li><li class="splide__slide" data-caption="10.webp"><img data-src="https://s2.loli.net/2023/10/19/ZfOqEgM3Yh97oTW.webp" alt="10.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ubacagyfq" class="carousel-caption"> </div>
+      <div id="carousel-caption-8chyuij9q" class="carousel-caption"> </div>
     </div>
   
 
@@ -6688,12 +6691,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xbwx642jc">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-44o9q9jti">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-3.webp"><img data-src="https://s2.loli.net/2023/10/19/Yb8BGd2ePlEMWRn.webp" alt="1-3.webp" class="zoomable"></li><li class="splide__slide" data-caption="4-6.webp"><img data-src="https://s2.loli.net/2023/10/19/qzHiYgNlOWtyVLw.webp" alt="4-6.webp" class="zoomable"></li><li class="splide__slide" data-caption="a.webp"><img data-src="https://s2.loli.net/2023/10/19/PItMG7ikaYb3CqF.webp" alt="a.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-xbwx642jc" class="carousel-caption"> </div>
+      <div id="carousel-caption-44o9q9jti" class="carousel-caption"> </div>
     </div>
   
 
@@ -6757,12 +6760,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ism3z4aj9">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ko6v59cev">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1-4.webp"><img data-src="https://s2.loli.net/2023/10/19/jUoBOJmAY9utS8h.webp" alt="1-4.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ism3z4aj9" class="carousel-caption"> </div>
+      <div id="carousel-caption-ko6v59cev" class="carousel-caption"> </div>
     </div>
   
 
@@ -6850,12 +6853,12 @@
 <p>保存更改，然后运行<code>hexo cl</code>与<code>hexo g -d</code>命令，不出意外的话几分钟后就能看到自动更新后的Profile了。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-5htyft2hj">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-kbgwu0gmb">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="21.webp"><img data-src="https://s2.loli.net/2023/10/19/oMWf2XS6GavL8jt.webp" alt="21.webp" class="zoomable"></li><li class="splide__slide" data-caption="22.webp"><img data-src="https://s2.loli.net/2023/10/19/4WpxQZuj6IOmcDo.webp" alt="22.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-5htyft2hj" class="carousel-caption"> </div>
+      <div id="carousel-caption-kbgwu0gmb" class="carousel-caption"> </div>
     </div>
   
 
@@ -6898,12 +6901,12 @@
 <h2 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h2><p>在<code>Verge Setting</code>中将<code>Language</code>设置为<code>中文</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-kasz2t2a2">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9vmqagnaq">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="语言设置.png"><img data-src="https://s2.loli.net/2023/11/07/3uJXgw2jV9izKP6.png" alt="语言设置.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-kasz2t2a2" class="carousel-caption"> </div>
+      <div id="carousel-caption-9vmqagnaq" class="carousel-caption"> </div>
     </div>
   
 
@@ -6918,12 +6921,12 @@
 </li>
 <li><p><del>点击右上角的<code>重启内核</code>。</del></p>
  <div class="carousel-container">
-   <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-oh2537utr">
+   <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-9gw57j9sq">
      <div class="splide__track">
        <ul class="splide__list"><li class="splide__slide" data-caption="切换内核.png"><img data-src="https://s2.loli.net/2023/11/07/dxoDgMcjFPlVHf6.png" alt="切换内核.png" class="zoomable"></li><li class="splide__slide" data-caption="切换为meta并重启内核.png"><img data-src="https://s2.loli.net/2023/11/07/ve2n3WyxtI6sPwk.png" alt="切换为meta并重启内核.png" class="zoomable"></li></ul>
      </div>
    </div>
-   <div id="carousel-caption-oh2537utr" class="carousel-caption"> </div>
+   <div id="carousel-caption-9gw57j9sq" class="carousel-caption"> </div>
  </div></li>
 </ol>
 
@@ -6960,12 +6963,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-myaijcomx">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pfynml1j7">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="新建配置.png"><img data-src="https://s2.loli.net/2023/11/07/uZ8LznlQJANeIKW.png" alt="新建配置.png" class="zoomable"></li><li class="splide__slide" data-caption="编辑文件.png"><img data-src="https://s2.loli.net/2023/11/07/7GoCLb4uyIUizZB.png" alt="编辑文件.png" class="zoomable"></li><li class="splide__slide" data-caption="粘贴并保存.png"><img data-src="https://s2.loli.net/2023/11/07/K3ME2oqcrm5X79G.png" alt="粘贴并保存.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-myaijcomx" class="carousel-caption"> </div>
+      <div id="carousel-caption-pfynml1j7" class="carousel-caption"> </div>
     </div>
   
 
@@ -6990,12 +6993,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-1jab0pgla">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qd2nqxo41">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装服务模式.png"><img data-src="https://s2.loli.net/2023/11/07/mzWkwQPXtaFUrD4.png" alt="安装服务模式.png" class="zoomable"></li><li class="splide__slide" data-caption="点击INSTALL-忽略掉左上角的报错-可能是bug.png"><img data-src="https://s2.loli.net/2023/11/07/f7tDroGg6ki4ABc.png" alt="点击INSTALL-忽略掉左上角的报错-可能是bug.png" class="zoomable"></li><li class="splide__slide" data-caption="勾选对应设置.png"><img data-src="https://s2.loli.net/2023/11/07/rhHXDnqv5zgZMmE.png" alt="勾选对应设置.png" class="zoomable"></li><li class="splide__slide" data-caption="右键启用配置.png"><img data-src="https://s2.loli.net/2023/11/07/o2YfEq63QF47vcN.png" alt="右键启用配置.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-1jab0pgla" class="carousel-caption"> </div>
+      <div id="carousel-caption-qd2nqxo41" class="carousel-caption"> </div>
     </div>
   
 
@@ -7010,12 +7013,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-y3pmuph1f">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-k34oiqsya">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="更新规则"><img data-src="https://s2.loli.net/2024/10/28/IticmqGwpC68SnH.webp" alt="更新规则" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-y3pmuph1f" class="carousel-caption"> </div>
+      <div id="carousel-caption-k34oiqsya" class="carousel-caption"> </div>
     </div>
   
 
@@ -7037,12 +7040,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rhpbq248j">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rfkaxy9ef">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="打开组策略编辑器.png"><img data-src="https://s2.loli.net/2023/11/07/IpCg1TZd6azANJ5.png" alt="打开组策略编辑器.png" class="zoomable"></li><li class="splide__slide" data-caption="找到对应策略.png"><img data-src="https://s2.loli.net/2023/11/07/dR63HkPtOEfeMmo.png" alt="找到对应策略.png" class="zoomable"></li><li class="splide__slide" data-caption="禁用多宿主并确定.png"><img data-src="https://s2.loli.net/2023/11/07/Aryc3ehHiDUmdOL.png" alt="禁用多宿主并确定.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-rhpbq248j" class="carousel-caption"> </div>
+      <div id="carousel-caption-rfkaxy9ef" class="carousel-caption"> </div>
     </div>
   
 
@@ -7053,12 +7056,12 @@
 <p>以Edge浏览器为例，在浏览器地址栏输入<code>edge://flags/#enable-quic</code>，跳转到<code>Experimental QUIC protocol</code>选项，将其设置为<code>Disabled</code>即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-kpbxzzqrz">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-nbfgss2i1">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="禁用quic.png"><img data-src="https://s2.loli.net/2023/11/07/Eq67CloYbz1V8NA.png" alt="禁用quic.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-kpbxzzqrz" class="carousel-caption"> </div>
+      <div id="carousel-caption-nbfgss2i1" class="carousel-caption"> </div>
     </div>
   
 
@@ -7066,12 +7069,12 @@
 <p>以Edge浏览器为例，找到<code>设置</code>-<code>隐私、搜索和服务``-安全性</code>-<code>使用安全的DNS指定如何查找网站的网络地址</code>，关闭其开关即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cm3arla8w">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rcrbktnhc">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="关闭安全DNS.png"><img data-src="https://s2.loli.net/2023/11/07/vU6XPrWw1fyzVIR.png" alt="关闭安全DNS.png" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-cm3arla8w" class="carousel-caption"> </div>
+      <div id="carousel-caption-rcrbktnhc" class="carousel-caption"> </div>
     </div>
   
 
@@ -7211,12 +7214,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-4ukhcr9g5">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-a9zmns4r9">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库"><img data-src="https://s2.loli.net/2024/07/17/BZ8AhPlKdEqtzcf.webp" alt="在宿主机的顶部菜单栏中点击窗口打开下拉菜单，点击虚拟机资源库" class="zoomable"></li><li class="splide__slide" data-caption="在相应虚拟机上右键单击，选择在访达中显示"><img data-src="https://s2.loli.net/2024/07/17/zXIEaTPHY3dsQlm.webp" alt="在相应虚拟机上右键单击，选择在访达中显示" class="zoomable"></li><li class="splide__slide" data-caption="在访达中右键单击虚拟机文件，选择显示包内容"><img data-src="https://s2.loli.net/2024/07/17/f3QAHstYKeIRZlX.webp" alt="在访达中右键单击虚拟机文件，选择显示包内容" class="zoomable"></li><li class="splide__slide" data-caption="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑"><img data-src="https://s2.loli.net/2024/07/17/km7vQ9hjupVt5l4.webp" alt="右键单击xxx.vmx文件，xxx是你的虚拟机名称，打开方式选择文本编辑" class="zoomable"></li><li class="splide__slide" data-caption="3D加速已经成功启用"><img data-src="https://s2.loli.net/2024/07/17/wPKV7I1XY9Qedyc.webp" alt="3D加速已经成功启用" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-4ukhcr9g5" class="carousel-caption"> </div>
+      <div id="carousel-caption-a9zmns4r9" class="carousel-caption"> </div>
     </div>
   
 
@@ -7270,12 +7273,12 @@
 <p>安装后启动 Git Bash。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-izygcungx">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8w3x94lqo">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="启动 Git Bash"><img data-src="https://s2.loli.net/2024/11/01/FtNOTKEHePQJqiI.webp" alt="启动 Git Bash" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-izygcungx" class="carousel-caption"> </div>
+      <div id="carousel-caption-8w3x94lqo" class="carousel-caption"> </div>
     </div>
   
 
@@ -7298,24 +7301,24 @@
 <p>然后在浏览器中登录你的GitHub账户，依次点击：页面右上角的个人资料照片 → <code>Settings</code> → 侧边栏中的<code>SSH and GPG keys</code> → 右上角的<code>New SSH key</code>按钮。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-k7ldkt3k4">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-dk7l1r98k">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="依次点击页面右上角的个人资料照片 → Settings → 侧边栏中的 SSH and GPG keys → 右上角的 New SSH key 按钮"><img data-src="https://s2.loli.net/2024/11/01/HlJdD1eEVkpKb9t.webp" alt="依次点击页面右上角的个人资料照片 → Settings → 侧边栏中的 SSH and GPG keys → 右上角的 New SSH key 按钮" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-k7ldkt3k4" class="carousel-caption"> </div>
+      <div id="carousel-caption-dk7l1r98k" class="carousel-caption"> </div>
     </div>
   
 
 <p>然后在<code>Title</code>中填写新密钥的称谓，以方便区分来自不同的设备的密钥。<code>Key type</code>保持默认的Authentication Key选项。向<code>Key</code>中粘贴复制的公钥。最后点击<code>Add SSH Key</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-wx86ggse1">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-moejyjyb1">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Add SSH Key"><img data-src="https://s2.loli.net/2024/11/01/nPZGXrUW8A1g9hJ.webp" alt="Add SSH Key" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-wx86ggse1" class="carousel-caption"> </div>
+      <div id="carousel-caption-moejyjyb1" class="carousel-caption"> </div>
     </div>
   
 
@@ -7345,12 +7348,12 @@
 <p>配置成功的话系统会输出<code>Hi &lt;Username&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qll13hvsg">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pbu0jm4fo">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="验证是否配置成功"><img data-src="https://s2.loli.net/2024/11/01/iLGnxEgYCAS3aPF.webp" alt="验证是否配置成功" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qll13hvsg" class="carousel-caption"> </div>
+      <div id="carousel-caption-pbu0jm4fo" class="carousel-caption"> </div>
     </div>
   
 
@@ -7367,12 +7370,12 @@
 <h1 id="提交签名验证"><a href="#提交签名验证" class="headerlink" title="提交签名验证"></a>提交签名验证</h1><p>SSH 的配置已经完成了，此时你可以正常的使用<code>git push</code>等操作。但是！由于我们还没有对提交进行签名验证，现在进行的提交缺少灵魂（下图中的Verified小绿标）。接下来我会向我的 GitHub 帐户添加 <a href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard">GPG</a> 密钥，并对我的 Git 提交进行签名验证。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-gjyrd7ap0">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-cpy4994wn">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Verified小绿标"><img data-src="https://s2.loli.net/2024/11/01/FjufLNEICXmiz1a.webp" alt="Verified小绿标" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-gjyrd7ap0" class="carousel-caption"> </div>
+      <div id="carousel-caption-cpy4994wn" class="carousel-caption"> </div>
     </div>
   
 
@@ -7427,12 +7430,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-shtkh28s3">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-l7pituw11">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="配置密钥的类型"><img data-src="https://s2.loli.net/2024/11/01/FaXLpeGKdMJ7B2l.webp" alt="配置密钥的类型" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-shtkh28s3" class="carousel-caption"> </div>
+      <div id="carousel-caption-l7pituw11" class="carousel-caption"> </div>
     </div>
   
 
@@ -7446,12 +7449,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-m9604427b">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-nrb1wkuif">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="填写密钥信息"><img data-src="https://s2.loli.net/2024/11/01/uxEcXGkJRMd3IbA.webp" alt="填写密钥信息" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-m9604427b" class="carousel-caption"> </div>
+      <div id="carousel-caption-nrb1wkuif" class="carousel-caption"> </div>
     </div>
   
 
@@ -7477,24 +7480,24 @@
 <p>接下来在浏览器中登录你的GitHub账户，依次点击 GitHub 任意页面右上角的个人资料照片 → <code>Settings</code> → 侧边栏中的<code>SSH and GPG keys</code> → 右侧的<code>New GPG key</code>按钮。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-bj355cz6c">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-plh8np42u">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="依次点击 GitHub 任意页面右上角的个人资料照片 → Settings → 侧边栏中的 SSH and GPG keys → 右侧的 New GPG key 按钮"><img data-src="https://s2.loli.net/2024/11/01/BpX36WignKmeNRq.webp" alt="依次点击 GitHub 任意页面右上角的个人资料照片 → Settings → 侧边栏中的 SSH and GPG keys → 右侧的 New GPG key 按钮" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-bj355cz6c" class="carousel-caption"> </div>
+      <div id="carousel-caption-plh8np42u" class="carousel-caption"> </div>
     </div>
   
 
 <p>在<code>Title</code>中填写新签名密钥的称谓，方便区分来自不同的设备的密钥。在<code>Key</code>中粘贴签名复制的公钥。最后点击<code>Add GPG key</code>完成添加。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6xssje18e">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vi0z1e635">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="在 Title 中填写新签名密钥的称谓，方便区分来自不同的设备的密钥。在 Key 中粘贴签名复制的公钥。最后点击 Add GPG key"><img data-src="https://s2.loli.net/2024/11/01/zYIiJBcFQ7uDsZp.webp" alt="在 Title 中填写新签名密钥的称谓，方便区分来自不同的设备的密钥。在 Key 中粘贴签名复制的公钥。最后点击 Add GPG key" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-6xssje18e" class="carousel-caption"> </div>
+      <div id="carousel-caption-vi0z1e635" class="carousel-caption"> </div>
     </div>
   
 
@@ -7540,12 +7543,12 @@
 <p>输出结果如下所示，可以看到GitHub密钥的ID是<code>B5690EEEBB952194</code>，被标红了。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-y1s8h7s3l">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-5bw3dte8k">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="输出结果被标红"><img data-src="https://s2.loli.net/2024/11/01/NhxMFgwC189fBGd.webp" alt="输出结果被标红" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-y1s8h7s3l" class="carousel-caption"> </div>
+      <div id="carousel-caption-5bw3dte8k" class="carousel-caption"> </div>
     </div>
   
 
@@ -7581,12 +7584,12 @@
 <p>如果直接在VS Code中使用Git并进行签名验证，需要在VS Code中使用<code>ctrl+,</code>组合键打开设置，搜索<code>git.enableCommitSigning</code>，勾选<code>允许使用 GPG、X.509 或 SSH 提交签名</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ifu8sya7v">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-uue648q8b">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="在VS Code中使用 ctrl + , 组合键打开设置，搜索 git.enableCommitSigning ，勾选 允许使用 GPG、X.509 或 SSH 提交签名"><img data-src="https://s2.loli.net/2024/11/01/m5BM31GLHw7KFUl.webp" alt="在VS Code中使用 ctrl + , 组合键打开设置，搜索 git.enableCommitSigning ，勾选 允许使用 GPG、X.509 或 SSH 提交签名" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ifu8sya7v" class="carousel-caption"> </div>
+      <div id="carousel-caption-uue648q8b" class="carousel-caption"> </div>
     </div>
   
 
@@ -7644,12 +7647,12 @@
 <li>确定保存</li>
 <li>重启终端使更改生效
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-z2gshmh9w">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-n4z5gep88">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="系统环境变量配置"><img data-src="https://s2.loli.net/2024/11/03/pELnc4xV7vCGZ1R.webp" alt="系统环境变量配置" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-z2gshmh9w" class="carousel-caption"> </div>
+      <div id="carousel-caption-n4z5gep88" class="carousel-caption"> </div>
     </div>
   </li>
 </ol>
@@ -7808,12 +7811,12 @@
 
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-gxbdnmjbk">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-mqhte2rkz">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="下载JDK17.webp"><img data-src="https://s2.loli.net/2023/11/11/G2KwYIs4yVaM6CT.webp" alt="下载JDK17.webp" class="zoomable"></li><li class="splide__slide" data-caption="下载MongoDB.webp"><img data-src="https://s2.loli.net/2023/11/11/FLuEvQB2oUqw13l.webp" alt="下载MongoDB.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-gxbdnmjbk" class="carousel-caption"> </div>
+      <div id="carousel-caption-mqhte2rkz" class="carousel-caption"> </div>
     </div>
   
 
@@ -7831,12 +7834,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ikc8c2kak">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-e8qwkm7xm">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="选择完全安装.webp"><img data-src="https://s2.loli.net/2023/11/11/rRhxCA4BYDVu25U.webp" alt="选择完全安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="继续安装.webp"><img data-src="https://s2.loli.net/2023/11/11/Y4mrh23sL71CUJx.webp" alt="继续安装.webp" class="zoomable"></li><li class="splide__slide" data-caption="安装Compass.webp"><img data-src="https://s2.loli.net/2023/11/11/OgrBZdvYXPmsNfl.webp" alt="安装Compass.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ikc8c2kak" class="carousel-caption"> </div>
+      <div id="carousel-caption-e8qwkm7xm" class="carousel-caption"> </div>
     </div>
   
 
@@ -7871,12 +7874,12 @@
 </ul>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-soxrwv2rv">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-llxcsg3su">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Download Grasscutter.webp"><img data-src="https://s2.loli.net/2023/11/11/jleJCaPN1iKBFDp.webp" alt="Download Grasscutter.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-soxrwv2rv" class="carousel-caption"> </div>
+      <div id="carousel-caption-llxcsg3su" class="carousel-caption"> </div>
     </div>
   
 
@@ -7890,12 +7893,12 @@
 <h2 id="配置Cultivation"><a href="#配置Cultivation" class="headerlink" title="配置Cultivation"></a>配置Cultivation</h2><p>首次启动时会有弹窗提示，请求安装CA证书，点击<code>是</code>同意安装。安装证书后Cultivation内置的mitmproxy就能够通过中间人攻击（MITM）的方式将客户端与游戏服务器的通信代理到本地服务端。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-7tyynxyzh">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-w8hsy4nvp">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装证书.webp"><img data-src="https://s2.loli.net/2023/11/11/FRVI5289awtUPKT.webp" alt="安装证书.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-7tyynxyzh" class="carousel-caption"> </div>
+      <div id="carousel-caption-w8hsy4nvp" class="carousel-caption"> </div>
     </div>
   
 
@@ -7915,12 +7918,12 @@
 </ul>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-r4m6sla6l">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-nni2fi1r5">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="配置1.webp"><img data-src="https://s2.loli.net/2023/11/11/lB3LI72ZhVJKeoQ.webp" alt="配置1.webp" class="zoomable"></li><li class="splide__slide" data-caption="配置2.webp"><img data-src="https://s2.loli.net/2023/11/11/sYk7KjeTdWN61Aw.webp" alt="配置2.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-r4m6sla6l" class="carousel-caption"> </div>
+      <div id="carousel-caption-nni2fi1r5" class="carousel-caption"> </div>
     </div>
   
 
@@ -8004,12 +8007,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6xbf6t4c3">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-dqlu0jttq">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="opencommand插件.webp"><img data-src="https://s2.loli.net/2023/11/11/TPRCVJ4I1OqikyX.webp" alt="opencommand插件.webp" class="zoomable"></li><li class="splide__slide" data-caption="opencommand插件1.webp"><img data-src="https://s2.loli.net/2023/11/11/7kPdbWUavsKeoDY.webp" alt="opencommand插件1.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-6xbf6t4c3" class="carousel-caption"> </div>
+      <div id="carousel-caption-dqlu0jttq" class="carousel-caption"> </div>
     </div>
   
 
@@ -8060,12 +8063,12 @@
 <li>用VSCode打开<code>d3dx.ini</code></li>
 <li>通过搜索<code>[Loader]</code>快速定位，将<code>[Loader]</code>下面的target修改为自己的游戏安装位置，例如<code>D:\Program Files\GenshinImpact_4.0.1\GenshinImpact.exe</code>   
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-7dwun9afa">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-730rroemt">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="替换路径.webp"><img data-src="https://s2.loli.net/2023/11/08/E3KiqTQy9kJWZb2.webp" alt="替换路径.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-7dwun9afa" class="carousel-caption"> </div>
+      <div id="carousel-caption-730rroemt" class="carousel-caption"> </div>
     </div>
   </li>
 <li>保存文件</li>
@@ -8077,12 +8080,12 @@
 <li>再通过<code>Cultivation</code>启动游戏</li>
 <li>加载过程中屏幕左下角出现下图所示的浮窗则说明启动成功   
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-n9qdnvq25">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hf403ij8m">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="启动成功浮窗.webp"><img data-src="https://s2.loli.net/2023/11/08/sOvpqaElQIBf47F.webp" alt="启动成功浮窗.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-n9qdnvq25" class="carousel-caption"> </div>
+      <div id="carousel-caption-hf403ij8m" class="carousel-caption"> </div>
     </div>
   </li>
 </ol>
@@ -8259,23 +8262,23 @@
 <li>将做出的更改推送到自己的仓库。</li>
 <li>开启新的 pull request。
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-oaiqk4uh4">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-me5xd0i6g">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Open pull request"><img data-src="https://s2.loli.net/2024/09/18/njJmexIDHFvWt3i.webp" alt="Open pull request" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-oaiqk4uh4" class="carousel-caption"> </div>
+      <div id="carousel-caption-me5xd0i6g" class="carousel-caption"> </div>
     </div>
   </li>
 <li>在 title 中描述做出的修改，如<code>Plugin: add plugin hexo-splide-carousel</code>。</li>
 <li>勾选 <code>Check List</code> 中的相关选项。
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-wdtg3gwxy">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rr6kk5k02">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="填写相关内容"><img data-src="https://s2.loli.net/2024/09/18/MZygx7LwdmqevY4.webp" alt="填写相关内容" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-wdtg3gwxy" class="carousel-caption"> </div>
+      <div id="carousel-caption-rr6kk5k02" class="carousel-caption"> </div>
     </div>
   </li>
 <li>提交后等待 Hexo 完成相关检查即可。</li>
@@ -8312,12 +8315,12 @@
 <h1 id="开启SMB协议"><a href="#开启SMB协议" class="headerlink" title="开启SMB协议"></a>开启SMB协议</h1><p>在开始菜单上方的搜索框输入<code>启用或关闭 Windows 功能</code>并打开对应的面板，勾选开启<code>SMB直通</code>功能。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-j05eehcwg">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-c85rlrdw8">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="搜索框.webp"><img data-src="https://s2.loli.net/2023/09/17/XGH8tz7FvqIL5D2.webp" alt="搜索框.webp" class="zoomable"></li><li class="splide__slide" data-caption="功能.webp"><img data-src="https://s2.loli.net/2023/09/17/q1gzoFVEtmnk37h.webp" alt="功能.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-j05eehcwg" class="carousel-caption"> </div>
+      <div id="carousel-caption-c85rlrdw8" class="carousel-caption"> </div>
     </div>
   
 
@@ -8330,12 +8333,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qaqhn34l2">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-hxlzhpnkl">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="专用网络.webp"><img data-src="https://s2.loli.net/2023/09/17/Ed6VmuWqGbD5eUl.webp" alt="专用网络.webp" class="zoomable"></li><li class="splide__slide" data-caption="共享设置.webp"><img data-src="https://s2.loli.net/2023/09/17/1GeJhZWx4vYN7FS.webp" alt="共享设置.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qaqhn34l2" class="carousel-caption"> </div>
+      <div id="carousel-caption-hxlzhpnkl" class="carousel-caption"> </div>
     </div>
   
 
@@ -8347,12 +8350,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-g1tjh740d">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-myujc2svj">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="创建共享用户.webp"><img data-src="https://s2.loli.net/2023/09/17/ZEF8XBzWmhk3jn7.webp" alt="创建共享用户.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-g1tjh740d" class="carousel-caption"> </div>
+      <div id="carousel-caption-myujc2svj" class="carousel-caption"> </div>
     </div>
   
 
@@ -8365,12 +8368,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qrn7vp714">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-vjkgxukmt">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="属性.webp"><img data-src="https://s2.loli.net/2023/09/17/JcxQnkSoONvH9P5.webp" alt="属性.webp" class="zoomable"></li><li class="splide__slide" data-caption="添加用户.webp"><img data-src="https://s2.loli.net/2023/09/17/1pciwA6svgIrCj7.webp" alt="添加用户.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qrn7vp714" class="carousel-caption"> </div>
+      <div id="carousel-caption-vjkgxukmt" class="carousel-caption"> </div>
     </div>
   
 
@@ -8383,12 +8386,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-2igk78p43">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6no27q7ts">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="连接服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/2fiqmn8VwPZbHGj.webp" alt="连接服务器.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入网络路径.webp"><img data-src="https://s2.loli.net/2023/09/17/5w2jhcMe3KAUbkZ.webp" alt="输入网络路径.webp" class="zoomable"></li><li class="splide__slide" data-caption="输入用户名和密码.webp"><img data-src="https://s2.loli.net/2023/09/17/NTIF5CimUDJQLrS.webp" alt="输入用户名和密码.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-2igk78p43" class="carousel-caption"> </div>
+      <div id="carousel-caption-6no27q7ts" class="carousel-caption"> </div>
     </div>
   
 
@@ -8400,12 +8403,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-2yaxbzyid">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-k02vm1eqc">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="推出smb服务器.webp"><img data-src="https://s2.loli.net/2023/09/17/9zWb3K1jtXclaTp.webp" alt="推出smb服务器.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-2yaxbzyid" class="carousel-caption"> </div>
+      <div id="carousel-caption-k02vm1eqc" class="carousel-caption"> </div>
     </div>
   
 ]]></content>
@@ -8588,60 +8591,60 @@
 <p>打开下载页面后，选择<code>download from a nearby CTAN mirror</code>前往最近的镜像站点，单击下载<code>texlive.iso</code>。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-jp931hs67">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-e9qh3evw5">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="前往最近的镜像站点"><img data-src="https://s2.loli.net/2023/10/06/rtv86aQ3NoJeygY.webp" alt="前往最近的镜像站点" class="zoomable"></li><li class="splide__slide" data-caption="下载texlive.iso"><img data-src="https://s2.loli.net/2023/10/06/cuwyg4mZVAdPsFJ.webp" alt="下载texlive.iso" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-jp931hs67" class="carousel-caption"> </div>
+      <div id="carousel-caption-e9qh3evw5" class="carousel-caption"> </div>
     </div>
   
 
 <p>下载完成后双击挂载文件，然后以管理员身份运行其中的<code>install-tl-windows.bat</code>。待安装程序加载完成后点击<code>安装</code>按钮，安装过程取决于电脑性能，大约需要30分钟，安装成功后点击<code>关闭</code>按钮结束安装程序。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8r38wn135">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-m23g8uq4g">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="选择安装路径"><img data-src="https://s2.loli.net/2023/10/06/TkNJ7vCBLpOlfVb.webp" alt="选择安装路径" class="zoomable"></li><li class="splide__slide" data-caption="Loading"><img data-src="https://s2.loli.net/2023/10/06/PA9rod7y2NktUEJ.webp" alt="Loading" class="zoomable"></li><li class="splide__slide" data-caption="安装"><img data-src="https://s2.loli.net/2023/10/06/RX3Zq2Ota47wpjV.webp" alt="安装" class="zoomable"></li><li class="splide__slide" data-caption="安装成功"><img data-src="https://s2.loli.net/2023/10/06/A2pZSEaxkrHeR3d.webp" alt="安装成功" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-8r38wn135" class="carousel-caption"> </div>
+      <div id="carousel-caption-m23g8uq4g" class="carousel-caption"> </div>
     </div>
   
 
 <h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>mac用户直接点击下载页面的<code>MacTeX.pkg</code>下载安装包，安装包大小为5.2G。下载完成后只需要双击打开安装包，然后根据指引操作即可。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-g92drbvzd">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-imumwe1fi">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="下载MacTeX.pkg"><img data-src="https://s2.loli.net/2023/10/06/OMBXEcRnWstlv9A.png" alt="下载MacTeX.pkg" class="zoomable"></li><li class="splide__slide" data-caption="同意协议"><img data-src="https://s2.loli.net/2023/10/06/6AZdueKySU5cvwb.png" alt="同意协议" class="zoomable"></li><li class="splide__slide" data-caption="等待安装完成"><img data-src="https://s2.loli.net/2023/10/06/2bXlRiMTSBvIZGu.png" alt="等待安装完成" class="zoomable"></li><li class="splide__slide" data-caption="安装完成"><img data-src="https://s2.loli.net/2023/10/06/cN5oU1z6kZihFJE.png" alt="安装完成" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-g92drbvzd" class="carousel-caption"> </div>
+      <div id="carousel-caption-imumwe1fi" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="安装VSCode扩展"><a href="#安装VSCode扩展" class="headerlink" title="安装VSCode扩展"></a>安装VSCode扩展</h1><p>在VSCode的扩展商店中搜索并安装<code>LaTeX Workshop</code>和<code>LaTeX Utilities</code>两个扩展，前者的作用是为VSCode添加LaTeX支持，后者则是提供一些实用的功能，如自动格式化粘贴的文本，而且可以和Zotero配合使用。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-040542n55">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xje6h2lr6">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="安装扩展.webp"><img data-src="https://s2.loli.net/2023/10/06/xqgKzTueOnMVod9.webp" alt="安装扩展.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-040542n55" class="carousel-caption"> </div>
+      <div id="carousel-caption-xje6h2lr6" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>使用<code>ctrl</code>+<code>,</code>快捷键打开VSCode的设置，接下来的的操作建议使用顶栏的搜索快速定位</p>
 <h2 id="自动编译"><a href="#自动编译" class="headerlink" title="自动编译"></a>自动编译</h2>
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-02jcssmym">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-k3vyazhn0">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Auto Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JmdOsAWTgotPQSh.webp" alt="Auto Build.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-02jcssmym" class="carousel-caption"> </div>
+      <div id="carousel-caption-k3vyazhn0" class="carousel-caption"> </div>
     </div>
   
 
@@ -8654,12 +8657,12 @@
 <h2 id="自动清理"><a href="#自动清理" class="headerlink" title="自动清理"></a>自动清理</h2><p>这个选项的作用是自动清理（删除）已编译的辅助文件和输出文件，以确保每次运行 LaTeX 编译时都从头开始，而不受之前编译的影响。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-fdeeltbsz">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-7u56aa7p8">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Auto Clean.webp"><img data-src="https://s2.loli.net/2023/10/06/c1vBzWIOdTlP7ZQ.webp" alt="Auto Clean.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-fdeeltbsz" class="carousel-caption"> </div>
+      <div id="carousel-caption-7u56aa7p8" class="carousel-caption"> </div>
     </div>
   
 
@@ -8740,12 +8743,12 @@
 
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-7vg6zwad1">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ck9a1wruu">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/WbyZSiL5dk1MFGo.webp" alt="Recipe.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-7vg6zwad1" class="carousel-caption"> </div>
+      <div id="carousel-caption-ck9a1wruu" class="carousel-caption"> </div>
     </div>
   
 
@@ -8788,12 +8791,12 @@
 <h2 id="首选编译选项"><a href="#首选编译选项" class="headerlink" title="首选编译选项"></a>首选编译选项</h2><p>这个选项定义了在没有明确指定其他编译选项时所使用的默认选项，包括前面设置的自动编译。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-gbami36lh">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-f20e2s8wh">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Default Recipe.webp"><img data-src="https://s2.loli.net/2023/10/06/9CUzAGhcZfNVlLS.webp" alt="Default Recipe.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-gbami36lh" class="carousel-caption"> </div>
+      <div id="carousel-caption-f20e2s8wh" class="carousel-caption"> </div>
     </div>
   
 
@@ -8806,24 +8809,24 @@
 <p>搜索<code>latex message show</code>，取消勾选<code>Latex-workshop &gt; Message &gt; Error: Show</code>选项和<code>Latex-workshop &gt; Message &gt; Warning: Show</code>选项</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-qf6ld5dik">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-kgijig6sr">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Warning.webp"><img data-src="https://s2.loli.net/2023/10/06/32T5rc7sRSaAHGf.webp" alt="Warning.webp" class="zoomable"></li><li class="splide__slide" data-caption="Error.webp"><img data-src="https://s2.loli.net/2023/10/06/iTOLUpPYsIFB8l4.webp" alt="Error.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-qf6ld5dik" class="carousel-caption"> </div>
+      <div id="carousel-caption-kgijig6sr" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>使用VSCode打开.tex文件时，左侧边栏会出现一个TEX选项，可以进行编译选项选择、查看PDF、快速定位等操作。</p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-0ozxwdqht">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-mpb0r0zu1">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="Build.webp"><img data-src="https://s2.loli.net/2023/10/06/JMpIfran4KEuPic.webp" alt="Build.webp" class="zoomable"></li><li class="splide__slide" data-caption="PDF&Log.webp"><img data-src="https://s2.loli.net/2023/10/06/XGPqzkKINi4AQ6d.webp" alt="PDF&Log.webp" class="zoomable"></li><li class="splide__slide" data-caption="Navigate.webp"><img data-src="https://s2.loli.net/2023/10/06/v9HR26jTgBYypld.webp" alt="Navigate.webp" class="zoomable"></li><li class="splide__slide" data-caption="Citation.webp"><img data-src="https://s2.loli.net/2023/10/06/AiMrFKVxwI3g19P.webp" alt="Citation.webp" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-0ozxwdqht" class="carousel-caption"> </div>
+      <div id="carousel-caption-mpb0r0zu1" class="carousel-caption"> </div>
     </div>
   
 
@@ -9195,6 +9198,48 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows 系统设置开机延迟启动 OneDrive</title>
+    <url>/onedrive-delay-startup.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center"> 在Windows系统启动时，OneDrive和Clash的自启动时间几乎相同，导致OneDrive在准备自动登录时，Clash啪一下给切了网络，从而使OneDrive卡在登录过程中。此时，必须退出并重启OneDrive才能正常登录，十分烦人。为了解决这个问题，我决定通过任务计划程序设置在开机后延迟1分钟再启动OneDrive，以下是设置过程的记录。 </blockquote>
+
+<span id="more"></span>
+
+<p>设置步骤如下，下面的图片顺序与每一步相对应：</p>
+<ol>
+<li>首先，打开任务管理器，右键单击并禁用OneDrive的开机自启。</li>
+<li>接着，右键单击任务栏上的开始菜单按钮（Windows图标），打开<code>计算机管理</code>。</li>
+<li>在左侧边栏中依次点击<code>系统工具</code> &gt; <code>任务计划程序</code> &gt; <code>任务计划程序库</code>，然后在右侧点击<code>创建基本任务</code>。填写任务名称和描述后，点击<code>下一页</code>。</li>
+<li>接下来，选择<code>计算机启动时</code>，然后点击<code>下一页</code>。</li>
+<li>在接下来的页面中选择<code>启动程序</code>，点击<code>下一页</code>。</li>
+<li>在程序或脚本中选择或直接粘贴<code>&quot;C:\Program Files\Microsoft OneDrive\OneDrive.exe&quot;</code>，然后在添加参数中填写<code>/background</code>以静默启动OneDrive，点击<code>下一页</code>。</li>
+<li>勾选<code>当单击“完成”时，打开此任务属性的对话框</code>，然后点击<code>完成</code>。</li>
+<li>在弹出的窗口中，切换到<code>触发器</code>标签，选择刚刚创建的任务，点击下方的<code>编辑</code>。</li>
+<li>将开始任务设置为<code>登录时</code>，选择特定的用户，也就是你当前的系统账户。然后勾选<code>延迟任务时间</code>，在下拉菜单中选择<code>30秒</code>或<code>1分钟</code>。最后点击两次确定保存。</li>
+<li>如果以后需要修改延迟时间，可以选择该任务，点击右侧的<code>属性</code>来打开设置窗口。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-xhyq5zlyb">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="1. 首先，打开任务管理器，右键单击并禁用OneDrive的开机自启"><img data-src="https://s2.loli.net/2024/11/05/Al4pHeQWVC89ZIO.webp" alt="1. 首先，打开任务管理器，右键单击并禁用OneDrive的开机自启" class="zoomable"></li><li class="splide__slide" data-caption="2. 接着，右键单击任务栏上的开始菜单按钮（Windows图标），打开计算机管理"><img data-src="https://s2.loli.net/2024/11/05/UeFtRKpVu8QMkJW.webp" alt="2. 接着，右键单击任务栏上的开始菜单按钮（Windows图标），打开计算机管理" class="zoomable"></li><li class="splide__slide" data-caption="3. 在左侧边栏中依次点击系统工具 > 任务计划程序 > 任务计划程序库，然后在右侧点击创建基本任务。填写任务名称和描述后，点击下一页"><img data-src="https://s2.loli.net/2024/11/05/3oX7sgmlytrjBMV.webp" alt="3. 在左侧边栏中依次点击系统工具 > 任务计划程序 > 任务计划程序库，然后在右侧点击创建基本任务。填写任务名称和描述后，点击下一页" class="zoomable"></li><li class="splide__slide" data-caption="4. 接下来，选择计算机启动时，然后点击下一页"><img data-src="https://s2.loli.net/2024/11/05/aqHzuJfVvclxBYX.webp" alt="4. 接下来，选择计算机启动时，然后点击下一页" class="zoomable"></li><li class="splide__slide" data-caption="5. 在接下来的页面中选择启动程序，点击下一页"><img data-src="https://s2.loli.net/2024/11/05/mnKB9LNtOMiyxf3.webp" alt="5. 在接下来的页面中选择启动程序，点击下一页" class="zoomable"></li><li class="splide__slide" data-caption="6. 在程序或脚本中选择或直接粘贴C:\Program Files\Microsoft OneDrive\OneDrive.exe，然后在添加参数中填写/background以静默启动OneDrive，点击下一页"><img data-src="https://s2.loli.net/2024/11/05/mQRXIEbkT3LfFvw.webp" alt="6. 在程序或脚本中选择或直接粘贴C:\Program Files\Microsoft OneDrive\OneDrive.exe，然后在添加参数中填写/background以静默启动OneDrive，点击下一页" class="zoomable"></li><li class="splide__slide" data-caption="7. 勾选当单击“完成”时，打开此任务属性的对话框，然后点击完成"><img data-src="https://s2.loli.net/2024/11/05/mh9tcyuNK3bwf6e.webp" alt="7. 勾选当单击“完成”时，打开此任务属性的对话框，然后点击完成" class="zoomable"></li><li class="splide__slide" data-caption="8. 在弹出的窗口中，切换到触发器标签，选择刚刚创建的任务，点击下方的编辑"><img data-src="https://s2.loli.net/2024/11/05/CH2oLBrJPGYw9t7.webp" alt="8. 在弹出的窗口中，切换到触发器标签，选择刚刚创建的任务，点击下方的编辑" class="zoomable"></li><li class="splide__slide" data-caption="9. 将开始任务设置为登录时，选择特定的用户，也就是你当前的系统账户。然后勾选延迟任务时间，在下拉菜单中选择30秒或1分钟。最后点击两次确定保存"><img data-src="https://s2.loli.net/2024/11/06/J61NmpGcrRPOVBn.webp" alt="9. 将开始任务设置为登录时，选择特定的用户，也就是你当前的系统账户。然后勾选延迟任务时间，在下拉菜单中选择30秒或1分钟。最后点击两次确定保存" class="zoomable"></li><li class="splide__slide" data-caption="10. 如果以后需要修改延迟时间，可以选择该任务，点击右侧的属性来打开设置窗口"><img data-src="https://s2.loli.net/2024/11/05/cOwYLPDKrG7d8C1.webp" alt="10. 如果以后需要修改延迟时间，可以选择该任务，点击右侧的属性来打开设置窗口" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-xhyq5zlyb" class="carousel-caption"> </div>
+    </div>
+  
+
+<p>最后重启系统来验证效果，OneDrive在Clash完全启动后才启动，然后很快就登陆成功。</p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>OneDrive</tag>
+        <tag>Task Scheduler</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows LTSC 文件资源管理器侧边栏 OneDrive 图标异常修复</title>
     <url>/onedrive-explorer-icon-bug-fix.html</url>
     <content><![CDATA[<blockquote class="blockquote-center"> 安装完 Windows11 LTSC 后，我发现文件资源管理器侧边栏中的OneDrive图标不能正常使用，点击时完全没有反应，属性页面显示一片空白。查了一下发现这是一个微软祖传的老Bug，在LTSC版本的Windows上安装个人版OneDrive时，安装程序没有为侧边栏图标注册指向OneDrive文件夹的路径值，导致这个图标指向空值，所以无法正常使用。只能说不愧是微软，这么多年了就是没修这个Bug。 </blockquote>
@@ -9210,14 +9255,22 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Windows</span> <span class="title class_">Registry</span> <span class="title class_">Editor</span> <span class="title class_">Version</span> <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[<span class="variable constant_">HKEY_LOCAL_MACHINE</span>\<span class="variable constant_">SOFTWARE</span>\<span class="title class_">Microsoft</span>\<span class="title class_">Windows</span>\<span class="title class_">CurrentVersion</span>\<span class="title class_">Explorer</span>\<span class="title class_">FolderDescriptions</span>\&#123;<span class="variable constant_">A52BBA46</span>-<span class="variable constant_">E9E1</span>-435f-<span class="variable constant_">B3D9</span>-28DAA648C0F6&#125;]  </span><br><span class="line"><span class="string">&quot;Attributes&quot;</span>=<span class="attr">dword</span>:<span class="number">00000001</span>  </span><br><span class="line"><span class="string">&quot;Category&quot;</span>=<span class="attr">dword</span>:<span class="number">00000004</span>  </span><br><span class="line"><span class="string">&quot;DefinitionFlags&quot;</span>=<span class="attr">dword</span>:<span class="number">00000040</span>  </span><br><span class="line"><span class="string">&quot;Icon&quot;</span>=<span class="title function_">hex</span>(<span class="number">2</span>):<span class="number">25</span>,<span class="number">00</span>,<span class="number">53</span>,<span class="number">00</span>,<span class="number">79</span>,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,6d,<span class="number">00</span>,<span class="number">52</span>,<span class="number">00</span>,6f,<span class="number">00</span>,6f,<span class="number">00</span>,<span class="number">74</span>,\  </span><br><span class="line"><span class="number">00</span>,<span class="number">25</span>,<span class="number">00</span>,5c,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,<span class="number">79</span>,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,6d,<span class="number">00</span>,<span class="number">33</span>,<span class="number">00</span>,<span class="number">32</span>,<span class="number">00</span>,5c,<span class="number">00</span>,<span class="number">69</span>,<span class="number">00</span>,\  </span><br><span class="line">6d,<span class="number">00</span>,<span class="number">61</span>,<span class="number">00</span>,<span class="number">67</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,<span class="number">72</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,2e,<span class="number">00</span>,<span class="number">64</span>,<span class="number">00</span>,6c,<span class="number">00</span>,6c,<span class="number">00</span>,2c,<span class="number">00</span>,2d,\  </span><br><span class="line"><span class="number">00</span>,<span class="number">31</span>,<span class="number">00</span>,<span class="number">30</span>,<span class="number">00</span>,<span class="number">34</span>,<span class="number">00</span>,<span class="number">30</span>,<span class="number">00</span>,<span class="number">00</span>,<span class="number">00</span>  </span><br><span class="line"><span class="string">&quot;LocalizedName&quot;</span>=<span class="title function_">hex</span>(<span class="number">2</span>):<span class="number">40</span>,<span class="number">00</span>,<span class="number">25</span>,<span class="number">00</span>,<span class="number">53</span>,<span class="number">00</span>,<span class="number">79</span>,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,6d,<span class="number">00</span>,<span class="number">52</span>,<span class="number">00</span>,\  </span><br><span class="line">6f,<span class="number">00</span>,6f,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">25</span>,<span class="number">00</span>,5c,<span class="number">00</span>,<span class="number">53</span>,<span class="number">00</span>,<span class="number">79</span>,<span class="number">00</span>,<span class="number">73</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,6d,<span class="number">00</span>,<span class="number">33</span>,<span class="number">00</span>,<span class="number">32</span>,\  </span><br><span class="line"><span class="number">00</span>,5c,<span class="number">00</span>,<span class="number">53</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">74</span>,<span class="number">00</span>,<span class="number">69</span>,<span class="number">00</span>,6e,<span class="number">00</span>,<span class="number">67</span>,<span class="number">00</span>,<span class="number">53</span>,<span class="number">00</span>,<span class="number">79</span>,<span class="number">00</span>,6e,<span class="number">00</span>,<span class="number">63</span>,<span class="number">00</span>,\  </span><br><span class="line"><span class="number">43</span>,<span class="number">00</span>,6f,<span class="number">00</span>,<span class="number">72</span>,<span class="number">00</span>,<span class="number">65</span>,<span class="number">00</span>,2e,<span class="number">00</span>,<span class="number">64</span>,<span class="number">00</span>,6c,<span class="number">00</span>,6c,<span class="number">00</span>,2c,<span class="number">00</span>,2d,<span class="number">00</span>,<span class="number">31</span>,<span class="number">00</span>,<span class="number">30</span>,<span class="number">00</span>,<span class="number">32</span>,\  </span><br><span class="line"><span class="number">00</span>,<span class="number">34</span>,<span class="number">00</span>,<span class="number">00</span>,<span class="number">00</span>  </span><br><span class="line"><span class="string">&quot;LocalRedirectOnly&quot;</span>=<span class="attr">dword</span>:<span class="number">00000001</span>  </span><br><span class="line"><span class="string">&quot;Name&quot;</span>=<span class="string">&quot;OneDrive&quot;</span>  </span><br><span class="line"><span class="string">&quot;ParentFolder&quot;</span>=<span class="string">&quot;&#123;5E6C858F-0E22-4760-9AFE-EA3317B67173&#125;&quot;</span>  </span><br><span class="line"><span class="string">&quot;ParsingName&quot;</span>=<span class="string">&quot;shell:::&#123;018D5C66-4533-4307-9B53-224DE2ED1FE6&#125;&quot;</span>  </span><br><span class="line"><span class="string">&quot;RelativePath&quot;</span>=<span class="string">&quot;OneDrive&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="可能出现的新Bug"><a href="#可能出现的新Bug" class="headerlink" title="可能出现的新Bug"></a>可能出现的新Bug</h1><p>这又涉及到了微软的另一项优良传统：Bug买一送一。我在修复了上述Bug后重启了电脑，然后微软就给了我新的惊喜，现在我的侧边栏中出现了两个OneDrive图标，并且两个图标都能正常工作，我可真是谢谢您啊微软。</p>
-<p>这个Bug依然是通过注册表修复：</p>
-<ol>
+<p>这个Bug依然是通过注册表修复，有两种方法，第一种不行的话就试第二种，我起初用的第一种方法，但是过了几天侧栏又出现了两个OneDrive图标，然后换了第二种，目前还没再出现这个Bug。</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><ol>
 <li>通过<code>Windows+R</code>组合键打开运行窗口。</li>
 <li>输入<code>regedit</code>打开注册表编辑器。</li>
 <li>打开<code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\​Explorer\Desktop\NameSpace</code>。</li>
 <li>查看NameSpace下是否存在多个数据值为OneDrive的文件夹，如果有的话就删除多余的文件夹，只保留<code>&#123;018D5C66-4533-4307-9B53-224DE2ED1FE6&#125;</code>这一个数据值为OneDrive的文件夹。</li>
 </ol>
-<p><img data-src="https://s2.loli.net/2024/10/24/xq7KUlRdng3HIic.webp" alt="注册表修复新Bug"></p>
+<p><img data-src="https://s2.loli.net/2024/10/24/xq7KUlRdng3HIic.webp" alt="方法1"></p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><ol>
+<li>通过<code>Windows+R</code>组合键打开运行窗口。</li>
+<li>输入<code>regedit</code>打开注册表编辑器。</li>
+<li>打开<code>HKEY_CURRENT_USER\Software\Classes\CLSID\&#123;04271989-C4D2-EFBF-85D9-31CFA598C756&#125;</code>。</li>
+<li>双击打开<code>System.IsPinnedToNameSpaceTree</code>，将数值设置为<code>0</code>。</li>
+<li>点击<code>确定</code>保存更改</li>
+</ol>
+<p><img data-src="https://s2.loli.net/2024/11/07/v8SuqANCo3WBFaf.webp" alt="方法2"></p>
 <blockquote>
 <p>解决方法来源：</p>
 <ul>
@@ -9529,12 +9582,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-c3q7mmau4">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-l3dc88i1w">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1.选择创建自定虚拟机"><img data-src="https://s2.loli.net/2024/07/16/4uxgbVHFCcPkQKX.webp" alt="1.选择创建自定虚拟机" class="zoomable"></li><li class="splide__slide" data-caption="2.选择 Apple OS X -> macOS 14"><img data-src="https://s2.loli.net/2024/07/16/QjuoCkn1eVqAPS3.webp" alt="2.选择 Apple OS X -> macOS 14" class="zoomable"></li><li class="splide__slide" data-caption="3.选择新建虚拟磁盘"><img data-src="https://s2.loli.net/2024/07/16/g6OytREumQjNBiz.webp" alt="3.选择新建虚拟磁盘" class="zoomable"></li><li class="splide__slide" data-caption="4.完成虚拟机配置"><img data-src="https://s2.loli.net/2024/07/16/WLXZJ6prOx5sEwq.webp" alt="4.完成虚拟机配置" class="zoomable"></li><li class="splide__slide" data-caption="6.1.点击顶部菜单栏中的设置按钮进行配置"><img data-src="https://s2.loli.net/2024/07/16/FeBJZ3WCSLEbVrQ.webp" alt="6.1.点击顶部菜单栏中的设置按钮进行配置" class="zoomable"></li><li class="splide__slide" data-caption="6.2.配置页面"><img data-src="https://s2.loli.net/2024/07/16/1AbfjE4vyiazmd3.webp" alt="6.2.配置页面" class="zoomable"></li><li class="splide__slide" data-caption="7.1.调节CPU数量、内存大小"><img data-src="https://s2.loli.net/2024/07/16/1srgYDVbeQXyWPm.webp" alt="7.1.调节CPU数量、内存大小" class="zoomable"></li><li class="splide__slide" data-caption="7.2.调节虚拟硬盘大小"><img data-src="https://s2.loli.net/2024/07/16/j4eJvaHFhYGlUD9.webp" alt="7.2.调节虚拟硬盘大小" class="zoomable"></li><li class="splide__slide" data-caption="8.选择安装镜像"><img data-src="https://s2.loli.net/2024/07/16/Sm3Pb1hQrUIRXw8.webp" alt="8.选择安装镜像" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-c3q7mmau4" class="carousel-caption"> </div>
+      <div id="carousel-caption-l3dc88i1w" class="carousel-caption"> </div>
     </div>
   
 
@@ -9547,12 +9600,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-5v8jy2m4h">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-marn3mouj">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="2.选择磁盘工具"><img data-src="https://s2.loli.net/2024/07/16/iHsJgtrIvMnbwkY.webp" alt="2.选择磁盘工具" class="zoomable"></li><li class="splide__slide" data-caption="3.点击顶部下拉菜单，选择显示所有设备"><img data-src="https://s2.loli.net/2024/07/16/YtLhyUQxf1VaI8s.webp" alt="3.点击顶部下拉菜单，选择显示所有设备" class="zoomable"></li><li class="splide__slide" data-caption="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它"><img data-src="https://s2.loli.net/2024/07/16/1C49wUPHtJZ35Yr.webp" alt="4.选择VMware Virtual SATA Hard Drive Media，重命名后然后抹掉它" class="zoomable"></li><li class="splide__slide" data-caption="5.按照正常步骤安装"><img data-src="https://s2.loli.net/2024/07/16/sTrdJ8eSgbW7V6k.webp" alt="5.按照正常步骤安装" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-5v8jy2m4h" class="carousel-caption"> </div>
+      <div id="carousel-caption-marn3mouj" class="carousel-caption"> </div>
     </div>
   
 
@@ -9565,24 +9618,24 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-pzftiiegl">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-8ro42ccu3">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="1.右键单击桌面右上角的安装镜像，推出它"><img data-src="https://s2.loli.net/2024/07/16/Im1tpiVS8FBq9gK.webp" alt="1.右键单击桌面右上角的安装镜像，推出它" class="zoomable"></li><li class="splide__slide" data-caption="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/2bjFUndiO6X4JtA.webp" alt="2.在宿主机的顶部菜单栏中打开虚拟机下拉菜单，选择安装 Vmware Tools" class="zoomable"></li><li class="splide__slide" data-caption="3.双击安装 Vmware Tools"><img data-src="https://s2.loli.net/2024/07/16/Dl7iQkXY1esW4Ec.webp" alt="3.双击安装 Vmware Tools" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-pzftiiegl" class="carousel-caption"> </div>
+      <div id="carousel-caption-8ro42ccu3" class="carousel-caption"> </div>
     </div>
   
 
 <h1 id="连接网络"><a href="#连接网络" class="headerlink" title="连接网络"></a>连接网络</h1><p>如果没有网络连接的话，点击顶部菜单栏中的<code>设置</code>按钮，点击<code>网络适配器</code>，选择<code>桥接模式网络连接</code>下的<code>自动检测</code>选项，并勾选<code>连接网络适配器</code></p>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-ujeu3jjgf">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-afpudpwew">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="设置 -> 网络适配器"><img data-src="https://s2.loli.net/2024/07/16/1qihBpKv8aJX3Cz.webp" alt="设置 -> 网络适配器" class="zoomable"></li><li class="splide__slide" data-caption="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器"><img data-src="https://s2.loli.net/2024/07/16/qlMkejoZAfKwLmO.webp" alt="选择桥接模式网络连接下的自动检测选项，并勾选连接网络适配器" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-ujeu3jjgf" class="carousel-caption"> </div>
+      <div id="carousel-caption-afpudpwew" class="carousel-caption"> </div>
     </div>
   
 
@@ -9618,12 +9671,12 @@
 </ol>
 
     <div class="carousel-container">
-      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-dfananntd">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rwtpbjdb0">
         <div class="splide__track">
           <ul class="splide__list"><li class="splide__slide" data-caption="文稿类型选择应用程序"><img data-src="https://s2.loli.net/2024/07/17/jgYI6M4BVm9Fube.jpg" alt="文稿类型选择应用程序" class="zoomable"></li><li class="splide__slide" data-caption="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令"><img data-src="https://s2.loli.net/2024/07/17/s56fYbt1OaXBd89.jpg" alt="在实用工具中找到运行Shell脚本，把它拖动到右侧的空白位置，粘贴命令" class="zoomable"></li><li class="splide__slide" data-caption="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中"><img data-src="https://s2.loli.net/2024/07/17/KoB1Lk8AHG9wnli.jpg" alt="打开设置-通用-登陆项，将上一步创建的应用程序添加到登录时打开的程序列表中" class="zoomable"></li><li class="splide__slide" data-caption="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行"><img data-src="https://s2.loli.net/2024/07/17/nDKVTAfjF2bwk9q.jpg" alt="重启mac，再次打开活动监视器，搜索usb，查看vmware-usbarbitrator进程是否已运行" class="zoomable"></li></ul>
         </div>
       </div>
-      <div id="carousel-caption-dfananntd" class="carousel-caption"> </div>
+      <div id="carousel-caption-rwtpbjdb0" class="carousel-caption"> </div>
     </div>
   
 
@@ -9661,6 +9714,676 @@
       <tags>
         <tag>VMware</tag>
         <tag>桥接网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 11 IoT LSTC 重装记录</title>
+    <url>/win-11-iot-ltsc-installation.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center"> 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 </blockquote>
+
+<span id="more"></span>
+
+<details class="note primary"><summary><p>LTSC 版本对比</p>
+</summary>
+<p>LTSC，即长期服务支持版（Long-Term Servicing Channel），相较于普通Windows版本，删减了很多系统自带软件，如照片、视频、Copilot等，也没有微软应用商店（但可以手动安装）。在后续的更新中，LTSC只会接收安全更新和Bug修复，不会有功能性更新，这样可以有效防止微软向系统中加一些乱七八糟的功能（和Bug）。至于IoT LTSC，它是专为物联网设备设计的LTSC版本，尽管它叫IoT，但普通家用电脑同样可以安装使用。以下是这两者的详细对比：</p>
+<table>
+<thead>
+<tr>
+<th><strong>特性</strong></th>
+<th><strong>Enterprise LTSC</strong></th>
+<th><strong>IoT Enterprise LTSC</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>硬件限制：TPM &#x2F; 安全启动 &#x2F; UEFI &#x2F; 4GB 以上内存</td>
+<td>有限制</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>BitLocker 加密</td>
+<td>启用</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>更新支持时长</td>
+<td>5年</td>
+<td>10 年</td>
+</tr>
+<tr>
+<td>数字许可证激活</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>可以卸载 Edge 浏览器</td>
+<td>是</td>
+<td>需要将地区设置为欧洲国家</td>
+</tr>
+<tr>
+<td>多语言支持</td>
+<td>支持</td>
+<td>仅支持英文，安装完成后可以设置其他语言</td>
+</tr>
+</tbody></table>
+
+</details>
+
+<div class="note danger"><h1 id="备份文件"><a href="#备份文件" class="headerlink" title="备份文件"></a>备份文件</h1><p>此教程提供的方法会抹除所有磁盘内容来进行全新安装，请一定做好备份！</p>
+<p>全新安装的好处是不会继承老系统的某些奇奇怪怪的问题（比如一些无论如何也删不掉的文件），坏处就是磁盘上所有的内容都会被删除。</p>
+<p>有条件的建议用空闲的U盘或移动硬盘拷贝出所有重要资料。或者激进一些，直接拆机拔掉多余的硬盘，只保留系统盘，避免格式化时选择错误的硬盘。</p>
+</div>
+
+<h1 id="系统镜像下载"><a href="#系统镜像下载" class="headerlink" title="系统镜像下载"></a>系统镜像下载</h1><p>首先，我们需要下载系统镜像。可以通过以下两个网站获取镜像文件。NEXT, I TELL YOU 提供BT和ED2K下载链接，而MAS则提供微软官方源下载和自建网盘下载。你可以同时尝试这两个网站，选择下载速度较快的那个。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>NEXT, I TELL YOU</p><p>原来的MSDN, I TELL YOU</p>
+<a href="https://next.itellyou.cn/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/link.webp"></object>
+<p>Microsoft Activation Scripts (MAS)</p><p>Open-source Windows and Office activator featuring HWID, Ohook, KMS38, and Online KMS activation methods, along with advanced troubleshooting.</p>
+<a href="https://massgrave.dev/windows_ltsc_links#download-links"></a>
+</div></div>
+
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-j40ip6ckv">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="NEXT, I TELL YOU 下载位置"><img data-src="https://s2.loli.net/2024/11/05/9kS6BxRmCuoTi25.webp" alt="NEXT, I TELL YOU 下载位置" class="zoomable"></li><li class="splide__slide" data-caption="MAS 下载位置"><img data-src="https://s2.loli.net/2024/11/05/N5mbXJTqh8GwWkt.webp" alt="MAS 下载位置" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-j40ip6ckv" class="carousel-caption"> </div>
+    </div>
+  
+
+<h1 id="制作启动U盘"><a href="#制作启动U盘" class="headerlink" title="制作启动U盘"></a>制作启动U盘</h1><p>然后我们需要制作一块启动U盘，用于新系统的安装，步骤如下：</p>
+<ol>
+<li>首先，下载并安装启动U盘制作工具Rufus，建议下载便携版，反正系统待会儿就要重装了。 <div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/download.webp"></object>
+<p>Rufus</p><p>Rufus 是一款格式化和创建 USB 启动盘的辅助工具。</p>
+<a href="https://rufus.ie/zh/"></a>
+</div></div></li>
+<li>接着，将一块容量≥8G的空闲U盘插入电脑，此U盘会被格式化，请提前备份数据。</li>
+<li>双击打开Rufus。设置设备为U盘，选择刚刚下载的系统镜像作为引导类型，其他设置保持默认，然后点击“开始”。</li>
+<li>此时，Rufus会弹出提示，询问是否自定义安装选项，比如去除硬件限制等。由于IoT LTSC版本本身就没有这些限制，可以直接点击“OK”跳过。接着，软件会提醒格式化U盘，点击“确定”继续。</li>
+<li>最后，等待刻录完成，整个过程大约需要十几分钟。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-2o10mrlwh">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="下载便携版 Rufus"><img data-src="https://s2.loli.net/2024/11/05/25ax1rDZUPs4mSA.webp" alt="下载便携版 Rufus" class="zoomable"></li><li class="splide__slide" data-caption="将设备设置为U盘，引导类型选择刚刚下载的系统镜像"><img data-src="https://s2.loli.net/2024/11/05/B5t9xOuZkzbRNoD.webp" alt="将设备设置为U盘，引导类型选择刚刚下载的系统镜像" class="zoomable"></li><li class="splide__slide" data-caption="自定义安装选项"><img data-src="https://s2.loli.net/2024/11/05/pvbLgnUCcxZ7TwI.webp" alt="自定义安装选项" class="zoomable"></li><li class="splide__slide" data-caption="格式化U盘警告"><img data-src="https://s2.loli.net/2024/11/05/lsydOHqW9XPrjQg.webp" alt="格式化U盘警告" class="zoomable"></li><li class="splide__slide" data-caption="等待刻录完成"><img data-src="https://s2.loli.net/2024/11/05/WDlPhRfyLEXCmO1.webp" alt="等待刻录完成" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-2o10mrlwh" class="carousel-caption"> </div>
+    </div>
+  
+
+<h1 id="调整启动顺序"><a href="#调整启动顺序" class="headerlink" title="调整启动顺序"></a>调整启动顺序</h1><p>接下来，我们需要进入BIOS页面调整启动顺序，这是重装过程中难度最高的部分了，完成这一步意味着你的重装成功了80%，步骤如下：</p>
+<ol>
+<li>不同品牌的主板进入BIOS的快捷键不同，但通常是F2、F10、F12或Del中的一个。开机时不断按下这些快捷键，直到进入BIOS设置页面。</li>
+<li>BIOS页面的默认语言通常为英文，进入后使用Tab键切换到<code>Boot</code>子页面。然后，将启动U盘设置为第一启动项（<code>Boot Option 1</code>），具体设置方法会根据设备有所不同。</li>
+<li>设置完成后，使用Tab键切换到<code>Save &amp; Exit</code>子页面，选择<code>Save Changes</code>或类似选项，最后按<code>Esc</code>键退出BIOS。此时，可能会弹出确认是否保存更改的提示，选择保存即可。</li>
+</ol>
+<details class="note success"><summary><p>Surface设备调整启动顺序</p>
+</summary>
+<p>如果你的设备是Surface（例如我的老古董Surface 3），是无需进入BIOS的，当设备仅插入一块U盘时，Surface会默认将U盘作为首选启动项。具体操作如下：</p>
+<ol>
+<li>拔掉所有USB设备，别忘了背面那块TF卡。</li>
+<li>插入系统U盘。</li>
+<li>按住音量下键，同时按一下开机键。</li>
+<li>一直保持按住音量下键，直到出现Windows开机时的转圈图标。</li>
+<li>系统将进入安装程序，准备开始重装。</li>
+<li>安装过程中需要用磁吸键盘及其附带的触控板进行操作，触摸屏以及手写笔因为缺少驱动，在安装过程中无法使用。</li>
+</ol>
+
+</details>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>如果不出意外的话，重启后电脑会进入Windows安装程序。接下来的步骤很简单，跟着引导一步一步走就可以，只不过步骤比较多。另外我截取了安装过程中的每一个关键帧，所以就只放图片了，把每一步都写出来的话想想都麻烦。另外部分内容的详细介绍我会放在下面的黄色文本框里。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-t5ek0j1uz">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="安装程序启动中"><img data-src="https://s2.loli.net/2024/11/06/W72mP8Aoiuyc6nY.webp" alt="安装程序启动中" class="zoomable"></li><li class="splide__slide" data-caption="选择安装使用的语言、时间与地区"><img data-src="https://s2.loli.net/2024/11/06/HXtBLrM5IAihyvQ.webp" alt="选择安装使用的语言、时间与地区" class="zoomable"></li><li class="splide__slide" data-caption="选择输入法"><img data-src="https://s2.loli.net/2024/11/06/ftS3gQPpMUywdnT.webp" alt="选择输入法" class="zoomable"></li><li class="splide__slide" data-caption="选择安装选项（删除资料并全新安装）"><img data-src="https://s2.loli.net/2024/11/06/hGOSfovCLkjTQp5.webp" alt="选择安装选项（删除资料并全新安装）" class="zoomable"></li><li class="splide__slide" data-caption="密钥填写，直接跳过"><img data-src="https://s2.loli.net/2024/11/06/FIkM3NZgbp8BHAw.webp" alt="密钥填写，直接跳过" class="zoomable"></li><li class="splide__slide" data-caption="选择IoT版本"><img data-src="https://s2.loli.net/2024/11/06/1hQgS9eHmBZvJcU.webp" alt="选择IoT版本" class="zoomable"></li><li class="splide__slide" data-caption="接受协议"><img data-src="https://s2.loli.net/2024/11/06/OBU7KHylfhFYbvi.webp" alt="接受协议" class="zoomable"></li><li class="splide__slide" data-caption="（高风险操作）命令行清除硬盘内容，详情请看下面的命令行清除硬盘内容说明"><img data-src="https://s2.loli.net/2024/11/06/UIrTj3Hlxd54kcf.webp" alt="（高风险操作）命令行清除硬盘内容，详情请看下面的命令行清除硬盘内容说明" class="zoomable"></li><li class="splide__slide" data-caption="刷新硬盘列表"><img data-src="https://s2.loli.net/2024/11/06/9Ue5wY7PxtiOl4A.webp" alt="刷新硬盘列表" class="zoomable"></li><li class="splide__slide" data-caption="（高风险操作）创建新分区，详情请看下面的分区说明"><img data-src="https://s2.loli.net/2024/11/06/WXQBDEasUCGMx9I.webp" alt="（高风险操作）创建新分区，详情请看下面的分区说明" class="zoomable"></li><li class="splide__slide" data-caption="（高风险操作）选择分区"><img data-src="https://s2.loli.net/2024/11/06/OcP1A6y9TIjfBGi.webp" alt="（高风险操作）选择分区" class="zoomable"></li><li class="splide__slide" data-caption="开始安装"><img data-src="https://s2.loli.net/2024/11/06/yrGs71WeC4ziQfa.webp" alt="开始安装" class="zoomable"></li><li class="splide__slide" data-caption="安装中，可能会多次重启"><img data-src="https://s2.loli.net/2024/11/06/kAsjCpH31ZuU85t.webp" alt="安装中，可能会多次重启" class="zoomable"></li><li class="splide__slide" data-caption="重启了"><img data-src="https://s2.loli.net/2024/11/06/nJdHUP7qZhvS3gF.webp" alt="重启了" class="zoomable"></li><li class="splide__slide" data-caption="安装中..."><img data-src="https://s2.loli.net/2024/11/06/1Uq8s3RVt6fwgkl.webp" alt="安装中..." class="zoomable"></li><li class="splide__slide" data-caption="安装即将完成"><img data-src="https://s2.loli.net/2024/11/06/eVRIBowjn5OTxlZ.webp" alt="安装即将完成" class="zoomable"></li><li class="splide__slide" data-caption="选择所在国家和地区"><img data-src="https://s2.loli.net/2024/11/06/Qe4rUqAa25PG9v7.webp" alt="选择所在国家和地区" class="zoomable"></li><li class="splide__slide" data-caption="选择键盘排列方式"><img data-src="https://s2.loli.net/2024/11/06/LbsZ1KiVghdeNv6.webp" alt="选择键盘排列方式" class="zoomable"></li><li class="splide__slide" data-caption="添加第二种键盘排列"><img data-src="https://s2.loli.net/2024/11/06/CcJrZ1F6B5Dk3Xl.webp" alt="添加第二种键盘排列" class="zoomable"></li><li class="splide__slide" data-caption="添加简体中文键盘排列"><img data-src="https://s2.loli.net/2024/11/06/GNw6h5MixUkKvJj.webp" alt="添加简体中文键盘排列" class="zoomable"></li><li class="splide__slide" data-caption="添加微软拼音输入法"><img data-src="https://s2.loli.net/2024/11/06/A2qr9jkolXREsg3.webp" alt="添加微软拼音输入法" class="zoomable"></li><li class="splide__slide" data-caption="连接WiFi，如果你的电脑接入了网线则没有这两步"><img data-src="https://s2.loli.net/2024/11/06/YG5dE6XUgLBeWz8.webp" alt="连接WiFi，如果你的电脑接入了网线则没有这两步" class="zoomable"></li><li class="splide__slide" data-caption="连接WiFi成功后继续安装"><img data-src="https://s2.loli.net/2024/11/06/lvBGXgYJVj8D4uf.webp" alt="连接WiFi成功后继续安装" class="zoomable"></li><li class="splide__slide" data-caption="检查更新"><img data-src="https://s2.loli.net/2024/11/06/vgHsmN8SpfxPXCk.webp" alt="检查更新" class="zoomable"></li><li class="splide__slide" data-caption="可能再次重启"><img data-src="https://s2.loli.net/2024/11/06/dE9cFUg1tWS42GH.webp" alt="可能再次重启" class="zoomable"></li><li class="splide__slide" data-caption="更改登录方式，企业版系统不能使用微软个人账号登录"><img data-src="https://s2.loli.net/2024/11/06/LY5hqoVrfHpSXJn.webp" alt="更改登录方式，企业版系统不能使用微软个人账号登录" class="zoomable"></li><li class="splide__slide" data-caption="选择域加入，也就是创建本地账户，安装完成后可以替换成微软个人账户"><img data-src="https://s2.loli.net/2024/11/06/BlwKtMk1C5sOgmY.webp" alt="选择域加入，也就是创建本地账户，安装完成后可以替换成微软个人账户" class="zoomable"></li><li class="splide__slide" data-caption="输入用户名，建议使用全英文字母"><img data-src="https://s2.loli.net/2024/11/06/PxuntjBMpZyGq85.webp" alt="输入用户名，建议使用全英文字母" class="zoomable"></li><li class="splide__slide" data-caption="输入密码，不想要密码就空着不填，直接点下一步"><img data-src="https://s2.loli.net/2024/11/06/3t7vYjoe2ERTyLJ.webp" alt="输入密码，不想要密码就空着不填，直接点下一步" class="zoomable"></li><li class="splide__slide" data-caption="确认密码"><img data-src="https://s2.loli.net/2024/11/06/l4uzFRD7QGmhAnU.webp" alt="确认密码" class="zoomable"></li><li class="splide__slide" data-caption="没有卵用的安全问题，胡乱填胡乱选"><img data-src="https://s2.loli.net/2024/11/06/8UEQ1yMHaBcLq67.webp" alt="没有卵用的安全问题，胡乱填胡乱选" class="zoomable"></li><li class="splide__slide" data-caption="第二个没有卵用的安全问题"><img data-src="https://s2.loli.net/2024/11/06/QShzGoWVI6PB1lM.webp" alt="第二个没有卵用的安全问题" class="zoomable"></li><li class="splide__slide" data-caption="最后一个没有卵用的安全问题"><img data-src="https://s2.loli.net/2024/11/06/8WrIMvNhznyTlGE.webp" alt="最后一个没有卵用的安全问题" class="zoomable"></li><li class="splide__slide" data-caption="隐私选项1，建议只保留位置选项"><img data-src="https://s2.loli.net/2024/11/06/OLXV31Pf67scQph.webp" alt="隐私选项1，建议只保留位置选项" class="zoomable"></li><li class="splide__slide" data-caption="隐私选项2，关掉"><img data-src="https://s2.loli.net/2024/11/06/zgeDkV1iSLR6txl.webp" alt="隐私选项2，关掉" class="zoomable"></li><li class="splide__slide" data-caption="隐私选项3，同样关掉"><img data-src="https://s2.loli.net/2024/11/06/RmWsnUOoGfTA7DP.webp" alt="隐私选项3，同样关掉" class="zoomable"></li><li class="splide__slide" data-caption="检查系统更新"><img data-src="https://s2.loli.net/2024/11/06/EQhWxiRnotqzfgD.webp" alt="检查系统更新" class="zoomable"></li><li class="splide__slide" data-caption="下载系统更新"><img data-src="https://s2.loli.net/2024/11/06/yM12vLztBwmRXdG.webp" alt="下载系统更新" class="zoomable"></li><li class="splide__slide" data-caption="安装系统更新"><img data-src="https://s2.loli.net/2024/11/06/TKXYL6NaoPMzCte.webp" alt="安装系统更新" class="zoomable"></li><li class="splide__slide" data-caption="重启并完成系统更新"><img data-src="https://s2.loli.net/2024/11/06/3Pt7cvgi86uLdFa.webp" alt="重启并完成系统更新" class="zoomable"></li><li class="splide__slide" data-caption="系统更新安装完成，进入登录页面"><img data-src="https://s2.loli.net/2024/11/06/fYCakens3mlbtrH.webp" alt="系统更新安装完成，进入登录页面" class="zoomable"></li><li class="splide__slide" data-caption="初始化"><img data-src="https://s2.loli.net/2024/11/06/65kz8jSN3dx2H7q.webp" alt="初始化" class="zoomable"></li><li class="splide__slide" data-caption="再等一会"><img data-src="https://s2.loli.net/2024/11/06/vpDUK1bg8SCh7kV.webp" alt="再等一会" class="zoomable"></li><li class="splide__slide" data-caption="同意数据跨境传输"><img data-src="https://s2.loli.net/2024/11/06/xXwegpNvLo6KZOC.webp" alt="同意数据跨境传输" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-t5ek0j1uz" class="carousel-caption"> </div>
+    </div>
+  
+
+<details class="note warning"><summary><p>命令行清除硬盘内容说明</p>
+</summary>
+<p>这部分内容适合强迫症，比如我，每次重装我都会格式化所有硬盘。</p>
+<p><strong>如果你的电脑安装了多块硬盘，或者只有一块物理硬盘分了多个分区，但是你只想格式化C盘，请不要是使用此方法！</strong></p>
+<ol>
+<li>在选择安装位置页面（Select location to install Windows 11）通过<code>Shift</code>+<code>F10</code>快捷键（部分设备可能需要结合<code>Fn</code>键）打开<code>cmd</code>窗口。</li>
+<li>输入<code>diskpart</code>并回车。</li>
+<li>使用<code>list disk</code>命令列出已挂载的硬盘。</li>
+<li>使用<code>select disk [编号]</code>命令，选择根据实际情况选择硬盘。<ul>
+<li>我这里是虚拟机里安装的，所以只有一个硬盘，也就是Disk 0，所以我这里输入的命令就是<code>select disk 0</code>。</li>
+<li>正常情况系统会列出至少两个硬盘（U盘和电脑的主硬盘），你电脑上插了多少物理硬盘这里就有多少个，注意不要选错成U盘。可以根据硬盘大小来分辨。</li>
+<li>请注意这里选择的是物理层面上的硬盘，即使你的一块硬盘有多个分区，也会被视为同一块硬盘！</li>
+</ul>
+</li>
+<li>输入<code>clean</code>并回车，抹除已选择硬盘上的全部内容。</li>
+<li>输入<code>convert gpt</code>并回车，将硬盘转换为GPT格式。</li>
+<li>再次使用<code>select disk [编号]</code>命令，检查硬盘状况。</li>
+</ol>
+
+</details>
+
+<details class="note warning"><summary><p>分区说明</p>
+</summary>
+<p>如果你前面使用命令行清除了硬盘内容，那么直接跟随图片进行操作，选择主硬盘并创建新分区。</p>
+<p>在未分区的硬盘上执行第一次创建新分区操作时，会默认将磁盘分为三部分，即：</p>
+<ul>
+<li>100MB的系统分区（System），用于EFI引导</li>
+<li>几百MB的恢复分区（MSR(Reversed)）</li>
+<li>最大的主分区（Primary），系统最终要安装到的分区，也就是C盘。选中它并点击<code>Next</code>来开始系统安装。</li>
+</ul>
+<p>你可以在这里完成其他硬盘的分区，也可以等系统安装完成后使用磁盘工具进行分区。</p>
+<p>如果你没有通过命令行清除硬盘，那么请选择你原来系统的C盘分区，然后格式化它（<code>Format Partiton</code>）</p>
+
+</details>
+
+<h1 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h1><p>以下是两种激活方式，使用它们激活的系统在法律层面上并不属于正版，去官网买的Key才算法律层面的正版，微软只是对这种行为睁一只眼闭一只眼罢了，以下内容仅供测试使用。</p>
+<p>首先右键单击任务栏上的开始菜单按钮（Windows图标），打开<code>Windows Powershell（管理员）</code>。</p>
+<p>在激活之前，先查看一下PowerShell的执行策略：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">get-executionpolicy</span><br></pre></td></tr></table></figure>
+
+<p>如果返回值是<code>Restricted</code>，则需要更改执行策略，否则脚本可能无法执行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<p>最后输入<code>a</code>并回车确认更改。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-d5gekanys">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="右键单击任务栏上的开始菜单按钮（Windows图标）"><img data-src="https://s2.loli.net/2024/11/07/ihq5tQBysETFMJV.webp" alt="右键单击任务栏上的开始菜单按钮（Windows图标）" class="zoomable"></li><li class="splide__slide" data-caption="打开Windows Powershell（管理员）"><img data-src="https://s2.loli.net/2024/11/07/FwcdEOVel4Abtui.webp" alt="打开Windows Powershell（管理员）" class="zoomable"></li><li class="splide__slide" data-caption="查看及更改PowerShell的执行策略"><img data-src="https://s2.loli.net/2024/11/07/XNSYqR5lpEzPwg9.webp" alt="查看及更改PowerShell的执行策略" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-d5gekanys" class="carousel-caption"> </div>
+    </div>
+  
+
+<details class="note primary"><summary><p>关于PowerShell的执行策略</p>
+</summary>
+<blockquote>
+<p>以下内容来自ChatGPT</p>
+</blockquote>
+<p>PowerShell 的执行策略（Execution Policy）是一个安全功能，用于控制在 Windows 上运行脚本的权限和行为。执行策略限制了脚本和配置文件的执行，帮助防止恶意脚本或未经授权的代码在系统上运行。执行策略本身并不是真正的安全措施，它只是一个控制脚本运行的机制，并不防止恶意脚本的执行，更多的是用于帮助用户避免不小心运行不受信任的脚本。</p>
+<p>PowerShell 有几种执行策略级别，每个级别的权限和限制不同。常见的执行策略如下：</p>
+<ol>
+<li><strong>Restricted（默认设置）</strong>：<ul>
+<li><strong>描述</strong>：这是 PowerShell 默认的执行策略。在此模式下，不允许运行任何脚本，只有 PowerShell 命令和函数（命令行输入）可以运行。用户可以在交互模式下执行命令，但不能直接执行 <code>.ps1</code> 脚本文件。</li>
+<li><strong>适用场景</strong>：最安全的设置，防止任何脚本或自动化程序运行。</li>
+</ul>
+</li>
+<li><strong>AllSigned</strong>：<ul>
+<li><strong>描述</strong>：要求所有脚本和配置文件（包括你自己的脚本）都必须由受信任的发布者进行数字签名才能执行。即使是本地脚本，也需要签名，否则会被阻止执行。</li>
+<li><strong>适用场景</strong>：对于需要执行的脚本进行强控制，并确保所有脚本都是由受信任的开发者签名。</li>
+</ul>
+</li>
+<li><strong>RemoteSigned</strong>：<ul>
+<li><strong>描述</strong>：要求从 Internet 下载的脚本必须由受信任的发布者签名，才能执行。对于本地创建的脚本（没有下载自网络），不需要签名。</li>
+<li><strong>适用场景</strong>：这是一个常用的设置，允许本地脚本自由运行，但从 Internet 下载的脚本需要签名验证。</li>
+</ul>
+</li>
+<li><strong>Unrestricted</strong>：<ul>
+<li><strong>描述</strong>：允许执行任何脚本，无论是否签名。对于从 Internet 下载的脚本，用户会看到警告提示，但仍然可以执行。这个设置没有签名验证限制，因此安全性较低。</li>
+<li><strong>适用场景</strong>：适用于不考虑安全性或信任所有脚本来源的环境。</li>
+</ul>
+</li>
+<li><strong>Bypass</strong>：<ul>
+<li><strong>描述</strong>：没有任何限制，所有脚本都被允许执行，完全绕过了所有的执行策略检查。此策略适用于某些自动化任务，或者需要在没有任何安全警告或提示的情况下运行脚本。</li>
+<li><strong>适用场景</strong>：通常用于特定的自动化或测试环境，但因为安全性最低，通常不建议在生产环境中使用。</li>
+</ul>
+</li>
+<li><strong>Undefined</strong>：<ul>
+<li><strong>描述</strong>：表示没有为此作用域（如用户、计算机、会话等）设置执行策略。如果某个作用域的执行策略是 “Undefined”，则会继承父作用域的设置。</li>
+<li><strong>适用场景</strong>：这种状态表示执行策略没有设置。如果系统的所有作用域都是 “Undefined”，则 PowerShell 会使用默认策略（通常是 Restricted）。</li>
+</ul>
+</li>
+</ol>
+
+</details>
+
+<h2 id="MAS-PowerShell-脚本激活"><a href="#MAS-PowerShell-脚本激活" class="headerlink" title="MAS PowerShell 脚本激活"></a>MAS PowerShell 脚本激活</h2><p><a href="https://massgrave.dev/">Microsoft Activation Scripts (MAS)</a>是一组由第三方开发的开源自动化脚本，用于 Windows 和 Office 的激活。它们通常用于绕过正版验证，或在没有合适的正式密钥的情况下激活 Windows 或 Office 产品。</p>
+<p>在 Powershell 中执行下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">irm https://get.activated.win | iex</span><br></pre></td></tr></table></figure>
+
+<p>由于<code>get.activated.win</code>是一个新域名，可能会被ISP或DNS阻断，如果Powershell报错无法连接的话，就用下面这个命令代替，不过需要注意的是这个命令随时可能被废弃。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">irm https://massgrave.dev/get | iex</span><br></pre></td></tr></table></figure>
+
+<p>然后在弹出的新窗口中输入<code>1</code>进行HWID数字许可证激活。等到脚本执行完成后，按任意键退出脚本。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-bs9dpd1xh">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="Powershell可能报错无法连接"><img data-src="https://s2.loli.net/2024/11/07/vROeDrC2h5oqZwz.webp" alt="Powershell可能报错无法连接" class="zoomable"></li><li class="splide__slide" data-caption="在弹出的新窗口中输入1进行HWID数字许可证激活"><img data-src="https://s2.loli.net/2024/11/07/B5m8LEYxzI6AXo9.webp" alt="在弹出的新窗口中输入1进行HWID数字许可证激活" class="zoomable"></li><li class="splide__slide" data-caption="等待脚本执行完成后，按任意键退出脚本"><img data-src="https://s2.loli.net/2024/11/07/yMIjS1TXtuOnwYc.webp" alt="等待脚本执行完成后，按任意键退出脚本" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-bs9dpd1xh" class="carousel-caption"> </div>
+    </div>
+  
+
+<details class="note primary"><summary><p>命令解释</p>
+</summary>
+<blockquote>
+<p>以下内容来自ChatGPT</p>
+</blockquote>
+<p>上述 PowerShell 命令包含两个部分，它们通过管道 <code>|</code> 链接在一起。整个命令的作用是从一个远程 URL 下载脚本，并将其直接执行。具体来说：</p>
+<ol>
+<li><code>irm https://get.activated.win</code>：<ul>
+<li><code>irm</code> 是 <code>Invoke-RestMethod</code> 的缩写，它是 PowerShell 中的一个命令，用于从指定的 URL 下载数据（通常是 JSON、XML、文本等格式的响应）。它是一个类似 <code>curl</code> 或 <code>wget</code> 的工具，但用于 PowerShell 环境中。</li>
+<li>这里的 URL <code>https://get.activated.win</code> 是一个远程网站地址，命令会尝试访问该网站并下载数据。通常，这种数据是一个 PowerShell 脚本，或者是其他可以被 PowerShell 处理的内容。</li>
+</ul>
+</li>
+<li><code>|</code>（管道符号）：<ul>
+<li>管道符号 <code>|</code> 将 <code>irm</code> 命令的输出传递给 <code>iex</code> 命令作为输入。即将从 URL 下载的数据传递给 <code>iex</code> 命令。</li>
+</ul>
+</li>
+<li><code>iex</code>：<ul>
+<li><code>iex</code> 是 <code>Invoke-Expression</code> 的缩写，它用于执行传递给它的字符串作为 PowerShell 命令。换句话说，<code>iex</code> 会将它接收到的内容（在这里是通过 <code>irm</code> 下载的内容）当作 PowerShell 代码来执行。</li>
+</ul>
+</li>
+</ol>
+<p>总之，这条命令会从 URL <code>https://get.activated.win</code> 下载内容，并将下载的内容（应该是一个 PowerShell 脚本）直接传递给 <code>iex</code> 执行。通常，这样的脚本会在后台执行某些操作，比如激活软件、安装某些程序，或者修改系统设置等。</p>
+
+</details>
+
+<p>如果你无法成功执行上面的命令，还可以直接从GitHub下载脚本源文件，在本地直接执行。步骤如下：</p>
+<ol>
+<li>首先访问MAS脚本的GitHub仓库，然后点击右上角的<code>Code</code>按钮，选择<code>Download ZIP</code>来下载压缩文件。</li>
+<li>Edge浏览器可能提醒是否下载及保留文件，确认保留。</li>
+<li>下载完成解压文件，然后打开<code>./Microsoft-Activation-Scripts-master/MAS/All-In-One-Version-KL</code>目录。</li>
+<li>右键单击<code>MAS_AIO.cmd</code>并选择<code>Run as administrator</code>。</li>
+<li>然后在弹出的新窗口中输入<code>1</code>进行HWID数字许可证激活。</li>
+<li>等待脚本执行完成后，按任意键退出脚本。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-nh3881fzq">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="访问MAS脚本的GitHub仓库，然后点击右上角的Code按钮，选择Download ZIP来下载压缩文件"><img data-src="https://s2.loli.net/2024/11/07/dQ9uFCxNDKU7GpW.webp" alt="访问MAS脚本的GitHub仓库，然后点击右上角的Code按钮，选择Download ZIP来下载压缩文件" class="zoomable"></li><li class="splide__slide" data-caption="保留文件"><img data-src="https://s2.loli.net/2024/11/07/EBJNXQaHDzZY9x1.webp" alt="保留文件" class="zoomable"></li><li class="splide__slide" data-caption="确认保留文件"><img data-src="https://s2.loli.net/2024/11/07/B8TjLolkxWFJbn5.webp" alt="确认保留文件" class="zoomable"></li><li class="splide__slide" data-caption="下载完成解压文件，然后打开All-In-One-Version-KL目录，右键单击MAS_AIO.cmd并选择Run as administrator"><img data-src="https://s2.loli.net/2024/11/07/mxhRKLkOdr9CNIQ.webp" alt="下载完成解压文件，然后打开All-In-One-Version-KL目录，右键单击MAS_AIO.cmd并选择Run as administrator" class="zoomable"></li><li class="splide__slide" data-caption="在弹出的新窗口中输入1进行HWID数字许可证激活"><img data-src="https://s2.loli.net/2024/11/07/B5m8LEYxzI6AXo9.webp" alt="在弹出的新窗口中输入1进行HWID数字许可证激活" class="zoomable"></li><li class="splide__slide" data-caption="等待脚本执行完成后，按任意键退出脚本"><img data-src="https://s2.loli.net/2024/11/07/yMIjS1TXtuOnwYc.webp" alt="等待脚本执行完成后，按任意键退出脚本" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-nh3881fzq" class="carousel-caption"> </div>
+    </div>
+  
+
+<h2 id="KMS-激活"><a href="#KMS-激活" class="headerlink" title="KMS 激活"></a>KMS 激活</h2><p>如果MAS脚本无法激活你的系统，你还可以尝试更传统的KMS激活。KMS全称Key Management Service，主要用于企业内的计算机批量激活，激活有效期为180天，但是可以设置自动续期。</p>
+<p>激活方式如下：</p>
+<ol>
+<li>右键单击任务栏上的开始菜单按钮（Windows图标），打开<code>Windows Powershell（管理员）</code>。然后依次输入下面的命令并回车，激活需要网络连接，后两个命令执行后会有激活信息弹窗，点确定即可。</li>
+<li>设置KMS服务器 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr -skms kms.03k.org</span><br></pre></td></tr></table></figure></li>
+<li>设置密钥，如果你安装的是其他版本，请替换密钥 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr -ipk KBN8V-HFGQ4-MGXVD-347P6-PDQGT</span><br></pre></td></tr></table></figure></li>
+<li>启动 Windows 激活 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr -ato</span><br></pre></td></tr></table></figure></li>
+<li>（可选）显示详细的许可证和激活信息 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr -dlv</span><br></pre></td></tr></table></figure></li>
+</ol>
+<details class="note default"><summary><p>slmgr KMS密钥</p>
+</summary>
+<p>相应版本的密钥如下，Win11和Win10的密钥一样，没有变，更多KMS密钥请到<a href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys"><strong>微软官方文档</strong></a>查找，其中版本后缀有N的为欧洲专供版，后缀有G的为政府专供版，不过这些和一般用户没啥关系。</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作系统版本</th>
+<th align="left">KMS 客户端安装程序密钥</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">专业版</td>
+<td align="left">W269N-WFGWX-YVC9B-4J6C9-T83GX</td>
+</tr>
+<tr>
+<td align="left">专业版 N</td>
+<td align="left">MH37W-N47XK-V7XM9-C7227-GCQG9</td>
+</tr>
+<tr>
+<td align="left">专业工作站版</td>
+<td align="left">NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</td>
+</tr>
+<tr>
+<td align="left">专业工作站版 N</td>
+<td align="left">9FNHH-K3HBT-3W4TD-6383H-6XYWF</td>
+</tr>
+<tr>
+<td align="left">专业教育版</td>
+<td align="left">6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</td>
+</tr>
+<tr>
+<td align="left">专业教育版 N</td>
+<td align="left">YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</td>
+</tr>
+<tr>
+<td align="left">教育版</td>
+<td align="left">NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</td>
+</tr>
+<tr>
+<td align="left">教育版 N</td>
+<td align="left">2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</td>
+</tr>
+<tr>
+<td align="left">企业版</td>
+<td align="left">NPPR9-FWDCX-D2C8J-H872K-2YT43</td>
+</tr>
+<tr>
+<td align="left">企业版 N</td>
+<td align="left">DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</td>
+</tr>
+<tr>
+<td align="left">企业版 G</td>
+<td align="left">YYVX9-NTFWV-6MDM3-9PT4T-4M68B</td>
+</tr>
+<tr>
+<td align="left">企业版 G N</td>
+<td align="left">44RPN-FTY23-9VTTB-MP9BX-T84FV</td>
+</tr>
+<tr>
+<td align="left">企业版 LTSC 2024&#x2F;2021&#x2F;2019</td>
+<td align="left">M7XTQ-FN8P6-TTKYV-9D4CC-J462D</td>
+</tr>
+<tr>
+<td align="left">企业版 N LTSC 2024&#x2F;2021&#x2F;2019</td>
+<td align="left">92NFX-8DJQP-P6BBQ-THF9C-7CG2H</td>
+</tr>
+<tr>
+<td align="left">IoT 企业版 LTSC 2024&#x2F;21</td>
+<td align="left">KBN8V-HFGQ4-MGXVD-347P6-PDQGT</td>
+</tr>
+<tr>
+<td align="left">Server 2025 标准</td>
+<td align="left">TVRH6-WHNXV-R9WG3-9XRFY-MY832</td>
+</tr>
+<tr>
+<td align="left">Server 2025 数据中心</td>
+<td align="left">D764K-2NDRG-47T6Q-P8T8W-YP6DF</td>
+</tr>
+</tbody></table>
+
+</details>
+
+<details class="note primary"><summary><p>slmgr 命令</p>
+</summary>
+<blockquote>
+<p>以下内容来自ChatGPT</p>
+</blockquote>
+<p>在 Windows 操作系统中，<code>slmgr</code>（Software Licensing Management Tool）是一个命令行工具，通常用于管理和配置 Windows 的激活和许可证信息。你提到的四个命令与 KMS（Key Management Service）激活相关，下面是每个命令的详细解释：</p>
+<ol>
+<li><code>slmgr -skms kms.03k.org</code><ul>
+<li><strong>作用</strong>：这个命令将 Windows 激活服务器的地址设置为 <code>kms.03k.org</code>，也就是说，指定 KMS 服务器的地址。</li>
+<li><strong>解释</strong>：<ul>
+<li><code>-skms</code> 是用来指定 KMS 服务器地址的参数。</li>
+<li><code>kms.03k.org</code> 是你指定的 KMS 服务器域名。通过这个服务器，Windows 系统将与该服务器通信并进行激活。</li>
+</ul>
+</li>
+<li>这个命令的目的是告诉操作系统，接下来应该通过该 KMS 服务器来进行激活。</li>
+</ul>
+</li>
+<li><code>slmgr -ipk 相应版本的密钥</code><ul>
+<li><strong>作用</strong>：这个命令用于输入 Windows 的产品密钥（Product Key）。</li>
+<li><strong>解释</strong>：<ul>
+<li><code>-ipk</code> 是用来安装产品密钥的参数。</li>
+<li><code>相应版本的密钥</code> 需要替换成你想要激活的 Windows 版本的密钥（如 Windows 10 Professional 的密钥）。</li>
+</ul>
+</li>
+<li>使用此命令将指定的密钥安装到系统中，以便在激活时使用。对于 KMS 激活，通常会输入与特定版本 Windows 对应的 KMS 激活密钥。</li>
+</ul>
+</li>
+<li><code>slmgr -ato</code><ul>
+<li><strong>作用</strong>：这个命令用于启动 Windows 激活。</li>
+<li><strong>解释</strong>：<ul>
+<li><code>-ato</code> 是自动激活的命令参数，表示立即使用设置的 KMS 服务器来激活操作系统。</li>
+</ul>
+</li>
+<li>这个命令会促使 Windows 系统尝试与 KMS 服务器连接，并进行激活。如果 KMS 服务器和密钥设置正确，激活会成功。</li>
+</ul>
+</li>
+<li><code>slmgr -dlv</code><ul>
+<li><strong>作用</strong>：这个命令显示详细的许可证和激活信息。</li>
+<li><strong>解释</strong>：<ul>
+<li><code>-dlv</code> 是用来显示详细信息的参数。</li>
+</ul>
+</li>
+<li>执行此命令后，Windows 会显示有关当前操作系统许可证的详细信息，包括激活状态、许可证类型、KMS 服务器信息、到期时间等。这对于检查激活是否成功或获取有关系统激活状态的更多细节非常有用。</li>
+</ul>
+</li>
+</ol>
+
+</details>
+
+<h1 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h1><p>使用<code>Windows</code>+<code>I</code>组合键打开设置。</p>
+<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><p>在进行更多设置前，先把语言更改为中文：</p>
+<ol>
+<li>点击左侧边栏中的<code>Time &amp; language</code>选项，然后点击右侧的<code>Language &amp; region</code>。</li>
+<li>点击Chinese项后面的三个小圆点，在菜单中选择<code>Language options</code>。</li>
+<li>点击<code>Language pack</code>后面的<code>Download</code>按钮来下载语言包。</li>
+<li>回退到<code>Language &amp; region</code>页面，将<code>Windows display language</code>切换为<code>中文（中华人民共和国）</code>。</li>
+<li>重启，虽然系统提示注销，但是我在注销后遇到了中英文混杂的Bug。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-wj11c99i0">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="点击左侧边栏中的Time & language选项，然后点击右侧的Language & region"><img data-src="https://s2.loli.net/2024/11/07/eXu2U1fNZlFskaR.webp" alt="点击左侧边栏中的Time & language选项，然后点击右侧的Language & region" class="zoomable"></li><li class="splide__slide" data-caption="点击Chinese项后面的三个小圆点，在菜单中选择Language options"><img data-src="https://s2.loli.net/2024/11/07/4NFhq5PsRaeHjoY.webp" alt="点击Chinese项后面的三个小圆点，在菜单中选择Language options" class="zoomable"></li><li class="splide__slide" data-caption="点击Language pack后面的Download按钮来下载语言包"><img data-src="https://s2.loli.net/2024/11/07/yqXGAlZKzfwe1HJ.webp" alt="点击Language pack后面的Download按钮来下载语言包" class="zoomable"></li><li class="splide__slide" data-caption="回退到Language & region页面，将Windows display language切换为中文（中华人民共和国）"><img data-src="https://s2.loli.net/2024/11/07/oyin6A4BzeKOCjT.webp" alt="回退到Language & region页面，将Windows display language切换为中文（中华人民共和国）" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-wj11c99i0" class="carousel-caption"> </div>
+    </div>
+  
+
+<h2 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h2><p>默认情况下桌面上只有回收站一个图标，这里我将计算机（也就是我的电脑）的图标添加到桌面上：</p>
+<ol>
+<li>点击左侧边栏中的<code>个性化</code>选项。</li>
+<li>打开<code>主题</code>设置。</li>
+<li>点击<code>桌面图标设置</code>。</li>
+<li>勾选<code>计算机</code>。</li>
+<li><code>确定</code>更改。</li>
+</ol>
+<p>然后再将设置、文件资源管理器等图标添加到开始菜单中：</p>
+<ol>
+<li>切换到<code>开始</code>设置</li>
+<li>点击最下面的<code>文件夹</code></li>
+<li>打开相关选项的开关</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-6ujentbe2">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="添加桌面图标"><img data-src="https://s2.loli.net/2024/11/07/Scts5awfVrAbD4J.webp" alt="添加桌面图标" class="zoomable"></li><li class="splide__slide" data-caption="添加开始菜单图标"><img data-src="https://s2.loli.net/2024/11/07/8dzC9QJthfbxWL6.webp" alt="添加开始菜单图标" class="zoomable"></li><li class="splide__slide" data-caption="开始菜单图标展示"><img data-src="https://s2.loli.net/2024/11/07/NnTbpHXtK3wQxIG.webp" alt="开始菜单图标展示" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-6ujentbe2" class="carousel-caption"> </div>
+    </div>
+  
+
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>最后后建议到<code>设置</code>-<code>Windows更新</code>-<code>检查更新</code>中手动检查一次更新，等待所有更新安装完成后点击下面出现的<code>立即重启</code>。此过程耗时较长，取决于网速与电脑性能。另外系统会自动在后台安装驱动，如果当前屏幕分辨率很怪的话不用担心，过一会安装完显卡驱动就正常了。</p>
+<h1 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h1><p>如果你在安装系统时还留有没分区的硬盘，那么此时可以使用磁盘管理工具进行分区。</p>
+<p>首先右键单击任务栏上的开始菜单按钮（Windows图标），打开<code>磁盘管理</code>。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-t5h1v4p32">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="右键单击任务栏上的开始菜单按钮（Windows图标），打开磁盘管理"><img data-src="https://s2.loli.net/2024/11/07/nU7jfQ1cWKw36ld.webp" alt="右键单击任务栏上的开始菜单按钮（Windows图标），打开磁盘管理" class="zoomable"></li><li class="splide__slide" data-caption="磁盘管理工具"><img data-src="https://s2.loli.net/2024/11/07/lIOGULTjqVz8dYK.webp" alt="磁盘管理工具" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-t5h1v4p32" class="carousel-caption"> </div>
+    </div>
+  
+
+<h2 id="创建新分区"><a href="#创建新分区" class="headerlink" title="创建新分区"></a>创建新分区</h2><p>如果磁盘上有黑色的未分配的空间，你可以创建一个新的分区：</p>
+<ol>
+<li>右键单击黑色的<code>未分配</code>空间。</li>
+<li>选择<code>新建简单卷</code>，然后跟随向导进行设置。</li>
+<li>选择分区的大小（可以选择最大容量或手动设置，单位是MB，1GB &#x3D; 1024MB），点击<code>下一步</code>。</li>
+<li>选择盘符（例如D:或 E:），然后点击<code>下一步</code>。</li>
+<li>选择分区格式，保持默认，即NTFS格式+快速格式化。点击<code>下一步</code>。</li>
+<li>完成设置后点击 <code>完成</code>。系统将开始创建新的分区。</li>
+</ol>
+<p>如果你的固态硬盘小于512G，没啥必要多分区。另外在基本磁盘上创建新分区时，会将前三个分区格式化为主分区。从第四个分区开始，每一个分区会配置为扩展分区内的逻辑驱动器。</p>
+<h2 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h2><p>如果你想删除现有的分区并释放空间（注意，删除分区会丢失所有数据），可以按以下步骤操作：</p>
+<ol>
+<li>右键点击你要删除的分区。</li>
+<li>选择<code>删除卷</code>。</li>
+<li>在弹出的确认窗口中，点击<code>是</code>进行确认。</li>
+<li>删除后，空间将变为黑色的<code>未分配</code>，可以用来创建新的分区。</li>
+</ol>
+<h2 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h2><p>格式化一个分区会清除其中的所有数据并重新建立文件系统:</p>
+<ol>
+<li>右键点击你要格式化的分区。</li>
+<li>选择 <code>格式化</code>。</li>
+<li>保持默认选项。</li>
+<li>点击 <code>确定</code> 进行格式化。</li>
+</ol>
+<h2 id="扩展分区"><a href="#扩展分区" class="headerlink" title="扩展分区"></a>扩展分区</h2><p>如果某个分区的空间快用完了，但磁盘上有未分配的空间，可以通过扩展分区来增加容量：</p>
+<ol>
+<li>右键点击你要扩展的分区。</li>
+<li>选择 <code>扩展卷</code>。</li>
+<li>在弹出的向导中，选择要分配的空间量（默认情况下是最大可用空间）。</li>
+<li>点击 <code>下一步</code>，然后点击 <code>完成</code>。</li>
+</ol>
+<h2 id="压缩分区"><a href="#压缩分区" class="headerlink" title="压缩分区"></a>压缩分区</h2><p>如果你想缩小分区，可以通过压缩分区来实现：</p>
+<ol>
+<li>右键点击你要压缩的分区。</li>
+<li>选择 <code>压缩卷</code>。</li>
+<li>输入压缩的空间量。</li>
+<li>点击 <code>压缩</code>。压缩后的空间将变为黑色的<code>未分配</code>状态。</li>
+</ol>
+<h2 id="更改盘符和路径"><a href="#更改盘符和路径" class="headerlink" title="更改盘符和路径"></a>更改盘符和路径</h2><p>你可以为分区分配一个不同的字母：</p>
+<ol>
+<li>右键点击分区或驱动器。</li>
+<li>选择 <code>更改驱动器字母和路径</code>。</li>
+<li>在弹出的窗口中，选择 <code>更改</code>，然后选择新的字母。</li>
+<li>点击 <code>确定</code>。</li>
+</ol>
+<h1 id="安装微软应用商店"><a href="#安装微软应用商店" class="headerlink" title="安装微软应用商店"></a>安装微软应用商店</h1><p>LTSC版本是不含微软应用商店的，需要手动安装。</p>
+<ol>
+<li>首先直接下载<code>LTSC-Add-MicrosoftStore</code>项目提供的安装包。<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/github.webp"></object>
+<p>LTSC-Add-MicrosoftStore 的GitHub仓库</p><p>Add Windows Store to Windows 11 24H2 LTSC</p>
+<a href="https://github.com/minihub/LTSC-Add-MicrosoftStore"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/download.webp"></object>
+<p>直接下载</p><p>直接下载微软应用商店安装包</p>
+<a href="https://github.com/minihub/LTSC-Add-MicrosoftStore/releases/download/LTSC-Add-MicrosoftStore-24H2/LTSC-Add-MicrosoftStore-24H2.zip"></a>
+</div></div></li>
+<li>解压后打开文件夹。</li>
+<li>右键以管理员身份运行<code>Add-Store</code>脚本。</li>
+<li>安装过程中可能出现几个无法安装的报错，属于正常现象，因为有部分组件已经预装在系统上了，版本冲突自然无法安装。</li>
+<li>安装完成后按任意键退出脚本。</li>
+<li>项目的还提供了一些商店内应用的离线安装包，按需下载，双击即可安装。</li>
+<li>LTSC还缺少一些媒体扩展包，比如查看webp图像的包，可以直接在商店中搜索安装：<ul>
+<li>MPEG-2 视频扩展</li>
+<li>VP9 视频扩展</li>
+<li>原始图像扩展</li>
+<li>Web 媒体扩展</li>
+<li>HEIF图像扩展</li>
+<li>Webp图像扩展</li>
+</ul>
+</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-b0l5fwwla">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="右键以管理员身份运行Add-Store脚本"><img data-src="https://s2.loli.net/2024/11/07/KuYV3iTRqwtjfdQ.webp" alt="右键以管理员身份运行Add-Store脚本" class="zoomable"></li><li class="splide__slide" data-caption="安装过程中可能出现几个无法安装的报错，属于正常现象"><img data-src="https://s2.loli.net/2024/11/07/GMANhIYmrtQRspZ.webp" alt="安装过程中可能出现几个无法安装的报错，属于正常现象" class="zoomable"></li><li class="splide__slide" data-caption="商店内应用的离线安装包"><img data-src="https://s2.loli.net/2024/11/07/tUn1VIpRTSWAYQd.webp" alt="商店内应用的离线安装包" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-b0l5fwwla" class="carousel-caption"> </div>
+    </div>
+  
+
+<h1 id="Office-LTSC-2024"><a href="#Office-LTSC-2024" class="headerlink" title="Office LTSC 2024"></a>Office LTSC 2024</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>我安装的Office也同样是LTSC版本，步骤如下：</p>
+<ol>
+<li>首先下载安装工具 Office Tool Plus。<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/download.webp"></object>
+<p>Office Tool Plus</p><p>下载 Office Tool Plus</p>
+<a href="https://otp.landian.vip/zh-cn/download.html"></a>
+</div></div></li>
+<li>解压后打开文件夹，右键以管理员身份运行<code>Office Tool Plus</code>应用程序。</li>
+<li>点击<code>是</code>同意许可条款。</li>
+<li>点击左侧边栏中的<code>部署</code>标签。</li>
+<li>将体系结构设置为<code>64位</code>。</li>
+<li>更新通道按需选择，这里我设置的是<code>Office 2024 企业长期版</code>。</li>
+<li>选择是否<code>创建桌面快捷方式</code>。</li>
+<li>点击<code>选择产品</code>按钮。</li>
+<li>输入<code>LTSC 2024</code>进行搜索。</li>
+<li>选择<code>Office LTSC 专业增强版 2024 - 批量许可证</code>。</li>
+<li>点击<code>确定</code>。</li>
+<li>选择需要安装的应用程序。</li>
+<li>点击<code>添加语言</code>按钮。</li>
+<li>输入<code>中文</code>进行搜索。</li>
+<li>选择<code>简体中文（中国）</code>。</li>
+<li>点击<code>确定</code>。</li>
+<li>回到页面最上方，点击开始部署。</li>
+<li>在弹出窗口中确认信息无误，点击<code>是</code>开始安装。</li>
+<li>可能提示无法验证签名，点击<code>是</code>继续。</li>
+<li>等待安装程序完成。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-szi0rxxvs">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="4-7. 点击左侧边栏中的部署标签，将体系结构设置为64位，更新通道按需选择，这里我设置的是Office 2024 企业长期版，选择是否创建桌面快捷方式"><img data-src="https://s2.loli.net/2024/11/07/Ihc79F4oY3WqmRr.webp" alt="4-7. 点击左侧边栏中的部署标签，将体系结构设置为64位，更新通道按需选择，这里我设置的是Office 2024 企业长期版，选择是否创建桌面快捷方式" class="zoomable"></li><li class="splide__slide" data-caption="8-11. 点击选择产品按钮，输入LTSC 2024进行搜索，选择Office LTSC 专业增强版 2024 - 批量许可证，点击确定"><img data-src="https://s2.loli.net/2024/11/07/rXAEIsvKz8mtdyo.webp" alt="8-11. 点击选择产品按钮，输入LTSC 2024进行搜索，选择Office LTSC 专业增强版 2024 - 批量许可证，点击确定" class="zoomable"></li><li class="splide__slide" data-caption="12. 选择需要安装的应用程序"><img data-src="https://s2.loli.net/2024/11/07/adRpB5PbDvrXn7q.webp" alt="12. 选择需要安装的应用程序" class="zoomable"></li><li class="splide__slide" data-caption="13-16. 点击添加语言按钮，输入中文进行搜索，选择简体中文（中国），点击确定"><img data-src="https://s2.loli.net/2024/11/07/u26CVs9lOWoTwL3.webp" alt="13-16. 点击添加语言按钮，输入中文进行搜索，选择简体中文（中国），点击确定" class="zoomable"></li><li class="splide__slide" data-caption="17. 回到页面最上方，点击开始部署"><img data-src="https://s2.loli.net/2024/11/07/NnsktB2f76EPyeK.webp" alt="17. 回到页面最上方，点击开始部署" class="zoomable"></li><li class="splide__slide" data-caption="18. 在弹出窗口中确认信息无误，点击是开始安装"><img data-src="https://s2.loli.net/2024/11/07/CUBvngkpsH2IXPF.webp" alt="18. 在弹出窗口中确认信息无误，点击是开始安装" class="zoomable"></li><li class="splide__slide" data-caption="20. 等待安装程序完成"><img data-src="https://s2.loli.net/2024/11/07/mxfPeDhgGvKXpWj.webp" alt="20. 等待安装程序完成" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-szi0rxxvs" class="carousel-caption"> </div>
+    </div>
+  
+
+<h2 id="激活-1"><a href="#激活-1" class="headerlink" title="激活"></a>激活</h2><p>Office 也可以使用 MAS 脚本激活，使用和系统激活时相同的命令执行脚本，在弹出的窗口中输入<code>2</code>使用<code>Ohook</code>方式激活，然后输入<code>1</code>进行激活。</p>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-j385y0xjv">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="输入2使用Ohook方式激活"><img data-src="https://s2.loli.net/2024/11/07/VG9jILA4J378dPs.webp" alt="输入2使用Ohook方式激活" class="zoomable"></li><li class="splide__slide" data-caption="输入1进行激活"><img data-src="https://s2.loli.net/2024/11/07/O1syprM9Wg7ldRF.webp" alt="输入1进行激活" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-j385y0xjv" class="carousel-caption"> </div>
+    </div>
+  
+
+<h1 id="系统调整与Bug修复"><a href="#系统调整与Bug修复" class="headerlink" title="系统调整与Bug修复"></a>系统调整与Bug修复</h1><p>以下是我对系统进行的一些调整以及一些Bug的修复方法。</p>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/blog.webp"></object>
+<p>OneDrive 图标异常修复</p><p>修复 Windows 11 LTSC 文件资源管理器侧边栏中无法点击的 OneDrive 图标</p>
+<a href="https://siriusq.top/onedrive-explorer-icon-bug-fix.html"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/blog.webp"></object>
+<p>Windows 11 右键菜单改回 Windows 10 样式</p><p>通过修改注册表，将Windows11的右键菜单样式改为更直观好用的老样式</p>
+<a href="https://siriusq.top/Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%94%B9%E5%9B%9E-Windows-10-%E6%A0%B7%E5%BC%8F.html"></a>
+</div></div>
+
+<p>此外我的台式机还遇到了部分软件启动巨慢的Bug，通过任务管理器排查了一下，发现是Windows Defender的锅，相关软件启动时，Windows Defender 的 antimalware service executable 进程占用了很多的资源。这个Bug只出现在我额外安装了杀毒软件的电脑上，另外两台完全正常，就很迷惑。</p>
+<ol>
+<li>首先右键开始菜单按钮，点击<code>运行</code>，输入<code>gpedit.msc</code>，打开<code>本地组策略编辑器</code>。</li>
+<li>依次打开<code>计算机配置</code>-<code>管理模板</code>-<code>Windows组件</code>-<code>Microsoft Defender 防病毒</code>。</li>
+<li>双击打开右侧的<code>关闭 Microsoft Defender 防病毒</code>。</li>
+<li>勾选<code>已启用</code>，然后点击<code>确定</code>保存更改。</li>
+</ol>
+
+    <div class="carousel-container">
+      <div class="splide" data-splide='{"heightRatio":0.618,"lazyLoad":false,"type":"slide","autoplay":false,"interval":3000,"pauseOnHover":true}' data-caption-id="carousel-caption-rci46oier">
+        <div class="splide__track">
+          <ul class="splide__list"><li class="splide__slide" data-caption="依次打开计算机配置-管理模板-Windows组件-Microsoft Defender 防病毒"><img data-src="https://s2.loli.net/2024/11/07/q18DhrdNTieJkUC.webp" alt="依次打开计算机配置-管理模板-Windows组件-Microsoft Defender 防病毒" class="zoomable"></li><li class="splide__slide" data-caption="双击打开右侧的关闭 Microsoft Defender 防病毒，勾选已启用，然后点击确定保存更改"><img data-src="https://s2.loli.net/2024/11/07/MyEiOc25RTFw9j3.webp" alt="双击打开右侧的关闭 Microsoft Defender 防病毒，勾选已启用，然后点击确定保存更改" class="zoomable"></li></ul>
+        </div>
+      </div>
+      <div id="carousel-caption-rci46oier" class="carousel-caption"> </div>
+    </div>
+  
+
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/link/blog.webp"></object>
+<p>软件整理</p><p>这是我的另一篇博文，收录了各种好用的软件</p>
+<a href="https://siriusq.top/%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86.html"></a>
+</div></div>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>Office</tag>
+        <tag>重装</tag>
       </tags>
   </entry>
   <entry>

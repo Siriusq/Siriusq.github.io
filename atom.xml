@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-04T14:47:18.183Z</updated>
+  <updated>2024-11-06T07:53:29.753Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 系统设置开机延迟启动 OneDrive</title>
+    <link href="https://siriusq.top/onedrive-delay-startup.html"/>
+    <id>https://siriusq.top/onedrive-delay-startup.html</id>
+    <published>2024-11-05T09:24:14.000Z</published>
+    <updated>2024-11-06T07:53:29.753Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在Windows系统启动时，OneDrive和Clash的自启动时间几乎相同，导致OneDrive在准备自动登录时，Clash啪一下给切了网络，从而使OneDrive卡在登录过程中。此时，必须退出并重启OneDrive才能正常登录，十分烦人。为了解决这个问题，我决定通过任务计划程序设置在开机后延迟1分钟再启动OneDrive，以下是设置过程的记录。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
+    
+    <category term="Task Scheduler" scheme="https://siriusq.top/tags/Task-Scheduler/"/>
+    
+  </entry>
   
   <entry>
     <title>配置 GitHub SSH 远程连接与 GPG 提交签名验证</title>
@@ -40,11 +63,34 @@
   </entry>
   
   <entry>
+    <title>Windows 11 IoT LSTC 重装记录</title>
+    <link href="https://siriusq.top/win-11-iot-ltsc-installation.html"/>
+    <id>https://siriusq.top/win-11-iot-ltsc-installation.html</id>
+    <published>2024-10-25T11:57:15.000Z</published>
+    <updated>2024-11-07T14:28:08.256Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Office" scheme="https://siriusq.top/tags/Office/"/>
+    
+    <category term="重装" scheme="https://siriusq.top/tags/%E9%87%8D%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows LTSC 文件资源管理器侧边栏 OneDrive 图标异常修复</title>
     <link href="https://siriusq.top/onedrive-explorer-icon-bug-fix.html"/>
     <id>https://siriusq.top/onedrive-explorer-icon-bug-fix.html</id>
     <published>2024-10-24T07:41:25.000Z</published>
-    <updated>2024-10-24T08:38:23.000Z</updated>
+    <updated>2024-11-07T09:00:19.878Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 安装完 Windows11 LTSC 后，我发现文件资源管理器侧边栏中的OneDrive图标不能正常使用，点击时完全没有反应，属性页面显示一片空白。查了一下发现这是一个微软祖传的老Bug，在LTSC版本的Windows上安装个人版OneDrive时，安装程序没有为侧边栏图标注册指向OneDrive文件夹的路径值，导致这个图标指向空值，所以无法正常使用。只能说不愧是微软，这么多年了就是没修这个Bug。 &lt;/blockquote&gt;</summary>
@@ -415,50 +461,6 @@
     <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="LaTeX" scheme="https://siriusq.top/tags/LaTeX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iPhone访问Windows共享文件夹</title>
-    <link href="https://siriusq.top/iOS-Windows-File-Share.html"/>
-    <id>https://siriusq.top/iOS-Windows-File-Share.html</id>
-    <published>2023-09-15T12:34:06.000Z</published>
-    <updated>2024-09-13T15:11:44.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;一直在用的局域网文件传输软件在Win11上不能用了，又找不到好的替代品，所以决定使用Windows共享文件夹的老方法来向iOS设备传输文件。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
-    
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="iOS" scheme="https://siriusq.top/tags/iOS/"/>
-    
-    <category term="共享文件" scheme="https://siriusq.top/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>群星 Mod 制作与上传日志</title>
-    <link href="https://siriusq.top/Stellaris-Mod.html"/>
-    <id>https://siriusq.top/Stellaris-Mod.html</id>
-    <published>2023-08-29T12:33:11.000Z</published>
-    <updated>2024-09-12T09:14:41.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;如何在不使用控制台的前提下成为一个合格的第四天灾&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="个人项目" scheme="https://siriusq.top/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-    <category term="Stellaris" scheme="https://siriusq.top/tags/Stellaris/"/>
-    
-    <category term="MOD" scheme="https://siriusq.top/tags/MOD/"/>
     
   </entry>
   
