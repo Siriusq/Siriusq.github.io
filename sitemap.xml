@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://siriusq.top/next-8-20-update-log.html</loc>
+    
+    <lastmod>2024-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://siriusq.top/%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86.html</loc>
+    
+    <lastmod>2024-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://siriusq.top/win-11-iot-ltsc-installation.html</loc>
     
     <lastmod>2024-11-07</lastmod>
@@ -38,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://siriusq.top/next-8-20-update-log.html</loc>
-    
-    <lastmod>2024-11-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://siriusq.top/git-ssh-config.html</loc>
     
     <lastmod>2024-11-04</lastmod>
@@ -68,15 +77,6 @@
     <loc>https://siriusq.top/OneDrive%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%A4%B9.html</loc>
     
     <lastmod>2024-10-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://siriusq.top/%E8%BD%AF%E4%BB%B6%E6%95%B4%E7%90%86.html</loc>
-    
-    <lastmod>2024-10-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -670,7 +670,7 @@
 
   <url>
     <loc>https://siriusq.top/</loc>
-    <lastmod>2024-11-07</lastmod>
+    <lastmod>2024-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
