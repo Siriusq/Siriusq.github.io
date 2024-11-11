@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-06T07:53:29.753Z</updated>
+  <updated>2024-11-10T09:41:01.495Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://siriusq.top/onedrive-delay-startup.html"/>
     <id>https://siriusq.top/onedrive-delay-startup.html</id>
     <published>2024-11-05T09:24:14.000Z</published>
-    <updated>2024-11-06T07:53:29.753Z</updated>
+    <updated>2024-11-10T09:41:01.495Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在Windows系统启动时，OneDrive和Clash的自启动时间几乎相同，导致OneDrive在准备自动登录时，Clash啪一下给切了网络，从而使OneDrive卡在登录过程中。此时，必须退出并重启OneDrive才能正常登录，十分烦人。为了解决这个问题，我决定通过任务计划程序设置在开机后延迟1分钟再启动OneDrive，以下是设置过程的记录。 &lt;/blockquote&gt;</summary>
@@ -67,7 +67,7 @@
     <link href="https://siriusq.top/win-11-iot-ltsc-installation.html"/>
     <id>https://siriusq.top/win-11-iot-ltsc-installation.html</id>
     <published>2024-10-25T11:57:15.000Z</published>
-    <updated>2024-11-07T14:28:08.256Z</updated>
+    <updated>2024-11-10T12:47:42.585Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 &lt;/blockquote&gt;</summary>
