@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-10T09:41:01.495Z</updated>
+  <updated>2024-11-12T15:25:43.163Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>借助Windows无线显示器功能将老旧设备设为副屏</title>
+    <link href="https://siriusq.top/windows-wireless-display.html"/>
+    <id>https://siriusq.top/windows-wireless-display.html</id>
+    <published>2024-11-12T12:54:10.000Z</published>
+    <updated>2024-11-12T15:25:43.163Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 总觉得PC的显示器不够用，但如果直接购置新显示器，又得花上一笔不小的开销。手边有台闲置许久 Surface 3，已经很少使用了，不妨把它拿来做副屏。然而，像这样的老设备没有视频输入接口，仅支持视频输出，无法直接用视频线连接。于是我又想到了视频采集卡，它可以通过USB接口将PC的画面传输到 Surface 3上。不过，经过一番研究，我发现廉价的采集卡延迟也是很高，而高质量的采集卡价格又接近新显示器，实在不划算。最终，我选择了最简单、成本最低的方法：借助 Windows 系统自带的无线显示器功能，让这台老 Surface 3 变身为副屏。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Wireless Display" scheme="https://siriusq.top/tags/Wireless-Display/"/>
+    
+    <category term="Surface" scheme="https://siriusq.top/tags/Surface/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 系统设置开机延迟启动 OneDrive</title>
@@ -440,27 +463,6 @@
     <category term="GitHub Pages" scheme="https://siriusq.top/tags/GitHub-Pages/"/>
     
     <category term="GitHub Actions" scheme="https://siriusq.top/tags/GitHub-Actions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode LaTeX 快速配置指南</title>
-    <link href="https://siriusq.top/latex-vscode-quick-config.html"/>
-    <id>https://siriusq.top/latex-vscode-quick-config.html</id>
-    <published>2023-10-03T13:24:09.000Z</published>
-    <updated>2024-09-13T15:16:20.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;安装Tex环境并在VSCode中快速配置好LaTeX的方法记录&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Coding" scheme="https://siriusq.top/categories/Coding/"/>
-    
-    
-    <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="LaTeX" scheme="https://siriusq.top/tags/LaTeX/"/>
     
   </entry>
   
