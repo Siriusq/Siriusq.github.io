@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-12T15:25:43.163Z</updated>
+  <updated>2024-11-15T16:19:27.826Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vivo TWS Air 电池更换记录</title>
+    <link href="https://siriusq.top/vivo-tws-air-battery-replacement.html"/>
+    <id>https://siriusq.top/vivo-tws-air-battery-replacement.html</id>
+    <published>2024-11-14T14:38:55.000Z</published>
+    <updated>2024-11-15T16:19:27.826Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近天气转凉，我那个练习时长两年半的无线耳机的续航终究还是崩了，即使我不用耳机，充电仓的电量也会在两天之内耗尽。那就换个电池吧，能用6块钱解决的问题就没有必要花160。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+    <category term="维修" scheme="https://siriusq.top/tags/%E7%BB%B4%E4%BF%AE/"/>
+    
+    <category term="TWS" scheme="https://siriusq.top/tags/TWS/"/>
+    
+  </entry>
   
   <entry>
     <title>借助Windows无线显示器功能将老旧设备设为副屏</title>
@@ -440,29 +461,6 @@
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
     
     <category term="Tun" scheme="https://siriusq.top/tags/Tun/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在基于GitHub Pages的博客更新时同步更新GitHub Profile个人信息页最近博文部分</title>
-    <link href="https://siriusq.top/auto-update-profile-latest-blog-posts.html"/>
-    <id>https://siriusq.top/auto-update-profile-latest-blog-posts.html</id>
-    <published>2023-10-17T09:10:55.000Z</published>
-    <updated>2024-09-13T15:01:37.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;我在GitHub的自定义个人信息页中添加了展示最近更新的博文的部分，但是每次更新完博客还要再来这里手动更新一下，就很麻烦。于是我本着&quot;偷懒是人类进步的动力&quot;的原则，搞出了一种博客部署完成后，使用GitHub Actions自动更新个人信息页的最近博文部分的方法。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="网站配置" scheme="https://siriusq.top/categories/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE/"/>
-    
-    
-    <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
-    
-    <category term="GitHub Pages" scheme="https://siriusq.top/tags/GitHub-Pages/"/>
-    
-    <category term="GitHub Actions" scheme="https://siriusq.top/tags/GitHub-Actions/"/>
     
   </entry>
   
