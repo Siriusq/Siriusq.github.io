@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-15T16:19:27.826Z</updated>
+  <updated>2024-11-19T14:48:23.140Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Windows中开启HEIC格式图片预览</title>
+    <link href="https://siriusq.top/windows-heic.html"/>
+    <id>https://siriusq.top/windows-heic.html</id>
+    <published>2024-11-19T12:43:51.000Z</published>
+    <updated>2024-11-19T14:48:23.140Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 重装完系统后，我发现iPhone拍摄的heic格式图片文件无法在Windows文件资源管理器中进行预览，然后我就去微软应用商店中搜索相关扩展，但是搜到的扩展居然是收费的。我寻思也没买过这个扩展，重装前的系统咋就能正常预览HEIC格式的图片呢？ &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="HEIC" scheme="https://siriusq.top/tags/HEIC/"/>
+    
+  </entry>
   
   <entry>
     <title>Vivo TWS Air 电池更换记录</title>
@@ -436,31 +457,6 @@
     
     
     <category term="Grasscutter" scheme="https://siriusq.top/tags/Grasscutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clash Verge Tun 模式配置记录</title>
-    <link href="https://siriusq.top/clash-verge-tun-config.html"/>
-    <id>https://siriusq.top/clash-verge-tun-config.html</id>
-    <published>2023-11-04T09:24:07.000Z</published>
-    <updated>2024-10-28T10:07:38.150Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在本文中，我将记录Clash Verge的配置过程，包括创建配置文件、切换内核、启用TUN模式以及防止DNS泄露。 &lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Free Internet" scheme="https://siriusq.top/categories/Free-Internet/"/>
-    
-    
-    <category term="Clash" scheme="https://siriusq.top/tags/Clash/"/>
-    
-    <category term="GFW" scheme="https://siriusq.top/tags/GFW/"/>
-    
-    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
-    
-    <category term="Tun" scheme="https://siriusq.top/tags/Tun/"/>
     
   </entry>
   
