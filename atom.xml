@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-19T14:48:23.140Z</updated>
+  <updated>2024-11-19T14:48:23.000Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://siriusq.top/windows-heic.html"/>
     <id>https://siriusq.top/windows-heic.html</id>
     <published>2024-11-19T12:43:51.000Z</published>
-    <updated>2024-11-19T14:48:23.140Z</updated>
+    <updated>2024-11-19T14:48:23.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 重装完系统后，我发现iPhone拍摄的heic格式图片文件无法在Windows文件资源管理器中进行预览，然后我就去微软应用商店中搜索相关扩展，但是搜到的扩展居然是收费的。我寻思也没买过这个扩展，重装前的系统咋就能正常预览HEIC格式的图片呢？ &lt;/blockquote&gt;</summary>
@@ -42,7 +42,7 @@
     <link href="https://siriusq.top/vivo-tws-air-battery-replacement.html"/>
     <id>https://siriusq.top/vivo-tws-air-battery-replacement.html</id>
     <published>2024-11-14T14:38:55.000Z</published>
-    <updated>2024-11-15T16:19:27.826Z</updated>
+    <updated>2024-11-15T16:19:27.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 最近天气转凉，我那个练习时长两年半的无线耳机的续航终究还是崩了，即使我不用耳机，充电仓的电量也会在两天之内耗尽。那就换个电池吧，能用6块钱解决的问题就没有必要花160。 &lt;/blockquote&gt;</summary>
@@ -63,7 +63,7 @@
     <link href="https://siriusq.top/windows-wireless-display.html"/>
     <id>https://siriusq.top/windows-wireless-display.html</id>
     <published>2024-11-12T12:54:10.000Z</published>
-    <updated>2024-11-12T15:25:43.163Z</updated>
+    <updated>2024-11-12T15:25:43.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 总觉得PC的显示器不够用，但如果直接购置新显示器，又得花上一笔不小的开销。手边有台闲置许久 Surface 3，已经很少使用了，不妨把它拿来做副屏。然而，像这样的老设备没有视频输入接口，仅支持视频输出，无法直接用视频线连接。于是我又想到了视频采集卡，它可以通过USB接口将PC的画面传输到 Surface 3上。不过，经过一番研究，我发现廉价的采集卡延迟也是很高，而高质量的采集卡价格又接近新显示器，实在不划算。最终，我选择了最简单、成本最低的方法：借助 Windows 系统自带的无线显示器功能，让这台老 Surface 3 变身为副屏。 &lt;/blockquote&gt;</summary>
@@ -86,7 +86,7 @@
     <link href="https://siriusq.top/onedrive-delay-startup.html"/>
     <id>https://siriusq.top/onedrive-delay-startup.html</id>
     <published>2024-11-05T09:24:14.000Z</published>
-    <updated>2024-11-10T09:41:01.495Z</updated>
+    <updated>2024-11-10T09:41:01.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 在Windows系统启动时，OneDrive和Clash的自启动时间几乎相同，导致OneDrive在准备自动登录时，Clash啪一下给切了网络，从而使OneDrive卡在登录过程中。此时，必须退出并重启OneDrive才能正常登录，十分烦人。为了解决这个问题，我决定通过任务计划程序设置在开机后延迟1分钟再启动OneDrive，以下是设置过程的记录。 &lt;/blockquote&gt;</summary>
@@ -109,7 +109,7 @@
     <link href="https://siriusq.top/git-ssh-config.html"/>
     <id>https://siriusq.top/git-ssh-config.html</id>
     <published>2024-11-01T13:43:24.000Z</published>
-    <updated>2024-11-04T14:47:18.183Z</updated>
+    <updated>2024-11-04T14:47:18.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 刚刚重装了操作系统，又要从头配置GitHub的SSH密钥，每次配置时都要现场搜索命令，比较麻烦，索性自己记录一下过程，方便以后使用。 &lt;/blockquote&gt;</summary>
@@ -132,7 +132,7 @@
     <link href="https://siriusq.top/win-11-iot-ltsc-installation.html"/>
     <id>https://siriusq.top/win-11-iot-ltsc-installation.html</id>
     <published>2024-10-25T11:57:15.000Z</published>
-    <updated>2024-11-10T12:47:42.585Z</updated>
+    <updated>2024-11-19T14:57:44.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 &lt;/blockquote&gt;</summary>
@@ -155,7 +155,7 @@
     <link href="https://siriusq.top/onedrive-explorer-icon-bug-fix.html"/>
     <id>https://siriusq.top/onedrive-explorer-icon-bug-fix.html</id>
     <published>2024-10-24T07:41:25.000Z</published>
-    <updated>2024-11-07T09:00:19.878Z</updated>
+    <updated>2024-11-07T09:00:19.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 安装完 Windows11 LTSC 后，我发现文件资源管理器侧边栏中的OneDrive图标不能正常使用，点击时完全没有反应，属性页面显示一片空白。查了一下发现这是一个微软祖传的老Bug，在LTSC版本的Windows上安装个人版OneDrive时，安装程序没有为侧边栏图标注册指向OneDrive文件夹的路径值，导致这个图标指向空值，所以无法正常使用。只能说不愧是微软，这么多年了就是没修这个Bug。 &lt;/blockquote&gt;</summary>
@@ -180,7 +180,7 @@
     <link href="https://siriusq.top/next-8-20-update-log.html"/>
     <id>https://siriusq.top/next-8-20-update-log.html</id>
     <published>2024-09-16T04:01:26.000Z</published>
-    <updated>2024-11-08T15:52:01.370Z</updated>
+    <updated>2024-11-08T15:52:01.000Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 博客的升级日志，这次的调整比较少，只有简简单单的刷新了一下版本号，然后提升了一丢丢的阅读体验。 &lt;/blockquote&gt;</summary>
