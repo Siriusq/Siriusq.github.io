@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2024-11-19T14:48:23.000Z</updated>
+  <updated>2025-01-14T15:10:53.594Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Traffic Monitor 阻止关机问题的解决方案</title>
+    <link href="https://siriusq.top/traffic-monitor-prevent-shutdown.html"/>
+    <id>https://siriusq.top/traffic-monitor-prevent-shutdown.html</id>
+    <published>2025-01-14T13:28:12.000Z</published>
+    <updated>2025-01-14T15:10:53.594Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 通过任务计划程序，在关机时强制终止 Traffic Monitor.exe 程序，以应对 Windows 11 中 Traffic Monitor 主窗口阻止关机的 Bug。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Traffic Monitor" scheme="https://siriusq.top/tags/Traffic-Monitor/"/>
+    
+  </entry>
   
   <entry>
     <title>在Windows中开启HEIC格式图片预览</title>
@@ -132,7 +153,7 @@
     <link href="https://siriusq.top/win-11-iot-ltsc-installation.html"/>
     <id>https://siriusq.top/win-11-iot-ltsc-installation.html</id>
     <published>2024-10-25T11:57:15.000Z</published>
-    <updated>2024-11-19T14:57:44.000Z</updated>
+    <updated>2025-01-14T15:27:43.161Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 &lt;/blockquote&gt;</summary>
@@ -438,25 +459,6 @@
     <category term="Linux" scheme="https://siriusq.top/tags/Linux/"/>
     
     <category term="UEFI" scheme="https://siriusq.top/tags/UEFI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Grasscutter Windows本地服务器配置记录</title>
-    <link href="https://siriusq.top/grasscutter.html"/>
-    <id>https://siriusq.top/grasscutter.html</id>
-    <published>2023-11-07T13:17:07.000Z</published>
-    <updated>2024-09-13T15:09:54.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;Grasscutter 是一款用 Java 编写的实验性服务器，旨在模拟某款 Anime Game 的服务端。本文记录了我配置服务器的过程，包括 Grasscutter 与 Cultivation 的安装、相关指令的使用、一些实用插件与工具的使用方法、卡池与商店的配置以及角色模型的替换等内容。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
-    
-    
-    <category term="Grasscutter" scheme="https://siriusq.top/tags/Grasscutter/"/>
     
   </entry>
   
