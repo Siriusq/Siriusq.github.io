@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://siriusq.top/wsa-vmware-coexist.html</loc>
+    
+    <lastmod>2025-03-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://siriusq.top/windows-time-sync-failed.html</loc>
+    
+    <lastmod>2025-03-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://siriusq.top/win-11-iot-ltsc-installation.html</loc>
     
     <lastmod>2025-02-11</lastmod>
@@ -706,7 +724,7 @@
 
   <url>
     <loc>https://siriusq.top/</loc>
-    <lastmod>2025-02-11</lastmod>
+    <lastmod>2025-03-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

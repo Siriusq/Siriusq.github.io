@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2025-01-14T15:10:53.594Z</updated>
+  <updated>2025-03-19T03:24:01.526Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 时间同步失败修复</title>
+    <link href="https://siriusq.top/windows-time-sync-failed.html"/>
+    <id>https://siriusq.top/windows-time-sync-failed.html</id>
+    <published>2025-03-18T12:58:04.000Z</published>
+    <updated>2025-03-19T03:24:01.526Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 通过更改 Windows NTP 时间同步服务器解决因连接超时导致的时间同步失败问题。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装 WSA 后 VMware 无法启动和联网问题修复</title>
+    <link href="https://siriusq.top/wsa-vmware-coexist.html"/>
+    <id>https://siriusq.top/wsa-vmware-coexist.html</id>
+    <published>2025-03-10T09:22:28.000Z</published>
+    <updated>2025-03-19T09:09:44.862Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 解决安装 WSA 后 VMware 启动报错“不支持在此主机上启用虚拟化性能计数器”、“模块VPMC启动失败”，与 VMware 虚拟机无法联网的问题。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+  </entry>
   
   <entry>
     <title>Traffic Monitor 阻止关机问题的解决方案</title>
@@ -417,48 +463,6 @@
     <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
     
     <category term="Rider R2 5.0" scheme="https://siriusq.top/tags/Rider-R2-5-0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ITX 装机经验总结</title>
-    <link href="https://siriusq.top/itx-summary.html"/>
-    <id>https://siriusq.top/itx-summary.html</id>
-    <published>2024-03-16T14:09:03.000Z</published>
-    <updated>2024-09-12T09:08:53.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;从19年末入坑ITX到现在已经4年多了，期间拆拆装装也踩了不少坑，这篇博客就来总结一下装机中的经验。&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
-    
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>宏碁笔电安装 Linux 后提示 No Bootable Device 的解决方案</title>
-    <link href="https://siriusq.top/linux-no-bootable-device.html"/>
-    <id>https://siriusq.top/linux-no-bootable-device.html</id>
-    <published>2023-12-19T10:22:50.000Z</published>
-    <updated>2024-09-13T15:17:57.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2023/12/24/DWFdJTgk742GY3N.webp&quot; alt=&quot;No_Bootable_Device.webp&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Linux" scheme="https://siriusq.top/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://siriusq.top/tags/Linux/"/>
-    
-    <category term="UEFI" scheme="https://siriusq.top/tags/UEFI/"/>
     
   </entry>
   
