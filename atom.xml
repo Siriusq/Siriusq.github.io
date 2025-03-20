@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2025-03-19T03:24:01.526Z</updated>
+  <updated>2025-03-20T15:28:14.092Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ESET 防火墙阻止 WSA 安卓子系统联网问题修复</title>
+    <link href="https://siriusq.top/eset-firewall-block-wsa.html"/>
+    <id>https://siriusq.top/eset-firewall-block-wsa.html</id>
+    <published>2025-03-20T12:26:06.000Z</published>
+    <updated>2025-03-20T15:28:14.092Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 本文介绍如何修复 ESET Internet Security 防火墙无厘头、无征兆阻断 WSA 安卓子系统联网的奇怪问题。 &lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+    <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 时间同步失败修复</title>
@@ -438,31 +461,6 @@
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
     <category term="桥接网络" scheme="https://siriusq.top/tags/%E6%A1%A5%E6%8E%A5%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rider R2 5.0 伪评测</title>
-    <link href="https://siriusq.top/rider-r2.html"/>
-    <id>https://siriusq.top/rider-r2.html</id>
-    <published>2024-03-23T08:33:10.000Z</published>
-    <updated>2024-09-13T15:57:10.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt;经历了几次风扇坏轴之后，我对吊装风扇产生了心理阴影，于是闲着没事就去某宝刷刷 ITX 机箱，打算换一个机箱，然后某宝在 Rider R2 5.0 上架的第二天就给我精准推送了它，这种电源下置，其他结构倒置的结构简直是我的梦中情箱，整机只有电源的风扇是吊装的，而海盗船电源的风扇买回来就没转过几次，于是果断下单，换掉了原来的小闷罐。&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img data-src=&quot;https://s2.loli.net/2024/03/23/xPpEDrCqBygOb1t.webp&quot; alt=&quot;封面.webp&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="硬件" scheme="https://siriusq.top/categories/%E7%A1%AC%E4%BB%B6/"/>
-    
-    
-    <category term="ITX" scheme="https://siriusq.top/tags/ITX/"/>
-    
-    <category term="搞机" scheme="https://siriusq.top/tags/%E6%90%9E%E6%9C%BA/"/>
-    
-    <category term="Rider R2 5.0" scheme="https://siriusq.top/tags/Rider-R2-5-0/"/>
     
   </entry>
   
