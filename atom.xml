@@ -38,21 +38,6 @@
   </entry>
   
   <entry>
-    <title>wsl2-install</title>
-    <link href="https://siriusq.top/wsl2-install.html"/>
-    <id>https://siriusq.top/wsl2-install.html</id>
-    <published>2026-04-07T08:32:48.000Z</published>
-    <updated>2026-04-07T08:32:48.271Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; &lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>MuMu 模拟器指定使用核显运行</title>
     <link href="https://siriusq.top/mumu-igpu.html"/>
     <id>https://siriusq.top/mumu-igpu.html</id>
@@ -366,9 +351,9 @@
     
     <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
     
-    <category term="LTSC" scheme="https://siriusq.top/tags/LTSC/"/>
-    
     <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
+    
+    <category term="LTSC" scheme="https://siriusq.top/tags/LTSC/"/>
     
   </entry>
   
@@ -461,6 +446,27 @@
     <category term="Driver" scheme="https://siriusq.top/tags/Driver/"/>
     
     <category term="AMD" scheme="https://siriusq.top/tags/AMD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修复 VMware Fusion 虚拟机无法访问USB设备</title>
+    <link href="https://siriusq.top/vmware-fusion-usb-fix.html"/>
+    <id>https://siriusq.top/vmware-fusion-usb-fix.html</id>
+    <published>2024-07-08T03:40:37.000Z</published>
+    <updated>2024-09-13T15:28:28.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 虚拟机装完了，3D加速也开启了，XCode也整好了，正当我打算连上iPhone大干一场的时候，我突然发现虚拟机识别不到USB设备？？？然后又是漫长的搜索试错，发现是vmware-usbarbitrator的锅，这个服务的作用是管理连接到虚拟机的USB设备，而启动虚拟机时它不知为何没有运行，奇奇怪怪的bug增加了，而解决方法就是为它设置开机自动运行。&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="虚拟机" scheme="https://siriusq.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+    <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
   </entry>
   
