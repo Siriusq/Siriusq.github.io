@@ -6,7 +6,7 @@
   <link href="https://siriusq.top/atom.xml" rel="self"/>
   
   <link href="https://siriusq.top/"/>
-  <updated>2026-06-25T11:12:00.767Z</updated>
+  <updated>2026-06-30T11:35:35.447Z</updated>
   <id>https://siriusq.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://siriusq.top/new-mac-config.html"/>
     <id>https://siriusq.top/new-mac-config.html</id>
     <published>2026-06-04T10:42:42.000Z</published>
-    <updated>2026-06-25T11:12:00.767Z</updated>
+    <updated>2026-06-30T11:35:35.447Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 记录一下新 MacBook 到手后的开荒流程，包括系统设置、推荐软件、配件选择、使用体验等内容 &lt;/blockquote&gt;</summary>
@@ -351,9 +351,9 @@
     
     <category term="OneDrive" scheme="https://siriusq.top/tags/OneDrive/"/>
     
-    <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
-    
     <category term="LTSC" scheme="https://siriusq.top/tags/LTSC/"/>
+    
+    <category term="Bug" scheme="https://siriusq.top/tags/Bug/"/>
     
   </entry>
   
