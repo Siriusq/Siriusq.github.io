@@ -198,9 +198,9 @@
     
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
     
-    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
-    
     <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
+    
+    <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
     
   </entry>
   
@@ -341,7 +341,7 @@
     <link href="https://siriusq.top/win-11-iot-ltsc-installation.html"/>
     <id>https://siriusq.top/win-11-iot-ltsc-installation.html</id>
     <published>2024-10-25T11:57:15.000Z</published>
-    <updated>2026-07-26T14:56:20.216Z</updated>
+    <updated>2026-07-27T12:01:08.551Z</updated>
     
     
     <summary type="html">&lt;blockquote class=&quot;blockquote-center&quot;&gt; 听说微软在月初发布了正式版的Windows 11 LTSC，受够了微软三天两头往系统里塞AI屎山的我啪一下就站起来了，很快啊！火速给手头的三台电脑全装上了新系统。而且我的上一篇Windows系统重装指南还是4年前写的，许多内容已经出现了偏差。于是我决定借此机会重新写一版专注于 Windows11 IoT LTSC 的重装指南。 &lt;/blockquote&gt;</summary>
@@ -443,9 +443,9 @@
     <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
-    <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
     <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
+    
+    <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="Steam" scheme="https://siriusq.top/tags/Steam/"/>
     
