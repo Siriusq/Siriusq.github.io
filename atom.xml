@@ -121,9 +121,9 @@
     <category term="Coding" scheme="https://siriusq.top/categories/Coding/"/>
     
     
-    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
-    
     <category term="iOS" scheme="https://siriusq.top/tags/iOS/"/>
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
     
     <category term="macOS" scheme="https://siriusq.top/tags/macOS/"/>
     
@@ -198,9 +198,9 @@
     
     <category term="Win11" scheme="https://siriusq.top/tags/Win11/"/>
     
-    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
-    
     <category term="VMware" scheme="https://siriusq.top/tags/VMware/"/>
+    
+    <category term="WSA" scheme="https://siriusq.top/tags/WSA/"/>
     
   </entry>
   
@@ -422,9 +422,9 @@
     
     <category term="Hexo" scheme="https://siriusq.top/tags/Hexo/"/>
     
-    <category term="插件" scheme="https://siriusq.top/tags/%E6%8F%92%E4%BB%B6/"/>
-    
     <category term="npm" scheme="https://siriusq.top/tags/npm/"/>
+    
+    <category term="插件" scheme="https://siriusq.top/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -443,9 +443,9 @@
     <category term="Windows" scheme="https://siriusq.top/categories/Windows/"/>
     
     
-    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
-    
     <category term="软件" scheme="https://siriusq.top/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Windows" scheme="https://siriusq.top/tags/Windows/"/>
     
     <category term="Steam" scheme="https://siriusq.top/tags/Steam/"/>
     

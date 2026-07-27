@@ -9,10 +9,10 @@ window.onload = function () {
         var noTranslatePages = [
             // 添加没有对应翻译的页面
             // "/example.html"
-            "qut-arch-final-year-guide.html",
-            "Test.html",
-            "uog-it-course-selection-guide.html",
-            "vivo-tws-air-battery-replacement.html"
+            "/qut-arch-final-year-guide.html",
+            "/Test.html",
+            "/uog-it-course-selection-guide.html",
+            "/vivo-tws-air-battery-replacement.html"
         ];
 
         if (noTranslatePages.includes(url.pathname)) {
